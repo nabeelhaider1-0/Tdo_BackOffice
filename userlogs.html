@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Destination Online</title>
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+        <link rel="stylesheet" href="/dist/css/bootstrap-select.css">
+        <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+
+        <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+      
+        <link rel="stylesheet" href="style.css" />
+      
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="TDO LOGO Without Background.png" class="img-fluid"
+                        alt="Responsive image" style="max-height: 50px; margin-left: 10px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Welcome <b>Beta_Tdo</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-clock"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-user fa-2xl"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!--      Header Section For Search Bookkng And other Queries           -->
+  <section>
+    <nav class="navbar navbar-expand-lg" id="secondNav">
+        <div class="w-100">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!--  Drop down menu for Booking-->
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>BOOKINGS</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item" href="#">Search Bookings</a></li>
+                        <li><a class="dropdown-item"
+                                href="#">Reminders&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">NEW ONLINE BOOKING</a></li>
+                        <li><a class="dropdown-item" href="#">NEW OFFLINE
+                                BOOKING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">HOTELS</a></li>
+                                <li><a class="dropdown-item" href="#">FLIGHTS</a></li>
+                                <li><a class="dropdown-item" href="#">TRANSFER</a></li>
+                                <li><a class="dropdown-item" href="#">TOUR</a></li>
+                                <li><a class="dropdown-item" href="#">MISC SERVICES</a></li>
+                                <li><a class="dropdown-item" href="#">GROUPS</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">RECONNECTIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">MANUAL FLIGHTS</a></li>
+                                <li><a class="dropdown-item" href="#">MANUAL</a></li>
+                                <li><a class="dropdown-item" href="#">AUTO</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">EXCHANGE/REASSIGN<br>BOOKING</a></li>
+                    </ul>
+                </div>
+
+                <!--  Drop down menu for Customer-->
+
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>CUSTOMERS</b> 
+                    </a>
+  
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item"
+                          href="menuitem.html">AGENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                          class="fa-solid fa-caret-right"></i></a>
+                  <ul class="dropdown-menu dropdown-submenu" id="customerSub">
+                      <li><a class="dropdown-item" href="customeragentsearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="customeragentnew.html">NEW</a></li>
+                                <li><a class="dropdown-item" href="customeragentsearchusers.html">SEARCH USERS</a></li>
+                                <li><a class="dropdown-item" href="menuitem.html">ADVANCED
+                                        SETTINGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li><a class="dropdown-item" href="customeragentadvanceonline.html">ONLINE SUPPLIERS</a></li>
+                                        <li><a class="dropdown-item" href="customeragentadvanceoffline.html">LOCAL SUPPLIERS</a></li>
+                                    </ul>
+  
+                                </li>
+                                <li><a class="dropdown-item" href="customeragentrateprofile.html">AGENT RATE PROFILE</a></li>
+                            </ul>
+                        </li>
+  
+                        </li>
+                        <li><a class="dropdown-item" href="customerB2C.html">B2C CUSTOMER</a></li>
+                    </ul>
+                </div>
+
+                <!--  Drop down menu for Messages-->
+
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>MESSAGES</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item" href="#">AGENT
+                                MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">OUTBOX</a></li>
+                                <li><a class="dropdown-item" href="#">INBOX</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">MASS
+                                MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item"
+                                        href="#">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">SUBSCRIBERS
+                                        GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="#">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                        <li><a class="dropdown-item" href="#">DOWNLOAD NEWSLETTER</a></li>
+                                        <li><a class="dropdown-item" href="#">ANALYSIS</a></li>
+                                        <li><a class="dropdown-item" href="#">SETTINGS</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--  Drop down menu for Accounts-->
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <b>ACCOUNTS</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item"
+                                href="#">AGENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item"
+                                        href="#">RECEIPTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                        <li><a class="dropdown-item" href="#">BY BOOKING ID</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">CREDIT
+                                        NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                        <li><a class="dropdown-item" href="#">BY BOOKING ID</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">DEBIT
+                                        NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                        <li><a class="dropdown-item" href="#">BY BOOKING ID</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">TAX
+                                SETUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">TAX
+                                        MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">TAX CONFIGURATION&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                <li><a class="dropdown-item"
+                                        href="#">PAYMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                        <li><a class="dropdown-item" href="#">PAYMENT BY BOOKING ID</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--  Drop down menu for Reports-->
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b> REPORTS</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item"
+                                href="#">MANAGEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item"
+                                        href="#">BUSINESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">BY AGENT</a></li>
+                                        <li><a class="dropdown-item" href="#">BY HOTEL</a></li>
+                                        <li><a class="dropdown-item" href="#">BY COUNTRY</a></li>
+                                        <li><a class="dropdown-item" href="#">BY CITY</a></li>
+                                        <li><a class="dropdown-item" href="#">BY ONLINE SUPPLIER</a></li>
+                                        <li><a class="dropdown-item" href="#">BY OFFLINE SUPPLIER</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">BOOKING BY
+                                        SUPPLIER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li><a class="dropdown-item" href="#">BY STATUS</a></li>
+                                        <li><a class="dropdown-item" href="#">BY NIGHTS</a></li>
+                                        <li><a class="dropdown-item" href="#">BY SUPPLIER PROFILE</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">SALES MANAGER</a></li>
+                                <li><a class="dropdown-item" href="#">SALES COMPARISON</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">OPERTAIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">BOOKING REPORT</a></li>
+                                <li><a class="dropdown-item" href="#">AGENT SEARCH LOGS</a></li>
+                                <li><a class="dropdown-item" href="#">VOUCHER</a></li>
+                                <li><a class="dropdown-item" href="#">DAILY ROE</a></li>
+                                <li><a class="dropdown-item" href="#">LOYALTY PROGRAM</a></li>
+                                <li><a class="dropdown-item" href="#">REMINDERPRO<br>SUBSCRIPTIONS</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">ACCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">DAILY SALES</a></li>
+                                <li><a class="dropdown-item" href="#">CUSTOMER STATEMENT</a></li>
+                                <li><a class="dropdown-item" href="#">SUPPLIER
+                                        STATEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                        <li><a class="dropdown-item" href="#">ONLINE SUPPLIER</a></li>
+                                        <li><a class="dropdown-item" href="#">OFFLINE SUPPLIER</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="#">OUTSTANDING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                        <li><a class="dropdown-item" href="#">CUSTOMER</a></li>
+                                        <li><a class="dropdown-item" href="#">SUPPLIER</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">INVOICES</a></li>
+                                <li><a class="dropdown-item" href="#">AGENT RECEIPTS</a></li>
+                                <li><a class="dropdown-item" href="#">AGENT RECEIPT SUMMARY</a></li>
+                                <li><a class="dropdown-item" href="#">SUPPLIER PAYMENTS</a></li>
+                                <li><a class="dropdown-item" href="#">TAX</a></li>
+                                <li><a class="dropdown-item" href="#">COMMISSION</a></li>
+                                <li><a class="dropdown-item" href="#">PAYMENT GATEWAY<br>BOOKINGS</a></li>
+                                <li><a class="dropdown-item" href="#">AGENT GLOBAL STATEMENT</a></li>
+                                <li><a class="dropdown-item" href="#">GLOBAL CUSTOMER REPORT</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                <li><a class="dropdown-item" href="#">DESTINATIONS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--  Drop down menu for Contracts-->
+
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>CONTRACTS</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item"
+                                href="#">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item" href="#">RATES</a></li>
+                                <li><a class="dropdown-item" href="#">ALLOTMENT MAP</a></li>
+                                <li><a class="dropdown-item" href="#">DYNAMIC
+                                        ALLOTMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">OFFERS &
+                                        DISCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">RATES</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">TOURS & ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                <li><a class="dropdown-item" href="#">RATES</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">FLIGHTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                <li><a class="dropdown-item" href="#">FLIGHT SUPPLIER MAPPING</a></li>
+                                <li><a class="dropdown-item" href="#">ADD RATES</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--  Drop down menu for Masters-->
+
+
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>MASTERS</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item"
+                                href="#">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                <li><a class="dropdown-item"
+                                        href="#">AMENITITES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="#">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">ROOM
+                                        VIEW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">ROOM
+                                        CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">INVENTORY ROOM
+                                        CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">MEAL
+                                        BASIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="mealsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="#">PREFERRED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">SPECIAL
+                                        REQUESTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">TEST</a></li>
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                <li><a class="dropdown-item"
+                                        href="#">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">TOURS & ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">SUPPLIMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                <li><a class="dropdown-item"
+                                        href="#">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">AIRLINES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">PREFERRED CITIES</a></li>
+                        <li><a class="dropdown-item"
+                                href="#">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                                <li><a class="dropdown-item" href="#">ONLINE
+                                        SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH AUTO CHECK<br>CONFIGURATION</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">AUTO CHECK SUPPLIER</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">OFFLINE
+                                        SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">TRAVEL CLASS</a></li>
+                        <li><a class="dropdown-item" href="#">MARK-UP PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">MARKET
+                                PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">PAYMENT GATEWAYS&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="paysub">
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">AIRCRAFTS</a></li>
+                        <li><a class="dropdown-item"
+                                href="#">BANKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="banksub">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">CURRENCIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="cursub">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="#">TAXES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="taxsub">
+                                <li><a class="dropdown-item" href="#">NEW</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                <li><a class="dropdown-item" href="#">TAX
+                                        MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                        <li><a class="dropdown-item" href="#">ADD</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">TAX
+                                        CONFIGURATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                        <li><a class="dropdown-item" href="#">ADD</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">LOYALITY PROGRAM&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="loyaltysub">
+                                <li><a class="dropdown-item" href="#">TIERS</a></li>
+                                <li><a class="dropdown-item" href="#">REWARDS</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">PACAKGES</a></li>
+                        <li><a class="dropdown-item" href="#">OFFER CODES</a></li>
+                        <li><a class="dropdown-item"
+                                href="#">VEHICLES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="vehiclesub">
+                                <li><a class="dropdown-item" href="#">VEHICLE
+                                        TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW</a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="#">INVENTORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li><a class="dropdown-item" href="#">ADD</a></li>
+                                        <li><a class="dropdown-item" href="#">MANAGE</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--  Drop down menu for Visa-->
+
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>VISA</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item"
+                                href="#">CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item" href="#">ADD</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">VISA REQUEST</a></li>
+                        <li><a class="dropdown-item" href="#">VISA
+                                RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                <li><a class="dropdown-item" href="#">ADD SUPPLIER VISA RATES</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH SUPPLIER VISA RATESX</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">NEW OFFLINE VISA BOOKING</a></li>
+                    </ul>
+                </div>
+
+
+                <!--  Drop down menu for Flights-->
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>FLIGHT</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item" href="#">FLIGHT
+                                RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item" href="#">ADD RULES</a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">FLIGHT
+                                PCC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">ADD </a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">FLIGHT QCT
+                                RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                <li><a class="dropdown-item" href="#">ADD </a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">FLIGHT CANCELLATION
+                                RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                <li><a class="dropdown-item" href="#">ADD </a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--  Drop down menu for Suppliers-->
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>SUPPLIERS</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item" href="#">MARKET
+                                PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item" href="#">NEW </a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">ONLINE
+                                SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">NEW </a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">OFFLINE
+                                SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                <li><a class="dropdown-item" href="#">NEW </a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--  Drop down menu for Lodge Card-->
+
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>LODGE CARD</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item"
+                                href="#">CARD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item" href="#">ADD </a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">CARD
+                                PAYMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="#">ADD </a></li>
+                                <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!--  Drop down menu for Tools-->
+
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <b>TOOLS</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item"
+                                href="#">MARK-UPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item" href="#">ADD
+                                        ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">NEW </a></li>
+                                        <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">BY COUNTRY/BRANCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">ADD LEAD TIME</a></li>
+                        <li><a class="dropdown-item"
+                                href="#">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                <li><a class="dropdown-item" href="#">COUNTRIES
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                        <li><a class="dropdown-item" href="#">MANUAL </a></li>
+                                        <li><a class="dropdown-item" href="#">AUTO</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="#">CITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li><a class="dropdown-item" href="#">MANUAL </a></li>
+                                        <li><a class="dropdown-item" href="#">AUTO</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="#">HOTELS</a></li>
+                                <li><a class="dropdown-item" href="#">NATIONALITIES</a></li>
+                                <li><a class="dropdown-item" href="#">OFFLINE
+                                        SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                        <li><a class="dropdown-item" href="#">HOTEL </a></li>
+                                        <li><a class="dropdown-item" href="#">TRANSFER </a></li>
+                                        <li><a class="dropdown-item" href="#">TOUR & ACTIVITIES</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">EXCHANGE
+                                RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                <li><a class="dropdown-item" href="#">MATRIX </a></li>
+                                <li><a class="dropdown-item" href="#">CALCULATOR</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">TRANSACTION LIMITS&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                                <li><a class="dropdown-item" href="#">PER TRANSACTION </a></li>
+                                <li><a class="dropdown-item" href="#">TOTAL</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">REWARDS DELIVERY</a></li>
+                        <li><a class="dropdown-item" href="#">LANGUAGE MANAGER</a></li>
+                        <li><a class="dropdown-item" href="#">FAQ</a></li>
+                        <li><a class="dropdown-item" href="#">PRESET TEXT</a></li>
+                    </ul>
+                </div>
+
+
+                <!--  Drop down menu for Settings-->
+
+                <div class="dropdown" id="drip">
+                    <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <b>SETTINGS</b>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                        <li><a class="dropdown-item"
+                                href="menuitem.html">STAFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                <li><a class="dropdown-item" href="staffnew.html">NEW</a></li>
+                                <li><a class="dropdown-item" href="staffsearch.html">SEARCH</a></li>
+                                <li><a class="dropdown-item" href="menu-new.html">ACCESS
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                        <li><a class="dropdown-item" href="roles.html">ROLES </a></li>
+                                        <li><a class="dropdown-item" href="menustaff.html">MENU </a></li>
+                                        <li><a class="dropdown-item" href="reportsstaff.html">REPORTS</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item" href="assignbranches.html">ASSIGN A BRANCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="menuitem.html">BRANCHES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li><a class="dropdown-item" href="branchnew.html">NEW</a></li>
+                                <li><a class="dropdown-item" href="branchsearch.html">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="menuitem.html">EMAILS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                <li><a class="dropdown-item" href="emails-newsetting.html">NEW</a></li>
+                                <li><a class="dropdown-item" href="emails-searchsetting.html">SEARCH</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="mid.-office.html">MID-OFFICE ACCESS</a></li>
+                        <li><a class="dropdown-item"
+                                href="menuitem.html">NAVIGATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                <li><a class="dropdown-item" href="sitemap.html">SYSTEM SITEMAP</a></li>
+                                <li><a class="dropdown-item"
+                                        href="menuitem.html">MENUITEMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                            class="fa-solid fa-caret-right"></i></a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li><a class="dropdown-item" href="menu-new.html">NEW</a></li>
+                                        <li><a class="dropdown-item" href="menu-search.html">SEARCH</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="menuitem.html">LOGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                    class="fa-solid fa-caret-right"></i></a>
+                            <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                                <li><a class="dropdown-item" href="userlogs.html">USERS</a></li>
+                                <li><a class="dropdown-item" href="emaillogs.html">EMAILS</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</section>
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+      
+                <div class="col-md-3">
+                  <h5 style="font-size:14pt;font-weight: 500;">USER LOG SEARCH</h5>
+                </div>
+                <div class="col-md-7">
+        
+                </div>
+                <div class="col-md-2">
+               
+             
+                </div>
+        
+              </div>
+   
+        </header>
+
+    </section>
+
+    <!--    Panel Body        -->
+
+    <div class="container-fluid pt-0 p-4">
+
+        <!-- First Row-->
+
+        <div class="row mt-4">
+            <div class="col-md-3 form-group">
+                <label>User Name</label>
+                <select class="form-control show-menu-arrow selectpicker show-menu-arrow bs-select-hidden"
+                    id="user_id_search" name="user_id_search" data-live-search="true">
+                    <option value="">Select User</option>
+                    <option value="v3otramslive">v3otramslive</option>
+                    <option value="kishore">kishore</option>
+                    <option value="hemangi15">hemangi15</option>
+                    <option value="nitin">nitin</option>
+                    <option value="Paresh">Paresh</option>
+                    <option value="kishorek">kishorek</option>
+                    <option value="v3_otrams_wh">v3_otrams_wh</option>
+                    <option value="shivraj">shivraj</option>
+                    <option value="simple">simple</option>
+                    <option value="simplee">simplee</option>
+                    <option value="otramsdemo1">otramsdemo1</option>
+                    <option value="otramsdemo2">otramsdemo2</option>
+                    <option value="otramsdemo29">otramsdemo29</option>
+                    <option value="otrams_syria">otrams_syria</option>
+                    <option value="otramsdemo9">otramsdemo9</option>
+                    <option value="OtramsDemo11">OtramsDemo11</option>
+                    <option value="OtramsDemo23">OtramsDemo23</option>
+                    <option value="swaralisales">swaralisales</option>
+                    <option value="Swaralisalesdemo">Swaralisalesdemo</option>
+                    <option value="ankita">ankita</option>
+                    <option value="otramsdemokw">otramsdemokw</option>
+                    <option value="neeraj">neeraj</option>
+                    <option value="Madhuri">Madhuri</option>
+                    <option value="Redapple">Redapple</option>
+                    <option value="ryanrph">ryanrph</option>
+                    <option value="v4,demo">v4,demo</option>
+                    <option value="v4demo">v4demo</option>
+                    <option value="hawallyparesh">hawallyparesh</option>
+                    <option value="asmita">asmita</option>
+                    <option value="bi_testing">bi_testing</option>
+                    <option value="svss">svss</option>
+                    <option value="Moreshwar_Test">Moreshwar_Test</option>
+                    <option value="Saya_test">Saya_test</option>
+                    <option value="Sujay_test">Sujay_test</option>
+                    <option value="TEST_JV">TEST_JV</option>
+                    <option value="TEST_JV_C">TEST_JV_C</option>
+                    <option value="TEST_JV_A">TEST_JV_A</option>
+                    <option value="worldavennuejv">worldavennuejv</option>
+                    <option value="Beta_Tdo">Beta_Tdo</option>
+                    <option value="Worldavenue">Worldavenue</option>
+                    <option value="Agent_test">Agent_test</option>
+                    <option value="Agent_Test_JV">Agent_Test_JV</option>
+                    <option value="jv_demo">jv_demo</option>
+                    <option value="demo_jb">demo_jb</option>
+                    <option value="jb_2">jb_2</option>
+                    <option value="test_jvv">test_jvv</option>
+                    <option value="jv_user1">jv_user1</option>
+                    <option value="user_test">user_test</option>
+                    <option value="test_user">test_user</option>
+                    <option value="test_user_JV">test_user_JV</option>
+                    <option value="test_ron1">test_ron1</option>
+                    <option value="test_jv111">test_jv111</option>
+                    <option value="1booking_wh">1booking_wh</option>
+                    <option value="Milind_Qtech">Milind_Qtech</option>
+
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label>Log Type</label>
+                <input type="text" class="form-control form-control-sm" name="name">
+            </div>
+            <div class="form-group col-md-3">
+                <label>Log Description</label>
+                <input type="text" class="form-control form-control-sm" name="name">
+            </div>
+            <div class="form-group col-md-3">
+                <label>Raw Log</label>
+                <input type="text" class="form-control form-control-sm" name="name">
+            </div>
+        </div>
+
+        <!-- 2nd Row-->
+
+        <div class="row mt-4">
+            <div class="col-md-3 form-group">
+                <label>From Date</label>
+                <div class="input-group col-md-12 col-xs-12">
+                    <div class="input-group date col-xs-12" id="datetimepicker13">
+                        <input class="form-control" type="text" id="from_date_search" name="from_date_search" value="">
+                        <span class="input-group-addon dateIcon">
+                            <i class="glyphicon glyphicon-th"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--    3rd Row-->
+        <div class="row mt-4 mb-4">
+            <div class="form-group col-md-2">
+                <button class="btn btn-dark"><i class="fa fa-search"></i> Search</button>
+            </div>
+        </div>
+        <!--Pagination panel-->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm justify-content-center mt-4">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                <li class="page-item"><a class="page-link" href="#">11</a></li>
+                <li class="page-item"><a class="page-link" href="#">12</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+
+        <!---Table Creation-->
+        <table id="search_sup"
+            class="table table-striped table-hover table-responsive dataTable no-footer table table-bordered"
+            role="grid" aria-describedby="search_sup_info">
+            <thead>
+                <tr role="row">
+                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 82.8889px;">User Name</th>
+                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 87.8889px;">Log Type</th>
+                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 487.889px;">Log Description</th>
+                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 662.889px;">Raw Log</th>
+                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 55px;">From Date</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr class="phps_row_1 odd" role="row">
+                    <td>v3otramslive</td>
+                    <td>QCT Rule Added</td>
+                    <td>QCT Rule inserted from flight rule engine (Add QCT Rule) By User : v3otramslive</td>
+                    <td>SELECT officeid multiple_OfficeId id = '1'</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">09</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:27</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>v3otramslive</td>
+                    <td>Agent Supplier settings</td>
+                    <td>Supplier setting updated Previous data-- agent_id-291 ## supplier_id- 20 ## company_name - Agoda
+                        ## supplier_code-agoda ## percentage - 0.00 ## lead_time - 10 ==&lt;br&gt;== agent_id-291 ##
+                        supplier_id- 3 ## company_name - Hotelbeds ## supplier_code-hotelbeds ## percentage - 0.00 ##
+                        lead_time - 10 ==&lt;br&gt;== agent_id-291 ## supplier_id- 27 ## company_name - Sabre Flight ##
+                        supplier_code-sabre ## percentage - 0.00 ## lead_time - 10 </td>
+                    <td>====== agent_supplier_tings agent_id = '291',supplier_id = 20 ,status = '1' ,priority = '15'
+                        ,lead_time = '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id =
+                        '15'====== agent_supplier_tings agent_id = '291',supplier_id = 19 ,status = '' ,priority = ''
+                        ,lead_time = '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 1 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 8 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 12 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 13 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 3 ,status = '1' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 23 ,status = '' ,priority = '4' ,l</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">08</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">15:34</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>v3otramslive</td>
+                    <td>Agent Supplier settings</td>
+                    <td>Supplier setting updated Previous data-- agent_id-316 ## supplier_id- 23 ## company_name -
+                        Contracted Hotels ## supplier_code-localsystem ## percentage - 0.00 ## lead_time - 48 </td>
+                    <td>====== agent_supplier_tings agent_id = '316',supplier_id = 20 ,status = '' ,priority = ''
+                        ,lead_time = '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 19 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 1 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 8 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 12 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 13 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 3 ,status = '1' ,priority = '7' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = '7'======
+                        agent_supplier_tings agent_id = '316',supplier_id = 23 ,status = '1' ,priority = '7' ,lead_time
+                    </td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">08</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:35</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>v3otramslive</td>
+                    <td>Agent Supplier settings</td>
+                    <td>Supplier setting updated Previous data-- agent_id-316 ## supplier_id- 3 ## company_name -
+                        Hotelbeds ## supplier_code-hotelbeds ## percentage - 0.00 ## lead_time - 0 ==&lt;br&gt;==
+                        agent_id-316 ## supplier_id- 23 ## company_name - Contracted Hotels ## supplier_code-localsystem
+                        ## percentage - 0.00 ## lead_time - 48 </td>
+                    <td>====== agent_supplier_tings agent_id = '316',supplier_id = 20 ,status = '' ,priority = ''
+                        ,lead_time = '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 19 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 1 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 8 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 12 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 13 ,status = '' ,priority = '' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '316',supplier_id = 3 ,status = '' ,priority = '7' ,lead_time =
+                        '0',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = '7'======
+                        agent_supplier_tings agent_id = '316',supplier_id = 23 ,status = '1' ,priority = '7' ,lead_time
+                        =</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">08</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:35</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>v3otramslive</td>
+                    <td>Agent Updated</td>
+                    <td>Agent 291 updated For -
+                        email=shiv.chauhan%40qtechsoftware.com&amp;modify_date=2023-06-07+06%3A20%3A59 changed to -
+                        email=pranali.mhatre%40qtechsoftware.com&amp;modify_date=2023-06-07+12%3A47%3A18</td>
+                    <td> agents currency= '608',branch_id= '1',consultant_id= 'Moreshwar_Test',sales_manager_id=
+                        '',profile= '', allow_frontend_rate_change = '1' parent_agent= '291'</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">07</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">18:17</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>v3otramslive</td>
+                    <td>Agent Updated</td>
+                    <td>Agent 291 updated For -
+                        email=pranali.mhatre%40qtechsoftware.com&amp;modify_date=2023-06-06+11%3A42%3A14 changed to -
+                        email=shiv.chauhan%40qtechsoftware.com&amp;modify_date=2023-06-07+06%3A20%3A59</td>
+                    <td> agents currency= '608',branch_id= '1',consultant_id= 'Moreshwar_Test',sales_manager_id=
+                        '',profile= '', allow_frontend_rate_change = '1' parent_agent= '291'</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">07</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:50</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>v3otramslive</td>
+                    <td>Agent Supplier settings</td>
+                    <td>Supplier setting updated Previous data-- agent_id-291 ## supplier_id- 20 ## company_name - Agoda
+                        ## supplier_code-agoda ## percentage - 0.00 ## lead_time - 10 ==&lt;br&gt;== agent_id-291 ##
+                        supplier_id- 3 ## company_name - Hotelbeds ## supplier_code-hotelbeds ## percentage - 0.00 ##
+                        lead_time - 10 ==&lt;br&gt;== agent_id-291 ## supplier_id- 27 ## company_name - Sabre Flight ##
+                        supplier_code-sabre ## percentage - 0.00 ## lead_time - 10 </td>
+                    <td>====== agent_supplier_tings agent_id = '291',supplier_id = 20 ,status = '1' ,priority = '15'
+                        ,lead_time = '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id =
+                        '15'====== agent_supplier_tings agent_id = '291',supplier_id = 19 ,status = '' ,priority = ''
+                        ,lead_time = '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 1 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 8 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 12 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 13 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 3 ,status = '1' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 23 ,status = '' ,priority = '4' ,l</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">07</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:50</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>v3otramslive</td>
+                    <td>Payment Gateway Updated </td>
+                    <td>Payment gateway details updated for TapPay. Previous Data - ##name - TapPay##url -
+                        https://migs.mastercard.com.au/vpcpay##code - tap##markup - 5##status - A</td>
+                    <td>====== gateways name= 'TapPay', url= 'https://migs.mastercard.com.au/vpcpay', code= 'tap',
+                        markup= '5', modify_date= '2023-06-06 12:13:07' id= '5'</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">06</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">17:43</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>v3otramslive</td>
+                    <td>Agent Updated</td>
+                    <td>Agent 291 updated For -
+                        email=sujay.raut%40qtechsoftware.com&amp;modify_date=2023-05-25+05%3A06%3A04 changed to -
+                        email=pranali.mhatre%40qtechsoftware.com&amp;modify_date=2023-06-06+11%3A42%3A14</td>
+                    <td> agents currency= '608',branch_id= '1',consultant_id= 'Moreshwar_Test',sales_manager_id=
+                        '',profile= '', allow_frontend_rate_change = '1' parent_agent= '291'</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">06</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">17:12</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>v3otramslive</td>
+                    <td>Agent Supplier settings</td>
+                    <td>Supplier setting updated Previous data-- agent_id-291 ## supplier_id- 20 ## company_name - Agoda
+                        ## supplier_code-agoda ## percentage - 0.00 ## lead_time - 10 ==&lt;br&gt;== agent_id-291 ##
+                        supplier_id- 3 ## company_name - Hotelbeds ## supplier_code-hotelbeds ## percentage - 0.00 ##
+                        lead_time - 10 ==&lt;br&gt;== agent_id-291 ## supplier_id- 27 ## company_name - Sabre Flight ##
+                        supplier_code-sabre ## percentage - 0.00 ## lead_time - 10 </td>
+                    <td>====== agent_supplier_tings agent_id = '291',supplier_id = 20 ,status = '1' ,priority = '15'
+                        ,lead_time = '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id =
+                        '15'====== agent_supplier_tings agent_id = '291',supplier_id = 19 ,status = '' ,priority = ''
+                        ,lead_time = '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 1 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 8 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 12 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 13 ,status = '' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 3 ,status = '1' ,priority = '' ,lead_time =
+                        '10',branch_id = '',visible_supplier_on_voucher = '0',pricing_profile_id = ''======
+                        agent_supplier_tings agent_id = '291',supplier_id = 23 ,status = '' ,priority = '4' ,l</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">06</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">17:03</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>v3otramslive</td>
+                    <td>Lodge Card Mapping Updated</td>
+                    <td>Lodge card mapping updated successfully (Update Lodge Card Mapping)</td>
+                    <td> lodge_cards_mapping branch_id =:branch_id,agent_id =:agent_id,card_id =:card_id,services
+                        =:services,supplier_code =:supplier_code,status =:sel_status,modify_by =:modify_by,modify_date
+                        =:modify_date id =:id</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">02</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">13:19</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>v3otramslive</td>
+                    <td>Lodge Card Added</td>
+                    <td>Lodge card inserted successfully (Add Lodge Card)</td>
+                    <td> lodge_cards cid =:cid,branch_id =:branch_id,agent_id =:agent_id,card_title
+                        =:card_title,card_name =:card_name,card_number =:card_number,card_expiry_month
+                        =:card_expiry_month,card_expiry_year =:card_expiry_year,card_cvv =:card_cvv,card_type
+                        =:card_type,card_token =:card_token,status =:sel_status,token_status =:token_status,last_d
+                        =:last_d,last_d_by =:last_d_by,last_used =:last_used,create_by =:create_by,create_date
+                        =:create_date</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">02</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">13:19</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>rohan</td>
+                    <td>Agent Loyalty Point Detail</td>
+                    <td>Loyalty earn Points is &nbsp;&nbsp; of agent &nbsp;due to cancellation of booking id '29236'
+                    </td>
+                    <td> loyalty_detail booking_id= :booking_id,type= :type,log= :log</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:52</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>rohan</td>
+                    <td>Agent Loyalty Point Detail</td>
+                    <td>Loyalty earn Points is &nbsp;&nbsp; of agent &nbsp;due to cancellation of booking id '29234'
+                    </td>
+                    <td> loyalty_detail booking_id= :booking_id,type= :type,log= :log</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:52</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>rohan</td>
+                    <td>Agent Loyalty Point Detail</td>
+                    <td>Loyalty earn Points is &nbsp;&nbsp; of agent &nbsp;due to cancellation of booking id '29232'
+                    </td>
+                    <td> loyalty_detail booking_id= :booking_id,type= :type,log= :log</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:52</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>rohan</td>
+                    <td>Agent Loyalty Point Detail</td>
+                    <td>Loyalty earn Points is &nbsp;&nbsp; of agent &nbsp;due to cancellation of booking id '29231'
+                    </td>
+                    <td> loyalty_detail booking_id= :booking_id,type= :type,log= :log</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:52</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>rohan</td>
+                    <td>Agent Loyalty Point Detail</td>
+                    <td>Loyalty earn Points is &nbsp;&nbsp; of agent &nbsp;due to cancellation of booking id '29230'
+                    </td>
+                    <td> loyalty_detail booking_id= :booking_id,type= :type,log= :log</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:52</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>rohan</td>
+                    <td>Agent Loyalty Point Detail</td>
+                    <td>Loyalty earn Points is &nbsp;&nbsp; of agent &nbsp;due to cancellation of booking id '29229'
+                    </td>
+                    <td> loyalty_detail booking_id= :booking_id,type= :type,log= :log</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:52</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>rohan</td>
+                    <td>Agent Loyalty Point Detail</td>
+                    <td>Loyalty earn Points is &nbsp;&nbsp; of agent &nbsp;due to cancellation of booking id '29228'
+                    </td>
+                    <td> loyalty_detail booking_id= :booking_id,type= :type,log= :log</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:52</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>rohan</td>
+                    <td>Agent Loyalty Point Detail</td>
+                    <td>Loyalty earn Points is &nbsp;&nbsp; of agent &nbsp;due to cancellation of booking id '29225'
+                    </td>
+                    <td> loyalty_detail booking_id= :booking_id,type= :type,log= :log</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:52</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>rohan</td>
+                    <td>Agent Loyalty Point Detail</td>
+                    <td>Loyalty earn Points is &nbsp;&nbsp; of agent &nbsp;due to cancellation of booking id '29222'
+                    </td>
+                    <td> loyalty_detail booking_id= :booking_id,type= :type,log= :log</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:52</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>v3otramslive</td>
+                    <td>Cancellation Rule Added</td>
+                    <td>Cancellation Rule inserted from flight rule engine (Add Cancellation Rule) By User :
+                        v3otramslive</td>
+                    <td> flight_cancellation_lead_time cancellation_lead_time =:lead_time,supplier =:supplier,status
+                        =:sel_status,create_date =:create_date</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:42</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>v3otramslive</td>
+                    <td>Cancellation Rule Status Updated</td>
+                    <td>Cancellation Rule Status Updated from flight rule engine (Edit Cancellation Rule Status) By User
+                        : v3otramslive</td>
+                    <td> flight_cancellation_lead_time status='D' id = ? </td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:10</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_0 even" role="row">
+                    <td>v3otramslive</td>
+                    <td>Cancellation Rule Updated</td>
+                    <td>Cancellation Rule Updated from flight rule engine (Edit Cancellation Rule) By User :
+                        v3otramslive</td>
+                    <td> flight_cancellation_lead_time supplier =:sel_supplier_option,cancellation_lead_time
+                        =:cancellation_lead_time,modify_date =:modify_date id = :id;</td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:09</div>
+                    </td>
+                </tr>
+                <tr class="phps_row_1 odd" role="row">
+                    <td>v3otramslive</td>
+                    <td>Cancellation Rule Status Updated</td>
+                    <td>Cancellation Rule Status Updated from flight rule engine (Edit Cancellation Rule Status) By User
+                        : v3otramslive</td>
+                    <td> flight_cancellation_lead_time status='D' id = ? </td>
+                    <td>
+                        <div class="dateWrapper withTime">
+                            <div class="onlyDate">01</div>
+                            <div class="monthYear">Jun<br>2023</div>
+                        </div>
+                        <div class="secCont">11:04</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Pagination panel-->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm justify-content-center mt-4">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                <li class="page-item"><a class="page-link" href="#">11</a></li>
+                <li class="page-item"><a class="page-link" href="#">12</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="/dist/js/bootstrap-select.js"></script>
+</html>
