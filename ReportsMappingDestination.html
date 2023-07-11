@@ -1403,11 +1403,11 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="doubleScroll-scroll-wrapper"
+                    <div class="doubleScroll-scroll-wrapper"id="wrapper1"
                         style="height: 20px; overflow: scroll hidden;">
                         <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1599px;"></div>
                     </div>
-                    <div id="double-scroll" style="overflow: scroll hidden;">
+                    <div id="wrapper2"style="overflow: scroll hidden;">
                         <table id="search_sup"
                             class="table table-striped dataTable table-hover table-responsive alignTbl no-footer table-bordered"
                             role="grid" aria-describedby="search_sup_info">
@@ -6405,5 +6405,16 @@
 });
 
 </script>
+
+<script type="text/javascript">
+    var wrapper1 = document.getElementById('wrapper1');
+  var wrapper2 = document.getElementById('wrapper2');
+  wrapper1.onscroll = function() {
+  wrapper2.scrollLeft = wrapper1.scrollLeft;
+  };
+  wrapper2.onscroll = function() {
+  wrapper1.scrollLeft = wrapper2.scrollLeft;
+  };
+  </script>
 
 </html>
