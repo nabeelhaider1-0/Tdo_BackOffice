@@ -16,6 +16,9 @@
   flex: inherit;
 
 }
+.navbar-toggler{
+  float: right;
+}
 .cancelNot1 h2{
   text-shadow: 1px 1px 1px #000;
 }
@@ -738,4 +741,9 @@ input[type="file"] {
 
     .nav-tabs {
       border-bottom: 1px solid #e4e5e7;
+  }
+  @media only screen and (max-width:960px) {
+    #firstNav{
+      display: none;
+    }
   }
