@@ -1338,10 +1338,10 @@
         <!-- Table Creation -->
 
         <div class="col-md-12">
-            <div class="doubleScroll-scroll-wrapper" style="height: 20px; overflow: scroll hidden; width: 1290px;">
+            <div class="doubleScroll-scroll-wrapper" id="wrapper1" style="height: 20px; overflow: scroll hidden; width: 1290px;">
                 <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1290px;"></div>
             </div>
-            <div id="scrollCont" style="overflow: scroll hidden;">
+            <div id="wrapper2" style="overflow: scroll hidden;">
                 <table id="search_sup"
                     class="table table-striped table-hover table-responsive dataTable no-footer table-bordered"
                     aria-describedby="search_sup_info" role="grid">
@@ -2307,6 +2307,17 @@
 
 
 
+</script>
+
+<script type="text/javascript">
+  var wrapper1 = document.getElementById('wrapper1');
+var wrapper2 = document.getElementById('wrapper2');
+wrapper1.onscroll = function() {
+wrapper2.scrollLeft = wrapper1.scrollLeft;
+};
+wrapper2.onscroll = function() {
+wrapper1.scrollLeft = wrapper2.scrollLeft;
+};
 </script>
 
 </html>
