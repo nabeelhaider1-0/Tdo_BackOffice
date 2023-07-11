@@ -1013,7 +1013,10 @@
 
         <div class="row mt-4">
             <div class="col-sm-12">
-                <div id="scrollCont" style="overflow-x: scroll; display: block; overflow-y: hidden;">
+              <div class="doubleScroll-scroll-wrapper" id="wrapper1"  style="height: 20px; overflow: scroll hidden; width: 1320px;">
+                <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1320px;"></div>
+            </div>
+                <div id="wrapper2" style="overflow-x: scroll; display: block; overflow-y: hidden;">
                     <table id="search_profile"
                         class="table table-striped table-hover table-responsive dataTable no-footer table-bordered" role="grid"
                         aria-describedby="search_profile_info">
@@ -1283,5 +1286,16 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
+
+<script type="text/javascript">
+  var wrapper1 = document.getElementById('wrapper1');
+var wrapper2 = document.getElementById('wrapper2');
+wrapper1.onscroll = function() {
+wrapper2.scrollLeft = wrapper1.scrollLeft;
+};
+wrapper2.onscroll = function() {
+wrapper1.scrollLeft = wrapper2.scrollLeft;
+};
+</script>
 
 </html>
