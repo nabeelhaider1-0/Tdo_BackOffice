@@ -321,7 +321,7 @@ td {
   width: auto !important;
   padding: 5px !important;
   width: 36px !important;
-  height: 32px;
+  height: 31px;
   border: 1px solid #e4e5e7 !important;
   cursor: pointer!important;
 }
@@ -781,6 +781,9 @@ color:grey;
     }
     .boxview{
       text-align: left;
+    }
+    .input-group-addon {
+      height: 33px;
     }
     
   }
