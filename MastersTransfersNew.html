@@ -1474,26 +1474,13 @@
                             <option value="0"> - Select City -</option>
 
                         </select>
-                        <div class="btn-group bootstrap-select form-control show-menu-arrow required"><button
-                                type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
-                                data-id="city" title="- Select City -"><span class="filter-option pull-left"> - Select
-                                    City -</span>&nbsp;<span class="caret"></span></button>
-                            <div class="dropdown-menu open">
-                                <div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off">
-                                </div>
-                                <ul class="dropdown-menu inner" role="menu">
-                                    <li data-original-index="0" class="selected"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text"> - Select City -</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                  
                     </div>
 
                     <div class="col-md-3 form-group phps_row_1">
                         <label>From PickUp Point</label>
                         <select name="sel_pickup_point"
-                            class="selectpicker form-control show-menu-arrow required bs-select-hidden"
+                            class="selectpicker form-control form-control-sm show-menu-arrow required bs-select-hidden"
                             id="sel_pickup_point" onchange="javascript:get_locations(this);" data-live-search="true">
                             <option value="0"> - Select PickUp Point -</option>
 
@@ -1509,39 +1496,7 @@
 
                             <option value="T">Terminal</option>
                         </select>
-                        <div class="btn-group bootstrap-select form-control show-menu-arrow required"><button
-                                type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
-                                data-id="sel_pickup_point" title="- Select PickUp Point -"><span
-                                    class="filter-option pull-left"> - Select PickUp Point -</span>&nbsp;<span
-                                    class="caret"></span></button>
-                            <div class="dropdown-menu open">
-                                <div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off">
-                                </div>
-                                <ul class="dropdown-menu inner" role="menu">
-                                    <li data-original-index="0" class="selected"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text"> - Select PickUp Point -</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="1"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Accommodation</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="2"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Airport</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="3"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Port</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="4"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Station</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="5"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Other</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="6"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Terminal</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                       
                         <h5>
                             <span id="one_location" class="label label-info"></span>
                             <input type="hidden" name="pickup_code" id="pickup_code" value="">
@@ -1550,35 +1505,19 @@
                     <div class="form-group col-md-3" id="pickup_location" style="display:none;">
                         <label>Pickup Location</label><br>
                         <select name="sel_pick_location[]" multiple="multiple"
-                            class="selectpicker form-control show-menu-arrow select_style bs-select-hidden"
+                            class="selectpicker form-control form-control-sm show-menu-arrow select_style bs-select-hidden"
                             id="sel_pick_location" onchange="javascript: setLocation(this.value,'pick');"
                             data-live-search="true" data-actions-box="true" style="display: none;"></select>
-                        <div class="btn-group bootstrap-select show-tick form-control show-menu-arrow select_style">
-                            <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
-                                data-id="sel_pick_location" title="Nothing selected"><span
-                                    class="filter-option pull-left">Nothing selected</span>&nbsp;<span
-                                    class="caret"></span></button>
-                            <div class="dropdown-menu open">
-                                <div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off">
-                                </div>
-                                <div class="bs-actionsbox">
-                                    <div class="btn-group btn-group-sm btn-block"><button type="button"
-                                            class="actions-btn bs-select-all btn btn-default">Select All</button><button
-                                            type="button" class="actions-btn bs-deselect-all btn btn-default">Deselect
-                                            All</button></div>
-                                </div>
-                                <ul class="dropdown-menu inner" role="menu"></ul>
-                            </div>
-                        </div>
+                        
                     </div>
 
 
                 </div>
-                <div class="row">
+                <div class="row mt-3">
                     <div class=" col-md-3  form-group phps_row_0">
                         <label>Dropoff Country</label>
                         <select name="sel_countries_dropoff"
-                            class="selectpicker form-control show-menu-arrow required bs-select-hidden"
+                            class="selectpicker form-control form-control-sm show-menu-arrow required bs-select-hidden"
                             id="country_dropoff" onchange="getCityList('dropoff_country');" data-live-search="true">
                             <option value="0">- Select Country Dropoff -</option>
                             <option label="Afghanistan" value="97">Afghanistan</option>
@@ -1813,735 +1752,24 @@
                             <option label="Zimbabwe" value="195">Zimbabwe</option>
 
                         </select>
-                        <div class="btn-group bootstrap-select form-control show-menu-arrow required"><button
-                                type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
-                                data-id="country_dropoff" title="- Select Country Dropoff -"><span
-                                    class="filter-option pull-left">- Select Country Dropoff -</span>&nbsp;<span
-                                    class="caret"></span></button>
-                            <div class="dropdown-menu open">
-                                <div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off">
-                                </div>
-                                <ul class="dropdown-menu inner" role="menu">
-                                    <li data-original-index="0" class="selected"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">- Select Country Dropoff -</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="1"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Afghanistan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="2"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Albania</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="3"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Algeria</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="4"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Andorra</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="5"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Angola</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="6"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Antigua And Barbuda</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="7"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Argentina</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="8"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Armenia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="9"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Aruba</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="10"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Australia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="11"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Austria</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="12"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Azerbaijan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="13"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Bahamas</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="14"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Bahrain</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="15"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Bangladesh</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="16"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Barbados</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="17"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Belarus</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="18"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Belgium</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="19"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Belize</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="20"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Benin</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="21"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Bermuda</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="22"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Bhutan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="23"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Bolivia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="24"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Bonaire, Sint Eustatius and
-                                                Saba</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
-                                    </li>
-                                    <li data-original-index="25"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Bosnia and Herzegovina</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="26"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Botswana</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="27"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Brazil</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="28"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">British Virgin Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="29"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Brunei</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="30"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Bulgaria</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="31"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Burkina Faso</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="32"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Burundi</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="33"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Cambodia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="34"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Cameroon</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="35"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Canada</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="36"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Cape Verde</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="37"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Cayman Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="38"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Central African Republic</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="39"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Chad</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="40"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Chile</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="41"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">China</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="42"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Colombia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="43"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Comoros</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="44"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Cook Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="45"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Costa Rica</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="46"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Croatia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="47"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Cuba</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="48"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Curacao</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="49"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Cyprus</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="50"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Czech Republic</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="51"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Democratic Republic of the
-                                                Congo</span><span class="glyphicon glyphicon-ok check-mark"></span></a>
-                                    </li>
-                                    <li data-original-index="52"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Denmark</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="53"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Djibouti</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="54"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Dominica</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="55"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Dominican Republic</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="56"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">East Timor</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="57"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Ecuador</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="58"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Egypt</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="59"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">El Salvador</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="60"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Equatorial Guinea</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="61"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Eritrea</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="62"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Estonia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="63"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Ethiopia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="64"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Falkland Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="65"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Fiji Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="66"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Finland</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="67"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">France</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="68"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">French Guiana</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="69"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">French Polynesia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="70"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Gabon</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="71"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Gambia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="72"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Georgia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="73"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Germany</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="74"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Ghana</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="75"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Gibraltar</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="76"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Greece</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="77"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Greece Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="78"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Greenland</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="79"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Grenada</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="80"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Guadeloupe</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="81"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Guam</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="82"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Guatemala</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="83"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Guernsey</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="84"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Guinea</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="85"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Guinea Bissau</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="86"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Guyana</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="87"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Haiti</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="88"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Honduras</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="89"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Hong Kong</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="90"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Hungary</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="91"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Iceland</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="92"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">India</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="93"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Indonesia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="94"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Iran</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="95"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Iraq</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="96"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Ireland</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="97"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Isle of Man</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="98"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Israel</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="99"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Italy</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="100"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Ivory Coast</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="101"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Jamaica</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="102"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Japan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="103"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Jersey</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="104"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Jordan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="105"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Kazakhstan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="106"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Kenya</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="107"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Kiribati</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="108"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Kosovo</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="109"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Kuwait</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="110"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Kyrgyzstan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="111"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Laos</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="112"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Latvia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="113"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Lebanon</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="114"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Lesotho</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="115"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Liberia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="116"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Libya</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="117"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Liechtenstein</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="118"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Lithuania</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="119"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Luxembourg</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="120"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Macau</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="121"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Macedonia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="122"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Madagascar</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="123"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Malawi</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="124"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Malaysia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="125"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Maldives</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="126"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Mali</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="127"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Malta</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="128"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Marshall Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="129"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Martinique</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="130"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Mauritania</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="131"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Mauritius</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="132"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Mexico</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="133"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Micronesia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="134"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Moldova</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="135"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Monaco</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="136"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Mongolia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="137"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Montenegro</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="138"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Montserrat</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="139"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Morocco</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="140"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Mozambique</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="141"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Myanmar(Burma)</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="142"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Namibia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="143"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Nauru</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="144"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Nepal</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="145"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Netherlands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="146"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">New Caledonia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="147"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">New Zealand</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="148"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Nicaragua</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="149"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Niger</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="150"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Nigeria</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="151"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">North Korea</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="152"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Northern Cyprus</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="153"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Northern Mariana Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="154"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Norway</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="155"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Oman</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="156"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Pakistan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="157"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Palestine</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="158"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Panama</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="159"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Papua New Guinea</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="160"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Paraguay</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="161"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Peru</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="162"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Philippines</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="163"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Poland</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="164"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Portugal</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="165"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Puerto Rico</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="166"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Qatar</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="167"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Republic of the Congo</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="168"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Reunion</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="169"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Romania</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="170"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Russia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="171"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Rwanda</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="172"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Saint Barthelemy</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="173"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Saint Kitts and Nevis</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="174"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Saint Lucia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="175"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Samoa</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="176"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">San Marino</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="177"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Sao Tome and Principe</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="178"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Saudi Arabia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="179"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Senegal</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="180"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Serbia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="181"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Seychelles</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="182"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Sierra Leone</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="183"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Singapore</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="184"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Slovakia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="185"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Slovenia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="186"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Solomon Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="187"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Somalia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="188"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">South Africa</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="189"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">South Korea</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="190"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">South Sudan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="191"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Spain</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="192"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Sri Lanka</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="193"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Sudan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="194"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Suriname</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="195"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Swaziland</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="196"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Sweden</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="197"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Switzerland</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="198"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Syria</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="199"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Taiwan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="200"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Tajikistan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="201"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Tanzania</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="202"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Thailand</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="203"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Togo</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="204"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Tonga</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="205"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Trinidad and Tobago</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="206"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Tunisia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="207"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Turkey</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="208"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Turkmenistan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="209"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Turks and Caicos Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="210"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Tuvalu</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="211"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Uganda</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="212"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Ukraine</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="213"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">United Arab Emirates</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="214"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">United Kingdom</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="215"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">United States</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="216"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">United States Virgin
-                                                Islands</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="217"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Uruguay</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="218"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Uzbekistan</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="219"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Vanuatu</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="220"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Vatican City</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="221"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Venezuela</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="222"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Vietnam</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="223"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Wallis and Futuna</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="224"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Western Sahara</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="225"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Yemen</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="226"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Zambia</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="227"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Zimbabwe</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                      
                     </div>
 
                     <div class="col-md-3 form-group phps_row_1">
                         <label>To City</label>
                         <select name="sel_to_city"
-                            class="selectpicker form-control show-menu-arrow required bs-select-hidden" id="to_city"
+                            class="selectpicker form-control form-control-sm show-menu-arrow required bs-select-hidden" id="to_city"
                             onfocus="javascript:checkCountry();" onchange="javascript: setDropffPoint();"
                             data-live-search="true">
                             <option value="0"> - Select City -</option>
 
                         </select>
-                        <div class="btn-group bootstrap-select form-control show-menu-arrow required"><button
-                                type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
-                                data-id="to_city" title="- Select City -"><span class="filter-option pull-left"> -
-                                    Select City -</span>&nbsp;<span class="caret"></span></button>
-                            <div class="dropdown-menu open">
-                                <div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off">
-                                </div>
-                                <ul class="dropdown-menu inner" role="menu">
-                                    <li data-original-index="0" class="selected"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text"> - Select City -</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                     
                     </div>
                     <div class="col-md-3 form-group phps_row_0">
                         <label>To DropOff Point</label>
                         <select name="sel_dropoff_point"
-                            class="required selectpicker form-control show-menu-arrow bs-select-hidden"
+                            class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
                             id="sel_dropoff_point" onchange="javascript:callmedropoff(this);" data-live-search="true">
                             <option value="0"> - Select DropOff Point -</option>
 
@@ -2557,77 +1785,30 @@
 
                             <option value="T">Terminal</option>
                         </select>
-                        <div class="btn-group bootstrap-select required form-control show-menu-arrow"><button
-                                type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
-                                data-id="sel_dropoff_point" title="- Select DropOff Point -"><span
-                                    class="filter-option pull-left"> - Select DropOff Point -</span>&nbsp;<span
-                                    class="caret"></span></button>
-                            <div class="dropdown-menu open">
-                                <div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off">
-                                </div>
-                                <ul class="dropdown-menu inner" role="menu">
-                                    <li data-original-index="0" class="selected"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text"> - Select DropOff Point -</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="1"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Accommodation</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="2"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Airport</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="3"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Port</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="4"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Station</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="5"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Other</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="6"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">Terminal</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                   
                         <h5>
                             <span id="one_drop_location" class="label label-info"></span>
                             <input type="hidden" name="dropoff_code" id="dropoff_code" value="">
                         </h5>
                     </div>
                     <div class="form-group col-md-3" id="dropoff_location" style="display:none;">
-                        <label>Dropoff Location</label><select name="sel_drop_location[]" multiple="multiple"
-                            class="select_style selectpicker form-control show-menu-arrow bs-select-hidden"
+                        <label>Dropoff Location</label>
+                        <select name="sel_drop_location[]" multiple="multiple"
+                            class="select_style selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
                             id="sel_drop_location" onchange="javascript: setLocation(this.value,'drop');"
                             data-live-search="true" data-actions-box="true"></select>
-                        <div class="btn-group bootstrap-select show-tick select_style form-control show-menu-arrow">
-                            <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
-                                data-id="sel_drop_location" title="Nothing selected"><span
-                                    class="filter-option pull-left">Nothing selected</span>&nbsp;<span
-                                    class="caret"></span></button>
-                            <div class="dropdown-menu open">
-                                <div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off">
-                                </div>
-                                <div class="bs-actionsbox">
-                                    <div class="btn-group btn-group-sm btn-block"><button type="button"
-                                            class="actions-btn bs-select-all btn btn-default">Select All</button><button
-                                            type="button" class="actions-btn bs-deselect-all btn btn-default">Deselect
-                                            All</button></div>
-                                </div>
-                                <ul class="dropdown-menu inner" role="menu"></ul>
-                            </div>
-                        </div>
+                        
                     </div>
 
 
                 </div>
 
-                <div class="row">
+                <div class="row mt-3">
 
                     <div class="col-md-3">
                         <label>Buffer Time (Hours - Minutes)</label><br>
                         <select name="sel_buffer_hrs" id="sel_buffer_hrs"
-                            class="required selectpicker customStyle form-control show-menu-arrow bs-select-hidden"
+                            class="required selectpicker customStyle form-control form-control-sm show-menu-arrow bs-select-hidden"
                             data-live-search="true">
                             <option value=""> - Hours -</option>
                             <option value="0" selected="">00</option>
@@ -2656,97 +1837,9 @@
                             <option value="23">23</option>
                             <option value="24">24</option>
                         </select>
-                        <div class="btn-group bootstrap-select required customStyle form-control show-menu-arrow">
-                            <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
-                                data-id="sel_buffer_hrs" title="00"><span
-                                    class="filter-option pull-left">00</span>&nbsp;<span class="caret"></span></button>
-                            <div class="dropdown-menu open">
-                                <div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off">
-                                </div>
-                                <ul class="dropdown-menu inner" role="menu">
-                                    <li data-original-index="0"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text"> - Hours -</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="1" class="selected"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">00</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="2"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">01</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="3"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">02</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="4"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">03</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="5"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">04</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="6"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">05</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="7"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">06</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="8"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">07</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="9"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">08</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="10"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">09</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="11"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">10</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="12"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">11</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="13"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">12</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="14"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">13</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="15"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">14</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="16"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">15</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="17"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">16</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="18"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">17</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="19"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">18</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="20"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">19</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="21"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">20</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="22"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">21</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="23"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">22</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="24"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">23</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                    <li data-original-index="25"><a tabindex="0" class="" style=""
-                                            data-tokens="null"><span class="text">24</span><span
-                                                class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                  
                         <select name="sel_buffer_mins" id="sel_buffer_mins"
-                            class="selectpicker customStyle form-control show-menu-arrow bs-select-hidden"
+                            class="selectpicker customStyle form-control form-control-sm show-menu-arrow bs-select-hidden"
                             data-live-search="true">
                             <option value=""> - Minutes -</option>
                             <option value="0" selected="">00</option>
