@@ -251,7 +251,9 @@ td {
   border-radius: 0.25em;
   margin-top: 15px;
 }
-
+.bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+  font-size: 12px;
+}
 .label-success {
   background-color: #62cb31;
 }
