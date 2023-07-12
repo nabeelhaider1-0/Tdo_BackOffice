@@ -769,4 +769,16 @@ color:grey;
     #firstNav{
       display: none;
     }
+    #drip{
+    float:none;
+    border-bottom: 1px solid #ddd;
+}
+    #navbarSupportedContent{
+      
+      padding: 41px 0px;
+    }
+    .boxview{
+      text-align: left;
+    }
+    
   }
