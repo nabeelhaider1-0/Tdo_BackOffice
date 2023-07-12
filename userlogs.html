@@ -1097,9 +1097,9 @@
         <label>From Date</label>
         <div class="input-group col-md-12 col-xs-12">
           <div class="input-group date col-xs-12" id="datetimepicker13">
-            <input class="form-control" type="text" id="from_date_search" name="from_date_search" value="">
+            <input class="form-control form-control-sm" type="text" id="from_date_search" name="from_date_search" value="">
             <span class="input-group-addon dateIcon">
-              <i class="glyphicon glyphicon-th"></i>
+              <i class="fa fa-th"></i>
             </span>
           </div>
         </div>
@@ -1855,7 +1855,13 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
-
+<script>
+  
+  const from_date_search = flatpickr("#from_date_search", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+</script>
 
 <script type="text/javascript">
   var wrapper1 = document.getElementById('wrapper1');
