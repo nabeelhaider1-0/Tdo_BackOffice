@@ -8,6 +8,12 @@
   url("fonts/bootstrap/glyphicons-halflings-regular.svg") format("svg");
 }
 
+body{
+  margin: 0px !important;
+  padding:0px !important;
+}
+
+
 .navbar {
   --bs-navbar-padding-y: -0.5rem !important;
 }
@@ -462,8 +468,8 @@ input[type="file"] {
 }
 
 #tickschecks {
-  display: flex;
-  font-size: 14px;
+  display: contents;
+  font-size: 21px;
 }
 
 #tickscheck {
@@ -471,7 +477,7 @@ input[type="file"] {
 }
 
 #tickspc {
-  margin-left: 10px;
+  margin-left: 13px;
 }
 
 .text-danger {
@@ -641,7 +647,7 @@ color:grey;
 }
 
 .radioline {
-  display: flex !important;
+  display: contents;
 }
 
 #app {
