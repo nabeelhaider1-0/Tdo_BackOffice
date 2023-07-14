@@ -55,11 +55,12 @@ body{
   margin: 0;
 }
 
-#secondNav a:hover,
-.dropdown:hover {
+#secondNav.active a:hover,
+#drip:hover {
   background-color: rgb(255, 255, 255);
   color: black;
-  margin: 0px;}
+
+}
 
 
 
