@@ -48,6 +48,9 @@ body{
 #drip:hover a{
   background: rgb(255, 255, 255);
   color: black;
+  padding-left:10px;
+  padding-right:10px;
+  margin:auto;
 }
 
 
