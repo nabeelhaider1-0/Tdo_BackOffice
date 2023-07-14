@@ -55,7 +55,7 @@ body{
   margin: 0;
 }
 
-#drip:hover {
+#drip:hover{
   background: rgb(255, 255, 255);
  
 }
@@ -66,7 +66,7 @@ body{
 
 
 #dripmenu {
-  display: none;
+  display:none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
