@@ -55,11 +55,13 @@ body{
   margin: 0;
 }
 
-#secondNav.active a:hover,
+#secondNav a:hover,
 #drip:hover {
-  background-color: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
   color: black;
-
+}
+.boxview:hover{
+  color: black!important;
 }
 
 
