@@ -55,10 +55,9 @@ body{
   margin: 0;
 }
 
-#secondNav a:hover,
 #drip:hover {
   background: rgb(255, 255, 255);
-  color: black;
+ 
 }
 .boxview:hover{
   color: black!important;
