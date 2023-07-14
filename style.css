@@ -44,24 +44,15 @@ body{
   border-right: 1px solid #ddd;
 }
 
-#drip .btn {
-  font-size: 11px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
 
 #drip:hover{
   background: rgb(255, 255, 255);
- 
 }
 .boxview:hover{
-  color: black!important;
+  color: black;
 }
+
+
 
 
 
@@ -91,6 +82,7 @@ body{
 
 #drip:hover #dripmenu {
   display: block;
+  color: black;
 }
 
 .dropdown-menu .dropdown-submenu {
