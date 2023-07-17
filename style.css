@@ -768,6 +768,16 @@ color:grey;
     .nav-tabs {
       border-bottom: 1px solid #e4e5e7;
   }
+
+  #tbl_tour td b {
+    border: 1px solid gray;
+    border-radius: 0.4em;
+    padding: 3px 5px;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+
   @media only screen and (max-width:960px) {
     #firstNav{
       display: none;
