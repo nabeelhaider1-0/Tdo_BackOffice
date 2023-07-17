@@ -776,7 +776,11 @@ color:grey;
     margin-left: 5px;
     font-weight: normal;
 }
-
+@media only screen and (min-width:960px) {
+  #tdotext{
+    display: none;
+  }
+}
 
   @media only screen and (max-width:960px) {
     #firstNav{
@@ -804,6 +808,8 @@ color:grey;
     .dropdown-menu>li:hover>.dropdown-submenu {
       display:contents;
     }
-    
+    #secondNav{
+      padding-left: 10px;
+    }
     
   }
