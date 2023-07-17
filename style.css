@@ -751,12 +751,12 @@ color:grey;
 }
 
 input[type=radio]{
-  accent-color:green;
+  accent-color:#15a215;
   height: 16px;
   width: 20px;
 }
 input[type=checkbox]{
-  accent-color:green;
+  accent-color:#15a215;
   height: 16px;
   width: 20px;
 }
