@@ -776,6 +776,13 @@ color:grey;
     margin-left: 5px;
     font-weight: normal;
 }
+
+input[type=radio]{
+  accent-color:green;
+  height: 16px;
+  width: 20px;
+}
+
 @media only screen and (min-width:960px) {
   #tdotext{
     display: none;
