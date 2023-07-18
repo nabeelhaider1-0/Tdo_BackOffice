@@ -1061,16 +1061,16 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">SEARCH PRICING PROFILES</h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">LIST PAYMENT GATEWAY</h5>
                 </div>
                 <div class="col-md-6">
 
                 </div>
                 <div class="col-md-3">
-                    <i class="fa-solid fa-house-chimney"></i><span> / Search Pricing Profiles / <a
-                            href="MastersMarkupProfilesNew.html"><button class="btn btn-dark btn-sm"
+                    <i class="fa-solid fa-house-chimney"></i><span> / List Payment Gateways / <a
+                            href="MastersPaymentgatewayNew.html"><button class="btn btn-dark btn-sm"
                                 style="font-size:12px;">
-                                Add Pricing Profile</button></a></span>
+                                Add Gateway Payment</button></a></span>
                 </div>
             </div>
 
@@ -1157,7 +1157,8 @@
                                     data-original-title="Search within this table"></i></h5>
                         </div>
                         <div class="form-group col-md-10 bookingsrc">
-                            <input type="text" class="tablesearch form-control form-control-sm search_new" placeholder="Search">
+                            <input type="text" class="tablesearch form-control form-control-sm search_new"
+                                placeholder="Search">
                         </div>
                     </div>
                 </div>
@@ -1172,1069 +1173,264 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="doubleScroll-scroll-wrapper" id="wrapper1"
-                        style="height: 20px; overflow: scroll hidden; width: 1320px;">
-                        <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1320px;"></div>
-                      </div>
-                      <div id="wrapper2" style="overflow: scroll hidden;">
-                        <table id="tableres"
-                            class="table table-bordered table-striped table-hover table-responsive table-bordered dataTable no-footer"
-                            role="grid" aria-describedby="tableres_info">
-                            <thead>
-                                <tr  role="row">
-                                    <th class="sorting" tabindex="0" aria-controls="tableres" rowspan="1" colspan="1"
-                                        aria-label="Pricing Profile Name: activate to sort column ascending"
-                                        style="width: 1220.2px;">Pricing Profile Name</th>
-                                    <th width="15%" class="sorting" tabindex="0" aria-controls="tableres" rowspan="1"
-                                        colspan="1" aria-label="Action: activate to sort column ascending"
-                                        style="width: 197px;">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+                            style="height: 20px; overflow: scroll hidden; width: 1320px;">
+                            <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1320px;"></div>
+                        </div>
+                        <div id="wrapper2" style="overflow: scroll hidden;">
+                            <table id="search_sup"
+                                class="table table-bordered table-striped table-hover table-responsive dataTable no-footer" role="grid"
+                                aria-describedby="search_sup_info">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 478.2px;">
+                                            Name</th>
+                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 554.2px;">URL
+                                        </th>
+                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 113.2px;">
+                                            Code</th>
+                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 107.2px;">
+                                            Mark Up %</th>
+                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 176px;">
+                                            Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                                <tr role="row" class="odd">
-                                    <td>-4%</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=12&amp;profile_name=-4%"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
+
+
+
+
+
+
+
+
+
+                                    <tr class="phps_row_1 odd" role="row">
+                                        <td><img src="https://beta.tdonlines.com/project_folder/tdonline/images/creditmax.png"
+                                                title="CREDIMAX" alt="CREDIMAX" height="80px"></td>
+                                        <td>https://migs.mastercard.com.au/vpcpay</td>
+                                        <td>CREDIMAX</td>
+                                        <td>3</td>
+                                        <td class="actionlink">
+                                            <div class="actionCont">
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=show&amp;id=1" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Edit">
+                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
+                                                        <i class="fa fa-pencil-square-o"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=view&amp;id=1" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="View">
+                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=1"
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        alt="Click to Deactivate" title=""
+                                                        data-original-title="Click To Deactivate">
+                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
+                                                        <i class="fa fa-check-circle"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=1&amp;action=delete');"
+                                                        title="" data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Delete">
+                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=12');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="phps_row_0 even" role="row">
+                                        <td><img src="https://beta.tdonlines.com/project_folder/tdonline/images/payfort.png"
+                                                title="PAYFORT" alt="PAYFORT" height="80px"></td>
+                                        <td>https://secure.payfort.com/ncol/test/orderdirect.asp</td>
+                                        <td>payfort</td>
+                                        <td>2</td>
+                                        <td class="actionlink">
+                                            <div class="actionCont">
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=show&amp;id=4" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Edit">
+                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
+                                                        <i class="fa fa-pencil-square-o"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=view&amp;id=4" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="View">
+                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=4"
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        alt="Click to Deactivate" title=""
+                                                        data-original-title="Click To Deactivate">
+                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
+                                                        <i class="fa fa-check-circle"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=4&amp;action=delete');"
+                                                        title="" data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Delete">
+                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus12toggle"
-                                                    onclick="$('#12toggle').slideDown('slow');$('#minus12toggle').show();$('#plus12toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus12toggle"
-                                                    onclick="$('#12toggle').slideUp('slow');$('#plus12toggle').show();$('#minus12toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="phps_row_1 odd" role="row">
+                                        <td>hyperpay</td>
+                                        <td>https://test.ctpe.net/frontend/</td>
+                                        <td>HP</td>
+                                        <td>2</td>
+                                        <td class="actionlink">
+                                            <div class="actionCont">
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=show&amp;id=3" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Edit">
+                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
+                                                        <i class="fa fa-pencil-square-o"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=view&amp;id=3" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="View">
+                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=3"
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        alt="Click to Deactivate" title=""
+                                                        data-original-title="Click To Deactivate">
+                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
+                                                        <i class="fa fa-check-circle"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=3&amp;action=delete');"
+                                                        title="" data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Delete">
+                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="12toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;5000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;-4%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;-4%</td>
-                                                        <td>&nbsp;12</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;5000</td>
-                                                        <td>&nbsp;10000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;-5%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;-4%</td>
-                                                        <td>&nbsp;12</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>10</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=13&amp;profile_name=10"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="phps_row_0 even" role="row">
+                                        <td>TapPay</td>
+                                        <td>https://api.tap.company/v2</td>
+                                        <td>TAPPAY</td>
+                                        <td>5</td>
+                                        <td class="actionlink">
+                                            <div class="actionCont">
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=show&amp;id=5" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Edit">
+                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
+                                                        <i class="fa fa-pencil-square-o"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=view&amp;id=5" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="View">
+                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=5"
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        alt="Click to Deactivate" title=""
+                                                        data-original-title="Click To Deactivate">
+                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
+                                                        <i class="fa fa-check-circle"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=5&amp;action=delete');"
+                                                        title="" data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Delete">
+                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=13');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
+                                        </td>
+                                    </tr>
+                                    <tr class="phps_row_1 odd" role="row">
+                                        <td>test_pg</td>
+                                        <td>https://migs.mastercard.com.au/vpcpay</td>
+                                        <td>test1</td>
+                                        <td>0</td>
+                                        <td class="actionlink">
+                                            <div class="actionCont">
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=show&amp;id=2" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Edit">
+                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
+                                                        <i class="fa fa-pencil-square-o"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=view&amp;id=2" title=""
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="View">
+                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=2"
+                                                        data-toggle="tooltip" data-placement="top"
+                                                        alt="Click to Deactivate" title=""
+                                                        data-original-title="Click To Deactivate">
+                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
+                                                        <i class="fa fa-check-circle"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="input-group-addon">
+                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=2&amp;action=delete');"
+                                                        title="" data-toggle="tooltip" data-placement="top"
+                                                        data-original-title="Delete">
+                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
+                                                        <i class="fa fa-trash"></i>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus13toggle"
-                                                    onclick="$('#13toggle').slideDown('slow');$('#minus13toggle').show();$('#plus13toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus13toggle"
-                                                    onclick="$('#13toggle').slideUp('slow');$('#plus13toggle').show();$('#minus13toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="13toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;10000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;10%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;10</td>
-                                                        <td>&nbsp;13</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>4%</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=11&amp;profile_name=4%"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=11');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus11toggle"
-                                                    onclick="$('#11toggle').slideDown('slow');$('#minus11toggle').show();$('#plus11toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus11toggle"
-                                                    onclick="$('#11toggle').slideUp('slow');$('#plus11toggle').show();$('#minus11toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="11toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;4000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;4%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;4%</td>
-                                                        <td>&nbsp;11</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;0%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;4%</td>
-                                                        <td>&nbsp;11</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;4000</td>
-                                                        <td>&nbsp;6000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;5%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;4%</td>
-                                                        <td>&nbsp;11</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;6000</td>
-                                                        <td>&nbsp;9000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;5%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;4%</td>
-                                                        <td>&nbsp;11</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>deepaktest</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=15&amp;profile_name=deepaktest"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=15');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus15toggle"
-                                                    onclick="$('#15toggle').slideDown('slow');$('#minus15toggle').show();$('#plus15toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus15toggle"
-                                                    onclick="$('#15toggle').slideUp('slow');$('#plus15toggle').show();$('#minus15toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="15toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;200</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;10%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;deepaktest</td>
-                                                        <td>&nbsp;15</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;200</td>
-                                                        <td>&nbsp;300</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;15%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;deepaktest</td>
-                                                        <td>&nbsp;15</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>Dflight_test</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=16&amp;profile_name=Dflight_test"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=16');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus16toggle"
-                                                    onclick="$('#16toggle').slideDown('slow');$('#minus16toggle').show();$('#plus16toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus16toggle"
-                                                    onclick="$('#16toggle').slideUp('slow');$('#plus16toggle').show();$('#minus16toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="16toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;500</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;30%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;Dflight_test</td>
-                                                        <td>&nbsp;16</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>Snehal</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=6&amp;profile_name=Snehal"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=6');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus6toggle"
-                                                    onclick="$('#6toggle').slideDown('slow');$('#minus6toggle').show();$('#plus6toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus6toggle"
-                                                    onclick="$('#6toggle').slideUp('slow');$('#plus6toggle').show();$('#minus6toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="6toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;15000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;7%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;Snehal</td>
-                                                        <td>&nbsp;6</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>South East Asia</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=3&amp;profile_name=South East Asia"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=3');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus3toggle"
-                                                    onclick="$('#3toggle').slideDown('slow');$('#minus3toggle').show();$('#plus3toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus3toggle"
-                                                    onclick="$('#3toggle').slideUp('slow');$('#plus3toggle').show();$('#minus3toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="3toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;999</td>
-                                                        <td>&nbsp;10.00</td>
-                                                        <td>&nbsp;5%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;South East Asia</td>
-                                                        <td>&nbsp;3</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;999</td>
-                                                        <td>&nbsp;9999</td>
-                                                        <td>&nbsp;20.00</td>
-                                                        <td>&nbsp;3%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;South East Asia</td>
-                                                        <td>&nbsp;3</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>SVS_LocalTransfer</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=10&amp;profile_name=SVS_LocalTransfer"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=10');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus10toggle"
-                                                    onclick="$('#10toggle').slideDown('slow');$('#minus10toggle').show();$('#plus10toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus10toggle"
-                                                    onclick="$('#10toggle').slideUp('slow');$('#plus10toggle').show();$('#minus10toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="10toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;1</td>
-                                                        <td>&nbsp;12.00</td>
-                                                        <td>&nbsp;5%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;SVS_LocalTransfer</td>
-                                                        <td>&nbsp;10</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>test</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=8&amp;profile_name=test"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=8');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus8toggle"
-                                                    onclick="$('#8toggle').slideDown('slow');$('#minus8toggle').show();$('#plus8toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus8toggle"
-                                                    onclick="$('#8toggle').slideUp('slow');$('#plus8toggle').show();$('#minus8toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="8toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;5000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;5%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;test</td>
-                                                        <td>&nbsp;8</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>Test Profile</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=4&amp;profile_name=Test Profile"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=4');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus4toggle"
-                                                    onclick="$('#4toggle').slideDown('slow');$('#minus4toggle').show();$('#plus4toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus4toggle"
-                                                    onclick="$('#4toggle').slideUp('slow');$('#plus4toggle').show();$('#minus4toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="4toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;100</td>
-                                                        <td>&nbsp;10.00</td>
-                                                        <td>&nbsp;5%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;Test Profile</td>
-                                                        <td>&nbsp;4</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;100</td>
-                                                        <td>&nbsp;200</td>
-                                                        <td>&nbsp;15.00</td>
-                                                        <td>&nbsp;7%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;Test Profile</td>
-                                                        <td>&nbsp;4</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;200</td>
-                                                        <td>&nbsp;300</td>
-                                                        <td>&nbsp;20.00</td>
-                                                        <td>&nbsp;25%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;Test Profile</td>
-                                                        <td>&nbsp;4</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>test25</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=2&amp;profile_name=test25"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=2');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus2toggle"
-                                                    onclick="$('#2toggle').slideDown('slow');$('#minus2toggle').show();$('#plus2toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus2toggle"
-                                                    onclick="$('#2toggle').slideUp('slow');$('#plus2toggle').show();$('#minus2toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="2toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;5</td>
-                                                        <td>&nbsp;500.00</td>
-                                                        <td>&nbsp;10%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;test25</td>
-                                                        <td>&nbsp;2</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>Vaibhavtest</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=7&amp;profile_name=Vaibhavtest"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=7');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus7toggle"
-                                                    onclick="$('#7toggle').slideDown('slow');$('#minus7toggle').show();$('#plus7toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus7toggle"
-                                                    onclick="$('#7toggle').slideUp('slow');$('#plus7toggle').show();$('#minus7toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="7toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;15000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;3%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;Vaibhavtest</td>
-                                                        <td>&nbsp;7</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;15000</td>
-                                                        <td>&nbsp;70000</td>
-                                                        <td>&nbsp;120.00</td>
-                                                        <td>&nbsp;5%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;Vaibhavtest</td>
-                                                        <td>&nbsp;7</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>vaibhavtest1</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=9&amp;profile_name=vaibhavtest1"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=9');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus9toggle"
-                                                    onclick="$('#9toggle').slideDown('slow');$('#minus9toggle').show();$('#plus9toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus9toggle"
-                                                    onclick="$('#9toggle').slideUp('slow');$('#plus9toggle').show();$('#minus9toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="9toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;200</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;6%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;vaibhavtest1</td>
-                                                        <td>&nbsp;9</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;0%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;vaibhavtest1</td>
-                                                        <td>&nbsp;9</td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>&nbsp;200</td>
-                                                        <td>&nbsp;1000</td>
-                                                        <td>&nbsp;120.00</td>
-                                                        <td>&nbsp;0%</td>
-                                                        <td>&nbsp;SAR</td>
-                                                        <td>&nbsp;vaibhavtest1</td>
-                                                        <td>&nbsp;9</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>zero markup</td>
-                                    <td width="15%" class="actionlink">
-                                        <div class="actionCont">
-                                            <div class="input-group-addon">
-                                                <a href="pricing_profile.php?action=edit&amp;pricing_profile_id=14&amp;profile_name=zero markup"
-                                                    alt="Edit" data-original-title="Edit" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-pencil-square-o"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a href="Javascript: confirm_delete('pricing_profile.php?action=delete&amp;pricing_profile_id=14');"
-                                                    alt="Delete" data-original-title="Delete" data-toggle="tooltip"
-                                                    data-placement="top">
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            </div>
-                                            <div class="input-group-addon">
-                                                <a id="plus14toggle"
-                                                    onclick="$('#14toggle').slideDown('slow');$('#minus14toggle').show();$('#plus14toggle').hide()">
-                                                    <h6><i class="fa fa-plus"></i></h6>
-                                                </a>
-                                                <a id="minus14toggle"
-                                                    onclick="$('#14toggle').slideUp('slow');$('#plus14toggle').show();$('#minus14toggle').hide()"
-                                                    style="display: none;">
-                                                    <h6><i class="fa fa-minus"></i></h6>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2" style="padding: 0px;">
-                                        <div class="panel-body removeMargins" id="14toggle" style="display:none;">
-                                            <table class="table table-striped table-hover table-responsive dataTable"
-                                                border="1">
-                                                <thead>
-                                                    <tr class="bg-grey">
-                                                        <th>&nbsp;From Range</th>
-                                                        <th>&nbsp;To Range</th>
-                                                        <th>&nbsp;Amount</th>
-                                                        <th>&nbsp;Percentage %</th>
-                                                        <th>&nbsp;Currency</th>
-                                                        <th>&nbsp;Profile Name</th>
-                                                        <th>&nbsp;Profile Id</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>&nbsp;0</td>
-                                                        <td>&nbsp;10000</td>
-                                                        <td>&nbsp;0.00</td>
-                                                        <td>&nbsp;0%</td>
-                                                        <td>&nbsp;USD</td>
-                                                        <td>&nbsp;zero markup</td>
-                                                        <td>&nbsp;14</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="dataTables_info" id="tableres_info" role="status" aria-live="polite">
-                           </div>
+                        </div>
                     </div>
                     <div class="col-sm-6"></div>
                 </div>
