@@ -511,6 +511,10 @@ color:grey;
 .col-md-2,.col-md-4,.col-md-5 span{
   font-size: 12px;
 }
+.form-group h5{
+  color: grey;
+  font-weight: 400;
+}
 .btn-dark {
   background-color: #34495e !important;
   border-color: #34495e !important;
