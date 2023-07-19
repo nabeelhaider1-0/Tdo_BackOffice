@@ -1092,15 +1092,18 @@
                     </div>
                 </div>
 
-                <div id="search_sup_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                    <div class="row">
-                        <div class="col-sm-6"></div>
-                        <div class="col-sm-6"></div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-sm-12">
-                          
-                            <div id="scrollCont" style="overflow: scroll hidden;">
+                <div id="search_controller_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                  <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="doubleScroll-scroll-wrapper" id="wrapper1"
+                        style="height: 20px; overflow: scroll hidden; width: 1320px;">
+                        <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1320px;"></div>
+                      </div>
+                      <div id="wrapper2" style="overflow: scroll hidden;">
                                 <table id="search_sup"
                                     class="table table-bordered table-striped table-hover table-responsive dataTable no-footer"
                                     role="grid" aria-describedby="search_sup_info">
@@ -1317,8 +1320,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
-                            <div class="dataTables_info" id="search_sup_info" role="status" aria-live="polite">Showing 1
-                                to 6 of 6 entries</div>
+                            <div class="dataTables_info" id="search_sup_info" role="status" aria-live="polite"></div>
                         </div>
                         <div class="col-sm-6"></div>
                     </div>
@@ -1361,6 +1363,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 
-
+<script type="text/javascript">
+  var wrapper1 = document.getElementById('wrapper1');
+  var wrapper2 = document.getElementById('wrapper2');
+  wrapper1.onscroll = function () {
+    wrapper2.scrollLeft = wrapper1.scrollLeft;
+  };
+  wrapper2.onscroll = function () {
+    wrapper1.scrollLeft = wrapper2.scrollLeft;
+  };
+</script>
 
 </html>

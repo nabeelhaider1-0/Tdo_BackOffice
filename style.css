@@ -503,6 +503,11 @@ font-size: 12px;
 font-weight: 600;
 color:grey;
 }
+p{
+  font-size: 12px;
+  font-weight: 500;
+  color:grey;
+  }
 .col-md-3{
   font-size: 12px;
   font-weight: 600;
@@ -515,6 +520,7 @@ color:grey;
   color: grey;
   font-weight: 400;
 }
+
 .btn-dark {
   background-color: #34495e !important;
   border-color: #34495e !important;
