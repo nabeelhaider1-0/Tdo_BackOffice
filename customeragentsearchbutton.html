@@ -1013,14 +1013,14 @@
 
     <!--    Panel Body        -->
 
-    <div class="container-fluid pt-0 p-4">
+    <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
-
-        <div class="row mt-4">
+<form>
+        <div class="row mt-2">
             <div class="col-md-2 form-group">
                 <label>Type</label>
-                <select class="selectpicker form-control show-menu-arrow bs-select-hidden" name="agent_type_search"
+                <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden" name="agent_type_search"
                     data-live-search="true">
                     <option value="">--Select--</option>
                     <option value="CS">Cash</option>
@@ -1029,23 +1029,23 @@
             </div>
             <div class="col-md-2 form-group">
                 <label>Code</label>
-                <input class="form-control" type="text" name="agency_id_search" value="" size="10">
+                <input class="form-control form-control-sm" type="text" name="agency_id_search" value="" size="10">
             </div>
             <div class="col-md-2 form-group">
                 <label>Agency</label>
-                <input class="form-control" type="textbox" name="agency_name_search" value="">
+                <input class="form-control form-control-sm" type="textbox" name="agency_name_search" value="">
             </div>
             <div class="col-md-2 form-group">
                 <label>Username</label>
-                <input class="form-control" type="textbox" name="username_search" value="">
+                <input class="form-control form-control-sm" type="textbox" name="username_search" value="">
             </div>
             <div class="col-md-2 form-group">
                 <label>Contact Person</label>
-                <input class="form-control" type="textbox" name="person_name_search" value="">
+                <input class="form-control form-control-sm" type="textbox" name="person_name_search" value="">
             </div>
             <div class="col-md-2 form-group">
                 <label>Email</label>
-                <input type="text" class="form-control" name="email_search" value="" id="emailfield">
+                <input type="text" class="form-control form-control-sm" name="email_search" value="" id="emailfield">
             </div>
         </div>
 
@@ -1053,7 +1053,7 @@
         <div class="row mt-4">
             <div class="col-md-2 form-group">
                 <label>Status</label>
-                <select class="selectpicker form-control show-menu-arrow bs-select-hidden" name="status_search"
+                <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden" name="status_search"
                     data-live-search="true">
                     <option value="">--Select--</option>
                     <option value="A">Active</option>
@@ -1065,7 +1065,7 @@
             </div>
             <div class="col-md-2 form-group">
                 <label>Consultant</label>
-                <select class="selectpicker form-control show-menu-arrow bs-select-hidden" name="consultant_search"
+                <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden" name="consultant_search"
                     data-live-search="true">
                     <option value="">--Select--</option>
                     <option label="1booking_wh" value="1booking_wh">1booking_wh</option>
@@ -1123,7 +1123,7 @@
             </div>
             <div class="col-md-2 form-group">
                 <label>Branch</label>
-                <select class="selectpicker form-control show-menu-arrow bs-select-hidden" name="branch_search"
+                <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden" name="branch_search"
                     data-live-search="true">
                     <option value="">--Select--</option>
                     <option label="Mumbai Branch" value="1">Mumbai Branch</option>
@@ -1175,7 +1175,7 @@
             </div>
             <div class="col-md-2 form-group">
                 <label>Sales Manager</label>
-                <select class="selectpicker form-control show-menu-arrow bs-select-hidden" name="sel_sales_manager"
+                <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden" name="sel_sales_manager"
                     id="sel_sales_manager" data-live-search="true">
                     <option value="">--Select--</option>
                     <option label="rohan  vartak:v3otramslive" value="v3otramslive">rohan vartak:v3otramslive</option>
@@ -1360,7 +1360,7 @@
             </div>
             <div class="col-md-2 form-group">
                 <label>Country</label>
-                <select class="selectpicker form-control show-menu-arrow bs-select-hidden" name="country_search"
+                <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden" name="country_search"
                     id="sel_country" style="width:180px;" onchange="JavaScript:getCityList(this);"
                     data-live-search="true">
                     <option value="">--Select--</option>
@@ -1599,7 +1599,7 @@
             </div>
             <div class="col-md-2 form-group">
                 <label>City</label>
-                <select class="selectpicker form-control show-menu-arrow bs-select-hidden" name="city_search"
+                <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden" name="city_search"
                     style="width:180px;" id="sel_city" data-live-search="true">
                     <option value="">--Select--</option>
 
@@ -7145,8 +7145,7 @@
         </div>
     </div>
 
-
-
+    </form>
 
 
     <!-- End -->
