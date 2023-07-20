@@ -1009,19 +1009,19 @@
 
     <!--    Panel Body        -->
 
-    <div class="container-fluid p-4 pt-0">
+    <div class="container-fluid p-4 pt-0"id="content-pad">
 
         <!-- First Row-->
-
-        <div class="row mt-4">
+<form>
+        <div class="row mt-2">
             <div class="col-md-3 form-group phps_row_1">
                 <label>Branch Name</label>
-                <input class="form-control required test123" type="text" name="branch_name" id="branch_name" size="35"
+                <input class="form-control form-control-sm required test123" type="text" name="branch_name" id="branch_name" size="35"
                     value="" maxlength="35">
             </div>
             <div class="col-md-3 form-group phps_row_0">
                 <label>Branch Country</label>
-                <select class="selectpicker form-control required show-menu-arrow bs-select-hidden" name="sel_country"
+                <select class="selectpicker form-control form-control-sm required show-menu-arrow bs-select-hidden" name="sel_country"
                     id="sel_country" onchange="JavaScript:getCityList(this);" data-live-search="true">
                     <option value="">- Please select a country - </option>
                     <option label="Afghanistan" value="97">Afghanistan</option>
@@ -1258,7 +1258,7 @@
             </div>
             <div class="col-md-3 form-group phps_row_1">
                 <label>Branch City</label>
-                <select class="selectpicker form-control required show-menu-arrow bs-select-hidden" name="sel_city"
+                <select class="selectpicker form-control form-control-sm required show-menu-arrow bs-select-hidden" name="sel_city"
                     id="sel_city" data-live-search="true">
                     <option value="">- Please select a city - </option>
 
@@ -1269,7 +1269,7 @@
                 </div>
                 <div class="col-md-3 form-group phps_row_0">
                     <label>Branch Email</label>
-                    <input class="form-control required" type="text" name="email_address" id="email_address" size="35" value="" maxlength="50">
+                    <input class="form-control form-control-sm required" type="text" name="email_address" id="email_address" size="35" value="" maxlength="50">
                 </div>
             </div>
 
@@ -1277,19 +1277,19 @@
        <div class="row mt-4">
         <div class="col-md-3 form-group phps_row_1">
             <label>Accountant Email</label>
-            <input class="form-control required" type="text" name="accountant_email_address" id="accountant_email_address" size="35" value="" maxlength="50">
+            <input class="form-control form-control-sm required" type="text" name="accountant_email_address" id="accountant_email_address" size="35" value="" maxlength="50">
         </div>
         <div class="col-md-3 form-group phps_row_0">
             <label>Phone</label>
-            <input class="form-control required" type="text" name="phone" id="phone" size="35" value="" maxlength="15" onkeyup="extractNumber(this,0,0);">
+            <input class="form-control form-control-sm required" type="text" name="phone" id="phone" size="35" value="" maxlength="15" onkeyup="extractNumber(this,0,0);">
         </div>
         <div class="col-md-3 form-group phps_row_1">
             <label>Location</label>
-            <input class="form-control required" type="text" name="location" id="location" size="35" value="" maxlength="">
+            <input class="form-control form-control-sm required" type="text" name="location" id="location" size="35" value="" maxlength="">
         </div>
         <div class="form-group col-md-3">
             <label>Tax Number</label>
-            <input type="text" class="required form-control select_style" name="taxnum" id="taxnum" size="35" value="" maxlength="100">
+            <input type="text" class="required form-control form-control-sm select_style" name="taxnum" id="taxnum" size="35" value="" maxlength="100">
         </div>
     </div>
 
@@ -1297,7 +1297,7 @@
           <div class="row mt-4">
             <div class="form-group col-md-3">
                 <label>CR Number</label>
-                <input type="text" class="required form-control select_style" name="crnum" id="crnum" size="35" value="" maxlength="100">
+                <input type="text" class="required form-control form-control-sm select_style" name="crnum" id="crnum" size="35" value="" maxlength="100">
             </div>
         </div>
 
@@ -1305,14 +1305,14 @@
             <div class="row mt-4">
                 <div class="col-md-12 form-group phps_row_0">
                     <label>Address</label>
-                    <textarea class="form-control" id="address" name="address" cols="40" rows="4"></textarea>
+                    <textarea class="form-control form-control-sm" id="address" name="address" cols="40" rows="4"></textarea>
                 </div>
             </div>
             <!--5th Row-->
             <div class="row mt-4">
                 <div class="col-md-12 form-group phps_row_1">
                     <label>Bank Details</label> 
-                    <textarea class="form-control" id="bank_address" name="bank_address" cols="40" rows="4"></textarea>
+                    <textarea class="form-control form-control-sm" id="bank_address" name="bank_address" cols="40" rows="4"></textarea>
                 </div>
             </div>
             <!--6th Row-->
@@ -1344,6 +1344,9 @@
                 <button class="btn btn-dark btn-sm"><i class="fa fa-floppy-o"></i>&nbsp;Save</button>
             </div>
         </div>
+</form>
+    </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
