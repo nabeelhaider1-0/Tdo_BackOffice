@@ -1009,17 +1009,17 @@
 
     <!--    Panel Body        -->
 
-    <div class="container-fluid pt-0 p-4">
+    <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
 
-        <div class="row mt-4">
+        
 
             <form action="controller.php" name="rcpt_booking_allocation" method="get"
                 onsubmit="submit_rcptbooking_allocation_form(document.forms['rcpt_booking_allocation']);return false ;">
                 <input type="hidden" name="action" value="receipts_by_booking_id">
                 <input type="hidden" name="page" value="receipt">
-
+                <div class="row mt-2">
                 <div class="panel-body">
                     <div class="form-group row">
 
@@ -1042,7 +1042,7 @@
                     <h5 class="text-center alert alert-danger"></h5>
                 </div>
             </form>
-        </div>
+      
 
 
     <!-- End -->

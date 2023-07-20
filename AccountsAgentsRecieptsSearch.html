@@ -1013,11 +1013,11 @@
 
     <!--    Panel Body        -->
 
-    <div class="container-fluid pt-0 p-4">
+    <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
-
-        <div class="row mt-4">
+<form>
+        <div class="row mt-2">
             <div class="col-md-2 form-group">
                 <label>Receipt #</label>
                 <input class="form-control form-control-sm test123" type="text" name="search_id" value="">
@@ -1273,9 +1273,9 @@
                             aria-describedby="search_controller_info">
                             <thead>
                                 <tr role="row">
-                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 29px;"><input
-                                            type="checkbox" name="select-all" onclick="select_check_box(this)"
-                                            id="select_all_check"></th>
+                                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 29px;"><input class="select-option"
+                                            type="checkbox" name="select-all"onchange="selectAllChkboxes()"
+                                            id="selectAll"></th>
                                     <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 103px;">Receipt #
                                     </th>
                                     <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 138px;">Customer
@@ -1303,7 +1303,7 @@
 
 
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="602">
                                     </td>
                                     <td>Rcpt00000602 </td>
@@ -1383,7 +1383,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="601">
                                     </td>
                                     <td>Rcpt00000601 </td>
@@ -1463,7 +1463,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="600">
                                     </td>
                                     <td>Rcpt00000600 </td>
@@ -1543,7 +1543,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="599">
                                     </td>
                                     <td>Rcpt00000599 </td>
@@ -1623,7 +1623,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="598">
                                     </td>
                                     <td>Rcpt00000598 </td>
@@ -1703,7 +1703,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="597">
                                     </td>
                                     <td>Rcpt00000597 </td>
@@ -1783,7 +1783,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="596">
                                     </td>
                                     <td>Rcpt00000596 </td>
@@ -1863,7 +1863,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="595">
                                     </td>
                                     <td>Rcpt00000595 </td>
@@ -1943,7 +1943,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="594">
                                     </td>
                                     <td>Rcpt00000594 </td>
@@ -2023,7 +2023,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="593">
                                     </td>
                                     <td>Rcpt00000593 </td>
@@ -2103,7 +2103,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="592">
                                     </td>
                                     <td>Rcpt00000592 </td>
@@ -2183,7 +2183,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="591">
                                     </td>
                                     <td>Rcpt00000591 </td>
@@ -2263,7 +2263,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="590">
                                     </td>
                                     <td>Rcpt00000590 </td>
@@ -2343,7 +2343,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="589">
                                     </td>
                                     <td>Rcpt00000589 </td>
@@ -2423,7 +2423,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="588">
                                     </td>
                                     <td>Rcpt00000588 </td>
@@ -2503,7 +2503,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="587">
                                     </td>
                                     <td>Rcpt00000587 </td>
@@ -2583,7 +2583,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="586">
                                     </td>
                                     <td>Rcpt00000586 </td>
@@ -2663,7 +2663,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="585">
                                     </td>
                                     <td>Rcpt00000585 </td>
@@ -2743,7 +2743,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="584">
                                     </td>
                                     <td>Rcpt00000584 </td>
@@ -2823,7 +2823,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="583">
                                     </td>
                                     <td>Rcpt00000583 </td>
@@ -2903,7 +2903,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="582">
                                     </td>
                                     <td>Rcpt00000582 </td>
@@ -2983,7 +2983,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="581">
                                     </td>
                                     <td>Rcpt00000581 </td>
@@ -3063,7 +3063,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="580">
                                     </td>
                                     <td>Rcpt00000580 </td>
@@ -3143,7 +3143,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_0 even" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="579">
                                     </td>
                                     <td>Rcpt00000579 </td>
@@ -3223,7 +3223,7 @@
                                     <td></td>
                                 </tr>
                                 <tr class="phps_row_1 odd" role="row">
-                                    <td><input type="checkbox" name="chk[]" id="chk[]"
+                                    <td><input class="select-option" type="checkbox" name="chk[]" id="chk[]"
                                             onclick="check_select_check_box(this)" class="fun" value="578">
                                     </td>
                                     <td>Rcpt00000578 </td>
@@ -3335,8 +3335,9 @@
             </nav>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="dataTables_info" id="search_controller_info" role="status" aria-live="polite">Showing 1
-                        to 25 of 25 entries</div>
+                    <div class="dataTables_info" id="search_controller_info" role="status" aria-live="polite">
+                    
+                        </div>
                 </div>
                 <div class="col-sm-6"></div>
             </div>
@@ -3345,7 +3346,7 @@
         </div>
 
 
-
+</form>
 
         <!-- End -->
 
@@ -3392,5 +3393,24 @@ const search_payment_date_start = flatpickr("#search_payment_date_start", {
   wrapper1.scrollLeft = wrapper2.scrollLeft;
   };
   </script>
+  <script>
+    const selectAll=document.querySelector("#selectAll");
+
+    const chkbxOptions=document.querySelectorAll(".select-option");
+    
+    function selectAllChkboxes(){
+        const isChecked=selectAll.checked;
+        for(let i=0;i<chkbxOptions.length;i++){
+            chkbxOptions[i].checked=isChecked; 
+        }
+    }
+
+    selectAll.addEventListner("change",()=>{
+        Array.from(chkbxOptions).map((chkbx)=>{
+        chkbx.checked=selectAll.checked;
+        })
+    })
+
+</script>
 
 </html>
