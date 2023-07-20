@@ -1008,14 +1008,14 @@
 
     <!--    Panel Body        -->
 
-    <div class="container-fluid pt-0 p-4">
+    <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
-
-        <div class="row mt-4">
+<form>
+        <div class="row mt-2">
             <div class="col-md-3 form-group">
                 <label>Email Type</label>
-                <select class="required selectpicker form-control  show-menu-arrow bs-select-hidden"
+                <select class="required selectpicker form-control form-control-sm  show-menu-arrow bs-select-hidden"
                     name="sel_email_type" tabindex="1" onchange="javascript:getDescription(this.value)"
                     data-live-search="true">
                     <option value="0"> - Select Email Type -</option>
@@ -1032,7 +1032,7 @@
             </div>
             <div class="col-md-3 form-group">
                 <label>Recepient Type</label>
-                <select class="required selectpicker form-control  show-menu-arrow bs-select-hidden"
+                <select class="required selectpicker form-control form-control-sm  show-menu-arrow bs-select-hidden"
                     name="sel_email_recepient_type" tabindex="1" data-live-search="true">
                     <option value="0"> - Select Recepient Type -</option>
                     <option value="to">to</option>
@@ -1048,8 +1048,8 @@
         <!--2nd Row-->
         <div class="row mt-4">
             <div class="form-group col-md-12">
-                <p><label><b>Description</b></label></p>
-                <textarea class="form-control" id="textareaOfSetting" rows="5"></textarea>
+              Description
+                <textarea class="form-control form-control-sm" id="textareaOfSetting" rows="5"></textarea>
             </div>
         </div>
         <!--3th Row-->
@@ -1058,6 +1058,7 @@
                 <button class="btn btn-dark btn-sm"><i class="fa-solid fa-floppy-disk"></i> Save</button>
             </div>
         </div>
+</form>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

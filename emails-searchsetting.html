@@ -1012,14 +1012,14 @@
 
     <!--    Panel Body        -->
 
-    <div class="container-fluid pt-0 p-4">
+    <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
-
-        <div class="row mt-4">
+<form>
+        <div class="row mt-2">
             <div class="col-md-3 form-group">
                 <label>Email Type</label>
-                <select class="form-control selectpicker show-menu-arrow bs-select-hidden" name="email_type_serach"
+                <select class="form-control form-control-sm selectpicker show-menu-arrow bs-select-hidden" name="email_type_serach"
                     data-live-search="true">
                     <option value=""> - Select Email Type -</option>
                     <option value="CHANNEL_MANAGER_UPDATES"> CHANNEL_MANAGER_UPDATES</option>
@@ -1036,7 +1036,7 @@
             <div class="col-md-3 form-group">
                 <label>Recepient Type</label>
                 <div name="email_recepient_serach">
-                    <select class="form-control selectpicker show-menu-arrow bs-select-hidden"
+                    <select class="form-control form-control-sm selectpicker show-menu-arrow bs-select-hidden"
                         name="email_recepient_type" tabindex="1" data-live-search="true">
                         <option value=""> - Select Recepient Type -</option>
                         <!--  										<option value='to' > to</option>
@@ -1061,7 +1061,7 @@
                     <button class="btn btn-dark btn-sm"><i class="fa-solid fa-search"></i> Search</button>
                 </div>
             </div>
-        </div>
+        
 
         <!--Table Creation-->
         <div class="panel-body removeMargins">
@@ -1075,7 +1075,7 @@
                                 &nbsp;
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <div class="custPaging pgType2">
                                     <table width="100%" cellpadding="0" cellspacing="0" border="0"
@@ -1083,14 +1083,14 @@
                                         <tbody>
                                             <tr>
                                                 <td align="center" width="70%"></td>
-                                                <td align="right" width="30%">Page 1 of 1</td>
+                                                <td align="right" width="30%"></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 search_option">
+                        <div class="col-md-2 search_option">
 
                             <script>
                                 $(document).ready(function () {
@@ -1153,14 +1153,14 @@
                                         data-original-title="Search within this table"></i></h5>
                             </div>
                             <div class="form-group col-md-10 bookingsrc">
-                                <input type="text" class="tablesearch form-control search_new" placeholder="Search">
+                                <input type="text" class="tablesearch form-control form-control-sm search_new" placeholder="Search">
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- <div class="table-responsive overflw" data-pattern="priority-columns"> -->
-                <div class="container-fluid">
+                <div class="container-fluid mt-3">
                     <div id="search_sup_wrapper"
                         class="dataTables_wrapper form-inline dt-bootstrap no-footer table table-bordered">
                         <div class="row">
@@ -1440,8 +1440,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="dataTables_info" id="search_sup_info" role="status" aria-live="polite">
-                                    Showing 1
-                                    to 7 of 7 entries</div>
+                                  </div>
                             </div>
                             <div class="col-sm-6"></div>
                         </div>
@@ -1468,7 +1467,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td align="center" width="70%"></td>
-                                                    <td align="right" width="30%">Page 1 of 1</td>
+                                                    <td align="right" width="30%"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -1485,7 +1484,7 @@
 
                 </div>
             </div>
-
+          </form>
         </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
