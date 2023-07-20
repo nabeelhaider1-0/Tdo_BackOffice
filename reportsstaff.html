@@ -1009,14 +1009,14 @@
 
     <!--    Panel Body        -->
 
-    <div class="container-fluid pt-0 p-4">
+    <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
-
-        <div class="row mt-4 mb-2">
+<form>
+        <div class="row mt-2 mb-2">
             <div class="form-group col-md-3">
                 <label>System Users</label>
-                <select class="form-control selectpicker show-menu-arrow bs-select-hidden" name="sel_user"
+                <select class="form-control form-control-sm selectpicker show-menu-arrow bs-select-hidden" name="sel_user"
                     onchange="changeUser(this.value);" data-live-search="true">
                     <option value="0"> - Select System User</option>
                     <option label="1booking_wh" value="1booking_wh">1booking_wh</option>
@@ -1076,7 +1076,8 @@
             <div class="col-md-4 form-group">
             </div>
             <div class="col-md-1 form-group">
-                <button class="btn btn-dark btn-sm"><i class="fa fa-check"></i>&nbsp;Select All</button>
+                <div class="btn btn-dark btn-sm" id="selectAll"
+                onchange="selectAllChkboxes()"><i class="fa fa-check"></i>&nbsp;Select All
             </div>
         </div>
 <hr>
@@ -1087,25 +1088,25 @@
         <div class="row mt-4">
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Accounts Menu" value="33">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Accounts Menu" value="33">
                     <label for="Accounts Menu">Agent Receipts</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Admin" value="1">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Admin" value="1">
                     <label for="Admin">Agent Search Logs</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Agents Menu" value="31">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Agents Menu" value="31">
                     <label for="Agents Menu">Agent Wise Business</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Bookings Menu" value="30">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Bookings Menu" value="30">
                     <label for="Bookings Menu">Allow Auto Recon</label>
                 </div>
             </div>
@@ -1114,25 +1115,25 @@
         <div class="row mt-3">
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Branch Profile" value="37">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Branch Profile" value="37">
                     <label for="Branch Profile">City Wise Sales</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="FAQ" value="42">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="FAQ" value="42">
                     <label for="FAQ">Commissions</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="joint_venture_menu" value="50">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="joint_venture_menu" value="50">
                     <label for="joint_venture_menu">Country Wise Agent Due</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Local Supplier" value="6">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Local Supplier" value="6">
                     <label for="Local Supplier">Country Wise Sales</label>
                 </div>
             </div>
@@ -1141,26 +1142,26 @@
         <div class="row mt-3">
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Masters Menu" value="36">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Masters Menu" value="36">
                     <label for="Masters Menu">Customer Outstanding</label>
                 </div>
             </div>
 
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Messages Menu" value="38">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Messages Menu" value="38">
                     <label for="Messages Menu">Customer Statement</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Only Airline Booking" value="48">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Only Airline Booking" value="48">
                     <label for="Only Airline Booking">Customer Statement</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Operations" value="40">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Operations" value="40">
                     <label for="Operations">Daily Exchange Rate</label>
                 </div>
             </div>
@@ -1169,25 +1170,25 @@
         <div class="row mt-3">
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Reports Menu" value="41">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Reports Menu" value="41">
                     <label for="Reports Menu">Daily Roe</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Sales Manager" value="35">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Sales Manager" value="35">
                     <label for="Sales Manager">Daily Sales</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Super Admin" value="8">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Super Admin" value="8">
                     <label for="Super Admin">Day Wise Agent Due</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Suppliers Menu" value="32">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Suppliers Menu" value="32">
                     <label for="Suppliers Menu">Download Newsletter List</label>
                 </div>
             </div>
@@ -1196,25 +1197,25 @@
         <div class="row mt-3">
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="test_pro" value="45">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="test_pro" value="45">
                     <label for="test_pro">Hotel Wise Sales</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="test_pro" value="46">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="test_pro" value="46">
                     <label for="test_pro">Invoices</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Test_test" value="49">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Test_test" value="49">
                     <label for="Test_test">Local Supplier Business Report</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="tootoo" value="44">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="tootoo" value="44">
                     <label for="tootoo">Loyalty Program Report</label>
                 </div>
             </div>
@@ -1223,25 +1224,25 @@
         <div class="row mt-3">
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="vaibhavtest" value="47">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="vaibhavtest" value="47">
                     <label for="vaibhavtest">Online Supplier Business Report</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Whitelabel" value="39">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Whitelabel" value="39">
                     <label for="Whitelabel">Payment Gateway Bookings</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
                     <label for="yoyoy">Sales Manager</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
                     <label for="yoyoy">Service Tax Wise</label>
                 </div>
             </div>
@@ -1250,25 +1251,25 @@
           <div class="row mt-3">
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="vaibhavtest" value="47">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="vaibhavtest" value="47">
                     <label for="vaibhavtest">Supplier Outstanding</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Whitelabel" value="39">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Whitelabel" value="39">
                     <label for="Whitelabel">Supplier Payments</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
                     <label for="yoyoy">Supplier Performance</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
                     <label for="yoyoy">Supplier Performance (Night)</label>
                 </div>
             </div>
@@ -1277,25 +1278,25 @@
           <div class="row mt-3">
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="vaibhavtest" value="47">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="vaibhavtest" value="47">
                     <label for="vaibhavtest">Supplier Profile</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="Whitelabel" value="39">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="Whitelabel" value="39">
                     <label for="Whitelabel">Supplier Statement Local</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
                     <label for="yoyoy">Supplier Statement Online</label>
                 </div>
             </div>
             <div class="col-md-3 row">
                 <div class="checkbox checkbox-success checkbox-inline">
-                    <input type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
+                    <input class="select-option" type="checkbox" name="role[]" class="role" id="yoyoy" value="43">
                     <label for="yoyoy">Vouchers</label>
                 </div>
             </div>
@@ -1303,11 +1304,31 @@
         <div class="form-group col-md-2 mt-3 mb-4">
             <button class="btn btn-dark btn-sm"><i class="fa-solid fa-floppy-disk"></i> Save</button>
         </div>
+</form>
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
+<script>
+  const selectAll=document.querySelector("#selectAll");
+
+  const chkbxOptions=document.querySelectorAll(".select-option");
+  
+  function selectAllChkboxes(){
+      const isChecked=selectAll.checked;
+      for(let i=0;i<chkbxOptions.length;i++){
+          chkbxOptions[i].checked=isChecked; 
+      }
+  }
+
+  selectAll.addEventListner("change",()=>{
+      Array.from(chkbxOptions).map((chkbx)=>{
+      chkbx.checked=selectAll.checked;
+      })
+  })
+
+</script>
 
 </html>

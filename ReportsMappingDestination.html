@@ -1011,11 +1011,11 @@
 
     <!--    Panel Body        -->
 
-    <div class="container-fluid pt-0 p-4">
+    <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
-
-        <div class="row mt-4">
+<form>
+        <div class="row mt-2">
             <div class="form-group col-md-3">
                 <label>Country</label>
                 <select name="country" id="country" onchange="getCityList();"
@@ -1388,7 +1388,7 @@
                             data-original-title="Search within this table"></i></h5>
                 </div>
                 <div class="form-group col-md-10 bookingsrc">
-                    <input type="text" class="tablesearch form-control search_new" placeholder="Search">
+                    <input type="text" class="tablesearch form-control form-control-sm search_new" placeholder="Search">
                 </div>
             </div>
 
@@ -1407,12 +1407,12 @@
                 <div class="col-sm-12">
                     <div class="doubleScroll-scroll-wrapper"id="wrapper1"
                         style="height: 20px; overflow: scroll hidden;">
-                        <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1599px;"></div>
+                        <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 2590px;"></div>
                     </div>
                     <div id="wrapper2"style="overflow: scroll hidden;">
                         <table id="search_sup"
                             class="table table-striped dataTable table-hover table-responsive alignTbl no-footer table-bordered"
-                            role="grid" aria-describedby="search_sup_info">
+                            role="grid" aria-describedby="search_sup_info"style="width: 2590px;">
                             <thead>
                                 <!--tr><td colspan='7'>&nbsp;<td></tr-->
                                 <tr role="row">
@@ -6350,15 +6350,14 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="dataTables_info" id="search_sup_info" role="status" aria-live="polite">Showing 1 to 25
-                        of 25 entries</div>
+                    <div class="dataTables_info" id="search_sup_info" role="status" aria-live="polite"></div>
                 </div>
                 <div class="col-sm-6"></div>
             </div>
         </div>
 
 
-
+</form>
 
         <!-- End -->
 
