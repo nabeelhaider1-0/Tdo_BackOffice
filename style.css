@@ -11,8 +11,19 @@
 body{
   margin: 0px !important;
   padding:0px !important;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
-
+.color-line {
+  background: #f7f9fa;
+  height: 6px;
+  background-image: -webkit-linear-gradient(left, #34495e, #34495e 25%, #9b59b6 25%, #9b59b6 35%, #3498db 35%, #3498db 45%, #62cb31 45%, #62cb31 55%, #ffb606 55%, #ffb606 65%, #e67e22 65%, #e67e22 75%, #e74c3c 85%, #e74c3c 85%, #c0392b 85%, #c0392b 100%);
+  background-image: -moz-linear-gradient(left, #34495e, #34495e 25%, #9b59b6 25%, #9b59b6 35%, #3498db 35%, #3498db 45%, #62cb31 45%, #62cb31 55%, #ffb606 55%, #ffb606 65%, #e67e22 65%, #e67e22 75%, #e74c3c 85%, #e74c3c 85%, #c0392b 85%, #c0392b 100%);
+  background-image: -ms-linear-gradient(left, #34495e, #34495e 25%, #9b59b6 25%, #9b59b6 35%, #3498db 35%, #3498db 45%, #62cb31 45%, #62cb31 55%, #ffb606 55%, #ffb606 65%, #e67e22 65%, #e67e22 75%, #e74c3c 85%, #e74c3c 85%, #c0392b 85%, #c0392b 100%);
+  background-image: linear-gradient(to right, #34495e, #34495e 25%, #9b59b6 25%, #9b59b6 35%, #3498db 35%, #3498db 45%, #62cb31 45%, #62cb31 55%, #ffb606 55%, #ffb606 65%, #e67e22 65%, #e67e22 75%, #e74c3c 85%, #e74c3c 85%, #c0392b 85%, #c0392b 100%);
+  background-size: 100% 6px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
 
 .navbar {
   --bs-navbar-padding-y: -0.5rem !important;
@@ -31,6 +42,9 @@ body{
 
 .navbar-collapse {
   margin-right: 70px;
+}
+#firstNav{
+  background-color: rgb(255,255,255)!important;
 }
 
 #secondNav {
@@ -805,6 +819,9 @@ input[type=checkbox]{
     }
     #secondNav{
       padding-left: 10px;
+    }
+    .color-line{
+      display: none;
     }
     
   }
