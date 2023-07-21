@@ -1005,7 +1005,7 @@
     </section>
 
     <!---Body Paneel Menu items-->
-    <div class="container-fluid pt-0 p-4">
+    <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
 
@@ -1016,7 +1016,7 @@
             <input type="hidden" name="download_report" value="">
             <input type="hidden" name="sorting" value="">
             <div class="panel-body">
-                <div class="row mt-4">
+                <div class="row mt-2">
                     <div class="col-md-2 form-group">
                         <label>Hotel Name</label>
                         <input type="text" class="form-control form-control-sm test123" name="Search_hotel_name"
@@ -1494,12 +1494,12 @@
                                                     <div class="checkbox checkbox-success">
                                                         <input type="checkbox" name="select-all" id="select-all"
                                                             onclick=" return checkAll();"
-                                                            style="display:block;position: absolute;    margin-left: 17px;
+                                                            style="display:block;position:relative;    margin-left: 17px;
                                                             margin-top: -24px; ">
                                                         <label id="selectLbl" style="display:block;"></label>
                                                         <input type="checkbox" name="unselect-all" id="unselect-all"
                                                             onclick=" return checkNone();"
-                                                            style="display:none;position: absolute; margin-left: -20px;">
+                                                            style="display:none;position:relative; margin-left: -20px;margin-top: 23px;">
                                                         <label style="display:none;" id="unselectLbl"></label>
                                                     </div>
                                                 </th>
@@ -3481,7 +3481,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="dataTables_info" id="search_transfer_info" role="status" aria-live="polite">
-                                    Showing 1 to 25 of 25 entries</div>
+                                    </div>
                             </div>
                             <div class="col-sm-6"></div>
                         </div>

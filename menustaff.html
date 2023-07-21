@@ -1010,11 +1010,11 @@
 
     <!--    Panel Body        -->
 
-    <div class="container-fluid pt-0 p-4">
+    <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
-
-        <div class="row mt-3 mb-4">
+<form>
+        <div class="row mt-2 mb-4">
             <div class="col-md-4 form-group"><label>Select Profile</label><select
                     class="form-control selectpicker show-menu-arrow bs-select-hidden" name="psa_user_profile"
                     id="psa_user_profile" onchange="sel_chk()">
@@ -3965,7 +3965,7 @@
         <div class="form-group col-md-2 mt-3 mb-4">
             <button class="btn btn-dark btn-sm"><i class="fa-solid fa-floppy-disk"></i> Save</button>
         </div>
-
+</form>
     </div>
 
 </body>
@@ -3973,5 +3973,24 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
+<script>
+    const selectAll=document.querySelector("#selectAll");
+
+    const chkbxOptions=document.querySelectorAll(".select-option");
+    
+    function selectAllChkboxes(){
+        const isChecked=selectAll.checked;
+        for(let i=0;i<chkbxOptions.length;i++){
+            chkbxOptions[i].checked=isChecked; 
+        }
+    }
+
+    selectAll.addEventListner("change",()=>{
+        Array.from(chkbxOptions).map((chkbx)=>{
+        chkbx.checked=selectAll.checked;
+        })
+    })
+
+</script>
 
 </html>
