@@ -201,7 +201,7 @@ form{
 
 header {
 
-  color:grey ;
+  color:#6a6c6f;
   font-weight: 400;
   padding: 7px 4px;
   transition: all .3s;
@@ -532,26 +532,26 @@ color:grey;
 p{
   font-size: 12px;
   font-weight: 500;
-  color:grey;
+  color: #6a6c6f !important;
   }
 .col-md-3{
   font-size: 12px;
   font-weight: 600;
-color:grey;
+color:#6a6c6f !important;
 }
 .col-md-1,.col-md-2,.col-md-4,.col-md-5 span{
   font-size: 12px;
 }
 .form-group h5,h6{
-  color: grey;
+  color: #6a6c6f !important;
   font-weight: 400;
 }
 label h5{
-  color: gray;
+  color: #6a6c6f !important;
   font-weight: 400;
 }
 #heading{
-  color: gray;
+  color: #6a6c6f !important;
   font-weight: 400;
 }
 
@@ -788,7 +788,7 @@ label h5{
   }
 
   #tbl_tour td b {
-    border: 1px solid gray;
+    border: 1px solid #6a6c6f !important;
     border-radius: 0.4em;
     padding: 3px 5px;
     margin-left: 5px;
