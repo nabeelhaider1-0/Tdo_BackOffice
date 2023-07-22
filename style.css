@@ -539,11 +539,19 @@ p{
   font-weight: 600;
 color:grey;
 }
-.col-md-2,.col-md-4,.col-md-5 span{
+.col-md-1,.col-md-2,.col-md-4,.col-md-5 span{
   font-size: 12px;
 }
-.form-group h5{
+.form-group h5,h6{
   color: grey;
+  font-weight: 400;
+}
+label h5{
+  color: gray;
+  font-weight: 400;
+}
+#heading{
+  color: gray;
   font-weight: 400;
 }
 
@@ -551,6 +559,7 @@ color:grey;
   background-color: #34495e !important;
   border-color: #34495e !important;
   color: #FFFFFF;
+  font-size: 12px!important;
 }
 
 .bootstrap-select.form-control-sm .dropdown-toggle {
