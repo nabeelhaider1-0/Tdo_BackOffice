@@ -140,7 +140,12 @@ form{
 #mappinggsub {
   top: 118px;
 }
-
+#mappingggsub {
+  top: 128px;
+}
+#transsub {
+  top: 162px;
+}
 #exchangesub {
   top: 158px;
 }
@@ -479,6 +484,9 @@ input[type="file"] {
 .input-group-addon:last-child {
   border-left: 0;
 }
+.alert-danger{
+  background-color: #f2dede;
+}
 
 #tickschecks {
   display: contents;
@@ -578,6 +586,7 @@ label h5{
   border-left: 2px solid red !important;
   border-radius: 0px 4px 4px 0px;
 }
+
 .bs-placeholder{
   background: transparent;
 }
@@ -811,6 +820,10 @@ input[type=checkbox]{
   height: 16px;
   width: 20px;
 }
+
+#services_note {
+  color: #197ef7 !important;
+  font-size: 13px !important;}
 
 @media only screen and (min-width:960px) {
   #tdotext{
