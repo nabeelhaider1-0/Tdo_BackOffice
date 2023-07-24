@@ -470,6 +470,11 @@ input[type="file"] {
   text-transform: none;
 }
 
+.btn-group, .btn-group-vertical {
+  vertical-align: 20px!important;
+}
+
+
 .uniqFile {
   cursor: pointer !important;
   position: relative;
@@ -579,6 +584,7 @@ label h5{
   padding-left: 5px;
   vertical-align: 2px;
   position: relative;
+ 
 }
 .radio label{
   padding-left: 5px;
@@ -600,9 +606,11 @@ label h5{
 }
 .fa-times-circle.fa-xs {
   color: #6a7490 !important;
+  vertical-align: -2px;
 }
 .fa-check-circle.fa-xs {
   color: #ffffff!important;
+  vertical-align:-2px;
 }
 .btn-group{
   padding-bottom: 5px;
@@ -853,6 +861,7 @@ input[type=checkbox]{
 #services_note {
   color: #197ef7 !important;
   font-size: 13px !important;}
+
 
 @media only screen and (min-width:960px) {
   #tdotext{
