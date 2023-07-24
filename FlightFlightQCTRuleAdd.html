@@ -1157,19 +1157,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-4">
+               <div class="row mt-1">
 
-                    <div class="col-md-6">
+                <div class="col-md-6 form-group"style="border: 0.1px solid #e7e8ea;padding-right: 44px;
+                padding-top: 12px;padding-bottom: 12px; padding-left: 23px;margin-right:-29px">
 
-                        <h6>From</h6>
-                    </div>
-                    <div class="col-md-6">
-
-
-                        <h6>To</h6>
-                    </div>
-
-                    <div class="col-md-3 form-group phps_row_0 padd_5">
+                    <h6>From</h6>
+                    <div class="row">
+                    <div class="col-md-6 form-group">
 
                         <label>Country: </label>
                         <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
@@ -1395,24 +1390,30 @@
                             <option label="Yemen" value="YE">Yemen</option>
                             <option label="Zambia" value="ZM">Zambia</option>
                             <option label="Zimbabwe" value="ZW">Zimbabwe</option>
-
+    
                         </select>
                     </div>
-
-                    <div class="col-md-3">
+    
+                    <div class="col-md-6 form-group">
                         <label>Airport: </label>
                         <select
                             class="selectpicker form-control form-control-sm show-menu-arrow input_width_2 setfonts color_set_1 bs-select-hidden"
                             id="sel_airport_from" name="sel_airport_from[]"
-                            onchange="javascript:setMultiSelectAirport('from_airport');" multiple=""
-                            data-live-search="true" data-actions-box="true">
-
+                            onchange="javascript:setMultiSelectAirport('from_airport');" multiple="" data-live-search="true"
+                            data-actions-box="true">
+    
                         </select>
-
+    
                     </div>
+                </div>
+                </div>
+                <div class="col-md-6 form-group" style="border: 0.1px solid #e7e8ea;padding-right: 44px;
+                padding-top: 12px;padding-bottom: 12px;    padding-left: 48px;">
 
 
-                    <div class="col-md-3 form-group phps_row_1 padd_5">
+                    <h6>To</h6>
+                    <div class="row">
+                    <div class="col-md-6 form-group ">
                         <label>Country: </label>
                         <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
                             name="sel_countries_to[]" id="country_to" data-check="to_country"
@@ -1637,23 +1638,31 @@
                             <option label="Yemen" value="YE">Yemen</option>
                             <option label="Zambia" value="ZM">Zambia</option>
                             <option label="Zimbabwe" value="ZW">Zimbabwe</option>
-
+    
                         </select>
-
+    
                     </div>
-
-                    <div class="col-md-3 form-group phps_row_0 padd_5">
+    
+                    <div class="col-md-6 form-group ">
                         <label>Airport: </label>
                         <select
                             class="selectpicker form-control form-control-sm  show-menu-arrow input_width_2 setfonts color_set_1 bs-select-hidden"
                             id="sel_airport_to" name="sel_airport_to[]"
-                            onchange="javascript:setMultiSelectAirport('to_airport');" multiple=""
-                            data-live-search="true" data-actions-box="true">
-
+                            onchange="javascript:setMultiSelectAirport('to_airport');" multiple="" data-live-search="true"
+                            data-actions-box="true">
+    
                         </select>
-
+    
                     </div>
                 </div>
+                </div>
+
+          
+
+
+
+             
+            </div>
                 <div class="row mt-2">
                     <div class="col-md-3 form-group">
                         <label>Airline: </label>
