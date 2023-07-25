@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+  
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+  
+  
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+  </head>
+  
+  <body>
+  
+  <!---                                    NAv BAr Secton            -->
+  <section>
+    <nav class="navbar navbar-expand-lg bg-light" id="firstNav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="TDO LOGO Without Background.png" class="img-fluid"
+            alt="Responsive image" style="max-height: 50px; margin-left: 10px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="index.html">Welcome <b>Beta_Tdo</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa-regular fa-clock"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-user fa-2xl"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!--      2nd Navbar Section For Search Bookkng And other Queries           -->
+  <section>
+    <nav class="navbar navbar-expand-lg" id="secondNav">
+      <div class="w-100">
+        <a class="navbar-brand" href="index.html" style="color: white;font-size: 10px;"id="tdotext">Travel Destination Online Mid Office</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!--  Drop down menu for Booking-->
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>BOOKINGS</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item" href="#">Search Bookings</a></li>
+              <li><a class="dropdown-item"
+                  href="#">Reminders&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="#">NEW</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">NEW ONLINE BOOKING</a></li>
+              <li><a class="dropdown-item" href="#">NEW OFFLINE
+                  BOOKING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="#">HOTELS</a></li>
+                  <li><a class="dropdown-item" href="#">FLIGHTS</a></li>
+                  <li><a class="dropdown-item" href="#">TRANSFER</a></li>
+                  <li><a class="dropdown-item" href="#">TOUR</a></li>
+                  <li><a class="dropdown-item" href="#">MISC SERVICES</a></li>
+                  <li><a class="dropdown-item" href="#">GROUPS</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="#">RECONNECTIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="#">MANUAL FLIGHTS</a></li>
+                  <li><a class="dropdown-item" href="#">MANUAL</a></li>
+                  <li><a class="dropdown-item" href="#">AUTO</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">EXCHANGE/REASSIGN<br>BOOKING</a></li>
+            </ul>
+          </div>
+
+          <!--  Drop down menu for Customer-->
+
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>CUSTOMERS</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item"
+                  href="menuitem.html">AGENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="customerSub">
+                  <li><a class="dropdown-item" href="customeragentsearch.html">SEARCH</a></li>
+                  <li><a class="dropdown-item" href="customeragentnew.html">NEW</a></li>
+                  <li><a class="dropdown-item" href="customeragentsearchusers.html">SEARCH USERS</a></li>
+                  <li><a class="dropdown-item" href="menuitem.html">ADVANCED
+                      SETTINGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="customeragentadvanceonline.html">ONLINE SUPPLIERS</a></li>
+                      <li><a class="dropdown-item" href="customeragentadvanceoffline.html">LOCAL SUPPLIERS</a></li>
+                    </ul>
+
+                  </li>
+                  <li><a class="dropdown-item" href="customeragentrateprofile.html">AGENT RATE PROFILE</a></li>
+                </ul>
+              </li>
+
+              </li>
+              <li><a class="dropdown-item" href="customerB2C.html">B2C CUSTOMER</a></li>
+            </ul>
+          </div>
+
+          <!--  Drop down menu for Messages-->
+
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>MESSAGES</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item" href="#">AGENT
+                  MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item" href="#">NEW</a></li>
+                  <li><a class="dropdown-item" href="#">OUTBOX</a></li>
+                  <li><a class="dropdown-item" href="#">INBOX</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">MASS
+                  MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item"
+                      href="#">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="#">NEW</a></li>
+                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">SUBSCRIBERS
+                      GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="#">NEW</a></li>
+                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="#">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="#">NEW</a></li>
+                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="#">DOWNLOAD NEWSLETTER</a></li>
+                      <li><a class="dropdown-item" href="#">ANALYSIS</a></li>
+                      <li><a class="dropdown-item" href="#">SETTINGS</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <!--  Drop down menu for Accounts-->
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>ACCOUNTS</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item"
+                  href="menuitem.html">AGENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">RECEIPTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="AccountsAgentsRecieptsNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="AccountsAgentsRecieptsSearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="AccountsAgentsRecieptsByBookingId.html">BY BOOKING ID</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">CREDIT
+                      NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="AccountsAgentsCreditNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="AccountsAgentsCreditSearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="AccountsAgentsCreditByBookingId.html">BY BOOKING ID</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">DEBIT
+                      NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="AccountsAgentsDebitNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="AccountsAgentsDebitSearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="AccountsAgentsDebitByBookingId.html">BY BOOKING ID</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="menuitem.html">TAX
+                  SETUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="menuitem.html">TAX
+                      MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="AccountsTaxsetupTaxMasterNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="AccountsTaxsetupTaxMasterSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">TAX CONFIGURATION&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="AccountsTaxsetupTaxConfigurationNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="AccountsTaxsetupTaxConfigurationSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">PAYMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="AccountsSuppliersPaymentsNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="AccountsSuppliersPaymentsSearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="AccountsSuppliersPaymentsByBookingId.html">PAYMENT BY BOOKING
+                          ID</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <!--  Drop down menu for Reports-->
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b> REPORTS</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item"
+                  href="menuitem.html">MANAGEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">BUSINESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="menuitem1.html">BY AGENT</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">BY HOTEL</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">BY COUNTRY</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">BY CITY</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">BY ONLINE SUPPLIER</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">BY OFFLINE SUPPLIER</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">BOOKING BY
+                      SUPPLIER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="menuitem1.html">BY STATUS</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">BY NIGHTS</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">BY SUPPLIER PROFILE</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem1.html">SALES MANAGER</a></li>
+                  <li><a class="dropdown-item" href="ReportManagementSalesComparison.html">SALES COMPARISON</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">OPERTAIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="ReportsOperataionsBookingReprt.html">BOOKING REPORT</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">AGENT SEARCH LOGS</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">VOUCHER</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">DAILY ROE</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">LOYALTY PROGRAM</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">REMINDERPRO<br>SUBSCRIPTIONS</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">ACCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="menuitem1.html">DAILY SALES</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">CUSTOMER STATEMENT</a></li>
+                  <li><a class="dropdown-item" href="menuitem.html">SUPPLIER
+                      STATEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item" href="menuitem1.html">ONLINE SUPPLIER</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">OFFLINE SUPPLIER</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">OUTSTANDING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                      <li><a class="dropdown-item" href="menuitem1.html">CUSTOMER</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">SUPPLIER</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem1.html">INVOICES</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">AGENT RECEIPTS</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">AGENT RECEIPT SUMMARY</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">SUPPLIER PAYMENTS</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">TAX</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">COMMISSION</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">PAYMENT GATEWAY<br>BOOKINGS</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">AGENT GLOBAL STATEMENT</a></li>
+                  <li><a class="dropdown-item" href="menuitem1.html">GLOBAL CUSTOMER REPORT</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                  <li><a class="dropdown-item" href="ReportsMappingDestination.html">DESTINATIONS</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <!--  Drop down menu for Contracts-->
+
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>CONTRACTS</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item"
+                  href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item" href="ContractsHotelsRates.html">RATES</a></li>
+                  <li><a class="dropdown-item" href="ContractsHotelsAllotmentMap.html">ALLOTMENT MAP</a></li>
+                  <li><a class="dropdown-item" href="menuitem.html">DYNAMIC
+                      ALLOTMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item" href="ContractsHotelsDynamicAllotmentNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="ContractsHotelsDynamicAllotmentSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">OFFERS &
+                      DISCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                      <li><a class="dropdown-item" href="ContractsHotelsOffersandiscountsNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="ContractsHotelsOffersandiscountsSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="ContractsTranfersRates.html">RATES</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="menuitem.html">TOURS & ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                  <li><a class="dropdown-item" href="ContractsToursandactivitiesRates.html">RATES</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">FLIGHTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                  <li><a class="dropdown-item" href="ContractsFlightsSearch.html">SEARCH</a></li>
+                  <li><a class="dropdown-item" href="ContractsFlightsSuppplierMapping.html">FLIGHT SUPPLIER MAPPING</a>
+                  </li>
+                  <li><a class="dropdown-item" href="ContractsFlightsAddrates.html">ADD RATES</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!--  Drop down menu for Masters-->
+
+
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>MASTERS</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item"
+                  href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item" href="MastersHotelsNew.html">NEW</a></li>
+                  <li><a class="dropdown-item" href="MastersHotelsSearch.html">SEARCH</a></li>
+                  <li><a class="dropdown-item"
+                      href="#">AMENITITES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item" href="MastersHotelsAmenitiesNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsAmenitiesSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="#">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                      <li><a class="dropdown-item" href="MastersHotelsLocationsNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsLocationsSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">ROOM
+                      VIEW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                      <li><a class="dropdown-item" href="MastersHotelsRoomviewNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsRoomviewSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">ROOM
+                      CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                      <li><a class="dropdown-item" href="MastersHotelsRoomcategoryNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsRoomcategorySearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">INVENTORY ROOM
+                      CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                      <li><a class="dropdown-item" href="MastersHotelsInventoryRoomCategoryNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsInventoryRoomCategorySearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">MEAL
+                      BASIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mealsub">
+                      <li><a class="dropdown-item" href="MastersHotelsMealBasisMapping.html">MEAL BASIS MAPPING</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsMealMappingNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsMealMappingSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">PREFERRED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                      <li><a class="dropdown-item" href="MastersHotelsPreferedNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsPreferedOnSearchPage.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">SPECIAL
+                      REQUESTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                      <li><a class="dropdown-item" href="MastersHotelsSpecialRequestsNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsSpecialRequestsSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="menuitem.html">TEST</a></li>
+                  <li><a class="dropdown-item" href="MastersTransfersNew.html">NEW</a></li>
+                  <li><a class="dropdown-item" href="MastersTransfersSearch.html">SEARCH</a></li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                      <li><a class="dropdown-item" href="MastersTransfersLocationNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersTransfersLocationSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">VEHICLES</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="menuitem.html">TOURS & ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                  <li><a class="dropdown-item" href="Masters Tours&ActivitiesNew.html">NEW</a></li>
+                  <li><a class="dropdown-item" href="Masters Tours&ActivitiesSearch.html">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">SUPPLIMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="MastersSupplementsHotelsNew .html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersSupplementsHotelsSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">AIRLINES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                  <li><a class="dropdown-item" href="#">NEW</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="MastersPreferedcities.html">PREFERRED CITIES</a></li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                  <li><a class="dropdown-item" href="#">ONLINE
+                      SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="#">SEARCH AUTO CHECK<br>CONFIGURATION</a>
+                      </li>
+                      <li><a class="dropdown-item" href="#">AUTO CHECK SUPPLIER</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">OFFLINE
+                      SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="#">NEW</a></li>
+                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="MAstersTravelClass.html">TRAVEL CLASS</a></li>
+              <li><a class="dropdown-item" href="menuitem.html">MARK-UP PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                  <li><a class="dropdown-item" href="#">NEW</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="menuitem.html">MARKET
+                  PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                  <li><a class="dropdown-item" href="#">NEW</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="menuitem.html">PAYMENT GATEWAYS&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="paysub">
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="MastersAircarft.html">AIRCRAFT</a></li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">BANKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="banksub">
+                  <li><a class="dropdown-item" href="#">NEW</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">CURRENCIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="cursub">
+                  <li><a class="dropdown-item" href="#">NEW</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">TAXES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="taxsub">
+                  <li><a class="dropdown-item" href="#">NEW</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                  <li><a class="dropdown-item" href="#">TAX
+                      MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                      <li><a class="dropdown-item" href="#">ADD</a></li>
+                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">TAX
+                      CONFIGURATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                      <li><a class="dropdown-item" href="#">ADD</a></li>
+                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="menuitem.html">LOYALITY PROGRAM&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="loyaltysub">
+                  <li><a class="dropdown-item" href="#">TIERS</a></li>
+                  <li><a class="dropdown-item" href="#">REWARDS</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="Masters Packages.html">PACAKGES</a></li>
+              <li><a class="dropdown-item" href="MastersOfferCode.html">OFFER CODES</a></li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">VEHICLES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="vehiclesub">
+                  <li><a class="dropdown-item" href="#">VEHICLE
+                      TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="#">NEW</a></li>
+                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="#">INVENTORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="#">ADD</a></li>
+                      <li><a class="dropdown-item" href="#">MANAGE</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <!--  Drop down menu for Visa-->
+
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>VISA</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item"
+                  href="#">CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item" href="#">ADD</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">VISA REQUEST</a></li>
+              <li><a class="dropdown-item" href="#">VISA
+                  RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                  <li><a class="dropdown-item" href="#">ADD SUPPLIER VISA RATES</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH SUPPLIER VISA RATESX</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">NEW OFFLINE VISA BOOKING</a></li>
+            </ul>
+          </div>
+
+
+          <!--  Drop down menu for Flights-->
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>FLIGHT</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item" href="#">FLIGHT
+                  RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item" href="#">ADD RULES</a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">FLIGHT
+                  PCC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="#">ADD </a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">FLIGHT QCT
+                  RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                  <li><a class="dropdown-item" href="#">ADD </a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">FLIGHT CANCELLATION
+                  RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                  <li><a class="dropdown-item" href="#">ADD </a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <!--  Drop down menu for Suppliers-->
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>SUPPLIERS</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item" href="#">MARKET
+                  PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item" href="#">NEW </a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">ONLINE
+                  SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="#">NEW </a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">OFFLINE
+                  SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                  <li><a class="dropdown-item" href="#">NEW </a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <!--  Drop down menu for Lodge Card-->
+
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>LODGE CARD</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item"
+                  href="#">CARD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item" href="#">ADD </a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">CARD
+                  PAYMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="#">ADD </a></li>
+                  <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <!--  Drop down menu for Tools-->
+
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>TOOLS</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item"
+                  href="#">MARK-UPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item" href="#">ADD
+                      ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="#">NEW </a></li>
+                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">BY COUNTRY/BRANCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">ADD LEAD TIME</a></li>
+              <li><a class="dropdown-item"
+                  href="#">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                  <li><a class="dropdown-item" href="#">COUNTRIES
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="#">MANUAL </a></li>
+                      <li><a class="dropdown-item" href="#">AUTO</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="#">CITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="#">MANUAL </a></li>
+                      <li><a class="dropdown-item" href="#">AUTO</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">HOTELS</a></li>
+                  <li><a class="dropdown-item" href="#">NATIONALITIES</a></li>
+                  <li><a class="dropdown-item" href="#">OFFLINE
+                      SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                      <li><a class="dropdown-item" href="#">HOTEL </a></li>
+                      <li><a class="dropdown-item" href="#">TRANSFER </a></li>
+                      <li><a class="dropdown-item" href="#">TOUR & ACTIVITIES</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">EXCHANGE
+                  RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                  <li><a class="dropdown-item" href="#">MATRIX </a></li>
+                  <li><a class="dropdown-item" href="#">CALCULATOR</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">TRANSACTION LIMITS&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                  <li><a class="dropdown-item" href="#">PER TRANSACTION </a></li>
+                  <li><a class="dropdown-item" href="#">TOTAL</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">REWARDS DELIVERY</a></li>
+              <li><a class="dropdown-item" href="#">LANGUAGE MANAGER</a></li>
+              <li><a class="dropdown-item" href="#">FAQ</a></li>
+              <li><a class="dropdown-item" href="#">PRESET TEXT</a></li>
+            </ul>
+          </div>
+
+
+          <!--  Drop down menu for Settings-->
+
+          <div class="dropdown" id="drip">
+            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <b>SETTINGS</b>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+              <li><a class="dropdown-item"
+                  href="menuitem.html">STAFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                  <li><a class="dropdown-item" href="staffnew.html">NEW</a></li>
+                  <li><a class="dropdown-item" href="staffsearch.html">SEARCH</a></li>
+                  <li><a class="dropdown-item" href="menu-new.html">ACCESS
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub1">
+                      <li><a class="dropdown-item" href="roles.html">ROLES </a></li>
+                      <li><a class="dropdown-item" href="menustaff.html">MENU </a></li>
+                      <li><a class="dropdown-item" href="reportsstaff.html">REPORTS</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="assignbranches.html">ASSIGN A BRANCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">BRANCHES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li><a class="dropdown-item" href="branchnew.html">NEW</a></li>
+                  <li><a class="dropdown-item" href="branchsearch.html">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">EMAILS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                  <li><a class="dropdown-item" href="emails-newsetting.html">NEW</a></li>
+                  <li><a class="dropdown-item" href="emails-searchsetting.html">SEARCH</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="mid.-office.html">MID-OFFICE ACCESS</a></li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">NAVIGATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                  <li><a class="dropdown-item" href="sitemap.html">SYSTEM SITEMAP</a></li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">MENUITEMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="menu-new.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="menu-search.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item"
+                  href="menuitem.html">LOGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                    class="fa-solid fa-caret-right"></i></a>
+                <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                  <li><a class="dropdown-item" href="userlogs.html">USERS</a></li>
+                  <li><a class="dropdown-item" href="emaillogs.html">EMAILS</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </section>
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-3">
+                    <h5 style="font-size:14pt;font-weight: 500;">ADD LOCATION</h5>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-3">
+                    <i class="fa-solid fa-house-chimney"></i><span> / <a href="MastersHotelsLocationsSearch.html"
+                            style="text-decoration:none;color:grey"> Search Location</a> / Add Location</span>
+                </div>
+
+            </div>
+        </header>
+
+
+    </section>
+
+    <!---Body Paneel Menu items-->
+    <div class="container-fluid pt-0 p-4"id="content-pad">
+
+        <!-- First Row-->
+
+        <form action="area.php" method="post" name="add_area_form" id="add_area_form">
+            <input type="hidden" name="action" value="insert">
+            <input type="hidden" name="goahead_areaname" id="goahead" value="">
+            <div class="panel-body">
+                <div class="row mt-4">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select class="selectpicker form-control form-control-sm show-menu-arrow required bs-select-hidden"
+                                name="sel_countries" id="country" onchange="getCityList(this.value);"
+                                data-live-search-style="startsWith" data-live-search="true">
+                                <option value="0"> - Select Country -</option>
+                                <option label="AFGHANISTAN" value="97">AFGHANISTAN</option>
+                                <option label="ALBANIA" value="43">ALBANIA</option>
+                                <option label="ALGERIA" value="142">ALGERIA</option>
+                                <option label="ANDORRA" value="44">ANDORRA</option>
+                                <option label="ANGOLA" value="143">ANGOLA</option>
+                                <option label="ANTIGUA AND BARBUDA" value="230">ANTIGUA AND BARBUDA</option>
+                                <option label="ARGENTINA" value="29">ARGENTINA</option>
+                                <option label="ARMENIA" value="45">ARMENIA</option>
+                                <option label="ARUBA" value="231">ARUBA</option>
+                                <option label="AUSTRALIA" value="196">AUSTRALIA</option>
+                                <option label="AUSTRIA" value="46">AUSTRIA</option>
+                                <option label="AZERBAIJAN" value="47">AZERBAIJAN</option>
+                                <option label="BAHAMAS" value="3">BAHAMAS</option>
+                                <option label="BAHRAIN" value="98">BAHRAIN</option>
+                                <option label="BANGLADESH" value="99">BANGLADESH</option>
+                                <option label="BARBADOS" value="4">BARBADOS</option>
+                                <option label="BELARUS" value="48">BELARUS</option>
+                                <option label="BELGIUM" value="49">BELGIUM</option>
+                                <option label="BELIZE" value="5">BELIZE</option>
+                                <option label="BENIN" value="144">BENIN</option>
+                                <option label="BERMUDA" value="6">BERMUDA</option>
+                                <option label="BHUTAN" value="100">BHUTAN</option>
+                                <option label="BOLIVIA" value="30">BOLIVIA</option>
+                                <option label="BONAIRE, SINT EUSTATIUS AND SABA" value="416">BONAIRE, SINT EUSTATIUS AND
+                                    SABA</option>
+                                <option label="BOSNIA AND HERZEGOVINA" value="50">BOSNIA AND HERZEGOVINA</option>
+                                <option label="BOTSWANA" value="145">BOTSWANA</option>
+                                <option label="BRAZIL" value="31">BRAZIL</option>
+                                <option label="BRITISH VIRGIN ISLANDS" value="7">BRITISH VIRGIN ISLANDS</option>
+                                <option label="BRUNEI" value="101">BRUNEI</option>
+                                <option label="BULGARIA" value="51">BULGARIA</option>
+                                <option label="BURKINA FASO" value="146">BURKINA FASO</option>
+                                <option label="BURUNDI" value="147">BURUNDI</option>
+                                <option label="CAMBODIA" value="102">CAMBODIA</option>
+                                <option label="CAMEROON" value="148">CAMEROON</option>
+                                <option label="CANADA" value="2">CANADA</option>
+                                <option label="CAPE VERDE" value="149">CAPE VERDE</option>
+                                <option label="CAYMAN ISLANDS" value="8">CAYMAN ISLANDS</option>
+                                <option label="CENTRAL AFRICAN REPUBLIC" value="150">CENTRAL AFRICAN REPUBLIC</option>
+                                <option label="CHAD" value="151">CHAD</option>
+                                <option label="CHILE" value="32">CHILE</option>
+                                <option label="CHINA" value="103">CHINA</option>
+                                <option label="COLOMBIA" value="33">COLOMBIA</option>
+                                <option label="COMOROS" value="402">COMOROS</option>
+                                <option label="COOK ISLANDS" value="412">COOK ISLANDS</option>
+                                <option label="COSTA RICA" value="9">COSTA RICA</option>
+                                <option label="CROATIA" value="52">CROATIA</option>
+                                <option label="CUBA" value="10">CUBA</option>
+                                <option label="CURACAO" value="415">CURACAO</option>
+                                <option label="CYPRUS" value="53">CYPRUS</option>
+                                <option label="CZECH REPUBLIC" value="54">CZECH REPUBLIC</option>
+                                <option label="DEMOCRATIC REPUBLIC OF THE CONGO" value="153">DEMOCRATIC REPUBLIC OF THE
+                                    CONGO</option>
+                                <option label="DENMARK" value="55">DENMARK</option>
+                                <option label="DJIBOUTI" value="154">DJIBOUTI</option>
+                                <option label="DOMINICA" value="11">DOMINICA</option>
+                                <option label="DOMINICAN REPUBLIC" value="12">DOMINICAN REPUBLIC</option>
+                                <option label="EAST TIMOR" value="104">EAST TIMOR</option>
+                                <option label="ECUADOR" value="34">ECUADOR</option>
+                                <option label="EGYPT" value="155">EGYPT</option>
+                                <option label="EL SALVADOR" value="13">EL SALVADOR</option>
+                                <option label="EQUATORIAL GUINEA" value="156">EQUATORIAL GUINEA</option>
+                                <option label="ERITREA" value="157">ERITREA</option>
+                                <option label="ESTONIA" value="56">ESTONIA</option>
+                                <option label="ETHIOPIA" value="158">ETHIOPIA</option>
+                                <option label="FALKLAND ISLANDS" value="35">FALKLAND ISLANDS</option>
+                                <option label="FIJI ISLANDS" value="198">FIJI ISLANDS</option>
+                                <option label="FINLAND" value="57">FINLAND</option>
+                                <option label="FRANCE" value="58">FRANCE</option>
+                                <option label="FRENCH GUIANA" value="36">FRENCH GUIANA</option>
+                                <option label="FRENCH POLYNESIA" value="199">FRENCH POLYNESIA</option>
+                                <option label="GABON" value="159">GABON</option>
+                                <option label="GAMBIA" value="160">GAMBIA</option>
+                                <option label="GEORGIA" value="59">GEORGIA</option>
+                                <option label="GERMANY" value="60">GERMANY</option>
+                                <option label="GHANA" value="161">GHANA</option>
+                                <option label="GIBRALTAR" value="61">GIBRALTAR</option>
+                                <option label="GREECE" value="62">GREECE</option>
+                                <option label="GREECE ISLANDS" value="404">GREECE ISLANDS</option>
+                                <option label="GREENLAND" value="14">GREENLAND</option>
+                                <option label="GRENADA" value="15">GRENADA</option>
+                                <option label="GUADELOUPE" value="16">GUADELOUPE</option>
+                                <option label="GUAM" value="200">GUAM</option>
+                                <option label="GUATEMALA" value="17">GUATEMALA</option>
+                                <option label="GUERNSEY" value="63">GUERNSEY</option>
+                                <option label="GUINEA" value="162">GUINEA</option>
+                                <option label="GUINEA BISSAU" value="163">GUINEA BISSAU</option>
+                                <option label="GUYANA" value="37">GUYANA</option>
+                                <option label="HAITI" value="18">HAITI</option>
+                                <option label="HONDURAS" value="19">HONDURAS</option>
+                                <option label="HONG KONG" value="105">HONG KONG</option>
+                                <option label="HUNGARY" value="64">HUNGARY</option>
+                                <option label="ICELAND" value="65">ICELAND</option>
+                                <option label="INDIA" value="106">INDIA</option>
+                                <option label="INDONESIA" value="107">INDONESIA</option>
+                                <option label="IRAN" value="108">IRAN</option>
+                                <option label="IRAQ" value="109">IRAQ</option>
+                                <option label="IRELAND" value="66">IRELAND</option>
+                                <option label="ISLE OF MAN" value="67">ISLE OF MAN</option>
+                                <option label="ISRAEL" value="110">ISRAEL</option>
+                                <option label="ITALY" value="68">ITALY</option>
+                                <option label="IVORY COAST" value="164">IVORY COAST</option>
+                                <option label="JAMAICA" value="20">JAMAICA</option>
+                                <option label="JAPAN" value="111">JAPAN</option>
+                                <option label="JERSEY" value="69">JERSEY</option>
+                                <option label="JORDAN" value="112">JORDAN</option>
+                                <option label="KAZAKHSTAN" value="113">KAZAKHSTAN</option>
+                                <option label="KENYA" value="165">KENYA</option>
+                                <option label="KIRIBATI" value="201">KIRIBATI</option>
+                                <option label="KOSOVO" value="70">KOSOVO</option>
+                                <option label="KUWAIT" value="114">KUWAIT</option>
+                                <option label="KYRGYZSTAN" value="115">KYRGYZSTAN</option>
+                                <option label="LAOS" value="116">LAOS</option>
+                                <option label="LATVIA" value="71">LATVIA</option>
+                                <option label="LEBANON" value="117">LEBANON</option>
+                                <option label="LESOTHO" value="166">LESOTHO</option>
+                                <option label="LIBERIA" value="167">LIBERIA</option>
+                                <option label="LIBYA" value="168">LIBYA</option>
+                                <option label="LIECHTENSTEIN" value="72">LIECHTENSTEIN</option>
+                                <option label="LITHUANIA" value="73">LITHUANIA</option>
+                                <option label="LUXEMBOURG" value="74">LUXEMBOURG</option>
+                                <option label="MACAU" value="118">MACAU</option>
+                                <option label="MACEDONIA" value="75">MACEDONIA</option>
+                                <option label="MADAGASCAR" value="169">MADAGASCAR</option>
+                                <option label="MALAWI" value="170">MALAWI</option>
+                                <option label="MALAYSIA" value="119">MALAYSIA</option>
+                                <option label="MALDIVES" value="120">MALDIVES</option>
+                                <option label="MALI" value="171">MALI</option>
+                                <option label="MALTA" value="76">MALTA</option>
+                                <option label="MARSHALL ISLANDS" value="202">MARSHALL ISLANDS</option>
+                                <option label="MARTINIQUE" value="21">MARTINIQUE</option>
+                                <option label="MAURITANIA" value="172">MAURITANIA</option>
+                                <option label="MAURITIUS" value="173">MAURITIUS</option>
+                                <option label="MEXICO" value="22">MEXICO</option>
+                                <option label="MICRONESIA" value="203">MICRONESIA</option>
+                                <option label="MOLDOVA" value="77">MOLDOVA</option>
+                                <option label="MONACO" value="78">MONACO</option>
+                                <option label="MONGOLIA" value="121">MONGOLIA</option>
+                                <option label="MONTENEGRO" value="79">MONTENEGRO</option>
+                                <option label="MONTSERRAT" value="23">MONTSERRAT</option>
+                                <option label="MOROCCO" value="174">MOROCCO</option>
+                                <option label="MOZAMBIQUE" value="175">MOZAMBIQUE</option>
+                                <option label="MYANMAR(BURMA)" value="122">MYANMAR(BURMA)</option>
+                                <option label="NAMIBIA" value="176">NAMIBIA</option>
+                                <option label="NAURU" value="204">NAURU</option>
+                                <option label="NEPAL" value="123">NEPAL</option>
+                                <option label="NETHERLANDS" value="80">NETHERLANDS</option>
+                                <option label="NEW CALEDONIA" value="205">NEW CALEDONIA</option>
+                                <option label="NEW ZEALAND" value="197">NEW ZEALAND</option>
+                                <option label="NICARAGUA" value="24">NICARAGUA</option>
+                                <option label="NIGER" value="177">NIGER</option>
+                                <option label="NIGERIA" value="178">NIGERIA</option>
+                                <option label="NORTH KOREA" value="124">NORTH KOREA</option>
+                                <option label="NORTHERN CYPRUS" value="411">NORTHERN CYPRUS</option>
+                                <option label="NORTHERN MARIANA ISLANDS" value="414">NORTHERN MARIANA ISLANDS</option>
+                                <option label="NORWAY" value="81">NORWAY</option>
+                                <option label="OMAN" value="125">OMAN</option>
+                                <option label="PAKISTAN" value="126">PAKISTAN</option>
+                                <option label="PALESTINE" value="228">PALESTINE</option>
+                                <option label="PANAMA" value="25">PANAMA</option>
+                                <option label="PAPUA NEW GUINEA" value="206">PAPUA NEW GUINEA</option>
+                                <option label="PARAGUAY" value="38">PARAGUAY</option>
+                                <option label="PERU" value="39">PERU</option>
+                                <option label="PHILIPPINES" value="127">PHILIPPINES</option>
+                                <option label="POLAND" value="82">POLAND</option>
+                                <option label="PORTUGAL" value="83">PORTUGAL</option>
+                                <option label="PUERTO RICO" value="26">PUERTO RICO</option>
+                                <option label="QATAR" value="128">QATAR</option>
+                                <option label="REPUBLIC OF THE CONGO" value="152">REPUBLIC OF THE CONGO</option>
+                                <option label="REUNION" value="179">REUNION</option>
+                                <option label="ROMANIA" value="84">ROMANIA</option>
+                                <option label="RUSSIA" value="85">RUSSIA</option>
+                                <option label="RWANDA" value="180">RWANDA</option>
+                                <option label="SAINT BARTHELEMY" value="400">SAINT BARTHELEMY</option>
+                                <option label="SAINT KITTS AND NEVIS" value="413">SAINT KITTS AND NEVIS</option>
+                                <option label="SAINT LUCIA" value="401">SAINT LUCIA</option>
+                                <option label="SAMOA" value="207">SAMOA</option>
+                                <option label="SAN MARINO" value="86">SAN MARINO</option>
+                                <option label="SAO TOME AND PRINCIPE" value="181">SAO TOME AND PRINCIPE</option>
+                                <option label="SAUDI ARABIA" value="129">SAUDI ARABIA</option>
+                                <option label="SENEGAL" value="182">SENEGAL</option>
+                                <option label="SERBIA" value="87">SERBIA</option>
+                                <option label="SEYCHELLES" value="183">SEYCHELLES</option>
+                                <option label="SIERRA LEONE" value="184">SIERRA LEONE</option>
+                                <option label="SINGAPORE" value="130">SINGAPORE</option>
+                                <option label="SLOVAKIA" value="88">SLOVAKIA</option>
+                                <option label="SLOVENIA" value="89">SLOVENIA</option>
+                                <option label="SOLOMON ISLANDS" value="208">SOLOMON ISLANDS</option>
+                                <option label="SOMALIA" value="185">SOMALIA</option>
+                                <option label="SOUTH AFRICA" value="186">SOUTH AFRICA</option>
+                                <option label="SOUTH KOREA" value="131">SOUTH KOREA</option>
+                                <option label="SOUTH SUDAN" value="403">SOUTH SUDAN</option>
+                                <option label="SPAIN" value="90">SPAIN</option>
+                                <option label="SRI LANKA" value="132">SRI LANKA</option>
+                                <option label="SUDAN" value="187">SUDAN</option>
+                                <option label="SURINAME" value="40">SURINAME</option>
+                                <option label="SWAZILAND" value="188">SWAZILAND</option>
+                                <option label="SWEDEN" value="91">SWEDEN</option>
+                                <option label="SWITZERLAND" value="92">SWITZERLAND</option>
+                                <option label="SYRIA" value="133">SYRIA</option>
+                                <option label="TAIWAN" value="134">TAIWAN</option>
+                                <option label="TAJIKISTAN" value="135">TAJIKISTAN</option>
+                                <option label="TANZANIA" value="189">TANZANIA</option>
+                                <option label="THAILAND" value="136">THAILAND</option>
+                                <option label="TOGO" value="190">TOGO</option>
+                                <option label="TONGA" value="209">TONGA</option>
+                                <option label="TRINIDAD AND TOBAGO" value="27">TRINIDAD AND TOBAGO</option>
+                                <option label="TUNISIA" value="191">TUNISIA</option>
+                                <option label="TURKEY" value="93">TURKEY</option>
+                                <option label="TURKMENISTAN" value="137">TURKMENISTAN</option>
+                                <option label="TURKS AND CAICOS ISLANDS" value="410">TURKS AND CAICOS ISLANDS</option>
+                                <option label="TUVALU" value="210">TUVALU</option>
+                                <option label="UGANDA" value="192">UGANDA</option>
+                                <option label="UKRAINE" value="94">UKRAINE</option>
+                                <option label="UNITED ARAB EMIRATES" value="138">UNITED ARAB EMIRATES</option>
+                                <option label="UNITED KINGDOM" value="95">UNITED KINGDOM</option>
+                                <option label="UNITED STATES" value="1">UNITED STATES</option>
+                                <option label="UNITED STATES VIRGIN ISLANDS" value="28">UNITED STATES VIRGIN ISLANDS
+                                </option>
+                                <option label="URUGUAY" value="41">URUGUAY</option>
+                                <option label="UZBEKISTAN" value="139">UZBEKISTAN</option>
+                                <option label="VANUATU" value="211">VANUATU</option>
+                                <option label="VATICAN CITY" value="96">VATICAN CITY</option>
+                                <option label="VENEZUELA" value="42">VENEZUELA</option>
+                                <option label="VIETNAM" value="140">VIETNAM</option>
+                                <option label="WALLIS AND FUTUNA" value="212">WALLIS AND FUTUNA</option>
+                                <option label="WESTERN SAHARA" value="193">WESTERN SAHARA</option>
+                                <option label="YEMEN" value="141">YEMEN</option>
+                                <option label="ZAMBIA" value="194">ZAMBIA</option>
+                                <option label="ZIMBABWE" value="195">ZIMBABWE</option>
+
+                            </select>
+                          
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>City</label>
+                            <select name="sel_city"
+                                class="selectpicker form-control form-control-sm show-menu-arrow required bs-select-hidden" id="city"
+                                data-live-search-style="startsWith" data-live-search="true">
+                                <option value="0"> - Select City -</option>
+
+                            </select>
+                           
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label>Location Name</label>
+                            <input class="form-control form-control-sm required" type="text" name="txt_area_name" id="txt_area_name"
+                                size="20" maxlength="50">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div id="save_btn">
+                    <button type="button" name="b1" class="btn btn-dark btn-sm form-group" id="b1" value="SUBMIT"
+                        onclick="Javascript: submit_form(document.forms['add_area_form']);">
+                        <i class="fa fa-save"></i>&nbsp;&nbsp;Save
+                    </button>
+                </div>
+                <!-- <div id='save_loading' style='display:none'><img src='/cpfv3/images/ajax_pagination_loading.gif' alt=""></div> -->
+            </div>
+        </form>
+
+
+        <!-- End -->
+
+
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+
+
+
+</html>
