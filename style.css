@@ -913,6 +913,38 @@ input[type=checkbox]{
     -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25) !important;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25) !important;
 }
+.btn-success {
+  background-color: #62cb31 !important;
+  border-color: #62cb31 !important;
+  color: #FFFFFF !important;
+}
+.btn-success:hover{
+  background-color: #74d348 !important;
+  border-color: #74d348 !important;
+  color: #FFFFFF !important;
+}
+
+.btn-danger {
+  background-color: #e74c3c !important;
+  border-color: #e74c3c !important;
+  color: #FFFFFF !important;
+}
+.btn-danger:hover {
+  background-color: #ea6557 !important;
+  border-color: #ea6557 !important;
+  color: #FFFFFF !important;
+}
+.btn-deactivate{
+  background-color:#dddddd !important;
+  border-color: #dddddd !important;
+  color: #767170!important;
+}
+.btn-deactivate:hover {
+  background-color:#dddddd !important;
+  border-color: #dddddd !important;
+  color: #333 !important;
+}
+
 
 @media only screen and (min-width:960px) {
   #tdotext{
