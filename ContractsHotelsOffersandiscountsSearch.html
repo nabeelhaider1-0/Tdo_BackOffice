@@ -1027,20 +1027,14 @@
 
         <!-- First Row-->
 
-        <form method="POST" name="search_offer_module" id="search_offer_module" action="applicable_offer.php">
-            <input type="hidden" name="action" value="show_offers">
-            <input type="hidden" id="page_no" name="page_no" value="1">
-            <input type="hidden" id="page_name" name="page" value="search">
-            <input type="hidden" id="show_action" name="show_action" value="">
-            <input type="hidden" name="sel_offer_type_code" id="sel_offer_type_code" value="">
-            <input type="hidden" name="extranet_supplier_id" id="extranet_supplier_id" value="">
+   <form>
             <div class="panel-body">
                 <div id="message" style="display: none;">
 
                 </div>
 
 
-                <div class="row mt-3">
+                <div class="row">
                     <div class="col-md-4 form-group noMargin">
                         <!-- <label class="padd_5"><input type="radio" name="offer[]" value="" onchange="showDownPopup_search('');"/><span></span></label>-->
                         <label>Offers</label>
@@ -1066,6 +1060,9 @@
                                                                         </div> -->
                 </div>
             </div>
+   </form>
+   <br>
+   <form>            
             <div class="panel-body">
 
                 <div class="phps_row_0 padd_5">
@@ -3064,9 +3061,14 @@
                 </div>
 
             </div>
-            <div class="panel-footer text-right mt-3" style="text-align: right;">
+   </form>
+
+
+            <div class="panel-footer text-right mt-2 mb-2" style="text-align: right;">
                 *Applicable for Mapped and Contracted Properties Only
             </div>
+
+<form>
             <div class="panel-body">
                 <div class="row mt-4">
                    
@@ -3171,13 +3173,13 @@
                 <div class="row mt-3">
                     <div class="col-md-12 form-group">
                         <input type="hidden" name="search_action" id="search_action" value="">
-                        <button type="button" class="btn btn-dark btn-sm" name="search_button" value="Search"
+                       <a href="ContractsHotelsOffersandiscountsSearchButton.html">  <button type="button" class="btn btn-dark btn-sm" name="search_button" value="Search"
                             onclick="show_results(0,0);">
                            
                                 <i class="fa fa-search"></i>
                                 &nbsp;Search
                            
-                        </button>&nbsp;&nbsp;
+                        </button></a>&nbsp;&nbsp;
                         <button type="button" class="btn btn-dark btn-sm" name="show_all_button" value="Show All"
                             onclick="show_results(1,1);">
                          
@@ -3193,8 +3195,8 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </form>
+            </div></form>
+      
 
 
         <!-- End Row -->
