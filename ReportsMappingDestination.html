@@ -1029,11 +1029,11 @@
 
         <!-- First Row-->
 <form>
-        <div class="row mt-2">
+        <div class="row">
             <div class="form-group col-md-3">
                 <label>Country</label>
                 <select name="country" id="country" onchange="getCityList();"
-                    class="selectpicker form-control form-control-sm-menu-arrow bs-select-hidden"
+                    class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
                     data-live-search-style="startsWith" data-live-search="true">
                     <option value=""> ---Select--- </option>
                     <option value="97"> Afghanistan </option>
@@ -1306,8 +1306,9 @@
         </div>
         <br>
         <!--2nd Row-->
-
-        <hr>
+</form>
+        <br>
+        <form>
         <!--5th Row-->
         <div class="row">
             <div class="col-md-2 form-group"></div>
@@ -1316,11 +1317,7 @@
                 <!--Pagination panel-->
                 <nav aria-label="Page navigation example">
                     <ul class="pagination pagination-sm justify-content-center mt-4">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
+                     
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>

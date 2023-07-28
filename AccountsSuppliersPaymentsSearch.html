@@ -1035,7 +1035,7 @@
 
         <!-- First Row-->
         <form>
-        <div class="row mt-2">
+        <div class="row">
             <div class="col-md-2 form-group">
                 <label>Document #</label>
                 <input type="text" class="form-control form-control-sm colPos test123" name="search_id" value="">
@@ -1225,7 +1225,7 @@
         <br>
         <!--2nd Row-->
 
-        <div class="row mb-4">
+        <div class="row">
             <div class="col-md-3 form-group">
                 <button class="btn btn-dark btn-sm" type="submit" name="submit" value="search">
                     <i class="fa fa-search"></i> Search
@@ -1233,7 +1233,9 @@
 
             </div>
         </div>
-        <hr>
+        </form>
+        <br>
+        <form>
         <!--5th Row-->
         <div class="row">
             <div class="col-md-4 form-group">
@@ -1250,24 +1252,30 @@
                     <ul class="pagination pagination-sm justify-content-center mt-4">
                         <li class="page-item">
                             <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
+                                <span aria-hidden="true">&laquo;FIRST</span>
                             </a>
                         </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;PREVIOUS</span>
+                          </a>
+                      </li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item"><a class="page-link" href="#">4</a></li>
                         <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#">6</a></li>
-                        <li class="page-item"><a class="page-link" href="#">7</a></li>
-                        <li class="page-item"><a class="page-link" href="#">8</a></li>
-                        <li class="page-item"><a class="page-link" href="#">9</a></li>
-                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+              
                         <li class="page-item">
                             <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
+                                <span aria-hidden="true">NEXT&raquo;</span>
                             </a>
                         </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">LAST&raquo;</span>
+                          </a>
+                      </li>
 
                     </ul>
                 </nav>
