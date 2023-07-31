@@ -120,13 +120,17 @@ form{
 
 #drip:hover #dripmenu {
   display: block;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .dropdown-menu .dropdown-submenu {
   display: none;
   position: absolute;
   left: 100%;
-  top: 50px;
+  top: 40px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 #customerSub {
