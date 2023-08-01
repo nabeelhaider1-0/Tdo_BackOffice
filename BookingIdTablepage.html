@@ -1239,13 +1239,13 @@
                                         <td valign="bottom" class="bg-primary" colspan="4"><h4>Booking Details</h4></td>
                                     </tr> -->
                                 <tbody>
-                                    <tr class="phps_row_1 tblHeading" id="acc1">
-                                        <td colspan="4"><img src="plus_white_img.jpg">&nbsp;&nbsp;Booking
+                                    <tr class="phps_row_1 tblHeading">
+                                        <td colspan="4"><img src="plus_white_img.jpg" id="moreFilterBtn">&nbsp;&nbsp;Booking
                                             Information</td>
                                     </tr>
                                     <tr class="phps_row_0 accContent" id="accCont1">
                                         <td colspan="4">
-                                            <div class="contwrap" style="display: none;">
+                                            <div class="contwrap" id="r_1">
                                                 <table width="100%" cellpadding="2" cellspacing="1" align="center"
                                                     border="0"
                                                     class="table table-striped table-responsive table-box tableborder">
@@ -1396,12 +1396,12 @@
                                         </td>
                                     </tr>
                                     <tr class="phps_row_1 tblHeading" id="acc2">
-                                        <td colspan="4"><img src="plus_white_img.jpg">&nbsp;&nbsp;Terms
+                                        <td colspan="4"><img src="plus_white_img.jpg"id="moreFilterBtn2">&nbsp;&nbsp;Terms
                                             and Conditions</td>
                                     </tr>
                                     <tr id="accCont2" class="accContent">
                                         <td colspan="4">
-                                            <div class="contwrap" style="display: none;">
+                                            <div class="contwrap"id="r_2">
                                                 <table width="100%" cellpadding="2" cellspacing="1" align="center"
                                                     border="0"
                                                     class="table table-striped table-responsive table-box tableborder">
@@ -1499,13 +1499,13 @@
                                     </tr>
                                     <tr class="phps_row_1 tblHeading" id="acc3">
                                         <td colspan="4"><img
-                                                src="plus_white_img.jpg">&nbsp;&nbsp;Passenger Details
+                                                src="plus_white_img.jpg"id="moreFilterBtn3">&nbsp;&nbsp;Passenger Details
                                         </td>
                                     </tr>
 
                                     <tr class="phps_row_0 accContent" id="accCont3">
                                         <td colspan="4">
-                                            <div class="contwrap" style="display: none;">
+                                            <div class="contwrap" id="r_3">
                                                 <table
                                                     class="table table-striped table-hover table-responsive text-center agent-text">
                                                     <thead>
@@ -2706,12 +2706,12 @@
                                         </td>
                                     </tr>
                                     <tr class="phps_row_1 tblHeading" id="acc4">
-                                        <td colspan="4"><img src="plus_white_img.jpg">&nbsp;&nbsp;Agent
+                                        <td colspan="4"><img src="plus_white_img.jpg" id="moreFilterBtn4">&nbsp;&nbsp;Agent
                                             Information</td>
                                     </tr>
                                     <tr id="accCont4" class="accContent">
                                         <td colspan="4">
-                                            <div class="contwrap" style="display: none;">
+                                            <div class="contwrap" id="r_4">
                                                 <table width="100%" cellpadding="2" cellspacing="1" align="center"
                                                     border="0"
                                                     class="table table-striped table-responsive table-box tableborder">
@@ -4301,13 +4301,13 @@
                                     </tr>
                                     <tr class="phps_row_0 tblHeading" id="acc5">
                                         <td colspan="2" width="50%"><img
-                                                src="plus_white_img.jpg">&nbsp;&nbsp;Rate Information</td>
+                                                src="plus_white_img.jpg"id="moreFilterBtn5">&nbsp;&nbsp;Rate Information</td>
                                         <td colspan="2" width="50%">Approx. Revenue &nbsp;- <span
                                                 class="tdd_label label-success">USD &nbsp;212.099</span></td>
                                     </tr>
                                     <tr id="accCont5" class="accContent">
                                         <td colspan="4">
-                                            <div class="contwrap" style="display: none;">
+                                            <div class="contwrap" id="r_5">
                                                 <h6 class="header2"> Agent Rate Break Up</h6>
                                                 <table cellpadding="0" cellspacing="0" width="100%"
                                                     class="table table-striped table-hover table-responsive agent-text">
@@ -4425,12 +4425,12 @@
                                         </td>
                                     </tr>
                                     <tr class="phps_row_0 tblHeading" id="acc7">
-                                        <td colspan="4"><img src="plus_white_img.jpg">&nbsp;&nbsp;Supplier
+                                        <td colspan="4"><img src="plus_white_img.jpg"id="moreFilterBtn6">&nbsp;&nbsp;Supplier
                                             Information</td>
                                     </tr>
                                     <tr class="phps_row_1 accContent" id="accCont7">
                                         <td colspan="4">
-                                            <div class="contwrap" style="display: none;">
+                                            <div class="contwrap" id="r_6">
                                                 <table width="100%" cellpadding="2" cellspacing="1" align="center"
                                                     border="0"
                                                     class="table table-striped table-responsive table-box tableborder">
@@ -5078,25 +5078,38 @@
 
     $(document).ready(function () {
         $("#r_1").hide();
-        $("#r_2").hide();
-        $("#r_3").hide();
 
 
         $("#moreFilterBtn").click(function () {
             $(this).hide();
             $("#r_1").show();
-            $("#r_2").show();
-            $("#r_3").show();
 
 
         });
 
+    });
+    $(document).ready(function () {
+        $("#r_2").hide();
 
-        $("#lessFilterBtn").click(function () {
-            $("#moreFilterBtn").show();
-            $("#r_1").hide();
-            $("#r_2").hide();
-            $("#r_3").hide();
+
+        $("#moreFilterBtn2").click(function () {
+            $(this).hide();
+            $("#r_2").show();
+
+
+        });
+
+    });
+
+    $(document).ready(function () {
+        $("#r_3").hide();
+
+
+        $("#moreFilterBtn3").click(function () {
+            $(this).hide();
+            $("#r_3").show();
+
+
         });
 
     });
