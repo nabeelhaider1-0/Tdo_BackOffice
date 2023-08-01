@@ -303,6 +303,9 @@ text-decoration: underline !important;
 .label-success {
   background-color: #62cb31;
 }
+.label-primary{
+  background-color: #337ab7;
+}
 
 .label-default {
   background-color: #777;
