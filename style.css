@@ -37,6 +37,16 @@ body{
   background-position: 50% 100%;
   background-repeat: no-repeat;
 }
+
+.color-lineorange {
+  background: #f7f9fa;
+  height: 6px;
+  background: #ffb606;
+  background-size: 100% 6px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+
 #content-pad{
   padding: 0px 15px 50px 15px!important;
  
@@ -1025,6 +1035,55 @@ tr.tblHeading {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25em;
+}1
+
+.siteLogo {
+  padding: 10px 25px;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0 8px 6px -6px #DCDCDC;
+  -moz-box-shadow: 0 8px 6px -6px #DCDCDC;
+  box-shadow: 0 8px 6px -6px #DCDCDC;
+  margin-bottom: 10px;}
+  .room-fields {
+    border-top: 1px solid #efefef;
+    margin-top: 20px !important;
+}
+.hotel_name {
+  font-size: 16px;
+  font-weight: 600;}
+
+
+    .double-box {
+      background: #20B7CF;
+      height: auto;
+      min-height: 60px;
+      color: white;
+      font-size: 12px;
+      padding-top: 16px;
+      padding-left: 13px;
+      padding-bottom: 5px;
+  }
+  .tot-box {
+    height: 30px;
+    font-size: 16px;
+    border-bottom: 1px solid #dddcdc;
+    background: #efefef;
+    margin-left: -12px;
+    width: 650px !important;
+}
+.double-txt{
+  float: right;
+  margin-top: -57px;
+}
+.hotel_currncy {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.green-txt {
+  color: green;
+  font-size: 12px;
+  text-align: right;
 }
 
 @media only screen and (min-width:960px) {
