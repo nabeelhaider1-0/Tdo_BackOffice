@@ -1199,21 +1199,18 @@
                                 <!-- code modoifed by himanshu for GT-949 on 2-1-2014-->
                                 <a class="btn btn-dark btn-sm" data-toggle="modal" data-target="#addhotel"
                                     style="cursor:pointer; cursor:hand;">Add Hotel Confirmation #</a>
-                                <a class="btn btn-dark btn-sm"
-                                    href="modifyhotelbutton.html">Modify</a>
+                                <a class="btn btn-dark btn-sm" href="modifyhotelbutton.html">Modify</a>
                                 <a class="btn btn-dark btn-sm">
                                     <div data-toggle="modal" data-target="#cancelModal">Cancel</div>
                                 </a>
 
 
-                                <a class="btn btn-dark btn-sm"
-                                    onclick="JavaScript:booking_status_history1(&quot;OT19421&quot;,&quot;29401&quot;,&quot;vouchered&quot;)"
-                                    data-toggle="modal" data-target="#myModal3"> Status History </a>
-                                <a class="btn btn-dark btn-sm" href="#TD1129401" data-toggle="modal"
-                                    data-target="#myModal4" onclick="javascript:popup2(29401,'vouchered')">Supplier
+                                <a class="btn btn-dark btn-sm" data-toggle="modal" data-target="#statusModal"> Status
+                                    History </a>
+                                <a class="btn btn-dark btn-sm" data-toggle="modal"
+                                    data-target="#supplierinfoModal">Supplier
                                     Info</a>
-                                <a class="btn btn-dark btn-sm" onclick="javascript:callPopup(29401,'vouchered');"
-                                    data-toggle="modal" data-target="#myModal5"
+                                <a class="btn btn-dark btn-sm" data-toggle="modal" data-target="#bookinghistoryModal"
                                     title="Click to View Booking History">Booking History</a>
                                 <a class="btn btn-dark btn-sm" href="view_sector_details.php?booking_id=29401"
                                     target="_blank">Print Details</a>
@@ -5220,7 +5217,8 @@
                                                 <tr>
                                                     <td width="95%" colspan="2" class="form-group">Are you sure you want
                                                         to proceed with the cancellation?<br><br>
-                                                        <button type="button" class="btn btn-dark btn-sm" style="float: left;"
+                                                        <button type="button" class="btn btn-dark btn-sm"
+                                                            style="float: left;"
                                                             onclick="JavaScript:cancel_booking(&quot;OT19026&quot;,&quot;29193&quot;,&quot;0&quot;,&quot;USD&quot;,&quot;0&quot;,&quot;USD&quot;,&quot;http://beta.tdonlines.com/tms/booking_detail.php?booking_id=29193&amp;reservation_id=OT19026&amp;service=hotel&quot;)">
                                                             <i class="fa fa-check"></i>&nbsp;Yes
                                                         </button>
@@ -5239,7 +5237,337 @@
         </div>
 
 
-        <!-- END -->
+        <!-- Status History Modal -->
+        <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="width: 670px;">
+                    <div class="modal-header">
+                        <div class="siteLogo">
+                            <img src="http://beta.tdonlines.com/project_folder/tdonline//images/logo.png"
+                                style="width: 50%;" alt="">
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12" style="width: auto; position: initial; float: none;">
+                                <!--<a href="javascript:window.close();"><U>CLOSE</U></a>  -->
+                                <div class="row">
+                                    <div class="col-sm-11">
+                                        <div class="panel-heading">Booking Id - <b>TD1129407</b></div>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <div class="input-group-addon pull-right" data-toggle="tooltip"
+                                            data-placement="bottom" data-original-title="Print"><a class="fa fa-print"
+                                                href="javascript:self.print();"></a></div>
+                                    </div>
+                                </div>
+                                <table
+                                    class="table table-bordered table-striped table-bordered table-hover table-responsive dataTable"
+                                    id="search_agents_table1">
+
+                                    <tbody>
+                                        <tr>
+                                            <td>Status</td>
+                                            <td width="25%">Modify Date</td>
+                                            <td>Memo</td>
+                                            <td>User</td>
+                                            <td>IP</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td align="center" class="vouchered-invoiced">
+                                                <h5 class="label-heading"><span
+                                                        class="tdd_label label-warning">vouchered</span></h5>
+                                                <h5 class="label-heading"><span class="tdd_label label-primary"><span
+                                                            class="fa fa-file-text-o"></span>&nbsp;Invoiced</span></h5>
+                                            </td>
+                                            <td>
+                                                02-Aug-2023 10:19:24
+                                            </td>
+                                            <td style="word-break:break-word;">Booking invoice by user id -316</td>
+                                            <td>Bhargavi Pise</td>
+                                            <td>52.76.245.157</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="center" class="vouchered">
+                                                <h5 class="label-heading"><span
+                                                        class="tdd_label label-warning">Vouchered</span></h5>
+                                            </td>
+                                            <td>
+                                                02-Aug-2023 10:19:24
+                                            </td>
+                                            <td style="word-break:break-word;">Vouchered By Webservices..316</td>
+                                            <td>Bhargavi Pise</td>
+                                            <td>52.76.245.157</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="center" class="confirmed">
+                                                <h5 class="label-heading"><span
+                                                        class="tdd_label label-success">Confirmed</span></h5>
+                                            </td>
+                                            <td>
+                                                02-Aug-2023 10:19:23
+                                            </td>
+                                            <td style="word-break:break-word;">Booking confirmed </td>
+                                            <td>Bhargavi Pise</td>
+                                            <td>52.76.245.157</td>
+                                        </tr>
+
+                                        <!--  <tr>
+                                    <td width="8%">&nbsp;</td>
+                                    <td width="15%">&nbsp;</td>
+                                    <td width="52%">&nbsp;</td>
+                                        <td >&nbsp;</td>
+                                        <td >&nbsp;</td>
+                                  </tr>-->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Supplier Info Modal -->
+        <div class="modal fade" id="supplierinfoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="width: 670px;">
+                    <div class="modal-header">
+                        <div class="siteLogo">
+                            <img src="http://beta.tdonlines.com/project_folder/tdonline//images/logo.png"
+                                style="width: 50%;" alt="">
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12" style="width: auto; position: initial; float: none;">
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="panel-heading">Supplier Booking Detail</div>
+                                    </div>
+                                    <div class="col-sm-4" style="
+                                    padding-right: 113px;">
+                                        <div class="pull-right">
+                                            <input class="form-control form-control-sm" type="text" name="txt_email"
+                                                id="txt_email" placeholder="Email" style="
+                                                width: 219px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <div class="pull-right">
+                                            <div class="input-group-addon"><span data-toggle="tooltip"
+                                                    data-placement="bottom" data-original-title="Print"
+                                                    class="fa fa-print pointer" id="print_but" name="print"
+                                                    onclick="print_details()"><!--<input id='close' type=button name=close value='Close' onclick='javascript:self.close()'>--></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <div class="pull-right">
+                                            <div class="input-group-addon"><span data-toggle="tooltip"
+                                                    data-placement="bottom" data-original-title="Send Email"
+                                                    class="fa fa-envelope pointer"
+                                                    onclick="javascript:send_email()"></span></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <table id="tableres"
+                                    class="table table-striped datatable table-bordered table-hover table-responsive">
+
+
+
+                                    <tbody>
+                                        <tr class="phps_row_1">
+                                            <td>Booking Id</td>
+                                            <td>TD1129407</td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+                                            <td>Booking Date</td>
+                                            <td>02-Aug-2023 10:19:20</td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+
+                                            <td>Status</td>
+                                            <td>
+                                                <h5 class="label-heading"><span
+                                                        class="tdd_label label-warning">Vouchered</span></h5>
+                                            </td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+                                            <td>Voucher Id</td>
+                                            <td>20525</td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+                                            <td>Voucher Date</td>
+                                            <td>02-Aug-2023</td>
+                                        </tr>
+                                        <!-- code added by Anand on 12 Dec 2012 -->
+                                        <tr class="phps_row_1">
+                                            <td>Check In Date</td>
+                                            <td>12-Dec-2023</td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+                                            <td>Check Out Date</td>
+                                            <td>13-Dec-2023</td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+                                            <td>Number of Nights</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+                                            <td>Hotel Name</td>
+                                            <td>SWISSOTEL AL GHURAIR</td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+                                            <td>Hotel Address</td>
+                                            <td>Umar Bin Al Kattab Road P.O. Box 185051</td>
+                                        </tr>
+
+                                        <tr class="phps_row_1">
+                                            <td align="left" valign="top">Passenger Details</td>
+                                            <td>
+                                                <table width="100%"
+                                                    class="table datatable table-bordered table-responsive">
+                                                    <tbody>
+                                                        <tr class="phps_header">
+                                                            <td>&nbsp;Room Type</td>
+                                                            <td>&nbsp;Passengers</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Double classic HALF BOARD </td>
+                                                            <td>
+                                                                Mr iswarya Mallikarjuna <br>
+                                                                Mr iswarya Mallikarjuna <br>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="phps_row_1">
+                                            <td>Supplier Rate</td>
+                                            <td>
+                                                312.030&nbsp;EUR </td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+                                            <td>Supplier Rate Break Up</td>
+                                            <td>
+                                                <table width="100%"
+                                                    class="table datatable table-bordered table-responsive">
+                                                    <tbody>
+                                                        <tr class="phps_header">
+                                                            <td width="50%">Room Type</td>
+                                                            <td width="25%">Room(s)</td>
+                                                            <td width="25%">Break Up</td>
+                                                        </tr>
+                                                        <tr class="phps_row_1">
+                                                            <td> Double classic HALF BOARD </td>
+                                                            <td>1</td>
+                                                            <td>
+
+                                                                <table width="100%"
+                                                                    class="table datatable table-bordered table-responsive">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Day 1</td>
+                                                                            <td><span class="text-danger">312.03</span>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="phps_row_1">
+                                            <td>Supplier</td>
+                                            <td>Hotelbeds
+
+
+                                            </td>
+                                        </tr>
+                                        <tr class="phps_row_1">
+                                            <td>Supplier Confirmation Number</td>
+                                            <td>
+
+                                                148-1769200</td>
+                                        </tr>
+
+                                        <!-- -
+                                                                                                  </table>
+                                      </div>
+                                  </div>
+                          </div>
+                      </div>
+                  </div></BODY>
+                  </HTML>-->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Booking History Modal -->
+        <div class="modal fade" id="bookinghistoryModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="width: 670px;">
+                    <div class="modal-header">
+                        <div class="siteLogo">
+                            <img src="http://beta.tdonlines.com/project_folder/tdonline//images/logo.png"
+                                style="width: 50%;" alt="">
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modalForm" data-child="row" data-effect="fadeInUp">
+                            <div class="row">
+                                <div class="col-md-12" style="width: auto; position: initial; float: none;">
+                                    <div class="form-group" style="font-size: 16px;" >Booking History</div>
+
+                                        <h4 class="text-danger mt-3" style=" color: #e74c3c !important;    font-size: 18px;
+                                        font-weight: 400;margin-left: 122px;">There are no modifications done on this booking.</h4>
+                                   
+                                    <table
+                                        class="table table-striped datatable table-bordered table-hover table-responsive">
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- END -->`
 
     </div>
 
