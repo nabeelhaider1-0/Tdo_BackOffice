@@ -1902,10 +1902,9 @@
         </div>
         <div class="col-md-2">
           <div class="form-group col-md-9 col-sm-12 col-xs-6 pull-right search-box-1" style="width: 221px;">
-            <select data-actions-box="true" data-live-search="true" title="Add Column" name="add_column" id="add_column"
-              class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden" multiple=""
-              onchange="javascript:addColumn()">
-              <option value="hotel_name">Service Name</option>
+            <select onchange="getVal()" data-actions-box="true" data-live-search="true" title="Add Column" name="add_column" id="add_column"
+              class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"multiple="">
+              <option value="hotel_name" id="servicenamecol">Service Name</option>
               <option value="hotel_confirmation_no">Hotel Confirmation #</option>
               <option value="hotel_cancel_confirmation_no">Hotel Cancel Confirmation #</option>
               <option value="checkout_service_date">Checkout Date</option>
@@ -1926,6 +1925,7 @@
         </div>
 
       </div>
+     
 
       <div class="row">
         <div class="col-md-9"></div>
@@ -1973,6 +1973,12 @@
                     <th>SERVICE DATE</th>
                     <th>DEADLINE DATE</th>
                     <th>SUPPLIER</th>
+                    <th id="servicenamecol">SERVICE NAME</th>
+                    <th id="hotelconfirmationcol">SERVICE NAME</th>
+                    <th id="hotelcancelconfirmationcol">SERVICE NAME</th>
+                    <th id="checkoutdatecol">SERVICE NAME</th>
+                    <th id="voucherdatecol">SERVICE NAME</th>
+                    <th id="branchcol">SERVICE NAME</th>
                     <th>SUPPLIER REF. #</th>
                     <th>TRAVELER NAME</th>
                     <th>ACTIONS</th>
@@ -5576,6 +5582,12 @@
     $("#r_1").hide();
     $("#r_2").hide();
     $("#r_3").hide();
+    $("#servicenamecol").hide();
+    $("#hotelconfirmationcol").hide();
+    $("#hotelcancelconfirmationcol").hide();
+    $("#checkoutdatecol").hide();
+    $("#voucherdatecol").hide();
+    $("#branchcol").hide();
 
 
     $("#moreFilterBtn").click(function () {
@@ -5594,6 +5606,11 @@
       $("#r_2").hide();
       $("#r_3").hide();
     });
+
+  
+
+
+
 
   });
 
@@ -5739,31 +5756,14 @@
     wrapper1.scrollLeft = wrapper2.scrollLeft;
   };
 </script>
+
+
 <script>
-  $(document).ready(function() {
-    // Initialize the Bootstrap Select Picker
-    $('.selectpicker').selectpicker();
-  });
+  function getVal(){
+    let selecteOption = $("#add_column").val();
+  
+
+  }
 </script>
-<script>
-  $(document).ready(function() {
-    // Event listener for the select picker
-    $('#add_column').change(function() {
-      var columnIndex = $(this).val(); // Get the selected option value
-      var columnName = $(this).find(':selected').text(); // Get the selected option text
-      
-      // Add the new column to the table
-      $('#searchbookingTable thead tr').append('<th>' + columnName + '</th>');
-      
-      // Loop through each row and add an empty cell for the new column
-      $('#searchbookingTable tbody tr').each(function() {
-        $(this).append('<td> </td>');
-      });
-    });
-  });
-</script>
-
-
-
 
 </html>
