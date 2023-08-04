@@ -1921,23 +1921,25 @@
               <option value="adult">Adult</option>
               <option value="child">Child</option>
             </select>
-         
+
           </div>
         </div>
 
       </div>
 
-<div class="row">
-  <div class="col-md-9"></div>
-  <div class="col-md-1">
-  
-  </div>
-  <div class="col-md-2" style="position: relative;
+      <div class="row">
+        <div class="col-md-9"></div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-2" style="position: relative;
   display: inline-block;">
-    <input type="text" class="tablesearch form-control form-control-sm search_new" placeholder="Search" style="padding-right: 30px;">
-     <i class="fa fa-search fa-lg" style="    position: absolute;top: 50%;right: 18px;transform: translateY(-50%);pointer-events: none;"></i>
-  </div>
-</div>
+          <input type="text" class="tablesearch form-control form-control-sm search_new" placeholder="Search"
+            style="padding-right: 30px;">
+          <i class="fa fa-search fa-lg"
+            style="    position: absolute;top: 50%;right: 18px;transform: translateY(-50%);pointer-events: none;"></i>
+        </div>
+      </div>
 
       <!--- Table Creation-->
       <div id="search_controller_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
@@ -1953,9 +1955,9 @@
             </div>
             <div id="wrapper2" style="overflow: scroll hidden;">
 
-              <table id="search_sup"
+              <table id="searchbookingTable"
                 class="table table-striped table-hover table-responsive dataTable no-footer table table-bordered"
-                role="grid" aria-describedby="search_sup_info">
+                role="grid" aria-describedby="search_sup_info" width="2500px">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -1979,10 +1981,10 @@
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td><i class="fa-solid fa-taxi fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Taxi" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-taxi fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Transfers" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                    title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000001</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000001</a></td>
                     <td>0T13</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -1997,7 +1999,9 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+
                     <td>TDONLINE</td>
                     <td>DUBAI</td>
                     <td>SAR<br>179.670</td>
@@ -2035,7 +2039,7 @@
                             onclick="javascript:window.open('reconciliation.php?run=1&amp;booking_id=TD1129316&amp;sel_bk_type=online')"
                             class="fa fa-flag text-danger" data-bs-toggle="tooltip" title="Recon Pending"
                             data-placement="top"></a></div>
-                        <div class="input-group-addon" data-bs-toggle="tooltip"title="Upload Document"
+                        <div class="input-group-addon" data-bs-toggle="tooltip" title="Upload Document"
                           data-placement="top">
                           <a data-toggle="modal" data-target="#uploadDocument"
                             onclick="Javacsript:uploadDocument(29316)">
@@ -2069,8 +2073,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -2086,8 +2090,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -2103,13 +2107,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -2119,10 +2123,10 @@
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000002</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000002</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2137,7 +2141,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -2208,8 +2213,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -2225,8 +2230,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -2242,13 +2247,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -2258,10 +2263,10 @@
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000003</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000003</a></td>
                     <td>
                       0T15
                     </td>
@@ -2278,7 +2283,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -2349,8 +2355,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -2366,8 +2372,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -2383,13 +2389,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -2401,9 +2407,9 @@
                   <tr>
                     <td>4</td>
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Parcel" style="color:#6A6C6F;"></i></td>
+                        title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000004</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000004</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2418,7 +2424,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -2490,8 +2497,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -2507,8 +2514,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -2524,13 +2531,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -2541,9 +2548,9 @@
                   <tr>
                     <td>5</td>
                     <td><i class="fa-solid fa-plane fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Airline" style="color:#6A6C6F;"></i></td>
+                        title="Airline" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000005</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000005</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2558,7 +2565,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -2629,8 +2637,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -2646,8 +2654,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -2663,13 +2671,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -2679,10 +2687,10 @@
                   </tr>
                   <tr>
                     <td>6</td>
-                    <td><i class="fa-solid fa-box-open fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Parcel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000006</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000006</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2697,7 +2705,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -2769,8 +2778,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -2786,8 +2795,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -2803,13 +2812,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -2819,10 +2828,10 @@
                   </tr>
                   <tr>
                     <td>7</td>
-                    <td><i class="fa-solid fa-bed fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000007</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000007</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2837,7 +2846,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -2908,8 +2918,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -2925,8 +2935,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -2942,13 +2952,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -2958,10 +2968,10 @@
                   </tr>
                   <tr>
                     <td>8</td>
-                    <td><i class="fa-solid fa-taxi fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Taxi" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-taxi fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Transfers" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000008</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000008</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2976,7 +2986,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -3047,8 +3058,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -3064,8 +3075,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -3081,13 +3092,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -3097,10 +3108,10 @@
                   </tr>
                   <tr>
                     <td>9</td>
-                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000009</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000009</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3115,7 +3126,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -3186,8 +3198,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -3203,8 +3215,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -3220,13 +3232,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -3236,10 +3248,10 @@
                   </tr>
                   <tr>
                     <td>10</td>
-                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000010</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000010</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3254,7 +3266,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -3325,8 +3338,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -3342,8 +3355,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -3359,13 +3372,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -3375,9 +3388,10 @@
                   </tr>
                   <tr>
                     <td>11</td>
-                    <td><i class="fa-solid fa-box-open fa-xl" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" title="Packages"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000011</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000011</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3392,7 +3406,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -3463,8 +3478,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -3480,8 +3495,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -3497,13 +3512,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -3513,9 +3528,10 @@
                   </tr>
                   <tr>
                     <td>12</td>
-                    <td><i class="fa-sharp fa-solid fa-binoculars fa-xl" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-sharp fa-solid fa-binoculars fa-xl" data-bs-toggle="tooltip" title="Activity"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000012</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000012</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3530,7 +3546,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -3601,8 +3618,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -3618,8 +3635,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -3635,13 +3652,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details"> 
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -3652,9 +3669,9 @@
                   <tr>
                     <td>13</td>
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Parcel" style="color:#6A6C6F;"></i></td>
+                        title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000013</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000013</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3669,7 +3686,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -3740,8 +3758,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -3757,8 +3775,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -3774,13 +3792,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -3791,9 +3809,9 @@
                   <tr>
                     <td>14</td>
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Parcel" style="color:#6A6C6F;"></i></td>
+                        title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000014</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000014</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3808,7 +3826,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -3879,8 +3898,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -3896,8 +3915,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -3913,13 +3932,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -3929,10 +3948,10 @@
                   </tr>
                   <tr>
                     <td>15</td>
-                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000015</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000015</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3947,7 +3966,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -4018,8 +4038,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -4035,8 +4055,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -4052,13 +4072,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -4068,10 +4088,10 @@
                   </tr>
                   <tr>
                     <td>16</td>
-                    <td><i class="fa-solid fa-taxi fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Taxi" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-taxi fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Transfers" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000016</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000016</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4086,7 +4106,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -4157,8 +4178,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -4174,8 +4195,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -4191,13 +4212,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -4207,10 +4228,10 @@
                   </tr>
                   <tr>
                     <td>17</td>
-                    <td><i class="fa-solid fa-box-open fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Parcel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000017</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000017</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4225,7 +4246,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -4296,8 +4318,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -4313,8 +4335,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -4330,13 +4352,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -4346,10 +4368,10 @@
                   </tr>
                   <tr>
                     <td>18</td>
-                    <td><i class="fa-solid fa-box-open fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Parcel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000018</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000018</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4364,7 +4386,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -4435,8 +4458,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -4452,8 +4475,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -4469,13 +4492,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -4485,10 +4508,10 @@
                   </tr>
                   <tr>
                     <td>19</td>
-                    <td><i class="fa-solid fa-bed fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000019</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000019</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4503,7 +4526,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -4574,8 +4598,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -4591,8 +4615,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -4608,13 +4632,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -4624,10 +4648,10 @@
                   </tr>
                   <tr>
                     <td>20</td>
-                    <td><i class="fa-solid fa-bed fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000020</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000020</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4642,7 +4666,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -4713,8 +4738,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -4730,8 +4755,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -4747,13 +4772,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -4763,10 +4788,10 @@
                   </tr>
                   <tr>
                     <td>21</td>
-                    <td><i class="fa-solid fa-bed fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000021</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000021</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4781,7 +4806,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -4853,8 +4879,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -4870,8 +4896,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -4887,13 +4913,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -4903,10 +4929,10 @@
                   </tr>
                   <tr>
                     <td>22</td>
-                    <td><i class="fa-solid fa-box-open fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Parcel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000022</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000022</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4921,7 +4947,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -4992,8 +5019,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -5009,8 +5036,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -5026,13 +5053,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -5042,10 +5069,10 @@
                   </tr>
                   <tr>
                     <td>23</td>
-                    <td><i class="fa-solid fa-taxi fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Taxi" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-taxi fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Transfers" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000023</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000023</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -5060,7 +5087,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -5131,8 +5159,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -5148,8 +5176,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -5165,13 +5193,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -5181,10 +5209,10 @@
                   </tr>
                   <tr>
                     <td>24</td>
-                    <td><i class="fa-solid fa-bed fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000024</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000024</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -5199,7 +5227,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -5270,8 +5299,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -5287,8 +5316,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -5304,13 +5333,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -5320,10 +5349,10 @@
                   </tr>
                   <tr>
                     <td>25</td>
-                    <td><i class="fa-solid fa-bed fa-xl"data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Hotel" style="color:#6A6C6F;"></i></td>
+                    <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
+                        style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                      title="Online Booking" style="text-decoration:none;color: #6A6C6F;">TD000025</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000025</a></td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -5338,7 +5367,8 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                    <td>QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
+                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                      class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
                     <td>INR<br>6213.410</td>
@@ -5409,8 +5439,8 @@
                           <a id="invoice_email_icon_29316" href="javascript:void(0)"
                             onclick="invoice_email('http://beta.tdonlines.com/tms/resend_email.php?action=invoice_hotel&amp;booking_id=29316&amp;agent_id=291&amp;reservationid=OT19309','29316');"
                             class="input-group-addon" data-toggle="modal" data-target="#emailCont">
-                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip"
-                              title="Invoice" data-placement="top"></span>
+                            <span class="fa fa-file-text" alt="Invoice" data-bs-toggle="tooltip" title="Invoice"
+                              data-placement="top"></span>
                           </a>
                           <span style="display: none" id="invoice_email_loader_29316"
                             class="fa fa-spinner fa-spin"></span>
@@ -5426,8 +5456,8 @@
                             class="fa fa-spinner fa-spin"></span>
                         </div>
                         <div class="input-group-addon">
-                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier" data-bs-toggle="tooltip"
-                            title="Email restricted for Online Supplier" data-placement="top">
+                          <span class="fa-stack fa-md" alt="Email restricted for Online Supplier"
+                            data-bs-toggle="tooltip" title="Email restricted for Online Supplier" data-placement="top">
                             <i class="fa fa-envelope-o fa-stack-1x"></i>
                             <i class="fa fa-ban fa-stack "></i>
                           </span>
@@ -5443,13 +5473,13 @@
                         </div>
 
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"title="Modify Booking">
+                          <span data-bs-toggle="tooltip" title="Modify Booking">
                             <a href="edit_booking.php?action_name=modification&amp;booking_id=29316" target="_blank"
                               class="fa fa-pencil-square-o" style="color:#555"> </a>
                           </span>
                         </div>
                         <div class="input-group-addon">
-                          <span data-bs-toggle="tooltip"  title="Print Details">
+                          <span data-bs-toggle="tooltip" title="Print Details">
                             <a href="/tms/view_sector_details.php?booking_id=29316" target="_blank"
                               class="fa fa-eye"></a>
                           </span>
@@ -5489,7 +5519,36 @@
         </nav>
       </div>
     </form>
+    <!-- Hotel Search Log Modal -->
+    <div class="modal fade" id="agent_details_on_click" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" style="width: 460px; margin-top: 175px;">
+          <div class="color-line">
+          </div>
+          <div class="modal-body">
+            <div class="modalForm" data-child="row" data-effect="fadeInUp">
+             
+             
+                <div class="col-md-12 mt-2">
+                  <h5>Agent Details</h5>
+                  <div class="row mt-2 mb-4">
+                  <div class="col-md-4">
+                    <label>City :</label>
+                    <span>Kulkata</span>
+                  </div>
+                  <div class="col-md-4">
+                    <label>Country : </label>
+                    <span>India</span>
+                  </div>
+                </div>
+              </div>
 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- END -->
 
@@ -5664,6 +5723,9 @@
     cancelEndDatepicker.clear();
 
   });
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  })
 
 
 </script>
@@ -5677,7 +5739,29 @@
     wrapper1.scrollLeft = wrapper2.scrollLeft;
   };
 </script>
-
+<script>
+  $(document).ready(function() {
+    // Initialize the Bootstrap Select Picker
+    $('.selectpicker').selectpicker();
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    // Event listener for the select picker
+    $('#add_column').change(function() {
+      var columnIndex = $(this).val(); // Get the selected option value
+      var columnName = $(this).find(':selected').text(); // Get the selected option text
+      
+      // Add the new column to the table
+      $('#searchbookingTable thead tr').append('<th>' + columnName + '</th>');
+      
+      // Loop through each row and add an empty cell for the new column
+      $('#searchbookingTable tbody tr').each(function() {
+        $(this).append('<td> </td>');
+      });
+    });
+  });
+</script>
 
 
 
