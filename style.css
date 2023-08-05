@@ -1102,6 +1102,7 @@ select{
   font-size: 11px;
 }
 
+
 @media print {
 
 #noprint{
@@ -1149,5 +1150,14 @@ select{
     .color-line{
       display: none;
     }
-    
+    #searchbookingTable{
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  #accc,.actionlink1{
+    display: none;
   }
+  #searchbookingTable{
+    width: 1300px;
+  }
+}
