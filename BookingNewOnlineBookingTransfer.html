@@ -1028,9 +1028,22 @@
 
         <!-- First Row-->
 
-
+        <ul class="nav nav-tabs" id="myTab" role="tablist" style="border-bottom: 2px solid #337AB7!important;">
+            <li class="nav-item">
+                <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab"
+                    aria-controls="tab1" aria-selected="true">Add Offline Trasfer Booking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2"
+                    aria-selected="false">Pick-up & Drop-off</a>
+            </li>
+        </ul>
 
         <form>
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="myTabContent">
+                            <!-- Tab 1 Content -->
+                            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
             <div class="panel-body1">
                 <div class="row">
                     <div class="form-group col-md-12">
@@ -3032,6 +3045,1532 @@
 
 
             </div>
+               <!-- Tab 2 Content -->
+               <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <div class="panel-body2">
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <label>Transfer Duration (Format - 1 hr 30 mins)</label><br>
+                            <select name="trans_duration_select[Time_Hour]" id="txt_hour_duration"
+                                data-live-search="true"
+                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden">
+                                <option label="00" value="00">00</option>
+                                <option label="01" value="01" selected="selected">01</option>
+                                <option label="02" value="02">02</option>
+                                <option label="03" value="03">03</option>
+                                <option label="04" value="04">04</option>
+                                <option label="05" value="05">05</option>
+                                <option label="06" value="06">06</option>
+                                <option label="07" value="07">07</option>
+                                <option label="08" value="08">08</option>
+                                <option label="09" value="09">09</option>
+                                <option label="10" value="10">10</option>
+                                <option label="11" value="11">11</option>
+                                <option label="12" value="12">12</option>
+                                <option label="13" value="13">13</option>
+                                <option label="14" value="14">14</option>
+                                <option label="15" value="15">15</option>
+                                <option label="16" value="16">16</option>
+                                <option label="17" value="17">17</option>
+                                <option label="18" value="18">18</option>
+                                <option label="19" value="19">19</option>
+                                <option label="20" value="20">20</option>
+                                <option label="21" value="21">21</option>
+                                <option label="22" value="22">22</option>
+                                <option label="23" value="23">23</option>
+                            </select>
+                         
+                            <select name="trans_duration_select[Time_Minute]" id="txt_min_duration"
+                                data-live-search="true"
+                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden">
+                                <option label="00" value="00" selected="selected">00</option>
+                                <option label="01" value="01">01</option>
+                                <option label="02" value="02">02</option>
+                                <option label="03" value="03">03</option>
+                                <option label="04" value="04">04</option>
+                                <option label="05" value="05">05</option>
+                                <option label="06" value="06">06</option>
+                                <option label="07" value="07">07</option>
+                                <option label="08" value="08">08</option>
+                                <option label="09" value="09">09</option>
+                                <option label="10" value="10">10</option>
+                                <option label="11" value="11">11</option>
+                                <option label="12" value="12">12</option>
+                                <option label="13" value="13">13</option>
+                                <option label="14" value="14">14</option>
+                                <option label="15" value="15">15</option>
+                                <option label="16" value="16">16</option>
+                                <option label="17" value="17">17</option>
+                                <option label="18" value="18">18</option>
+                                <option label="19" value="19">19</option>
+                                <option label="20" value="20">20</option>
+                                <option label="21" value="21">21</option>
+                                <option label="22" value="22">22</option>
+                                <option label="23" value="23">23</option>
+                                <option label="24" value="24">24</option>
+                                <option label="25" value="25">25</option>
+                                <option label="26" value="26">26</option>
+                                <option label="27" value="27">27</option>
+                                <option label="28" value="28">28</option>
+                                <option label="29" value="29">29</option>
+                                <option label="30" value="30">30</option>
+                                <option label="31" value="31">31</option>
+                                <option label="32" value="32">32</option>
+                                <option label="33" value="33">33</option>
+                                <option label="34" value="34">34</option>
+                                <option label="35" value="35">35</option>
+                                <option label="36" value="36">36</option>
+                                <option label="37" value="37">37</option>
+                                <option label="38" value="38">38</option>
+                                <option label="39" value="39">39</option>
+                                <option label="40" value="40">40</option>
+                                <option label="41" value="41">41</option>
+                                <option label="42" value="42">42</option>
+                                <option label="43" value="43">43</option>
+                                <option label="44" value="44">44</option>
+                                <option label="45" value="45">45</option>
+                                <option label="46" value="46">46</option>
+                                <option label="47" value="47">47</option>
+                                <option label="48" value="48">48</option>
+                                <option label="49" value="49">49</option>
+                                <option label="50" value="50">50</option>
+                                <option label="51" value="51">51</option>
+                                <option label="52" value="52">52</option>
+                                <option label="53" value="53">53</option>
+                                <option label="54" value="54">54</option>
+                                <option label="55" value="55">55</option>
+                                <option label="56" value="56">56</option>
+                                <option label="57" value="57">57</option>
+                                <option label="58" value="58">58</option>
+                                <option label="59" value="59">59</option>
+                            </select>
+                       
+
+                            <input type="hidden" name="trans_duration" id="trans_duration" value="1 hr 00 min">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Pick Up</label>
+                                    <select name="sel_pickup" id="sel_pickup"
+                                        class="required select_style selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                        onchange="javascript:set_pick_up_details();" data-live-search="true">
+                                        <option value="">Select pick-up</option>
+                                        <option label="Accommodation" value="H">Accommodation</option>
+                                        <option label="Airport" value="A">Airport</option>
+                                        <option label="Other" value="O">Other</option>
+                                        <option label="Port" value="P">Port</option>
+                                        <option label="Station" value="S">Station</option>
+                                        <option label="Terminal" value="T">Terminal</option>
+
+                                    </select>
+                                   
+                                </div>
+                                <div id="pickup_airport" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Pick up from</label>
+                                            <select name="pickup_airport_code" id="pickup_airport_code"
+                                                class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true"></select>
+                                          
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Arriving from</label>
+                                            <select name="pickup_sel_arr_from" id="pickup_sel_arr_from"
+                                                class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option value="">--</option>
+
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Flight Number and Airline Code </label>
+                                            <input type="text" name="pickup_flight_number"
+                                                class="required form-control form-control-sm" id="pickup_flight_number" value=""
+                                                maxlength="15">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Estimated time of arrival (Hours : Minutes)</label><br>
+                                            <select name="pickup_time_airport[Time_Hour]" id="txt_hour"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                    
+                                            <select name="pickup_time_airport[Time_Minute]" id="txt_min"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                           
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pickup_accom" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Pick up time (Hours : Minutes)</label><br>
+                                            <select name="pickup_time_accommodation[Time_Hour]" id="txt_hour"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                          
+                                            <select name="pickup_time_accommodation[Time_Minute]" id="txt_min"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                       
+
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Pick up from</label>
+                                            <select name="sel_pickup_from_hotel" id="sel_pickup_from_hotel"
+                                                class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option value="">--</option>
+                                                <option label="" value="0"></option>
+
+                                            </select>
+                                         
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <div class="">
+                                                <div class="clear"></div>
+                                                <div
+                                                    class="form-group col-md-12 checkbox checkbox-success checkbox-inline">
+                                                    <input type="checkbox" name="chk_pickup" id="pickup" value="1"
+                                                        onclick="callmedisplay_pickup();"><label for="pickup">Click
+                                                        here for an alternative address </label>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div id="address_display_pickup" class="row" style="display: none;">
+                                                <div class="form-group col-md-12">
+                                                    <h5>Pick up from</h5>
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <label>Address 1</label>
+                                                    <input type="textbox" name="txt_pickup_hotel_address1" value=""
+                                                        class="required form-control form-control-sm" maxlength="40">
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <label>Address 2</label>
+                                                    <input type="textbox" name="txt_pickup_hotel_address2" value=""
+                                                        class="required form-control form-control-sm" maxlength="40">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>City</label>
+                                                    <input type="textbox" class="form-control form-control-sm"
+                                                        name="txt_pickup_hotel_city" id="txt_pickup_hotel_city"
+                                                        readonly="">
+                                                    <input type="hidden" class="form-control form-control-sm"
+                                                        name="sel_pickup_hotel_city" id="sel_pickup_hotel_city"
+                                                        value="">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Country</label><br>
+                                                    <input type="textbox" name="txt_pickup_hotel_country"
+                                                        id="txt_pickup_hotel_country" class="required form-control form-control-sm"
+                                                        maxlength="20">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Postcode/Zipcode</label>
+                                                    <input type="textbox" name="txt_pickup_hotel_postcode"
+                                                        id="txt_pickup_hotel_postcode" value=""
+                                                        class="required form-control form-control-sm" maxlength="25"
+                                                        onblur="extractNumber(this,2,false);"
+                                                        onkeyup="extractNumber(this,2,false);">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Phone Number</label>
+                                                    <input type="textbox" name="txt_pickup_hotel_phone"
+                                                        id="txt_pickup_hotel_phone" value=""
+                                                        class="required form-control form-control-sm" maxlength="15"
+                                                        onblur="extractNumber(this,2,false);"
+                                                        onkeyup="extractNumber(this,2,false);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pickup_port" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Pickup Time (Hours : Minutes)</label><br>
+                                            <select name="pickup_time_port[Time_Hour]" id="txt_hour_shipping"
+                                                class="required select_style customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                        
+                                            <select name="pickup_time_port[Time_Minute]" id="txt_min_shipping"
+                                                class="required select_style customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                          
+
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Arriving From</label>
+                                            <input type="text" name="txt_pickup_port_arriving_from" value=""
+                                                class="required form-control form-control-sm" maxlength="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pickup_station" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Arriving From </label>
+                                            <select
+                                                class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                name="sel_pickup_station_arriving_from"
+                                                id="sel_pickup_station_arriving_from" data-live-search="true">
+                                                <option value="">- Select a station -</option>
+
+                                            </select>
+                                           
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Train Name/Number </label>
+                                            <input class="required form-control form-control-sm" type="text"
+                                                name="txt_pickup_station_train_name" value="">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Arrival Station </label>
+                                            <select
+                                                class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                name="sel_pickup_station_arriving_station"
+                                                id="sel_pickup_station_arriving_station" data-live-search="true">
+                                                <option value="">- Select a station -</option>
+
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Estimated Time of Arrival (Hours : Minutes)</label><br>
+                                            <select name="pickup_time_station[Time_Hour]" id="txt_hour"
+                                                class="required select_style customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                            
+                                            <select name="pickup_time_station[Time_Minute]" id="txt_min"
+                                                class="required select_style customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                           
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pickup_other" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Pick Up Time (Hours : Minutes)</label><br>
+                                            <select name="pickup_time_other[Time_Hour]" id="txt_hour"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                         
+                                            <select name="pickup_time_other[Time_Minute]" id="txt_min"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                          
+
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Address 1</label>
+                                            <input type="text" name="txt_pickup_other_address1" value=""
+                                                class="required form-control form-control-sm" maxlength="35">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Address 2</label>
+                                            <input type="text" name="txt_pickup_other_address2" value=""
+                                                class="required form-control form-control-sm" maxlength="35">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Town/City</label><br>
+                                            <input type="text" name="txt_pickup_other_city" value=""
+                                                class="required form-control form-control-sm" maxlength="50">
+                                            <input type="hidden" name="txt_pickup_other_city_code"
+                                                id="txt_pickup_other_city_code">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Country/State </label>
+                                            <input type="text" name="txt_pickup_other_country" value=""
+                                                class="required form-control form-control-sm" maxlength="50">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Postcode/Zipcode </label>
+                                            <input type="text" name="txt_pickup_other_postcode" value=""
+                                                class="required form-control form-control-sm" maxlength="10"
+                                                onblur="extractNumber(this,2,false);"
+                                                onkeyup="extractNumber(this,2,false);">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Phone Number </label>
+                                            <input type="text" name="txt_pickup_other_phone" value=""
+                                                class="required form-control form-control-sm" maxlength="15"
+                                                onblur="extractNumber(this,2,false);"
+                                                onkeyup="extractNumber(this,2,false);">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pickup_terminal" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Arrival Terminal</label><br>
+                                            <select name="pickup_code" id="pickup_code"
+                                                class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option value="">- Select a Terminal -</option>
+                                            </select>
+                                          
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Estimated Time of Arrival (Hours : Minutes)</label><br>
+                                            <select name="pickup_time_terminal[Time_Hour]" id="txt_hour"
+                                                class="required select_style customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                          
+                                            <select name="pickup_time_terminal[Time_Minute]" id="txt_min"
+                                                class="required select_style customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                        
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label>Drop Off</label>
+                                    <select
+                                        class="required select_style selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                        name="sel_dropoff" id="sel_dropoff"
+                                        onchange="javascript:set_drop_off_details();" data-live-search="true">
+                                        <option value="">Select drop-off</option>
+                                        <option label="Accommodation" value="H">Accommodation</option>
+                                        <option label="Airport" value="A">Airport</option>
+                                        <option label="Other" value="O">Other</option>
+                                        <option label="Port" value="P">Port</option>
+                                        <option label="Station" value="S">Station</option>
+                                        <option label="Terminal" value="T">Terminal</option>
+
+                                    </select>
+                                    
+                                </div>
+                                <div id="drop_off_airport" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Drop off to : </label>
+                                            <select name="dropoff_airport_code" id="dropoff_airport_code"
+                                                class="required select_style selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option value="">--</option>
+
+                                            </select>
+                                           
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Flight Destination </label>
+                                            <select name="drop_off_sel_arr_from" id="drop_off_sel_arr_from"
+                                                class="select_style selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option value="">--</option>
+
+                                            </select>
+                                          
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Flight Number and Airline Code </label>
+                                            <input type="text" name="drop_off_flight_number" value="" maxlength="15"
+                                                class="required form-control form-control-sm">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Time of Departure (Hours : Minutes)</label><br>
+                                            <select name="dropoff_time_airport[Time_Hour]" id="txt_drop_hour_A"
+                                                class="required select_style1 customStyle selectpicker form-control  form-control-sm bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                          
+                                            <select name="dropoff_time_airport[Time_Minute]" id="txt_drop_min_A"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                         
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="drop_off_accom" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label> </label>
+                                            <select name="sel_drop_off_from_hotel" id="sel_drop_off_from_hotel"
+                                                class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option value="">--</option>
+                                                <option label="" value="0"></option>
+
+                                            </select>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-12">
+                                            <div class="">
+                                                <div class="clear"></div>
+                                                <div
+                                                    class="form-group col-md-12 checkbox checkbox-success checkbox-inline">
+                                                    <input type="checkbox" name="chk_dropoff" id="dropoff" value="1"
+                                                        onclick="callmedisplay_dropoff();"><label
+                                                        for="dropoff">Click here for an alternative address </label>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <div id="address_display_dropoff" class="row" style="display: none;">
+                                                <div class="form-group col-md-12">
+                                                    <h5>Select Drop Off </h5>
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <label>Address 1</label>
+                                                    <input type="textbox" name="txt_dropoff_hotel_address1"
+                                                        id="txt_dropoff_hotel_address1" value=""
+                                                        class="required form-control form-control-sm" maxlength="40">
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <label>Address 2</label>
+                                                    <input type="textbox" name="txt_dropoff_hotel_address2"
+                                                        id="txt_dropoff_hotel_address2" value=""
+                                                        class="required form-control form-control-sm" maxlength="40">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>City</label>
+                                                    <input type="textbox" name="txt_dropoff_hotel_city"
+                                                        id="txt_dropoff_hotel_city" class="required form-control form-control-sm"
+                                                        maxlength="20">
+                                                    <input type="hidden" class="form-control form-control-sm"
+                                                        name="sel_dropoff_hotel_city" id="sel_dropoff_hotel_city"
+                                                        value="">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Country</label><br>
+                                                    <input type="textbox" name="txt_dropoff_hotel_country"
+                                                        id="txt_dropoff_hotel_country" class="required form-control form-control-sm"
+                                                        maxlength="20">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Postcode/Zipcode</label>
+                                                    <input type="textbox" name="txt_dropoff_hotel_postcode"
+                                                        id="txt_dropoff_hotel_postcode" value=""
+                                                        class="required form-control form-control-sm" maxlength="25"
+                                                        onblur="extractNumber(this,2,false);"
+                                                        onkeyup="extractNumber(this,2,false);">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label>Phone Number</label>
+                                                    <input type="textbox" name="txt_dropoff_hotel_phone"
+                                                        id="txt_dropoff_hotel_phone" value=""
+                                                        class="required form-control form-control-sm" maxlength="15"
+                                                        onblur="extractNumber(this,2,false);"
+                                                        onkeyup="extractNumber(this,2,false);">
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="drop_off_port" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Shipping Destination</label>
+                                            <input type="text" name="txt_dropoff_port_shipdestination"
+                                                class="required form-control form-control-sm" value="" maxlength="15">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="drop_off_station" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Train Destination</label>
+                                            <select name="txt_dropoff_station_destination"
+                                                id="txt_dropoff_station_destination"
+                                                class="selectpicker form-control form-control-sm required show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option value="">- Select Destination -</option>
+
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Train Name/Number</label>
+                                            <input type="text" name="txt_dropoff_station_train" value=""
+                                                class="required form-control form-control-sm" maxlength="20" size="28">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Departure Station</label>
+                                            <select name="sel_dropoff_station" id="sel_dropoff_station"
+                                                class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option value="">- Select Departure station -</option>
+
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Time of Departure (Hours : Minutes)</label><br>
+                                            <select name="dropoff_time_station[Time_Hour]" id="txt_drop_hour_S"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                style="width:80px; float:left" data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                           
+                                            <select name="dropoff_time_station[Time_Minute]" id="txt_drop_min_S"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                style="width:80px; float:left" data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                          
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="drop_off_other" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Time of Departure (Hours : Minutes)</label><br>
+                                            <select name="dropoff_time_other[Time_Hour]" id="txt_drop_hour_O"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                style="width:80px; float:left" data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                          
+                                            <select name="dropoff_time_other[Time_Minute]" id="txt_drop_min_O"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                style="width:80px; float:left" data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                         
+
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Address 1</label>
+                                            <input type="text" name="txt_dropoff_other_address1" value=""
+                                                maxlength="35" class="required form-control form-control-sm">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Address 2</label>
+                                            <input type="text" name="txt_dropoff_other_address2" value=""
+                                                maxlength="35" class="required form-control form-control-sm">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Town/City</label><br>
+                                            <input type="text" name="txt_dropoff_other_city" value="" maxlength="35"
+                                                class="required form-control form-control-sm">
+                                            <input type="hidden" name="txt_dropoff_other_city_code"
+                                                id="txt_dropoff_other_city_code">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Country/State</label>
+                                            <input type="text" name="txt_dropoff_other_country" value=""
+                                                maxlength="35" class="required form-control form-control-sm">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Postcode/Zipcode</label>
+                                            <input type="text" name="txt_dropoff_other_postcode" value=""
+                                                maxlength="15" class="required form-control form-control-sm"
+                                                onblur="extractNumber(this,2,false);"
+                                                onkeyup="extractNumber(this,2,false);">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Phone Number</label>
+                                            <input type="text" name="txt_dropoff_other_phone" value=""
+                                                maxlength="15" class="required form-control form-control-sm"
+                                                onblur="extractNumber(this,2,false);"
+                                                onkeyup="extractNumber(this,2,false);">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="drop_off_terminal" style="display:none;width:100%">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label>Departure Terminal</label>
+                                            <select name="dropoff_code" id="dropoff_code"
+                                                class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option value="">- Select Terminal -</option>
+                                            </select>
+                                           
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Time of Departure (Hours : Minutes)</label><br>
+                                            <select name="dropoff_time_terminal[Time_Hour]" id="txt_drop_hour_T"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06" selected="selected">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                            </select>
+                                           
+                                            <select name="dropoff_time_terminal[Time_Minute]" id="txt_drop_min_T"
+                                                class="required select_style1 customStyle selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                data-live-search="true">
+                                                <option label="00" value="00">00</option>
+                                                <option label="01" value="01">01</option>
+                                                <option label="02" value="02">02</option>
+                                                <option label="03" value="03">03</option>
+                                                <option label="04" value="04">04</option>
+                                                <option label="05" value="05">05</option>
+                                                <option label="06" value="06">06</option>
+                                                <option label="07" value="07">07</option>
+                                                <option label="08" value="08">08</option>
+                                                <option label="09" value="09">09</option>
+                                                <option label="10" value="10">10</option>
+                                                <option label="11" value="11">11</option>
+                                                <option label="12" value="12">12</option>
+                                                <option label="13" value="13">13</option>
+                                                <option label="14" value="14">14</option>
+                                                <option label="15" value="15">15</option>
+                                                <option label="16" value="16">16</option>
+                                                <option label="17" value="17">17</option>
+                                                <option label="18" value="18">18</option>
+                                                <option label="19" value="19">19</option>
+                                                <option label="20" value="20" selected="selected">20</option>
+                                                <option label="21" value="21">21</option>
+                                                <option label="22" value="22">22</option>
+                                                <option label="23" value="23">23</option>
+                                                <option label="24" value="24">24</option>
+                                                <option label="25" value="25">25</option>
+                                                <option label="26" value="26">26</option>
+                                                <option label="27" value="27">27</option>
+                                                <option label="28" value="28">28</option>
+                                                <option label="29" value="29">29</option>
+                                                <option label="30" value="30">30</option>
+                                                <option label="31" value="31">31</option>
+                                                <option label="32" value="32">32</option>
+                                                <option label="33" value="33">33</option>
+                                                <option label="34" value="34">34</option>
+                                                <option label="35" value="35">35</option>
+                                                <option label="36" value="36">36</option>
+                                                <option label="37" value="37">37</option>
+                                                <option label="38" value="38">38</option>
+                                                <option label="39" value="39">39</option>
+                                                <option label="40" value="40">40</option>
+                                                <option label="41" value="41">41</option>
+                                                <option label="42" value="42">42</option>
+                                                <option label="43" value="43">43</option>
+                                                <option label="44" value="44">44</option>
+                                                <option label="45" value="45">45</option>
+                                                <option label="46" value="46">46</option>
+                                                <option label="47" value="47">47</option>
+                                                <option label="48" value="48">48</option>
+                                                <option label="49" value="49">49</option>
+                                                <option label="50" value="50">50</option>
+                                                <option label="51" value="51">51</option>
+                                                <option label="52" value="52">52</option>
+                                                <option label="53" value="53">53</option>
+                                                <option label="54" value="54">54</option>
+                                                <option label="55" value="55">55</option>
+                                                <option label="56" value="56">56</option>
+                                                <option label="57" value="57">57</option>
+                                                <option label="58" value="58">58</option>
+                                                <option label="59" value="59">59</option>
+                                            </select>
+                                          
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                            </div>
+                        </div>
 
 
 
@@ -3048,6 +4587,7 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
 
 <script>
     // For Check-In/Out Datepicker

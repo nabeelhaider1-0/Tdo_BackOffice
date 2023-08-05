@@ -1098,6 +1098,10 @@ select{
     font-family: 'Montserrat' !important;
 }
 
+.bootstrap-select .dropdown-menu li a span.text {
+  font-size: 11px;
+}
+
 @media print {
 
 #noprint{

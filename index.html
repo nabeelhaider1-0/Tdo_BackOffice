@@ -1904,7 +1904,7 @@
           <div class="form-group col-md-9 col-sm-12 col-xs-6 pull-right search-box-1" style="width: 221px;">
             <select onchange="getVal()" data-actions-box="true" data-live-search="true" title="Add Column" name="add_column" id="add_column"
               class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"multiple="">
-              <option value="hotel_name" id="serviceCol">Service Name</option>
+              <option value="hotel_name">Service Name</option>
               <option value="hotel_confirmation_no">Hotel Confirmation #</option>
               <option value="hotel_cancel_confirmation_no">Hotel Cancel Confirmation #</option>
               <option value="checkout_service_date">Checkout Date</option>
@@ -5768,8 +5768,7 @@
     else {
     $('.servicenamecol').each(function() {
       this.style.display = "none"
-    });
-  }
+    });}
   }
 </script>
 
