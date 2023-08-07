@@ -164,42 +164,42 @@
             </a>
 
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
-              <li><a class="dropdown-item" href="#">AGENT
+              <li><a class="dropdown-item" href="menuitem.html">AGENT
                   MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
                 <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                  <li><a class="dropdown-item" href="#">NEW</a></li>
-                  <li><a class="dropdown-item" href="#">OUTBOX</a></li>
-                  <li><a class="dropdown-item" href="#">INBOX</a></li>
+                  <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
+                  <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
+                  <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
                 </ul>
               </li>
-              <li><a class="dropdown-item" href="#">MASS
+              <li><a class="dropdown-item" href="menuitem.html">MASS
                   MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
                     class="fa-solid fa-caret-right"></i></a>
                 <ul class="dropdown-menu dropdown-submenu">
                   <li><a class="dropdown-item"
-                      href="#">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                      href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
                         class="fa-solid fa-caret-right"></i></a>
                     <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                      <li><a class="dropdown-item" href="#">NEW</a></li>
-                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
                     </ul>
                   </li>
-                  <li><a class="dropdown-item" href="#">SUBSCRIBERS
+                  <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
                       GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
                     <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                      <li><a class="dropdown-item" href="#">NEW</a></li>
-                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
                     </ul>
                   </li>
                   <li><a class="dropdown-item"
-                      href="#">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                      href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
                         class="fa-solid fa-caret-right"></i></a>
                     <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                      <li><a class="dropdown-item" href="#">NEW</a></li>
-                      <li><a class="dropdown-item" href="#">SEARCH</a></li>
-                      <li><a class="dropdown-item" href="#">DOWNLOAD NEWSLETTER</a></li>
-                      <li><a class="dropdown-item" href="#">ANALYSIS</a></li>
-                      <li><a class="dropdown-item" href="#">SETTINGS</a></li>
+                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="menuitem1.html">DOWNLOAD NEWSLETTER</a></li>
+                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
+                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -1902,8 +1902,9 @@
         </div>
         <div class="col-md-2">
           <div class="form-group col-md-9 col-sm-12 col-xs-6 pull-right search-box-1" style="width: 221px;">
-            <select onchange="getVal()" data-actions-box="true" data-live-search="true" title="Add Column" name="add_column" id="add_column"
-              class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"multiple="">
+            <select onchange="javascript:add_column()" data-actions-box="true" data-live-search="true"
+              title="Add Column" name="add_column" id="add_column"
+              class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden" multiple="">
               <option value="hotel_name">Service Name</option>
               <option value="hotel_confirmation_no">Hotel Confirmation #</option>
               <option value="hotel_cancel_confirmation_no">Hotel Cancel Confirmation #</option>
@@ -1925,7 +1926,7 @@
         </div>
 
       </div>
-     
+
 
       <div class="row">
         <div class="col-md-9"></div>
@@ -1973,12 +1974,12 @@
                     <th>SERVICE DATE</th>
                     <th>DEADLINE DATE</th>
                     <th>SUPPLIER</th>
-                    <th id="servicenamecol">SERVICE NAME</th>
+                    <!-- <th id="servicenamecol">SERVICE NAME</th>
                     <th id="hotelconfirmationcol">SERVICE NAME</th>
                     <th id="hotelcancelconfirmationcol">SERVICE NAME</th>
                     <th id="checkoutdatecol">SERVICE NAME</th>
                     <th id="voucherdatecol">SERVICE NAME</th>
-                    <th id="branchcol">SERVICE NAME</th>
+                    <th id="branchcol">SERVICE NAME</th> -->
                     <th>SUPPLIER REF. #</th>
                     <th>TRAVELER NAME</th>
                     <th id="accc">ACTIONS</th>
@@ -1990,7 +1991,8 @@
                     <td><i class="fa-solid fa-taxi fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Transfers" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000001</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000001</a>
+                    </td>
                     <td>0T13</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2132,7 +2134,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000002</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000002</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2147,7 +2150,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -2272,7 +2275,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000003</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000003</a>
+                    </td>
                     <td>
                       0T15
                     </td>
@@ -2289,7 +2293,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -2415,7 +2419,8 @@
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000004</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000004</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2430,7 +2435,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -2556,7 +2561,8 @@
                     <td><i class="fa-solid fa-plane fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Airline" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000005</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000005</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2571,7 +2577,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -2696,7 +2702,8 @@
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000006</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000006</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2711,7 +2718,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -2837,7 +2844,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000007</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000007</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2852,7 +2860,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -2977,7 +2985,8 @@
                     <td><i class="fa-solid fa-taxi fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Transfers" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000008</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000008</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -2992,7 +3001,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -3117,7 +3126,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000009</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000009</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3132,7 +3142,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -3257,7 +3267,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000010</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000010</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3272,7 +3283,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -3397,7 +3408,8 @@
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" title="Packages"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000011</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000011</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3412,7 +3424,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -3537,7 +3549,8 @@
                     <td><i class="fa-sharp fa-solid fa-binoculars fa-xl" data-bs-toggle="tooltip" title="Activity"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000012</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000012</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3552,7 +3565,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -3677,7 +3690,8 @@
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000013</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000013</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3692,7 +3706,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -3817,7 +3831,8 @@
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000014</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000014</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3832,7 +3847,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -3957,7 +3972,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000015</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000015</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -3972,7 +3988,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -4097,7 +4113,8 @@
                     <td><i class="fa-solid fa-taxi fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Transfers" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000016</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000016</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4112,7 +4129,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -4237,7 +4254,8 @@
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000017</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000017</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4252,7 +4270,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -4377,7 +4395,8 @@
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000018</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000018</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4392,7 +4411,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -4517,7 +4536,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000019</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000019</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4532,7 +4552,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -4657,7 +4677,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000020</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000020</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4672,7 +4693,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -4797,7 +4818,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000021</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000021</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4812,7 +4834,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -4938,7 +4960,8 @@
                     <td><i class="fa-solid fa-box-open fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Packages" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000022</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000022</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -4953,7 +4976,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -5078,7 +5101,8 @@
                     <td><i class="fa-solid fa-taxi fa-xl" data-bs-toggle="tooltip" data-bs-placement="top"
                         title="Transfers" style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000023</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000023</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -5093,7 +5117,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -5218,7 +5242,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000024</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000024</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -5233,7 +5258,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -5358,7 +5383,8 @@
                     <td><i class="fa-solid fa-bed fa-xl" data-bs-toggle="tooltip" data-bs-placement="top" title="Hotel"
                         style="color:#6A6C6F;"></i></td>
                     <td><a href="BookingIdTablepage.html" data-bs-toggle="tooltip" data-bs-placement="top"
-                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000025</a></td>
+                        title="Online Booking" style="text-decoration:none;color: #6A6C6F;font-size: 14px;">TD000025</a>
+                    </td>
                     <td>0T14</td>
                     <td>
                       <a href="JavaScript:booking_status_history(&quot;OT1551&quot;,1536,&quot;confirmed&quot;)">
@@ -5373,7 +5399,7 @@
                           title="Supplier Amount UnPaid">SU</span>
                       </div>
                     </td>
-                       <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
+                    <td style="cursor:pointer;" data-id="113" data-toggle="modal" data-target="#agent_details_on_click"
                       class="agent_details_on_click">QTECH<br><span style="color:grey">ASMITA<br>KAPADI</span></td>
                     <td>TDONLINE</td>
                     <td>KULKATA</td>
@@ -5534,11 +5560,11 @@
           </div>
           <div class="modal-body">
             <div class="modalForm" data-child="row" data-effect="fadeInUp">
-             
-             
-                <div class="col-md-12 mt-2">
-                  <h5>Agent Details</h5>
-                  <div class="row mt-2 mb-4">
+
+
+              <div class="col-md-12 mt-2">
+                <h5>Agent Details</h5>
+                <div class="row mt-2 mb-4">
                   <div class="col-md-4">
                     <label>City :</label>
                     <span>Kulkata</span>
@@ -5607,7 +5633,7 @@
       $("#r_3").hide();
     });
 
-  
+
 
 
 
@@ -5758,7 +5784,7 @@
 </script>
 
 
-<script>
+<!-- <script>
   function getVal(){
     let selectOption = $("#add_column").val();
     if (selectOption == "servicenamecol") {
@@ -5770,6 +5796,24 @@
       this.style.display = "none"
     });}
   }
+</script> -->
+<script>
+  function addColumn(){
+  $('.addedCol').remove();
+  var foo = [];
+  var footext = [];
+  $('#add_column :selected').each(function(i, selected){
+  foo[i] = $(selected).val();
+  footext[i] = $(selected).text();
+  });
+  for(i=0;i<foo.length;i++){ $('#lastColumn').before('<th class="addedCol">'+footext[i]+'</th>')
+    rowdata(foo[i]);
+    }
+    }
+   
+   
+    
+
 </script>
 
 </html>
