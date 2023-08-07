@@ -1116,6 +1116,9 @@ ul.mailbox-list li a {
   padding: 10px 15px;
   display: block;
 }
+.pagination-sm >li >a{
+  font-size: 12px;
+}
 
 
 
