@@ -1025,40 +1025,54 @@
     <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
+        <div class="panel-footer" style="padding: 8px 4px;
+        background-color: #f5f5f5;
+        border-top: 1px solid #ddd;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;">
+        <div class="row">
+          <div class="col-md-6">
+       
+          <div class="radioline1" style="    font-size: 12px;
+          font-family: MONTSERRAT;">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class="radio radio-success radio-inline">
+                  <input type="radio" name="date_type" id="create_date" value="create_date" checked="checked"
+                      onchange="get_booking_date_type(this.value);" class="test123"><label
+                      for="create_date">&nbsp;Booking Date</label>&nbsp;&nbsp;
+              </div>
+              <div class="radio radio-success radio-inline">
+                  <input type="radio" name="date_type" id="service_date" value="service_date"
+                      onchange="get_booking_date_type(this.value);"><label for="service_date">&nbsp;Service
+                      Date</label>&nbsp;&nbsp;
+              </div>
+              <div class="radio radio-success radio-inline">
+                  <input type="radio" name="date_type" id="expiration_date" value="expiration_date"
+                      onchange="get_booking_date_type(this.value);"><label for="expiration_date">&nbsp;Deadline
+                      Date</label>
+              </div>
+          </div>
+          </div>
+          <div class="col-md-6">
+              <div class="float-end">
+                  <div class="btn-group" style="margin-bottom: -15px;
+                  vertical-align: bottom !important;">
+                      <a class="btn btn-xs btn-default" data-toggle="tab" onclick="period('daily')">Daily</a>
+                      <a class="btn btn-xs btn-default" data-toggle="tab" onclick="period('weekly')">Weekly</a>
+                      <a class="btn btn-xs btn-default" data-toggle="tab" onclick="period('monthly')">Monthly</a>
+                      <a class="btn btn-xs btn-default" data-toggle="tab"
+                          onclick="period('quarterly')">Quarterly</a>
+                      <a class="btn btn-xs btn-default" data-toggle="tab" onclick="period('yearly')">Yearly</a>
+                  </div>
+              </div>
+          
+        </div>
+      </div>
+        </div>
 
         <form name="sale_comparison_search" method="POST" id="sale_comparison_search">
             <input type="hidden" name="period" id="period">
-            <div class="panel-footer">
-                <div class="radioline1">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <div class="radio radio-success radio-inline">
-                        <input type="radio" name="date_type" id="create_date" value="create_date" checked="checked"
-                            onchange="get_booking_date_type(this.value);" class="test123"><label
-                            for="create_date">&nbsp;Booking Date</label>&nbsp;&nbsp;
-                    </div>
-                    <div class="radio radio-success radio-inline">
-                        <input type="radio" name="date_type" id="service_date" value="service_date"
-                            onchange="get_booking_date_type(this.value);"><label for="service_date">&nbsp;Service
-                            Date</label>&nbsp;&nbsp;
-                    </div>
-                    <div class="radio radio-success radio-inline">
-                        <input type="radio" name="date_type" id="expiration_date" value="expiration_date"
-                            onchange="get_booking_date_type(this.value);"><label for="expiration_date">&nbsp;Deadline
-                            Date</label>
-                    </div>
-                    <div class="pull-right"style="
-                    margin: auto;">
-                        <div class="btn-group" style="margin-bottom: -21px;">
-                            <a class="btn btn-xs btn-default" data-toggle="tab" onclick="period('daily')">Daily</a>
-                            <a class="btn btn-xs btn-default" data-toggle="tab" onclick="period('weekly')">Weekly</a>
-                            <a class="btn btn-xs btn-default" data-toggle="tab" onclick="period('monthly')">Monthly</a>
-                            <a class="btn btn-xs btn-default" data-toggle="tab"
-                                onclick="period('quarterly')">Quarterly</a>
-                            <a class="btn btn-xs btn-default" data-toggle="tab" onclick="period('yearly')">Yearly</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          
             <div class="panel-body form-group">
                 <div class="row">
                 <div class="col-md-5">
@@ -1066,7 +1080,7 @@
 
                         <div class="col-md-12 text-center">
                             <h6>Trend 1</h6>
-                            <hr style="clear:both; float:none">
+                            <hr style="clear:both; float:none; color: #a5a3a3;">
                         </div>
 
                         <div class="form-group col-md-12">
@@ -1392,7 +1406,7 @@
                         <div class="form-group col-md-3">
                             <label>Supplier</label>
                             <select title="Select Suppliers" name="Supplier_1[]"
-                                class="show-menu-arrow selectpicker form-control bs-select-hidden" id="Supplier_1"
+                                class="show-menu-arrow selectpicker form-control form-control-sm bs-select-hidden" id="Supplier_1"
                                 multiple="" data-live-search="true" data-actions-box="true">
                                 <option label="agoda" value="agoda">agoda</option>
                                 <option label="amadeus" value="amadeus">amadeus</option>
@@ -1451,7 +1465,8 @@
                     </div>
                 </div>
                 <div class="col-md-2 row text-center vcenter" style="
-                margin: auto;"  ><button class="text-center btn btn-dark btn-sm w-sm"
+                margin: auto;    padding-left: 56px;
+    padding-right: 56px;"  ><button class="text-center btn btn-dark btn-sm w-sm"
                         type="button" onclick="flipValues()">
                     <i class="fa fa-exchange"></i>
                     </button> </div>
@@ -1460,7 +1475,7 @@
                         <div class="col-md-12 text-center">
                             <h6>Trend 2</h6>
                            
-                            <hr style="clear:both; float:none">
+                            <hr style="clear:both; float:none;color: #a5a3a3;">
                         </div>
 
                         <div class="form-group col-md-12">
@@ -1851,7 +1866,10 @@
                     <div class="col-md-5"></div>
 
                     <div class="col-md-2 row text-center" style="
-                    margin: auto;">
+                    margin: auto;    margin-top: 14px;    padding-left: 49px;
+    padding-right: 49px;
+    margin-left: 15px;
+">
                         <button id="id_generate_report" class="btn btn-dark btn-sm" type="button"
                             onclick="search_report();">
                         <i class="fa fa-search"></i>&nbsp;Generate Report

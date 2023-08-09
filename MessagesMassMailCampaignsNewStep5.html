@@ -26,6 +26,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <!-- include summernote css/js-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <title>Travel Destination Online</title>
 </head>
 
@@ -167,58 +170,69 @@
                         </ul>
                     </div>
 
-                <!--  Drop down menu for Messages-->
+                    <!--  Drop down menu for Messages-->
 
 
-          <div class="dropdown" id="drip">
-            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <b>MESSAGES</b>
-            </a>
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>MESSAGES</b>
+                        </a>
 
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
-              <li><a class="dropdown-item" href="menuitem.html">AGENT
-                  MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
-                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                  <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
-                  <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
-                  <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="menuitem.html">MASS
-                  MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                    class="fa-solid fa-caret-right"></i></a>
-                <ul class="dropdown-menu dropdown-submenu">
-                  <li><a class="dropdown-item"
-                      href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                        class="fa-solid fa-caret-right"></i></a>
-                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersNew.html">NEW</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
-                      GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
-                    <ul class="dropdown-menu dropdown-submenu" id="subscribersub">
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item"
-                      href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                        class="fa-solid fa-caret-right"></i></a>
-                    <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsNew.html">NEW</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
-                      <li><a class="dropdown-item" href="menuitem1.html">DOWNLOAD NEWSLETTER</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="menuitem.html">AGENT
+                                    MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">MASS
+                                    MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
+                                            GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="subscribersub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">DOWNLOAD NEWSLETTER</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
 
                     <!--  Drop down menu for Accounts-->
@@ -1123,7 +1137,7 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">STEP 1 : ADD NAME CAMPAIGN</h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">SCHEDULE CAMPAIGN</h5>
                 </div>
                 <div class="col-md-6">
 
@@ -1153,15 +1167,20 @@
 
             <div class="text-center">
                 <a href="MessagesMassMailCampaignsNew.html">
-                <div class="btn btn-dark btn-sm steps">Step 1 : Add Name Campaign </div></a>
+                    <div class="btn btn-default btn-sm steps">Step 1 : Add Name Campaign </div>
+                </a>
                 <a href="MessagesMassMailCampaignsNewStep2.html">
-                <div class="btn btn-default btn-sm steps">Step 2 : Add Setup</div></a>
+                    <div class="btn btn-default btn-sm steps">Step 2 : Add Setup</div>
+                </a>
                 <a href="MessagesMassMailCampaignsNewStep3.html">
-                <div class="steps btn btn-default btn-sm">Step 3 : Add Content</div></a>
+                    <div class="steps btn btn-default btn-sm">Step 3 : Add Content</div>
+                </a>
                 <a href="MessagesMassMailCampaignsNewStep4.html">
-                <div class="steps btn btn-default btn-sm">Step 4 : Preview</div></a>
+                    <div class="steps btn btn-default btn-sm">Step 4 : Preview</div>
+                </a>
                 <a href="MessagesMassMailCampaignsNewStep5.html">
-                <div class="steps btn btn-default btn-sm">Step 5 : Schedule</div></a>
+                    <div class="steps btn btn-dark btn-sm">Step 5 : Schedule</div>
+                </a>
 
             </div>
             <br>
@@ -1170,52 +1189,81 @@
         <form>
 
             <div class="panel-body">
+                <!-- <div class=" col-md-12 row">
+                    
+                </div> -->
 
-                <div class="form-group row mt-1">
+                <div class="row">
 
-                    <div class="col-md-3 form-group  phps_row_0">
-                        <label>Select Campaign Type</label><br>
-                        <div class="radioline1">
-                        <div class="radio radio-success radio-inline">
-                            <input type="radio" class="padd_3 test123" id="plain" name="campaign_type[]"
-                                value="plain_text">
-                            <label for="plain">Plain Text</label>
-                        </div>
-                        <div class="radio radio-success radio-inline">
-                            <input type="radio" class="padd_3" id="app" name="campaign_type[]" value="html">
-                            <label for="html">HTML</label>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-3 form-group phps_row_1">
-                        <label>Name this Campaign</label>
-                        <input type="text" class="form-control form-control-sm required" name="txt_name" size="45" maxlength="255"
-                            value="" tabindex="1">
-                    </div>
-                    <div class="col-md-3 form-group  phps_row_0">
-                        <label>Add Short Description</label>
-                        <input type="text" class="form-control form-control-sm" name="txt_short_desc" size="45" maxlength="255"
-                            tabindex="1" value="">
-                    </div>
-                    <div class="col-md-12 form-group phps_row_1">
-                        <label>Select list/s to send it to html</label>
-                        <font color="#ff0000" size="5"> * </font><br>
-                        <div class="col-md-3">
-                            <div class="checkbox checkbox-success checkbox-inline">
-                                <input type="checkbox" class="padd_3" name="sub_lists[]" id="lbl_1" value="1" style="margin-left: 23px;">
-                                <label for="lbl_1">Qtech Profile</label>
+                    <div class="col-md-4 form-group phps_row_0">
+                        <h5>List</h5>
+                        <label>Your Campaign will be delivered to these list/s</label>
+                        <div class="input-group col-xs-12 form-group">
+
+                            <div class="float_left">
+                                1. Qtech Profile<br>
                             </div>
+                            <a href="campaigns.php?action=add_name_campaign&amp;cid=3&amp;name_search=&amp;status_search="
+                                class="input-group-addon" data-toggle="tooltip" data-placement="top"
+                                data-original-title="" title="" style="    margin-left: 347px;">
+                                <h6 style="text-align: center;">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 form-group phps_row_1">
+                        <h5>Subject</h5>
+                        <label>This is the subject you choose</label>
+                        <div class="input-group col-xs-12 form-group">
+                            test comapign <a
+                                href="campaigns.php?action=add_setup&amp;cid=3&amp;name_search=&amp;status_search="
+                                class="input-group-addon" style="    margin-left: 347px;" data-toggle="tooltip"
+                                data-placement="top" data-original-title="" title="">
+                                <h6 style="text-align: center;">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group phps_row_0">
+                        <h5>Email Type</h5>
+                        <label></label>
+                        <div class="input-group col-xs-12 form-group">
+                            html
+                            <a href="campaigns.php?action=add_name_campaign&amp;cid=3&amp;name_search=&amp;status_search="
+                                class="input-group-addon" style="    margin-left: 347px;">
+                                <h6 style="text-align: center;">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </h6>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-12 form-group  phps_row_0">
-                      <a href="MessagesMassMailCampaignsNewStep2.html" class="btn btn-dark btn-sm" name="add" value="SUBMIT"
-                            onclick="return validate_name_campaign(document.forms['frm_add_name_campaign']);">
-                    
-                                <i class="fa fa-floppy-o"></i>
-                                &nbsp;Save
-                     
+                <div style="clear:both"></div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12 form-group ">
+                        <h5>Sender Details</h5>
+                    </div>
+                    <div class="col-md-4 form-group phps_row_1">
+                        <label>Sender Name</label><br>
+                        nabeel
+                    </div>
+                    <div class="col-md-4 form-group phps_row_0">
+                        <label>From Address</label><br>
+                    </div>
+                    <div class="col-md-4 form-group phps_row_1">
+                        <label>Reply-to address</label><br>
+                    </div>
+                    <div class="col-md-4 form-group phps_row_0 mt-2"></div>
+                    <div class="col-md-4 form-group phps_row_0 mt-2">
+                        <a href="campaigns.php?action=add_setup&amp;cid=3&amp;name_search=&amp;status_search="
+                            class="btn btn-dark btn-sm">
+
+                            <i class="fa fa-pencil-square-o"></i>&nbsp;Edit
+
                         </a>
                     </div>
                 </div>
@@ -1223,6 +1271,166 @@
 
 
         </form>
+        <div class="panel-footer text-center form-group" style="    padding-top: 10px;
+        padding-bottom: 10px;background-color: #f5f5f5;border-top:0px;border-bottom:1px solid #ddd;">
+
+            <span id="btn_schedule" onclick="javascript:schedule();">
+                <button type="button" class="btn btn-dark btn-sm" name="btn_schedule" value="Schedule">
+
+                    <i class="fa fa-calendar"></i>&nbsp;Schedule
+
+                </button>&nbsp;&nbsp;
+            </span>
+            <button type="button" class="btn btn-dark btn-sm" id="btn_cancel" name="btn_cancel" value="Cancel"
+                onclick="window.location='campaigns.php'">
+
+                <i class="fa fa-times"></i>&nbsp;Cancel
+
+            </button>
+
+        </div>
+
+
+        <div id="div_schedule" style="display: block;">
+            <div class="panel-body" style="background-color: #337ab7;padding-bottom: 1px; padding-top: 4px;">
+                <h5 style="color: white !important;font-size:15px;
+                margin-left: 20px;">Schedule Campaign</h5>
+                <div class="float-end" id="schedule_dataButton" style="    margin-top: -17px;
+                margin-right: 14px;">
+                       
+                 <a onclick="javascript: close_event();" alt="Close" title="Close" class="input-group-addon">
+                        <h6>
+                            <i class="fa fa-times"></i>
+                        </h6>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <form style="padding-left: 23px;">
+                <div class="col-md-12 form-group row">
+                    <div id="schedule_loading" style="position: absolute; display: none; padding: 0px 0px 0px 450px">
+                        <center><img src="images/indicator.gif" alt=""></center>
+                    </div>
+                    <table width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="50%" style="border-right:1px dashed #999999;">
+                                    <div id="schedule_datadisplay" style="display: table-cell;">
+                                        <div class="form-group col-md-12 col-sm-12 col-xs-12 row" style="text-align: left;">
+                                            <label>Schedule Date</label>
+                                            <div class="row">
+                                                <div class="col-md-10 col-sm-12 col-xs-12 padR0">
+                                                    <div class="input-group date col-md-12 col-sm-12 col-xs-12"
+                                                        id="booking_to_date_cal1">
+                                                        <input id="schedule_date" name="schedule_date"
+                                                            class="form-control form-control-sm" type="text"
+                                                            value="09/08/2023 15:02:37">
+                                                        <span class="input-group-addon"><i
+                                                                class="fa fa-th"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 form-group row mt-2" style="text-align: left;">
+                                            <label>Choose a time</label>
+                                            <div class="input-group date col-md-12 col-xs-12" id="booking_to_date_cal">
+                                                <select name="sel_timezone" id="sel_timezone"
+                                                    class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                                                    data-live-search="true">
+                                                    <option label="GMT -12:00 Hours (9:32 PM)" value="-12">GMT -12:00
+                                                        Hours (9:32 PM)</option>
+                                                    <option label="GMT -11:00 Hours (10:32 PM)" value="-11">GMT -11:00
+                                                        Hours (10:32 PM)</option>
+                                                    <option label="GMT -10:00 Hours (11:32 PM)" value="-10">GMT -10:00
+                                                        Hours (11:32 PM)</option>
+                                                    <option label="GMT -9:00 Hours (12:32 AM)" value="-9">GMT -9:00
+                                                        Hours (12:32 AM)</option>
+                                                    <option label="GMT -8:00 Hours (1:32 AM)" value="-8">GMT -8:00 Hours
+                                                        (1:32 AM)</option>
+                                                    <option label="GMT -7:00 Hours (2:32 AM)" value="-7">GMT -7:00 Hours
+                                                        (2:32 AM)</option>
+                                                    <option label="GMT -6:00 Hours (3:32 AM)" value="-6">GMT -6:00 Hours
+                                                        (3:32 AM)</option>
+                                                    <option label="GMT -5:00 Hours (4:32 AM)" value="-5">GMT -5:00 Hours
+                                                        (4:32 AM)</option>
+                                                    <option label="GMT -4:00 Hours (5:32 AM)" value="-4">GMT -4:00 Hours
+                                                        (5:32 AM)</option>
+                                                    <option label="GMT -3:30 Hours (6:02 AM)" value="-3.5">GMT -3:30
+                                                        Hours (6:02 AM)</option>
+                                                    <option label="GMT -3:00 Hours (6:32 AM)" value="-3">GMT -3:00 Hours
+                                                        (6:32 AM)</option>
+                                                    <option label="GMT -2:00 Hours (7:32 AM)" value="-2">GMT -2:00 Hours
+                                                        (7:32 AM)</option>
+                                                    <option label="GMT -1:00 Hours (8:32 AM)" value="-1">GMT -1:00 Hours
+                                                        (8:32 AM)</option>
+                                                    <option label="GMT +0:00 Hours (9:32 AM)" value="0">GMT +0:00 Hours
+                                                        (9:32 AM)</option>
+                                                    <option label="GMT +1:00 Hours (10:32 AM)" value="1">GMT +1:00 Hours
+                                                        (10:32 AM)</option>
+                                                    <option label="GMT +2:00 Hours (11:32 AM)" value="2">GMT +2:00 Hours
+                                                        (11:32 AM)</option>
+                                                    <option label="GMT +3:00 Hours (12:32 PM)" value="3"
+                                                        selected="selected">GMT +3:00 Hours (12:32 PM)</option>
+                                                    <option label="GMT +3:30 Hours (1:02 PM)" value="3.5">GMT +3:30
+                                                        Hours (1:02 PM)</option>
+                                                    <option label="GMT +4:00 Hours (1:32 PM)" value="4">GMT +4:00 Hours
+                                                        (1:32 PM)</option>
+                                                    <option label="GMT +4:30 Hours (2:02 PM)" value="4.5">GMT +4:30
+                                                        Hours (2:02 PM)</option>
+                                                    <option label="GMT +5:00 Hours (2:32 PM)" value="5">GMT +5:00 Hours
+                                                        (2:32 PM)</option>
+                                                    <option label="GMT +5:30 Hours (3:02 PM)" value="5.5">GMT +5:30
+                                                        Hours (3:02 PM)</option>
+                                                    <option label="GMT +5:45 Hours (3:17 PM)" value="5.75">GMT +5:45
+                                                        Hours (3:17 PM)</option>
+                                                    <option label="GMT +6:00 Hours (3:32 PM)" value="6">GMT +6:00 Hours
+                                                        (3:32 PM)</option>
+                                                    <option label="GMT +7:00 Hours (4:32 PM)" value="7">GMT +7:00 Hours
+                                                        (4:32 PM)</option>
+                                                    <option label="GMT +8:00 Hours (5:32 PM)" value="8">GMT +8:00 Hours
+                                                        (5:32 PM)</option>
+                                                    <option label="GMT +9:00 Hours (6:32 PM)" value="9">GMT +9:00 Hours
+                                                        (6:32 PM)</option>
+                                                    <option label="GMT +9:30 Hours (7:02 PM)" value="9.5">GMT +9:30
+                                                        Hours (7:02 PM)</option>
+                                                    <option label="GMT +10:00 Hours (7:32 PM)" value="10">GMT +10:00
+                                                        Hours (7:32 PM)</option>
+                                                    <option label="GMT +10:30 Hours (8:02 PM)" value="10.5">GMT +10:30
+                                                        Hours (8:02 PM)</option>
+                                                    <option label="GMT +11:00 Hours (8:32 PM)" value="11">GMT +11:00
+                                                        Hours (8:32 PM)</option>
+                                                    <option label="GMT +12:00 Hours (9:32 PM)" value="12">GMT +12:00
+                                                        Hours (9:32 PM)</option>
+
+                                                </select>
+                                                <br><br>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 form-group mt-2"style="text-align: left;">
+                                            <button type="button" class="btn btn-dark btn-sm" id="btn_sch" name="btn_sch"
+                                                value="Schedule" onclick="javascript:check_prev_details(1);">
+                                             
+                                                    <i class="fa fa-calendar"></i>
+                                                    &nbsp;Schedule
+                                               
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td align="center">
+                                    <button type="button" class="btn btn-dark btn-sm" id="btn_send" name="btn_send"
+                                        value="Send Now" onclick="javascript:check_prev_details(2);">
+                                        <i class="fa fa-send"></i>&nbsp;Send Now
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </form>
+            </div>
+        </div>
 
 
         <!-- End -->
@@ -1230,12 +1438,77 @@
 
 
     </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 
+<script>
+      const schedule_date = flatpickr("#schedule_date", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+</script>
 
+<script language="JavaScript">
+    var ajax_get = new sack();
+    function schedule() {
+        //var c_id;
+        //c_id = document.getElementById('cid').value;
+        if (document.getElementById('div_schedule').style.display == 'none') {
+            document.getElementById('div_schedule').style.display = 'block';
+            document.getElementById('schedule_dataButton').style.display = 'table-row';
+            document.getElementById('schedule_datadisplay').style.display = 'table-cell';
+            //document.getElementById('btn_send').style.display='block';
+            document.getElementById('btn_schedule').style.display = 'none';
+        } else {
+            document.getElementById('div_schedule').style.display = 'none';
+            //document.getElementById('btn_send').style.display='none';
+            document.getElementById('btn_schedule').style.display = 'block';
+        }
+    }
+    function clear1(el1) {/*for datetime*/
+        var srcElement = document.getElementById(el1);
+        srcElement.value = '';
+
+    }
+
+    function close_event() {
+        document.getElementById('div_schedule').style.display = 'none';
+        //document.getElementById('btn_send').style.display='none';
+        document.getElementById('btn_schedule').style.display = 'inline-block';
+    }
+
+    function check_prev_details(flag) {
+        var cid = document.getElementById('cid').value;
+        if (flag == 2) {
+            document.getElementById('send_now').value = 1;
+        }
+        if (cid) {
+            ajax_get.requestFile = '../tms/newsletter/displayschedule.php?cid=' + cid;
+            ajax_get.onCompletion = details_result;
+            ajax_get.runAJAX();
+        } else {
+            showWarAlert("Invalid Details");
+            return false;
+        }
+    }
+
+    function details_result() {
+        var result = ajax_get.response;
+        if (result.trim() != '') {
+            showWarAlert(result);
+            return false;
+        } else {
+            return validate_schedule(document.forms['frm_schedule']);
+        }
+    }
+
+
+  
+
+</script>
 
 </html>
