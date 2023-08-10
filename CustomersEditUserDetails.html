@@ -26,9 +26,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-                    <!-- include summernote css/js-->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <title>Travel Destination Online</title>
 </head>
 
@@ -170,58 +167,69 @@
                         </ul>
                     </div>
 
-                <!--  Drop down menu for Messages-->
+                    <!--  Drop down menu for Messages-->
 
 
-          <div class="dropdown" id="drip">
-            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <b>MESSAGES</b>
-            </a>
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>MESSAGES</b>
+                        </a>
 
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
-              <li><a class="dropdown-item" href="menuitem.html">AGENT
-                  MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
-                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                  <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
-                  <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
-                  <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="menuitem.html">MASS
-                  MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                    class="fa-solid fa-caret-right"></i></a>
-                <ul class="dropdown-menu dropdown-submenu">
-                  <li><a class="dropdown-item"
-                      href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                        class="fa-solid fa-caret-right"></i></a>
-                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersNew.html">NEW</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
-                      GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
-                    <ul class="dropdown-menu dropdown-submenu" id="subscribersub">
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item"
-                      href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                        class="fa-solid fa-caret-right"></i></a>
-                    <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsNew.html">NEW</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
-                      <li><a class="dropdown-item" href="menuitem1.html">DOWNLOAD NEWSLETTER</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="menuitem.html">AGENT
+                                    MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">MASS
+                                    MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
+                                            GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="subscribersub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">DOWNLOAD NEWSLETTER</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
 
                     <!--  Drop down menu for Accounts-->
@@ -1126,14 +1134,16 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">STEP 2 : ADD SETUP</h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">EDIT USER DETAILS</h5>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-7">
 
                 </div>
-                <div class="col-md-3">
-                    <i class="fa-solid fa-house-chimney"></i><span> /<a href="MessagesMassMailCampaignsSearch.html"
-                            style="text-decoration:none;color:grey"> Campaigns</a> / Add Campaign</span>
+                <div class="col-md-2">
+               
+                            <i class="fa-solid fa-house-chimney"></i><span> / <a href="customeragentsearchbutton.html"
+                                style="text-decoration:none;color:grey"> View User</a> / Edit Sub User</span>
+
                 </div>
 
             </div>
@@ -1146,84 +1156,606 @@
     <div class="container-fluid pt-0 p-4" id="content-pad">
 
         <!-- First Row-->
-        <div class="panel-footer" style="background-color: #f5f5f5;">
-
-            <style type="text/css">
-                .steps {
-                    display: inline-block;
-                }
-            </style>
-
-            <div class="text-center">
-                <a href="MessagesMassMailCampaignsNew.html">
-                <div class="btn btn-default btn-sm steps">Step 1 : Add Name Campaign </div></a>
-                <a href="MessagesMassMailCampaignsNewStep2.html">
-                <div class="btn btn-dark btn-sm steps">Step 2 : Add Setup</div></a>
-                <a href="MessagesMassMailCampaignsNewStep3.html">
-                    <div class="steps btn btn-default btn-sm">Step 3 : Add Content</div></a>
-                    <a href="MessagesMassMailCampaignsNewStep4.html">
-                    <div class="steps btn btn-default btn-sm">Step 4 : Preview</div></a>
-                    <a href="MessagesMassMailCampaignsNewStep5.html">
-                    <div class="steps btn btn-default btn-sm">Step 5 : Schedule</div></a>
-
-            </div>
-            <br>
-        </div>
-
         <form>
 
+
             <div class="panel-body">
-					
-                <div class="row form-group">	
+                <input type="hidden" name="id" value="320"><input type="hidden" name="consultant" value=""><input
+                    type="hidden" name="parent_agent" value="319">
+                <div id="mesID" style="display: none;"></div>
+                <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label>User Name</label>
+                        <input class="form-control form-control-sm required test123" name="txt_user_name" id="txt_user_name"
+                            maxlength="15" type="text" value="Ahmed" readonly="" size="20">
+
+
+                    </div>
+
+                    <div class="col-md-3 form-group">
+                    </div>
+
+                    <div class="col-md-3 form-group">
+                        <label>Company Name</label>
+                        <input class="form-control form-control-sm required" name="txt_company_name" id="txt_company_name" type="text"
+                            value="travel">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label>Company Name in Other Language</label>
+                        <input class="form-control form-control-sm required" name="txt_agency_name_in_other_language"
+                            id="txt_agency_name_in_other_language" type="text" value=""><!-- required -->
+                    </div>
+
+
+                    <div class="col-md-3 form-group mt-2">
+                        <label>Company Registration No.</label>
+                        <input class="form-control form-control-sm" name="txt_reg_no" id="txt_reg_no" type="text" value="" size="20">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-3 form-group">
+                        <label>First Name</label>
+                        <input class="form-control form-control-sm required" name="txt_first_name" id="txt_first_name" type="text"
+                            value="Ahmed" size="20" onkeyup="isalpha_character(this);">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Last Name</label>
+                        <input class="form-control form-control-sm required" name="txt_last_name" id="txt_last_name" type="text"
+                            value="Ali" size="20" onkeyup="isalpha_character(this);">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Middle Name</label>
+                        <input class="form-control form-control-sm" name="txt_middle_name" type="text" size="6" value=""
+                            onkeyup="isalpha_character(this);">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-3 form-group">
+                        <label>Mark Up (%)</label>
+                        <select name="txt_mark_up" class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            id="txt_mark_up" data-live-search="true">
+                            <option value="0.0">0.0</option>
+                            <option value="0.0">0.0</option>
+                            <option value="0.5">0.5</option>
+                            <option value="1.0">1.0</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2.0">2.0</option>
+                            <option value="2.5">2.5</option>
+                            <option value="3.0">3.0</option>
+                            <option value="3.5">3.5</option>
+                            <option value="4.0">4.0</option>
+                            <option value="4.5">4.5</option>
+                            <option value="5.0" selected="">5.0</option>
+                            <option value="5.5">5.5</option>
+                            <option value="6.0">6.0</option>
+                            <option value="6.5">6.5</option>
+                            <option value="7.0">7.0</option>
+                            <option value="7.5">7.5</option>
+                            <option value="8.0">8.0</option>
+                            <option value="8.5">8.5</option>
+                            <option value="9.0">9.0</option>
+                            <option value="9.5">9.5</option>
+                            <option value="10.0">10.0</option>
+                            <option value="10.5">10.5</option>
+                            <option value="11.0">11.0</option>
+                            <option value="11.5">11.5</option>
+                            <option value="12.0">12.0</option>
+                            <option value="12.5">12.5</option>
+                            <option value="13.0">13.0</option>
+                            <option value="13.5">13.5</option>
+                            <option value="14.0">14.0</option>
+                            <option value="14.5">14.5</option>
+                            <option value="15.0">15.0</option>
+                            <option value="15.5">15.5</option>
+                            <option value="16.0">16.0</option>
+                            <option value="16.5">16.5</option>
+                            <option value="17.0">17.0</option>
+                            <option value="17.5">17.5</option>
+                            <option value="18.0">18.0</option>
+                            <option value="18.5">18.5</option>
+                            <option value="19.0">19.0</option>
+                            <option value="19.5">19.5</option>
+                            <option value="20.0">20.0</option>
+                            <option value="20.5">20.5</option>
+                            <option value="21.0">21.0</option>
+                            <option value="21.5">21.5</option>
+                            <option value="22.0">22.0</option>
+                            <option value="22.5">22.5</option>
+                            <option value="23.0">23.0</option>
+                            <option value="23.5">23.5</option>
+                            <option value="24.0">24.0</option>
+                            <option value="24.5">24.5</option>
+                            <option value="25.0">25.0</option>
+                            <option value="25.5">25.5</option>
+                            <option value="26.0">26.0</option>
+                            <option value="26.5">26.5</option>
+                            <option value="27.0">27.0</option>
+                            <option value="27.5">27.5</option>
+                            <option value="28.0">28.0</option>
+                            <option value="28.5">28.5</option>
+                            <option value="29.0">29.0</option>
+                            <option value="29.5">29.5</option>
+                            <option value="30.0">30.0</option>
+                        </select>
+                     
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Designation</label>
+                        <input class="form-control form-control-sm" maxlength="20" name="txt_designation" id="txt_designation" value=""
+                            size="20">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Nature of Business</label>
+                        <select name="sel_nature_of_business"
+                            class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            id="sel_nature_of_business" data-live-search="true">
+                            <option value="0">Select</option>
+                            <option value="Destination Management Company">Destination Management Company</option>
+                            <option value="Tour Operator">Tour Operator</option>
+                            <option value="Travel Agent" selected=""> Travel Agent</option>
+                            <option value="Wholesale Travel Company">Wholesale Travel Company</option>
+                            <option value="Corporate">Corporate</option>
+                        </select>
+                       
+                    </div>
+                </div>
+                <div class="row form-group mt-2">
+                    <div class="col-md-12">
+                        <label>Address</label>
+                        <textarea name="txt_address" id="txt_address" class="form-control form-control-sm required"
+                            rows="5">Bahrain</textarea>
+                    </div>
+                </div>
+
+                <div class="row form-group mt-2">
+                    <div class="col-md-12">
+                        <label>Address in Other Language</label>
+                        <br>
+                        <textarea name="txtar_address_in_other_language" rows="5" class=" form-control form-control-sm"> </textarea>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-md-3 form-group">
+                        <label>Country</label>
+                        <select name="sel_country" id="sel_country"
+                            class="selectpicker form-control form-control-sm show-menu-arrow required bs-select-hidden"
+                            onchange="JavaScript:getCityList(this);" data-live-search="true">
+                            <option value="">- Please select a country - </option>
+                            <option label="Afghanistan" value="97">Afghanistan</option>
+                            <option label="Albania" value="43">Albania</option>
+                            <option label="Algeria" value="142">Algeria</option>
+                            <option label="Andorra" value="44">Andorra</option>
+                            <option label="Angola" value="143">Angola</option>
+                            <option label="Antigua And Barbuda" value="230">Antigua And Barbuda</option>
+                            <option label="Argentina" value="29">Argentina</option>
+                            <option label="Armenia" value="45">Armenia</option>
+                            <option label="Aruba" value="231">Aruba</option>
+                            <option label="Australia" value="196">Australia</option>
+                            <option label="Austria" value="46">Austria</option>
+                            <option label="Azerbaijan" value="47">Azerbaijan</option>
+                            <option label="Bahamas" value="3">Bahamas</option>
+                            <option label="Bahrain" value="98" selected="selected">Bahrain</option>
+                            <option label="Bangladesh" value="99">Bangladesh</option>
+                            <option label="Barbados" value="4">Barbados</option>
+                            <option label="Belarus" value="48">Belarus</option>
+                            <option label="Belgium" value="49">Belgium</option>
+                            <option label="Belize" value="5">Belize</option>
+                            <option label="Benin" value="144">Benin</option>
+                            <option label="Bermuda" value="6">Bermuda</option>
+                            <option label="Bhutan" value="100">Bhutan</option>
+                            <option label="Bolivia" value="30">Bolivia</option>
+                            <option label="Bonaire, Sint Eustatius and Saba" value="416">Bonaire, Sint Eustatius and
+                                Saba</option>
+                            <option label="Bosnia and Herzegovina" value="50">Bosnia and Herzegovina</option>
+                            <option label="Botswana" value="145">Botswana</option>
+                            <option label="Brazil" value="31">Brazil</option>
+                            <option label="British Virgin Islands" value="7">British Virgin Islands</option>
+                            <option label="Brunei" value="101">Brunei</option>
+                            <option label="Bulgaria" value="51">Bulgaria</option>
+                            <option label="Burkina Faso" value="146">Burkina Faso</option>
+                            <option label="Burundi" value="147">Burundi</option>
+                            <option label="Cambodia" value="102">Cambodia</option>
+                            <option label="Cameroon" value="148">Cameroon</option>
+                            <option label="Canada" value="2">Canada</option>
+                            <option label="Cape Verde" value="149">Cape Verde</option>
+                            <option label="Cayman Islands" value="8">Cayman Islands</option>
+                            <option label="Central African Republic" value="150">Central African Republic</option>
+                            <option label="Chad" value="151">Chad</option>
+                            <option label="Chile" value="32">Chile</option>
+                            <option label="China" value="103">China</option>
+                            <option label="Colombia" value="33">Colombia</option>
+                            <option label="Comoros" value="402">Comoros</option>
+                            <option label="Cook Islands" value="412">Cook Islands</option>
+                            <option label="Costa Rica" value="9">Costa Rica</option>
+                            <option label="Croatia" value="52">Croatia</option>
+                            <option label="Cuba" value="10">Cuba</option>
+                            <option label="Curacao" value="415">Curacao</option>
+                            <option label="Cyprus" value="53">Cyprus</option>
+                            <option label="Czech Republic" value="54">Czech Republic</option>
+                            <option label="Democratic Republic of the Congo" value="153">Democratic Republic of the
+                                Congo</option>
+                            <option label="Denmark" value="55">Denmark</option>
+                            <option label="Djibouti" value="154">Djibouti</option>
+                            <option label="Dominica" value="11">Dominica</option>
+                            <option label="Dominican Republic" value="12">Dominican Republic</option>
+                            <option label="East Timor" value="104">East Timor</option>
+                            <option label="Ecuador" value="34">Ecuador</option>
+                            <option label="Egypt" value="155">Egypt</option>
+                            <option label="El Salvador" value="13">El Salvador</option>
+                            <option label="Equatorial Guinea" value="156">Equatorial Guinea</option>
+                            <option label="Eritrea" value="157">Eritrea</option>
+                            <option label="Estonia" value="56">Estonia</option>
+                            <option label="Ethiopia" value="158">Ethiopia</option>
+                            <option label="Falkland Islands" value="35">Falkland Islands</option>
+                            <option label="Fiji Islands" value="198">Fiji Islands</option>
+                            <option label="Finland" value="57">Finland</option>
+                            <option label="France" value="58">France</option>
+                            <option label="French Guiana" value="36">French Guiana</option>
+                            <option label="French Polynesia" value="199">French Polynesia</option>
+                            <option label="Gabon" value="159">Gabon</option>
+                            <option label="Gambia" value="160">Gambia</option>
+                            <option label="Georgia" value="59">Georgia</option>
+                            <option label="Germany" value="60">Germany</option>
+                            <option label="Ghana" value="161">Ghana</option>
+                            <option label="Gibraltar" value="61">Gibraltar</option>
+                            <option label="Greece" value="62">Greece</option>
+                            <option label="Greece Islands" value="404">Greece Islands</option>
+                            <option label="Greenland" value="14">Greenland</option>
+                            <option label="Grenada" value="15">Grenada</option>
+                            <option label="Guadeloupe" value="16">Guadeloupe</option>
+                            <option label="Guam" value="200">Guam</option>
+                            <option label="Guatemala" value="17">Guatemala</option>
+                            <option label="Guernsey" value="63">Guernsey</option>
+                            <option label="Guinea" value="162">Guinea</option>
+                            <option label="Guinea Bissau" value="163">Guinea Bissau</option>
+                            <option label="Guyana" value="37">Guyana</option>
+                            <option label="Haiti" value="18">Haiti</option>
+                            <option label="Honduras" value="19">Honduras</option>
+                            <option label="Hong Kong" value="105">Hong Kong</option>
+                            <option label="Hungary" value="64">Hungary</option>
+                            <option label="Iceland" value="65">Iceland</option>
+                            <option label="India" value="106">India</option>
+                            <option label="Indonesia" value="107">Indonesia</option>
+                            <option label="Iran" value="108">Iran</option>
+                            <option label="Iraq" value="109">Iraq</option>
+                            <option label="Ireland" value="66">Ireland</option>
+                            <option label="Isle of Man" value="67">Isle of Man</option>
+                            <option label="Israel" value="110">Israel</option>
+                            <option label="Italy" value="68">Italy</option>
+                            <option label="Ivory Coast" value="164">Ivory Coast</option>
+                            <option label="Jamaica" value="20">Jamaica</option>
+                            <option label="Japan" value="111">Japan</option>
+                            <option label="Jersey" value="69">Jersey</option>
+                            <option label="Jordan" value="112">Jordan</option>
+                            <option label="Kazakhstan" value="113">Kazakhstan</option>
+                            <option label="Kenya" value="165">Kenya</option>
+                            <option label="Kiribati" value="201">Kiribati</option>
+                            <option label="Kosovo" value="70">Kosovo</option>
+                            <option label="Kuwait" value="114">Kuwait</option>
+                            <option label="Kyrgyzstan" value="115">Kyrgyzstan</option>
+                            <option label="Laos" value="116">Laos</option>
+                            <option label="Latvia" value="71">Latvia</option>
+                            <option label="Lebanon" value="117">Lebanon</option>
+                            <option label="Lesotho" value="166">Lesotho</option>
+                            <option label="Liberia" value="167">Liberia</option>
+                            <option label="Libya" value="168">Libya</option>
+                            <option label="Liechtenstein" value="72">Liechtenstein</option>
+                            <option label="Lithuania" value="73">Lithuania</option>
+                            <option label="Luxembourg" value="74">Luxembourg</option>
+                            <option label="Macau" value="118">Macau</option>
+                            <option label="Macedonia" value="75">Macedonia</option>
+                            <option label="Madagascar" value="169">Madagascar</option>
+                            <option label="Malawi" value="170">Malawi</option>
+                            <option label="Malaysia" value="119">Malaysia</option>
+                            <option label="Maldives" value="120">Maldives</option>
+                            <option label="Mali" value="171">Mali</option>
+                            <option label="Malta" value="76">Malta</option>
+                            <option label="Marshall Islands" value="202">Marshall Islands</option>
+                            <option label="Martinique" value="21">Martinique</option>
+                            <option label="Mauritania" value="172">Mauritania</option>
+                            <option label="Mauritius" value="173">Mauritius</option>
+                            <option label="Mexico" value="22">Mexico</option>
+                            <option label="Micronesia" value="203">Micronesia</option>
+                            <option label="Moldova" value="77">Moldova</option>
+                            <option label="Monaco" value="78">Monaco</option>
+                            <option label="Mongolia" value="121">Mongolia</option>
+                            <option label="Montenegro" value="79">Montenegro</option>
+                            <option label="Montserrat" value="23">Montserrat</option>
+                            <option label="Morocco" value="174">Morocco</option>
+                            <option label="Mozambique" value="175">Mozambique</option>
+                            <option label="Myanmar(Burma)" value="122">Myanmar(Burma)</option>
+                            <option label="Namibia" value="176">Namibia</option>
+                            <option label="Nauru" value="204">Nauru</option>
+                            <option label="Nepal" value="123">Nepal</option>
+                            <option label="Netherlands" value="80">Netherlands</option>
+                            <option label="New Caledonia" value="205">New Caledonia</option>
+                            <option label="New Zealand" value="197">New Zealand</option>
+                            <option label="Nicaragua" value="24">Nicaragua</option>
+                            <option label="Niger" value="177">Niger</option>
+                            <option label="Nigeria" value="178">Nigeria</option>
+                            <option label="North Korea" value="124">North Korea</option>
+                            <option label="Northern Cyprus" value="411">Northern Cyprus</option>
+                            <option label="Northern Mariana Islands" value="414">Northern Mariana Islands</option>
+                            <option label="Norway" value="81">Norway</option>
+                            <option label="Oman" value="125">Oman</option>
+                            <option label="Pakistan" value="126">Pakistan</option>
+                            <option label="Palestine" value="228">Palestine</option>
+                            <option label="Panama" value="25">Panama</option>
+                            <option label="Papua New Guinea" value="206">Papua New Guinea</option>
+                            <option label="Paraguay" value="38">Paraguay</option>
+                            <option label="Peru" value="39">Peru</option>
+                            <option label="Philippines" value="127">Philippines</option>
+                            <option label="Poland" value="82">Poland</option>
+                            <option label="Portugal" value="83">Portugal</option>
+                            <option label="Puerto Rico" value="26">Puerto Rico</option>
+                            <option label="Qatar" value="128">Qatar</option>
+                            <option label="Republic of the Congo" value="152">Republic of the Congo</option>
+                            <option label="Reunion" value="179">Reunion</option>
+                            <option label="Romania" value="84">Romania</option>
+                            <option label="Russia" value="85">Russia</option>
+                            <option label="Rwanda" value="180">Rwanda</option>
+                            <option label="Saint Barthelemy" value="400">Saint Barthelemy</option>
+                            <option label="Saint Kitts and Nevis" value="413">Saint Kitts and Nevis</option>
+                            <option label="Saint Lucia" value="401">Saint Lucia</option>
+                            <option label="Samoa" value="207">Samoa</option>
+                            <option label="San Marino" value="86">San Marino</option>
+                            <option label="Sao Tome and Principe" value="181">Sao Tome and Principe</option>
+                            <option label="Saudi Arabia" value="129">Saudi Arabia</option>
+                            <option label="Senegal" value="182">Senegal</option>
+                            <option label="Serbia" value="87">Serbia</option>
+                            <option label="Seychelles" value="183">Seychelles</option>
+                            <option label="Sierra Leone" value="184">Sierra Leone</option>
+                            <option label="Singapore" value="130">Singapore</option>
+                            <option label="Slovakia" value="88">Slovakia</option>
+                            <option label="Slovenia" value="89">Slovenia</option>
+                            <option label="Solomon Islands" value="208">Solomon Islands</option>
+                            <option label="Somalia" value="185">Somalia</option>
+                            <option label="South Africa" value="186">South Africa</option>
+                            <option label="South Korea" value="131">South Korea</option>
+                            <option label="South Sudan" value="403">South Sudan</option>
+                            <option label="Spain" value="90">Spain</option>
+                            <option label="Sri Lanka" value="132">Sri Lanka</option>
+                            <option label="Sudan" value="187">Sudan</option>
+                            <option label="Suriname" value="40">Suriname</option>
+                            <option label="Swaziland" value="188">Swaziland</option>
+                            <option label="Sweden" value="91">Sweden</option>
+                            <option label="Switzerland" value="92">Switzerland</option>
+                            <option label="Syria" value="133">Syria</option>
+                            <option label="Taiwan" value="134">Taiwan</option>
+                            <option label="Tajikistan" value="135">Tajikistan</option>
+                            <option label="Tanzania" value="189">Tanzania</option>
+                            <option label="Thailand" value="136">Thailand</option>
+                            <option label="Togo" value="190">Togo</option>
+                            <option label="Tonga" value="209">Tonga</option>
+                            <option label="Trinidad and Tobago" value="27">Trinidad and Tobago</option>
+                            <option label="Tunisia" value="191">Tunisia</option>
+                            <option label="Turkey" value="93">Turkey</option>
+                            <option label="Turkmenistan" value="137">Turkmenistan</option>
+                            <option label="Turks and Caicos Islands" value="410">Turks and Caicos Islands</option>
+                            <option label="Tuvalu" value="210">Tuvalu</option>
+                            <option label="Uganda" value="192">Uganda</option>
+                            <option label="Ukraine" value="94">Ukraine</option>
+                            <option label="United Arab Emirates" value="138">United Arab Emirates</option>
+                            <option label="United Kingdom" value="95">United Kingdom</option>
+                            <option label="United States" value="1">United States</option>
+                            <option label="United States Virgin Islands" value="28">United States Virgin Islands
+                            </option>
+                            <option label="Uruguay" value="41">Uruguay</option>
+                            <option label="Uzbekistan" value="139">Uzbekistan</option>
+                            <option label="Vanuatu" value="211">Vanuatu</option>
+                            <option label="Vatican City" value="96">Vatican City</option>
+                            <option label="Venezuela" value="42">Venezuela</option>
+                            <option label="Vietnam" value="140">Vietnam</option>
+                            <option label="Wallis and Futuna" value="212">Wallis and Futuna</option>
+                            <option label="Western Sahara" value="193">Western Sahara</option>
+                            <option label="Yemen" value="141">Yemen</option>
+                            <option label="Zambia" value="194">Zambia</option>
+                            <option label="Zimbabwe" value="195">Zimbabwe</option>
+
+                        </select>
+                      
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>City</label>
+                        <select name="sel_city" id="sel_city"
+                            class="selectpicker form-control form-control-sm show-menu-arrow required bs-select-hidden"
+                            data-live-search="true">
+                            <option value="">- Please select a city - </option>
+                            <option label="Adliya" value="106495">Adliya</option>
+                            <option label="Al Areen Wildlife Park" value="140504">Al Areen Wildlife Park</option>
+                            <option label="Bahrain" value="76873" selected="selected">Bahrain</option>
+                            <option label="Capital Governorate" value="140500">Capital Governorate</option>
+                            <option label="Juffair" value="140501">Juffair</option>
+                            <option label="Manama" value="63471">Manama</option>
+                            <option label="Qalat Al Bahrain" value="140502">Qalat Al Bahrain</option>
+                            <option label="Riffa" value="91490">Riffa</option>
+                            <option label="Seef" value="140503">Seef</option>
+                            <option label="Sitra" value="106500">Sitra</option>
+                            <option label="Zallaq" value="106277">Zallaq</option>
+
+                        </select>
+                     
+                        <div id="city_loading" style="position:absolute;display:none"><img
+                                src="/cpfv3/images/ajax_pagination_loading.gif" alt=""></div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Postal Code</label>
+                        <input class="form-control form-control-sm required" type="text" name="txt_pincode" id="txt_pincode" size="6"
+                            maxlength="6" value="3478" onkeyup="extractNumber(this,0,0);">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Time Zone</label>
+                        <select name="sel_timezone" id="sel_timezone"
+                            class="selectpicker required form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            data-live-search="true">
+                            <option label="GMT -12:00 Hours (8:10 PM)" value="-12">GMT -12:00 Hours (8:10 PM)</option>
+                            <option label="GMT -11:00 Hours (9:10 PM)" value="-11">GMT -11:00 Hours (9:10 PM)</option>
+                            <option label="GMT -10:00 Hours (10:10 PM)" value="-10">GMT -10:00 Hours (10:10 PM)</option>
+                            <option label="GMT -9:00 Hours (11:10 PM)" value="-9">GMT -9:00 Hours (11:10 PM)</option>
+                            <option label="GMT -8:00 Hours (12:10 AM)" value="-8">GMT -8:00 Hours (12:10 AM)</option>
+                            <option label="GMT -7:00 Hours (1:10 AM)" value="-7">GMT -7:00 Hours (1:10 AM)</option>
+                            <option label="GMT -6:00 Hours (2:10 AM)" value="-6">GMT -6:00 Hours (2:10 AM)</option>
+                            <option label="GMT -5:00 Hours (3:10 AM)" value="-5">GMT -5:00 Hours (3:10 AM)</option>
+                            <option label="GMT -4:00 Hours (4:10 AM)" value="-4">GMT -4:00 Hours (4:10 AM)</option>
+                            <option label="GMT -3:30 Hours (4:40 AM)" value="-3.5">GMT -3:30 Hours (4:40 AM)</option>
+                            <option label="GMT -3:00 Hours (5:10 AM)" value="-3">GMT -3:00 Hours (5:10 AM)</option>
+                            <option label="GMT -2:00 Hours (6:10 AM)" value="-2">GMT -2:00 Hours (6:10 AM)</option>
+                            <option label="GMT -1:00 Hours (7:10 AM)" value="-1">GMT -1:00 Hours (7:10 AM)</option>
+                            <option label="GMT +0:00 Hours (8:10 AM)" value="0">GMT +0:00 Hours (8:10 AM)</option>
+                            <option label="GMT +1:00 Hours (9:10 AM)" value="1">GMT +1:00 Hours (9:10 AM)</option>
+                            <option label="GMT +2:00 Hours (10:10 AM)" value="2">GMT +2:00 Hours (10:10 AM)</option>
+                            <option label="GMT +3:00 Hours (11:10 AM)" value="3" selected="selected">GMT +3:00 Hours
+                                (11:10 AM)</option>
+                            <option label="GMT +3:30 Hours (11:40 AM)" value="3.5">GMT +3:30 Hours (11:40 AM)</option>
+                            <option label="GMT +4:00 Hours (12:10 PM)" value="4">GMT +4:00 Hours (12:10 PM)</option>
+                            <option label="GMT +4:30 Hours (12:40 PM)" value="4.5">GMT +4:30 Hours (12:40 PM)</option>
+                            <option label="GMT +5:00 Hours (1:10 PM)" value="5">GMT +5:00 Hours (1:10 PM)</option>
+                            <option label="GMT +5:30 Hours (1:40 PM)" value="5.5">GMT +5:30 Hours (1:40 PM)</option>
+                            <option label="GMT +5:45 Hours (1:55 PM)" value="5.75">GMT +5:45 Hours (1:55 PM)</option>
+                            <option label="GMT +6:00 Hours (2:10 PM)" value="6">GMT +6:00 Hours (2:10 PM)</option>
+                            <option label="GMT +7:00 Hours (3:10 PM)" value="7">GMT +7:00 Hours (3:10 PM)</option>
+                            <option label="GMT +8:00 Hours (4:10 PM)" value="8">GMT +8:00 Hours (4:10 PM)</option>
+                            <option label="GMT +9:00 Hours (5:10 PM)" value="9">GMT +9:00 Hours (5:10 PM)</option>
+                            <option label="GMT +9:30 Hours (5:40 PM)" value="9.5">GMT +9:30 Hours (5:40 PM)</option>
+                            <option label="GMT +10:00 Hours (6:10 PM)" value="10">GMT +10:00 Hours (6:10 PM)</option>
+                            <option label="GMT +10:30 Hours (6:40 PM)" value="10.5">GMT +10:30 Hours (6:40 PM)</option>
+                            <option label="GMT +11:00 Hours (7:10 PM)" value="11">GMT +11:00 Hours (7:10 PM)</option>
+                            <option label="GMT +12:00 Hours (8:10 PM)" value="12">GMT +12:00 Hours (8:10 PM)</option>
+
+                        </select>
+                      
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-3 form-group">
+                        <label>Telephone</label>
+                        <div class="form-group row">
+                            <div class="form-group col-md-4 text-left">
+                                <input class="form-control form-control-sm form-control-sm required" type="text" id="tel_country_code"
+                                    name="tel_country_code" value="92" size="2" maxlength="3"
+                                    onkeyup="extractNumber(this,0,0);">
+                            </div>
+                            <div class="col-md-8 text-left">
+                                <input class="form-control form-control-sm" name="txt_phone_number" id="txt_phone_number" size="15"
+                                    maxlength="15" value="3119105530" onkeyup="extractNumber(this,0,0);"
+                                    data-toggle="tooltip" data-placement="top" title=""
+                                    data-original-title="This number will be used for contact purposes.">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Mobile Number</label>
+                        <div class="form-group row">
+                            <div class="form-group col-md-4 text-left">
+                                <input class="form-control form-control-sm required" type="text" id="country_code" name="country_code"
+                                    value="92" size="2" maxlength="3" onkeyup="extractNumber(this,0,0);">
+                            </div>
+                            <div class="col-md-8 text-left">
+                                <input class="form-control form-control-sm" type="text" id="txt_mobile_number" name="txt_mobile_number"
+                                    size="15" value="3119105530" maxlength="15" onkeyup="extractNumber(this,0,0);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Fax</label>
+                        <input class="form-control form-control-sm" type="text" name="txt_fax" id="txt_fax" size="15" maxlength="100"
+                            value="">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Email</label>
+                        <input class="form-control form-control-sm required" type="text" name="txt_email" id="txt_email" size="30"
+                            value="nabeeltariq788@gmail.com">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-3 form-group">
+                        <label>Website</label>
+                        <input class="form-control form-control-sm" type="text" name="txt_website" id="txt_website" size="45"
+                            maxlength="100" value="">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Sub Agent Logo</label>
+                        <!--<img src="images/spacer.gif" name='agent_logo' id='agent_logo' ><input type='file' name='file_image' size='40' data-toggle="tooltip" data-placement="top" data-original-title='150 pixels x 150 pixels'>-->
+                        <br>
+                        <span class="uniqFile input-group"><span
+                                class="input-group-addon fa fa-upload myInputFile"><input type="file"
+                                    name="sub_agent_logo" title="" data-toggle="tooltip" data-placement="top"
+                                    data-original-title="150 pixels  x 150 pixels"></span></span>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Status</label>
+                        <select name="sel_sub_status" class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            id="sel_sub_status" data-live-search="true">
+                            <option value="Y">Active</option>
+                            <option value="N">Inactive</option>
+                        </select>
                     
-                    <div class="col-md-3 form-group phps_row_0">	
-                        <label>From Name</label>
-                        <input type="text" class="form-control form-control-sm test123" name="txt_from_name" size="45" value="" maxlength="255" tabindex="1">
-                    </div>
-                    <div class="col-md-3 form-group phps_row_1">
-                        <label>From Email Address</label>
-                        <input type="text" class="form-control form-control-sm " name="txt_from_email" size="45" value="" maxlength="255" tabindex="2">
-                    </div>
-                    <div class="col-md-3 form-group phps_row_0">
-                        <label>Subject</label>&nbsp;&nbsp;Character(s) left: <input readonly="" type="text" id="remLen" name="remLen" size="2" maxlength="3" value="40" style="border: medium none;">
-                        <input type="text" title="" data-toggle="tooltip" data-placement="top" class="form-control form-control-sm  required" id="subject" required="" name="txt_subject" size="45" value="" maxlength="255" tabindex="3" onkeyup="javascript: limiter();" onblur="javascript: limiter();" data-original-title="40 characters">
-                        
-                    </div>
-                    <div class="col-md-3 form-group phps_row_1">
-                        <label>Reply-to Email Address</label>
-                        <input type="text" class="form-control form-control-sm " name="txt_reply_to" size="45" value="" maxlength="255" tabindex="4">
-                    </div>
-                    <div class="col-md-12 form-group phps_row_0">
-                        <label>Footer Details (Optional, Will override generic footer)</label>
-                        <textarea id="summernote" class="form-control form-control-sm"></textarea>
                     </div>
                 </div>
+
+<style>
+    .checkbox label {
+    padding-left: 0px;}
+</style>
+
                 <div class="row mt-3">
-                    <div class="col-md-3 form-group phps_row_1">
-                        <!-- <button type="button" name="add"  class="btn btn-primary" value ="PREVIOUS" onclick="window.location='campaigns.php?action=add_name_campaign&cid=3&'">
-                            <h6>
-                                <i class="fa fa-arrow-circle-left"></i>
-                                &nbsp;Previous
-                            </h6>
-                        </button> -->
-                   <a href="MessagesMassMailCampaignsNewStep3.html" class="btn btn-dark btn-sm" name="add" value="SAVE" tabindex="6" onclick="return validate_setup(document.forms['frm_add_setup']);">
-                        
-                                <i class="fa fa-floppy-o"></i>
-                                &nbsp;Save
-                         
-                   </a>
-                        <!-- <button type="button" name="add" class="btn btn-primary" value="NEXT" onclick="window.location='campaigns.php?action=add_content&cid=3&'">
-                            <h6>
-                                <i class="fa fa-arrow-circle-right"></i>
-                                &nbsp;Next
-                            </h6>
-                        </button> -->
+                    <div class="radioline1 form-group col-md-12">
+                        <br>
+                        <div class="checkbox checkbox-success checkbox-inline">
+                            <input id="block_agent_email" type="checkbox" name="block_mail" value="1">
+                            <!-- <input id="block_agent_email" type='checkbox' name='chk_debug' value='1' >  -->
+                            <label for="block_agent_email">Block Agent E-mail</label>
+                        </div>
+                        <div class="checkbox checkbox-success checkbox-inline">
+                            <input id="app" type="checkbox" name="chk_can_book" value="1" checked="">
+                            <label for="can_book">Can Book</label>
+                        </div>
+                        <div class="checkbox checkbox-success checkbox-inline">
+                            <input id="app" type="checkbox" name="allow_book_under_cancellation" checked="" value="1">
+                            <label for="allow">Allow Book Under Cancellation Policy?</label>
+                        </div>
+                        <div class="checkbox checkbox-success checkbox-inline">
+                            <input type="checkbox" id="app" name="chk_can_voucher" checked="" value="1">
+                            <label for="can_voucher">Can Voucher</label>
+                        </div>
+                        <div class="checkbox checkbox-success checkbox-inline">
+                            <input id="app" type="checkbox" name="chk_allow_ticketing" value="1"
+                                checked="">
+                            <label for="chk_allow_ticketing">Flights Allow Ticketing</label>
+                        </div>
+                        <!-- added by nida start- 8/3/2018 -->
+                        <div class="checkbox checkbox-success checkbox-inline">
+                            <input type="checkbox" id="app" name="display_markup" value="1">
+                            <label for="display_markup">Display with Markup</label>
+                        </div>
+                        <!-- added by nida end- 8/3/2018 -->
+                        <!-- added by nida start -->
+                        <!-- added by nida end -->
                     </div>
                 </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <button class="btn btn-dark btn-sm" name="b1" type="submit" value="Update"
+                            onclick="Javascript:return sub_agent_submit(document.forms['frm_add_subagent']);">
+                          
+                                <i class="fa fa-pencil-square-o"></i>
+                                &nbsp;Update
+                          
+                        </button>
+
+                    </div>
+                </div>
+
             </div>
+
+
 
 
         </form>
+
 
 
         <!-- End -->
@@ -1231,22 +1763,6 @@
 
 
     </div>
-    <script>
-        $('#summernote').summernote({
-          height: 300,
-          width:600,
-       
-          toolbar: [
-        ['view', ['undo','redo']],
-          ['font', ['fontname','fontsize','bold','italic','underline','strikethrough','superscript','subscript','clear']],
-          ['color', ['color','backcolor']],
-          ['para', ['ul', 'ol', 'paragraph','style','height']],
-          ['insert', ['link', 'picture', 'video','table','  hr',]],
-          ['view', ['fullscreen', 'codeview', 'help']]
-       
-      ],
-    });
-      </script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

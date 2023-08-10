@@ -26,9 +26,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-                    <!-- include summernote css/js-->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <title>Travel Destination Online</title>
 </head>
 
@@ -170,58 +167,69 @@
                         </ul>
                     </div>
 
-                <!--  Drop down menu for Messages-->
+                    <!--  Drop down menu for Messages-->
 
 
-          <div class="dropdown" id="drip">
-            <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <b>MESSAGES</b>
-            </a>
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>MESSAGES</b>
+                        </a>
 
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
-              <li><a class="dropdown-item" href="menuitem.html">AGENT
-                  MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
-                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                  <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
-                  <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
-                  <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
-                </ul>
-              </li>
-              <li><a class="dropdown-item" href="menuitem.html">MASS
-                  MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                    class="fa-solid fa-caret-right"></i></a>
-                <ul class="dropdown-menu dropdown-submenu">
-                  <li><a class="dropdown-item"
-                      href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                        class="fa-solid fa-caret-right"></i></a>
-                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersNew.html">NEW</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
-                      GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
-                    <ul class="dropdown-menu dropdown-submenu" id="subscribersub">
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item"
-                      href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
-                        class="fa-solid fa-caret-right"></i></a>
-                    <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsNew.html">NEW</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
-                      <li><a class="dropdown-item" href="menuitem1.html">DOWNLOAD NEWSLETTER</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
-                      <li><a class="dropdown-item" href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="menuitem.html">AGENT
+                                    MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">MASS
+                                    MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
+                                            GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="subscribersub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">DOWNLOAD NEWSLETTER</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
 
                     <!--  Drop down menu for Accounts-->
@@ -1126,14 +1134,16 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">STEP 2 : ADD SETUP</h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">VIEW USER DETAILS</h5>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-7">
 
                 </div>
-                <div class="col-md-3">
-                    <i class="fa-solid fa-house-chimney"></i><span> /<a href="MessagesMassMailCampaignsSearch.html"
-                            style="text-decoration:none;color:grey"> Campaigns</a> / Add Campaign</span>
+                <div class="col-md-2">
+
+                    <i class="fa-solid fa-house-chimney"></i><span> / <a href="customeragentsearchbutton.html"
+                            style="text-decoration:none;color:grey"> Search Agents</a> / View User</span>
+
                 </div>
 
             </div>
@@ -1146,84 +1156,154 @@
     <div class="container-fluid pt-0 p-4" id="content-pad">
 
         <!-- First Row-->
-        <div class="panel-footer" style="background-color: #f5f5f5;">
-
-            <style type="text/css">
-                .steps {
-                    display: inline-block;
-                }
-            </style>
-
-            <div class="text-center">
-                <a href="MessagesMassMailCampaignsNew.html">
-                <div class="btn btn-default btn-sm steps">Step 1 : Add Name Campaign </div></a>
-                <a href="MessagesMassMailCampaignsNewStep2.html">
-                <div class="btn btn-dark btn-sm steps">Step 2 : Add Setup</div></a>
-                <a href="MessagesMassMailCampaignsNewStep3.html">
-                    <div class="steps btn btn-default btn-sm">Step 3 : Add Content</div></a>
-                    <a href="MessagesMassMailCampaignsNewStep4.html">
-                    <div class="steps btn btn-default btn-sm">Step 4 : Preview</div></a>
-                    <a href="MessagesMassMailCampaignsNewStep5.html">
-                    <div class="steps btn btn-default btn-sm">Step 5 : Schedule</div></a>
-
-            </div>
-            <br>
-        </div>
-
         <form>
 
-            <div class="panel-body">
-					
-                <div class="row form-group">	
-                    
-                    <div class="col-md-3 form-group phps_row_0">	
-                        <label>From Name</label>
-                        <input type="text" class="form-control form-control-sm test123" name="txt_from_name" size="45" value="" maxlength="255" tabindex="1">
+            <div class="panel-body form-group removeMargins">
+                <div class="dataTables_scroll">
+                    <div id="mesID" style="display: none;">
+
                     </div>
-                    <div class="col-md-3 form-group phps_row_1">
-                        <label>From Email Address</label>
-                        <input type="text" class="form-control form-control-sm " name="txt_from_email" size="45" value="" maxlength="255" tabindex="2">
+                    <div class="row">
+                        <div class="col-md-3">
+                           <a href="customeradduserdetails.html"><button type="button" name="Add" value="Add Sub User" class="btn btn-dark btn-sm topBtn"
+                                onclick="javascript:window.location.href='sub_agent.php?action=add&amp;parent_agent=319&amp;consultant=&amp;branch_search=&amp;consultant_search=&amp;agent_type_search=&amp;country_srch=&amp;agency_name_search=&amp;username_search=&amp;status_search=&amp;person_name_search=&amp;search=agent&amp;country_search=&amp;city_search=&amp;currency_search=&amp;rate_profile_search=&amp;email_search=&amp;agency_id_search='">
+                                <i class="fa fa-plus"></i>&nbsp;Add User
+                            </button></a>
+                        </div>
                     </div>
-                    <div class="col-md-3 form-group phps_row_0">
-                        <label>Subject</label>&nbsp;&nbsp;Character(s) left: <input readonly="" type="text" id="remLen" name="remLen" size="2" maxlength="3" value="40" style="border: medium none;">
-                        <input type="text" title="" data-toggle="tooltip" data-placement="top" class="form-control form-control-sm  required" id="subject" required="" name="txt_subject" size="45" value="" maxlength="255" tabindex="3" onkeyup="javascript: limiter();" onblur="javascript: limiter();" data-original-title="40 characters">
-                        
+
+                    <div id="search_sup_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                        <div class="row">
+                            <div class="col-sm-10"></div>
+                            <div class="col-sm-2">
+                                <div id="search_sup_filter" class="dataTables_filter"><label>
+                                        <h5 style="display:inline"><i class="pe-7s-search srchWithinPg"
+                                                data-toggle="tooltip" data-placement="top"
+                                                data-original-title="Search within this table"></i></h5><input
+                                            type="search" class="form-control form-control-sm input-sm" placeholder=""
+                                            aria-controls="search_sup">
+                                    </label></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="doubleScroll-scroll-wrapper" id="wrapper1"
+                                    style="height: 20px; overflow: scroll hidden; width: 1320px;">
+                                    <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1320px;"></div>
+                                </div>
+                                <div id="wrapper2" style="overflow: scroll hidden;">
+                                    <table id="search_sup"
+                                        class="table table-bordered table-striped table-hover table-responsive dataTable no-footer"
+                                        role="grid" aria-describedby="search_sup_info">
+                                        <thead>
+                                            <tr role="row">
+                                                <th class="phps_header sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 219.2px;">&nbsp;Agent Code</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 249.2px;">&nbsp;Agency Name</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 199.2px;">&nbsp;Username</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 297.2px;">&nbsp;Contact Person</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 157.2px;">&nbsp;Status</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 312px;">&nbsp;Actions</th>
+                                            </tr>
+
+                                        </thead>
+                                        <tbody>
+
+
+
+                                            <tr class="phps_row_1 odd" role="row">
+                                                <td>
+                                                    &nbsp;CA0320
+                                                </td>
+                                                <td>
+                                                    &nbsp;travel
+                                                </td>
+                                                <td>
+                                                    &nbsp;Ahmed
+                                                </td>
+                                                <td>
+                                                    &nbsp;Ahmed&nbsp;&nbsp;Ali
+                                                </td>
+                                                <td>
+                                                    <h5><span class="tdd_label label-success">Active</span></h5>
+                                                </td>
+                                                <td class="actionlink">
+                                                    <div class="actionCont">
+                                                        <div class="input-group-addon">
+                                                            <a href="CustomersEditUserDetails.html"
+                                                                alt="Edit" title="Edit"
+                                                                data-bs-toggle="tooltip" data-placement="top">
+                                                                <i class="fa fa-pencil-square-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <a href="sub_agent.php?action=inactive&amp;id=320&amp;parent_agent=319&amp;branch_search=&amp;consultant_search=&amp;agent_type_search=&amp;country_srch=&amp;agency_name_search=&amp;username_search=&amp;status_search=&amp;person_name_search=&amp;search=agent&amp;country_search=&amp;city_search=&amp;currency_search=&amp;rate_profile_search=&amp;email_search=&amp;agency_id_search="
+                                                                title="Click To Deactivate"
+                                                                data-bs-toggle="tooltip" data-placement="top">
+                                                                <i class="fa fa-check-circle"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <a onclick="Javacsript:check('320','Ahmed','319','branch_search=&amp;consultant_search=&amp;agent_type_search=&amp;country_srch=&amp;agency_name_search=&amp;username_search=&amp;status_search=&amp;person_name_search=&amp;search=agent&amp;country_search=&amp;city_search=&amp;currency_search=&amp;rate_profile_search=&amp;email_search=&amp;agency_id_search=')"
+                                                                alt="Delete"title="Delete"
+                                                                data-bs-toggle="tooltip" data-placement="top">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-addon"
+                                                          title="Acknowledgement Email"
+                                                            data-bs-toggle="tooltip">
+                                                            <a href="#"
+                                                                onclick="aknowlgdeMail(&quot;http://beta.tdonlines.com/resend_email.php?action=subagent_registration_email&amp;agent_id=320&amp;branch_search=&amp;consultant_search=&amp;agent_type_search=&amp;country_srch=&amp;agency_name_search=&amp;username_search=&amp;status_search=&amp;person_name_search=&amp;search=agent&amp;country_search=&amp;city_search=&amp;currency_search=&amp;rate_profile_search=&amp;email_search=&amp;agency_id_search=&quot;)"
+                                                                alt="Reg.Email" data-toggle="modal"
+                                                                data-target="#showAknMail" data-placement="top">
+                                                                <i class="fa fa-envelope-o"></i>
+                                                            </a>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="input-group-addon">
+                                                        <a href="#"
+                                                            onclick="subagent_login('http://beta.tdonlines.com/agent_login.php?action_type=login&amp;txt_username=Ahmed&amp;txt_password=be9481eee7bd7b3d50ce31b24d2c43e353ec045efbc79a05fdcb23c258327a2a&amp;txt_agent_code=CA0320&amp;FLAG=AS_AG&amp;chk=34e2ad7b31cd9ee87c038c10fd6fbe310314ba67abb73a686f0d1087267d7a1d&amp;consult_eid=ZVlNM3dXa3E2SGIrWC9vNUM4Q2hsdz09&amp;tms=1&amp;backoffice_user=Beta_Tdo')"
+                                                            alt="Login as Sub Agent" title="Login As User"
+                                                            data-toggle="tooltip" data-placement="top">
+                                                            <i class="fa fa-user"></i>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="input-group-addon"><a data-bs-toggle="tooltip"
+                                                           title="Change Password" data-placement="top"
+                                                            href="sub_agent.php?action=change_password&amp;id=320&amp;parent_agent=319&amp;consultant=&amp;branch_search=&amp;consultant_search=&amp;agent_type_search=&amp;country_srch=&amp;agency_name_search=&amp;username_search=&amp;status_search=&amp;person_name_search=&amp;search=agent&amp;country_search=&amp;city_search=&amp;currency_search=&amp;rate_profile_search=&amp;email_search=&amp;agency_id_search="><i
+                                                                class="fa fa-key"></i>
+                                                        </a></div>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                     
                     </div>
-                    <div class="col-md-3 form-group phps_row_1">
-                        <label>Reply-to Email Address</label>
-                        <input type="text" class="form-control form-control-sm " name="txt_reply_to" size="45" value="" maxlength="255" tabindex="4">
-                    </div>
-                    <div class="col-md-12 form-group phps_row_0">
-                        <label>Footer Details (Optional, Will override generic footer)</label>
-                        <textarea id="summernote" class="form-control form-control-sm"></textarea>
-                    </div>
+
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-3 form-group phps_row_1">
-                        <!-- <button type="button" name="add"  class="btn btn-primary" value ="PREVIOUS" onclick="window.location='campaigns.php?action=add_name_campaign&cid=3&'">
-                            <h6>
-                                <i class="fa fa-arrow-circle-left"></i>
-                                &nbsp;Previous
-                            </h6>
-                        </button> -->
-                   <a href="MessagesMassMailCampaignsNewStep3.html" class="btn btn-dark btn-sm" name="add" value="SAVE" tabindex="6" onclick="return validate_setup(document.forms['frm_add_setup']);">
-                        
-                                <i class="fa fa-floppy-o"></i>
-                                &nbsp;Save
-                         
-                   </a>
-                        <!-- <button type="button" name="add" class="btn btn-primary" value="NEXT" onclick="window.location='campaigns.php?action=add_content&cid=3&'">
-                            <h6>
-                                <i class="fa fa-arrow-circle-right"></i>
-                                &nbsp;Next
-                            </h6>
-                        </button> -->
-                    </div>
-                </div>
+
+
+
             </div>
+
+
+
 
 
         </form>
+
 
 
         <!-- End -->
@@ -1232,27 +1312,26 @@
 
     </div>
     <script>
-        $('#summernote').summernote({
-          height: 300,
-          width:600,
-       
-          toolbar: [
-        ['view', ['undo','redo']],
-          ['font', ['fontname','fontsize','bold','italic','underline','strikethrough','superscript','subscript','clear']],
-          ['color', ['color','backcolor']],
-          ['para', ['ul', 'ol', 'paragraph','style','height']],
-          ['insert', ['link', 'picture', 'video','table','  hr',]],
-          ['view', ['fullscreen', 'codeview', 'help']]
-       
-      ],
-    });
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
       </script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
-
+<script type="text/javascript">
+    var wrapper1 = document.getElementById('wrapper1');
+    var wrapper2 = document.getElementById('wrapper2');
+    wrapper1.onscroll = function () {
+      wrapper2.scrollLeft = wrapper1.scrollLeft;
+    };
+    wrapper2.onscroll = function () {
+      wrapper1.scrollLeft = wrapper2.scrollLeft;
+    };
+  </script>
 
 
 </html>

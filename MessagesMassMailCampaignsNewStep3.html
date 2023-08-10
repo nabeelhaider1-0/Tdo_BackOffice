@@ -1252,20 +1252,23 @@
 
     </div>
     <script>
+
         $('#summernote').summernote({
-          height: 80,
-       
+            height: 300,
+          width:600,
+          
         toolbar: [
-        ['style', ['style']],
-          ['font', ['bold','italic','underline', 'clear']],
-          ['color', ['color']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['height', ['height']],
-          ['table', ['table']],
-          ['insert', ['link', 'picture', 'video']],
+        ['view', ['undo','redo']],
+          ['font', ['fontname','fontsize','bold','italic','underline','strikethrough','superscript','subscript','clear']],
+          ['color', ['color','backcolor']],
+          ['para', ['ul', 'ol', 'paragraph','style','height']],
+          ['insert', ['link', 'picture', 'video','table','  hr',]],
           ['view', ['fullscreen', 'codeview', 'help']]
-        ]
-    });
+       
+      ],
+   
+
+    }); 
       </script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
