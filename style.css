@@ -46,6 +46,14 @@ body{
   background-position: 50% 100%;
   background-repeat: no-repeat;
 }
+.color-linegreen {
+  background: #f7f9fa;
+  height: 6px;
+  background: #62cb31;
+  background-size: 100% 6px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
 
 #content-pad{
   padding: 0px 15px 50px 15px!important;
