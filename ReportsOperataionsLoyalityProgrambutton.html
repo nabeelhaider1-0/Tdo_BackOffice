@@ -1,0 +1,2495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body>
+
+    <div class="color-line">
+    </div>
+
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg bg-light" id="firstNav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="TDO LOGO Without Background.png" class="img-fluid"
+                        alt="Responsive image" style="max-height: 50px; margin-left: 10px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Welcome <b>Beta_Tdo</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-clock"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-user fa-2xl"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!--      2nd Navbar Section For Search Bookkng And other Queries           -->
+    <section>
+        <nav class="navbar navbar-expand-lg" id="secondNav">
+            <div class="w-100">
+                <a class="navbar-brand" href="index.html" style="color: white;font-size: 10px;" id="tdotext">Travel
+                    Destination Online Mid Office</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!--  Drop down menu for Booking-->
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>BOOKINGS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="index.html">Search Bookings</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">Reminders&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="BookingRemindersNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="BookingRemindersSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="BookingNewOnlineBooking.html">NEW ONLINE BOOKING</a></li>
+                            <li><a class="dropdown-item" href="menuitem.html">NEW OFFLINE
+                                    BOOKING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappingggsub">
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingHotels.html">HOTELS</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingFlights.html">FLIGHTS</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="BookingNewOnlineBookingTransfer.html">TRANSFER</a></li>
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingTour.html">TOUR</a></li>
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingMiscServices.html">MISC
+                                            SERVICES</a></li>
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingGroups.html">GROUPS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">RECONCILIATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="transsub">
+                                    <li><a class="dropdown-item" href="BookingReconcilationManualFlights.html">MANUAL
+                                            FLIGHTS</a></li>
+                                    <li><a class="dropdown-item" href="BookingReconcilationManual.html">MANUAL</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">AUTO</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="BookingExchange-ReAssignBooking.html">EXCHANGE/REASSIGN<br>BOOKING</a></li>
+                        </ul>
+                    </div>
+
+                    <!--  Drop down menu for Customer-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>CUSTOMERS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">AGENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="customeragentsearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item" href="customeragentnew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="customeragentsearchusers.html">SEARCH USERS</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">ADVANCED
+                                            SETTINGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item" href="customeragentadvanceonline.html">ONLINE
+                                                    SUPPLIERS</a></li>
+                                            <li><a class="dropdown-item" href="customeragentadvanceoffline.html">LOCAL
+                                                    SUPPLIERS</a></li>
+                                        </ul>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="customeragentrateprofile.html">AGENT RATE
+                                            PROFILE</a></li>
+                                </ul>
+                            </li>
+
+                            </li>
+                            <li><a class="dropdown-item" href="customerB2C.html">B2C CUSTOMER</a></li>
+                        </ul>
+                    </div>
+
+                    <!--  Drop down menu for Messages-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>MESSAGES</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="menuitem.html">AGENT
+                                    MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">MASS
+                                    MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
+                                            GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="subscribersub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">DOWNLOAD NEWSLETTER</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Accounts-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>ACCOUNTS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">AGENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">RECEIPTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="AccountsAgentsRecieptsNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsAgentsRecieptsSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsAgentsRecieptsByBookingId.html">BY BOOKING ID</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">CREDIT
+                                            NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="AccountsAgentsCreditNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsAgentsCreditSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item" href="AccountsAgentsCreditByBookingId.html">BY
+                                                    BOOKING ID</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">DEBIT
+                                            NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="AccountsAgentsDebitNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsAgentsDebitSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item" href="AccountsAgentsDebitByBookingId.html">BY
+                                                    BOOKING ID</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">TAX
+                                    SETUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="menuitem.html">TAX
+                                            MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsTaxsetupTaxMasterNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsTaxsetupTaxMasterSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">TAX
+                                            CONFIGURATION&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsTaxsetupTaxConfigurationNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsTaxsetupTaxConfigurationSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">PAYMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsSuppliersPaymentsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsSuppliersPaymentsSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsSuppliersPaymentsByBookingId.html">PAYMENT BY BOOKING
+                                                    ID</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Reports-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b> REPORTS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">MANAGEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">BUSINESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="menuitem1.html">BY AGENT</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">BY HOTEL</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">BY COUNTRY</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">BY CITY</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">BY ONLINE SUPPLIER</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">BY OFFLINE SUPPLIER</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">BOOKING BY
+                                            SUPPLIER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item" href="menuitem1.html">BY STATUS</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">BY NIGHTS</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">BY SUPPLIER PROFILE</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">SALES MANAGER</a></li>
+                                    <li><a class="dropdown-item" href="ReportManagementSalesComparison.html">SALES
+                                            COMPARISON</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">OPERTAIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="ReportsOperataionsBookingReprt.html">BOOKING
+                                            REPORT</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">AGENT SEARCH LOGS</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">VOUCHER</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">DAILY ROE</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">LOYALTY PROGRAM</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">REMINDERPRO<br>SUBSCRIPTIONS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">ACCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="menuitem1.html">DAILY SALES</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">CUSTOMER STATEMENT</a></li>
+                                    <li><a class="dropdown-item" href="menuitem.html">SUPPLIER
+                                            STATEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                            <li><a class="dropdown-item" href="menuitem1.html">ONLINE SUPPLIER</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">OFFLINE SUPPLIER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">OUTSTANDING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item" href="menuitem1.html">CUSTOMER</a></li>
+                                            <li><a class="dropdown-item" href="menuitem1.html">SUPPLIER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">INVOICES</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">AGENT RECEIPTS</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">AGENT RECEIPT SUMMARY</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">SUPPLIER PAYMENTS</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">TAX</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">COMMISSION</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">PAYMENT GATEWAY<br>BOOKINGS</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">AGENT GLOBAL STATEMENT</a></li>
+                                    <li><a class="dropdown-item" href="menuitem1.html">GLOBAL CUSTOMER REPORT</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                    <li><a class="dropdown-item" href="ReportsMappingDestination.html">DESTINATIONS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Contracts-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>CONTRACTS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="ContractsHotelsRates.html">RATES</a></li>
+                                    <li><a class="dropdown-item" href="ContractsHotelsAllotmentMap.html">ALLOTMENT
+                                            MAP</a></li>
+                                    <li><a class="dropdown-item" href="menuitem.html">DYNAMIC
+                                            ALLOTMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                            <li><a class="dropdown-item"
+                                                    href="ContractsHotelsDynamicAllotmentNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="ContractsHotelsDynamicAllotmentSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">OFFERS &
+                                            DISCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item"
+                                                    href="ContractsHotelsOffersandiscountsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="ContractsHotelsOffersandiscountsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="ContractsTranfersRates.html">RATES</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">TOURS &
+                                    ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="ContractsToursandactivitiesRates.html">RATES</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">FLIGHTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="ContractsFlightsSearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item" href="ContractsFlightsSuppplierMapping.html">FLIGHT
+                                            SUPPLIER MAPPING</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ContractsFlightsAddrates.html">ADD RATES</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--  Drop down menu for Masters-->
+
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>MASTERS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="MastersHotelsNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersHotelsSearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="#">AMENITITES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                            <li><a class="dropdown-item" href="MastersHotelsAmenitiesNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsAmenitiesSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="#">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item" href="MastersHotelsLocationsNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsLocationsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">ROOM
+                                            VIEW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                            <li><a class="dropdown-item" href="MastersHotelsRoomviewNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsRoomviewSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">ROOM
+                                            CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsRoomcategoryNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsRoomcategorySearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">INVENTORY ROOM
+                                            CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsInventoryRoomCategoryNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsInventoryRoomCategorySearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">MEAL
+                                            BASIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mealsub">
+                                            <li><a class="dropdown-item" href="MastersHotelsMealBasisMapping.html">MEAL
+                                                    BASIS MAPPING</a></li>
+                                            <li><a class="dropdown-item" href="MastersHotelsMealMappingNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsMealMappingSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">PREFERRED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                                            <li><a class="dropdown-item" href="MastersHotelsPreferedNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsPreferedOnSearchPage.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">SPECIAL
+                                            REQUESTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsSpecialRequestsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsSpecialRequestsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="menuitem.html">TEST</a></li>
+                                    <li><a class="dropdown-item" href="MastersTransfersNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersTransfersSearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item" href="MastersTransfersLocationNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersTransfersLocationSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">VEHICLES</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">TOURS &
+                                    ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="Masters Tours&ActivitiesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="Masters Tours&ActivitiesSearch.html">SEARCH</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">SUPPLIMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSupplementsHotelsNew .html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSupplementsHotelsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">AIRLINES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                    <li><a class="dropdown-item" href="MastersAirlinesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersAirlinesSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="MastersPreferedcities.html">PREFERRED CITIES</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                                    <li><a class="dropdown-item" href="menuitem.html">ONLINE
+                                            SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOnlineSuppliersSearchSupplier.html">SEARCH</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOnlineSuppliersSetautocheckConfiguration.html">SEARCH
+                                                    AUTO CHECK<br>CONFIGURATION</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOnlineSuppliersAutocheckSuppliers.html">AUTO
+                                                    CHECK SUPPLIER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">OFFLINE
+                                            SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOfflineSupplierNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOfflineSupplierSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="MAstersTravelClass.html">TRAVEL CLASS</a></li>
+                            <li><a class="dropdown-item" href="menuitem.html">MARK-UP
+                                    PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                                    <li><a class="dropdown-item" href="MastersMarkupProfilesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersMarkupProfilesSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">MARKET
+                                    PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                                    <li><a class="dropdown-item" href="#">NEW</a></li>
+                                    <li><a class="dropdown-item" href="#">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">PAYMENT GATEWAYS&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="paysub">
+                                    <li><a class="dropdown-item" href="MastersPaymentgatewaySearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="MastersAircarft.html">AIRCRAFT</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">BANKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="banksub">
+                                    <li><a class="dropdown-item" href="MastersBankNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersBankSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">CURRENCIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="cursub">
+                                    <li><a class="dropdown-item" href="MastersCurrenciesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersCurrenciesSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">TAXES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="taxsub">
+                                    <li><a class="dropdown-item" href="MastersTaxesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersTaxesSearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item" href="menuitem.html">TAX
+                                            MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                            <li><a class="dropdown-item" href="MastersTaxesTaxMasterNew.html">ADD</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersTaxesTaxMasterSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">TAX
+                                            CONFIGURATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersTaxesTaxConfigurationNew.html">ADD</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersTaxesTaxConfigurationSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">LOYALITY PROGRAM&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="loyaltysub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">TIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersLoyalityProgramTiersNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersLoyalityProgramTiersSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">REWARDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersLoyalityProgramRewardsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersLoyalityProgramRewardsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="Masters Packages.html">PACAKGES</a></li>
+                            <li><a class="dropdown-item" href="MastersOfferCode.html">OFFER CODES</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">VEHICLES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="vehiclesub">
+                                    <li><a class="dropdown-item" href="menuitem.html">VEHICLE
+                                            TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersVehiclesVehicleTypeNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersVehiclesVehicleTypeSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">INVENTORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item" href="MastersVehiclesInventoryNew.html">ADD</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersVehiclesInventorySearch.html">MANAGE</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Visa-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>VISA</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="VisaVisaCategorySearch.html">CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="VisaVisaCategoryAdd.html">ADD</a></li>
+                                    <li><a class="dropdown-item" href="VisaVisaCategorySearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="VisaVisaRequests.html">VISA REQUEST</a></li>
+                            <li><a class="dropdown-item" href="menuitem.html">VISA
+                                    RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="VisaVisaRatesAddSupplierVisaRates .html">ADD
+                                            SUPPLIER VISA RATES</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="VisaVisaRatesSearchSupplierVisaRates .html">SEARCH SUPPLIER VISA
+                                            RATESX</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="NewOfflneVisaBooking.html">NEW OFFLINE VISA BOOKING</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Flights-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>FLIGHT</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="menuitem.html">FLIGHT
+                                    RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="FlightFlightRulesAddrules.html">ADD RULES</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="FlightFlightRulesSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">FLIGHT
+                                    PCC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="FlightFlightPCCAdd.html">ADD </a></li>
+                                    <li><a class="dropdown-item" href="FlightFlightPCCSerach.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">FLIGHT QCT
+                                    RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                    <li><a class="dropdown-item" href="FlightFlightQCTRuleAdd.html">ADD </a></li>
+                                    <li><a class="dropdown-item" href="FlightFlightQCTRuleSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">FLIGHT CANCELLATION
+                                    RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                    <li><a class="dropdown-item" href="FlightFlightCancellationRuleAdd.html">ADD </a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="FlightFlightCancellationRuleSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Suppliers-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>SUPPLIERS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="menuitem2.html">MARKET
+                                    PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="menuitem2.html">NEW </a></li>
+                                    <li><a class="dropdown-item" href="menuitem2.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="SuppliersOnlineSuppliersSearch.html">ONLINE
+                                    SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="SuppliersOnlineSuppliersNew.html">NEW </a></li>
+                                    <li><a class="dropdown-item" href="SuppliersOnlineSuppliersSearch.html">SEARCH</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">OFFLINE
+                                    SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="SuppliersOfflineSuppliersNew.html">NEW </a></li>
+                                    <li><a class="dropdown-item" href="SuppliersOfflineSuppliersSerach.html">SEARCH</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Lodge Card-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="menuitem.html" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>LODGE CARD</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">CARD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="LodgeCardAdd.html">ADD </a></li>
+                                    <li><a class="dropdown-item" href="LodgeCardSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">CARD
+                                    PAYMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="LodgeCardMappingAdd.html">ADD </a></li>
+                                    <li><a class="dropdown-item" href="LodgeCardMappingSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Tools-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>TOOLS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">MARK-UPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="menuitem.html">ADD
+                                            ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="ToolsMarkupsAddonsNew.html">NEW </a></li>
+                                            <li><a class="dropdown-item" href="ToolsMarkupsAddonsSearch.html">SEARCH</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ToolsMarkupsByCountryBranch.html">BY
+                                            COUNTRY/BRANCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="ToolsAddLeapTime.html">ADD LEAD TIME</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                    <li><a class="dropdown-item" href="menuitem.html">COUNTRIES
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="ToolsMappingCountriesManual.html">MANUAL
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="ToolsMappingCountriesAuto.html">AUTO</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">CITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item" href="ToolsMappingCitiesManual.html">MANUAL
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="ToolsMappingCitiesAuto.html">AUTO</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ToolsMappingHotels.html">HOTELS</a></li>
+                                    <li><a class="dropdown-item" href="ToolsMappingNationalities.html">NATIONALITIES</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">OFFLINE
+                                            SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                            <li><a class="dropdown-item"
+                                                    href="ToolsMappingOfflineSuppliersHotel.html">HOTEL </a></li>
+                                            <li><a class="dropdown-item" href="ToolsMappingTransfer.html">TRANSFER </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="ToolsMappingTours&Activities.html">TOUR &
+                                                    ACTIVITIES</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">EXCHANGE
+                                    RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappingggsub">
+                                    <li><a class="dropdown-item" href="ToolsExchangeRatesMatrix.html">MATRIX </a></li>
+                                    <li><a class="dropdown-item" href="ToolsExchangeRatesCalculator.html">CALCULATOR</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">TRANSACTION LIMITS&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="transsub">
+                                    <li><a class="dropdown-item" href="ToolsTransactionLimitsPerTrasaction.html">PER
+                                            TRANSACTION </a></li>
+                                    <li><a class="dropdown-item" href="ToolsTransactionLimitsTotal.html">TOTAL</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="ToolsRewardsDelivery.html">REWARDS DELIVERY</a></li>
+                            <li><a class="dropdown-item" href="ToolslanguageManager.html">LANGUAGE MANAGER</a></li>
+                            <li><a class="dropdown-item" href="FAQ.pdf">FAQ</a></li>
+                            <li><a class="dropdown-item" href="#">PRESET TEXT</a></li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Settings-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>SETTINGS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">STAFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="staffnew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="staffsearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item" href="menu-new.html">ACCESS
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="accountsub1">
+                                            <li><a class="dropdown-item" href="roles.html">ROLES </a></li>
+                                            <li><a class="dropdown-item" href="menustaff.html">MENU </a></li>
+                                            <li><a class="dropdown-item" href="reportsstaff.html">REPORTS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="assignbranches.html">ASSIGN A BRANCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">BRANCHES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="branchnew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="branchsearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">EMAILS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="emails-newsetting.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="emails-searchsetting.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="mid.-office.html">MID-OFFICE ACCESS</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">NAVIGATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                    <li><a class="dropdown-item" href="sitemap.html">SYSTEM SITEMAP</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">MENUITEMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item" href="menu-new.html">NEW</a></li>
+                                            <li><a class="dropdown-item" href="menu-search.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">LOGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                                    <li><a class="dropdown-item" href="userlogs.html">USERS</a></li>
+                                    <li><a class="dropdown-item" href="emaillogs.html">EMAILS</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-3">
+                    <h5 style="font-size:14pt;font-weight: 500;">LOYALTY PROGRAM REPORT</h5>
+                </div>
+                <div class="col-md-7">
+
+                </div>
+                <div class="col-md-2">
+
+
+                </div>
+
+            </div>
+        </header>
+
+
+    </section>
+
+    <!---Body Paneel Menu items-->
+    <div class="container-fluid pt-0 p-4" id="content-pad">
+
+        <!-- First Row-->
+
+        <form>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <label>Loyalty Tier</label>
+                        <div>
+                            <select size="1"
+                                class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"
+                                name="loyaltyTierId" id="loyaltyTierId" data-live-search="true">
+                                <option value="">ALL</option>
+                                <option value="26">Diamond</option>
+                                <option value="30">FASHION ITEMS LOYALITY</option>
+                                <option value="2">Gold</option>
+                                <option value="6">Gold-Test</option>
+                                <option value="27">Golden Star</option>
+                                <option value="14">Hotel_tier</option>
+                                <option value="15">Hotel_tier_01</option>
+                                <option value="17">Hote_tier02</option>
+                                <option value="16">Loyalty_1</option>
+                                <option value="24">Loyal_tier</option>
+                                <option value="20">Mtest_tier1</option>
+                                <option value="23">New</option>
+                                <option value="10">new1</option>
+                                <option value="25">new_m</option>
+                                <option value="11">Nida_Tier_Test</option>
+                                <option value="19">PriyankaTest</option>
+                                <option value="28">Raj_test</option>
+                                <option value="4">Sell More Earn More</option>
+                                <option value="1">silver</option>
+                                <option value="31">silver_1</option>
+                                <option value="29">Swapnil_Tier</option>
+                                <option value="5">tarika_test_tier</option>
+                                <option value="12">Test_Tier_01</option>
+                                <option value="13">Test_tier_02</option>
+                                <option value="7">tier 1</option>
+                                <option value="18">Tier_03</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Agency</label>
+                        <div>
+                            <select name="agentId" id="agentId"
+                                class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"
+                                data-live-search="true">
+
+                                <option value="">Select Agent</option>
+                                <option value="162">Agent [CD0162-NewAgent] [Abc-xyz]</option>
+                                <option value="171">Agent [CD0171-agent_agent] [Main-Agent]</option>
+                                <option value="172">Agentt [CD0172-agentt_agentt] [Agentt-Agentt]</option>
+                                <option value="248">Holidays Special [CD0248-alamfaiz] [Faiz-Alam]</option>
+                                <option value="150">Main [CD0150-loyalty_main] [Main-Agent]</option>
+                                <option value="155">Main [CD0155-package_main] [Main-Package]</option>
+                                <option value="160">Main [CD0160-new_main_loyalty] [Main-Agent]</option>
+                                <option value="161">Main [CD0161-nida_main] [Main-Main]</option>
+                                <option value="164">Main [CD0164-loyal_main] [Main-Agent]</option>
+                                <option value="208">Mumbai Pune Mumbai - Qtech [CD0208-ganesh] [Ganesh-Salunkhe]
+                                </option>
+                                <option value="2">Neeraj [CD0002-neeraj] [Neeraj-Yadav]</option>
+                                <option value="167">New [CD0167-new_new] [New-New]</option>
+                                <option value="183">Nida [CD0183-Snehal02] [Snehal-Testt]</option>
+                                <option value="1">qtech [CD0001-asmita_test] [asmita-kapadi]</option>
+                                <option value="257">Qtech [CA0257-nida_multichk] [Nida-Ansari]</option>
+                                <option value="4">Qtech [CD0004-allwin] [Allwin-Pillai]</option>
+                                <option value="23">Qtech [CD0023-allwint] [Allwin-Pillai]</option>
+                                <option value="310">Qtech [CA0310-odyssey_ws] [Bhargavi-Testa]</option>
+                                <option value="71">Qtech [CD0071-allwin_loyaltyP] [Allwin-Pillai]</option>
+                                <option value="82">Qtech [CD0082-allwin_tt] [Allwin-Pillai]</option>
+                                <option value="113">Qtech [CD0113-allwin_1122] [Allwin-Pillai]</option>
+                                <option value="159">Qtech [CD0159-Loyal_agent] [LAgent-Test]</option>
+                                <option value="173">Qtech [CD0173-AgentMin] [Abc-Xyz]</option>
+                                <option value="174">Qtech [CD0174-Agent_Loyal] [Loyalty-Module]</option>
+                                <option value="176">Qtech [CD0176-MTest] [minal-minal.avhad@qtechsoftware.com]</option>
+                                <option value="180">Qtech [CD0180-Staffagent] [Minal-Test]</option>
+                                <option value="182">Qtech [CD0182-snehal06] [SnehalTest-Test]</option>
+                                <option value="205">Qtech [CD0205-supernew] [Qtech-test]</option>
+                                <option value="156">Qtechsoftware [CD0156-LoyaltyModule] [Loyalty-Agent]</option>
+                                <option value="7">rcom [CD0007-suhas] [suhas-patil]</option>
+                                <option value="255">sayali [CD0255-Sayali_BHDTest] [Sayali-Patil]</option>
+                                <option value="291">sqtech [CD0291-sqtech] [Sujay-Test]</option>
+                                <option value="48">Test [CD0048-nida_agent] [Main-Agent]</option>
+                                <option value="195">Vartak Holidazzle [CD0195-rohan] [rohan-vartak]</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>Sub Agent</label>
+                        <input type="hidden" name="subAgentAgency" id="subAgentAgency" value="">
+                        <select name="subAgentFilter" id="subAgentFilter"
+                            class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"
+                            data-live-search="true">
+
+                            <option value="">Select Sub Agent</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label>Branch</label>
+                        <div>
+                            <select class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"
+                                name="sel_branch" data-live-search="true">
+                                <option value=""> - All Branches - </option>
+                                <option label="Mumbai Branch" value="1">Mumbai Branch</option>
+                                <option label="UAE Branch" value="2">UAE Branch</option>
+                                <option label="UK Head Office" value="3">UK Head Office</option>
+                                <option label="Head Office" value="4">Head Office</option>
+                                <option label="Dubai GSA" value="5">Dubai GSA</option>
+                                <option label="London Branch" value="6">London Branch</option>
+                                <option label="Saudi Branch" value="7">Saudi Branch</option>
+                                <option label="Dubai V3 Wh" value="8">Dubai V3 Wh</option>
+                                <option label="Pune Branch" value="9">Pune Branch</option>
+                                <option label="India - GSA" value="10">India - GSA</option>
+                                <option label="Test Branch1" value="11">Test Branch1</option>
+                                <option label="Test Branch" value="13">Test Branch</option>
+                                <option label="Testffff" value="14">Testffff</option>
+                                <option label="FRANCHISE BRANCH" value="15">FRANCHISE BRANCH</option>
+                                <option label="Jcholidays" value="16">Jcholidays</option>
+                                <option label="Demo" value="17">Demo</option>
+                                <option label="malaysia" value="19">malaysia</option>
+                                <option label="GSA Iraq" value="20">GSA Iraq</option>
+                                <option label="Chennai" value="21">Chennai</option>
+                                <option label="Bangkok Branch" value="22">Bangkok Branch</option>
+                                <option label="suhas_branch" value="23">suhas_branch</option>
+                                <option label="Istanbul" value="24">Istanbul</option>
+                                <option label="hyderabad" value="25">hyderabad</option>
+                                <option label="hyderabad_suhas" value="26">hyderabad_suhas</option>
+                                <option label="branch_suhas" value="27">branch_suhas</option>
+                                <option label="New Joint Branch" value="28">New Joint Branch</option>
+                                <option label="Bahrain Branch" value="29">Bahrain Branch</option>
+                                <option label="Branch Bahrain" value="30">Branch Bahrain</option>
+                                <option label="testdddd" value="31">testdddd</option>
+                                <option label="Demo" value="32">Demo</option>
+                                <option label="HotelConfirm" value="33">HotelConfirm</option>
+                                <option label="HotelConfirm_Live" value="34">HotelConfirm_Live</option>
+                                <option label="GSA Branch" value="37">GSA Branch</option>
+                                <option label="Testpp" value="38">Testpp</option>
+                                <option label="Bolton Branch" value="41">Bolton Branch</option>
+                                <option label="World Avenue" value="42">World Avenue</option>
+                                <option label="TEST_BRANCH_A" value="43">TEST_BRANCH_A</option>
+                                <option label="TEST_BRANCH_JV_A" value="44">TEST_BRANCH_JV_A</option>
+                                <option label="TEST_BRANCH_JV_C" value="45">TEST_BRANCH_JV_C</option>
+                                <option label="world_avenue_malesia" value="46">world_avenue_malesia</option>
+                                <option label="World Avenues Malaysia" value="47">World Avenues Malaysia</option>
+                                <option label="test_branch_jv" value="48">test_branch_jv</option>
+                                <option label="1 Booking" value="49">1 Booking</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-3 form-group">
+                        <label>Redemption Date</label>
+                        <div class="input-group date input-daterange" id="receiptDate">
+                            <input class="form-control form-control-sm" name="redemption_date_start"
+                                id="redemption_date_start" value="" type="text">
+                            <span class="input-group-addon">to</span>
+                            <input class="form-control form-control-sm" name="redemption_date_end"
+                                id="redemption_date_end" value="" type="text">
+                            <span class="input-group-addon" id="b1TrashBtn">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <div class="radio radio-success radio-inline">
+                            <input type="radio" name="typeOption" id="typeOption" value="earn" checked="">
+                            <label>Points Earned</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="typeOption" id="app" value="debit">
+                            <label>Points Redeemed</label>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+                <div class="form-group col-md-12">
+                    <br>
+                    <button type="button" class="btn btn-dark btn-sm" name="sbt1" value="View Report"
+                        onclick="callLoyaltyReportAjaxSubmit('')">
+                        <i class="fa fa-eye"></i>&nbsp;&nbsp;View Report
+                    </button>
+
+                </div>
+            </div>
+        </form>
+        <br>
+        <form>
+<style>
+    td a{
+        text-decoration: none;
+        color: black;
+    }
+    td a:hover{
+        text-decoration: none!important;
+        color: black !important;
+    }
+    td{
+        font-size: 9pt !important;
+    text-transform: uppercase !important;
+    vertical-align: middle!important;
+    font-weight: normal!important;
+    font-family: "roboto" !important;
+    }
+    
+</style>
+
+            <div class="panel-body removeMargins">
+                <table style="width:14.7%;*width:97.5%; " border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td valign="top" class="fc_blue bold pointer pdd_5" style="width:40px; padding-bottom:5px;">
+                                <u><a id="dwn" class="btn btn-dark btn-sm form-group"
+                                        href="/tms/loyalty_tier.php?action=loyaltyReport&amp;run=1&amp;loyaltyTierId=&amp;agentId=&amp;subAgentAgency=&amp;subAgentFilter=&amp;sel_branch=&amp;typeOption=earn&amp;redemption_date_start=&amp;redemption_date_end=&amp;download=1&amp;sel_parent_agent=165"
+                                        target="_blank" title="Click to download XL sheet">
+                                        <i class="fa fa-download"></i>&nbsp;&nbsp;Download Excel
+                                    </a> </u>
+
+                                <u><a id="dwn" class="btn btn-dark btn-sm form-group"
+                                        href="/tms/loyalty_tier.php?action=loyaltyReport&amp;run=1&amp;loyaltyTierId=&amp;agentId=&amp;subAgentAgency=&amp;subAgentFilter=&amp;sel_branch=&amp;typeOption=earn&amp;redemption_date_start=&amp;redemption_date_end=&amp;print=1"
+                                        target="_blank" title="">
+                                      
+                                        <i class="fa fa-print"></i>&nbsp;Print
+                                    </a> </u>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table-responsive" style="margin-left: -50px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td ><a class="unique_agent" onclick="$('.data_1').slideToggle();"
+                                        data-unique="165" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a> &nbsp;Comp[CD0165-sub_loyalty][Sub
+                                    Agent]</td>
+                                <td >LOYALTY TIER ASSIGNED : &nbsp;Nida_Tier_Test </td>
+                                <td>AVAILABLE POINTS :&nbsp;1808.42</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;1530.778</td>
+                                <td>TOTAL POINTS EARNED :&nbsp;3339.198</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_1 table-responsive" style="display: none;">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2244&amp;reservationId=OT1994&amp;service=hotel#TD1802244">
+                                        TD1802244 </a></td>
+                                <td align="center" class="brdr">13640.95 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">682.047</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2243&amp;reservationId=OT1992&amp;service=hotel#TD1602243">
+                                        TD1602243 </a></td>
+                                <td align="center" class="brdr">920.263 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">9.203</td>
+                                <td align="center" class="brdr">13-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">3</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2247&amp;reservationId=OT1996&amp;service=hotel#TD1802247">
+                                        TD1802247 </a></td>
+                                <td align="center" class="brdr">13640.95 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">682.047</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">4</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2248&amp;reservationId=OT1997&amp;service=hotel#TD1802248">
+                                        TD1802248 </a></td>
+                                <td align="center" class="brdr">13640.95 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">682.047</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">5</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2252&amp;reservationId=OT2001&amp;service=hotel#TD1802252">
+                                        TD1802252 </a></td>
+                                <td align="center" class="brdr">13640.95 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">682.047</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">6</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2305&amp;reservationId=OT2080&amp;service=hotel#TD1802305">
+                                        TD1802305 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="margin-left: -64px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive"style="margin-left: -50px;">
+                        <tbody>
+                            <tr align="left">
+                                <td ><a class="unique_agent" onclick="$('.data_2').slideToggle();"
+                                        data-unique="164" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a> &nbsp;Main[CD0164-loyal_main][Main
+                                    Agent]</td>
+                                <td >LOYALTY TIER ASSIGNED : &nbsp;Nida_Tier_Test </td>
+                                <td >AVAILABLE POINTS :&nbsp;0</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;8.953</td>
+                                <td >TOTAL POINTS EARNED :&nbsp;8.953</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_2 table-responsive" style="display:none;">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2229&amp;reservationId=OT1979&amp;service=hotel#TD1602229">
+                                        TD1602229 </a></td>
+                                <td align="center" class="brdr">895.27 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">8.953</td>
+                                <td align="center" class="brdr"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="margin-left: -58px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td ><a class="unique_agent" onclick="$('.data_3').slideToggle();"
+                                        data-unique="162" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a> &nbsp;Agent[CD0162-NewAgent][Abc Xyz]
+                                </td>
+                                <td >LOYALTY TIER ASSIGNED : &nbsp;Mtest_tier1 </td>
+                                <td >AVAILABLE POINTS :&nbsp;5.557</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;65.506</td>
+                                <td >TOTAL POINTS EARNED :&nbsp;71.063</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_3 table-responsive" style="display:none;">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2224&amp;reservationId=OT1962&amp;service=hotel#02224">
+                                        02224 </a></td>
+                                <td align="center" class="brdr">42.25 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">4.225</td>
+                                <td align="center" class="brdr">15-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2214&amp;reservationId=OT1943&amp;service=hotel#TD1602214">
+                                        TD1602214 </a></td>
+                                <td align="center" class="brdr">20.48 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">2.048</td>
+                                <td align="center" class="brdr">10-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">3</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2215&amp;reservationId=OT1945&amp;service=hotel#02215">
+                                        02215 </a></td>
+                                <td align="center" class="brdr">45.59 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">4.559</td>
+                                <td align="center" class="brdr">10-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">4</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2274&amp;reservationId=OT2034&amp;service=hotel#TD1802274">
+                                        TD1802274 </a></td>
+                                <td align="center" class="brdr">183.6 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">18.36</td>
+                                <td align="center" class="brdr">15-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">5</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2277&amp;reservationId=OT2047&amp;service=hotel#TD1802277">
+                                        TD1802277 </a></td>
+                                <td align="center" class="brdr">208.08 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">20.808</td>
+                                <td align="center" class="brdr">15-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">6</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2298&amp;reservationId=OT2070&amp;service=hotel#TD1602298">
+                                        TD1602298 </a></td>
+                                <td align="center" class="brdr">65.52 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">6.552</td>
+                                <td align="center" class="brdr">16-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">7</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2301&amp;reservationId=OT2076&amp;service=hotel#02301">
+                                        02301 </a></td>
+                                <td align="center" class="brdr">32.35 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">3.235</td>
+                                <td align="center" class="brdr">15-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">8</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2306&amp;reservationId=OT2081&amp;service=hotel#02306">
+                                        02306 </a></td>
+                                <td align="center" class="brdr">53.41 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">5.341</td>
+                                <td align="center" class="brdr">16-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">9</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2307&amp;reservationId=OT2082&amp;service=hotel#02307">
+                                        02307 </a></td>
+                                <td align="center" class="brdr">59.35 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">5.935</td>
+                                <td align="center" class="brdr">16-May-2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="margin-left: -62px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td ><a class="unique_agent" onclick="$('.data_4').slideToggle();"
+                                        data-unique="163" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a> &nbsp;Qtech[CD0163-Muser][Abc Xyz]
+                                </td>
+                                <td >LOYALTY TIER ASSIGNED : &nbsp;Mtest_tier1 </td>
+                                <td >AVAILABLE POINTS :&nbsp;0</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;7.008</td>
+                                <td >TOTAL POINTS EARNED :&nbsp;7.008</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_4 table-responsive" style="display:none;">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2223&amp;reservationId=OT1961&amp;service=hotel#02223">
+                                        02223 </a></td>
+                                <td align="center" class="brdr">56.04 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">5.604</td>
+                                <td align="center" class="brdr">10-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2269&amp;reservationId=OT2023&amp;service=hotel#TD1602269">
+                                        TD1602269 </a></td>
+                                <td align="center" class="brdr">14.04 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">1.404</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="margin-left: -63px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td><a class="unique_agent" onclick="$('.data_5').slideToggle();"
+                                        data-unique="156" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a>
+                                    &nbsp;Qtechsoftware[CD0156-LoyaltyModule][Loyalty Agent]</td>
+                                <td >LOYALTY TIER ASSIGNED : &nbsp;PriyankaTest </td>
+                                <td>AVAILABLE POINTS :&nbsp;0</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;64.78</td>
+                                <td >TOTAL POINTS EARNED :&nbsp;64.78</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_5 table-responsive" style="display:none;">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2209&amp;reservationId=OT1928&amp;service=hotel#02209">
+                                        02209 </a></td>
+                                <td align="center" class="brdr">45.42 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">45.42</td>
+                                <td align="center" class="brdr">24-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2210&amp;reservationId=OT1929&amp;service=hotel#02210">
+                                        02210 </a></td>
+                                <td align="center" class="brdr">19.36 &nbsp;&nbsp; USD</td>
+                                <td align="center" class="brdr">19.36</td>
+                                <td align="center" class="brdr">24-May-2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="margin-left: -54px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td><a class="unique_agent" onclick="$('.data_6').slideToggle();"
+                                        data-unique="161" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a> &nbsp;Main[CD0161-nida_main][Main
+                                    Main]</td>
+                                <td>LOYALTY TIER ASSIGNED : &nbsp;Nida_Tier_Test </td>
+                                <td >AVAILABLE POINTS :&nbsp;130</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;12.234</td>
+                                <td>TOTAL POINTS EARNED :&nbsp;142.234</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_6 table-responsive" style="display:none;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2208&amp;reservationId=OT1926&amp;service=hotel#TD1602208">
+                                        TD1602208 </a></td>
+                                <td align="center" class="brdr">1342.36 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">13.424</td>
+                                <td align="center" class="brdr">10-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2205&amp;reservationId=OT1916&amp;service=hotel#TD1602205">
+                                        TD1602205 </a></td>
+                                <td align="center" class="brdr">895.27 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">8.953</td>
+                                <td align="center" class="brdr">10-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">3</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2204&amp;reservationId=OT1914&amp;service=hotel#TD1602204">
+                                        TD1602204 </a></td>
+                                <td align="center" class="brdr">895.27 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">8.953</td>
+                                <td align="center" class="brdr">10-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">4</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2201&amp;reservationId=OT1912&amp;service=hotel#TD1602201">
+                                        TD1602201 </a></td>
+                                <td align="center" class="brdr">895.27 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">8.953</td>
+                                <td align="center" class="brdr">09-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">5</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2198&amp;reservationId=OT1910&amp;service=hotel#TD1602198">
+                                        TD1602198 </a></td>
+                                <td align="center" class="brdr">895.27 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">8.953</td>
+                                <td align="center" class="brdr">09-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">6</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2640&amp;reservationId=OT2292&amp;service=hotel#TD902640">
+                                        TD902640 </a></td>
+                                <td align="center" class="brdr">150 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">7.5</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">7</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2644&amp;reservationId=OT2293&amp;service=hotel#TD902644">
+                                        TD902644 </a></td>
+                                <td align="center" class="brdr">150 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">7.5</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">8</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2656&amp;reservationId=OT2297&amp;service=hotel#TD802656">
+                                        TD802656 </a></td>
+                                <td align="center" class="brdr">10 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">0.5</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">9</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2733&amp;reservationId=OT2350&amp;service=hotel#TD902733">
+                                        TD902733 </a></td>
+                                <td align="center" class="brdr">150 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">7.5</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">10</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2772&amp;reservationId=OT2374&amp;service=hotel#TD802772">
+                                        TD802772 </a></td>
+                                <td align="center" class="brdr">1200 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">60</td>
+                                <td align="center" class="brdr">23-Mar-2023</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">11</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2810&amp;reservationId=OT2391&amp;service=hotel#TD902810">
+                                        TD902810 </a></td>
+                                <td align="center" class="brdr">200 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">10</td>
+                                <td align="center" class="brdr">23-Mar-2023</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="margin-left: -45px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td ><a class="unique_agent" onclick="$('.data_7').slideToggle();"
+                                        data-unique="171" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a> &nbsp;Agent[CD0171-agent_agent][Main
+                                    Agent]</td>
+                                <td >LOYALTY TIER ASSIGNED : &nbsp;Nida_Tier_Test </td>
+                                <td >AVAILABLE POINTS :&nbsp;2315.688</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;1543.792</td>
+                                <td >TOTAL POINTS EARNED :&nbsp;3859.48</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_7 table-responsive" style="display:none;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2328&amp;reservationId=OT2103&amp;service=hotel#TD1802328">
+                                        TD1802328 </a></td>
+                                <td align="center" class="brdr">15437.92 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">771.896</td>
+                                <td align="center" class="brdr">17-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2329&amp;reservationId=OT2104&amp;service=hotel#TD1802329">
+                                        TD1802329 </a></td>
+                                <td align="center" class="brdr">15437.92 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">771.896</td>
+                                <td align="center" class="brdr">17-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">3</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2331&amp;reservationId=OT2106&amp;service=hotel#TD1802331">
+                                        TD1802331 </a></td>
+                                <td align="center" class="brdr">15437.92 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">771.896</td>
+                                <td align="center" class="brdr">18-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">4</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2332&amp;reservationId=OT2107&amp;service=hotel#TD1802332">
+                                        TD1802332 </a></td>
+                                <td align="center" class="brdr">15437.92 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">771.896</td>
+                                <td align="center" class="brdr">18-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">5</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2333&amp;reservationId=OT2109&amp;service=hotel#TD1802333">
+                                        TD1802333 </a></td>
+                                <td align="center" class="brdr">15437.92 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">771.896</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="margin-left: -41px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td><a class="unique_agent" onclick="$('.data_8').slideToggle();"
+                                        data-unique="172" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a>
+                                    &nbsp;Agentt[CD0172-agentt_agentt][Agentt Agentt]</td>
+                                <td>LOYALTY TIER ASSIGNED : &nbsp;Nida_Tier_Test </td>
+                                <td >AVAILABLE POINTS :&nbsp;4937.476</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;-1928.441</td>
+                                <td >TOTAL POINTS EARNED :&nbsp;3009.035</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_8 table-responsive" style="display:none;">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2334&amp;reservationId=OT2110&amp;service=hotel#TD1802334">
+                                        TD1802334 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">17-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2335&amp;reservationId=OT2111&amp;service=hotel#TD1802335">
+                                        TD1802335 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">17-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">3</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2336&amp;reservationId=OT2112&amp;service=hotel#TD1802336">
+                                        TD1802336 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">18-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">4</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2356&amp;reservationId=OT2132&amp;service=hotel#TD1802356">
+                                        TD1802356 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">22-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">5</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2361&amp;reservationId=OT2137&amp;service=hotel#TD1802361">
+                                        TD1802361 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="margin-left: -59px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td ><a class="unique_agent" onclick="$('.data_9').slideToggle();"
+                                        data-unique="173" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a> &nbsp;Qtech[CD0173-AgentMin][Abc Xyz]
+                                </td>
+                                <td >LOYALTY TIER ASSIGNED : &nbsp;New </td>
+                                <td >AVAILABLE POINTS :&nbsp;266.445</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;71.61</td>
+                                <td >TOTAL POINTS EARNED :&nbsp;338.055</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_9 table-responsive" style="display:none;">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2344&amp;reservationId=OT2120&amp;service=hotel#02344">
+                                        02344 </a></td>
+                                <td align="center" class="brdr">125.81 &nbsp;&nbsp; SAR</td>
+                                <td align="center" class="brdr">62.905</td>
+                                <td align="center" class="brdr">18-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2346&amp;reservationId=OT2122&amp;service=hotel#02346">
+                                        02346 </a></td>
+                                <td align="center" class="brdr">125.81 &nbsp;&nbsp; SAR</td>
+                                <td align="center" class="brdr">62.905</td>
+                                <td align="center" class="brdr">18-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">3</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2347&amp;reservationId=OT2123&amp;service=hotel#02347">
+                                        02347 </a></td>
+                                <td align="center" class="brdr">160.28 &nbsp;&nbsp; SAR</td>
+                                <td align="center" class="brdr">80.14</td>
+                                <td align="center" class="brdr">18-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">4</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2355&amp;reservationId=OT2131&amp;service=hotel#02355">
+                                        02355 </a></td>
+                                <td align="center" class="brdr">138.4 &nbsp;&nbsp; SAR</td>
+                                <td align="center" class="brdr">69.2</td>
+                                <td align="center" class="brdr">18-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">5</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2358&amp;reservationId=OT2134&amp;service=hotel#02358">
+                                        02358 </a></td>
+                                <td align="center" class="brdr">125.81 &nbsp;&nbsp; SAR</td>
+                                <td align="center" class="brdr">62.905</td>
+                                <td align="center" class="brdr">18-May-2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="margin-left: -42px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td ><a class="unique_agent" onclick="$('.data_10').slideToggle();"
+                                        data-unique="2" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a> &nbsp;Neeraj[CD0002-neeraj][Neeraj
+                                    Yadav]</td>
+                                <td>LOYALTY TIER ASSIGNED : &nbsp;Nida_Tier_Test </td>
+                                <td >AVAILABLE POINTS :&nbsp;7629.864</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;-999.987</td>
+                                <td >TOTAL POINTS EARNED :&nbsp;6629.877</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_10 table-responsive" style="display:none;">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2393&amp;reservationId=OT2169&amp;service=hotel#TD1802393">
+                                        TD1802393 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">22-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2394&amp;reservationId=OT2170&amp;service=hotel#TD1802394">
+                                        TD1802394 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">22-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">3</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2392&amp;reservationId=OT2168&amp;service=hotel#TD1802392">
+                                        TD1802392 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">22-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">4</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2348&amp;reservationId=OT2124&amp;service=hotel#TD1802348">
+                                        TD1802348 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">18-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">5</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2390&amp;reservationId=OT2166&amp;service=hotel#TD1802390">
+                                        TD1802390 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">22-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">6</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2360&amp;reservationId=OT2136&amp;service=hotel#TD1802360">
+                                        TD1802360 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">7</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2397&amp;reservationId=OT2173&amp;service=hotel#TD1802397">
+                                        TD1802397 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">22-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">8</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2398&amp;reservationId=OT2174&amp;service=hotel#TD1802398">
+                                        TD1802398 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">22-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">9</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2400&amp;reservationId=OT2176&amp;service=hotel#TD1802400">
+                                        TD1802400 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">22-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">10</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2407&amp;reservationId=OT2183&amp;service=hotel#TD1802407">
+                                        TD1802407 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">24-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">11</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2408&amp;reservationId=OT2184&amp;service=hotel#TD1802408">
+                                        TD1802408 </a></td>
+                                <td align="center" class="brdr">12036.13 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">601.807</td>
+                                <td align="center" class="brdr">24-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">12</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2814&amp;reservationId=OT2392&amp;service=hotel#TD902814">
+                                        TD902814 </a></td>
+                                <td align="center" class="brdr">200 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">10</td>
+                                <td align="center" class="brdr">23-Mar-2023</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive"style="margin-left: -60px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td ><a class="unique_agent" onclick="$('.data_11').slideToggle();"
+                                        data-unique="174" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a>
+                                    &nbsp;Qtech[CD0174-Agent_Loyal][Loyalty Module]</td>
+                                <td >LOYALTY TIER ASSIGNED : &nbsp;Loyal_tier </td>
+                                <td>AVAILABLE POINTS :&nbsp;0</td>
+                                <td >POINTS REDEEMED TILL NOW :&nbsp;261.05</td>
+                                <td >TOTAL POINTS EARNED :&nbsp;261.05</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_11 table-responsive" style="display:none;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2414&amp;reservationId=OT2190&amp;service=hotel#TD1802414">
+                                        TD1802414 </a></td>
+                                <td align="center" class="brdr">13052.52 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">130.525</td>
+                                <td align="center" class="brdr">24-May-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2419&amp;reservationId=OT2195&amp;service=hotel#TD1802419">
+                                        TD1802419 </a></td>
+                                <td align="center" class="brdr">13052.52 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">130.525</td>
+                                <td align="center" class="brdr">24-May-2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive"style="margin-left: -62px;">
+                    <table width="100%" cellpadding="5" border="0" style="font-size:13px; margin-bottom:0px;"
+                        class="table table-responsive">
+                        <tbody>
+                            <tr align="left">
+                                <td><a class="unique_agent" onclick="$('.data_12').slideToggle();"
+                                        data-unique="182" style="text-decoration:none;"><img
+                                            src="plus_white_img.jpg"></a>
+                                    &nbsp;Qtech[CD0182-snehal06][SnehalTest Test]</td>
+                                <td>LOYALTY TIER ASSIGNED : &nbsp;Gold-Test </td>
+                                <td>AVAILABLE POINTS :&nbsp;0</td>
+                                <td>POINTS REDEEMED TILL NOW :&nbsp;3.568</td>
+                                <td>TOTAL POINTS EARNED :&nbsp;3.568</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="datapop data_12 table-responsive" style="display:none;">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0"
+                        class="table table-responsive dataTable table-bordered table-striped  alignTbl">
+                        <thead>
+                            <tr class="row_header">
+                                <th align="center" class="bold padd_5 brdr" width="15">#</th>
+                                <th align="center" class="bold padd_5 brdr">Booking ID</th>
+                                <th align="center" class="bold padd_5 brdr">Booking Amount</th>
+                                <th align="center" class="bold padd_5 brdr">Points Earned</th>
+                                <th align="center" class="bold padd_5 brdr">Redemption Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">1</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2706&amp;reservationId=OT2322&amp;service=hotel#02706">
+                                        02706 </a></td>
+                                <td align="center" class="brdr">1228.2 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">1.967</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                            <tr class="phps_row_0">
+                                <td align="center" class="brdr" width="15">2</td>
+                                <td height="20px" align="center" class="brdr"><a title="Online Booking"
+                                        data-toggle="tooltip" data-placement="top"
+                                        href="booking_detail.php?booking_id=2714&amp;reservationId=OT2338&amp;service=hotel#TD802714">
+                                        TD802714 </a></td>
+                                <td align="center" class="brdr">1000 &nbsp;&nbsp; INR</td>
+                                <td align="center" class="brdr">1.601</td>
+                                <td align="center" class="brdr">18-Jun-2019</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </form>
+
+
+
+
+        <!-- End -->
+
+
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+
+
+<script>
+
+    // For Reports Management Sales Comparison
+
+    const redemption_date_start = flatpickr("#redemption_date_start", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const redemption_date_end = flatpickr("#redemption_date_end", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const b1TrashBtn = document.getElementById("b1TrashBtn");
+    b1TrashBtn.addEventListener("click", function () {
+        redemption_date_start.clear();
+        redemption_date_end.clear();
+
+    });
+
+
+    const service_from_date = flatpickr("#service_from_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const service_to_date = flatpickr("#service_to_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const b2TrashBtn = document.getElementById("b2TrashBtn");
+    b2TrashBtn.addEventListener("click", function () {
+        service_from_date.clear();
+        service_to_date.clear();
+
+    });
+
+
+    const service_voucher_from_date = flatpickr("#service_voucher_from_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+    const service_voucher_to_date = flatpickr("#service_voucher_to_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+    const b3TrashBtn = document.getElementById("b3TrashBtn");
+    b3TrashBtn.addEventListener("click", function () {
+        service_voucher_from_date.clear();
+        service_voucher_to_date.clear();
+
+    });
+
+</script>
+
+</html>
