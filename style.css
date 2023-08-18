@@ -330,7 +330,9 @@ text-decoration: underline !important;
 .label-default {
   background-color: #777;
 }
-
+.label-info {
+  background-color: #5bc0de;
+}
 .iconCont {
   width: 59px;
   margin: 0px auto;
@@ -1040,7 +1042,7 @@ tr.tblHeading {
   padding: 5px;
   font-size: 10px;
   line-height: 1;
-  color: #fff;
+  color: #fff !important;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
