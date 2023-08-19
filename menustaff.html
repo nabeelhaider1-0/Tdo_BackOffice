@@ -1030,7 +1030,7 @@
 <form>
         <div class="row mt-2 mb-4">
             <div class="col-md-4 form-group"><label>Select Profile</label><select
-                    class="form-control selectpicker show-menu-arrow bs-select-hidden" name="psa_user_profile"
+                    class="form-control form-control-sm selectpicker show-menu-arrow bs-select-hidden" name="psa_user_profile"
                     id="psa_user_profile" onchange="sel_chk()">
                     <option value="">-Select-</option>
                     <option value="33">Accounts Menu</option>
@@ -1062,9 +1062,9 @@
 
         <!-- 2Nd Row-->
 
-        <div class="col-md-12"><br>
+        <div class="col-md-12 mb-2">
             <div class="checkbox checkbox-success checkbox-inline">&nbsp;<input type="checkbox" id="chk_all"
-                    name="chk_all" onclick="check();">&nbsp;<label>Select All</label></div>
+                    name="chk_all" onclick="check();">&nbsp;<label style="  font-family: MONTSERRAT;font-size: 12px;font-weight: 600;">Select All</label></div>
         </div>
 
         <!--2nd Row-->
@@ -3987,24 +3987,37 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
-<script>
-    const selectAll=document.querySelector("#selectAll");
 
-    const chkbxOptions=document.querySelectorAll(".select-option");
-    
-    function selectAllChkboxes(){
-        const isChecked=selectAll.checked;
-        for(let i=0;i<chkbxOptions.length;i++){
-            chkbxOptions[i].checked=isChecked; 
-        }
+
+<script type="text/javascript">
+    function check(){
+    	for (var i=0;i<document.forms[0].elements.length;i++)
+    	{
+    		var e=document.forms[0].elements[i];
+    		
+    		if ((e.name != 'chk_all') && (e.type=='checkbox'))
+    		{
+    			e.checked=document.forms[0].chk_all.checked;
+    		}
+    	}
+    }
+    function checkSection(thisVal){
+ 	    var menuId = thisVal.id;
+ 	    console.log(thisVal.checked+ " "+menuId);
+ 	    if(thisVal.checked)
+ 	    {
+    		$("#nestable li.dd-item[data-id='"+menuId+"'] input").prop('checked', true);
+    	}
+    	else
+    	{
+    		$("#nestable li.dd-item[data-id='"+menuId+"'] input").prop('checked', false);
+    	}
+    }
+    function sel_chk(){
+       var profile_id = $('#psa_user_profile').val();
+       window.location.href = "profile_menu.php?action=show_chk&profile_id="+profile_id;
     }
 
-    selectAll.addEventListner("change",()=>{
-        Array.from(chkbxOptions).map((chkbx)=>{
-        chkbx.checked=selectAll.checked;
-        })
-    })
-
-</script>
+    </script>
 
 </html>
