@@ -1902,10 +1902,10 @@
         </div>
         <div class="col-md-2">
           <div class="form-group col-md-9 col-sm-12 col-xs-6 pull-right search-box-1" style="width: 221px;">
-            <select onclick="getVal()" data-actions-box="true" data-live-search="true"
+            <select onchange="javascript:addColumn()" data-actions-box="true" data-live-search="true"
               title="Add Column" name="add_column" id="add_column"
               class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden" multiple="">
-              <option value="service_name" id="service_name">Service Name</option>
+              <option value="hotel_name" id="service_name">Service Name</option>
               <option value="hotel_confirmation_no">Hotel Confirmation #</option>
               <option value="hotel_cancel_confirmation_no">Hotel Cancel Confirmation #</option>
               <option value="checkout_service_date">Checkout Date</option>
@@ -1982,7 +1982,7 @@
                     <th id="branchcol">SERVICE NAME</th>
                     <th>SUPPLIER REF. #</th>
                     <th>TRAVELER NAME</th>
-                    <th id="accc">ACTIONS</th>
+                    <th class="no-sort lastColumn sorting_disabled" id="lastColumn">ACTIONS</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -5888,7 +5888,7 @@
 </script>
 
 
-<script>
+<!-- <script>
   function getVal(){
     let selectOption = $("#add_column").val();
     if (selectOption == "#service_name") {
@@ -5900,7 +5900,57 @@
       this.style.display = "none"
     });}
   }
-</script>
+</script> -->
+<script>
+	
+	function addColumn(){		
+		$('.addedCol').remove();
+		var foo = [];
+		var footext = [];
+		$('#add_column :selected').each(function(i, selected){ 
+		  foo[i] = $(selected).val(); 
+		  footext[i] = $(selected).text(); 
+		});
+		for(i=0;i<foo.length;i++){
+			$('#lastColumn').before('<th class="addedCol">'+footext[i]+'</th>')
+			rowdata(foo[i]);
+		}
+	}
+	function rowdata(colname){
+		var json_data = JSON.parse('[{"hotel_name":"-","booking_code":"TD901536","confirmation_number":"-","consultant_id":"asmi_003","supplier_id":"localtransfer","voucher_date":"-"},{"hotel_name":"Pack_Hotel1","booking_code":"TD801792","confirmation_number":"Test1234","consultant_id":"-","supplier_id":"S000000001","voucher_date":"-"},{"hotel_name":"Pack_Hotel1","booking_code":"TD802560","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000001","voucher_date":"-"},{"hotel_name":"-","booking_code":"03840","confirmation_number":"-","consultant_id":"TestU","supplier_id":"","voucher_date":"-"},{"hotel_name":"-","booking_code":"04096","confirmation_number":"-","consultant_id":"-","supplier_id":"","voucher_date":"-"},{"hotel_name":"-","booking_code":"04352","confirmation_number":"-","consultant_id":"v3otramslive","supplier_id":"","voucher_date":"-"},{"hotel_name":"SayaliHotel1","booking_code":"TD804608","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"-","booking_code":"TD1204864","confirmation_number":"-","consultant_id":"v3otramslive","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"NidaHotel1","booking_code":"TD805120","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"SayaliHotel1","booking_code":"TD805632","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"-","booking_code":"05888","confirmation_number":"-","consultant_id":"-","supplier_id":"","voucher_date":"-"},{"hotel_name":"-","booking_code":"TD1306144","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"-","booking_code":"06400","confirmation_number":"-","consultant_id":"v3otramslive","supplier_id":"","voucher_date":"-"},{"hotel_name":"-","booking_code":"06656","confirmation_number":"-","consultant_id":"v3otramslive","supplier_id":"","voucher_date":"-"},{"hotel_name":"Hotel_AED","booking_code":"TD806912","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"-","booking_code":"TD1207168","confirmation_number":"-","consultant_id":"v3otramslive","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"-","booking_code":"07424","confirmation_number":"-","consultant_id":"-","supplier_id":"","voucher_date":"-"},{"hotel_name":"-","booking_code":"07680","confirmation_number":"-","consultant_id":"-","supplier_id":"","voucher_date":"-"},{"hotel_name":"Hotel_Policy","booking_code":"TD807936","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"Hotel_Policy","booking_code":"TD808192","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"Hotel_AED","booking_code":"TD808448","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"-","booking_code":"08704","confirmation_number":"-","consultant_id":"-","supplier_id":"","voucher_date":"-"},{"hotel_name":"-","booking_code":"TD1208960","confirmation_number":"-","consultant_id":"v3otramslive","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"Hotel_AEDTest","booking_code":"TD809216","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"},{"hotel_name":"NagpurHotel1","booking_code":"TD809472","confirmation_number":"-","consultant_id":"-","supplier_id":"S000000003","voucher_date":"-"}]');
+		var strt_count = parseInt('0');
+		var end_count =parseInt(strt_count)+25;
+		var arrctn="";
+		strt_count = strt_count + 1;
+		for(j=0,k=strt_count;j<json_data.length;j++,k++){
+			if(colname == 'hotel_name'){
+				$('.actionlink'+k).before('<td class="addedCol">'+json_data[j]['hotel_name']+'</td>')
+			}
+			if(colname == 'hotel_confirmation_no'){
+				$('.actionlink'+k).before('<td class="addedCol">'+json_data[j]['confirmation_number']+'</td>')
+			}
+			if(colname == 'consultant'){
+				$('.actionlink'+k).before('<td class="addedCol">'+json_data[j]['consultant_id']+'</td>')
+			}
+			if(colname == 'supplier_id'){
+				$('.actionlink'+k).before('<td class="addedCol">'+json_data[j]['supplier_id']+'</td>')
+			}
+			if(colname == 'voucher_date'){
+				if(json_data[j]['voucher_date'] == '-'){
+					$('.actionlink'+k).before('<td class="addedCol">'+json_data[j]['voucher_date']+'</td>')
+				}else{
+					var objDate = new Date(json_data[j]['voucher_date']);
+					var res = json_data[j]['voucher_date'].split("-");
+					var month = objDate.toLocaleString("en-us", { month: "short" });
+					$('.actionlink'+k).before('<td class="addedCol"><div class="dateWrapper"><div class="onlyDate">'+res[2]+'</div><div class="monthYear">'+month+'</br>'+res[0]+'</div></div></td>')
+				}
+			}
+		} 
+	}
 
+		
+
+   
+    </script>
 
 </html>
