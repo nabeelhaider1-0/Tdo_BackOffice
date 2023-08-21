@@ -1902,10 +1902,10 @@
         </div>
         <div class="col-md-2">
           <div class="form-group col-md-9 col-sm-12 col-xs-6 pull-right search-box-1" style="width: 221px;">
-            <select onchange="javascript:add_column()" data-actions-box="true" data-live-search="true"
+            <select onclick="getVal()" data-actions-box="true" data-live-search="true"
               title="Add Column" name="add_column" id="add_column"
               class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden" multiple="">
-              <option value="hotel_name">Service Name</option>
+              <option value="service_name" id="service_name">Service Name</option>
               <option value="hotel_confirmation_no">Hotel Confirmation #</option>
               <option value="hotel_cancel_confirmation_no">Hotel Cancel Confirmation #</option>
               <option value="checkout_service_date">Checkout Date</option>
@@ -1974,12 +1974,12 @@
                     <th>SERVICE DATE</th>
                     <th>DEADLINE DATE</th>
                     <th>SUPPLIER</th>
-                    <!-- <th id="servicenamecol">SERVICE NAME</th>
+                    <th id="servicenamecol">SERVICE NAME</th>
                     <th id="hotelconfirmationcol">SERVICE NAME</th>
                     <th id="hotelcancelconfirmationcol">SERVICE NAME</th>
                     <th id="checkoutdatecol">SERVICE NAME</th>
                     <th id="voucherdatecol">SERVICE NAME</th>
-                    <th id="branchcol">SERVICE NAME</th> -->
+                    <th id="branchcol">SERVICE NAME</th>
                     <th>SUPPLIER REF. #</th>
                     <th>TRAVELER NAME</th>
                     <th id="accc">ACTIONS</th>
@@ -5888,37 +5888,19 @@
 </script>
 
 
-<!-- <script>
+<script>
   function getVal(){
     let selectOption = $("#add_column").val();
-    if (selectOption == "servicenamecol") {
-    $('.servicenamecol').each(function() {
+    if (selectOption == "#service_name") {
+    $('#servicenamecol').each(function() {
       this.style.display = "table-cell"
     });}
     else {
-    $('.servicenamecol').each(function() {
+    $('#servicenamecol').each(function() {
       this.style.display = "none"
     });}
   }
-</script> -->
-<script>
-  function addColumn() {
-    $('.addedCol').remove();
-    var foo = [];
-    var footext = [];
-    $('#add_column :selected').each(function (i, selected) {
-      foo[i] = $(selected).val();
-      footext[i] = $(selected).text();
-    });
-    for (i = 0; i < foo.length; i++) {
-      $('#lastColumn').before('<th class="addedCol">' + footext[i] + '</th>')
-      rowdata(foo[i]);
-    }
-  }
-
-
-
-
 </script>
+
 
 </html>
