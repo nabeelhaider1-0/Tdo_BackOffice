@@ -421,7 +421,7 @@ text-decoration: underline !important;
 }
 
 .contLeft {
-
+  height: 59px;
   overflow: hidden;
   width: 146px;
   float: left;
