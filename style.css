@@ -1152,7 +1152,9 @@ ul.mailbox-list li a {
 .pagination-sm >li >a{
   font-size: 12px;
 }
-
+.note-icon-caret{
+  display: none;
+}
 
 
 @media print {

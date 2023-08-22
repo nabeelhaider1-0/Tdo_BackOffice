@@ -1146,10 +1146,24 @@
           ['color', ['color','backcolor']],
           ['para', ['ul', 'ol', 'paragraph','style','height']],
           ['insert', ['link', 'picture', 'video','table','  hr',]],
-          ['view', ['fullscreen', 'codeview', 'help']]
+          ['view', ['fullscreen', 'codeview', 'help']],
+          ['custom', ['cut', 'copy', 'paste']],
        
       ],
-   
+    buttons: {
+        cut: function() {
+          // Implement cut functionality
+          document.execCommand('cut', false, null);
+        },
+        copy: function() {
+          // Implement copy functionality
+          document.execCommand('copy', false, null);
+        },
+        paste: function() {
+          // Implement paste functionality
+          document.execCommand('paste', false, null);
+        },
+      }
 
     }); 
       </script>
