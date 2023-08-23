@@ -1732,6 +1732,29 @@
         </div>
       </div>
 
+      <div class="row mt-4 mb-5">
+        <div class="form-group col-md-3">
+          <div class="card chart-container">
+            <canvas id="linechart"></canvas>
+          </div>
+        </div>
+        <div class="form-group col-md-3">
+          <div class="card chart-container">
+            <canvas id="barchart"></canvas>
+          </div>
+        </div>
+        <div class="form-group col-md-3">
+          <div class="card chart-container">
+            <canvas id="piechart"></canvas>
+          </div>
+        </div>
+        <div class="form-group col-md-3">
+          <div class="card chart-container">
+            <canvas id="donotchart"></canvas>
+          </div>
+        </div>
+      </div>
+
       <!-- 7th Row-->
 
       <div class="row mt-2 ">
@@ -5698,10 +5721,109 @@
   </script>
 
 </body>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js">
+</script>
+
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
+
+
+<script>
+
+   const line = document.getElementById("linechart").getContext('2d');
+      const myChart1 = new Chart(line, {
+        type: 'line',
+        data: {
+          labels: ["sunday", "monday", "tuesday",
+          "wednesday", "thursday", "friday", "saturday"],
+          datasets: [{
+            label: 'Last week',
+            backgroundColor: 'rgba(161, 198, 247, 1)',
+            borderColor: 'rgb(47, 128, 237)',
+            data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+              }
+            }]
+          }
+        },
+      });
+
+
+
+
+
+    const bar = document.getElementById("barchart").getContext('2d');
+    const myChart2 = new Chart(bar, {
+      type: 'bar',
+      data: {
+        labels: ["booked", "rejected", "hotel", "flights",
+        "travel", "expenses", "packages"],
+        datasets: [{
+          label: 'Booking Summary',
+          backgroundColor: 'rgba(161, 198, 247, 1)',
+          borderColor: 'rgb(47, 128, 237)',
+          data: [300, 400, 200, 500, 800, 900, 200],
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+            }
+          }]
+        }
+      },
+    });
+
+
+    const pie = document.getElementById("piechart").getContext('2d');
+      const myChart3 = new Chart(pie, {
+        type: 'pie',
+        data: {
+          labels: ["booked", "hotel", "flights",
+        "travel", "expenses", "packages"],
+          datasets: [{
+            label: 'Booking Summary',
+            backgroundColor:[ 'red','yellow','purple','green','blue','orange','pink'],
+            borderColor: 'white',
+            data: [30, 40, 20, 50, 80, 90, 20],
+          }]
+        },
+      });
+
+      const donot = document.getElementById("donotchart").getContext('2d');
+      const myChart4 = new Chart(donot, {
+        type: 'doughnut',
+        data: {
+          labels: ["booked", "hotel", "flights",
+        "travel", "expenses", "packages"],
+          datasets: [{
+            label: 'Booking Summary',
+            data: [30, 40, 20, 50, 80, 90, 20],
+            backgroundColor: ["#0074D9", "#FF4136", "#2ECC40",
+            "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00",
+            "#001f3f", "#39CCCC", "#01FF70", "#85144b",
+            "#F012BE", "#3D9970", "#111111", "#AAAAAA"]
+          }]
+        },
+      });
+
+</script>
+
+
 
 
 <script>
