@@ -5637,4 +5637,56 @@ padding: 8px 5px 8px 5px!important;
       wrapper1.scrollLeft = wrapper2.scrollLeft;
     };
   </script>
+  <script>
+
+	function show_response(first){
+		var url='ReportsOperataionsAgentSearchLogsview.html';
+		window.open(url, "", "width=500,height=700");
+	}
+	$(function(){
+
+		$.extend( $.fn.dataTableExt.oSort, {
+		    "numeric-comma-pre": function ( a ) {
+		        var x = (a == "-") ? 0 : a.replace( /,/, "." );
+		        return parseFloat( x );
+		    },
+
+		    "numeric-comma-asc": function ( a, b ) {
+		        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+		    },
+
+		    "numeric-comma-desc": function ( a, b ) {
+		        return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+		    }
+		});
+
+		 /* code to apply datatable to table content */
+		/* $('#search_sup').dataTable({
+			"searching": false,
+			"paging": false,
+			'order':[],
+			"aoColumnDefs" : [ {
+			"bSortable" : false,
+			"aTargets" : [ "no-sort" ]
+			} ],
+			"aoColumnDefs" : [ 
+  				{"bSortable" : false,"aTargets" : [ "no-sort" ]},
+  				{ "aTargets": [ "numeric-comma" ], 'type': 'numeric-comma' }
+  			]
+		}); */
+		
+		/* Apply horizontal scrollbar at the top */
+		setTimeout(function() {
+			$('#search_sup').wrap("<div id='scrollCont'></div>");
+			$('#scrollCont').doubleScroll();
+		},1000);
+		if($('.pageSelect').length > 0){
+			$('.btn-primary').removeClass('topBtn')
+		}
+    });
+	
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip();
+	})
+</script>
 </html>
