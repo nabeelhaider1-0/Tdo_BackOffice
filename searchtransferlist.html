@@ -1,0 +1,2491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body>
+
+    <div class="color-line">
+    </div>
+
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg bg-light" id="firstNav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="TDO LOGO Without Background.png" class="img-fluid"
+                        alt="Responsive image" style="max-height: 50px; margin-left: 10px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Welcome <b>Beta_Tdo</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-clock"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-user fa-2xl"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!--      2nd Navbar Section For Search Bookkng And other Queries           -->
+    <section>
+        <nav class="navbar navbar-expand-lg" id="secondNav">
+            <div class="w-100">
+                <a class="navbar-brand" href="index.html" style="color: white;font-size: 10px;" id="tdotext">Travel
+                    Destination
+                    Online Mid Office</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!--  Drop down menu for Booking-->
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>BOOKINGS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="index.html">Search Bookings</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">Reminders&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="BookingRemindersNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="BookingRemindersSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="BookingNewOnlineBooking.html">NEW ONLINE BOOKING</a></li>
+                            <li><a class="dropdown-item" href="menuitem.html">NEW OFFLINE
+                                    BOOKING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappingggsub">
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingHotels.html">HOTELS</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingFlights.html">FLIGHTS</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="BookingNewOnlineBookingTransfer.html">TRANSFER</a></li>
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingTour.html">TOUR</a></li>
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingMiscServices.html">MISC
+                                            SERVICES</a></li>
+                                    <li><a class="dropdown-item" href="BookingNewOnlineBookingGroups.html">GROUPS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">RECONCILIATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="transsub">
+                                    <li><a class="dropdown-item" href="BookingReconcilationManualFlights.html">MANUAL
+                                            FLIGHTS</a></li>
+                                    <li><a class="dropdown-item" href="BookingReconcilationManual.html">MANUAL</a></li>
+                                    <li><a class="dropdown-item" href="BookingReconcilationAuto.html">AUTO</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="BookingExchange-ReAssignBooking.html">EXCHANGE/REASSIGN<br>BOOKING</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--  Drop down menu for Customer-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>CUSTOMERS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">AGENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="customeragentsearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item" href="customeragentnew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="customeragentsearchusers.html">SEARCH USERS</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">ADVANCED
+                                            SETTINGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item" href="customeragentadvanceonline.html">ONLINE
+                                                    SUPPLIERS</a></li>
+                                            <li><a class="dropdown-item" href="customeragentadvanceoffline.html">LOCAL
+                                                    SUPPLIERS</a></li>
+                                        </ul>
+
+                                    </li>
+                                    <li><a class="dropdown-item" href="customeragentrateprofile.html">AGENT RATE
+                                            PROFILE</a></li>
+                                </ul>
+                            </li>
+
+                            </li>
+                            <li><a class="dropdown-item" href="customerB2C.html">B2C CUSTOMER</a></li>
+                        </ul>
+                    </div>
+
+                    <!--  Drop down menu for Messages-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>MESSAGES</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="menuitem.html">AGENT
+                                    MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
+                                    <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">MASS
+                                    MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
+                                            GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="subscribersub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
+                                            <li><a href="http://beta.tdonlines.com/tms/download_newsletter.php">DOWNLOAD
+                                                    NEWSLETTER</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Accounts-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>ACCOUNTS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">AGENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">RECEIPTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="AccountsAgentsRecieptsNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsAgentsRecieptsSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsAgentsRecieptsByBookingId.html">BY BOOKING ID</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">CREDIT
+                                            NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="AccountsAgentsCreditNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsAgentsCreditSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item" href="AccountsAgentsCreditByBookingId.html">BY
+                                                    BOOKING ID</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">DEBIT
+                                            NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="AccountsAgentsDebitNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsAgentsDebitSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item" href="AccountsAgentsDebitByBookingId.html">BY
+                                                    BOOKING ID</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">TAX
+                                    SETUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="menuitem.html">TAX
+                                            MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsTaxsetupTaxMasterNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsTaxsetupTaxMasterSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">TAX
+                                            CONFIGURATION&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsTaxsetupTaxConfigurationNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsTaxsetupTaxConfigurationSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">PAYMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsSuppliersPaymentsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsSuppliersPaymentsSearch.html">SEARCH</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="AccountsSuppliersPaymentsByBookingId.html">PAYMENT BY BOOKING
+                                                    ID</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Reports-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b> REPORTS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">MANAGEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">BUSINESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="ReportManagementBusinessByagent.html">BY
+                                                    AGENT</a></li>
+                                            <li><a class="dropdown-item" href="ReportManagementBusinessByHotel.html">BY
+                                                    HOTEL</a></li>
+                                            <li><a class="dropdown-item" href="ReportManagementBusinessBycity.html">BY
+                                                    CITY</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="ReportManagementBusinessBycountry.html">BY COUNTRY</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="ReportManagementBusinessByonlinesupplier.html">BY ONLINE
+                                                    SUPPLIER</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="ReportManagementBusinessByofflinesupplier.html">BY OFFLINE
+                                                    SUPPLIER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">BOOKING BY
+                                            SUPPLIER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item"
+                                                    href="ReportManagementBookingbySupplierByStatus.html">BY STATUS</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="ReportManagementBookingbySupplierByNights.html">BY NIGHTS</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="ReportManagementBookingbySupplierBySupplierProfile.html">BY
+                                                    SUPPLIER PROFILE</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ReportManagementSalesManager.html">SALES
+                                            MANAGER</a></li>
+                                    <li><a class="dropdown-item" href="ReportManagementSalesComparison.html">SALES
+                                            COMPARISON</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">OPERTAIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="ReportsOperataionsBookingReprt.html">BOOKING
+                                            REPORT</a></li>
+                                    <li><a class="dropdown-item" href="ReportsOperataionsAgentSearchLogs.html">AGENT
+                                            SEARCH LOGS</a></li>
+                                    <li><a class="dropdown-item" href="ReportsOperataionsVoucher.html">VOUCHER</a></li>
+                                    <li><a class="dropdown-item" href="ReportsOperataionsDailyRoe.html">DAILY ROE</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ReportsOperataionsLoyalityProgram.html">LOYALTY
+                                            PROGRAM</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="ReportsOperataionsReminderprosubscriptions.html">REMINDERPRO<br>SUBSCRIPTIONS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">ACCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="ReportsAccountsDailySale.html">DAILY SALES</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ReportsAccountCustomerStatement.html">CUSTOMER
+                                            STATEMENT</a></li>
+                                    <li><a class="dropdown-item" href="menuitem.html">SUPPLIER
+                                            STATEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                            <li><a class="dropdown-item"
+                                                    href="ReportsAccountsSupplierStatementOnlineSupplier.html">ONLINE
+                                                    SUPPLIER</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="ReportsAccountsSupplierStatementOfflineSupplier.html">OFFLINE
+                                                    SUPPLIER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">OUTSTANDING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item"
+                                                    href="ReportsAccountsOutstandingsCustomer.html">CUSTOMER</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="ReportsAccountsOutstandingsSupplier.html">SUPPLIER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ReportsAccountsInvoice.html">INVOICES</a></li>
+                                    <li><a class="dropdown-item" href="ReportsAccountsAgentReceipts.html">AGENT
+                                            RECEIPTS</a></li>
+                                    <li><a class="dropdown-item" href="ReportsAccountsAgentReceiptSummary.html">AGENT
+                                            RECEIPT SUMMARY</a></li>
+                                    <li><a class="dropdown-item" href="ReportsAccountsSupplierpayments.html">SUPPLIER
+                                            PAYMENTS</a></li>
+                                    <li><a class="dropdown-item" href="ReportsAccountstax.html">TAX</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="ReportsAccountsComissionReport.html">COMMISSION</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="ReportsAccountsPaymentGatewayBooking.html">PAYMENT
+                                            GATEWAY<br>BOOKINGS</a></li>
+                                    <li><a class="dropdown-item" href="ReportsAccountsAgentGlobalStatement.html">AGENT
+                                            GLOBAL STATEMENT</a></li>
+                                    <li><a class="dropdown-item" href="ReportsAccountsGlobalCustomerReport.html">GLOBAL
+                                            CUSTOMER REPORT</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                    <li><a class="dropdown-item" href="ReportsMappingDestination.html">DESTINATIONS</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Contracts-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>CONTRACTS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="ContractsHotelsRates.html">RATES</a></li>
+                                    <li><a class="dropdown-item" href="ContractsHotelsAllotmentMap.html">ALLOTMENT
+                                            MAP</a></li>
+                                    <li><a class="dropdown-item" href="menuitem.html">DYNAMIC
+                                            ALLOTMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                            <li><a class="dropdown-item"
+                                                    href="ContractsHotelsDynamicAllotmentNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="ContractsHotelsDynamicAllotmentSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">OFFERS &
+                                            DISCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item"
+                                                    href="ContractsHotelsOffersandiscountsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="ContractsHotelsOffersandiscountsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="ContractsTranfersRates.html">RATES</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">TOURS &
+                                    ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="ContractsToursandactivitiesRates.html">RATES</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">FLIGHTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="ContractsFlightsSearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item" href="ContractsFlightsSuppplierMapping.html">FLIGHT
+                                            SUPPLIER MAPPING</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ContractsFlightsAddrates.html">ADD RATES</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--  Drop down menu for Masters-->
+
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>MASTERS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="MastersHotelsNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersHotelsSearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">AMENITITES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                            <li><a class="dropdown-item" href="MastersHotelsAmenitiesNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsAmenitiesSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="#">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item" href="MastersHotelsLocationsNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsLocationsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">ROOM
+                                            VIEW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                            <li><a class="dropdown-item" href="MastersHotelsRoomviewNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsRoomviewSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">ROOM
+                                            CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsRoomcategoryNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsRoomcategorySearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">INVENTORY ROOM
+                                            CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsInventoryRoomCategoryNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsInventoryRoomCategorySearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">MEAL
+                                            BASIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mealsub">
+                                            <li><a class="dropdown-item" href="MastersHotelsMealBasisMapping.html">MEAL
+                                                    BASIS MAPPING</a></li>
+                                            <li><a class="dropdown-item" href="MastersHotelsMealMappingNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsMealMappingSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">PREFERRED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                                            <li><a class="dropdown-item" href="MastersHotelsPreferedNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsPreferedOnSearchPage.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">SPECIAL
+                                            REQUESTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsSpecialRequestsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersHotelsSpecialRequestsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="menuitem.html">TEST</a></li>
+                                    <li><a class="dropdown-item" href="MastersTransfersNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersTransfersSearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item" href="MastersTransfersLocationNew.html">NEW</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersTransfersLocationSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">VEHICLES</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">TOURS &
+                                    ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="Masters Tours&ActivitiesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="Masters Tours&ActivitiesSearch.html">SEARCH</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">SUPPLIMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSupplementsHotelsNew .html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSupplementsHotelsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">AIRLINES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                    <li><a class="dropdown-item" href="MastersAirlinesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersAirlinesSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="MastersPreferedcities.html">PREFERRED CITIES</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                                    <li><a class="dropdown-item" href="menuitem.html">ONLINE
+                                            SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOnlineSuppliersSearchSupplier.html">SEARCH</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOnlineSuppliersSetautocheckConfiguration.html">SEARCH
+                                                    AUTO
+                                                    CHECK<br>CONFIGURATION</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOnlineSuppliersAutocheckSuppliers.html">AUTO
+                                                    CHECK SUPPLIER</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">OFFLINE
+                                            SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOfflineSupplierNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersSuppliersOfflineSupplierSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="MAstersTravelClass.html">TRAVEL CLASS</a></li>
+                            <li><a class="dropdown-item" href="menuitem.html">MARK-UP
+                                    PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                                    <li><a class="dropdown-item" href="MastersMarkupProfilesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersMarkupProfilesSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">MARKET
+                                    PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                                    <li><a class="dropdown-item" href="menuitem2.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="menuitem2.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">PAYMENT GATEWAYS&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="paysub">
+                                    <li><a class="dropdown-item" href="MastersPaymentgatewaySearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="MastersAircarft.html">AIRCRAFT</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">BANKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="banksub">
+                                    <li><a class="dropdown-item" href="MastersBankNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersBankSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">CURRENCIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="cursub">
+                                    <li><a class="dropdown-item" href="MastersCurrenciesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersCurrenciesSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">TAXES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="taxsub">
+                                    <li><a class="dropdown-item" href="MastersTaxesNew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="MastersTaxesSearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item" href="menuitem.html">TAX
+                                            MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                            <li><a class="dropdown-item" href="MastersTaxesTaxMasterNew.html">ADD</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersTaxesTaxMasterSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">TAX
+                                            CONFIGURATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersTaxesTaxConfigurationNew.html">ADD</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersTaxesTaxConfigurationSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">LOYALITY PROGRAM&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="loyaltysub">
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">TIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersLoyalityProgramTiersNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersLoyalityProgramTiersSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">REWARDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersLoyalityProgramRewardsNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersLoyalityProgramRewardsSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="Masters Packages.html">PACAKGES</a></li>
+                            <li><a class="dropdown-item" href="MastersOfferCode.html">OFFER CODES</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">VEHICLES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="vehiclesub">
+                                    <li><a class="dropdown-item" href="menuitem.html">VEHICLE
+                                            TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item"
+                                                    href="MastersVehiclesVehicleTypeNew.html">NEW</a></li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersVehiclesVehicleTypeSearch.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">INVENTORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item" href="MastersVehiclesInventoryNew.html">ADD</a>
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="MastersVehiclesInventorySearch.html">MANAGE</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Visa-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>VISA</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="VisaVisaCategorySearch.html">CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="VisaVisaCategoryAdd.html">ADD</a></li>
+                                    <li><a class="dropdown-item" href="VisaVisaCategorySearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="VisaVisaRequests.html">VISA REQUEST</a></li>
+                            <li><a class="dropdown-item" href="menuitem.html">VISA
+                                    RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="VisaVisaRatesAddSupplierVisaRates .html">ADD
+                                            SUPPLIER VISA
+                                            RATES</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="VisaVisaRatesSearchSupplierVisaRates .html">SEARCH SUPPLIER VISA
+                                            RATESX</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="NewOfflneVisaBooking.html">NEW OFFLINE VISA BOOKING</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Flights-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>FLIGHT</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="menuitem.html">FLIGHT
+                                    RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="FlightFlightRulesAddrules.html">ADD RULES</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="FlightFlightRulesSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">FLIGHT
+                                    PCC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="FlightFlightPCCAdd.html">ADD </a></li>
+                                    <li><a class="dropdown-item" href="FlightFlightPCCSerach.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">FLIGHT QCT
+                                    RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                    <li><a class="dropdown-item" href="FlightFlightQCTRuleAdd.html">ADD </a></li>
+                                    <li><a class="dropdown-item" href="FlightFlightQCTRuleSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">FLIGHT CANCELLATION
+                                    RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                                    <li><a class="dropdown-item" href="FlightFlightCancellationRuleAdd.html">ADD </a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="FlightFlightCancellationRuleSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Suppliers-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>SUPPLIERS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item" href="menuitem2.html">MARKET
+                                    PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="menuitem2.html">NEW </a></li>
+                                    <li><a class="dropdown-item" href="menuitem2.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="SuppliersOnlineSuppliersSearch.html">ONLINE
+                                    SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="SuppliersOnlineSuppliersNew.html">NEW </a></li>
+                                    <li><a class="dropdown-item" href="SuppliersOnlineSuppliersSearch.html">SEARCH</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="#">OFFLINE
+                                    SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="SuppliersOfflineSuppliersNew.html">NEW </a></li>
+                                    <li><a class="dropdown-item" href="SuppliersOfflineSuppliersSerach.html">SEARCH</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Lodge Card-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="menuitem.html" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>LODGE CARD</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">CARD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="LodgeCardAdd.html">ADD </a></li>
+                                    <li><a class="dropdown-item" href="LodgeCardSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">CARD
+                                    PAYMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="LodgeCardMappingAdd.html">ADD </a></li>
+                                    <li><a class="dropdown-item" href="LodgeCardMappingSearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Tools-->
+
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>TOOLS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">MARK-UPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="menuitem.html">ADD
+                                            ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="ToolsMarkupsAddonsNew.html">NEW </a></li>
+                                            <li><a class="dropdown-item" href="ToolsMarkupsAddonsSearch.html">SEARCH</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ToolsMarkupsByCountryBranch.html">BY
+                                            COUNTRY/BRANCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="ToolsAddLeapTime.html">ADD LEAD TIME</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                                    <li><a class="dropdown-item" href="menuitem.html">COUNTRIES
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                            <li><a class="dropdown-item" href="ToolsMappingCountriesManual.html">MANUAL
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="ToolsMappingCountriesAuto.html">AUTO</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">CITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item" href="ToolsMappingCitiesManual.html">MANUAL
+                                                </a></li>
+                                            <li><a class="dropdown-item" href="ToolsMappingCitiesAuto.html">AUTO</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="ToolsMappingHotels.html">HOTELS</a></li>
+                                    <li><a class="dropdown-item" href="ToolsMappingNationalities.html">NATIONALITIES</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="menuitem.html">OFFLINE
+                                            SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                            <li><a class="dropdown-item"
+                                                    href="ToolsMappingOfflineSuppliersHotel.html">HOTEL </a></li>
+                                            <li><a class="dropdown-item" href="ToolsMappingTransfer.html">TRANSFER </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="ToolsMappingTours&Activities.html">TOUR &
+                                                    ACTIVITIES</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">EXCHANGE
+                                    RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="mappingggsub">
+                                    <li><a class="dropdown-item" href="ToolsExchangeRatesMatrix.html">MATRIX </a></li>
+                                    <li><a class="dropdown-item" href="ToolsExchangeRatesCalculator.html">CALCULATOR</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="menuitem.html">TRANSACTION LIMITS&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="transsub">
+                                    <li><a class="dropdown-item" href="ToolsTransactionLimitsPerTrasaction.html">PER
+                                            TRANSACTION </a></li>
+                                    <li><a class="dropdown-item" href="ToolsTransactionLimitsTotal.html">TOTAL</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="ToolsRewardsDelivery.html">REWARDS DELIVERY</a></li>
+                            <li><a class="dropdown-item" href="ToolslanguageManager.html">LANGUAGE MANAGER</a></li>
+                            <li><a class="dropdown-item" href="FAQ.pdf">FAQ</a></li>
+                            <li><a class="dropdown-item" href="ToolsPresetText.html">PRESET TEXT</a></li>
+                        </ul>
+                    </div>
+
+
+                    <!--  Drop down menu for Settings-->
+
+                    <div class="dropdown" id="drip">
+                        <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>SETTINGS</b>
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">STAFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                                    <li><a class="dropdown-item" href="staffnew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="staffsearch.html">SEARCH</a></li>
+                                    <li><a class="dropdown-item" href="menu-new.html">ACCESS
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu" id="accountsub1">
+                                            <li><a class="dropdown-item" href="roles.html">ROLES </a></li>
+                                            <li><a class="dropdown-item" href="menustaff.html">MENU </a></li>
+                                            <li><a class="dropdown-item" href="reportsstaff.html">REPORTS</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="assignbranches.html">ASSIGN A BRANCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">BRANCHES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li><a class="dropdown-item" href="branchnew.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="branchsearch.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">EMAILS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                                    <li><a class="dropdown-item" href="emails-newsetting.html">NEW</a></li>
+                                    <li><a class="dropdown-item" href="emails-searchsetting.html">SEARCH</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="mid.-office.html">MID-OFFICE ACCESS</a></li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">NAVIGATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                                    <li><a class="dropdown-item" href="sitemap.html">SYSTEM SITEMAP</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="menuitem.html">MENUITEMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                                class="fa-solid fa-caret-right"></i></a>
+                                        <ul class="dropdown-menu dropdown-submenu">
+                                            <li><a class="dropdown-item" href="menu-new.html">NEW</a></li>
+                                            <li><a class="dropdown-item" href="menu-search.html">SEARCH</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="menuitem.html">LOGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                        class="fa-solid fa-caret-right"></i></a>
+                                <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                                    <li><a class="dropdown-item" href="userlogs.html">USERS</a></li>
+                                    <li><a class="dropdown-item" href="emaillogs.html">EMAILS</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+
+    <!--    3rd Header for Contracts Dyna,ic Allotment         -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-4">
+                    <h5 style="font-size:14pt;font-weight: 500;">TRANSFER LIST </h5>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-2">
+                    <i class="fa-solid fa-house-chimney"></i><span> / Search Transfer Tariff</span>
+
+                </div>
+
+            </div>
+        </header>
+
+
+    </section>
+
+    <!--    Panel Body        -->
+
+    <div class="container-fluid pt-0 p-4" id="content-pad">
+
+        <!-- First Row-->
+
+        <form name="search_transfer_from" method="post" action="search_local_transfer.php?search">
+            <div class="panel-body" style="margin-left: 15px;margin-right: 15px;">
+                <input type="hidden" name="tranfer_id" id="transfer_id" value="95">
+                <input type="hidden" name="supplier_id" id="supplier_id" value="S000000003">
+                <input type="hidden" name="next" value="" id="nextPaginate">
+                <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label>Supplier</label>
+                        <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            name="Search_supplier" id="Search_supplier" onchange="javascript:getTransferList_search();"
+                            data-live-search="true">
+                            <option value="0">- Select Supplier -</option>
+                            <option value="S000000001">QtechTest</option>
+                            <option value="S000000002">Nirvana Tour</option>
+                            <option value="S000000003" selected="">allwin-qtech</option>
+                            <option value="S000000004">MYCAB</option>
+                            <option value="S000000006">I VACATION TRAVEL &amp; TOURISM SDN BHD</option>
+                            <option value="S000000007">Amanda Tours S.P.A</option>
+                            <option value="S000000008">TDO -Credit Card 6018</option>
+                            <option value="S000000009">Palacio Estoril Golf &amp; Spa Hotel</option>
+                            <option value="S000000010">East Avenue Travel LLC</option>
+                            <option value="S000000011">Toursim &amp; Travel Bank</option>
+                            <option value="S000000012">Across Spain</option>
+                            <option value="S000000013">Hotel Beds</option>
+                            <option value="S000000014">Baisan Travels &amp; Tours</option>
+                            <option value="S000000015">Park Regis Lotus Hotel</option>
+                            <option value="S000000016">The Grove Hotel &amp; Conference Centre</option>
+                            <option value="S000000017">Wyndham Garden Manama</option>
+                            <option value="S000000018">Elite Crystal Hotel</option>
+                            <option value="S000000019">Elite Seef Residence &amp; Hotel</option>
+                            <option value="S000000020">Elite Grande Hotel</option>
+                            <option value="S000000021">Elite Resort &amp; Spa</option>
+                            <option value="S000000022">Fraser Suites Diplomatic Area</option>
+                            <option value="S000000023">S Hotel</option>
+                            <option value="S000000024">Ramada Hotel &amp; Suites Amwaj Islands</option>
+                            <option value="S000000025">Panorama Hotel</option>
+                            <option value="S000000026">The Diva Hotel</option>
+                            <option value="S000000027">Royal Phoenicia Hotel</option>
+                            <option value="S000000028">Days Hotel Manama</option>
+                            <option value="S000000029">Swiss International Palace Hotel Manama</option>
+                            <option value="S000000030">ART Rotana Hotel &amp; Resort</option>
+                            <option value="S000000031">Ramee California Hotel</option>
+                            <option value="S000000032">Asdal Gulf Inn</option>
+                            <option value="S000000033">Dragon Hotel &amp; Resort</option>
+                            <option value="S000000034">The Domain Hotel and Spa</option>
+                            <option value="S000000035">Best Western Plus The Olive</option>
+                            <option value="S000000036">The Juffair Grand Hotel</option>
+                            <option value="S000000037">Holiday Inn Riyadh - Al Qasr</option>
+                            <option value="S000000038">Assila Hotel</option>
+                            <option value="S000000041">Travel Centre Maldives</option>
+                            <option value="S000000042">Hotel Sofitel Bahrain Zallaq Thalassa Sea &amp; Spa</option>
+                            <option value="S000000043">Disha Voyage And Forex Pvt Ltd.</option>
+                            <option value="S000000047">Getabed</option>
+                            <option value="S000000048">Lots Of Hotels</option>
+                            <option value="S000000050">Prima Car Rental</option>
+                            <option value="S000000051">VIZIT EUROPE DMC</option>
+                            <option value="S000000052">ASIAN OVERLAND SERVICES TOURS &amp; TRAVEL</option>
+                            <option value="S000000053">Victory Tours</option>
+                            <option value="S000000057">Tamarind Global</option>
+                            <option value="S000000058">Frsan Palace Hotel</option>
+                            <option value="S000000059">Flame Tour &amp; Travel DMC</option>
+                            <option value="S000000060">TDO Credit Card - 3074</option>
+                            <option value="S000000061">The Diplomat Radisson BLU Hotel, Residence &amp; Spa</option>
+                            <option value="S000000062">Crowne Plaza Hotel &amp; Resorts</option>
+                            <option value="S000000063">Sheraton Jeddah Hotel</option>
+                            <option value="S000000064">INTERCONTINENTAL JEDDAH</option>
+                            <option value="S000000069">Voyage Tours Georgia</option>
+                            <option value="S000000070">Special Rent A Car</option>
+                            <option value="S000000071">Destination of the World</option>
+                            <option value="S000000072">Marco Polo Hotel</option>
+                            <option value="S000000073">Leonardo Hotel Milan City Center</option>
+                            <option value="S000000074">Saja Al Madinah Hotel</option>
+                            <option value="S000000075">Makkah Millennium Hotel</option>
+                            <option value="S000000076">Al-Riyadh Travel &amp; Tourism</option>
+                            <option value="S000000077">Amazing Asia Travels &amp; Tours</option>
+                            <option value="S000000078">Premier Inn Dubai Investment Park</option>
+                            <option value="S000000080">Novotel Hotels Trabzon</option>
+                            <option value="S000000081">TDO - Cash / Bank</option>
+                            <option value="S000000083">Standard Tours</option>
+                            <option value="S000000084">Montreal</option>
+                            <option value="S000000085">Escales International</option>
+                            <option value="S000000086">Mercure Value Hotel</option>
+                            <option value="S000000087">Cavendish Hotel</option>
+                            <option value="S000000088">Le Meridien Dubai</option>
+                            <option value="S000000089">HR Holidays</option>
+                            <option value="S000000090">Address Hotels Dubai</option>
+                            <option value="S000000091">Movenpick Hotels &amp; Resort Qassim</option>
+                            <option value="S000000092">jeddah Hilton</option>
+                            <option value="S000000093">Al Marzooq Bakery</option>
+                            <option value="S000000094">Media Rotana Dubai</option>
+                            <option value="S000000095">TDO -Credit Card 6352</option>
+                            <option value="S000000096">Dummy Booking</option>
+                            <option value="S000000097">Luxury Travel</option>
+                            <option value="S000000098">One &amp; Only Reethi Rah</option>
+                            <option value="S000000099">Intercontinental Makkah Dar Al Tawhid</option>
+                            <option value="S000000100">Le Meridien City Center Bahrain</option>
+                            <option value="S000000101">Burgenstock Resort</option>
+                            <option value="S000000104">Wyndham Grand Manama</option>
+                            <option value="S000000105">The Ritz-Carlton, Jeddah</option>
+                            <option value="S000000106">Crowne Plaza Heidelberg City Centre</option>
+                            <option value="S000000107">TOUR BLUE</option>
+                            <option value="S000000108">Mehran Hotel</option>
+                            <option value="S000000109">Warwick Paris</option>
+                            <option value="S000000110">Cabrio Chauffeur Service</option>
+                            <option value="S000000111">BeachLuxury</option>
+                            <option value="S000000112">Shangri-La, Qaryat Al Beri</option>
+                            <option value="S000000113">Luxus Grand</option>
+                            <option value="S000000114">HILTON DUBAI THE WALK</option>
+                            <option value="S000000115">Advanced Rent A Car</option>
+                            <option value="S000000116">Park Hyatt Jeddah</option>
+                            <option value="S000000119">Hotel Iris</option>
+                            <option value="S000000120">goIndonesia</option>
+                            <option value="S000000123">Air Asia</option>
+                            <option value="S000000130">Cairo Transport &amp; Tourism</option>
+                            <option value="S000000131">Supreme Services</option>
+                            <option value="S000000135">Rental Cars</option>
+                            <option value="S000000139">Formosa Garden Suites</option>
+                            <option value="S000000140">LOTTE NEW YORK PALACE</option>
+                            <option value="S000000141">QadasFly Travel</option>
+                            <option value="S000000142">Atlantis The Palm</option>
+                            <option value="S000000144">ASCOTT TAHLIA JEDDAH</option>
+                            <option value="S000000145">KARIM KARA</option>
+                            <option value="S000000146">Redapple Travel</option>
+                            <option value="S000000147">Pearl Travel Service Pvt Ltd</option>
+                            <option value="S000000148">Downtown Rotana Bahrain</option>
+                            <option value="S000000150">Kowloon Shangri-La, Hong Kong</option>
+                            <option value="S000000151">Four Season Resort Sharm El Sheikh</option>
+                            <option value="S000000152">Hotel Hermitage Monte-Carlo</option>
+                            <option value="S000000156">Selman Marrakech</option>
+                            <option value="S000000159">ROYAL ROVE</option>
+                            <option value="S000000160">Roomszzz ApartHotel</option>
+                            <option value="S000000161">Grand Hôtel Stockholm,</option>
+                            <option value="S000000162">intour khafji</option>
+                            <option value="S000000163">Golf Club &amp; Resort Saint-Tropez</option>
+                            <option value="S000000166">Gallery Palace</option>
+                            <option value="S000000167">MARRIOTT ZURICH HOTEL</option>
+                            <option value="S000000168">Elite Travel &amp; Tours</option>
+                            <option value="S000000169">ISTAY APARTMENTS</option>
+                            <option value="S000000170">sofitel jumeirah beach</option>
+                            <option value="S000000171">FURAVERI HOTEL</option>
+                            <option value="S000000172">Asian Siam Travel House</option>
+                            <option value="S000000173">SWISS BELL HOTEL</option>
+                            <option value="S000000174">Raffles dubai</option>
+                            <option value="S000000175">COASTAL DELUXE TRANSPORT</option>
+                            <option value="S000000176">MTS CITY BREAKS</option>
+                            <option value="S000000178">SULTAN APARTMENTS</option>
+                            <option value="S000000179">Hotel Marignan Champs-Elysees</option>
+                            <option value="S000000180">ALKHALEEJ PLAZA</option>
+                            <option value="S000000181">Alyara International Travel &amp; Tourism</option>
+                            <option value="S000000182">Al Jawhara Gardens Hotel</option>
+                            <option value="S000000183">Four Seasons Hotel Baku</option>
+                            <option value="S000000184">ROTANA FUJAIRAH</option>
+                            <option value="S000000185">Hotel du Collectionneur</option>
+                            <option value="S000000187">lanesborough hotel</option>
+                            <option value="S000000188">Taj Dubai Hotel</option>
+                            <option value="S000000189">Ascott Sari Jeddah</option>
+                            <option value="S000000190">Citadines Al Salamah Jeddah</option>
+                            <option value="S000000191">Ascott Park Place Dubai</option>
+                            <option value="S000000192">Al Nawras Tower</option>
+                            <option value="S000000194">jumeirah franfurt</option>
+                            <option value="S000000195">Adaaran prestige</option>
+                            <option value="S000000196">Narcissus Hotel and SPA Riyadh</option>
+                            <option value="S000000197">Hotel Bristol Geneva</option>
+                            <option value="S000000199">intercontinental Abu Dhabi</option>
+                            <option value="S000000204">Dusit Thani Dubai</option>
+                            <option value="S000000205">Rose Rayhaan by Rotana</option>
+                            <option value="S000000206">Holiday Inn Izdihar</option>
+                            <option value="S000000207">Hani Royal Hotel</option>
+                            <option value="S000000208">Millennium Resort Mussanah</option>
+                            <option value="S000000210">Grand Millennium Al Wahda</option>
+                            <option value="S000000211">DoubleTree by Hilton Hotel Riyadh - Al Muroj Business Gate
+                            </option>
+                            <option value="S000000214">ABERDEEN ALTENS HOTEL</option>
+                            <option value="S000000215">GRAND HOTEL ADRIATICO</option>
+                            <option value="S000000216">sofitel jeddah</option>
+                            <option value="S000000220">THE GRAND BRIGHTON</option>
+                            <option value="S000000221">Avantgarde Collection Taksim Square Hotel</option>
+                            <option value="S000000222">Avantgarde Levent Hotel</option>
+                            <option value="S000000223">Avantgarde Taksim Hotel</option>
+                            <option value="S000000224">Hotel Ipek Palas</option>
+                            <option value="S000000228">Reef Resort</option>
+                            <option value="S000000230">Elaf Jeddah Hotel – Red Sea Mall</option>
+                            <option value="S000000235">RODA AMWAJ SUITES</option>
+                            <option value="S000000244">UNITED WORLD</option>
+                            <option value="S000000246">Narcissus Resort &amp; Spa Obhur Jeddah</option>
+                            <option value="S000000249">Burj Rafal Kempinski</option>
+                            <option value="S000000251">Pullman Zamzam Madina</option>
+                            <option value="S000000252">Hotel Fairmont Makkah</option>
+                            <option value="S000000253">Raffles Makkah Palace</option>
+                            <option value="S000000254">Rosh Rayhaan by Rotana</option>
+                            <option value="S000000255">Swissotel Makkah</option>
+                            <option value="S000000258">Swissotel Almaqam Makkah</option>
+                            <option value="S000000259">Ramee Grand hotel</option>
+                            <option value="S000000262">Sofitel Al Khobar The Corniche</option>
+                            <option value="S000000264">The Ritz Carlton Dubai International Financial Centre</option>
+                            <option value="S000000265">RAVIZ central point hotel</option>
+                            <option value="S000000267">Novotel gate</option>
+                            <option value="S000000269">INTERCONTINENTAL CAIRO CITYSTARS</option>
+                            <option value="S000000276">Conrad Makkah</option>
+                            <option value="S000000277">Grand Ant Hotel</option>
+                            <option value="S000000278">Hotel Beyaz Saray</option>
+                            <option value="S000000279">WHITE SANDS TOURS AND TRAVELS</option>
+                            <option value="S000000280">Esna Holidays</option>
+                            <option value="S000000281">Braira Qurtubah Hotel Riyadh</option>
+                            <option value="S000000282">Braira Olaya Hotel Riyadh</option>
+                            <option value="S000000283">Braira Al Wezarat Hotel Riyadh</option>
+                            <option value="S000000285">Ramada Hotel Riyadh</option>
+                            <option value="S000000288">Rail Europe</option>
+                            <option value="S000000289">Hotel Momento Beyazıt</option>
+                            <option value="S000000290">MANDARIN ORIENTAL</option>
+                            <option value="S000000291">CROWNE PLAZA PALACE</option>
+                            <option value="S000000292">Hotel Momento Golden Horn</option>
+                            <option value="S000000293">Hotel Sorriso</option>
+                            <option value="S000000294">Glorious Hotel İstanbul</option>
+                            <option value="S000000295">Grand Hotel Gulsoy</option>
+                            <option value="S000000296">Nippon Hotel</option>
+                            <option value="S000000297">plaza inn olaya</option>
+                            <option value="S000000298">Grand Hotel de Pera</option>
+                            <option value="S000000300">Emirates Concorde Hotel and Residence</option>
+                            <option value="S000000302">Boudl Hotels &amp; Resorts</option>
+                            <option value="S000000303">Swiss International Park Hotel Baljurashi</option>
+                            <option value="S000000304">Movenpick Hotel Jumeirah Beach</option>
+                            <option value="S000000305">Future Inn Plymouth</option>
+                            <option value="S000000307">SHARURAH PALACE HOTEL</option>
+                            <option value="S000000308">Hotel Barriere Normandy</option>
+                            <option value="S000000309">Fraser Suites RIYADH</option>
+                            <option value="S000000312">Movenpick Khobar</option>
+                            <option value="S000000314">Miqat Tourism &amp; Umrah</option>
+                            <option value="S000000317">SOFITEL DOWNTOWN</option>
+                            <option value="S000000320">Crowne Plaza Muscat OCEC</option>
+                            <option value="S000000322">Manzil &amp; Vida Hotels Dubai</option>
+                            <option value="S000000329">Gulf Suites Hotel-Amwaj</option>
+                            <option value="S000000332">Jumeirah at Etihad Towers</option>
+                            <option value="S000000333">Emirates Palace</option>
+                            <option value="S000000334">ADDRESS BOULEVARD</option>
+                            <option value="S000000335">The Address Dubai Mall</option>
+                            <option value="S000000336">Address Dubai Marina</option>
+                            <option value="S000000337">Address Montgomerie</option>
+                            <option value="S000000338">The Address Downtown</option>
+                            <option value="S000000347">Novotel Istanbul Bosphorus Hotel</option>
+                            <option value="S000000348">Hotel Novotel Konya</option>
+                            <option value="S000000349">Hotel Novotel Istanbul Zeytinburnu</option>
+                            <option value="S000000350">Hotel Novotel Gaziantep</option>
+                            <option value="S000000351">Novotel Kayseri Hotel</option>
+                            <option value="S000000352">Novotel Diyarbakir Hotel</option>
+                            <option value="S000000353">Hotel ibis Istanbul Zeytinburnu</option>
+                            <option value="S000000354">Ibıs Istanbul ESENYURT HOTEL</option>
+                            <option value="S000000355">Ibis istanbul Airport Hotel</option>
+                            <option value="S000000356">Ibis Istanbul Tuzla Hotel</option>
+                            <option value="S000000357">Hotel ibis Konya</option>
+                            <option value="S000000358">Hotel ibis Eskisehir</option>
+                            <option value="S000000359">Hotel ibis Gaziantep</option>
+                            <option value="S000000360">Hotel ibis Bursa</option>
+                            <option value="S000000361">Hotel ibis Ankara Airport</option>
+                            <option value="S000000362">Hotel Ibis İzmir Alsancak</option>
+                            <option value="S000000365">Hotel Gräfrather Hof</option>
+                            <option value="S000000366">Ibis Adana Hotel</option>
+                            <option value="S000000367">Sheraton Mall of Emirates</option>
+                            <option value="S000000368">Hotel ibis Kayseri</option>
+                            <option value="S000000369">Cheya Besiktas Hotel &amp; Suites</option>
+                            <option value="S000000372">Golden Age Hotel</option>
+                            <option value="S000000373">Golden Crown Hotel</option>
+                            <option value="S000000374">Bahrain International Hotel</option>
+                            <option value="S000000375">Golden Park Hotel</option>
+                            <option value="S000000376">Grand Ons Hotel</option>
+                            <option value="S000000377">Hotel Mercure Istanbul Taksim</option>
+                            <option value="S000000378">Hotel Mercure Istanbul Umraniye</option>
+                            <option value="S000000379">The Peninsula Manila Hotel</option>
+                            <option value="S000000380">Ramada Bursa Cekirge</option>
+                            <option value="S000000381">Ramada Plaza Istanbul City Center</option>
+                            <option value="S000000382">Richmond Istanbul Taksim</option>
+                            <option value="S000000383">The Parma Hotel &amp; Spa Taksim</option>
+                            <option value="S000000384">Radisson Blu Bosphorus Hotel</option>
+                            <option value="S000000389">Tilia Hotel</option>
+                            <option value="S000000390">Executives Hotel Azizia</option>
+                            <option value="S000000391">fraser suites west bay doha</option>
+                            <option value="S000000392">orchid Global</option>
+                            <option value="S000000394">Aryana Hotel</option>
+                            <option value="S000000396">Pearl Continental Hotel Lahore</option>
+                            <option value="S000000397">MILLENNIUM AIRPORT HOTEL DUBAI</option>
+                            <option value="S000000399">Shaza Makkah Hotel</option>
+                            <option value="S000000400">Executve Hotel Al Aziza</option>
+                            <option value="S000000402">Four Seasons Amman</option>
+                            <option value="S000000403">HOTEL DANGLETERRE</option>
+                            <option value="S000000404">Arya Marmaris Hotel</option>
+                            <option value="S000000405">Kaya Ramada Plaza</option>
+                            <option value="S000000406">Swissotel The Bosphorus Istanbul</option>
+                            <option value="S000000409">Pearl Rotana Capital Centre</option>
+                            <option value="S000000411">UKARABIA TRAVEL</option>
+                            <option value="S000000412">Lilou Artisan Patisserie</option>
+                            <option value="S000000413">DoubleTree by Hilton Hotel Izmir Airport</option>
+                            <option value="S000000414">Avari Towers Karachi</option>
+                            <option value="S000000415">Hilton Hotel Jeddah</option>
+                            <option value="S000000421">Pullman Jumeirah Lake and Tower</option>
+                            <option value="S000000422">Grand Millennium Muscat</option>
+                            <option value="S000000423">EDEN BLUE</option>
+                            <option value="S000000426">CONRAD DUBAI</option>
+                            <option value="S000000427">Marino Royal Hotel</option>
+                            <option value="S000000428">Arya Otel</option>
+                            <option value="S000000429">Movenpick riyadh</option>
+                            <option value="S000000431">Movenpick Ibn Batuta Gate</option>
+                            <option value="S000000432">Novotel World Trasde Center</option>
+                            <option value="S000000433">Barcelona skipper</option>
+                            <option value="S000000434">Hyatt Regency Dar As Saleem</option>
+                            <option value="S000000435">Le Suffren</option>
+                            <option value="S000000438">Hotel Villa Honegg</option>
+                            <option value="S000000439">Beverly Hills Marriott</option>
+                            <option value="S000000440">CITI/TDO - 6255</option>
+                            <option value="S000000443">LUX LE MORNE</option>
+                            <option value="S000000444">paradise beachcomber</option>
+                            <option value="S000000446">Dinarobin Beachcomber</option>
+                            <option value="S000000447">TDO/Credit - 1604</option>
+                            <option value="S000000448">Millennium Plaza</option>
+                            <option value="S000000449">Holiday Boutique</option>
+                            <option value="S000000451">Hawthorn Suites by Wyndham Dubai, JBR</option>
+                            <option value="S000000454">Panorama Destination</option>
+                            <option value="S000000457">Feronya Hotel</option>
+                            <option value="S000000461">Houston Airport Marriott at George Bush Intercontinental</option>
+                            <option value="S000000462">HILTON DUSHANBE</option>
+                            <option value="S000000463">Four Seasons Hotel Washington DC</option>
+                            <option value="S000000472">Palace Downtown</option>
+                            <option value="S000000474">Ramada Hotel &amp; Suites Dammam</option>
+                            <option value="S000000478">Kempinski Al Othman Hotel Al Khobar</option>
+                            <option value="S000000488">Al raya hotel apartments</option>
+                            <option value="S000000489">Aamir Ul Islam Transportor</option>
+                            <option value="S000000490">Exotic Limousine Service</option>
+                            <option value="S000000491">Muhammad Zia Freelancer</option>
+                            <option value="S000000493">Courtyard Barsha</option>
+                            <option value="S000000494">Royal Gate Transportation (Aftab)</option>
+                            <option value="S000000495">Chirag (Guide and Transfers)</option>
+                            <option value="S000000496">Taj compton Place</option>
+                            <option value="S000000500">Majestic Arjaan by Rotana</option>
+                            <option value="S000000506">Hotel Novotel World Trade Centre Dubai</option>
+                            <option value="S000000507">COMO THE HALKIN</option>
+                            <option value="S000000508">TDO-DUBAI</option>
+                            <option value="S000000509">Pullman Dubai Deira Creek City Center</option>
+                            <option value="S000000512">Al Areen Palace &amp; Spa</option>
+                            <option value="S000000513">Movenpick Hotel &amp; Residences Hajar Tower Makkah</option>
+                            <option value="S000000514">The Oberoi</option>
+                            <option value="S000000515">Al Faisaliah Hotel</option>
+                            <option value="S000000518">Matchless</option>
+                            <option value="S000000523">La Verda Suites and Villas Dubai Marina</option>
+                            <option value="S000000525">M Millennium Hotel Makkah</option>
+                            <option value="S000000528">Al Riyadh Travel Abha</option>
+                            <option value="S000000530">Cape Bodrum Beach Resort</option>
+                            <option value="S000000531">Ibis Seef Manama</option>
+                            <option value="S000000542">DIDA Travel</option>
+                            <option value="S000000545">The Retreat Palm Dubai MGallery By Sofitel</option>
+                            <option value="S000000559">Anwar Al Madinah Mövenpick Hotel</option>
+                            <option value="S000000560">Four Seasons Hotel London at Park Lane</option>
+                            <option value="S000000563">HILTON CAIRO ZAMALEK RESIDENCES</option>
+                            <option value="S000000566">travellers choice travel &amp; tourism LLC ( TCTT )</option>
+                            <option value="S000000570">Studio M Arabian Plaza Hotel</option>
+                            <option value="S000000571">GRAND 5 HOTEL &amp; PLAZA SUKHUMVIT BANGKOK</option>
+                            <option value="S000000575">Hotel d'Allèves</option>
+                            <option value="S000000576">paypal</option>
+                            <option value="S000000601">The Hotel Galleria by Elaf</option>
+                            <option value="S000000634">GOLDEN TULIP BAHRAIN</option>
+                            <option value="S000000635">Radisson Blue suite</option>
+                            <option value="S000000647">Pullman Punwa beach resort</option>
+                            <option value="S000000653">Castell Son Claret</option>
+                            <option value="S000000654">majestic hotel dubai</option>
+                            <option value="S000000655">ECCMID</option>
+                            <option value="S000000656">American Academy of Neurology</option>
+                            <option value="S000000663">VIP services</option>
+                            <option value="S000000665">Golden Sands 10 Hotel Apartments</option>
+                            <option value="S000000667">Oasis Palm</option>
+                            <option value="S000000673">Emerald Palace Kempinski Dubai</option>
+                            <option value="S000000675">Van Royal Gate Transport &amp; for Luxury Cars</option>
+                            <option value="S000000676">Ultima Terrace Dubai</option>
+                            <option value="S000000679">JA Ocean View Hotel</option>
+                            <option value="S000000682">MARHABA DUBAI</option>
+                            <option value="S000000690">Dukes The Palm, a Royal Hideaway Hotel</option>
+                            <option value="S000000691">Jood Palace Hotel Dubai</option>
+                            <option value="S000000716">EUROP CAR</option>
+                            <option value="S000000718">JW Marriott Hotel Dubai</option>
+                            <option value="S000000723">Reosrt Collina Dora</option>
+                            <option value="S000000727">EAN CONGRESS</option>
+                            <option value="S000000730">Bay La Sun Hotel &amp; Marina</option>
+                            <option value="S000000739">Dubai Taxi</option>
+                            <option value="S000000745">Hyatt Regency Amsterdam</option>
+                            <option value="S000000746">NH COLLECTION PALAZZO CINQUECENTO</option>
+                            <option value="S000000747">Gerry’s Destination Management Company</option>
+                            <option value="S000000749">Riyadh Airport Marriott Hotel</option>
+                            <option value="S000000760">ULTIMATE LUXURY CAR RENTAL L.L.C</option>
+                            <option value="S000000774">Grand Excelsior Hotel Bur Dubai</option>
+                            <option value="S000000775">St. Regis San Francisco</option>
+                            <option value="S000000778">Ultimate Experience Tourisn LLC</option>
+                            <option value="S000000791">Caesars Resort Bluewaters Dubai</option>
+                            <option value="S000000792">Radisson Blu Hotel &amp; Residence, Riyadh Diplomatic Quarter
+                            </option>
+                            <option value="S000000793">Lymphoma</option>
+                            <option value="S000000794">EULAR</option>
+                            <option value="S000000800">Hilton Garden Inn Dubai Mall Of The Emirates</option>
+                            <option value="S000000805">Cà Duomo, Milan</option>
+                            <option value="S000000806">Al Ibrahim Palace</option>
+                            <option value="S000000807">Carrefour</option>
+                            <option value="S000000812">Tripesta Travel Baku</option>
+                            <option value="S000000818">MEDIA ONE HOTEL</option>
+                            <option value="S000000822">Radisson Blu Plaza Hotel Jeddah</option>
+                            <option value="S000000828">LA RESERVE GENEVE HOTEL, SPA AND VILLA</option>
+                            <option value="S000000829">Waldorf Astoria Beverly Hills</option>
+                            <option value="S000000830">Bloomingdale Limousine Service</option>
+                            <option value="S000000843">smart connection tourism</option>
+                            <option value="S000000846">Creative Tours</option>
+                            <option value="S000000854">ChkSupplier</option>
+                            <option value="S000000855">packageSupplier</option>
+                            <option value="S000000858">nidaSupplier</option>
+                            <option value="S000000860">nidaSupplier2</option>
+                            <option value="S000000874">Sayali_Supp</option>
+                            <option value="S000000875">Testingsupplier</option>
+                            <option value="S000000876">SayaSupp</option>
+                            <option value="S000000877">Emaar Test</option>
+                            <option value="S000000878">Saya_SUPPLIER</option>
+                            <option value="S000000884">supplierPackage</option>
+                            <option value="S000000885">SayuSupplier</option>
+                            <option value="S000000886">Sayali_Check_API</option>
+                            <option value="S000000887">offline.supplier.mum</option>
+                            <option value="S000000888">World Avenue</option>
+                            <option value="S000000889">NEW J-Venture Sup</option>
+                            <option value="S000000890">JV Hotel 1</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Transfer</label>
+                        <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            name="Search_transfer" id="Search_transfer" onfocus="javascript:checkSupplierSearch();"
+                            data-live-search="true">
+                            <option value="0">- Select Transfer -</option>
+                            <option value="95" selected="">Brussel_ACCtoACC</option>
+                            <option value="92">Brussel_Nida_Transfer</option>
+                            <option value="96">Brussel_TERtoACC</option>
+                            <option value="97">Brussel_TERtoTER</option>
+                            <option value="54">ClientIssue_AED1</option>
+                            <option value="55">Clientissu_AED2</option>
+                            <option value="91">LocalTransfer</option>
+                            <option value="67">MumbaiTransTest_1</option>
+                            <option value="104">Mumbai_Trans_DoNotUse</option>
+                            <option value="53">NagpurTransfer1</option>
+                            <option value="51">NagpurTransfer2</option>
+                            <option value="52">NagpurTransfer3</option>
+                            <option value="88">NagpurTransfer4</option>
+                            <option value="12">NidaTransfer1</option>
+                            <option value="13">NidaTransfer2</option>
+                            <option value="14">NIDATRANSFER3</option>
+                            <option value="15">NidaTransfer4</option>
+                            <option value="93">Qtech Test</option>
+                            <option value="103">Qtech_Test_check</option>
+                            <option value="27">SayaliPrivateTransfer_new1</option>
+                            <option value="28">sayaliPrivateTransfer_new2</option>
+                            <option value="19">SayaliTransfer1</option>
+                            <option value="23">SayaliTransferPrivate1</option>
+                            <option value="29">sayaliTransferPrivate_new3</option>
+                            <option value="25">SayaliTransPrivatePerPax 1</option>
+                            <option value="26">sayaliTransPrivatePerPax 2</option>
+                            <option value="98">Sayali_Transfer</option>
+                            <option value="83">Static-Trans-sameProfile_New</option>
+                            <option value="47">TranferTestSIC_USD1</option>
+                            <option value="50">TransCurrency_AEDSIC3</option>
+                            <option value="42">Transfecurrency_AEDSIC</option>
+                            <option value="43">TRANSFECURRENCY_AEDSIC2</option>
+                            <option value="56">TransferCancel_1</option>
+                            <option value="60">TransferCancel_SIC1</option>
+                            <option value="61">TransferCancel_SIC2</option>
+                            <option value="33">TransferPrivate_Test1</option>
+                            <option value="59">TransferPri_Cancel1</option>
+                            <option value="40">TransferSICAED_1</option>
+                            <option value="41">TransferSICAED_2</option>
+                            <option value="49">TransferTestPrivate_AEDTest1</option>
+                            <option value="36">TransferTestPrivate_New1</option>
+                            <option value="35">TransferTestSIC_new1</option>
+                            <option value="44">TransferTestSIC_New2</option>
+                            <option value="62">TransferTestSIC_NewSIC1</option>
+                            <option value="63">TRANSFERTESTSIC_NEWSIC2</option>
+                            <option value="48">TransferTest_AEDnew1</option>
+                            <option value="32">TransferTest_New1</option>
+                            <option value="57">TransferTest_SICCancel2</option>
+                            <option value="58">TransferTest_SICCancel3</option>
+                            <option value="38">Transfer_AEDTest</option>
+                            <option value="39">Transfer_AEDTest2</option>
+                            <option value="102">Transfer_Check</option>
+                            <option value="65">Transfer_Client issue</option>
+                            <option value="64">Transfer_Local</option>
+                            <option value="69">Transfer_Pune_PRI_One</option>
+                            <option value="71">Transfer_Pune_PRI_Two</option>
+                            <option value="68">Transfer_Pune_SIC_One</option>
+                            <option value="70">Transfer_Pune_SIC_Two</option>
+                            <option value="94">Transfer_Sayali</option>
+                            <option value="86">Transfer_SICPRI_TestABC</option>
+                            <option value="66">Transfer_Test</option>
+                            <option value="90">Transfer_Test_check</option>
+                            <option value="87">Transfer_Test_Test</option>
+                            <option value="72">Trans_Pune_SICPRI</option>
+                            <option value="84">Trans_Pune_SICPRI_New</option>
+                            <option value="74">Trans_SICPRI_SameVehicle</option>
+                            <option value="73">Trans_SIC_DIffVehicle</option>
+                            <option value="82">Trans_SIC_DiffVehicleTest</option>
+                            <option value="79">Trans_SIC_MultiSupp</option>
+                            <option value="78">Trans_SIC_PRI_Same Profile</option>
+                            <option value="80">Trans_SIC_SingleProfile</option>
+                            <option value="75">Trans_Test_SIC</option>
+                            <option value="76">Trans_Test_SIC</option>
+                            <option value="85">Trasnfer_Test_SICPRI_TestS</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Currency</label>
+                        <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            name="Search_currency" id="Search_currency" data-live-search="true">
+                            <option value="0"> - Select Currency -</option>
+                            <option value="AUD">AUSTRALIAN DOLLAR</option>
+                            <option value="BHD">BAHRAINI DINAR</option>
+                            <option value="BRL">BRAZILIAN REAL</option>
+                            <option value="GBP">BRITISH POUND</option>
+                            <option value="CAD">CANADIAN DOLLAR</option>
+                            <option value="CNY">CHINESE YEN</option>
+                            <option value="CZK">CZECH KORUNA</option>
+                            <option value="DKK">DANISH KRONE</option>
+                            <option value="EGP">Egyptian Pound</option>
+                            <option value="EUR">EURO</option>
+                            <option value="HKD">HK DOLLAR</option>
+                            <option value="HUF">HUNGARIAN FORINT</option>
+                            <option value="INR">INDIAN RUPEE</option>
+                            <option value="IDR">INDONESIAN RUPIAH</option>
+                            <option value="ISK">ISLANDIAN CROWN</option>
+                            <option value="JPY">JAPANESE YEN</option>
+                            <option value="JOD">JORDANIAN DINAR</option>
+                            <option value="KRW">KOREAN WON</option>
+                            <option value="KWD">KUWAITI DINAR</option>
+                            <option value="MYR">MALAYSIAN RINGGIT</option>
+                            <option value="MUR">Mauritian rupee</option>
+                            <option value="NZD">NEW ZEALAND DOLLAR</option>
+                            <option value="NOK">NORWEGIAN KRONE</option>
+                            <option value="OMR">OMANI RIAL</option>
+                            <option value="PKR">Pakistani Rupee</option>
+                            <option value="PHP">PHILIPPINE PESO</option>
+                            <option value="QAR">QATAR RIAL</option>
+                            <option value="RUB">RUSSIAN ROUBLE</option>
+                            <option value="SAR">SAUDI RIYAL</option>
+                            <option value="SGD">SINGAPORE DOLLAR</option>
+                            <option value="ZAR">SOUTH AFRICAN RAND</option>
+                            <option value="SEK">SWEDISH KRONA</option>
+                            <option value="CHF">SWISS FRANC</option>
+                            <option value="TWD">TAIWAN DOLLARS</option>
+                            <option value="THB">THAILAND BHAT</option>
+                            <option value="TND">TUNISIA DINAR</option>
+                            <option value="USD">U.S. DOLLAR</option>
+                            <option value="AED">UAE DIRHAM</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Rate Profile</label>
+                        <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            name="Search_rate_pro" id="Search_rate_pro" data-live-search="true">
+                            <option value="0"> - Select Rate Profile -</option>
+                            <option value="15">Dubai Market</option>
+                            <option value="59">Transfer</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-3 form-group mt-2">
+                        <label>Vehicle Type</label>
+                        <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            name="Search_vehicle_type" id="sel_vehicle_type_search" data-live-search="true">
+                            <option value="0"> - Select Vehicle Type -</option>
+                            <option value="LXS">Luxury Sedan</option>
+                            <option value="Q1">Coaster</option>
+                            <option value="BM01">Super Luxury</option>
+                            <option value="BS">TANIA BUS</option>
+                            <option value="8">Local_Transfer_Vehicle</option>
+                            <option value="9">Sedan</option>
+                            <option value="10">Economy Car</option>
+                            <option value="11">Mini Van</option>
+                            <option value="12">Big Van</option>
+                            <option value="20">TT</option>
+                            <option value="23">inventory retest_1</option>
+                            <option value="25">inventory retest_2</option>
+                            <option value="26">vaibhav</option>
+                            <option value="27">test VEHICLE</option>
+                            <option value="28">car</option>
+                            <option value="29">swift zxi</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Charge Applied</label>
+                        <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            name="Search_charge_appl" id="Search_charge_appl" data-live-search="true">
+                            <option value="0"> - Select Charge Applied -</option>
+                            <option value="Private">Private</option>
+                            <option value="Private Per Pax">Private Per Pax</option>
+                            <option value="SIC Basis">SIC Basis</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Status</label>
+                        <select class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            name="Search_status" id="Search_status" data-live-search="true">
+                            <option value="0"> - Select Status -</option>
+                            <option value="A">Active</option>
+                            <option value="I">InActive</option>
+                        </select>
+
+                    </div>
+                    <div class="col-md-12 form-group mt-2">
+
+                        <button type="button" class="form-group btn btn-dark btn-sm"
+                            onclick="searchTariff('searchTariff')">
+                            <i class="fa fa-search"></i>&nbsp;Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br>
+        <form>
+
+            <div class="dataTables_scroll">
+                <div class="panel-body removeMargins">
+                    <div id="search_sup_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                        <div class="row">
+                            <div class="col-sm-10"></div>
+                            <div class="col-sm-2">
+                                <div id="search_sup_filter" class="form-group dataTables_filter" ><label >Search:<input type="search"
+                                            class="form-control form-control-sm input-sm" placeholder=""
+                                            aria-controls="search_sup"></label></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="doubleScroll-scroll-wrapper" id="wrapper1"
+                                    style="height: 20px; overflow: scroll hidden; width: 1320px;">
+                                    <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1320px;"></div>
+                                </div>
+                                <div id="wrapper2" style="overflow: scroll hidden;">
+                                    <table id="search_sup"
+                                        class="table table-bordered table-striped table-hover table-responsive dataTable no-footer"
+                                        role="grid" aria-describedby="search_sup_info">
+                                        <thead>
+                                            <tr  role="row">
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 58.2px;">
+                                                    <div class="checkbox checkbox-success checkbox-inline">
+                                                        <input type="checkbox" name="select-all"
+                                                            onclick="select_check_box(this)" id="select_all_check">
+                                                        <label for="select_all_check"></label>
+                                                    </div>
+                                                </th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 104.2px;">Supplier
+                                                </th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 139.2px;">Transfer</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 100.2px;">Currency</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 105.2px;">Rate Profile</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 89.2px;">Vehicle Type</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 144.2px;">Charge Applied Type</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 87.2px;">Period From</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 86.2px;">Period To</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 75.2px;">Adult Rate</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 74.2px;">Child Rate</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 89.2px;">Vehicle Rate</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 56.2px;">Status</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1"
+                                                    style="width: 123px;">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+
+
+                                            <tr class="phps_row_1 odd" id="row_350" role="row">
+                                                <td align="center">
+                                                    <div class="checkbox checkbox-success checkbox-inline">
+                                                        <input type="checkbox" name="chk[]" id="chk[]" class="fun"
+                                                            onclick="check_select_check_box()"
+                                                            value="5de38cc9e00d8b1cb294699d30aad71f">
+                                                        <label for="select_all_check"></label>
+                                                    </div>
+                                                </td>
+                                                <td>Allwin-qtech</td>
+                                                <td>Brussel_ACCtoACC</td>
+                                                <td>EURO</td>
+                                                <td>Dubai Market</td>
+                                                <td>
+                                                    Sedan
+                                                </td>
+                                                <td>Private</td>
+                                                <td>08/12/2020&nbsp;</td>
+                                                <td>28/02/2021&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>100.00&nbsp;</td>
+                                                <td id="tariff_status_350">Active</td>
+                                                <td class="actionlink">
+                                                    <input type="hidden" name="tariff_id" id="tariff_id_350"
+                                                        value="350">
+                                                    <input type="hidden" name="tariff_time_stamp"
+                                                        id="tariff_time_stamp_350"
+                                                        value="5de38cc9e00d8b1cb294699d30aad71f">
+                                                    <input type="hidden" name="search_string" id="search_string"
+                                                        value="Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95">
+                                                    <div class="actionCont">
+                                                        <div class="input-group-addon" data-toggle="tooltip"
+                                                            data-original-title="Add Tariff Surcharge">
+                                                            <a data-placement="top" border="0"
+                                                                alt="Add Tariff Surcharge" onclick="tariff_window(350);"
+                                                                data-toggle="modal" data-target="#myModal1">
+                                                                <i class="fa fa-money"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <a href="add_trans_tariff.php?action=edit&amp;id=350&amp;time_stamp=5de38cc9e00d8b1cb294699d30aad71f&amp;Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95"
+                                                                data-original-title="Edit" data-toggle="tooltip"
+                                                                data-placement="top">
+                                                                <i class="fa fa-pencil-square-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <span id="deact_img_350"
+                                                                onclick="javascript:activate_tariff('350','5de38cc9e00d8b1cb294699d30aad71f','Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95');"
+                                                                style="display:none;cursor:hand;cursor:pointer;"
+                                                                data-original-title="Click to Activate" border="0"
+                                                                data-toggle="tooltip" data-placement="top">
+                                                                <i class="fa fa-times-circle"></i>
+                                                            </span>
+                                                            <span id="act_img_350"
+                                                                onclick="javascript:deactivate_tariff('350','5de38cc9e00d8b1cb294699d30aad71f','Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95');"
+                                                                style="cursor:hand;cursor:pointer;"
+                                                                data-original-title="Click to Inactivate"
+                                                                data-toggle="tooltip" data-placement="top">
+                                                                <i class="fa fa-check-circle"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <span style="cursor:hand;cursor:pointer;" title=""
+                                                                data-toggle="tooltip" data-placement="top" border="0"
+                                                                onclick="delete_tariff('350','5de38cc9e00d8b1cb294699d30aad71f','Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95');"
+                                                                data-original-title="Delete">
+                                                                <i class="fa fa-trash"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr class="phps_row_0 even" id="row_351" role="row">
+                                                <td align="center">
+                                                    <div class="checkbox checkbox-success checkbox-inline">
+                                                        <input type="checkbox" name="chk[]" id="chk[]" class="fun"
+                                                            onclick="check_select_check_box()"
+                                                            value="bd0098599444622fb134762f882f73d5">
+                                                        <label for="select_all_check"></label>
+                                                    </div>
+                                                </td>
+                                                <td>Allwin-qtech</td>
+                                                <td>Brussel_ACCtoACC</td>
+                                                <td>EURO</td>
+                                                <td>Transfer</td>
+                                                <td>
+                                                    Sedan
+                                                </td>
+                                                <td>Private</td>
+                                                <td>08/12/2020&nbsp;</td>
+                                                <td>28/02/2021&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>100.00&nbsp;</td>
+                                                <td id="tariff_status_351">Active</td>
+                                                <td class="actionlink">
+                                                    <input type="hidden" name="tariff_id" id="tariff_id_351"
+                                                        value="351">
+                                                    <input type="hidden" name="tariff_time_stamp"
+                                                        id="tariff_time_stamp_351"
+                                                        value="bd0098599444622fb134762f882f73d5">
+                                                    <input type="hidden" name="search_string" id="search_string"
+                                                        value="Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95">
+                                                    <div class="actionCont">
+                                                        <div class="input-group-addon" data-toggle="tooltip"
+                                                            data-original-title="Add Tariff Surcharge">
+                                                            <a data-placement="top" border="0"
+                                                                alt="Add Tariff Surcharge" onclick="tariff_window(351);"
+                                                                data-toggle="modal" data-target="#myModal1">
+                                                                <i class="fa fa-money"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <a href="add_trans_tariff.php?action=edit&amp;id=351&amp;time_stamp=bd0098599444622fb134762f882f73d5&amp;Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95"
+                                                                data-original-title="Edit" data-toggle="tooltip"
+                                                                data-placement="top">
+                                                                <i class="fa fa-pencil-square-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <span id="deact_img_351"
+                                                                onclick="javascript:activate_tariff('351','bd0098599444622fb134762f882f73d5','Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95');"
+                                                                style="display:none;cursor:hand;cursor:pointer;"
+                                                                data-original-title="Click to Activate" border="0"
+                                                                data-toggle="tooltip" data-placement="top">
+                                                                <i class="fa fa-times-circle"></i>
+                                                            </span>
+                                                            <span id="act_img_351"
+                                                                onclick="javascript:deactivate_tariff('351','bd0098599444622fb134762f882f73d5','Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95');"
+                                                                style="cursor:hand;cursor:pointer;"
+                                                                data-original-title="Click to Inactivate"
+                                                                data-toggle="tooltip" data-placement="top">
+                                                                <i class="fa fa-check-circle"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <span style="cursor:hand;cursor:pointer;" title=""
+                                                                data-toggle="tooltip" data-placement="top" border="0"
+                                                                onclick="delete_tariff('351','bd0098599444622fb134762f882f73d5','Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95');"
+                                                                data-original-title="Delete">
+                                                                <i class="fa fa-trash"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr class="phps_row_1 odd" id="row_377" role="row">
+                                                <td align="center">
+                                                    <div class="checkbox checkbox-success checkbox-inline">
+                                                        <input type="checkbox" name="chk[]" id="chk[]" class="fun"
+                                                            onclick="check_select_check_box()"
+                                                            value="cac05fc1d8754345051eb74c6d7ad864">
+                                                        <label for="select_all_check"></label>
+                                                    </div>
+                                                </td>
+                                                <td>Allwin-qtech</td>
+                                                <td>Brussel_ACCtoACC</td>
+                                                <td>INDIAN RUPEE</td>
+                                                <td>Transfer</td>
+                                                <td>
+                                                    Sedan
+                                                </td>
+                                                <td>Private</td>
+                                                <td>01/02/2023&nbsp;</td>
+                                                <td>04/02/2023&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>100.00&nbsp;</td>
+                                                <td id="tariff_status_377">Active</td>
+                                                <td class="actionlink">
+                                                    <input type="hidden" name="tariff_id" id="tariff_id_377"
+                                                        value="377">
+                                                    <input type="hidden" name="tariff_time_stamp"
+                                                        id="tariff_time_stamp_377"
+                                                        value="cac05fc1d8754345051eb74c6d7ad864">
+                                                    <input type="hidden" name="search_string" id="search_string"
+                                                        value="Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95">
+                                                    <div class="actionCont">
+                                                        <div class="input-group-addon" data-toggle="tooltip"
+                                                            data-original-title="Add Tariff Surcharge">
+                                                            <a data-placement="top" border="0"
+                                                                alt="Add Tariff Surcharge" onclick="tariff_window(377);"
+                                                                data-toggle="modal" data-target="#myModal1">
+                                                                <i class="fa fa-money"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <a href="add_trans_tariff.php?action=edit&amp;id=377&amp;time_stamp=cac05fc1d8754345051eb74c6d7ad864&amp;Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95"
+                                                                data-original-title="Edit" data-toggle="tooltip"
+                                                                data-placement="top">
+                                                                <i class="fa fa-pencil-square-o"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <span id="deact_img_377"
+                                                                onclick="javascript:activate_tariff('377','cac05fc1d8754345051eb74c6d7ad864','Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95');"
+                                                                style="display:none;cursor:hand;cursor:pointer;"
+                                                                data-original-title="Click to Activate" border="0"
+                                                                data-toggle="tooltip" data-placement="top">
+                                                                <i class="fa fa-times-circle"></i>
+                                                            </span>
+                                                            <span id="act_img_377"
+                                                                onclick="javascript:deactivate_tariff('377','cac05fc1d8754345051eb74c6d7ad864','Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95');"
+                                                                style="cursor:hand;cursor:pointer;"
+                                                                data-original-title="Click to Inactivate"
+                                                                data-toggle="tooltip" data-placement="top">
+                                                                <i class="fa fa-check-circle"></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="input-group-addon">
+                                                            <span style="cursor:hand;cursor:pointer;" title=""
+                                                                data-toggle="tooltip" data-placement="top" border="0"
+                                                                onclick="delete_tariff('377','cac05fc1d8754345051eb74c6d7ad864','Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95');"
+                                                                data-original-title="Delete">
+                                                                <i class="fa fa-trash"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <!-- End Row -->
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+
+<script type="text/javascript">
+    var wrapper1 = document.getElementById('wrapper1');
+    var wrapper2 = document.getElementById('wrapper2');
+    wrapper1.onscroll = function () {
+        wrapper2.scrollLeft = wrapper1.scrollLeft;
+    };
+    wrapper2.onscroll = function () {
+        wrapper1.scrollLeft = wrapper2.scrollLeft;
+    };
+</script>
+<script language="Javascript">
+	var ajax = new sack();
+	function getTransferList_search(){
+		var supplierCode = document.getElementById('Search_supplier').value;
+		document.getElementById('Search_transfer').options.length = 0;
+		if(supplierCode.length>0){
+			ajax.requestFile = 'getTransfer.php?supplierCode='+supplierCode;
+			ajax.onCompletion = createTransferSearch;
+			ajax.runAJAX();
+		}
+	}
+	function createTransferSearch(){
+		var obj = document.getElementById('Search_transfer');
+		eval(ajax.response);
+		$("#Search_transfer").selectpicker("refresh");
+		if (typeof(document.getElementById("selected_transfer_id")) != 'undefined' && document.getElementById("selected_transfer_id") != null && document.getElementById("selected_transfer_id").value != ""){
+			if(document.getElementById('search_remainder').value == "1"){
+				document.getElementById('search_remainder').value = "0";
+			}
+		}
+		$("#Search_transfer").selectpicker("refresh");
+	}
+	$(function () {
+	 	$(document).on("focus","button.dropdown-toggle[data-id='Search_transfer']",function(){
+			var selCountry = $("form[name='search_trans_tariff'] #Search_supplier").next().find("li.selected").text().trim();
+			if(selCountry!=""&selCountry!="- Select Supplier -"){}
+			else {
+				showWarAlert('First Select Supplier.','Search_supplier',document.forms["search_trans_tariff"],'selectpicker');
+			}
+		});
+	});
+	$(document).on('click', '.custPaging td a',function(e){
+    	e.preventDefault();
+        var hrefValue = $(this).attr('href');
+        var nextValue = getUrlParameter('next', hrefValue);
+        if(typeof nextValue == 'undefined' || nextValue == null){
+            $("#nextPaginate").val();
+        }
+        $("#nextPaginate").val(nextValue);
+        $('#search_trans_tariff').find("input").filter("[name='searchType']").val('searchTariff');
+        $('#search_trans_tariff').submit();
+        return false;
+    });        
+	function checkVehicle(){
+		if(document.getElementById('sel_vehicle_search').value == '0') {
+			showWarAlert('First Select Vehicle.');
+			document.getElementById('sel_vehicle_search').focus();
+		}
+	}
+	function getVehicleModel(){
+		var vehicleCode = document.getElementById('sel_vehicle').value;
+		if(vehicleCode.length>0){
+			ajax.requestFile = 'getVehicle.php?vehicleCode='+vehicleCode+'&type=vehiclemodel';
+			ajax.onCompletion = createVehicleModel;
+			ajax.runAJAX();
+		}
+	}
+	function createVehicleModel(){
+		document.getElementById('Search_veh_model').options.length = 0;
+		var obj = document.getElementById('Search_veh_model');
+		eval(ajax.response);
+		getPaxLugCap();
+	}
+	function validate_chk(formObj,action, supplier){
+		var chks = document.getElementsByName('del[]');
+		if(typeof(chks[0])=="undefined"){
+			return false;
+		}
+		var hasChecked = false;
+		for (var i=0;i<chks.length;i++){
+			if (chks[i].checked){
+			hasChecked = true;
+			break;
+			}
+		}
+		if (!hasChecked){
+    		if(action=="multi_delete"){
+    			showWarAlert("Please Select Atleast One Transfer To Delete.");
+    		}
+    		if(action=="Activate"){
+    			showWarAlert("Please Select Atleast One Transfer To Activate.");
+    		}
+    		if(action=="Deactivate"){
+    			showWarAlert("Please Select Atleast One Transfer To Deactivate.");
+    		}
+			chks[0].focus();
+			return false;
+		}
+		if(action=="multi_delete")
+			var a = confirm("Are you sure you want to delete selected ?");
+		if(action=="Activate")
+			var a = confirm("Are you sure you want to activate selected Transfers?");
+		if(action=="Deactivate")
+			var a = confirm("Are you sure you want to deactivate selected Transfers?");
+		if(action=="Areacode")
+			var a = confirm("Are you sure you want to apply area code on selected Transfers?");
+		if(action=="InActiveAreacode")
+			var a = confirm("Are you sure you want to inactive area code on selected Transfers?");
+		if(a == true){
+			if(action=="multi_delete"){
+				formObj.action.value="multi_delete";
+			}
+			if(action=="Activate"){
+				formObj.action.value="Activate";
+			}
+			if(action=="Deactivate"){
+				formObj.action.value="Deactivate";
+			}
+			formObj.submit();
+		}else{
+			return false;
+		}
+	}
+	function callSearch() {
+		var url="search_trans_tariff.php?";
+		var supplier_id = $('#Search_supplier').val();
+		url = url + "Search_supplier="+supplier_id;
+		var transfer_id = $('#Search_transfer').val();
+		url = url + "&Search_transfer="+transfer_id;
+		var currency = $('#Search_currency').val();
+		url = url + "&Search_currency="+currency;
+		var rateProfile = $("#Search_rate_pro").val();
+		url = url + "&Search_rate_pro="+rateProfile;
+		var url = url + "&transfer_paging=yes";
+		var vehicle_name = $("#sel_vehicle_search").val();
+		url = url + "&Search_vehicle="+vehicle_name;
+		var vehicle_model = $("#Search_veh_model").val();
+		url = url + "&Search_veh_model="+vehicle_model;
+		var charge_applied = $("#Search_charge_appl").val();
+		url = url + "&Search_charge_appl="+charge_applied;
+		var status = $("#Search_status").val();
+		url = url + "&Search_status="+status;
+		$.get(url,function(data){
+			$('#search_tariff_page').html(data);
+		});
+	}
+	function confirm_active(p_url){
+		if(confirm(" Do You want to Active?")) {
+			window.location.href = p_url;
+		}
+	}
+	function confirm_inactive(p_url){
+		if(confirm("Do You want to Inactive?")) {
+			window.location.href = p_url;
+		}
+	}
+	function activate_tariff(id,time_stamp,search_string){
+		var url= "search_trans_tariff.php?time_stamp="+time_stamp+"&action=active&id="+id+"&search_string="+search_string;
+		var act_id = "#act_img_"+id;
+		var deact_id = "#deact_img_"+id;
+		$.get(url,function(data){
+			$(deact_id).hide();
+			$(act_id).show();
+			$("#tariff_status_"+id).html("Active");
+			toastr.info('<h5>'+data+'</h5>');
+		});
+	}
+	function deactivate_tariff(id,time_stamp,search_string){
+		var url= "search_trans_tariff.php?time_stamp="+time_stamp+"&action=inactive&id="+id+"&search_string="+search_string;
+		var act_id = "#act_img_"+id;
+		var deact_id = "#deact_img_"+id;
+		$.get(url,function(data){
+			$(act_id).hide();
+			$(deact_id).show();
+			$("#tariff_status_"+id).html("Inactive");
+			toastr.info('<h5>'+data+'</h5>');
+		});
+	}
+	function delete_tariff(id,time_stamp,search_string){
+		if (time_stamp) {
+			var a = showsingleAlert("Are you sure you want to delete selected Transfer Rate?",id, time_stamp, search_string, "Delete");
+		}
+	}
+	function showsingleAlert(msg, id, time_stamp, search_string, action) {
+		swal({
+    		title : msg,
+    		type : "warning",
+    		showCancelButton : true,
+    		confirmButtonText : "Ok",
+    		confirmButtonColor : "#F0AD4E",
+    		closeOnConfirm : true
+		},function(isConfirm) {
+			if (isConfirm) {
+				if (action == "Delete") {
+					var url = "search_trans_tariff.php?time_stamp="+ time_stamp + "&action=delete&id=" + id+ "&search_string=" + search_string;
+					$.ajax({
+						type : "POST",
+						url : url,
+						data : '',
+						success : function(data_1) {
+							toastr.info('<h5>Transfer Deleted Successfully</h5>');
+							setTimeout(function() {
+								window.location.reload();
+							}, 2000);
+						}
+					});
+				}
+			} else {
+				return false;
+			}
+		});
+	}
+	function transferAjax(url){
+		$.get(url,function(data){
+			$('#search_tariff_page').html(data);
+		});
+	}
+	$(function () {
+	  	$('[data-toggle="tooltip"]').tooltip()
+	})
+	$(function(){
+		$('#search_sup').dataTable();
+		setTimeout(function() {
+			$('#search_sup').wrap("<div id='scrollCont'></div>");
+			$('#scrollCont').doubleScroll();
+		},500);
+		$(".mesID").hide();
+		var mesID = $(".mesID").text().trim();
+		if(mesID != ""){
+			toastr.info('<h5>'+mesID+'</h5>');
+		}
+		$("#notfound").hide();
+		var notfound = $("#notfound").text().trim();
+		if(notfound != ""){
+			showWarAlert(notfound);
+		}
+    });
+	function tariff_window(tariff_id) {
+		var id = $("#tariff_id_"+tariff_id).val();
+		var time_stamp = $("#tariff_time_stamp_"+tariff_id).val();
+		var search_string = $("#search_string").val();
+    	var modalContent="";
+		modalContent+="<iframe frameborder='0' width='100%' height='600' src='search_trans_tariff.php?action=show_surcharge&id="+id+"&time_stamp="+time_stamp+"&search_string="+search_string+"></iframe><span class='fa fa-times-circle fa-4 closeBtn' data-dismiss='modal'></span>";
+		$("#myModal1 .modal-body .modCont").html(modalContent);
+		$("#myModal1").addClass("hmodal-success");
+    }
+    
+	window.closeModal = function(){
+	    $('#myModal1').modal('hide');
+	};
+	 
+    function delete_multiple_tarif(action){
+   	 	var chks = document.getElementsByName('chk[]');
+   		if(typeof(chks[0])=="undefined"){
+   			return false;
+   		}
+   		var hasChecked = false;
+   		for (var i=0;i<chks.length;i++){
+   			if (chks[i].checked){
+   			hasChecked = true;
+   			break;
+   			}
+   		}
+   		if (!hasChecked){
+       		showWarAlert("Please Select Atleast One Transfer Rate To Delete.");
+       		chks[0].focus();
+       		return false;
+   		}
+		if(action=="Delete"){
+			var a = showAlert("Are you sure you want to delete selected Transfer Rate?",'',action);
+		}
+   	}
+	function showAlert(msg,formObj,action){
+		swal({
+		  title: msg,
+		  type: "warning",
+		  showCancelButton: true,
+		  confirmButtonText: "Ok",
+		  confirmButtonColor: "#F0AD4E",
+		  closeOnConfirm: true
+		},
+		function(isConfirm){
+		    if (isConfirm) {
+    			if(action=="Delete"){
+    				var transfer=$('#transfer_id').val();
+    		   		var supplier_id=$('#supplier_id').val();
+    		   		var url ='search_trans_tariff.php?action=multi_delete&tranfer_id='+transfer+"&supplier_id="+supplier_id;
+    		   		var form = $("#search_trans_tariff");
+    		   		var serializedForm = form.serialize();
+    				$.post(url,serializedForm,function(data_1){
+    	   				toastr.info('<h5>Transfer Rate list Deleted Successfully</h5>');
+    					setTimeout(function(){
+    	   					window.location.reload();
+    					}, 2000);
+    	   		 	});
+    			}
+		    }else{
+				return false;
+		    }
+		});
+	}
+	var getUrlParameter = function getUrlParameter(sParam,sPageURL) {
+        var sPageURL = sPageURL.split('?');
+        var sURLVariables = sPageURL[1].split('&');
+        var sParameterName;
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+    };
+	function searchTariff(type){
+        var form=$('#search_trans_tariff');
+        form.find("input").filter("[name='searchType']").val(type);
+        $("#nextPaginate").val("");
+        $("#search_trans_tariff").submit();
+    }
+   	function select_check_box(t){
+   		$('input:checkbox.fun').each(function () {
+   			if(!$(t).prop('checked')){
+   				$(this).prop('checked', false);
+   			}else{
+   				$(this).prop('checked', true);
+   			}
+   		});
+   	}
+   	function check_select_check_box(t){
+   		var all_select= all_unselect = 0;
+   		$('input:checkbox.fun').each(function () {
+   			if($(this).prop('checked')==false){
+   				all_select = 1;
+   			}else{
+   				all_unselect = 1;
+   			}
+   		});
+   		if(all_unselect==1 && all_select==0){
+			$("#select_all_check").prop('checked', true);
+		}else{
+			$("#select_all_check").prop('checked', false);
+		}
+   	}
+</script>
+
+</html>
