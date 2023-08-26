@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body style="background-color: white !important;">
+    <style>
+        .form-control[disabled],
+        .form-control[readonly],
+        fieldset[disabled] .form-control {
+            cursor: not-allowed;
+            background-color: #eee;
+            opacity: 1;
+        }
+    </style>
+
+    <!--    Panel Body        -->
+
+    <div class="siteLogo mb-2" style="   padding-left:22px;padding-top: 8px;">
+        <img src="http://beta.tdonlines.com/project_folder/tdonline//images/logo.png" alt="" style="width: 105px; ">
+    </div>
+    <hr>
+    <div class="container-fluid pt-0 p-4" id="content-pad">
+
+
+
+
+        <ul class="nav nav-tabs" id="mainTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="products-tab" data-toggle="tab" href="#products" role="tab"
+                    aria-controls="products" aria-selected="true">ActivityRate</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="services-tab" data-toggle="tab" href="#services" role="tab"
+                    aria-controls="services" aria-selected="false">Inventory Allocation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="cancellation-tab" data-toggle="tab" href="#cancellation" role="tab"
+                    aria-controls="cancellation" aria-selected="false">Cancellation Policy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="stop-tab" data-toggle="tab" href="#stop" role="tab" aria-controls="stop"
+                    aria-selected="false">Stop Sell</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="PAD-tab" data-toggle="tab" href="#PAD" role="tab" aria-controls="PAD"
+                    aria-selected="false">Pick-up & Drop-off</a>
+            </li>
+        </ul>
+
+        <form style=" border-top: 2px solid #337AB7!important; padding: 0px;">
+            <div class="tab-content" id="mainTabContent">
+                <!-- Products Tab -->
+                <div class="tab-pane fade show active" id="products" role="tabpanel" aria-labelledby="products-tab">
+                    <ul class="nav nav-tabs" id="productsSubTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="subtab1-tab" data-toggle="tab" href="#subtab1" role="tab"
+                                aria-controls="subtab1" aria-selected="true">Add / Edit Activity Rate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="subtab2-tab" data-toggle="tab" href="#subtab2" role="tab"
+                                aria-controls="subtab2" aria-selected="false">View Activity Rate</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="productsSubTabContent" style="padding-left: 11px;
+                padding-right: 0px;
+                padding-top: 5px;
+                padding-bottom: 6px;">
+                        <div class="tab-pane fade show active" id="subtab1" role="tabpanel"
+                            aria-labelledby="subtab1-tab">
+
+
+                            <div class="col-md-12 form-group row mt-2">
+                                <h5 style="font-size: 18px">Activity RATE DETAILS</h5>
+                            </div>
+                            <div class="col-md-12 form-group row mt-2">
+                                <div class="col-md-2 form-group">
+                                    <label>Activity Type</label>
+                                    <input id="activity_type" readonly="" class="form-control form-control-sm"
+                                        type="text" value="Activities">
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <label>Activity Sub Type</label>
+                                    <input id="activity_sub_type" readonly="" class="form-control form-control-sm"
+                                        type="text" value="">
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <label>Activity Category</label>
+                                    <input id="activity_category" readonly="" class="form-control form-control-sm"
+                                        type="text" value="Adventure Trip">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 form-group row mt-2">
+                                <input type="hidden" name="sel_countries" id="country" disabled="disabled"
+                                    value="India">
+                                <input type="hidden" name="sel_city" id="city" size="40" disabled="disabled"
+                                    value="Mumbai">
+                                <div class="form-group col-md-2 phps_row_0">
+                                    <label>Activity Name</label>
+                                    <input class="form-control form-control-sm required" type="text" name="sel_tours"
+                                        id="sel_tours" size="60" value="supp2Tour1" disabled="disabled">
+                                    <input class="form-control" type="hidden" id="supplier_id" name="supplier_id"
+                                        value="S000000860">
+                                </div>
+                                <div class="form-group col-md-5 phps_row_1">
+                                    <label>Availaible on days</label>
+                                    <br>
+                                    <div class="radioline1">
+                                        <div class="checkbox checkbox-success checkbox-inline">
+                                            <input type="checkbox" name="chk_all_days" id="chk_all_days" value="all">
+                                            <label for="chk_all_days">All</label>&nbsp;&nbsp;
+                                        </div>
+                                        <div class="checkbox checkbox-success checkbox-inline avalaible_days">
+                                            <input type="checkbox" id="availaible_Mo" name="chk_weekday[]" value="Mo">
+                                            <label for="Mo">Mon</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline avalaible_days">
+                                            <input type="checkbox" id="availaible_Tu" name="chk_weekday[]" value="Tu">
+                                            <label for="Tu">Tue</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline avalaible_days">
+                                            <input type="checkbox" id="availaible_We" name="chk_weekday[]" value="We">
+                                            <label for="We">Wed</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline avalaible_days">
+                                            <input type="checkbox" id="availaible_Th" name="chk_weekday[]" value="Th">
+                                            <label for="Th">Thu</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline avalaible_days">
+                                            <input type="checkbox" id="availaible_Fr" name="chk_weekday[]" value="Fr">
+                                            <label for="Fr">Fri</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline avalaible_days">
+                                            <input type="checkbox" id="availaible_Sa" name="chk_weekday[]" value="Sa">
+                                            <label for="Sa">Sat</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline avalaible_days">
+                                            <input type="checkbox" id="availaible_Su" name="chk_weekday[]" value="Su">
+                                            <label for="Su">Sun</label>
+                                        </div>&nbsp;&nbsp;
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel-body mt-3"
+                                style="background-color: #337ab7;padding-bottom: 1px; padding-top: 4px;margin-left:-11px">
+                                <h5 style="color: white !important;font-size:15px;margin-top: 4px;
+                                margin-left: 20px;">Activity Slots</h5>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-12 form-group">
+                                    <div class="col-md-2 form-group">
+                                        <label>Activity Duation :&nbsp;&nbsp;1.0 Hrs
+                                            <input type="hidden" id="tour_duration" name="tour_duration" value="1.0">
+                                        </label>
+                                        <br>
+                                        <div class="checkbox checkbox-success checkbox-inline form-group">
+                                            <input type="checkbox" name="chk_all_slots" id="chk_all_slots" value="all"
+                                                onclick="change_slots();">
+                                            <label for="chk_all_slots">All</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-12 form-group">
+                                    <div class="col-md-6" id="SlotPickers">
+                                        <label>Activity Time (Hours:Minutes)</label>
+                                        <div class="SlotContainer input-group col-md-12 marginBtm10" id="SlotClone_0">
+                                            <select
+                                                class="form-control form-control-sm show-menu-arrow selectpicker customstyle required slotselector bs-select-hidden"
+                                                name="from_sel_hrs[]" id="from_sel_hrs_0" data-live-search="true">
+                                                <option value="">Hours</option>
+                                                <option value="0" selected="">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                            </select>
+
+                                            <select
+                                                class="form-control form-control-sm  show-menu-arrow selectpicker customstyle required bs-select-hidden"
+                                                onchange="calculateMinites(this)" name="from_sel_mins[]"
+                                                id="from_sel_mins_0" data-live-search="true">
+                                                <option value="0">00</option>
+                                                <option value="15">15</option>
+                                                <option value="30">30</option>
+                                                <option value="45">45</option>
+                                            </select>
+
+                                            <span class="input-group-addon">to</span>
+                                            <select
+                                                class="form-control form-control-sm  show-menu-arrow selectpicker customstyle required bs-select-hidden"
+                                                name="to_sel_hrs[]" id="to_sel_hrs_0" data-live-search="true">
+                                                <option value="">Hours</option>
+                                                <option value="0" selected="">0</option>
+                                                <option value="1" selected="">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                            </select>
+
+                                            <select
+                                                class="form-control form-control-sm show-menu-arrow selectpicker customstyle required bs-select-hidden"
+                                                name="to_sel_mins[]" id="to_sel_mins_0" data-live-search="true">
+                                                <option value="0" selected="">00</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
+                                                <option value="45">45</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <span class="input-group" style="margin-top:20px;">
+                                            <span class="input-group-addon" id="plus_ts" onclick="MakeSlotClone();"
+                                                style="    margin-left: 104%;
+                                            margin-top: -52px;">
+                                                <i class="fa fa-plus"></i>
+                                            </span>
+                                            <span class="input-group-addon" id="minus_ts" onclick="RemoveSlotClone()"
+                                                style="display: none"><i class="fa fa-minus"></i></span>
+                                        </span>
+                                        <input type="hidden" name="last_ts_shown" id="last_ts_shown" value="1">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group col-md-5 phps_row_0">
+                                    <label>Select Weekend Days</label>
+                                    <br>
+                                    <div class="radioline1">
+                                        <div class="checkbox checkbox-success checkbox-inline selected_weekdays">
+                                            <input type="checkbox" id="select_weekend_Mo" name="chk_weekend[]"
+                                                value="Mo">
+                                            <label for="Mo">Mon</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline selected_weekdays">
+                                            <input type="checkbox" id="select_weekend_Tu" name="chk_weekend[]"
+                                                value="Tu">
+                                            <label for="Tu">Tue</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline selected_weekdays">
+                                            <input type="checkbox" id="select_weekend_We" name="chk_weekend[]"
+                                                value="We">
+                                            <label for="We">Wed</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline selected_weekdays">
+                                            <input type="checkbox" id="select_weekend_Th" name="chk_weekend[]"
+                                                value="Th">
+                                            <label for="Th">Thu</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline selected_weekdays">
+                                            <input type="checkbox" id="select_weekend_Fr" name="chk_weekend[]"
+                                                value="Fr">
+                                            <label for="Fr">Fri</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline selected_weekdays">
+                                            <input type="checkbox" id="select_weekend_Sa" name="chk_weekend[]"
+                                                value="Sa">
+                                            <label for="Sa">Sat</label>
+                                        </div>&nbsp;&nbsp;
+                                        <div class="checkbox checkbox-success checkbox-inline selected_weekdays">
+                                            <input type="checkbox" id="select_weekend_Su" name="chk_weekend[]"
+                                                value="Su">
+                                            <label for="Su">Sun</label>
+                                        </div>&nbsp;&nbsp;
+                                    </div>
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <label>Release Period</label>
+                                    <div class="col-md-6 input-group phps_row_1">
+                                        <input type="text" name="release_period" id="release_period" size="5"
+                                            maxlength="10" value="" onblur="extractNumber(this,0,false);"
+                                            onkeyup="extractNumber(this,0,false);" class="required form-control"
+                                            data-html="true" data-toggle="tooltip"
+                                            data-original-title="<b style=margin-bottom:10px;><u>What is  Release Period?</u></b><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The minimum number of days you can book before the check in date.<br><ul><li>A typical example of an allotment scenario is:<ul><li>Your company obtained a 3-room allotment from ABC hotel with a release period of 7 days between the periods of 1st March 2004 to 31st March 2004</li><li>A client need to book a room on the 15th of March to check in on the 18th of March ; the system would consider the booking as out of allotment and need a manual confirmation and informs both the client and the administrators of the situation.</li><li>If there is no Release Period in the contract, kindly enter the value as 0 Hrs</li></ul>">
+                                        <span class="input-group-addon">Hrs</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="panel-body mt-3"
+                                style="background-color: #337ab7;padding-bottom: 1px; padding-top: 4px;margin-left:-11px">
+                                <h5 style="color: white !important;font-size:15px;margin-top: 4px;
+                                margin-left: 20px;">Activity Rate Period/Profile</h5>
+                            </div>
+
+                            <div class="row mt-3">
+
+                                <input type="hidden" name="last_shown" id="last_shown" value="1">
+                                <div class="col-md-4 form-group TourPeriodPickers">
+                                    <label>Period</label>
+                                    <div class="ToursDatepicker input-group date marginBtm10" id="TourPeriodPickers_0">
+                                        <input id="from_date_0"
+                                            class="required form-control form-control-sm text-center" type="text"
+                                            name="from_date[]" value="26-08-2023">
+                                        <span class="input-group-addon">to</span>
+                                        <input id="to_date_0" class="required form-control form-control-sm text-center"
+                                            type="text" name="to_date[]" value="26-09-2023">
+                                        <span class="input-group-addon ClearDates" id="aTrashBtn">
+                                            <i class="fa fa-trash"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 form-group">
+                                    <span class="input-group" style="margin-top:20px;">
+                                        <span class="input-group-addon" id="plus" onclick="MakePeriodClone();"><i
+                                                class="fa fa-plus"></i></span>
+                                        <span class="input-group-addon" id="minus" onclick="RemovePeriodClone()"
+                                            style="display: none;"><i class="fa fa-minus"></i></span>
+                                    </span>
+                                </div>
+                                <div class="col-md-2 form-group">
+                                    <label>Currency</label>
+                                    <select
+                                        class="form-control form-control-sm show-menu-arrow selectpicker required bs-select-hidden"
+                                        name="sel_currencies_weekday" id="sel_currencies_weekday"
+                                        data-live-search="true">
+                                        <option value="0"> - Select Currency -</option>
+                                        <option value="INR">INR</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+
+                                <div class="form-group col-md-2 phps_row_0">
+                                    <label>Market Profile</label>
+                                    <select
+                                        class="form-control form-control-sm selectpicker show-menu-arrow required bs-select-hidden"
+                                        name="sel_rate_profile[]" id="sel_rate_profile" rows="1" multiple=""
+                                        data-live-search="true" data-actions-box="true">
+                                        <option label="localsystem" value="16">localsystem</option>
+                                        <option label="Watergate Hotel Co.Ltd" value="36">Watergate Hotel Co.Ltd
+                                        </option>
+
+                                    </select>
+
+                                </div>
+                                <div class="form-group col-md-2 sel_exclude_nationality_container phps_row_1">
+                                    <label>Exclude Nationality</label>
+                                    <select
+                                        class="form-control form-control-sm  selectpicker show-menu-arrow bs-select-hidden"
+                                        name="sel_exclude_nationality[]" id="sel_exclude_nationality" rows="1"
+                                        multiple="" data-live-search="true" data-actions-box="true"></select>
+
+                                </div>
+                                <div class="form-group col-md-2 phps_row_0">
+                                    <label>Child Age Lower Limit(Yrs.)</label><br>
+                                    <select
+                                        class="form-control form-control-sm  show-menu-arrow selectpicker required bs-select-hidden"
+                                        name="sel_child_age_lower" id="sel_child_age_lower" data-live-search="true">
+                                        <option value=""> - Select Age -</option>
+                                        <option label="2" value="2">2</option>
+                                        <option label="3" value="3">3</option>
+                                        <option label="4" value="4">4</option>
+                                        <option label="5" value="5">5</option>
+                                        <option label="6" value="6">6</option>
+                                        <option label="7" value="7">7</option>
+                                        <option label="8" value="8">8</option>
+                                        <option label="9" value="9">9</option>
+                                        <option label="10" value="10">10</option>
+                                        <option label="11" value="11">11</option>
+                                        <option label="12" value="12">12</option>
+                                        <option label="13" value="13">13</option>
+                                        <option label="14" value="14">14</option>
+                                        <option label="15" value="15">15</option>
+                                        <option label="16" value="16">16</option>
+                                        <option label="17" value="17">17</option>
+                                        <option label="18" value="18">18</option>
+
+                                    </select>
+
+                                </div>
+                                <div class="form-group col-md-2 phps_row_1">
+                                    <label>Child Age Upper Limit(Yrs.)</label>
+                                    <select
+                                        class="form-control form-control-sm  show-menu-arrow selectpicker required bs-select-hidden"
+                                        name="sel_child_age_upper" id="sel_child_age_upper" data-live-search="true">
+                                        <option value=""> - Select Age -</option>
+                                        <option label="2" value="2">2</option>
+                                        <option label="3" value="3">3</option>
+                                        <option label="4" value="4">4</option>
+                                        <option label="5" value="5">5</option>
+                                        <option label="6" value="6">6</option>
+                                        <option label="7" value="7">7</option>
+                                        <option label="8" value="8">8</option>
+                                        <option label="9" value="9">9</option>
+                                        <option label="10" value="10">10</option>
+                                        <option label="11" value="11">11</option>
+                                        <option label="12" value="12">12</option>
+                                        <option label="13" value="13">13</option>
+                                        <option label="14" value="14">14</option>
+                                        <option label="15" value="15">15</option>
+                                        <option label="16" value="16">16</option>
+                                        <option label="17" value="17">17</option>
+                                        <option label="18" value="18">18</option>
+
+                                    </select>
+
+                                </div>
+                            </div>
+
+
+                            <div class="panel-body mt-3"
+                                style="background-color: #337ab7;padding-bottom: 1px; padding-top: 4px;margin-left:-11px">
+                                <h5 style="color: white !important;font-size:15px;margin-top: 4px;
+                                margin-left: 20px;">Rates Row</h5>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-1 form-group" style="margin-top:20px;">
+                                    <span class="input-group">
+                                        <span onclick="MakeAdultRateClone(0);" class="input-group-addon"
+                                            id="adultplus"><i class="fa fa-plus"></i></span>
+                                        <span onclick="RemoveAdultRateClone(0);" class="input-group-addon"
+                                            id="adultminus" style="display: none;"><i class="fa fa-minus"></i></span>
+                                    </span>
+                                </div>
+
+                                <div class="col-md-2 paddingLeft30">
+                                    <label>Adult From</label>
+                                    <input class="form-control form-control-sm show-menu-arrow required"
+                                        name="adult_from_00[]" readonly="readonly" data-row="0" id="adult_from_00"
+                                        rows="1">
+                                </div>
+                                <div class="col-md-1 paddingLeft30">
+                                    <label>Adult To</label>
+                                    <input
+                                        class="form-control form-control-sm show-menu-arrow required calculateApproxrate"
+                                        name="adult_to_00[]" data-row="0" id="adult_to_00"
+                                        onblur="extractNumber(this,3,false);"
+                                        onkeyup="extractNumber(this,3,false); max_limit_check(0)" minlength="1"
+                                        maxlength="3" rows="1">
+                                </div>
+                                <div class="col-md-2 paddingLeft20">
+                                    <label>Weekday Rate(Per Pax)</label>
+                                    <input type="text" class="form-control calculateApproxrate"
+                                        name="txt_weekday_rate_adult_00[]" id="txt_weekday_rate_adult_000" size="10"
+                                        value="" onblur="extractNumber(this,3,false);"
+                                        onkeyup="extractNumber(this,3,false);" placeholder="Adult">
+                                </div>
+                                <div class="col-md-2 paddingLeft20">
+                                    <label>Weekend rate(Per Pax)</label>
+                                    <input type="text" class="form-control form-control-sm calculateApproxrate"
+                                        name="txt_weekend_rate_adult_00[]" id="txt_weekend_rate_adult_000" size="10"
+                                        value="" onblur="extractNumber(this,3,false);"
+                                        onkeyup="extractNumber(this,3,false);" placeholder="Adult">
+                                </div>
+                                <div class="col-md-2 paddingLeft20">
+                                    <label>Approx Total Rate(Weekday)</label>
+                                </div>
+                                <div class="col-md-2 paddingLeft20">
+                                    <label>Approx Total Rate(Weekend)</label>
+                                </div>
+                            </div>
+                            <style>
+                                .row-divider {
+                                    border: 1px solid #337ab7;
+                                    margin: 25px 0 0;
+                                    width: 100%;
+                                }
+                            </style>
+
+                            <div id="sicdivchild0" name="sicdivchild0" style="display:block;">
+                                <div class="row row-divider"></div>
+                                <div class="row row-spacer">
+                                    <div class="form-group col-md-12 phps_row_0 mt-3">
+                                        <div class="input-group col-md-3 marginBtm0">
+                                            <div class="checkbox checkbox-success checkbox-inline marginBtm0">
+                                                <input type="checkbox" class="child_rate_type" value="Group"
+                                                    name="child_rate_type0[]" id="child_rate_type_individual0">
+                                                <label for="child_rate_type_individual">Child Rates</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="child_rates_individual_div_0">
+                                    <div class="row child_rates_individual" style="display: none;">
+                                        <div class="form-group col-md-12 phps_row_1 marginBtm20">
+                                            <div class="col-md-1">
+                                                <label>Child Charge</label>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="radio radio-success radio-inline childratecontent">
+                                                    <input type="radio" checked="" name="child_rates00[]"
+                                                        id="childratespercentage00" value="percentage">
+                                                    <label for="childratespercentage">Percentage</label>&nbsp;&nbsp;
+                                                </div>
+                                                <div class="radio radio-success radio-inline childratecontent">
+                                                    <input type="radio" name="child_rates00[]" id="childratesamount00"
+                                                        value="amount">
+                                                    <label for="childratesamount">Amount</label>&nbsp;&nbsp;
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row child_rates_individual" style="display: none;">
+                                        <div class="form-group col-md-12 phps_row_0">
+                                            <div class="col-md-1 form-group" style="margin-top:20px;">
+                                                <span class="input-group">
+                                                    <span class="input-group-addon" onclick="MakeChildRateClone(0);"
+                                                        id="pluschild"><i class="fa fa-plus"></i></span>
+                                                    <span class="input-group-addon" onclick="RemoveChildRateClone(0);"
+                                                        id="minuschild" style="display: none;"><i
+                                                            class="fa fa-minus"></i></span>
+                                                </span>
+                                            </div>
+                                            <div class="col-md-10 form-group ChildRateContainer"
+                                                id="ChildRateContainer0">
+                                                <div class="row">
+                                                    <div class="col-md-2 paddingLeft30">
+                                                        <label>Child Age From</label>
+                                                    </div>
+                                                    <div class="col-md-2 paddingLeft30">
+                                                        <label>Child Age To</label>
+                                                    </div>
+                                                    <div class="col-md-2 paddingLeft20">
+                                                        <label id="child_rate_type_text">Child Rate % on Adult</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row" id="ChildAgeSelectPicker_00">
+                                                    <div class="col-md-12 form-group">
+                                                        <div class="col-md-2 form-group">
+                                                            <select
+                                                                class="form-control selectpicker show-menu-arrow required bs-select-hidden"
+                                                                name="child_from_00[]" id="child_from_00" data-row="0"
+                                                                rows="1" data-live-search="true"></select>
+
+                                                        </div>
+                                                        <div class="col-md-2 form-group">
+                                                            <select
+                                                                class="form-control selectpicker show-menu-arrow required bs-select-hidden"
+                                                                name="child_to_00[]" id="child_to_00" data-row="0"
+                                                                rows="1" data-live-search="true"></select>
+
+                                                        </div>
+                                                        <div class="col-md-2 form-group">
+                                                            <input type="text" class="form-control"
+                                                                name="txt_weekday_rate_child_00[]"
+                                                                id="txt_weekday_rate_child_00" size="10" value=""
+                                                                onblur="extractNumber(this,3,false);"
+                                                                onkeyup="extractNumber(this,3,false);"
+                                                                placeholder="Child">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-3 phps_row_0">
+                                    <input name="txt_markup_per" size="2" maxlength="3"
+                                        onblur="extractNumber(this,2,false);" onkeyup="extractNumber(this,2,false);"
+                                        type="hidden">
+                                    <input type="hidden" name="txt_adults_allowed" id="txt_adults_allowed"
+                                        readonly="readonly" size="2" maxlength="3" value=""
+                                        onblur="extractNumber(this,0,false);" onkeyup="extractNumber(this,0,false);">
+                                    <input type="hidden" name="txt_children_allowed" id="txt_children_allowed"
+                                        readonly="readonly" size="2" maxlength="10" value=""
+                                        onblur="extractNumber(this,0,false);" onkeyup="extractNumber(this,0,false);">
+
+                                    <button type="button" class="btn btn-dark btn-sm form-group" name="b1" id="b1"
+                                        value="SUBMIT"
+                                        onclick="javascript:return submit_form(document.forms['tours_add_rate_form']);">
+                                        <i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Submit
+                                    </button>
+                                    &nbsp;&nbsp;
+                                    <button type="button" class="btn btn-dark btn-sm form-group" name="b2" id="b2"
+                                        value="CLOSE" onclick="javascript:self.close();">
+                                        <i class="fa fa-times"></i>&nbsp;&nbsp;Close
+                                    </button>
+
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                        <div class="tab-pane fade" id="subtab2" role="tabpanel" aria-labelledby="subtab2-tab">
+                            <div class="row">
+
+                                <div class="hpanel">
+                                    <form method="POST" action="search_trans_tariff.php" name="search_trans_tariff"
+                                        id="search_trans_tariff">
+                                        <input type="hidden" name="tranfer_id" id="transfer_id" value="">
+                                        <input type="hidden" name="supplier_id" id="supplier_id" value="">
+                                        <div class="dataTables_scroll">
+                                            <div class="alert alert-danger text-center form-group" style="background-color: #f2dede;margin-left: -11px;
+                                                margin-top: -5px;    padding: 13px;">
+                                                <h5 style="    color: #a94442 !important; font-size: 16px;">Rates not
+                                                    available.</h5>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Tab -->
+                <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
+                    <ul class="nav nav-tabs" id="servicesSubTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="subtab3-tab" data-toggle="tab" href="#subtab3" role="tab"
+                                aria-controls="subtab3" aria-selected="true">Add Inventory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="subtab4-tab" data-toggle="tab" href="#subtab4" role="tab"
+                                aria-controls="subtab4" aria-selected="true">View Inventory</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content" id="servicesSubTabContent">
+                        <div class="tab-pane fade show active" id="subtab3" role="tabpanel"
+                            aria-labelledby="subtab3-tab">
+                            <div id="invtabs-1"
+                                class="form-group tab-pane ui-tabs-panel ui-widget-content ui-corner-bottom active"
+                                aria-labelledby="ui-id-12" role="tabpanel" aria-hidden="false" style="display: block;">
+
+                                <h5 style="font-size: 18px;">Add Inventory</h5>
+                                <div class="row">
+                                    <div class="col-md-3 form-group">
+                                        <label>Activity Type</label>
+                                        <input id="activity_type" readonly="" class="form-control form-control-sm"
+                                            type="text" value="Activities">
+                                    </div>
+                                    <div class="col-md-3 form-group">
+                                        <label>Activity Sub Type</label>
+                                        <input id="activity_sub_type" readonly="" class="form-control form-control-sm"
+                                            type="text" value="">
+                                    </div>
+                                    <div class="col-md-3 form-group">
+                                        <label>Activity Category</label>
+                                        <input id="activity_category" readonly="" class="form-control form-control-sm"
+                                            type="text" value="Adventure Trip">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="form-group col-md-3">
+                                        <label>Activity Name</label>
+                                        <input class="form-control form-control-sm required" type="text"
+                                            name="sel_tours" id="sel_tours" size="60" value="supp2Tour1"
+                                            disabled="disabled">
+                                    </div>
+                                    <div class="form-group col-md-3 TourPeriodPickersInventories">
+                                        <label>Date</label>
+                                        <div class="input-daterange input-group date TourPeriodPickersInventory toursInventoryRow"
+                                            id="TourPeriodPickersInventory_0">
+                                            <input id="from1"
+                                                class="form-control form-control-sm required col-md-12 col-xs-12"
+                                                type="text" name="add_inv_from_date[]" value="26-08-2023">
+                                            <span class="input-group-addon">to</span>
+                                            <input id="to1"
+                                                class="form-control form-control-sm col-md-12 col-xs-12" type="text"
+                                                name="add_inv_to_date[]" value="">
+                                            <span class="input-group-addon" id="cTrashBtn">
+                                                <i class="fa fa-trash"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <span class="input-group" style="margin-top:20px;">
+                                            <span class="input-group-addon" id="plus" onclick="MakePeriodClone();"><i
+                                                    class="fa fa-plus"></i></span>
+                                            <span class="input-group-addon" id="minus" onclick="RemovePeriodClone()"><i
+                                                    class="fa fa-minus"></i></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div id="inv_div"></div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="form-group col-md-3">
+                                        <button type="button" class="btn btn-dark btn-sm" name="inv_submitb1"
+                                            id="inv_submitb1" value="ADD"
+                                            onclick="javascript:return add_inv_form(document.forms['addinvForm']);">
+                                            <i class="fa fa-plus"></i>&nbsp;Add
+                                        </button>
+                                        <span id="loading" style="display: none"><img src="images/loading.gif"
+                                                alt=""></span>
+                                    </div>
+                                </div>
+                            
+      
+    </div>
+    </div>
+
+
+    <div class="tab-pane fade show active" id="subtab4" role="tabpanel" aria-labelledby="subtab4-tab">
+
+
+
+        <div id="invtabs-2"
+                                class=" form-group tab-pane ui-tabs-panel ui-widget-content ui-corner-bottom active"
+                                aria-labelledby="viewInventory" role="tabpanel" aria-hidden="false"
+                                style="display: block;">
+                                <h5 style="font-size: 18px">View Inventory</h5>
+                                <form action="/tms/tours.php" id="viewinvForm" name="viewinvForm" method="post"
+                                    class="form-group">
+                                    <input type="hidden" name="action" value="">
+                                    <input type="hidden" name="id" value="4">
+                                    <input type="hidden" name="supplier_id" value="S000000860">
+                                    <input type="hidden" name="view_original_inv_from_date"
+                                        id="view_original_inv_from_date" value="">
+                                    <input type="hidden" name="view_original_inv_to_date" id="view_original_inv_to_date"
+                                        value="">
+                                    <div class="row">
+                                        <div class="col-md-3 form-group">
+                                            <label>Activity Name</label>
+                                            <input class="form-control form-control-sm required" type="text"
+                                                name="sel_tours" id="sel_tours" value="supp2Tour1" disabled="disabled">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label>Date</label>
+                                            <div class="input-daterange input-group date" id="datetimepicker4">
+                                                <input class="form-control form-control-sm required" type="text"
+                                                    name="view_inv_from_date" value="26-08-2023" id="view_inv_from_date"
+                                                    onchange="set_sel_slots(document.forms['viewinvForm']);">
+                                                <span class="input-group-addon">to</span>
+                                                <input class="form-control form-control-sm" type="text"
+                                                    name="view_inv_to_date" value="" id="view_inv_to_date"
+                                                    onchange="set_sel_slots(document.forms['viewinvForm']);">
+                                                <span class="input-group-addon" id="bTrashBtn">
+                                                    <i class="fa fa-trash"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-md-12 mt-2">
+                                            <label>Activity Slot</label>
+                                            <div id="slot_div">--</div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <br>
+                                            <button type="button" name="inv_viewb2" id="inv_viewb2" value="VIEW"
+                                                class="btn btn-dark btn-sm"
+                                                onclick="javascript:return view_inv_form(document.forms['viewinvForm']);">
+
+                                                <i class="fa fa-eye"></i>
+                                                &nbsp;View
+
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </form>
+                                <div id="invDetails"></div>
+                            </div> 
+
+    </div>
+
+    </div>
+    </div>
+        <!-- Cancellation Tab -->
+        <div class="tab-pane fade" id="cancellation" role="tabpanel" aria-labelledby="cancellation-tab">
+            <ul class="nav nav-tabs" id="servicesSubTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="subtab5-tab" data-toggle="tab" href="#subtab5" role="tab"
+                        aria-controls="subtab5" aria-selected="true">Add Cancellation Policy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="subtab6-tab" data-toggle="tab" href="#subtab6" role="tab"
+                        aria-controls="subtab6" aria-selected="true">View Cancellation Policy</a>
+                </li>
+
+            </ul>
+
+            <div class="tab-content" id="CancellationSubTabContent">
+                <div class="tab-pane fade show active" id="subtab5" role="tabpanel"
+                    aria-labelledby="subtab5-tab">
+                    <div id="canceltabs-1" aria-labelledby="cancelationsadd" class="form-group ui-tabs-panel ui-widget-content ui-corner-bottom active" role="tabpanel" aria-hidden="false" style="display: block;">
+                        <h5 style="font-size: 18px;">Add Cancellation Policy</h5>
+                        <form action="tours_add_cancellation_policy.php" method="post" name="tours_cancellation_form" id="tours_cancellation_form">
+                            <input type="hidden" id="sel_supplier" name="sel_supplier" value="S000000860">
+                            <input type="hidden" name="id" id="id" value="4">
+                            <input type="hidden" name="action_name" id="action_name" value="">
+                            <input type="hidden" name="transfer_included" id="transfer_included" value="N">
+                                                    <div class="" style="font-size: 12px;">Activity rates are not added for supp2Tour1</div>
+                                            </form>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="subtab6" role="tabpanel"
+                aria-labelledby="subtab6-tab">
+                <h5 class="form-group" style="font-size: 18px;">View Cancellation Policy </h5>
+                <div class="row">
+
+                    <div class="hpanel">
+                        <form method="POST" action="search_trans_tariff.php" name="search_trans_tariff"
+                            id="search_trans_tariff">
+                            <input type="hidden" name="tranfer_id" id="transfer_id" value="">
+                            <input type="hidden" name="supplier_id" id="supplier_id" value="">
+                            <div class="dataTables_scroll">
+                                <div class="alert alert-danger text-center form-group" style="background-color: #f2dede;margin-left: -11px;
+                                    margin-top: -5px;    padding: 13px;">
+                                    <h5 style="    color: #a94442 !important; font-size: 16px;">Cancellation policy not available.</h5>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+
+
+
+    </div>
+
+      <!-- Stop sell Tab -->
+      <div class="tab-pane fade" id="stop" role="tabpanel" aria-labelledby="stop-tab">
+        <ul class="nav nav-tabs" id="stopSubTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="subtab7-tab" data-toggle="tab" href="#subtab7" role="tab"
+                    aria-controls="subtab7" aria-selected="true">Add Stop Sell</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="subtab8-tab" data-toggle="tab" href="#subtab8" role="tab"
+                    aria-controls="subtab8" aria-selected="true">View Stop Sell</a>
+            </li>
+
+        </ul>
+
+        <div class="tab-content" id="CancellationSubTabContent">
+            <div class="tab-pane fade show active" id="subtab7" role="tabpanel"
+                aria-labelledby="subtab7-tab">
+                <div id="canceltabs-1" aria-labelledby="cancelationsadd" class="form-group ui-tabs-panel ui-widget-content ui-corner-bottom active" role="tabpanel" aria-hidden="false" style="display: block;">
+                    <h5 style="font-size: 18px;">Add Cancellation Policy</h5>
+                    <form action="tours_add_cancellation_policy.php" method="post" name="tours_cancellation_form" id="tours_cancellation_form">
+                        <input type="hidden" id="sel_supplier" name="sel_supplier" value="S000000860">
+                        <input type="hidden" name="id" id="id" value="4">
+                        <input type="hidden" name="action_name" id="action_name" value="">
+                        <input type="hidden" name="transfer_included" id="transfer_included" value="N">
+                                                <div class="" style="font-size: 12px;">Activity rates are not added for supp2Tour1</div>
+                                        </form>
+                </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="subtab8" role="tabpanel"
+            aria-labelledby="subtab8-tab">
+            <h5 class="form-group" style="font-size: 18px;">View/Edit Stop Sale </h5>
+            <div class="row">
+
+                <div class="hpanel">
+                    <form method="POST" action="search_trans_tariff.php" name="search_trans_tariff"
+                        id="search_trans_tariff">
+                        <input type="hidden" name="tranfer_id" id="transfer_id" value="">
+                        <input type="hidden" name="supplier_id" id="supplier_id" value="">
+                        <div class="dataTables_scroll">
+                            <div class="alert alert-danger text-center form-group" style="background-color: #f2dede;margin-left: -11px;
+                                margin-top: -5px;    padding: 13px;">
+                                <h5 style="    color: #a94442 !important; font-size: 16px;">No data found.</h5>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+
+
+
+</div>
+    </form>
+
+
+
+    <!-- END -->
+
+    </div>
+ 
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script>
+
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+    // For TAX Configuration Datepicker
+
+    const from_date_0 = flatpickr("#from_date_0", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const to_date_0 = flatpickr("#to_date_0", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const aTrashBtn = document.getElementById("aTrashBtn");
+    aTrashBtn.addEventListener("click", function () {
+        from_date_0.clear();
+        to_date_0.clear();
+
+    });
+
+    const view_inv_from_date = flatpickr("#view_inv_from_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const view_inv_to_date = flatpickr("#view_inv_to_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const bTrashBtn = document.getElementById("bTrashBtn");
+    bTrashBtn.addEventListener("click", function () {
+        view_inv_from_date.clear();
+        view_inv_to_date.clear();
+
+    });
+
+    const  from1 = flatpickr("#from1", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const to1 = flatpickr("#to1", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const cTrashBtn = document.getElementById("cTrashBtn");
+    cTrashBtn.addEventListener("click", function () {
+        from1.clear();
+        to1.clear();
+
+    });
+
+
+
+
+
+</script>
+<script type="text/javascript">
+    var wrapper1 = document.getElementById('wrapper1');
+    var wrapper2 = document.getElementById('wrapper2');
+    wrapper1.onscroll = function () {
+        wrapper2.scrollLeft = wrapper1.scrollLeft;
+    };
+    wrapper2.onscroll = function () {
+        wrapper1.scrollLeft = wrapper2.scrollLeft;
+    };
+</script>
+
+
+</html>

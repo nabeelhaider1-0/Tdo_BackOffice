@@ -1819,8 +1819,8 @@
                         <div class="row">
                             <div class="col-sm-10"></div>
                             <div class="col-sm-2">
-                                <div id="search_sup_filter" class="form-group dataTables_filter" ><label >Search:<input type="search"
-                                            class="form-control form-control-sm input-sm" placeholder=""
+                                <div id="search_sup_filter" class="form-group dataTables_filter"><label>Search:<input
+                                            type="search" class="form-control form-control-sm input-sm" placeholder=""
                                             aria-controls="search_sup"></label></div>
                             </div>
                         </div>
@@ -1835,7 +1835,7 @@
                                         class="table table-bordered table-striped table-hover table-responsive dataTable no-footer"
                                         role="grid" aria-describedby="search_sup_info">
                                         <thead>
-                                            <tr  role="row">
+                                            <tr role="row">
                                                 <th class="sorting_disabled" rowspan="1" colspan="1"
                                                     style="width: 58.2px;">
                                                     <div class="checkbox checkbox-success checkbox-inline">
@@ -1922,7 +1922,7 @@
                                                             </a>
                                                         </div>
                                                         <div class="input-group-addon">
-                                                            <a href="add_trans_tariff.php?action=edit&amp;id=350&amp;time_stamp=5de38cc9e00d8b1cb294699d30aad71f&amp;Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95"
+                                                            <a href="editaddratestranfer.html"
                                                                 data-original-title="Edit" data-toggle="tooltip"
                                                                 data-placement="top">
                                                                 <i class="fa fa-pencil-square-o"></i>
@@ -2003,7 +2003,7 @@
                                                             </a>
                                                         </div>
                                                         <div class="input-group-addon">
-                                                            <a href="add_trans_tariff.php?action=edit&amp;id=351&amp;time_stamp=bd0098599444622fb134762f882f73d5&amp;Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95"
+                                                            <a href="editaddratestranfer.html"
                                                                 data-original-title="Edit" data-toggle="tooltip"
                                                                 data-placement="top">
                                                                 <i class="fa fa-pencil-square-o"></i>
@@ -2084,8 +2084,7 @@
                                                             </a>
                                                         </div>
                                                         <div class="input-group-addon">
-                                                            <a href="add_trans_tariff.php?action=edit&amp;id=377&amp;time_stamp=cac05fc1d8754345051eb74c6d7ad864&amp;Search_supplier=S000000003&amp;Search_transfer=95&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95"
-                                                                data-original-title="Edit" data-toggle="tooltip"
+                                                            <a href="editaddratestranfer.html"
                                                                 data-placement="top">
                                                                 <i class="fa fa-pencil-square-o"></i>
                                                             </a>
@@ -2129,13 +2128,546 @@
                                 </div>
                             </div>
                         </div>
-                    
+
                     </div>
                 </div>
             </div>
 
         </form>
+        <style>
+            .fa-times-circle {
+    color: black !important;
+}
+        </style>
+        <div class="modal fade hmodal-success" id="myModal1" tabindex="-1" role="dialog" aria-hidden="true"
+            style="display: none;">
+            <div class="modal-dialog" style="width:1000px; ">
+                <div class="modal-content" style="width: 792px;">
+                    <div class="color-linegreen"></div>
+                    <span data-dismiss="modal" class="fa fa-times-circle fa-4 closeBtn" style="margin-left: 98.4%;
+                    margin-top: -10px;"> </span>
+                    <div class="modal-body">
+                      
 
+                        <body>
+                            <div class="siteLogo">
+                                <img src="http://beta.tdonlines.com/project_folder/tdonline//images/logo.png" alt="" style="    width: 131px;">
+                                <hr>
+                            </div>
+                            <link rel="stylesheet" href="/cpfv3/css/tms/bootstrap_r/css/bootstrap-select.css">
+
+
+
+                            <style type="text/css">
+                                .margin_R {
+                                    margin-right: 23px;
+                                }
+                            </style>
+                            <script language="Javascript">
+                                $(function () {
+                                    $("#mesID").hide();
+                                    var mesID = $("#mesID").text().trim();
+                                    if (mesID != "") {
+                                        /*showWarAlert(mesID);*/
+                                        toastr.info('<h5>' + mesID + '</h5>');
+                                    }
+                                    $("th").removeClass("sorting");
+                                    $("th").removeClass("sorting_asc");
+                                });
+                                function setCount() {
+                                    var row_count = document.getElementById("row_cnt").value;
+                                    row_count = parseInt(row_count) + parseInt(1);
+                                    document.getElementById("row_cnt").value = row_count;
+                                    addrowdynamic(row_count);
+                                    return false;
+                                }
+                                function addrowdynamic(i) {
+                                    /*var row_class;
+                                    if(parseInt(i)%parseInt(2) == 0)
+                                    {
+                                        row_class = 'rowtxt1';
+                                    }
+                                    else
+                                    {
+                                        row_class = 'rowtxt';
+                                    }*/
+                                    TBL = document.getElementById("sur_body");
+                                    TR = document.createElement("TR");
+                                    TD = document.createElement("TD");
+                                    TD1 = document.createElement("TD");
+                                    TD2 = document.createElement("TD");
+
+                                    var sel_from_hrs = create_hrs_sel('from_hrs_' + i);
+                                    var sel_from_mins = create_mins_sel('from_mins_' + i);
+                                    var sel_to_hrs = create_hrs_sel('to_hrs_' + i);
+                                    var sel_to_mins = create_mins_sel('to_mins_' + i);
+
+                                    TR.bgColor = "";
+
+                                    TD.align = "";
+                                    TD1.align = "";
+                                    TD2.align = "";
+
+                                    TD2.innerHTML = "<input class='form-control' name='percentage_" + i + "' id='percentage_" + i + "' value='' type='text' onkeyup='javascript: extractNumber(this,2,0);' maxlength='10'>";
+
+                                    TD.appendChild(sel_from_hrs);
+                                    TD.appendChild(sel_from_mins);
+                                    TD1.appendChild(sel_to_hrs);
+                                    TD1.appendChild(sel_to_mins);
+                                    TR.appendChild(TD);
+                                    TR.appendChild(TD1);
+                                    TR.appendChild(TD2);
+
+                                    TBL.appendChild(TR);
+                                    $("#from_hrs_" + i).selectpicker("refresh");
+                                    $("#from_mins_" + i).selectpicker("refresh");
+
+                                    $("#to_hrs_" + i).selectpicker("refresh");
+                                    $("#to_mins_" + i).selectpicker("refresh");
+
+                                }
+                                function create_hrs_sel(selName) {
+                                    var se = document.createElement("select");
+                                    se.className = 'form-control selectpicker show-menu-arrow'
+                                    se.id = selName;
+                                    se.name = selName;
+
+                                    se.options[0] = new Option("Select Hrs", "");
+                                    for (var i = 0; i < 24; i++) {
+                                        var option = document.createElement('option');
+                                        option.text = i;
+                                        option.value = i;
+
+                                        if (document.all && !window.opera) { se.add(option); }
+                                        else { se.add(option, null); }
+
+                                    }
+                                    return se;
+                                }
+                                function create_mins_sel(selName) {
+                                    var se = document.createElement("select");
+                                    se.className = 'form-control selectpicker show-menu-arrow'
+                                    se.id = selName;
+                                    se.name = selName;
+                                    se.options[0] = new Option("Select Mins", "");
+                                    for (var i = 0; i < 60; i++) {
+                                        var option = document.createElement('option');
+                                        option.text = i;
+                                        option.value = i;
+
+                                        if (document.all && !window.opera) { se.add(option); }
+                                        else { se.add(option, null); }
+                                    }
+                                    return se;
+                                }
+                                var ajax = new sack();
+                                function extractNumber(obj, decimalPlaces, allowNegative) {
+                                    var temp = obj.value;
+
+                                    // avoid changing things if already formatted correctly
+                                    var reg0Str = '[0-9]*';
+                                    if (decimalPlaces > 0) {
+                                        reg0Str += '\\.?[0-9]{0,' + decimalPlaces + '}';
+                                    } else if (decimalPlaces < 0) {
+                                        reg0Str += '\\.?[0-9]*';
+                                    }
+                                    reg0Str = allowNegative ? '^-?' + reg0Str : '^' + reg0Str;
+                                    reg0Str = reg0Str + '$';
+                                    var reg0 = new RegExp(reg0Str);
+                                    if (reg0.test(temp)) return true;
+
+                                    // first replace all non numbers
+                                    var reg1Str = '[^0-9' + (decimalPlaces != 0 ? '.' : '') + (allowNegative ? '-' : '') + ']';
+                                    var reg1 = new RegExp(reg1Str, 'g');
+                                    temp = temp.replace(reg1, '');
+
+                                    if (allowNegative) {
+                                        // replace extra negative
+                                        var hasNegative = temp.length > 0 && temp.charAt(0) == '-';
+                                        var reg2 = /-/g;
+                                        temp = temp.replace(reg2, '');
+                                        if (hasNegative) temp = '-' + temp;
+                                    }
+
+                                    if (decimalPlaces != 0) {
+                                        var reg3 = /\./g;
+                                        var reg3Array = reg3.exec(temp);
+                                        if (reg3Array != null) {
+                                            // keep only first occurrence of .
+                                            //  and the number of places specified by decimalPlaces or the entire string if decimalPlaces < 0
+                                            var reg3Right = temp.substring(reg3Array.index + reg3Array[0].length);
+                                            reg3Right = reg3Right.replace(reg3, '');
+                                            reg3Right = decimalPlaces > 0 ? reg3Right.substring(0, decimalPlaces) : reg3Right;
+                                            temp = temp.substring(0, reg3Array.index) + '.' + reg3Right;
+                                        }
+                                    }
+
+                                    obj.value = temp;
+                                }
+
+                                function submit_form() {
+                                    var cnt = 0;
+                                    var rowcnt = document.getElementById('row_cnt').value;
+                                    for (var i = 0; i < rowcnt; i++) {
+                                        //alert(document.getElementById('percentage_'+i).value+'~~~'+document.getElementById('from_hrs_'+i));
+                                        if (document.getElementById('percentage_' + i).value == '' && (document.getElementById('from_hrs_' + i).value != '' || document.getElementById('from_mins_' + i).value != '' || document.getElementById('to_hrs_' + i).value != '' || document.getElementById('to_mins_' + i).value != '')) {
+                                            parent.showWarAlert("Please enter percentage");
+                                            //document.getElementById('percentage_'+i).focus();
+                                            return false;
+                                        }
+                                        else if (document.getElementById('percentage_' + i).value != '' && (document.getElementById('from_hrs_' + i).value == '' || document.getElementById('from_mins_' + i).value == '' || document.getElementById('to_hrs_' + i).value == '' || document.getElementById('to_mins_' + i).value == '')) {
+                                            parent.showWarAlert("Please enter from and to time for surcharge");
+                                            //document.getElementById('from_hrs_'+i).focus();
+                                            return false;
+                                        }
+                                        else if (document.getElementById('percentage_' + i).value == '' && document.getElementById('from_hrs_' + i).value == '' && document.getElementById('from_mins_' + i).value == '' && document.getElementById('to_hrs_' + i).value == '' && document.getElementById('to_mins_' + i).value == '') {
+                                            cnt++;
+                                        }
+                                        /* if(document.getElementById('to_hrs_'+i).value != "" &&  document.getElementById('from_hrs_'+i).value != "" && document.getElementById('to_mins_'+i).value != "" &&  document.getElementById('from_mins_'+i).value != "")
+                                        {
+                                            //alert(document.getElementById('to_hrs_'+i).value+'~~~'+document.getElementById('from_hrs_'+i).value+'~~~'+document.getElementById('to_mins_'+i).value+'~~~'+document.getElementById('from_mins_'+i).value);
+                                            if((parseInt(document.getElementById('to_hrs_'+i).value) <= parseInt(document.getElementById('from_hrs_'+i).value)) && (parseInt(document.getElementById('to_mins_'+i).value) <= parseInt(document.getElementById('from_mins_'+i).value)))
+                                            {
+                                                parent.showWarAlert("To time should be greater than From time.");
+                                                //document.getElementById('from_hrs_'+i).focus();
+                                                return false;
+                                            }
+                                        } */
+                                    }
+                                    //return false;
+                                    if (cnt == 5) {
+                                        showWarAlert('Enter Surcharge');
+                                        document.getElementById('percentage_0').focus();
+                                        return false;
+                                    }
+                                    $('#overlayprogress', parent.document).show();
+                                    var form = $("#f1");
+                                    var serializedForm = form.serialize();
+                                    var url = "search_transfer.php?action=insert_surcharge&Search_supplier=&Search_transfer=95></iframe><span class=&Search_veh_model=&Search_rate_pro=&Search_currency=&Search_vehicle=&Search_charge_appl=&Search_status=&Search_transfer=95></iframe><span class=";
+                                    $.post(url, serializedForm, function (data) {
+                                        $('#overlayprogress', parent.document).hide();
+                                        parent.toastr.info("<h5>Surcharges have been added successfully</h5>");
+                                        setTimeout(function () { top.location.reload(); }, 1000);
+                                    });
+                                }
+
+                            </script>
+                            <style type="text/css">
+                                body {
+                                    overflow: hidden;
+                                }
+
+                                .modalForm1 {
+                                    font-size: 12px;
+                                    max-height: 523px;
+                                    overflow: hidden;
+                                    overflow-y: auto;
+                                    padding: 0px 25px;
+                                }
+                            </style>
+
+                            <div class="modalForm1">
+                                <form name="f1" method="post" id="f1"
+                                    action="search_transfer.php?action=insert_surcharge&amp;Search_supplier=&amp;Search_transfer=95></iframe><span class=&amp;Search_veh_model=&amp;Search_rate_pro=&amp;Search_currency=&amp;Search_vehicle=&amp;Search_charge_appl=&amp;Search_status=&amp;Search_transfer=95></iframe><span class=">
+                                    <input type="hidden" name="time_stamp" id="time_stamp"
+                                        value="5de38cc9e00d8b1cb294699d30aad71f">
+                                    <input name="row_cnt" id="row_cnt" type="hidden" value="1">
+                                    <div class="panel-body form-group removeMargins" style="">
+                                        <div class="form-group dataTables_scroll">
+                                            <h5>ADD TARIFF SURCHARGE</h5>
+
+                                            <div id="surcharge_tbl_wrapper"
+                                                class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                                                <div class="row">
+                                                    <div class="col-sm-6"></div>
+                                                    <div class="col-sm-6"></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table id="surcharge_tbl"
+                                                            class="table table-bordered table-striped table-hover table-responsive dataTable no-footer"
+                                                            role="grid" aria-describedby="surcharge_tbl_info">
+                                                            <thead>
+                                                                <tr role="row">
+                                                                    <th class="" tabindex="0"
+                                                                        aria-controls="surcharge_tbl" rowspan="1"
+                                                                        colspan="1" aria-sort="ascending"
+                                                                        aria-label="From: activate to sort column descending"
+                                                                        style="width: 240.2px;">From</th>
+                                                                    <th class="" tabindex="0"
+                                                                        aria-controls="surcharge_tbl" rowspan="1"
+                                                                        colspan="1"
+                                                                        aria-label="To: activate to sort column ascending"
+                                                                        style="width: 110.2px;">To</th>
+                                                                    <th class="" tabindex="0"
+                                                                        aria-controls="surcharge_tbl" rowspan="1"
+                                                                        colspan="1"
+                                                                        aria-label="Percentage: activate to sort column ascending"
+                                                                        style="width: 573px;">Percentage</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody id="sur_body">
+
+                                                                <tr role="row" class="odd">
+                                                                    <td class="sorting_1">
+                                                                        <select
+                                                                            class="form-control form-control-sm selectpicker show-menu-arrow bs-select-hidden"
+                                                                            name="from_hrs_0" id="from_hrs_0"
+                                                                            data-live-search="true">
+                                                                            <option value="">Select Hrs</option>
+                                                                            <option value="0">0</option>
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option>
+                                                                            <option value="3">3</option>
+                                                                            <option value="4">4</option>
+                                                                            <option value="5">5</option>
+                                                                            <option value="6">6</option>
+                                                                            <option value="7">7</option>
+                                                                            <option value="8">8</option>
+                                                                            <option value="9">9</option>
+                                                                            <option value="10">10</option>
+                                                                            <option value="11">11</option>
+                                                                            <option value="12">12</option>
+                                                                            <option value="13">13</option>
+                                                                            <option value="14">14</option>
+                                                                            <option value="15">15</option>
+                                                                            <option value="16">16</option>
+                                                                            <option value="17">17</option>
+                                                                            <option value="18">18</option>
+                                                                            <option value="19">19</option>
+                                                                            <option value="20">20</option>
+                                                                            <option value="21">21</option>
+                                                                            <option value="22">22</option>
+                                                                            <option value="23">23</option>
+
+                                                                        </select>
+                                                                   
+                                                                        <select
+                                                                            class="form-control form-control-sm selectpicker show-menu-arrow bs-select-hidden"
+                                                                            name="from_mins_0" id="from_mins_0"
+                                                                            data-live-search="true">
+                                                                            <option value="">Select Mins</option>
+                                                                            <option value="0">0</option>
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option>
+                                                                            <option value="3">3</option>
+                                                                            <option value="4">4</option>
+                                                                            <option value="5">5</option>
+                                                                            <option value="6">6</option>
+                                                                            <option value="7">7</option>
+                                                                            <option value="8">8</option>
+                                                                            <option value="9">9</option>
+                                                                            <option value="10">10</option>
+                                                                            <option value="11">11</option>
+                                                                            <option value="12">12</option>
+                                                                            <option value="13">13</option>
+                                                                            <option value="14">14</option>
+                                                                            <option value="15">15</option>
+                                                                            <option value="16">16</option>
+                                                                            <option value="17">17</option>
+                                                                            <option value="18">18</option>
+                                                                            <option value="19">19</option>
+                                                                            <option value="20">20</option>
+                                                                            <option value="21">21</option>
+                                                                            <option value="22">22</option>
+                                                                            <option value="23">23</option>
+                                                                            <option value="24">24</option>
+                                                                            <option value="25">25</option>
+                                                                            <option value="26">26</option>
+                                                                            <option value="27">27</option>
+                                                                            <option value="28">28</option>
+                                                                            <option value="29">29</option>
+                                                                            <option value="30">30</option>
+                                                                            <option value="31">31</option>
+                                                                            <option value="32">32</option>
+                                                                            <option value="33">33</option>
+                                                                            <option value="34">34</option>
+                                                                            <option value="35">35</option>
+                                                                            <option value="36">36</option>
+                                                                            <option value="37">37</option>
+                                                                            <option value="38">38</option>
+                                                                            <option value="39">39</option>
+                                                                            <option value="40">40</option>
+                                                                            <option value="41">41</option>
+                                                                            <option value="42">42</option>
+                                                                            <option value="43">43</option>
+                                                                            <option value="44">44</option>
+                                                                            <option value="45">45</option>
+                                                                            <option value="46">46</option>
+                                                                            <option value="47">47</option>
+                                                                            <option value="48">48</option>
+                                                                            <option value="49">49</option>
+                                                                            <option value="50">50</option>
+                                                                            <option value="51">51</option>
+                                                                            <option value="52">52</option>
+                                                                            <option value="53">53</option>
+                                                                            <option value="54">54</option>
+                                                                            <option value="55">55</option>
+                                                                            <option value="56">56</option>
+                                                                            <option value="57">57</option>
+                                                                            <option value="58">58</option>
+                                                                            <option value="59">59</option>
+
+                                                                        </select>
+                                                                     
+                                                                    </td>
+                                                                    <td>
+                                                                        <select
+                                                                            class="form-control form-control-sm selectpicker show-menu-arrow bs-select-hidden"
+                                                                            name="to_hrs_0" id="to_hrs_0"
+                                                                            data-live-search="true">
+                                                                            <option value="">Select Hrs</option>
+                                                                            <option value="0">0</option>
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option>
+                                                                            <option value="3">3</option>
+                                                                            <option value="4">4</option>
+                                                                            <option value="5">5</option>
+                                                                            <option value="6">6</option>
+                                                                            <option value="7">7</option>
+                                                                            <option value="8">8</option>
+                                                                            <option value="9">9</option>
+                                                                            <option value="10">10</option>
+                                                                            <option value="11">11</option>
+                                                                            <option value="12">12</option>
+                                                                            <option value="13">13</option>
+                                                                            <option value="14">14</option>
+                                                                            <option value="15">15</option>
+                                                                            <option value="16">16</option>
+                                                                            <option value="17">17</option>
+                                                                            <option value="18">18</option>
+                                                                            <option value="19">19</option>
+                                                                            <option value="20">20</option>
+                                                                            <option value="21">21</option>
+                                                                            <option value="22">22</option>
+                                                                            <option value="23">23</option>
+
+                                                                        </select>
+                                                                    
+                                                                        <select
+                                                                            class="form-control form-control-sm selectpicker show-menu-arrow bs-select-hidden"
+                                                                            name="to_mins_0" id="to_mins_0"
+                                                                            data-live-search="true">
+                                                                            <option value="">Select Mins</option>
+                                                                            <option value="0">0</option>
+                                                                            <option value="1">1</option>
+                                                                            <option value="2">2</option>
+                                                                            <option value="3">3</option>
+                                                                            <option value="4">4</option>
+                                                                            <option value="5">5</option>
+                                                                            <option value="6">6</option>
+                                                                            <option value="7">7</option>
+                                                                            <option value="8">8</option>
+                                                                            <option value="9">9</option>
+                                                                            <option value="10">10</option>
+                                                                            <option value="11">11</option>
+                                                                            <option value="12">12</option>
+                                                                            <option value="13">13</option>
+                                                                            <option value="14">14</option>
+                                                                            <option value="15">15</option>
+                                                                            <option value="16">16</option>
+                                                                            <option value="17">17</option>
+                                                                            <option value="18">18</option>
+                                                                            <option value="19">19</option>
+                                                                            <option value="20">20</option>
+                                                                            <option value="21">21</option>
+                                                                            <option value="22">22</option>
+                                                                            <option value="23">23</option>
+                                                                            <option value="24">24</option>
+                                                                            <option value="25">25</option>
+                                                                            <option value="26">26</option>
+                                                                            <option value="27">27</option>
+                                                                            <option value="28">28</option>
+                                                                            <option value="29">29</option>
+                                                                            <option value="30">30</option>
+                                                                            <option value="31">31</option>
+                                                                            <option value="32">32</option>
+                                                                            <option value="33">33</option>
+                                                                            <option value="34">34</option>
+                                                                            <option value="35">35</option>
+                                                                            <option value="36">36</option>
+                                                                            <option value="37">37</option>
+                                                                            <option value="38">38</option>
+                                                                            <option value="39">39</option>
+                                                                            <option value="40">40</option>
+                                                                            <option value="41">41</option>
+                                                                            <option value="42">42</option>
+                                                                            <option value="43">43</option>
+                                                                            <option value="44">44</option>
+                                                                            <option value="45">45</option>
+                                                                            <option value="46">46</option>
+                                                                            <option value="47">47</option>
+                                                                            <option value="48">48</option>
+                                                                            <option value="49">49</option>
+                                                                            <option value="50">50</option>
+                                                                            <option value="51">51</option>
+                                                                            <option value="52">52</option>
+                                                                            <option value="53">53</option>
+                                                                            <option value="54">54</option>
+                                                                            <option value="55">55</option>
+                                                                            <option value="56">56</option>
+                                                                            <option value="57">57</option>
+                                                                            <option value="58">58</option>
+                                                                            <option value="59">59</option>
+
+                                                                        </select>
+                                                                    
+                                                                    </td>
+                                                                    <td>
+                                                                        <input class="form-control" name="percentage_0"
+                                                                            id="percentage_0" value="" type="text"
+                                                                            onkeyup="javascript: extractNumber(this,2,0);"
+                                                                            maxlength="10">
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                            <br>
+
+                                            <button class="btn btn-dark btn-sm" type="button" name="Submit"
+                                                value="Submit" onclick="javaScript: submit_form();">
+                                                <i class="fa fa-floppy-o">&nbsp;&nbsp;</i>Submit
+                                            </button>
+                                            &nbsp;&nbsp;
+                                            <button class="btn btn-dark btn-sm" type="button" name="add more"
+                                                value="Add More" onclick="javaScript: setCount();">
+                                                <i class="fa fa-plus">&nbsp;</i>Add More
+                                            </button>
+
+
+                                            <!-- <input type='button' class="btn w-xs btn-primary" value="Submit" onclick='javaScript: submit_form();'>&nbsp;
+                                        <input type='button' class="btn w-xs btn-primary" value="Add More" onclick='javaScript: setCount();'> -->
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                            <script src="/cpfv3/css/tms/bootstrap_r/js/jquery.dataTables.min.js"></script>
+                            <script src="/cpfv3/css/tms/bootstrap_r/js/dataTables.bootstrap.js"></script>
+                            <script src="/cpfv3/css/tms/bootstrap_r/js/bootstrap-select.js"></script>
+
+
+                            <script>
+
+
+                                $('#surcharge_tbl').dataTable({
+                                    "paging": false,
+                                    "bFilter": false
+
+                                });
+                            </script>
+
+
+
+                        </body>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- End Row -->
     </div>
 </body>
@@ -2144,15 +2676,339 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 
-<script type="text/javascript">
-    var wrapper1 = document.getElementById('wrapper1');
-    var wrapper2 = document.getElementById('wrapper2');
-    wrapper1.onscroll = function () {
-        wrapper2.scrollLeft = wrapper1.scrollLeft;
+
+<script language="Javascript">
+    var ajax = new sack();
+    function getTransferList_search() {
+        var supplierCode = document.getElementById('Search_supplier').value;
+        document.getElementById('Search_transfer').options.length = 0;
+        if (supplierCode.length > 0) {
+            ajax.requestFile = 'getTransfer.php?supplierCode=' + supplierCode;
+            ajax.onCompletion = createTransferSearch;
+            ajax.runAJAX();
+        }
+    }
+    function createTransferSearch() {
+        var obj = document.getElementById('Search_transfer');
+        eval(ajax.response);
+        $("#Search_transfer").selectpicker("refresh");
+        if (typeof (document.getElementById("selected_transfer_id")) != 'undefined' && document.getElementById("selected_transfer_id") != null && document.getElementById("selected_transfer_id").value != "") {
+            if (document.getElementById('search_remainder').value == "1") {
+                document.getElementById('search_remainder').value = "0";
+            }
+        }
+        $("#Search_transfer").selectpicker("refresh");
+    }
+    $(function () {
+        $(document).on("focus", "button.dropdown-toggle[data-id='Search_transfer']", function () {
+            var selCountry = $("form[name='search_trans_tariff'] #Search_supplier").next().find("li.selected").text().trim();
+            if (selCountry != "" & selCountry != "- Select Supplier -") { }
+            else {
+                showWarAlert('First Select Supplier.', 'Search_supplier', document.forms["search_trans_tariff"], 'selectpicker');
+            }
+        });
+    });
+    $(document).on('click', '.custPaging td a', function (e) {
+        e.preventDefault();
+        var hrefValue = $(this).attr('href');
+        var nextValue = getUrlParameter('next', hrefValue);
+        if (typeof nextValue == 'undefined' || nextValue == null) {
+            $("#nextPaginate").val();
+        }
+        $("#nextPaginate").val(nextValue);
+        $('#search_trans_tariff').find("input").filter("[name='searchType']").val('searchTariff');
+        $('#search_trans_tariff').submit();
+        return false;
+    });
+    function checkVehicle() {
+        if (document.getElementById('sel_vehicle_search').value == '0') {
+            showWarAlert('First Select Vehicle.');
+            document.getElementById('sel_vehicle_search').focus();
+        }
+    }
+    function getVehicleModel() {
+        var vehicleCode = document.getElementById('sel_vehicle').value;
+        if (vehicleCode.length > 0) {
+            ajax.requestFile = 'getVehicle.php?vehicleCode=' + vehicleCode + '&type=vehiclemodel';
+            ajax.onCompletion = createVehicleModel;
+            ajax.runAJAX();
+        }
+    }
+    function createVehicleModel() {
+        document.getElementById('Search_veh_model').options.length = 0;
+        var obj = document.getElementById('Search_veh_model');
+        eval(ajax.response);
+        getPaxLugCap();
+    }
+    function validate_chk(formObj, action, supplier) {
+        var chks = document.getElementsByName('del[]');
+        if (typeof (chks[0]) == "undefined") {
+            return false;
+        }
+        var hasChecked = false;
+        for (var i = 0; i < chks.length; i++) {
+            if (chks[i].checked) {
+                hasChecked = true;
+                break;
+            }
+        }
+        if (!hasChecked) {
+            if (action == "multi_delete") {
+                showWarAlert("Please Select Atleast One Transfer To Delete.");
+            }
+            if (action == "Activate") {
+                showWarAlert("Please Select Atleast One Transfer To Activate.");
+            }
+            if (action == "Deactivate") {
+                showWarAlert("Please Select Atleast One Transfer To Deactivate.");
+            }
+            chks[0].focus();
+            return false;
+        }
+        if (action == "multi_delete")
+            var a = confirm("Are you sure you want to delete selected ?");
+        if (action == "Activate")
+            var a = confirm("Are you sure you want to activate selected Transfers?");
+        if (action == "Deactivate")
+            var a = confirm("Are you sure you want to deactivate selected Transfers?");
+        if (action == "Areacode")
+            var a = confirm("Are you sure you want to apply area code on selected Transfers?");
+        if (action == "InActiveAreacode")
+            var a = confirm("Are you sure you want to inactive area code on selected Transfers?");
+        if (a == true) {
+            if (action == "multi_delete") {
+                formObj.action.value = "multi_delete";
+            }
+            if (action == "Activate") {
+                formObj.action.value = "Activate";
+            }
+            if (action == "Deactivate") {
+                formObj.action.value = "Deactivate";
+            }
+            formObj.submit();
+        } else {
+            return false;
+        }
+    }
+    function callSearch() {
+        var url = "search_trans_tariff.php?";
+        var supplier_id = $('#Search_supplier').val();
+        url = url + "Search_supplier=" + supplier_id;
+        var transfer_id = $('#Search_transfer').val();
+        url = url + "&Search_transfer=" + transfer_id;
+        var currency = $('#Search_currency').val();
+        url = url + "&Search_currency=" + currency;
+        var rateProfile = $("#Search_rate_pro").val();
+        url = url + "&Search_rate_pro=" + rateProfile;
+        var url = url + "&transfer_paging=yes";
+        var vehicle_name = $("#sel_vehicle_search").val();
+        url = url + "&Search_vehicle=" + vehicle_name;
+        var vehicle_model = $("#Search_veh_model").val();
+        url = url + "&Search_veh_model=" + vehicle_model;
+        var charge_applied = $("#Search_charge_appl").val();
+        url = url + "&Search_charge_appl=" + charge_applied;
+        var status = $("#Search_status").val();
+        url = url + "&Search_status=" + status;
+        $.get(url, function (data) {
+            $('#search_tariff_page').html(data);
+        });
+    }
+    function confirm_active(p_url) {
+        if (confirm(" Do You want to Active?")) {
+            window.location.href = p_url;
+        }
+    }
+    function confirm_inactive(p_url) {
+        if (confirm("Do You want to Inactive?")) {
+            window.location.href = p_url;
+        }
+    }
+    function activate_tariff(id, time_stamp, search_string) {
+        var url = "search_trans_tariff.php?time_stamp=" + time_stamp + "&action=active&id=" + id + "&search_string=" + search_string;
+        var act_id = "#act_img_" + id;
+        var deact_id = "#deact_img_" + id;
+        $.get(url, function (data) {
+            $(deact_id).hide();
+            $(act_id).show();
+            $("#tariff_status_" + id).html("Active");
+            toastr.info('<h5>' + data + '</h5>');
+        });
+    }
+    function deactivate_tariff(id, time_stamp, search_string) {
+        var url = "search_trans_tariff.php?time_stamp=" + time_stamp + "&action=inactive&id=" + id + "&search_string=" + search_string;
+        var act_id = "#act_img_" + id;
+        var deact_id = "#deact_img_" + id;
+        $.get(url, function (data) {
+            $(act_id).hide();
+            $(deact_id).show();
+            $("#tariff_status_" + id).html("Inactive");
+            toastr.info('<h5>' + data + '</h5>');
+        });
+    }
+    function delete_tariff(id, time_stamp, search_string) {
+        if (time_stamp) {
+            var a = showsingleAlert("Are you sure you want to delete selected Transfer Rate?", id, time_stamp, search_string, "Delete");
+        }
+    }
+    function showsingleAlert(msg, id, time_stamp, search_string, action) {
+        swal({
+            title: msg,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Ok",
+            confirmButtonColor: "#F0AD4E",
+            closeOnConfirm: true
+        }, function (isConfirm) {
+            if (isConfirm) {
+                if (action == "Delete") {
+                    var url = "search_trans_tariff.php?time_stamp=" + time_stamp + "&action=delete&id=" + id + "&search_string=" + search_string;
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: '',
+                        success: function (data_1) {
+                            toastr.info('<h5>Transfer Deleted Successfully</h5>');
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 2000);
+                        }
+                    });
+                }
+            } else {
+                return false;
+            }
+        });
+    }
+    function transferAjax(url) {
+        $.get(url, function (data) {
+            $('#search_tariff_page').html(data);
+        });
+    }
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    $(function () {
+        $('#search_sup').dataTable();
+        setTimeout(function () {
+            $('#search_sup').wrap("<div id='scrollCont'></div>");
+            $('#scrollCont').doubleScroll();
+        }, 500);
+        $(".mesID").hide();
+        var mesID = $(".mesID").text().trim();
+        if (mesID != "") {
+            toastr.info('<h5>' + mesID + '</h5>');
+        }
+        $("#notfound").hide();
+        var notfound = $("#notfound").text().trim();
+        if (notfound != "") {
+            showWarAlert(notfound);
+        }
+    });
+    function tariff_window(tariff_id) {
+        var id = $("#tariff_id_" + tariff_id).val();
+        var time_stamp = $("#tariff_time_stamp_" + tariff_id).val();
+        var search_string = $("#search_string").val();
+        var modalContent = "";
+        modalContent += "<iframe frameborder='0' width='100%' height='600' src='search_trans_tariff.php?action=show_surcharge&id=" + id + "&time_stamp=" + time_stamp + "&search_string=" + search_string + "></iframe><span class='fa fa-times-circle fa-4 closeBtn' data-dismiss='modal'></span>";
+        $("#myModal1 .modal-body .modCont").html(modalContent);
+        $("#myModal1").addClass("hmodal-success");
+    }
+
+    window.closeModal = function () {
+        $('#myModal1').modal('hide');
     };
-    wrapper2.onscroll = function () {
-        wrapper1.scrollLeft = wrapper2.scrollLeft;
+
+    function delete_multiple_tarif(action) {
+        var chks = document.getElementsByName('chk[]');
+        if (typeof (chks[0]) == "undefined") {
+            return false;
+        }
+        var hasChecked = false;
+        for (var i = 0; i < chks.length; i++) {
+            if (chks[i].checked) {
+                hasChecked = true;
+                break;
+            }
+        }
+        if (!hasChecked) {
+            showWarAlert("Please Select Atleast One Transfer Rate To Delete.");
+            chks[0].focus();
+            return false;
+        }
+        if (action == "Delete") {
+            var a = showAlert("Are you sure you want to delete selected Transfer Rate?", '', action);
+        }
+    }
+    function showAlert(msg, formObj, action) {
+        swal({
+            title: msg,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Ok",
+            confirmButtonColor: "#F0AD4E",
+            closeOnConfirm: true
+        },
+            function (isConfirm) {
+                if (isConfirm) {
+                    if (action == "Delete") {
+                        var transfer = $('#transfer_id').val();
+                        var supplier_id = $('#supplier_id').val();
+                        var url = 'search_trans_tariff.php?action=multi_delete&tranfer_id=' + transfer + "&supplier_id=" + supplier_id;
+                        var form = $("#search_trans_tariff");
+                        var serializedForm = form.serialize();
+                        $.post(url, serializedForm, function (data_1) {
+                            toastr.info('<h5>Transfer Rate list Deleted Successfully</h5>');
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 2000);
+                        });
+                    }
+                } else {
+                    return false;
+                }
+            });
+    }
+    var getUrlParameter = function getUrlParameter(sParam, sPageURL) {
+        var sPageURL = sPageURL.split('?');
+        var sURLVariables = sPageURL[1].split('&');
+        var sParameterName;
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
     };
+    function searchTariff(type) {
+        var form = $('#search_trans_tariff');
+        form.find("input").filter("[name='searchType']").val(type);
+        $("#nextPaginate").val("");
+        $("#search_trans_tariff").submit();
+    }
+    function select_check_box(t) {
+        $('input:checkbox.fun').each(function () {
+            if (!$(t).prop('checked')) {
+                $(this).prop('checked', false);
+            } else {
+                $(this).prop('checked', true);
+            }
+        });
+    }
+    function check_select_check_box(t) {
+        var all_select = all_unselect = 0;
+        $('input:checkbox.fun').each(function () {
+            if ($(this).prop('checked') == false) {
+                all_select = 1;
+            } else {
+                all_unselect = 1;
+            }
+        });
+        if (all_unselect == 1 && all_select == 0) {
+            $("#select_all_check").prop('checked', true);
+        } else {
+            $("#select_all_check").prop('checked', false);
+        }
+    }
 </script>
 <script language="Javascript">
 	var ajax = new sack();

@@ -426,7 +426,19 @@ text-decoration: underline !important;
   width: 146px;
   float: left;
 }
-
+.nav-tabs .nav-link{
+  background-color: white !important;
+}
+.add-more-vehicle {
+  background: #337AB7 !important;
+  padding-left: 140px!important;
+  padding-top: 28px !important;
+}
+.remove-vehicle {
+  background: #e4e5e7 !important;
+  padding-left: 140px!important;
+  padding-top: 28px !important;
+}
 .plusIco a {
   top: 34px;
   position: relative;
