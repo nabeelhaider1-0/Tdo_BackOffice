@@ -733,9 +733,8 @@
                                                 class="form-control form-control-sm required col-md-12 col-xs-12"
                                                 type="text" name="add_inv_from_date[]" value="26-08-2023">
                                             <span class="input-group-addon">to</span>
-                                            <input id="to1"
-                                                class="form-control form-control-sm col-md-12 col-xs-12" type="text"
-                                                name="add_inv_to_date[]" value="">
+                                            <input id="to1" class="form-control form-control-sm col-md-12 col-xs-12"
+                                                type="text" name="add_inv_to_date[]" value="">
                                             <span class="input-group-addon" id="cTrashBtn">
                                                 <i class="fa fa-trash"></i>
                                             </span>
@@ -766,17 +765,18 @@
                                                 alt=""></span>
                                     </div>
                                 </div>
-                            
-      
-    </div>
-    </div>
 
 
-    <div class="tab-pane fade show active" id="subtab4" role="tabpanel" aria-labelledby="subtab4-tab">
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane fade show active" id="subtab4" role="tabpanel"
+                            aria-labelledby="subtab4-tab">
 
 
 
-        <div id="invtabs-2"
+                            <div id="invtabs-2"
                                 class=" form-group tab-pane ui-tabs-panel ui-widget-content ui-corner-bottom active"
                                 aria-labelledby="viewInventory" role="tabpanel" aria-hidden="false"
                                 style="display: block;">
@@ -831,135 +831,344 @@
                                     </div>
                                 </form>
                                 <div id="invDetails"></div>
-                            </div> 
+                            </div>
 
-    </div>
+                        </div>
 
-    </div>
-    </div>
-        <!-- Cancellation Tab -->
-        <div class="tab-pane fade" id="cancellation" role="tabpanel" aria-labelledby="cancellation-tab">
-            <ul class="nav nav-tabs" id="servicesSubTabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="subtab5-tab" data-toggle="tab" href="#subtab5" role="tab"
-                        aria-controls="subtab5" aria-selected="true">Add Cancellation Policy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="subtab6-tab" data-toggle="tab" href="#subtab6" role="tab"
-                        aria-controls="subtab6" aria-selected="true">View Cancellation Policy</a>
-                </li>
-
-            </ul>
-
-            <div class="tab-content" id="CancellationSubTabContent">
-                <div class="tab-pane fade show active" id="subtab5" role="tabpanel"
-                    aria-labelledby="subtab5-tab">
-                    <div id="canceltabs-1" aria-labelledby="cancelationsadd" class="form-group ui-tabs-panel ui-widget-content ui-corner-bottom active" role="tabpanel" aria-hidden="false" style="display: block;">
-                        <h5 style="font-size: 18px;">Add Cancellation Policy</h5>
-                        <form action="tours_add_cancellation_policy.php" method="post" name="tours_cancellation_form" id="tours_cancellation_form">
-                            <input type="hidden" id="sel_supplier" name="sel_supplier" value="S000000860">
-                            <input type="hidden" name="id" id="id" value="4">
-                            <input type="hidden" name="action_name" id="action_name" value="">
-                            <input type="hidden" name="transfer_included" id="transfer_included" value="N">
-                                                    <div class="" style="font-size: 12px;">Activity rates are not added for supp2Tour1</div>
-                                            </form>
                     </div>
-
                 </div>
+                <!-- Cancellation Tab -->
+                <div class="tab-pane fade" id="cancellation" role="tabpanel" aria-labelledby="cancellation-tab">
+                    <ul class="nav nav-tabs" id="servicesSubTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="subtab5-tab" data-toggle="tab" href="#subtab5" role="tab"
+                                aria-controls="subtab5" aria-selected="true">Add Cancellation Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="subtab6-tab" data-toggle="tab" href="#subtab6" role="tab"
+                                aria-controls="subtab6" aria-selected="true">View Cancellation Policy</a>
+                        </li>
 
-                <div class="tab-pane fade" id="subtab6" role="tabpanel"
-                aria-labelledby="subtab6-tab">
-                <h5 class="form-group" style="font-size: 18px;">View Cancellation Policy </h5>
-                <div class="row">
+                    </ul>
 
-                    <div class="hpanel">
-                        <form method="POST" action="search_trans_tariff.php" name="search_trans_tariff"
-                            id="search_trans_tariff">
-                            <input type="hidden" name="tranfer_id" id="transfer_id" value="">
-                            <input type="hidden" name="supplier_id" id="supplier_id" value="">
-                            <div class="dataTables_scroll">
-                                <div class="alert alert-danger text-center form-group" style="background-color: #f2dede;margin-left: -11px;
+                    <div class="tab-content" id="CancellationSubTabContent">
+                        <div class="tab-pane fade show active" id="subtab5" role="tabpanel"
+                            aria-labelledby="subtab5-tab">
+                            <div id="canceltabs-1" aria-labelledby="cancelationsadd"
+                                class="form-group ui-tabs-panel ui-widget-content ui-corner-bottom active"
+                                role="tabpanel" aria-hidden="false" style="display: block;">
+                                <h5 style="font-size: 18px;">Add Cancellation Policy</h5>
+                                <form action="tours_add_cancellation_policy.php" method="post"
+                                    name="tours_cancellation_form" id="tours_cancellation_form">
+                                    <input type="hidden" id="sel_supplier" name="sel_supplier" value="S000000860">
+                                    <input type="hidden" name="id" id="id" value="4">
+                                    <input type="hidden" name="action_name" id="action_name" value="">
+                                    <input type="hidden" name="transfer_included" id="transfer_included" value="N">
+                                    <div class="" style="font-size: 12px;">Activity rates are not added for supp2Tour1
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="subtab6" role="tabpanel" aria-labelledby="subtab6-tab">
+                            <h5 class="form-group" style="font-size: 18px;">View Cancellation Policy </h5>
+                            <div class="row">
+
+                                <div class="hpanel">
+                                    <form method="POST" action="search_trans_tariff.php" name="search_trans_tariff"
+                                        id="search_trans_tariff">
+                                        <input type="hidden" name="tranfer_id" id="transfer_id" value="">
+                                        <input type="hidden" name="supplier_id" id="supplier_id" value="">
+                                        <div class="dataTables_scroll">
+                                            <div class="alert alert-danger text-center form-group" style="background-color: #f2dede;margin-left: -11px;
                                     margin-top: -5px;    padding: 13px;">
-                                    <h5 style="    color: #a94442 !important; font-size: 16px;">Cancellation policy not available.</h5>
+                                                <h5 style="    color: #a94442 !important; font-size: 16px;">Cancellation
+                                                    policy not available.</h5>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </form>
+
+
+                        </div>
                     </div>
+
+
+
                 </div>
 
+                <!-- Stop sell Tab -->
+                <div class="tab-pane fade" id="stop" role="tabpanel" aria-labelledby="stop-tab">
+                    <ul class="nav nav-tabs" id="stopSubTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="subtab7-tab" data-toggle="tab" href="#subtab7" role="tab"
+                                aria-controls="subtab7" aria-selected="true">Add Stop Sell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="subtab8-tab" data-toggle="tab" href="#subtab8" role="tab"
+                                aria-controls="subtab8" aria-selected="true">View Stop Sell</a>
+                        </li>
 
-            </div>
-            </div>
+                    </ul>
+
+                    <div class="tab-content" id="CancellationSubTabContent">
+                        <div class="tab-pane fade show active" id="subtab7" role="tabpanel"
+                            aria-labelledby="subtab7-tab">
+                            <div id="invtabs-1"
+                                class="form-group tab-pane ui-tabs-panel ui-widget-content ui-corner-bottom active"
+                                aria-labelledby="ui-id-12" role="tabpanel" aria-hidden="false" style="display: block;">
+
+                                <h5 style="font-size: 18px;">Add Stop Sell</h5>
+                                <div class="row">
+                                    <div class="col-md-3 form-group">
+                                        <label>Activity Type</label>
+                                        <input id="activity_type" readonly="" class="form-control form-control-sm"
+                                            type="text" value="Activities">
+                                    </div>
+                                    <div class="col-md-3 form-group">
+                                        <label>Activity Sub Type</label>
+                                        <input id="activity_sub_type" readonly="" class="form-control form-control-sm"
+                                            type="text" value="">
+                                    </div>
+                                    <div class="col-md-3 form-group">
+                                        <label>Activity Category</label>
+                                        <input id="activity_category" readonly="" class="form-control form-control-sm"
+                                            type="text" value="Adventure Trip">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="form-group col-md-3">
+                                        <label>Activity Name</label>
+                                        <input class="form-control form-control-sm required" type="text"
+                                            name="sel_tours" id="sel_tours" size="60" value="supp2Tour1"
+                                            disabled="disabled">
+                                    </div>
+                                    <div class="form-group col-md-3 TourPeriodPickersInventories">
+                                        <label>Date</label>
+                                        <div class="input-daterange input-group date TourPeriodPickersInventory toursInventoryRow"
+                                            id="TourPeriodPickersInventory_0">
+                                            <input id="from1"
+                                                class="form-control form-control-sm required col-md-12 col-xs-12 flatpickr-input"
+                                                type="text" name="add_inv_from_date[]" value="26-08-2023"
+                                                readonly="readonly">
+                                            <span class="input-group-addon">to</span>
+                                            <input id="to1"
+                                                class="form-control form-control-sm col-md-12 col-xs-12 flatpickr-input"
+                                                type="text" name="add_inv_to_date[]" value="" readonly="readonly">
+                                            <span class="input-group-addon" id="cTrashBtn">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <span class="input-group" style="margin-top:20px;">
+                                            <span class="input-group-addon" id="plus" onclick="MakePeriodClone();"><i
+                                                    class="fa fa-plus" aria-hidden="true"></i></span>
+                                            <span class="input-group-addon" id="minus" onclick="RemovePeriodClone()"><i
+                                                    class="fa fa-minus" aria-hidden="true"></i></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-5">
+                                        <div id="inv_div"></div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="form-group col-md-3">
+                                        <button type="button" class="btn btn-dark btn-sm" name="inv_submitb1"
+                                            id="inv_submitb1" value="ADD"
+                                            onclick="javascript:return add_inv_form(document.forms['addinvForm']);">
+                                            <i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save
+                                        </button>
+                                        <span id="loading" style="display: none"><img src="images/loading.gif"
+                                                alt=""></span>
+                                    </div>
+                                </div>
 
 
+                            </div>
 
-    </div>
+                        </div>
 
-      <!-- Stop sell Tab -->
-      <div class="tab-pane fade" id="stop" role="tabpanel" aria-labelledby="stop-tab">
-        <ul class="nav nav-tabs" id="stopSubTabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="subtab7-tab" data-toggle="tab" href="#subtab7" role="tab"
-                    aria-controls="subtab7" aria-selected="true">Add Stop Sell</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="subtab8-tab" data-toggle="tab" href="#subtab8" role="tab"
-                    aria-controls="subtab8" aria-selected="true">View Stop Sell</a>
-            </li>
+                        <div class="tab-pane fade" id="subtab8" role="tabpanel" aria-labelledby="subtab8-tab">
+                            <h5 class="form-group" style="font-size: 18px;">View/Edit Stop Sale </h5>
+                            <div class="row">
 
-        </ul>
-
-        <div class="tab-content" id="CancellationSubTabContent">
-            <div class="tab-pane fade show active" id="subtab7" role="tabpanel"
-                aria-labelledby="subtab7-tab">
-                <div id="canceltabs-1" aria-labelledby="cancelationsadd" class="form-group ui-tabs-panel ui-widget-content ui-corner-bottom active" role="tabpanel" aria-hidden="false" style="display: block;">
-                    <h5 style="font-size: 18px;">Add Cancellation Policy</h5>
-                    <form action="tours_add_cancellation_policy.php" method="post" name="tours_cancellation_form" id="tours_cancellation_form">
-                        <input type="hidden" id="sel_supplier" name="sel_supplier" value="S000000860">
-                        <input type="hidden" name="id" id="id" value="4">
-                        <input type="hidden" name="action_name" id="action_name" value="">
-                        <input type="hidden" name="transfer_included" id="transfer_included" value="N">
-                                                <div class="" style="font-size: 12px;">Activity rates are not added for supp2Tour1</div>
-                                        </form>
-                </div>
-
-            </div>
-
-            <div class="tab-pane fade" id="subtab8" role="tabpanel"
-            aria-labelledby="subtab8-tab">
-            <h5 class="form-group" style="font-size: 18px;">View/Edit Stop Sale </h5>
-            <div class="row">
-
-                <div class="hpanel">
-                    <form method="POST" action="search_trans_tariff.php" name="search_trans_tariff"
-                        id="search_trans_tariff">
-                        <input type="hidden" name="tranfer_id" id="transfer_id" value="">
-                        <input type="hidden" name="supplier_id" id="supplier_id" value="">
-                        <div class="dataTables_scroll">
-                            <div class="alert alert-danger text-center form-group" style="background-color: #f2dede;margin-left: -11px;
+                                <div class="hpanel">
+                                    <form method="POST" action="search_trans_tariff.php" name="search_trans_tariff"
+                                        id="search_trans_tariff">
+                                        <input type="hidden" name="tranfer_id" id="transfer_id" value="">
+                                        <input type="hidden" name="supplier_id" id="supplier_id" value="">
+                                        <div class="dataTables_scroll">
+                                            <div class="alert alert-danger text-center form-group" style="background-color: #f2dede;margin-left: -11px;
                                 margin-top: -5px;    padding: 13px;">
-                                <h5 style="    color: #a94442 !important; font-size: 16px;">No data found.</h5>
+                                                <h5 style="    color: #a94442 !important; font-size: 16px;">No data
+                                                    found.</h5>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <!-- Pickdroptap Tab -->
+                <div class="tab-pane fade" id="PAD" role="tabpanel" aria-labelledby="PAD-tab">
+                    <ul class="nav nav-tabs" id="PADSubTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="subtab9-tab" data-toggle="tab" href="#subtab9" role="tab"
+                                aria-controls="subtab9" aria-selected="true">Add Pick-up & Drop-off Points</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="subtab10-tab" data-toggle="tab" href="#subtab10" role="tab"
+                                aria-controls="subtab10" aria-selected="true">View / Edit Pick-up & Drop-off Points</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content" id="PADSubTabContent">
+                        <div class="tab-pane fade show active" id="subtab9" role="tabpanel"
+                            aria-labelledby="subtab9-tab">
+                            <div id="invtabs-1"
+                                class="form-group tab-pane ui-tabs-panel ui-widget-content ui-corner-bottom active"
+                                aria-labelledby="ui-id-12" role="tabpanel" aria-hidden="false" style="display: block;">
+
+                                <h5 style="font-size: 18px;">Add Pick-up & Drop-off Points</h5>
+                                <div id="non_transfer_box">
+                                    <div class="row">
+                                        <div class="form-group col-md-3 phps_row_1">
+                                            <label>Pick-up &amp; Drop-off Point</label>
+                                            <input class="form-control form-control-sm input_style1 required" size="40"
+                                                type="text" name="txt_add_pick_up_0" value="" id="txt_add_pick_up_0">
+                                            <input type="hidden" name="no_of_pick_up" id="no_of_pick_up" value="1">
+                                        </div>
+                                        <div class="form-group col-md-3 phps_row_0">
+                                            <label>Location Type </label><br>
+                                            <div class="radioline1">
+                                                <div class="radio radio-success radio-inline">
+                                                    <input id="location_type_0" type="radio" name="location_type_0"
+                                                        value="pick-up">
+                                                    <label for="">Pickup</label>
+                                                </div>
+                                                <div class="radio radio-success radio-inline">
+                                                    <input id="app" type="radio" name="location_type_0"
+                                                        value="drop-off">
+                                                    <label for="">Dropoff</label>
+                                                </div>
+                                                <div class="radio radio-success radio-inline">
+                                                    <input id="app" type="radio" name="location_type_0" value="both">
+                                                    <label for="">Both</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-3 phps_row_1">
+                                            <span class="input-group" style="margin-top:20px;">
+                                                <span class="input-group-addon" id="plus_pick"
+                                                    onclick="plus_pick_up();"><i class="fa fa-plus"></i></span>
+                                                <span class="input-group-addon" id="minus_pick"
+                                                    onclick="minus_pick_up()"><i class="fa fa-minus"></i></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <div id="pick_up_id"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="form-group col-md-3 phps_row_0">
+                                            <span id="loading" style="display: none"><img src="images/loading.gif"
+                                                    alt=""></span>
+                                            <button type="button" class="btn btn-dark btn-sm" name="save_button"
+                                                id="submit_button" value="Save"
+                                                onclick="javascript: return submit_add_pick_up_form();">
+                                                <i class="fa fa-floppy-o"></i>&nbsp;Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
+                        <div class="tab-pane fade" id="subtab10" role="tabpanel" aria-labelledby="subtab10-tab">
+                            <div id="invtabs-1"
+                                class="form-group tab-pane ui-tabs-panel ui-widget-content ui-corner-bottom active"
+                                aria-labelledby="ui-id-12" role="tabpanel" aria-hidden="false" style="display: block;">
+
+                                <h5 style="font-size: 18px;">View / Edit Pick-up & Drop-off Points</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="doubleScroll-scroll-wrapper" id="wrapper2"
+                                        style="height: 20px; overflow: scroll hidden; width: 1320px;">
+                                        <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1320px;">
+                                        </div>
+                                    </div>
+                                    <div id="wrapper2" style="overflow: scroll hidden;">
+                                        <table id="view_pick_up_form1"
+                                            class="table table-bordered table-striped table-hover table-responsive dataTable no-footer"
+                                            role="grid" aria-describedby="view_pick_up_form1_info">
+                                            <thead>
+                                                <tr class="phps_row_1" role="row">
+                                                    <th class="sorting_asc" tabindex="0"
+                                                        aria-controls="view_pick_up_form1" rowspan="1" colspan="1"
+                                                        aria-sort="ascending"
+                                                        aria-label="Pick-up &amp;amp; Drop-off Point: activate to sort column descending"
+                                                        style="width: 605.2px;">Pick-up &amp; Drop-off Point</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="view_pick_up_form1"
+                                                        rowspan="1" colspan="1"
+                                                        aria-label="Location Type: activate to sort column ascending"
+                                                        style="width: 372.2px;">Location Type</th>
+                                                    <th class="no-sort sorting_disabled" rowspan="1" colspan="1"
+                                                        aria-label="Action" style="width: 420px;">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr class="phps_row_0 odd" id="row0" role="row">
+                                                    <td class="sorting_1">mumbai</td>
+                                                    <td>both</td>
+                                                    <td class="actionlink">
+                                                        <div class="actionCont">
+                                                            <div class="input-group-addon">
+                                                                <a href="#" onclick="edit_pick_point('30');"
+                                                                    title="Edit">
+                                                                    <i class="fa fa-pencil-square-o"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="input-group-addon">
+                                                                <a href="#" onclick="delete_pick_point('30');"
+                                                                    title="Delete">
+                                                                    <i class="fa fa-trash"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </form>
 
 
-        </div>
-        </div>
 
-
-
-</div>
-    </form>
-
-
-
-    <!-- END -->
+        <!-- END -->
 
     </div>
- 
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -1012,7 +1221,7 @@
 
     });
 
-    const  from1 = flatpickr("#from1", {
+    const from1 = flatpickr("#from1", {
         dateFormat: "Y-m-d",
         minDate: "today"
     });
