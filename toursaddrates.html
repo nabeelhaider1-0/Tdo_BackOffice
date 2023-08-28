@@ -1101,13 +1101,67 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="subtab10" role="tabpanel" aria-labelledby="subtab10-tab">
+                            <div class="ediiit" id="edii" style="display: none;">
                             <div id="invtabs-1"
+                                class="form-group tab-pane ui-tabs-panel ui-widget-content ui-corner-bottom active"
+                                aria-labelledby="ui-id-12" role="tabpanel" aria-hidden="false" style="display: block;">
+
+                                <h5 style="font-size: 18px;">Edit Pick-up & Drop-off Point</h5>
+                            </div>
+                            <div id="non_transfer_box">
+                                <div class="row">
+                                    <div class="form-group col-md-3 phps_row_1">
+                                        <label></label>
+                                        <input class="form-control form-control-sm input_style1 required" size="40"
+                                            type="text" name="txt_add_pick_up_0" value="" id="txt_add_pick_up_0"placeholder="mumbai" >
+                                        <input type="hidden" name="no_of_pick_up" id="no_of_pick_up" value="1">
+                                    </div>
+                                    <div class="form-group col-md-3 phps_row_0">
+                                        <label>Location Type </label><br>
+                                        <div class="radioline1">
+                                            <div class="radio radio-success radio-inline">
+                                                <input id="location_type_0" type="radio" name="location_type_0"
+                                                    value="pick-up">
+                                                <label for="">Pickup</label>
+                                            </div>
+                                            <div class="radio radio-success radio-inline">
+                                                <input id="app" type="radio" name="location_type_0"
+                                                    value="drop-off">
+                                                <label for="">Dropoff</label>
+                                            </div>
+                                            <div class="radio radio-success radio-inline">
+                                                <input id="app" type="radio" name="location_type_0" value="both" checked>
+                                                <label for="">Both</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <div id="pick_up_id"></div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="form-group col-md-3 phps_row_0">
+                                        <span id="loading" style="display: none"><img src="images/loading.gif"
+                                                alt=""></span>
+                                        <button type="button" class="btn btn-dark btn-sm" name="save_button"
+                                            id="submit_button" value="Save"
+                                            onclick="javascript: return submit_add_pick_up_form();">
+                                            <i class="fa fa-floppy-o"></i>&nbsp;Save
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="row" id="ediittable">
+                                <div id="invtabs-1"
                                 class="form-group tab-pane ui-tabs-panel ui-widget-content ui-corner-bottom active"
                                 aria-labelledby="ui-id-12" role="tabpanel" aria-hidden="false" style="display: block;">
 
                                 <h5 style="font-size: 18px;">View / Edit Pick-up & Drop-off Points</h5>
                             </div>
-                            <div class="row">
                                 <div class="col-sm-12">
                                     <div class="doubleScroll-scroll-wrapper" id="wrapper2"
                                         style="height: 20px; overflow: scroll hidden; width: 1320px;">
@@ -1140,8 +1194,8 @@
                                                     <td>both</td>
                                                     <td class="actionlink">
                                                         <div class="actionCont">
-                                                            <div class="input-group-addon">
-                                                                <a href="#" onclick="edit_pick_point('30');"
+                                                            <div class="input-group-addon" id="showBlock1">
+                                                                <a href="#;"
                                                                     title="Edit">
                                                                     <i class="fa fa-pencil-square-o"></i>
                                                                 </a>
@@ -1161,6 +1215,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
         </form>
 
 
@@ -1255,6 +1310,17 @@
         wrapper1.scrollLeft = wrapper2.scrollLeft;
     };
 </script>
+<script>
+    const block1 = document.getElementById("edii");
+    const block2 = document.getElementById("ediittable");
+    const showBlock1Button = document.getElementById("showBlock1");
+
+  
+    showBlock1Button.addEventListener("click", function() {
+      block1.style.display = "block";
+      block2.style.display = "none";
+    });
+  </script>
 
 
 </html>
