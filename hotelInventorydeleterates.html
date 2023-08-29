@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body>
+
+    <div class="color-line">
+    </div>
+
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;">
+            <a class="navbar-brand" href="#" style="padding-left: 23px; background-color:#f7f9fa">
+                <img src="logo.png" alt="Logo" height="50" style="
+                width: 100px;
+            ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Dashboard </a>
+                    </li>
+
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rates<span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="hotelInventoryapp.html">Manage Rates</a>
+                            <a class="dropdown-item" href="hotelInventorydeleterates.html">Delete Rates</a>
+                            <a class="dropdown-item" href="hotelInventoryoldroomrates.html">Old Room Rates</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bookings</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Masters
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Hotel Setting</a>
+                            <a class="dropdown-item" href="#">Room Category</a>
+                            <a class="dropdown-item" href="#">Map Hotel Rooms</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Policies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Supplements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Seasons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Extra-bed</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Offer
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Search</a>
+                            <a class="dropdown-item" href="#">Create</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Arivals</a>
+                            <a class="dropdown-item" href="#">Expiring Rates</a>
+                            <a class="dropdown-item" href="#">Recent Changes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contracts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tariff Writer</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="user.png" alt="Account Logo" height="45" style="    width: 41px;
+                            padding: 8px;
+                            border: 1px solid #eaebec;
+                            border-radius: 50%;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-12">
+                    <h5 style="font-size:30px;font-weight: 700;    margin: 0px;
+                    padding: 0px;
+                    text-transform: uppercase;">DELETE RATES</h5>
+                </div>
+
+
+
+
+
+
+
+        </header>
+
+
+    </section>
+
+
+    <style>
+        .btn-primary {
+            background-color: #34495e;
+            border-color: #34495e;
+            color: #FFFFFF;
+            font-size: 13px;
+        }
+        .btn-primary:hover{
+            background-color: #3f5872 !important;
+    border-color: #3f5872 !important;
+    color: #FFFFFF !important;
+    outline: none !important;
+        }
+        #date1{
+        background-color: white;
+       }
+       #date2{
+        background-color: white;
+       }
+
+        .ng-hide {
+            display: none;
+        }
+
+        .h-bg-navy-blue {
+            background: #34495e;
+        }
+
+        .adddates {
+            background: #74D348;
+            color: white;
+        }
+
+        .adddates:hover {
+            background: #74D348;
+        }
+
+        .bootstrap-select.show-menu-arrow.open>.dropdown-toggle,
+        .bootstrap-select.show-menu-arrow.show>.dropdown-toggle {
+            z-index: 1;
+        }
+
+       th{
+        text-align: left !important;
+        width: 200px;
+        vertical-align: middle !important;
+        padding: 7px 8px !important;
+        font-size: 12px;
+       }
+       td{
+        background-color: #FFFFFF !important;
+       }
+        
+    </style>
+
+    <!--    Panel Body        -->
+
+    <div class="container-fluid pt-0 p-4" id="content-pad" style="padding-left:30px !important;">
+
+
+        <div class="blue-box1 mt-3">
+            <div class="row">
+                <div class="col-md-2 mt-2">
+                    <div class="labelTitle2">Delete Rates FOR</div>
+                </div>
+                <div class="col-md-4">
+                    <select class="selectpicker mt-2 form-control form-control-sm show-menu-arrow bs-select-hidden"
+                        id="sel_branch" name="sel_branch" title="-Select-" onchange="getAgentList(this.value)"
+                        data-live-search="true">
+                        <option class="bs-title-option" value=""></option>
+                        <option label="Mumbai Branch" value="1">Mumbai Branch</option>
+                        <option label="UAE Branch" value="2">UAE Branch</option>
+                        <option label="UK Head Office" value="3">UK Head Office</option>
+                        <option label="Head Office" value="4">Head Office</option>
+                        <option label="Dubai GSA" value="5">Dubai GSA</option>
+                        <option label="London Branch" value="6">London Branch</option>
+                        <option label="Saudi Branch" value="7">Saudi Branch</option>
+                        <option label="Dubai V3 Wh" value="8">Dubai V3 Wh</option>
+                        <option label="Pune Branch" value="9">Pune Branch</option>
+                        <option label="India - GSA" value="10">India - GSA</option>
+                        <option label="Test Branch1" value="11">Test Branch1</option>
+                        <option label="Test Branch" value="13">Test Branch</option>
+                        <option label="Testffff" value="14">Testffff</option>
+                        <option label="FRANCHISE BRANCH" value="15">FRANCHISE BRANCH</option>
+                        <option label="Jcholidays" value="16">Jcholidays</option>
+                        <option label="Demo" value="17">Demo</option>
+                        <option label="malaysia" value="19">malaysia</option>
+                        <option label="GSA Iraq" value="20">GSA Iraq</option>
+                        <option label="Chennai" value="21">Chennai</option>
+                        <option label="Bangkok Branch" value="22">Bangkok Branch</option>
+                        <option label="suhas_branch" value="23">suhas_branch</option>
+                        <option label="Istanbul" value="24">Istanbul</option>
+                        <option label="hyderabad" value="25">hyderabad</option>
+                        <option label="hyderabad_suhas" value="26">hyderabad_suhas</option>
+                        <option label="branch_suhas" value="27">branch_suhas</option>
+                        <option label="New Joint Branch" value="28">New Joint Branch</option>
+                        <option label="Bahrain Branch" value="29">Bahrain Branch</option>
+                        <option label="Branch Bahrain" value="30">Branch Bahrain</option>
+                        <option label="testdddd" value="31">testdddd</option>
+                        <option label="Demo" value="32">Demo</option>
+                        <option label="HotelConfirm" value="33">HotelConfirm</option>
+                        <option label="HotelConfirm_Live" value="34">HotelConfirm_Live</option>
+                        <option label="GSA Branch" value="37">GSA Branch</option>
+                        <option label="Testpp" value="38">Testpp</option>
+                        <option label="Bolton Branch" value="41">Bolton Branch</option>
+                        <option label="World Avenue" value="42">World Avenue</option>
+                        <option label="TEST_BRANCH_A" value="43">TEST_BRANCH_A</option>
+                        <option label="TEST_BRANCH_JV_A" value="44">TEST_BRANCH_JV_A</option>
+                        <option label="TEST_BRANCH_JV_C" value="45">TEST_BRANCH_JV_C</option>
+                        <option label="world_avenue_malesia" value="46">world_avenue_malesia</option>
+                        <option label="World Avenues Malaysia" value="47">World Avenues Malaysia</option>
+                        <option label="test_branch_jv" value="48">test_branch_jv</option>
+                        <option label="1 Booking" value="49">1 Booking</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 2nd Form -->
+
+        <form class="mt-3" style="    padding-top: 16px;   padding-bottom: 20px; ">
+            <div class="panel-body noTopBorder">
+                <div class="row">
+                    <div class="col-md-12 " id="step5">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped deleteratetable">
+                                <thead>
+                                    <tr class="h-bg-navy-blue fontWhite">
+                                        <th ng-show="SpoRatesDelete" class="ng-hide">SPO Offer</th>
+                                        <th ng-show="SpoRatesDelete" class="ng-hide">Inventory Class</th>
+                                        <th>Rate Profile</th>
+                                        <th>Room Category</th>
+                                        <th>Meal Basis</th>
+                                        <th ng-show="AgentWiseRates &amp;&amp; !SpoRatesDelete" class="ng-hide">Agent
+                                            Rate Type</th>
+                                        <th ng-show="ExcludeNationality &amp;&amp; !SpoRatesDelete" class="">Exclude
+                                            Nationality</th>
+                                        <th ng-show="fitPackageRateType &amp;&amp; actionType == 'delete' &amp;&amp; !SpoRatesDelete"
+                                            class="ng-hide">Rate Type</th>
+                                        <th>
+                                            <div class="btn-group text-center m-b-md" id="wizardControl1">
+                                                <a ng-click="setDateType('period')" class="btn btn-sm btn-success"
+                                                    data-target="#step11" data-toggle="tab">Period</a>
+                                                <a ng-click="setDateType('season')" class="btn btn-sm btn-default"
+                                                    data-target="#step21" data-toggle="tab">Season</a>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td ng-show="SpoRatesDelete" class="text-center width15Percent ng-hide">
+                                            <select data-live-search="true" data-container="body" id="cSpoOfferName"
+                                                ng-model="SpoOfferNameModel"
+                                                class="selectpicker show-menu-arrow form-control form-control-sm form_element required spooffernameFilter ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                <option value="">Please Select</option>
+                                                <!-- ngRepeat: spoOffername in aSpoOfferName -->
+                                            </select>
+
+                                        </td>
+                                        <td ng-show="SpoRatesDelete" class="text-center width15Percent ng-hide">
+                                            <select name="SpoInventory" data-actions-box="true" data-live-search="true"
+                                                data-container="body" id="cInventoryRoomClassID" multiple="multiple"
+                                                ng-model="InventoryRoomClassModel"
+                                                class="selectpicker show-menu-arrow form-control form-control-sm form_element required spooffernameFilter ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                <option data-hidden="true" value="">Please Select Inventory Class
+                                                </option>
+                                                <!-- ngRepeat: (id,inventory_room_class) in aInventoryClass -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center width15Percent">
+                                            <select data-actions-box="true" data-live-search="true"
+                                                data-container="body" id="cMarketProfileID" multiple="multiple"
+                                                ng-model="marketProfileModel"
+                                                class="selectpicker show-menu-arrow form-control form-control-sm form_element required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                <option data-hidden="true" value="">- Please Select -</option>
+                                                <!-- ngRepeat: x in aSupplierProfile -->
+                                                <option value="67" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">AFRICAN MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="31" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">APAC</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="68" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">CIS- RUSSIA MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="69" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">EUROPE MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="70" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">FAR EAST</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="71" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">GCC- MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="72" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">GCC-UAE&amp;SA</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="73" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">SUB-C MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="74" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">USA MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center width15Percent">
+                                            <select data-actions-box="true" data-live-search="true"
+                                                data-container="body" id="cRoomClassID" multiple="multiple"
+                                                ng-model="RoomClassModel"
+                                                class="selectpicker show-menu-arrow form-control form-control-sm form_element required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                <option data-hidden="true" value="">- Please Select -</option>
+                                                <!-- ngRepeat: x in aRoomClass -->
+                                                <option value="123" ng-repeat="x in aRoomClass"
+                                                    class="ng-binding ng-scope">Classic - Triple </option>
+                                                <!-- end ngRepeat: x in aRoomClass -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center width15Percent">
+                                            <select data-actions-box="true" data-live-search="true"
+                                                data-container="body" id="cRoomBasisID" multiple="multiple"
+                                                ng-model="RoomBasisModel"
+                                                class="selectpicker show-menu-arrow form-control form-control-sm form_element required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                <option data-hidden="true" value="">- Please Select -</option>
+                                                <!-- ngRepeat: x in aRoomBasis -->
+                                                <option value="2" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">Half Board</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="3" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">Breakfast</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="5" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">ULTRA All</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="6" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">Superior</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="7" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">Bed &amp;amp; Breakfast</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="9" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">Breakfast and dinner</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="10" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">buffet breakfast</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="11" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">Breakfast Included</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="30" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">BB</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="31" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">Bed Only</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="32" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">Dinner Buffet</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                                <option value="33" ng-repeat="x in aRoomBasis"
+                                                    class="ng-binding ng-scope">Room Only.</option>
+                                                <!-- end ngRepeat: x in aRoomBasis -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center width15Percent ng-hide"
+                                            ng-show="AgentWiseRates &amp;&amp; !SpoRatesDelete">
+                                            <select data-container="body" data-actions-box="true" id="agentProfileID"
+                                                data-live-search="true" multiple="multiple" ng-model="AgentProfileModel"
+                                                class="selectpicker form_element show-menu-arrow form-control form-control-sm ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                <option value="" data-hidden="true">- Please Select -</option>
+                                                <!-- ngRepeat: x in agentProfiles -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center width15Percent"
+                                            ng-show="ExcludeNationality &amp;&amp; !SpoRatesDelete">
+                                            <select data-actions-box="true" data-live-search="true"
+                                                data-container="body" id="cMarketExcludeNationality" multiple="multiple"
+                                                ng-model="ExcludeNationalityModel"
+                                                class="selectpicker show-menu-arrow form-control form-control-sm form_element ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                <option value="" data-hidden="true">- Please Select -</option>
+                                                <!-- ngRepeat: (key, value) in NationalityExclude -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center width15Percent ng-hide"
+                                            ng-show="fitPackageRateType &amp;&amp; actionType == 'delete' &amp;&amp; !SpoRatesDelete">
+                                            <select id="fitPackageRateType"
+                                                ng-options="opt as opt.ratetypeName for opt in fitPackageRateTypeList"
+                                                class="selectpicker form_element show-menu-arrow form-control form-control-sm required ng-pristine ng-untouched ng-valid bs-select-hidden ng-not-empty"
+                                                ng-model="fitPackageRateSelected" data-container="body"
+                                                data-live-search="true">
+                                                <option value="?" selected="selected"></option>
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center width15Percent">
+                                            <div id="datePick" class="input-group date input-daterange"
+                                                ng-show="dateType=='period'">
+                                                <input type="text" ng-model="from_date" id="date1" name="date1"
+                                                    class="form-control form-control-sm form_element required ng-pristine ng-untouched ng-valid ng-empty"
+                                                    date="dd-MM-yyyy">
+                                                <span class="input-group-addon">To</span>
+                                                <input type="text" ng-model="to_date" id="date2" name="date2"
+                                                    class="form-control form-control-sm form_element required ng-pristine ng-untouched ng-valid ng-empty"
+                                                    date="dd-MM-yyyy">
+                                            </div>
+                                            <span class="form-group ng-hide" ng-show="dateType=='season'">
+                                                <select id="SelectSeason" data-container="body" ng-change="setDate();"
+                                                    ng-model="SeasonModel"
+                                                    class="selectpicker show-menu-arrow form-control form_element seasonLists required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                    <option value="">Select Season</option>
+                                                    <!-- ngRepeat: x in seasonlist -->
+                                                </select>
+                                                <div
+                                                    class="btn-group bootstrap-select show-menu-arrow form-control form_element seasonLists required ng-pristine ng-untouched ng-valid ng-empty">
+                                                    <button type="button" class="btn dropdown-toggle btn-default"
+                                                        data-toggle="dropdown" data-id="SelectSeason"
+                                                        title="Select Season"><span
+                                                            class="filter-option pull-left">Select
+                                                            Season</span>&nbsp;<span class="caret"></span></button>
+                                                    <div class="dropdown-menu open">
+                                                        <ul class="dropdown-menu inner" role="menu">
+                                                            <li data-original-index="0" class="selected"><a tabindex="0"
+                                                                    class="" style="" data-tokens="null"><span
+                                                                        class="text">Select Season</span><span
+                                                                        class="glyphicon glyphicon-ok check-mark"></span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center" ng-show="actionType == 'delete'">
+                    <a class="btn btn-primary btn-sm" id="DeleteContent" ng-click="save();"><b>DELETE</b></a>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+        </form>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+<script>
+    // For Datepicker
+
+ const date1 = flatpickr("#date1", {
+   dateFormat: "Y-m-d",
+   minDate: "today"
+ });
+
+
+ const date2 = flatpickr("#date2", {
+   dateFormat: "Y-m-d",
+   minDate: "today"
+ });
+</script>
+
+</html>

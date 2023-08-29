@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body>
+
+    <div class="color-line">
+    </div>
+
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;">
+            <a class="navbar-brand" href="#" style="padding-left: 23px; background-color:#f7f9fa">
+                <img src="logo.png" alt="Logo" height="50" style="
+                width: 100px;
+            ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Dashboard </a>
+                    </li>
+
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rates<span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="hotelInventoryapp.html">Manage Rates</a>
+                            <a class="dropdown-item" href="hotelInventorydeleterates.html">Delete Rates</a>
+                            <a class="dropdown-item" href="hotelInventoryoldroomrates.html">Old Room Rates</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Bookings</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Masters
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Hotel Setting</a>
+                            <a class="dropdown-item" href="#">Room Category</a>
+                            <a class="dropdown-item" href="#">Map Hotel Rooms</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Policies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Supplements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Seasons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Extra-bed</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Offer
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Search</a>
+                            <a class="dropdown-item" href="#">Create</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Arivals</a>
+                            <a class="dropdown-item" href="#">Expiring Rates</a>
+                            <a class="dropdown-item" href="#">Recent Changes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contracts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tariff Writer</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="user.png" alt="Account Logo" height="45" style="    width: 41px;
+                            padding: 8px;
+                            border: 1px solid #eaebec;
+                            border-radius: 50%;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-12">
+                    <h5 style="font-size:30px;font-weight: 700;    margin: 0px;
+                    padding: 0px;
+                    text-transform: uppercase;">MANAGE RATES</h5>
+                </div>
+
+
+
+
+
+
+
+        </header>
+
+
+    </section>
+
+
+    <style>
+        .btn-primary {
+            background-color: #34495e;
+            border-color: #34495e;
+            color: #FFFFFF;
+            font-size: 13px;
+            
+        }
+        .btn-primary:hover{
+            background-color: #3f5872 !important;
+    border-color: #3f5872 !important;
+    color: #FFFFFF !important;
+    outline: none !important;
+        }
+
+        .ng-hide {
+            display: none;
+        }
+
+        .h-bg-navy-blue {
+            background: #34495e;
+        }
+        .adddates {
+    background: #74D348;
+    color: white;
+}
+.adddates:hover {
+    background: #74D348;
+}
+.bootstrap-select.show-menu-arrow.open > .dropdown-toggle, .bootstrap-select.show-menu-arrow.show > .dropdown-toggle {
+    z-index: 1;
+}
+.new_tab_section .btn {
+    font-weight: 500 !important;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+th{
+        text-align: left !important;
+        width: 200px;
+        vertical-align: middle !important;
+        text-transform: uppercase;
+        font-size: 12px;
+     
+       }
+       td{
+        background-color: #FFFFFF !important;
+       }
+       #voucherStartdatepicker{
+        background-color: white;
+       }
+       #voucherEndDatepicker{
+        background-color: white;
+       }
+
+
+    </style>
+
+    <!--    Panel Body        -->
+
+    <div class="container-fluid pt-0 p-4" id="content-pad" style="padding-left:30px !important;">
+
+
+        <div class="blue-box1 mt-3">
+            <div class="row">
+                <div class="col-md-2 mt-2">
+                    <div class="labelTitle2">Manage Rates FOR</div>
+                </div>
+                <div class="col-md-4">
+                    <select class="selectpicker mt-2 form-control form-control-sm show-menu-arrow bs-select-hidden"
+                        id="sel_branch" name="sel_branch" title="-Select-" onchange="getAgentList(this.value)"
+                        data-live-search="true">
+                        <option class="bs-title-option" value=""></option>
+                        <option label="Mumbai Branch" value="1">Mumbai Branch</option>
+                        <option label="UAE Branch" value="2">UAE Branch</option>
+                        <option label="UK Head Office" value="3">UK Head Office</option>
+                        <option label="Head Office" value="4">Head Office</option>
+                        <option label="Dubai GSA" value="5">Dubai GSA</option>
+                        <option label="London Branch" value="6">London Branch</option>
+                        <option label="Saudi Branch" value="7">Saudi Branch</option>
+                        <option label="Dubai V3 Wh" value="8">Dubai V3 Wh</option>
+                        <option label="Pune Branch" value="9">Pune Branch</option>
+                        <option label="India - GSA" value="10">India - GSA</option>
+                        <option label="Test Branch1" value="11">Test Branch1</option>
+                        <option label="Test Branch" value="13">Test Branch</option>
+                        <option label="Testffff" value="14">Testffff</option>
+                        <option label="FRANCHISE BRANCH" value="15">FRANCHISE BRANCH</option>
+                        <option label="Jcholidays" value="16">Jcholidays</option>
+                        <option label="Demo" value="17">Demo</option>
+                        <option label="malaysia" value="19">malaysia</option>
+                        <option label="GSA Iraq" value="20">GSA Iraq</option>
+                        <option label="Chennai" value="21">Chennai</option>
+                        <option label="Bangkok Branch" value="22">Bangkok Branch</option>
+                        <option label="suhas_branch" value="23">suhas_branch</option>
+                        <option label="Istanbul" value="24">Istanbul</option>
+                        <option label="hyderabad" value="25">hyderabad</option>
+                        <option label="hyderabad_suhas" value="26">hyderabad_suhas</option>
+                        <option label="branch_suhas" value="27">branch_suhas</option>
+                        <option label="New Joint Branch" value="28">New Joint Branch</option>
+                        <option label="Bahrain Branch" value="29">Bahrain Branch</option>
+                        <option label="Branch Bahrain" value="30">Branch Bahrain</option>
+                        <option label="testdddd" value="31">testdddd</option>
+                        <option label="Demo" value="32">Demo</option>
+                        <option label="HotelConfirm" value="33">HotelConfirm</option>
+                        <option label="HotelConfirm_Live" value="34">HotelConfirm_Live</option>
+                        <option label="GSA Branch" value="37">GSA Branch</option>
+                        <option label="Testpp" value="38">Testpp</option>
+                        <option label="Bolton Branch" value="41">Bolton Branch</option>
+                        <option label="World Avenue" value="42">World Avenue</option>
+                        <option label="TEST_BRANCH_A" value="43">TEST_BRANCH_A</option>
+                        <option label="TEST_BRANCH_JV_A" value="44">TEST_BRANCH_JV_A</option>
+                        <option label="TEST_BRANCH_JV_C" value="45">TEST_BRANCH_JV_C</option>
+                        <option label="world_avenue_malesia" value="46">world_avenue_malesia</option>
+                        <option label="World Avenues Malaysia" value="47">World Avenues Malaysia</option>
+                        <option label="test_branch_jv" value="48">test_branch_jv</option>
+                        <option label="1 Booking" value="49">1 Booking</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row marginbottomnew mt-3">
+            <div class="can-policy-box-04 form-group new_tab_section ">
+                <div class="btn-group btn-breadcrumb">
+                    <a class="btn btn-success">Rates</a>
+                    <a ng-href="#allocation/66914" class="btn btn-primary" href="#allocation/66914">Allocation</a>
+                    <a ng-href="#/sellpolicy/66914" class="btn btn-primary" href="#/sellpolicy/66914">Sell Policy</a>
+                    <a class="btn btn-success" style="display:none">Success</a>
+                </div>
+            </div>
+        </div>
+        <!-- First Row-->
+        <form style="border-top: 2px solid #62cb31;    margin-top: -19px;      padding-top: 12px;">
+            <div class="panel-body form-group">
+                <div class="row">
+                    <div class="col-md-4 rateUnik form-group" id="step2">
+                        <label>Add / Modify Rates</label><br>
+                        <div class="btn-group other-btn text-center m-b-md" id="wizardControl1">
+                            <a class="btn btn-sm btn-primary" data-value="period" data-toggle="tab" id="period"
+                                ng-click="setRateType('period');startintro('period');">Period / Season</a>
+                            <a class="btn btn-sm btn-default btn-primary" data-value="monthly" data-toggle="tab"
+                                id="monthly" ng-click="setRateType('monthly');startintro('monthly');">Monthly</a>
+                            <a class="btn btn-sm btn-default" data-value="weekly" data-toggle="tab" id="weekly"
+                                ng-click="setRateType('weekly');startintro('weekly');">Weekly</a>
+                            <a class="btn btn-sm btn-default" data-value="daily" data-toggle="tab" id="daily"
+                                ng-click="setRateType('daily');">Daily</a>
+                        </div>
+                    </div>
+                    <div class=" col-md-4 rateUnik form-group" id="step3">
+                        <label>Rate Management</label><br>
+                        <div class="btn-group other-btn text-center m-b-md" id="wizardControl2">
+                            <a class="btn btn-sm btn-default" data-toggle="tab" data-value="single"
+                                ng-click="setManagementType('single');setAttributes();"
+                                id="SingleRateManagementID">Single</a>
+                            <a class="btn btn-sm btn-primary" data-toggle="tab" data-value="multiple"
+                                ng-click="setManagementType('multiple');setAttributes();"
+                                id="MultipleRateManagementID">Multiple</a>
+                        </div>
+                    </div>
+                    <div class="" style="display:none;">
+                        <div class="rateUnik form-group col-lg-2 col-md-2 col-sm-4  ng-hide"
+                            ng-show="excelUploadWithRateType">
+                            <label>Rate Type</label><br>
+                            <select ng-change="SetRateTypeExtrabed(roomRatesType);"
+                                class="selectpicker form_element show-menu-arrow form-control required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
+                                ng-model="roomRatesType" data-container="body" data-live-search="true">
+                                <option value="? undefined:undefined ?"></option>
+                                <!-- ngRepeat: rateType in RateTypeForRatesInsert -->
+                                <option ng-repeat="rateType in RateTypeForRatesInsert" value="checkin"
+                                    class="ng-binding ng-scope">Check In</option>
+                                <!-- end ngRepeat: rateType in RateTypeForRatesInsert -->
+                                <option ng-repeat="rateType in RateTypeForRatesInsert" value="stay"
+                                    class="ng-binding ng-scope">Stay</option>
+                                <!-- end ngRepeat: rateType in RateTypeForRatesInsert -->
+                            </select>
+                            <div
+                                class="btn-group bootstrap-select form_element show-menu-arrow form-control required ng-pristine ng-untouched ng-valid ng-empty">
+                                <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
+                                    title="Nothing selected"><span class="filter-option pull-left">Nothing
+                                        selected</span>&nbsp;<span class="caret"></span></button>
+                                <div class="dropdown-menu open">
+                                    <div class="bs-searchbox"><input type="text" class="form-control"
+                                            autocomplete="off"></div>
+                                    <ul class="dropdown-menu inner" role="menu">
+                                        <li data-original-index="0" class="selected active"><a tabindex="0" class=""
+                                                style="" data-tokens="null"><span class="text"></span><span
+                                                    class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="1"><a tabindex="0" class="ng-binding ng-scope" style=""
+                                                data-tokens="null"><span class="text">Check In</span><span
+                                                    class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                        <li data-original-index="2"><a tabindex="0" class="ng-binding ng-scope" style=""
+                                                data-tokens="null"><span class="text">Stay</span><span
+                                                    class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rateUnik form-group col-lg-2 col-md-2 col-sm-4 col-xs-12 ng-hide"
+                            ng-show="fitPackageRateType">
+                            <label>FIT/PACKAGE</label><br>
+                            <select ng-change="SetFitRateExtrabed();setAttributes();"
+                                ng-options="opt as opt.ratetypeName for opt in aServiceData.fitPackageRateTypeList"
+                                class="selectpicker form_element show-menu-arrow form-control required ng-pristine ng-untouched ng-valid bs-select-hidden ng-not-empty"
+                                ng-model="fitPackageRateSelected" data-container="body" data-live-search="true">
+                                <option value="?" selected="selected"></option>
+                            </select>
+                            <div
+                                class="btn-group bootstrap-select form_element show-menu-arrow form-control required ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown"
+                                    title="Nothing selected"><span class="filter-option pull-left">Nothing
+                                        selected</span>&nbsp;<span class="caret"></span></button>
+                                <div class="dropdown-menu open">
+                                    <div class="bs-searchbox"><input type="text" class="form-control"
+                                            autocomplete="off"></div>
+                                    <ul class="dropdown-menu inner" role="menu">
+                                        <li data-original-index="0" class="selected active"><a tabindex="0" class=""
+                                                style="" data-tokens="null"><span class="text"></span><span
+                                                    class="glyphicon glyphicon-ok check-mark"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class=" rateUnik room_chk" id="step4">
+                        <label>Manage</label>
+                        <div class="clearfix"></div>
+                        <div class="radioline1">
+                            <div class="checkbox checkbox-success checkbox-inline">
+                                <input id="manage_1" name="chk_views" type="checkbox" value="1" checked="checked"
+                                    ng-click="setAttributes()" ng-model="ManageRates.room_rate" ng-true-value="'YES'"
+                                    ng-false-value="'NO'" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <label for="manage_1">Room Rates</label>
+                            </div>
+                            <div class="checkbox checkbox-success checkbox-inline ng-hide" ng-show="InventoryShow">
+                                <input id="app" name="chk_views" type="checkbox" value="1" checked="checked"
+                                    ng-click="setAttributes();" ng-model="ManageRates.inventory" ng-true-value="'YES'"
+                                    ng-false-value="'NO'" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                <label for="manage_4">Inventory Allocation</label>
+                            </div>
+                            <div class="checkbox checkbox-success checkbox-inline">
+                                <input id="app" name="chk_views" type="checkbox" value="1" checked="checked"
+                                    ng-click="setAttributes()" ng-model="ManageRates.time_limit" ng-true-value="'YES'"
+                                    ng-false-value="'NO'" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                <label for="manage_5">Release Period</label>
+                            </div>
+                            <div class="checkbox checkbox-success checkbox-inline">
+                                <input id="app" name="chk_views" type="checkbox" value="1" checked="checked"
+                                    ng-click="setAttributes()" ng-model="ManageRates.minstay" ng-true-value="'YES'"
+                                    ng-false-value="'NO'" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                <label for="manage_6">Minimum Stay</label>
+                            </div>
+                            <div class="checkbox checkbox-success checkbox-inline">
+                                <input id="app" name="chk_views" type="checkbox" value="1" checked="checked"
+                                    ng-click="setAttributes()" ng-model="ManageRates.checkin" ng-true-value="'YES'"
+                                    ng-false-value="'NO'" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                <label for="manage_9">Checkin Block</label>
+                            </div>
+                            <div class="checkbox checkbox-success checkbox-inline ng-hide" ng-show="SellPolicyShow">
+                                <input id="app" name="chk_views" type="checkbox" value="1" checked="checked"
+                                    ng-click="setAttributes()" ng-model="ManageRates.stop_sale" ng-true-value="'YES'"
+                                    ng-false-value="'NO'" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                <label for="manage_7">Sell Policy</label>
+                            </div>
+                            <div class="checkbox checkbox-success checkbox-inline">
+                                <input id="app" name="chk_views" type="checkbox" value="1" checked="checked"
+                                    ng-click="setAttributes()" ng-model="ManageRates.status" ng-true-value="'YES'"
+                                    ng-false-value="'NO'" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                <label for="manage_8">Status</label>
+                            </div>
+                            <div class="checkbox checkbox-success checkbox-inline" ng-show="ExtrabedAllowed">
+                                <input id="app" name="chk_views" type="checkbox" value="1" checked="checked"
+                                    ng-click="setAttributes()" ng-model="ManageRates.extrabed" ng-true-value="'YES'"
+                                    ng-false-value="'NO'" class="ng-pristine ng-untouched ng-valid ng-empty">
+                                <label for="manage_10">Extra Beds</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+        <!-- 2nd Form -->
+
+        <form class="mt-3" style="    padding-top: 16px;   padding-bottom: 1px; ">
+            <div class="panel-body noTopBorder">
+                <div class="row">
+                    <div class="col-md-12 " id="step5">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-bordered table-striped table-layout-fixed">
+                                <thead>
+                                    <tr class="h-bg-navy-blue fontWhite">
+                                        <th>Market Profile</th>
+                                        <th ng-show="RoomCatShow" class="ng-hide">Room Category</th>
+                                        <th ng-show="InventoryCat" class="">Room Category</th>
+                                        <th>Meal Basis</th>
+                                        <th>Currency</th>
+                                        <th ng-show="ExcludeNationality" class="ng-hide">Exclude Nationality</th>
+                                        <th ng-show="AgentWiseRates" class="ng-hide">Agent Profile</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center FetchData">
+                                            <select data-actions-box="true" data-container="body"
+                                                data-live-search="true" id="cMarketProfileID"
+                                                ng-change="selectpicker('#cMarketProfileID');"
+                                                ng-model="marketProfileModel"
+                                                class="selectpicker form-control form-control-sm form_element rateoption required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
+                                                multiple="multiple">
+                                                <option value="" data-hidden="true">- Please Select -</option>
+                                                <!-- ngRepeat: x in aSupplierProfile -->
+                                                <option value="67" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">AFRICAN MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="31" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">APAC</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="68" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">CIS- RUSSIA MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="69" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">EUROPE MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="70" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">FAR EAST</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="71" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">GCC- MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="72" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">GCC-UAE&amp;SA</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="73" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">SUB-C MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                                <option value="74" ng-repeat="x in aSupplierProfile"
+                                                    class="ng-binding ng-scope">USA MARKET</option>
+                                                <!-- end ngRepeat: x in aSupplierProfile -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center FetchData ng-hide" ng-show="RoomCatShow">
+                                            <select data-actions-box="true" data-container="body" id="cRoomClassID"
+                                                data-live-search="true"
+                                                ng-change="selectpicker('#cRoomClassID');selectcategory();"
+                                                ng-model="RoomClassModel"
+                                                class="selectpicker form_element show-menu-arrow form-control form-control-sm rateoption required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
+                                                multiple="multiple">
+                                                <option value="" data-hidden="true">- Please Select -</option>
+                                                <!-- ngRepeat: x in aRoomClass -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center FetchData" ng-show="InventoryCat">
+                                            <select data-actions-box="true" data-container="body" id="cInventoryClassID"
+                                                data-live-search="true"
+                                                ng-change="selectpicker('#cInventoryClassID');selectMappedInventory();"
+                                                ng-model="InventoryClassModel"
+                                                class="selectpicker form_element show-menu-arrow form-control form-control-sm rateoption required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
+                                                multiple="multiple">
+                                                <option value="" data-hidden="true">- Please Select -</option>
+                                                <!-- ngRepeat: x in aRoomClassInventory -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center FetchData">
+                                            <select data-actions-box="true" data-container="body" id="cRoomBasisID"
+                                                data-live-search="true"
+                                                ng-change="selectpicker('#cRoomBasisID');selectmeals();"
+                                                ng-model="RoomBasisModel"
+                                                class="selectpicker form_element show-menu-arrow form-control form-control-sm rateoption required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
+                                                multiple="multiple">
+                                                <option value="" data-hidden="true">- Please Select -</option>
+                                                <!-- ngRepeat: x in aRoomBasis -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center">
+                                            <select data-actions-box="true" data-container="body" id="CurrencyID"
+                                                ng-model="currencyModel"
+                                                class="selectpicker show-menu-arrow form-control form-control-sm form_element required ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                <option value="? undefined:undefined ?"></option>
+                                                <!-- ngRepeat: x in aCurrencies -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center FetchData ng-hide" ng-show="ExcludeNationality">
+                                            <select data-container="body" data-actions-box="true"
+                                                data-live-search="true" id="cMarketExcludeNationality"
+                                                multiple="multiple" ng-model="ExcludeNationalityModel"
+                                                class="selectpicker form-control form-control-sm form_element ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty">
+                                                <option value="" data-hidden="true">- Please Select -</option>
+                                                <!-- ngRepeat: (key, value) in NationalityExclude -->
+                                            </select>
+
+                                        </td>
+                                        <td class="text-center FetchData ng-hide" ng-show="AgentWiseRates">
+                                            <select data-container="body" data-actions-box="true" id="agentProfileID"
+                                                data-live-search="true" ng-change="selectpicker('#agentProfileID');"
+                                                ng-model="AgentProfileModel"
+                                                class="selectpicker form_element form-control-sm show-menu-arrow form-control rateoption ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
+                                                multiple="multiple">
+                                                <option value="" data-hidden="true">- Please Select -</option>
+                                                <!-- ngRepeat: x in agentProfiles -->
+                                            </select>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row daily" style="display: none;">
+                    <div class="text-center btn_class col-md-12">
+                        <button type="button" class="btn w-xs btn-primary" ng-click="sumbitData('MWD');">Save</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <hr>
+
+      <div class="blue-box">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="labelTitle1">Enter Rate FOR</div>
+                        <span class="btn-group text-center m-b-md form-group mt-2" id="wizardControl3">
+                            <a ng-click="SetRateFor('WD_WE')"
+                                class="bordr_wh btn btn-sm btn-success fontsizeforgroup btn-primary" data-toggle="tab"
+                                data-value="WD_WE">WEEKDAYS/WEEKENDS</a>
+                            <a ng-click="SetRateFor('ALL')"
+                                class="bordr_wh btn btn-sm btn-default fontsizeforgroup enterratefor-group btn-default"
+                                data-toggle="tab" data-value="ALL">ALL</a>
+                        </span>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="labelTitle1" style="padding-left: 18px;">Date</label>
+                        <div class="input-daterange input-group date col-md-12 col-sm-12 col-xs-12 mt-1">
+                          <input type="text" class="form-control form-control-sm" id="voucherStartdatepicker" value=""
+                            name="check_in_from" class="form-control">
+              
+                          <span class="input-group-addon" style="height: 27px;">to</span>
+                          <input type="text" class="form-control form-control-sm" id="voucherEndDatepicker" value=""
+                            name="check_in_to" class="form-control">
+                        
+                        </div>
+                      </div>
+                      <div class="col-md-1">
+                        <div class="form-group labelTitle1" style="padding-top: 31px;">
+                            <div class="btn-group text-center m-b-md inline mobilepadding01" id="wizardControl1">
+                                <a class="btn btn-sm adddates" ng-click="create_clone()"><i id="addmore" class="fa fa-plus"></i></a>
+                                <a ng-show="RemoveClone" class="btn btn-sm btn-default removebtn ng-hide" ng-click="remove_clone()"><i name="removebtn" id="removebtn" class="fa fa-minus"></i></a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-md-1">
+                        <div class="labelTitle1"style="padding-top: 31px;">OR</div>
+                       
+                    </div>
+                      <div class="col-md-2">
+                        <div class="labelTitle1">Season</div>
+                        <select class="selectpicker mt-2 form-control form-control-sm show-menu-arrow bs-select-hidden"
+                        id="sel_branch" name="sel_branch" title="-Select-" onchange="getAgentList(this.value)"
+                       >
+                        <option class="bs-title-option" value=""></option>
+                     
+                   
+                
+                  
+                    </select>
+                       
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+        </form>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+<script>
+     // For Voucher Datepicker
+
+  const voucherStartdatepicker = flatpickr("#voucherStartdatepicker", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+
+
+  const voucherEndDatepicker = flatpickr("#voucherEndDatepicker", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+</script>
+
+</html>
