@@ -1173,7 +1173,14 @@ ul.mailbox-list li a {
   display: table;
   table-layout: fixed;
   width: 100%;
-  padding: 3px 10px 15px 10px;
+  padding: -1px 10px 15px 10px;
+}
+.lightBlue-box {
+  background: #3498DB;
+  min-height: 55px;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
 }
 .blue-box1 {
   background: #34495e;
@@ -1200,6 +1207,19 @@ ul.mailbox-list li a {
   padding: 17px 0px 0px 0px;
   font-family: Montserrat;
   font-weight: 400;
+  font-size: 12px;
+  color: #ffffff;
+}
+.labelTitle {
+  display: table-cell;
+  vertical-align: middle;
+  width: 208px;
+  height: 55px;
+  padding: 0px 0px 0px 15px;
+  position: relative;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: 700;
   font-size: 12px;
   color: #ffffff;
 }

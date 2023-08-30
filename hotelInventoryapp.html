@@ -47,9 +47,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto" id="sizing">
                     <li class="nav-item ">
-                        <a class="nav-link" href="#">Dashboard </a>
+                        <a class="nav-link" href="hotelInventoryDashboard.html">Dashboard </a>
                     </li>
 
                     <li class="nav-item active dropdown">
@@ -160,6 +160,14 @@
 
 
     <style>
+
+
+#sizing li a{
+    font-size: 12px;
+    color: #34495e;
+}
+
+
         .btn-primary {
             background-color: #34495e;
             border-color: #34495e;
@@ -192,9 +200,7 @@
     z-index: 1;
 }
 .new_tab_section .btn {
-    font-weight: 500 !important;
-    font-size: 12px;
-    text-transform: uppercase;
+ 
 }
 
 th{
@@ -214,6 +220,100 @@ th{
        #voucherEndDatepicker{
         background-color: white;
        }
+
+
+
+
+       .breadcrumb {
+        font-weight: 500 !important;
+    font-size: 12px;
+    text-transform: uppercase;
+  list-style: none;
+  padding-left: 12px;
+
+}
+
+
+
+
+
+.breadcrumb li {
+  display: inline-block;
+  margin-bottom: .2em;
+}
+
+.breadcrumb li a {
+    background-color: #34495e;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  max-height: 2em;
+  padding: .5em 1em .5em 1.5em;
+  position: relative;
+  text-decoration: none;
+  transition: .25s;
+}
+.breadcrumb li.active a {
+    background-color: #62cb31;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  max-height: 2em;
+  padding: .5em 1em .5em 1.5em;
+  position: relative;
+  text-decoration: none;
+  transition: .25s;
+}
+.breadcrumb li.active a::after {
+    border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-left: 1em solid #62cb31;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1em;
+  transition: .25s;
+  z-index: 1;
+}
+
+
+.breadcrumb li a:before {
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-left: 1em solid #fff;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1.25em;
+  z-index: 1;
+}
+
+.breadcrumb li a:after {
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+  border-left: 1em solid #34495e;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1em;
+  transition: .25s;
+  z-index: 1;
+}
+
+.breadcrumb li a:hover {
+    background-color: #3f5872;
+}
+.breadcrumb li.active a:hover {
+    background-color: #74d348;
+}
+.breadcrumb li.active a:hover:after {
+  border-left-color: #74d348;
+}
+
+
+.breadcrumb li a:hover:after {
+  border-left-color: #3f5872;
+}
 
 
     </style>
@@ -285,15 +385,12 @@ th{
 
         </div>
 
-        <div class="row marginbottomnew mt-3">
-            <div class="can-policy-box-04 form-group new_tab_section ">
-                <div class="btn-group btn-breadcrumb">
-                    <a class="btn btn-success">Rates</a>
-                    <a ng-href="#allocation/66914" class="btn btn-primary" href="#allocation/66914">Allocation</a>
-                    <a ng-href="#/sellpolicy/66914" class="btn btn-primary" href="#/sellpolicy/66914">Sell Policy</a>
-                    <a class="btn btn-success" style="display:none">Success</a>
-                </div>
-            </div>
+        <div class="row marginbottomnew mt-3 mb-2">
+            <ul class="breadcrumb">
+                <li class="active"><a  href="#">Rates</a></li>
+                <li><a href="#">Allocation</a></li>
+                <li><a href="#">Sell Policy</a></li>
+              </ul>
         </div>
         <!-- First Row-->
         <form style="border-top: 2px solid #62cb31;    margin-top: -19px;      padding-top: 12px;">
