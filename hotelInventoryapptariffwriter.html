@@ -144,7 +144,7 @@
                 <div class="col-md-12">
                     <h5 style="font-size:30px;font-weight: 700;    margin: 0px;
                     padding: 0px;
-                    text-transform: uppercase;">OLD ROOM RATES</h5>
+                    text-transform: uppercase;">TARIFF WRITER</h5>
                 </div>
 
 
@@ -160,11 +160,10 @@
 
 
     <style>
-
-#sizing li a{
-    font-size: 12px;
-    color: #34495e;
-}
+        #sizing li a {
+            font-size: 12px;
+            color: #34495e;
+        }
 
 
         .btn-primary {
@@ -172,20 +171,15 @@
             border-color: #34495e;
             color: #FFFFFF;
             font-size: 13px;
-        }
-        .btn-primary:hover{
-            background-color: #3f5872 !important;
-    border-color: #3f5872 !important;
-    color: #FFFFFF !important;
-    outline: none !important;
+
         }
 
-        #date1{
-        background-color: white;
-       }
-       #date2{
-        background-color: white;
-       }
+        .btn-primary:hover {
+            background-color: #3f5872 !important;
+            border-color: #3f5872 !important;
+            color: #FFFFFF !important;
+            outline: none !important;
+        }
 
         .ng-hide {
             display: none;
@@ -209,16 +203,248 @@
             z-index: 1;
         }
 
+        .new_tab_section .btn {}
+
         th {
             text-align: left !important;
             width: 200px;
             vertical-align: middle !important;
-            padding: 7px 8px !important;
+            text-transform: uppercase;
             font-size: 12px;
+
         }
 
         td {
             background-color: #FFFFFF !important;
+        }
+
+        #voucherStartdatepicker {
+            background-color: white;
+        }
+
+        #voucherEndDatepicker {
+            background-color: white;
+        }
+
+
+
+
+        .breadcrumb {
+            font-weight: 500 !important;
+            font-size: 12px;
+            text-transform: uppercase;
+            list-style: none;
+            padding-left: 12px;
+
+        }
+
+
+
+
+
+        .breadcrumb li {
+            display: inline-block;
+            margin-bottom: .2em;
+        }
+
+        .breadcrumb li a {
+            background-color: #34495e;
+            box-sizing: border-box;
+            color: #fff;
+            display: block;
+            max-height: 2em;
+            padding: .5em 1em .5em 1.5em;
+            position: relative;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .breadcrumb li.active a {
+            background-color: #62cb31;
+            box-sizing: border-box;
+            color: #fff;
+            display: block;
+            max-height: 2em;
+            padding: .5em 1em .5em 1.5em;
+            position: relative;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .breadcrumb li.active a::after {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #62cb31;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1em;
+            transition: .25s;
+            z-index: 1;
+        }
+
+
+        .breadcrumb li a:before {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #fff;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1.25em;
+            z-index: 1;
+        }
+
+        .breadcrumb li a:after {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #34495e;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1em;
+            transition: .25s;
+            z-index: 1;
+        }
+
+        .breadcrumb li a:hover {
+            background-color: #3f5872;
+        }
+
+        .breadcrumb li.active a:hover {
+            background-color: #74d348;
+        }
+
+        .breadcrumb li.active a:hover:after {
+            border-left-color: #74d348;
+        }
+
+
+        .breadcrumb li a:hover:after {
+            border-left-color: #3f5872;
+        }
+
+        .gapBigMe {
+            padding: 0px 10px;
+        }
+
+        .suppliment-box-01 {
+            margin: 0px 0px 20px 0px;
+            padding: 0px 15px;
+            width: 16%;
+            float: left;
+        }
+
+        .manage-supp-box-01 {
+            width: 45%;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .manage-supp-box-02 {
+            width: 10%;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .manage-supp-box-03 {
+            width: 45%;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .suppliment-box-05 {
+            margin: 0px 0px 20px 0px;
+            padding: 0px 15px;
+            width: 15%;
+            float: left;
+        }
+
+        .suppliment-box-02 {
+            margin: 0px 0px 20px 0px;
+            padding: 0px 15px;
+            width: 35%;
+            float: left;
+        }
+
+        .suppliment-box-03 {
+            margin: 0px 0px 20px 0px;
+            padding: 0px 15px;
+            width: 10%;
+            float: left;
+        }
+
+        label {
+            font-weight: 400;
+        }
+
+        .bg-green {
+            background-color: #E0EFD8;
+        }
+
+        .table-bordered {
+            border: 1px solid #ddd;
+        }
+
+        thead {
+            text-transform: uppercase;
+            font-family: Roboto;
+            font-weight: 900;
+            font-size: 13px;
+            color: #5d6974;
+        }
+
+        .table label,
+        .table {
+            font-family: "MONTSERRAT";
+            font-size: 11px !important;
+        }
+
+        .table-striped>tbody>tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .table>tbody>tr>td {
+            font-size: 9pt !important;
+            vertical-align: middle;
+            font-family: "Arial";
+            padding: 8px;
+            text-transform: capitalize !important;
+            text-align: left !important;
+
+
+
+        }
+
+        .form-control:disabled,
+        .form-control[readonly] {
+            background-color: white;
+            opacity: 1;
+            cursor: not-allowed;
+        }
+
+        .upload-btn {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 17px;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            margin: 0px 0px 0px 0px;
+            padding: 6px 8px;
+            background: #3498db;
+            border-radius: 3px;
+            border: #3498db solid 1px;
+            text-align: center;
+        }
+
+        .upload-btn:hover,
+        .upload-btn:focus {
+            background: #4ea5e0;
+            color: #ffffff !important;
+            border-radius: 3px;
+            border: #4ea5e0 solid 1px;
         }
     </style>
 
@@ -227,20 +453,26 @@
     <div class="container-fluid pt-0 p-4" id="content-pad" style="padding-left:30px !important;">
 
 
-        <div class="blue-box1 mt-2">
-
+        <div class="blue-box1 mt-3">
             <div class="row">
+                <div class="col-md-3 mt-2">
+                    <div class="labelTitle2">TARIFF WRITER FOR 1234 TESTING
 
-                <div class="labelTitle3 ng-binding" style="    padding-left: 23px;"> Old Room Rates For Alaaddin Hotel
+                    </div>
                 </div>
 
+
             </div>
+
+
         </div>
 
-        <form>
+
+        <form style="padding-top: 12px;">
+
 
             <div class="panel-body">
-                <div class="row mt-2">
+                <div class="row">
                     <div class="col-lg-2 col-md-4 col-sm-4  col-xs-12 form-group">
                         <label>Hotels</label>
                         <span>
@@ -249,14 +481,30 @@
                                 data-container="body" ng-change="getHotelData()" ng-model="hotel"
                                 data-live-search="true">
                                 <!-- ngRepeat: x in hotels -->
-                                <option value="67301" ng-repeat="x in hotels" class="ng-binding ng-scope">Alaaddin Hotel
+                                <option value="46361" ng-repeat="x in hotels" class="ng-binding ng-scope">Monkey Mia
+                                    Dolphin Resort</option><!-- end ngRepeat: x in hotels -->
+                                <option value="46562" ng-repeat="x in hotels" class="ng-binding ng-scope">Divarius Hotel
+                                    Residence</option><!-- end ngRepeat: x in hotels -->
+                                <option value="49150" ng-repeat="x in hotels" class="ng-binding ng-scope">HOTEL DU MEE
                                 </option><!-- end ngRepeat: x in hotels -->
-                                <option value="67069" ng-repeat="x in hotels" class="ng-binding ng-scope">Alfa Hotel
+                                <option value="48209" ng-repeat="x in hotels" class="ng-binding ng-scope">La Ferme Des
+                                    Barmonts</option><!-- end ngRepeat: x in hotels -->
+                                <option value="23074" ng-repeat="x in hotels" class="ng-binding ng-scope">Tayrona
                                 </option><!-- end ngRepeat: x in hotels -->
-                                <option value="67123" ng-repeat="x in hotels" class="ng-binding ng-scope">All Seasons
-                                    Hotel</option><!-- end ngRepeat: x in hotels -->
-                                <option value="66914" ng-repeat="x in hotels" class="ng-binding ng-scope">Ambassador
-                                    Hotel</option><!-- end ngRepeat: x in hotels -->
+                                <option value="23077" ng-repeat="x in hotels" class="ng-binding ng-scope">Golden Tulip
+                                    Miedzyzdroje Residence</option><!-- end ngRepeat: x in hotels -->
+                                <option value="61835" ng-repeat="x in hotels" class="ng-binding ng-scope">Villa Des
+                                    Impressionnistes</option><!-- end ngRepeat: x in hotels -->
+                                <option value="55427" ng-repeat="x in hotels" class="ng-binding ng-scope">Blue Sea Hotel
+                                </option><!-- end ngRepeat: x in hotels -->
+                                <option value="55429" ng-repeat="x in hotels" class="ng-binding ng-scope">Marathon Beach
+                                </option><!-- end ngRepeat: x in hotels -->
+                                <option value="55413" ng-repeat="x in hotels" class="ng-binding ng-scope">Des Horlogers
+                                </option><!-- end ngRepeat: x in hotels -->
+                                <option value="55425" ng-repeat="x in hotels" class="ng-binding ng-scope">The Margi
+                                </option><!-- end ngRepeat: x in hotels -->
+                                <option value="55504" ng-repeat="x in hotels" class="ng-binding ng-scope">Pantokrator
+                                </option><!-- end ngRepeat: x in hotels -->
                                 <option value="38216" ng-repeat="x in hotels" class="ng-binding ng-scope">1234 Testing
                                 </option><!-- end ngRepeat: x in hotels -->
                                 <option value="38278" ng-repeat="x in hotels" class="ng-binding ng-scope">5footway.Inn
@@ -823,74 +1071,22 @@
                                     Capsule Hostel</option><!-- end ngRepeat: x in hotels -->
                                 <option value="38636" ng-repeat="x in hotels" class="ng-binding ng-scope">York</option>
                                 <!-- end ngRepeat: x in hotels -->
-                                <option value="73174" ng-repeat="x in hotels" class="ng-binding ng-scope">Pune Hotel
+                                <option value="73179" ng-repeat="x in hotels" class="ng-binding ng-scope">Travel Test
                                 </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73152" ng-repeat="x in hotels" class="ng-binding ng-scope">NagpurHotel1
+                                <option value="31754" ng-repeat="x in hotels" class="ng-binding ng-scope">Hipotels
+                                    Natura Palace</option><!-- end ngRepeat: x in hotels -->
+                                <option value="31769" ng-repeat="x in hotels" class="ng-binding ng-scope">Las Marinas
                                 </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73156" ng-repeat="x in hotels" class="ng-binding ng-scope">NagpurHotel2
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73157" ng-repeat="x in hotels" class="ng-binding ng-scope">NagpurHotel3
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73169" ng-repeat="x in hotels" class="ng-binding ng-scope">NagpurTest
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73165" ng-repeat="x in hotels" class="ng-binding ng-scope">No_of_Night
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73175" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    Nagpur_Fit_Hotel</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73184" ng-repeat="x in hotels" class="ng-binding ng-scope">Burj Arab
+                                <option value="31746" ng-repeat="x in hotels" class="ng-binding ng-scope">Starpoints
+                                    Hotel Kuala Lumpur</option><!-- end ngRepeat: x in hotels -->
+                                <option value="47199" ng-repeat="x in hotels" class="ng-binding ng-scope">Vida Downtown
                                     Dubai</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73185" ng-repeat="x in hotels" class="ng-binding ng-scope">Al Burj
-                                    Khalifa</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73158" ng-repeat="x in hotels" class="ng-binding ng-scope">Gokul Hotel
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73180" ng-repeat="x in hotels" class="ng-binding ng-scope">Hotel Test
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73160" ng-repeat="x in hotels" class="ng-binding ng-scope">Hotel_AEDTest
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73189" ng-repeat="x in hotels" class="ng-binding ng-scope">Hotel_Check
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73168" ng-repeat="x in hotels" class="ng-binding ng-scope">Hotel_Client
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73167" ng-repeat="x in hotels" class="ng-binding ng-scope">Hotel_Test1
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73190" ng-repeat="x in hotels" class="ng-binding ng-scope">Hotel_Test_(Do
-                                    Not Use)</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73181" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    Multiple_Supplier</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73145" ng-repeat="x in hotels" class="ng-binding ng-scope">NidaHotel1
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73146" ng-repeat="x in hotels" class="ng-binding ng-scope">NidaHotel2
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73147" ng-repeat="x in hotels" class="ng-binding ng-scope">NidaHotel3
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73149" ng-repeat="x in hotels" class="ng-binding ng-scope">SayaliHotel2
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73177" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    SayaliHotelMumbai_New2</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73150" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    SayaliHotelNew_1</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73151" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    SayaliHotelNew_2</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73164" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    SayaliLocalHotel</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73173" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    SayaliMumbaiHotelTest_New</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73172" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    SayaliMumbaiTestHotel</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73170" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    SayaliTESTHotel</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73171" ng-repeat="x in hotels" class="ng-binding ng-scope">
-                                    SayaliTestHotel_2</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73127" ng-repeat="x in hotels" class="ng-binding ng-scope">Rate_gain_Test
-                                </option><!-- end ngRepeat: x in hotels -->
-                                <option value="73185" ng-repeat="x in hotels" class="ng-binding ng-scope">Al Burj
-                                    Khalifa</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73184" ng-repeat="x in hotels" class="ng-binding ng-scope">Burj Arab
-                                    Dubai</option><!-- end ngRepeat: x in hotels -->
-                                <option value="73201" ng-repeat="x in hotels" class="ng-binding ng-scope">Aqua</option>
-                                <!-- end ngRepeat: x in hotels -->
+                                <option value="31747" ng-repeat="x in hotels" class="ng-binding ng-scope">Villas
+                                    Lanzarote Paradise</option><!-- end ngRepeat: x in hotels -->
+                                <option value="73183" ng-repeat="x in hotels" class="ng-binding ng-scope">address
+                                    downtown test</option><!-- end ngRepeat: x in hotels -->
                             </select>
-                        
+                          
                         </span>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-4  col-xs-12 form-group ng-hide"
@@ -934,7 +1130,7 @@
                                 <option value="74" ng-repeat="x in aSupplierProfile" class="ng-binding ng-scope">USA
                                     MARKET</option><!-- end ngRepeat: x in aSupplierProfile -->
                             </select>
-                          
+                         
                         </span>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-4  col-xs-12 form-group">
@@ -971,7 +1167,7 @@
                                 <option value="33" ng-repeat="x in aRoomBasis" class="ng-binding ng-scope">Room Only.
                                 </option><!-- end ngRepeat: x in aRoomBasis -->
                             </select>
-                        
+                           
                         </span>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-4  col-xs-12 form-group ng-hide" ng-show="AgentWiseRates">
@@ -983,21 +1179,21 @@
                                 <option value="" data-hidden="true">- Please Select -</option>
                                 <!-- ngRepeat: x in agentProfiles -->
                             </select>
-                          
+                        
                         </span>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12 form-group">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 form-group">
                         <label>Date </label>
                         <div class="row">
                             <div class="col-md-12 col-lg-12 col-sm-12 MultiplePeriodClone" id="step12">
                                 <div id="datePickPeriod_1"
                                     class="input-group date input-daterange CloneInputMargin CloneElement">
-                                    <input id="date1" type="text" name="from_date[1]" ng-model="date.from"
+                                    <input id="from" type="text" name="from_date[1]" ng-model="date.from"
                                         class="form-control date_range_input date_range_picker_from ng-pristine ng-untouched ng-valid ng-not-empty">
                                     <span class="input-group-addon">To</span>
-                                    <input id="date2" type="text" name="to_date[1]" ng-model="date.to"
+                                    <input id="to" type="text" name="to_date[1]" ng-model="date.to"
                                         class="form-control date_range_input date_range_picker_to ng-pristine ng-untouched ng-valid ng-not-empty">
-                                    <span  class="input-group-addon" id="dTrashBtn">
+                                    <span class="input-group-addon" id="ftrashbtn">
                                         <i class="fa fa-trash"></i>
                                     </span>
                                 </div>
@@ -1066,7 +1262,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-2">
+                <div class="row">
                     <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff">
                         <div class="checkbox checkbox-success checkbox-inline">
                             <input id="show_tariff_rate" name="show_tariff_rate" ng-model="module.tariff_rate"
@@ -1103,7 +1299,7 @@
                             <label for="show_min_stay_rate">Min Stay</label>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff ng-hide"
+                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff"
                         ng-show="TariffModuleModuleShow">
                         <div class="checkbox checkbox-success checkbox-inline">
                             <input id="show_sale" name="show_sale" ng-model="module.sale" ng-true-value="'YES'"
@@ -1113,7 +1309,7 @@
                             <label for="show_sale">Sell Policy</label>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff ng-hide"
+                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff"
                         ng-show="TariffModuleModuleShow &amp;&amp; !showCheckinType">
                         <div class="checkbox checkbox-success checkbox-inline">
                             <input id="show_child_extrabed_rates" name="show_child_extrabed_rates"
@@ -1123,7 +1319,7 @@
                             <label for="show_child_extrabed_rates">Child Extrabed Rates</label>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff ng-hide"
+                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff"
                         ng-show="TariffModuleModuleShow">
                         <div class="checkbox checkbox-success checkbox-inline">
                             <input id="show_cancel_policy" name="show_cancel_policy" ng-model="module.cancel_policy"
@@ -1133,7 +1329,7 @@
                             <label for="show_cancel_policy">Cancellation Policy</label>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff ng-hide"
+                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff"
                         ng-show="TariffModuleModuleShow">
                         <div class="checkbox checkbox-success checkbox-inline">
                             <input id="show_supplement" name="show_supplement" ng-model="module.supplement"
@@ -1143,7 +1339,7 @@
                             <label for="show_supplement">Supplements</label>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff ng-hide"
+                    <div class="col-md-2 col-sm-4  col-xs-12 form-group customWidthTariff"
                         ng-show="TariffModuleModuleShow">
                         <div class="checkbox checkbox-success checkbox-inline">
                             <input id="show_offer" name="show_offer" ng-model="module.offer" ng-true-value="'YES'"
@@ -1157,36 +1353,79 @@
                 <div class="row">
                     <div class=" col-md-1 col-sm-4">
                         <label></label><br>
-                        <a class="btn btn-sm btn-primary btn-sm" ng-click="searchTariff();"><b>Search</b></a>
+                        <a class="btn btn-sm btn-primary" ng-click="searchTariff();"><b>Search</b></a>
                     </div>
                 </div>
             </div>
+
+
+
+
         </form>
 
     </div>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+	// ]]>
+    </script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 <script>
-    // For Datepicker
+    // For Voucher Datepicker
 
-    const date1 = flatpickr("#date1", {
+    const from = flatpickr("#from", {
         dateFormat: "Y-m-d",
         minDate: "today"
     });
 
 
-    const date2 = flatpickr("#date2", {
+    const to = flatpickr("#to", {
         dateFormat: "Y-m-d",
         minDate: "today"
     });
-    const dTrashBtn = document.getElementById("dTrashBtn");
-    dTrashBtn.addEventListener("click", function () {
-        date1.clear();
-        date2.clear();
-  });
+    const ftrashbtn = document.getElementById("ftrashbtn");
+    ftrashbtn.addEventListener("click", function () {
+        from.clear();
+        to.clear();
+
+    });
 </script>
 
 </html>

@@ -111,10 +111,10 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contracts</a>
+                        <a class="nav-link" href="hotelInventoryappContracts.html">Contracts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tariff Writer</a>
+                        <a class="nav-link" href="hotelInventoryapptariffwriter.html">Tariff Writer</a>
                     </li>
 
                 </ul>
@@ -132,7 +132,7 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+        </nav> 
     </section>
 
 
@@ -258,7 +258,9 @@
             text-decoration: none;
             transition: .25s;
         }
-
+        input[type="text"]{
+            background-color: white !important;
+        }
         .breadcrumb li.active a {
             background-color: #62cb31;
             box-sizing: border-box;
@@ -605,14 +607,14 @@
                         <div class=" MultiplePeriodClone">
                             <div id="datePickPeriod_1"
                                 class="input-group date input-daterange CloneInputMargin CloneElement">
-                                <input type="text" value="" name="from_date[1]" ng-model="from_date" id="date1"
+                                <input type="text" value="" name="from_date[1]" ng-model="from_date" id="from"
                                     class="form-control date_range_input date_range_picker_from ng-pristine ng-untouched ng-valid ng-empty"
                                     date="dd-MM-yyyy">
                                 <span class="input-group-addon">To</span>
-                                <input type="text" value="" name="to_date[1]" ng-model="to_date" id="date2"
+                                <input type="text" value="" name="to_date[1]" ng-model="to_date" id="to"
                                     class="form-control date_range_input date_range_picker_to ng-pristine ng-untouched ng-valid ng-empty"
                                     date="dd-MM-yyyy">
-                                <span id="vtrashbtn"
+                                <span id="ftrashbtn"
                                     class="input-group-addon">
                                     <i class="fa fa-trash"></i>
                                 </span>
@@ -1955,15 +1957,21 @@
 <script>
     // For Voucher Datepicker
 
-    const voucherStartdatepicker = flatpickr("#voucherStartdatepicker", {
+    const from = flatpickr("#from", {
         dateFormat: "Y-m-d",
         minDate: "today"
     });
 
 
-    const voucherEndDatepicker = flatpickr("#voucherEndDatepicker", {
+    const to = flatpickr("#to", {
         dateFormat: "Y-m-d",
         minDate: "today"
+    });
+    const ftrashbtn = document.getElementById("ftrashbtn");
+    ftrashbtn.addEventListener("click", function () {
+        from.clear();
+        to.clear();
+
     });
 </script>
 
