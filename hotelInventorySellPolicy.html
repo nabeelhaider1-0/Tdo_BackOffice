@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body>
+
+    <div class="color-line">
+    </div>
+
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;">
+            <a class="navbar-brand" href="#" style="padding-left: 23px; background-color:#f7f9fa">
+                <img src="logo.png" alt="Logo" height="50" style="
+                width: 100px;
+            ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto" id="sizing">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="hotelInventoryDashboard.html">Dashboard </a>
+                    </li>
+
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rates<span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="hotelInventoryapp.html">Manage Rates</a>
+                            <a class="dropdown-item" href="hotelInventorydeleterates.html">Delete Rates</a>
+                            <a class="dropdown-item" href="hotelInventoryoldroomrates.html">Old Room Rates</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappbookingDetails.html">Bookings</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Masters
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Hotel Setting</a>
+                            <a class="dropdown-item" href="#">Room Category</a>
+                            <a class="dropdown-item" href="#">Map Hotel Rooms</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Policies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappSupplment.html">Supplements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappManageSeason.html">Manage Seasons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappExtrabeds.html">Extra-bed</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Offer
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Search</a>
+                            <a class="dropdown-item" href="#">Create</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Arivals</a>
+                            <a class="dropdown-item" href="#">Expiring Rates</a>
+                            <a class="dropdown-item" href="#">Recent Changes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contracts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tariff Writer</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="user.png" alt="Account Logo" height="45" style="    width: 41px;
+                            padding: 8px;
+                            border: 1px solid #eaebec;
+                            border-radius: 50%;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-12">
+                    <h5 style="font-size:30px;font-weight: 700;    margin: 0px;
+                    padding: 0px;
+                    text-transform: uppercase;">SELL POLICY</h5>
+                </div>
+
+
+
+
+
+
+
+        </header>
+
+
+    </section>
+
+
+    <style>
+        #sizing li a {
+            font-size: 12px;
+            color: #34495e;
+        }
+
+
+        .btn-primary {
+            background-color: #34495e;
+            border-color: #34495e;
+            color: #FFFFFF;
+            font-size: 13px;
+
+        }
+
+        .btn-primary:hover {
+            background-color: #3f5872 !important;
+            border-color: #3f5872 !important;
+            color: #FFFFFF !important;
+            outline: none !important;
+        }
+
+        .ng-hide {
+            display: none;
+        }
+
+        .h-bg-navy-blue {
+            background: #34495e;
+        }
+
+        .adddates {
+            background: #74D348;
+            color: white;
+        }
+
+        .adddates:hover {
+            background: #74D348;
+        }
+
+        .bootstrap-select.show-menu-arrow.open>.dropdown-toggle,
+        .bootstrap-select.show-menu-arrow.show>.dropdown-toggle {
+            z-index: 1;
+        }
+
+        .new_tab_section .btn {}
+
+        th {
+            text-align: left !important;
+            width: 200px;
+            vertical-align: middle !important;
+            text-transform: uppercase;
+            font-size: 12px;
+
+        }
+
+        td {
+            background-color: #FFFFFF !important;
+        }
+
+        #voucherStartdatepicker {
+            background-color: white;
+        }
+
+        #voucherEndDatepicker {
+            background-color: white;
+        }
+
+
+
+
+        .breadcrumb {
+            font-weight: 500 !important;
+            font-size: 12px;
+            text-transform: uppercase;
+            list-style: none;
+            padding-left: 12px;
+
+        }
+
+
+
+
+
+        .breadcrumb li {
+            display: inline-block;
+            margin-bottom: .2em;
+        }
+
+        .breadcrumb li a {
+            background-color: #34495e;
+            box-sizing: border-box;
+            color: #fff;
+            display: block;
+            max-height: 2em;
+            padding: .5em 1em .5em 1.5em;
+            position: relative;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .breadcrumb li.active a {
+            background-color: #62cb31;
+            box-sizing: border-box;
+            color: #fff;
+            display: block;
+            max-height: 2em;
+            padding: .5em 1em .5em 1.5em;
+            position: relative;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .breadcrumb li.active a::after {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #62cb31;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1em;
+            transition: .25s;
+            z-index: 1;
+        }
+
+
+        .breadcrumb li a:before {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #fff;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1.25em;
+            z-index: 1;
+        }
+
+        .breadcrumb li a:after {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #34495e;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1em;
+            transition: .25s;
+            z-index: 1;
+        }
+
+        .breadcrumb li a:hover {
+            background-color: #3f5872;
+        }
+
+        .breadcrumb li.active a:hover {
+            background-color: #74d348;
+        }
+
+        .breadcrumb li.active a:hover:after {
+            border-left-color: #74d348;
+        }
+
+
+        .breadcrumb li a:hover:after {
+            border-left-color: #3f5872;
+        }
+
+        .stats h4,
+        h5,
+        h6 {
+            margin: 5px 0;
+        }
+
+        h5,
+        .h5 {
+            font-size: 14px;
+        }
+
+        h4,
+        .h4,
+        h5,
+        .h5,
+        h6,
+        .h6 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+        }
+
+        .hpanel .alert {
+            margin-bottom: 0;
+            border-radius: 0;
+            border: 1px solid #e4e5e7 !important;
+            border-bottom: none;
+        }
+
+        .alert-danger {
+            color: #a94442 !important;
+            background-color: #f2dede !important;
+            border-color: #ebccd1 !important;
+        }
+
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .rateUnik {
+            padding-right: 15px;
+            padding-left: 15px;
+            float: left;
+        }
+
+        .checkbox.checkbox-inline {
+            margin-top: 0;
+        }
+
+        .uniqhpanel .checkbox-inline {
+            margin-right: 10px;
+        }
+
+        .checkbox {
+            padding-left: 20px;
+        }
+
+        .radio-inline,
+        .checkbox-inline {
+            display: inline-block;
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        .form-group label {
+    font-size: 13px!important;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #6e717f;
+}
+.label_week {
+    margin-top: 4px;
+    vertical-align: top;
+}
+.btn-group, .btn-group-vertical {
+    padding-bottom: 1px;
+}
+
+.gapMeTop {
+    margin-top: 6px;
+}
+    </style>
+
+    <!--    Panel Body        -->
+
+    <div class="container-fluid pt-0 p-4" id="content-pad" style="padding-left:30px !important;">
+
+
+        <div class="blue-box1 mt-3">
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <div class="labelTitle2">MANAGE INVENTORY ALLOCATION AND RELEASE PERIOD FOR</div>
+                </div>
+                <div class="col-md-4">
+                    <select class="selectpicker mt-2 form-control form-control-sm show-menu-arrow bs-select-hidden"
+                        id="sel_branch" name="sel_branch" title="-Select-" onchange="getAgentList(this.value)"
+                        data-live-search="true">
+                        <option class="bs-title-option" value=""></option>
+                        <option label="Mumbai Branch" value="1">Mumbai Branch</option>
+                        <option label="UAE Branch" value="2">UAE Branch</option>
+                        <option label="UK Head Office" value="3">UK Head Office</option>
+                        <option label="Head Office" value="4">Head Office</option>
+                        <option label="Dubai GSA" value="5">Dubai GSA</option>
+                        <option label="London Branch" value="6">London Branch</option>
+                        <option label="Saudi Branch" value="7">Saudi Branch</option>
+                        <option label="Dubai V3 Wh" value="8">Dubai V3 Wh</option>
+                        <option label="Pune Branch" value="9">Pune Branch</option>
+                        <option label="India - GSA" value="10">India - GSA</option>
+                        <option label="Test Branch1" value="11">Test Branch1</option>
+                        <option label="Test Branch" value="13">Test Branch</option>
+                        <option label="Testffff" value="14">Testffff</option>
+                        <option label="FRANCHISE BRANCH" value="15">FRANCHISE BRANCH</option>
+                        <option label="Jcholidays" value="16">Jcholidays</option>
+                        <option label="Demo" value="17">Demo</option>
+                        <option label="malaysia" value="19">malaysia</option>
+                        <option label="GSA Iraq" value="20">GSA Iraq</option>
+                        <option label="Chennai" value="21">Chennai</option>
+                        <option label="Bangkok Branch" value="22">Bangkok Branch</option>
+                        <option label="suhas_branch" value="23">suhas_branch</option>
+                        <option label="Istanbul" value="24">Istanbul</option>
+                        <option label="hyderabad" value="25">hyderabad</option>
+                        <option label="hyderabad_suhas" value="26">hyderabad_suhas</option>
+                        <option label="branch_suhas" value="27">branch_suhas</option>
+                        <option label="New Joint Branch" value="28">New Joint Branch</option>
+                        <option label="Bahrain Branch" value="29">Bahrain Branch</option>
+                        <option label="Branch Bahrain" value="30">Branch Bahrain</option>
+                        <option label="testdddd" value="31">testdddd</option>
+                        <option label="Demo" value="32">Demo</option>
+                        <option label="HotelConfirm" value="33">HotelConfirm</option>
+                        <option label="HotelConfirm_Live" value="34">HotelConfirm_Live</option>
+                        <option label="GSA Branch" value="37">GSA Branch</option>
+                        <option label="Testpp" value="38">Testpp</option>
+                        <option label="Bolton Branch" value="41">Bolton Branch</option>
+                        <option label="World Avenue" value="42">World Avenue</option>
+                        <option label="TEST_BRANCH_A" value="43">TEST_BRANCH_A</option>
+                        <option label="TEST_BRANCH_JV_A" value="44">TEST_BRANCH_JV_A</option>
+                        <option label="TEST_BRANCH_JV_C" value="45">TEST_BRANCH_JV_C</option>
+                        <option label="world_avenue_malesia" value="46">world_avenue_malesia</option>
+                        <option label="World Avenues Malaysia" value="47">World Avenues Malaysia</option>
+                        <option label="test_branch_jv" value="48">test_branch_jv</option>
+                        <option label="1 Booking" value="49">1 Booking</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row marginbottomnew mt-3 mb-2">
+            <ul class="breadcrumb">
+                <li><a href="hotelInventoryapp.html">Rates</a></li>
+                <li><a href="hotelInventoryappAllocation.html">Allocation</a></li>
+                <li class="active"><a href="hotelInventorySellPolicy.html">Sell Policy</a></li>
+            </ul>
+        </div>
+        <!-- First Row-->
+        <form style="border-top: 2px solid #62cb31;    margin-top: -19px;      padding-top: 12px;">
+            <div class="panel-body form-group">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                        <div class="col-md-12 NoPaddingAll text-left"><label class="novisible">&nbsp;</label></div>
+                        <div class="input-group col-md-12 col-xs-12">
+                            <div class="btn-group text-center m-b-md">
+                                <a class="btn btn-sm btn-primary ng-pristine ng-untouched ng-valid ng-not-empty"
+                                    ng-click="SetActionType('update')" id="Actiontype_update" ng-model="ActionType"
+                                    data-toggle="tab">Add/Update Sell Policy</a>
+                                <a class="btn btn-sm ng-pristine ng-untouched ng-valid ng-not-empty"
+                                    ng-click="SetActionType('view')" id="Actiontype_view" ng-model="ActionType"
+                                    data-toggle="tab">View Sell Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 form-group" ng-show="InventoryModelMultiple">
+                        <label>Inventory Room Category</label>
+                        <select data-container="body" data-actions-box="true" data-live-search="true"
+                            multiple="multiple" id="inventory" ng-change="setInventory();"
+                            class="selectpicker form-control form-control-sm form_element required inventoryoption ng-pristine ng-untouched ng-valid ng-empty bs-select-hidden"
+                            ng-model="InventoryModel">
+                            <!-- ngRepeat: x in Inventory -->
+                            <option value="26" ng-repeat="x in Inventory" class="ng-binding ng-scope">Classic</option>
+                            <!-- end ngRepeat: x in Inventory -->
+                        </select>
+                       
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 form-group ng-hide" ng-show="!InventoryModelMultiple">
+                        <label>Inventory Room Category</label>
+                        <select ng-options="x.inventory_room_class for x in Inventory track by x.inventory_class_id"
+                            ng-change="setInventory();" data-container="body" data-max-options="1"
+                            data-live-search="true" id="inventorysingle"
+                            class="selectpicker form-control form-control-sm form_element required inventoryoptionsingle ng-pristine ng-untouched ng-valid ng-not-empty bs-select-hidden"
+                            ng-model="InventoryModelSingle">
+                            <option value="" data-hidden="true" class="" selected="selected">Select Inventory Room
+                                Category</option>
+                            <option label="Classic" value="26">Classic</option>
+                        </select>
+                      
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 form-group" ng-show="InventoryModelMultiple">
+                        <label>Room Category</label>
+                        <select data-actions-box="true" data-live-search="true" multiple="multiple" id="room_category"
+                            class="selectpicker form-control form-control-sm form_element ng-pristine ng-untouched ng-valid ng-empty bs-select-hidden"
+                            ng-model="roomCategory">
+                            <option value="" data-hidden="true">Select Room Category</option>
+                            <!-- ngRepeat: (inventoryLabel,inventoryContent) in roomClassCategory -->
+                        </select>
+                     
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 form-group ng-hide" ng-show="!InventoryModelMultiple">
+                        <label>Room Category</label>
+                        <select ng-options="x.room_category_name for x in roomClassCategory track by x.room_class_id"
+                            ng-change="FetchSellPolicyCalender();" data-container="body" data-max-options="1"
+                            data-live-search="true" id="room_category_single"
+                            class="selectpicker form-control form-control-sm form_element ng-pristine ng-untouched ng-valid ng-not-empty bs-select-hidden"
+                            ng-model="roomCategorySingle">
+                            <option value="" class="" selected="selected">Select Room Category</option>
+                        </select>
+                     
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 form-group" ng-show="ActionUpdateDisp">
+                        <label>Enter Rate For</label><br>
+                        <div class="btn-group text-center m-b-md lpt_cls">
+                            <a class="btn btn-sm btn-success ng-pristine ng-untouched ng-valid ng-empty"
+                                ng-click="validity($event,'WEWD')" data-toggle="tab" ng-model="Days">Weekday/Weekend</a>
+                            <a class="btn btn-sm btn-default ng-pristine ng-untouched ng-valid ng-empty"
+                                ng-click="validity($event,'All')" data-toggle="tab" ng-model="Hours">All</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 form-group rateUnik ng-hide"
+                        ng-show="excelUploadWithRateType">
+                        <label>Rate Type</label><br>
+                        <select
+                            class="selectpicker form_element show-menu-arrow form-control form-control-sm required ng-pristine ng-untouched ng-valid ng-empty bs-select-hidden"
+                            ng-model="roomRatesType" data-container="body" data-live-search="true">
+                            <option value="? undefined:undefined ?"></option>
+                            <!-- ngRepeat: rateType in RateTypeForRatesInsert -->
+                            <option ng-repeat="rateType in RateTypeForRatesInsert" value="checkin"
+                                class="ng-binding ng-scope">Check In</option>
+                            <!-- end ngRepeat: rateType in RateTypeForRatesInsert -->
+                            <option ng-repeat="rateType in RateTypeForRatesInsert" value="stay"
+                                class="ng-binding ng-scope">Stay</option>
+                            <!-- end ngRepeat: rateType in RateTypeForRatesInsert -->
+                        </select>
+                       
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-9 form-group MultipleSeasonHideDates"
+                        ng-show="ActionUpdateDisp">
+                        <label>Validity Period From</label>
+                        <div class=" MultiplePeriodClone">
+                            <div id="datePickPeriod_1"
+                                class="input-group date input-daterange CloneInputMargin CloneElement">
+                                <input type="text" value="" name="from_date[1]" ng-model="from_date" id="date1"
+                                    class="form-control date_range_input date_range_picker_from ng-pristine ng-untouched ng-valid ng-empty"
+                                    date="dd-MM-yyyy">
+                                <span class="input-group-addon">To</span>
+                                <input type="text" value="" name="to_date[1]" ng-model="to_date" id="date2"
+                                    class="form-control date_range_input date_range_picker_to ng-pristine ng-untouched ng-valid ng-empty"
+                                    date="dd-MM-yyyy">
+                                <span id="vtrashbtn"
+                                    class="input-group-addon">
+                                    <i class="fa fa-trash"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-3 MultipleSeasonHideDates" ng-show="ActionUpdateDisp">
+                        <label for="">&nbsp;</label><br>
+                        <a class="btn btn-sm adddates" ng-click="create_clone()"><i id="addmore"
+                                class="fa fa-plus"></i></a>
+                        <a ng-show="RemoveClone" class="btn btn-sm btn-default removebtn ng-hide"
+                            ng-click="remove_clone()"><i name="removebtn" id="removebtn" class="fa fa-minus"></i></a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12 MultipleSeasonDates" style="display:none"
+                        ng-show="ActionUpdateDisp">
+                        <label>Validity Period Season</label>
+                        <div id="datePeriod_0" class="input-group date input-daterange CloneInputMargin CloneElement">
+                            <input type="text" value="period_from" name="multi_from_date[0]" ng-model="multi_from_date"
+                                class="form-control date_range_input date_range_picker_from ng-pristine ng-untouched ng-valid ng-empty"
+                                date="dd-MM-yyyy">
+                            <span class="input-group-addon">To</span>
+                            <input type="text" value="period_to" name="multi_to_date[0]" ng-model="multi_to_date"
+                                class="form-control date_range_input date_range_picker_to ng-pristine ng-untouched ng-valid ng-empty"
+                                date="dd-MM-yyyy">
+                        </div>
+                        <div class="MultipleDatesClone"></div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-xs-12 form-group" id="step12"
+                        ng-show="multipleDatesSeason &amp;&amp; ActionUpdateDisp">
+                        <div class="col-md-12">
+                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-2 MultipleSeasonHideDates"><br>
+                                <h5>OR</h5>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-10">
+                                <label>Season</label>
+                                <select data-container="body" ng-model="season_list" ng-change="multichangedate();"
+                                    class="selectpicker form_element form-control form-control-sm ng-pristine ng-untouched ng-valid ng-empty bs-select-hidden">
+                                    <option value="">- Select -</option>
+                                    <!-- ngRepeat: x in seasonlist -->
+                                </select>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 form-group ng-hide" ng-show="!ActionUpdateDisp">
+                        <label>Month - Year</label>
+                        <div class="input-group date input-daterange date_picker_inputs">
+                            <input type="text" value="view_period_from" name="view_period_from"
+                                ng-model="view_period_from"
+                                class="form-control date_range_picker_from_view ng-pristine ng-untouched ng-valid ng-not-empty"
+                                date="MM-yyyy" id="dtepicker">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group clear" ng-show="ActionUpdateDisp">
+                        <div class="">
+                            <label class="label_week ng-binding">Weekday&nbsp; : ( <i class="fa fa-hand-o-up"></i> Sell
+                                Policy &nbsp; )</label>
+                            <div class="btn-group gapMeTop selector_btn">
+                                <a class="btn btn-xs btn-success default fontsizeforgroup" data-toggle="tab"
+                                    ng-click="setPolicy('WD',0)">Default</a>
+                                <a class="btn btn-xs btn-default stopcell fontsizeforgroup" data-toggle="tab"
+                                    ng-click="setPolicy('WD',1)">Stop Sell </a>
+                                <a class="btn btn-xs btn-default partial fontsizeforgroup" data-toggle="tab"
+                                    ng-click="setPolicy('WD',2)">Partial Sell</a>
+                                <a class="btn btn-xs btn-default freesell fontsizeforgroup" data-toggle="tab"
+                                    ng-click="setPolicy('WD',3)">Free Sell</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-group" ng-show="period=='WEWD' &amp;&amp; ActionUpdateDisp">
+                        <div class="">
+                            <label class="label_week">Weekend&nbsp; : ( <i class="fa fa-hand-o-up"></i> Sell Policy
+                                &nbsp; )</label>
+                            <div class="btn-group gapMeTop selector_btn">
+                                <a class="btn btn-xs btn-success default fontsizeforgroup" data-toggle="tab"
+                                    ng-click="setPolicy('WE',0)">Default</a>
+                                <a class="btn btn-xs btn-default stopcell fontsizeforgroup" data-toggle="tab"
+                                    ng-click="setPolicy('WE',1)">Stop Sell </a>
+                                <a class="btn btn-xs btn-default partial fontsizeforgroup" data-toggle="tab"
+                                    ng-click="setPolicy('WE',2)">Partial Sell</a>
+                                <a class="btn btn-xs btn-default freesell fontsizeforgroup" data-toggle="tab"
+                                    ng-click="setPolicy('WE',3)">Free Sell</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-show="(InventoryModel.length=='0' || !InventoryModel) &amp;&amp; ActionUpdateDisp">
+                    <div class="col-md-12">
+                        <h5 class="mesID1 alert alert-danger text-center"  style="    color: #a94442 !important;
+                        font-weight: 500;">Please Select Inventory Room Category to Add
+                            Sell Policy.</h5>
+                    </div>
+                </div>
+                <div class="row ng-hide" ng-show="InventoryModel.length!='0' &amp;&amp; ActionUpdateDisp">
+                    <div class="btn_class col-md-4">
+                        <button type="button" class="btn w-xs btn-primary" ng-click="proceed('save');">Save</button>
+                    </div>
+                </div>
+                <div class="m-t-md ng-hide" ng-show="!ActionUpdateDisp">
+                    <div id="calendar" class="fc fc-ltr fc-unthemed">
+                        <div class="fc-toolbar">
+                            <div class="fc-left">
+                                <div class="fc-button-group"><button type="button"
+                                        class="fc-prev-button fc-button fc-state-default fc-corner-left"><span
+                                            class="fc-icon fc-icon-left-single-arrow"></span></button><button
+                                        type="button"
+                                        class="fc-next-button fc-button fc-state-default fc-corner-right"><span
+                                            class="fc-icon fc-icon-right-single-arrow"></span></button></div>
+                            </div>
+                            <div class="fc-right"></div>
+                            <div class="fc-center">
+                                <h2>September 2023</h2>
+                            </div>
+                            <div class="fc-clear"></div>
+                        </div>
+                        <div class="fc-view-container" style="">
+                            <div class="fc-view fc-month-view fc-basic-view" style="">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td class="fc-widget-header">
+                                                <div class="fc-row fc-widget-header">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="fc-day-header fc-widget-header fc-sun">Sun
+                                                                </th>
+                                                                <th class="fc-day-header fc-widget-header fc-mon">Mon
+                                                                </th>
+                                                                <th class="fc-day-header fc-widget-header fc-tue">Tue
+                                                                </th>
+                                                                <th class="fc-day-header fc-widget-header fc-wed">Wed
+                                                                </th>
+                                                                <th class="fc-day-header fc-widget-header fc-thu">Thu
+                                                                </th>
+                                                                <th class="fc-day-header fc-widget-header fc-fri">Fri
+                                                                </th>
+                                                                <th class="fc-day-header fc-widget-header fc-sat">Sat
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fc-widget-content">
+                                                <div class="fc-day-grid-container" style="">
+                                                    <div class="fc-day-grid">
+                                                        <div class="fc-row fc-week fc-widget-content"
+                                                            style="height: 167px;">
+                                                            <div class="fc-bg">
+                                                                <table>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-day fc-widget-content fc-sun fc-other-month fc-past"
+                                                                                data-date="2023-08-27"></td>
+                                                                            <td class="fc-day fc-widget-content fc-mon fc-other-month fc-past"
+                                                                                data-date="2023-08-28"></td>
+                                                                            <td class="fc-day fc-widget-content fc-tue fc-other-month fc-past"
+                                                                                data-date="2023-08-29"></td>
+                                                                            <td class="fc-day fc-widget-content fc-wed fc-other-month fc-past"
+                                                                                data-date="2023-08-30"></td>
+                                                                            <td class="fc-day fc-widget-content fc-thu fc-other-month fc-past"
+                                                                                data-date="2023-08-31"></td>
+                                                                            <td class="fc-day fc-widget-content fc-fri fc-today fc-state-highlight"
+                                                                                data-date="2023-09-01"></td>
+                                                                            <td class="fc-day fc-widget-content fc-sat fc-future"
+                                                                                data-date="2023-09-02"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <td class="fc-day-number fc-sun fc-other-month fc-past"
+                                                                                data-date="2023-08-27">27</td>
+                                                                            <td class="fc-day-number fc-mon fc-other-month fc-past"
+                                                                                data-date="2023-08-28">28</td>
+                                                                            <td class="fc-day-number fc-tue fc-other-month fc-past"
+                                                                                data-date="2023-08-29">29</td>
+                                                                            <td class="fc-day-number fc-wed fc-other-month fc-past"
+                                                                                data-date="2023-08-30">30</td>
+                                                                            <td class="fc-day-number fc-thu fc-other-month fc-past"
+                                                                                data-date="2023-08-31">31</td>
+                                                                            <td class="fc-day-number fc-fri fc-today fc-state-highlight"
+                                                                                data-date="2023-09-01">1</td>
+                                                                            <td class="fc-day-number fc-sat fc-future"
+                                                                                data-date="2023-09-02">2</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-1"
+                                                                                        class="fc-unthemed fc-today">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-2"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="fc-row fc-week fc-widget-content"
+                                                            style="height: 167px;">
+                                                            <div class="fc-bg">
+                                                                <table>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-day fc-widget-content fc-sun fc-future"
+                                                                                data-date="2023-09-03"></td>
+                                                                            <td class="fc-day fc-widget-content fc-mon fc-future"
+                                                                                data-date="2023-09-04"></td>
+                                                                            <td class="fc-day fc-widget-content fc-tue fc-future"
+                                                                                data-date="2023-09-05"></td>
+                                                                            <td class="fc-day fc-widget-content fc-wed fc-future"
+                                                                                data-date="2023-09-06"></td>
+                                                                            <td class="fc-day fc-widget-content fc-thu fc-future"
+                                                                                data-date="2023-09-07"></td>
+                                                                            <td class="fc-day fc-widget-content fc-fri fc-future"
+                                                                                data-date="2023-09-08"></td>
+                                                                            <td class="fc-day fc-widget-content fc-sat fc-future"
+                                                                                data-date="2023-09-09"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <td class="fc-day-number fc-sun fc-future"
+                                                                                data-date="2023-09-03">3</td>
+                                                                            <td class="fc-day-number fc-mon fc-future"
+                                                                                data-date="2023-09-04">4</td>
+                                                                            <td class="fc-day-number fc-tue fc-future"
+                                                                                data-date="2023-09-05">5</td>
+                                                                            <td class="fc-day-number fc-wed fc-future"
+                                                                                data-date="2023-09-06">6</td>
+                                                                            <td class="fc-day-number fc-thu fc-future"
+                                                                                data-date="2023-09-07">7</td>
+                                                                            <td class="fc-day-number fc-fri fc-future"
+                                                                                data-date="2023-09-08">8</td>
+                                                                            <td class="fc-day-number fc-sat fc-future"
+                                                                                data-date="2023-09-09">9</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-3"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-4"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-5"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-6"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-7"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-8"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-9"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="fc-row fc-week fc-widget-content"
+                                                            style="height: 167px;">
+                                                            <div class="fc-bg">
+                                                                <table>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-day fc-widget-content fc-sun fc-future"
+                                                                                data-date="2023-09-10"></td>
+                                                                            <td class="fc-day fc-widget-content fc-mon fc-future"
+                                                                                data-date="2023-09-11"></td>
+                                                                            <td class="fc-day fc-widget-content fc-tue fc-future"
+                                                                                data-date="2023-09-12"></td>
+                                                                            <td class="fc-day fc-widget-content fc-wed fc-future"
+                                                                                data-date="2023-09-13"></td>
+                                                                            <td class="fc-day fc-widget-content fc-thu fc-future"
+                                                                                data-date="2023-09-14"></td>
+                                                                            <td class="fc-day fc-widget-content fc-fri fc-future"
+                                                                                data-date="2023-09-15"></td>
+                                                                            <td class="fc-day fc-widget-content fc-sat fc-future"
+                                                                                data-date="2023-09-16"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <td class="fc-day-number fc-sun fc-future"
+                                                                                data-date="2023-09-10">10</td>
+                                                                            <td class="fc-day-number fc-mon fc-future"
+                                                                                data-date="2023-09-11">11</td>
+                                                                            <td class="fc-day-number fc-tue fc-future"
+                                                                                data-date="2023-09-12">12</td>
+                                                                            <td class="fc-day-number fc-wed fc-future"
+                                                                                data-date="2023-09-13">13</td>
+                                                                            <td class="fc-day-number fc-thu fc-future"
+                                                                                data-date="2023-09-14">14</td>
+                                                                            <td class="fc-day-number fc-fri fc-future"
+                                                                                data-date="2023-09-15">15</td>
+                                                                            <td class="fc-day-number fc-sat fc-future"
+                                                                                data-date="2023-09-16">16</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-10"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-11"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-12"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-13"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-14"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-15"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-16"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="fc-row fc-week fc-widget-content"
+                                                            style="height: 167px;">
+                                                            <div class="fc-bg">
+                                                                <table>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-day fc-widget-content fc-sun fc-future"
+                                                                                data-date="2023-09-17"></td>
+                                                                            <td class="fc-day fc-widget-content fc-mon fc-future"
+                                                                                data-date="2023-09-18"></td>
+                                                                            <td class="fc-day fc-widget-content fc-tue fc-future"
+                                                                                data-date="2023-09-19"></td>
+                                                                            <td class="fc-day fc-widget-content fc-wed fc-future"
+                                                                                data-date="2023-09-20"></td>
+                                                                            <td class="fc-day fc-widget-content fc-thu fc-future"
+                                                                                data-date="2023-09-21"></td>
+                                                                            <td class="fc-day fc-widget-content fc-fri fc-future"
+                                                                                data-date="2023-09-22"></td>
+                                                                            <td class="fc-day fc-widget-content fc-sat fc-future"
+                                                                                data-date="2023-09-23"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <td class="fc-day-number fc-sun fc-future"
+                                                                                data-date="2023-09-17">17</td>
+                                                                            <td class="fc-day-number fc-mon fc-future"
+                                                                                data-date="2023-09-18">18</td>
+                                                                            <td class="fc-day-number fc-tue fc-future"
+                                                                                data-date="2023-09-19">19</td>
+                                                                            <td class="fc-day-number fc-wed fc-future"
+                                                                                data-date="2023-09-20">20</td>
+                                                                            <td class="fc-day-number fc-thu fc-future"
+                                                                                data-date="2023-09-21">21</td>
+                                                                            <td class="fc-day-number fc-fri fc-future"
+                                                                                data-date="2023-09-22">22</td>
+                                                                            <td class="fc-day-number fc-sat fc-future"
+                                                                                data-date="2023-09-23">23</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-17"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-18"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-19"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-20"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-21"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-22"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-23"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="fc-row fc-week fc-widget-content"
+                                                            style="height: 167px;">
+                                                            <div class="fc-bg">
+                                                                <table>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-day fc-widget-content fc-sun fc-future"
+                                                                                data-date="2023-09-24"></td>
+                                                                            <td class="fc-day fc-widget-content fc-mon fc-future"
+                                                                                data-date="2023-09-25"></td>
+                                                                            <td class="fc-day fc-widget-content fc-tue fc-future"
+                                                                                data-date="2023-09-26"></td>
+                                                                            <td class="fc-day fc-widget-content fc-wed fc-future"
+                                                                                data-date="2023-09-27"></td>
+                                                                            <td class="fc-day fc-widget-content fc-thu fc-future"
+                                                                                data-date="2023-09-28"></td>
+                                                                            <td class="fc-day fc-widget-content fc-fri fc-future"
+                                                                                data-date="2023-09-29"></td>
+                                                                            <td class="fc-day fc-widget-content fc-sat fc-future"
+                                                                                data-date="2023-09-30"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <td class="fc-day-number fc-sun fc-future"
+                                                                                data-date="2023-09-24">24</td>
+                                                                            <td class="fc-day-number fc-mon fc-future"
+                                                                                data-date="2023-09-25">25</td>
+                                                                            <td class="fc-day-number fc-tue fc-future"
+                                                                                data-date="2023-09-26">26</td>
+                                                                            <td class="fc-day-number fc-wed fc-future"
+                                                                                data-date="2023-09-27">27</td>
+                                                                            <td class="fc-day-number fc-thu fc-future"
+                                                                                data-date="2023-09-28">28</td>
+                                                                            <td class="fc-day-number fc-fri fc-future"
+                                                                                data-date="2023-09-29">29</td>
+                                                                            <td class="fc-day-number fc-sat fc-future"
+                                                                                data-date="2023-09-30">30</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-24"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-25"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-26"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-27"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-28"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-29"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                            <td class="fc-event-container"><a
+                                                                                    class="fc-day-grid-event fc-event fc-start fc-end">
+                                                                                    <div id="invertory_box_2023-9-30"
+                                                                                        class="">
+                                                                                        <div class="pull-left form-group1 buttons widthforelementsincalendar1"
+                                                                                            style="display:">
+                                                                                            <div
+                                                                                                class="btn-group selector_btn">
+                                                                                                <a class="btn default btn-success fontsizeforgroup stop_sale_button_0_ stop_sale_button_0_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Default</a><a
+                                                                                                    class="btn stopcell btn-default fontsizeforgroup stop_sale_button_1_ stop_sale_button_1_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Stop
+                                                                                                    Sell </a><a
+                                                                                                    class="btn partial btn-default fontsizeforgroup stop_sale_button_2_ stop_sale_button_2_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Partial
+                                                                                                    Sell</a><a
+                                                                                                    class="btn freesell btn-default fontsizeforgroup stop_sale_button_3_ stop_sale_button_3_"
+                                                                                                    data-toggle="tab"
+                                                                                                    disabled="">Free
+                                                                                                    Sell</a></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="clearfix"></div>
+                                                                                </a></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="fc-row fc-week fc-widget-content"
+                                                            style="height: 167px;">
+                                                            <div class="fc-bg">
+                                                                <table>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="fc-day fc-widget-content fc-sun fc-other-month fc-future"
+                                                                                data-date="2023-10-01"></td>
+                                                                            <td class="fc-day fc-widget-content fc-mon fc-other-month fc-future"
+                                                                                data-date="2023-10-02"></td>
+                                                                            <td class="fc-day fc-widget-content fc-tue fc-other-month fc-future"
+                                                                                data-date="2023-10-03"></td>
+                                                                            <td class="fc-day fc-widget-content fc-wed fc-other-month fc-future"
+                                                                                data-date="2023-10-04"></td>
+                                                                            <td class="fc-day fc-widget-content fc-thu fc-other-month fc-future"
+                                                                                data-date="2023-10-05"></td>
+                                                                            <td class="fc-day fc-widget-content fc-fri fc-other-month fc-future"
+                                                                                data-date="2023-10-06"></td>
+                                                                            <td class="fc-day fc-widget-content fc-sat fc-other-month fc-future"
+                                                                                data-date="2023-10-07"></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="fc-content-skeleton">
+                                                                <table>
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <td class="fc-day-number fc-sun fc-other-month fc-future"
+                                                                                data-date="2023-10-01">1</td>
+                                                                            <td class="fc-day-number fc-mon fc-other-month fc-future"
+                                                                                data-date="2023-10-02">2</td>
+                                                                            <td class="fc-day-number fc-tue fc-other-month fc-future"
+                                                                                data-date="2023-10-03">3</td>
+                                                                            <td class="fc-day-number fc-wed fc-other-month fc-future"
+                                                                                data-date="2023-10-04">4</td>
+                                                                            <td class="fc-day-number fc-thu fc-other-month fc-future"
+                                                                                data-date="2023-10-05">5</td>
+                                                                            <td class="fc-day-number fc-fri fc-other-month fc-future"
+                                                                                data-date="2023-10-06">6</td>
+                                                                            <td class="fc-day-number fc-sat fc-other-month fc-future"
+                                                                                data-date="2023-10-07">7</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+	// ]]>
+    </script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+<script>
+    // For Voucher Datepicker
+
+    const voucherStartdatepicker = flatpickr("#voucherStartdatepicker", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const voucherEndDatepicker = flatpickr("#voucherEndDatepicker", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+</script>
+
+</html>
