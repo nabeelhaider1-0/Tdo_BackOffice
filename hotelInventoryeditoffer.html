@@ -26,7 +26,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-                    <!-- include summernote css/js-->
+    <!-- include summernote css/js-->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <title>Travel Destination Online</title>
@@ -147,7 +147,7 @@
                 <div class="col-md-12">
                     <h5 style="font-size:30px;font-weight: 700;    margin: 0px;
                     padding: 0px;
-                    text-transform: uppercase;">ADD DEAL</h5>
+                    text-transform: uppercase;">EDIT DEAL</h5>
                 </div>
 
 
@@ -405,11 +405,13 @@
             font-family: "MONTSERRAT";
             font-size: 11px !important;
         }
-        .form-control[disabled], fieldset[disabled] {
-    cursor: not-allowed;
-    background-color: #eee !important;
-    opacity: 1;
-}
+
+        .form-control[disabled],
+        fieldset[disabled] {
+            cursor: not-allowed;
+            background-color: #eee !important;
+            opacity: 1;
+        }
 
         .table-striped>tbody>tr:nth-of-type(odd) {
             background-color: #f9f9f9;
@@ -454,7 +456,8 @@
             border-radius: 3px;
             border: #4ea5e0 solid 1px;
         }
-        .btn{
+
+        .btn {
             font-size: 12px;
 
         }
@@ -469,7 +472,7 @@
             <div class="row">
                 <div class="col-md-3 mt-2">
                     <div class="labelTitle2">
-                        ADD NEW OFFERS / DISCOUNTS
+                        EDIT PREVIOUS OFFERS / DISCOUNTS
 
                     </div>
                 </div>
@@ -489,7 +492,7 @@
                     <div class=" col-md-4 col-sm-4 col-xs-12form-group ">
                         <label>I wish to Create Deal for</label><br>
                         <div class="btn-group text-center m-b-md" id="ApppliedOfferType">
-                            <a class="btn btn-sm btn-primary" data-target="#step1" data-toggle="tab"
+                            <a class="btn btn-sm btn-default" data-target="#step1" data-toggle="tab"
                                 ng-click="offerMaster('EBD',$event)" id="EBD">Early Bird</a>
                             <a class="btn btn-sm btn-default" data-target="#step2" data-toggle="tab"
                                 ng-click="offerMaster('SP',$event)" id="SP">Stay Pay</a>
@@ -497,13 +500,13 @@
                                 ng-click="offerMaster('LS',$event)" id="LS">Long Stay</a>
                             <a class="btn btn-sm btn-default" data-target="#step4" data-toggle="tab"
                                 ng-click="offerMaster('MP',$event)" id="MP">Mark up</a>
-                            <a class="btn btn-sm btn-default" data-target="#step5" data-toggle="tab"
+                            <a class="btn btn-sm btn-primary" data-target="#step5" data-toggle="tab"
                                 ng-click="offerMaster('DIS',$event)" id="DIS">Discount</a>
                             <a class="btn btn-sm btn-default" data-target="#step6" data-toggle="tab"
                                 ng-click="offerMaster('PM',$event)" id="PM">Promotion</a>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-3 form-group" ng-show="PageName == 'Add'">
+                    <div class="col-md-2 col-sm-3 form-group ng-hide" ng-show="PageName == 'Add'">
                         <label class="valuefor_txt">Discount Code</label>
                         <div class="input-group col-md-12 col-xs-12">
                             <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty"
@@ -524,15 +527,15 @@
                     <div class="col-md-2 col-sm-4 form-group Ipad02">
                         <label>Target</label><br>
                         <div class="btn-group text-center m-b-md">
-                            <a class="btn btn-sm btn-primary" id="PN_Selected" data-target="#step1" data-toggle="tab"
+                            <a class="btn btn-sm btn-default" id="PN_Selected" data-target="#step1" data-toggle="tab"
                                 ng-click="targetClick('PN')">Pax Nationality</a>
-                            <a class="btn btn-sm btn-default" id="MP_Selected" data-target="#step2" data-toggle="tab"
+                            <a class="btn btn-sm btn-primary" id="MP_Selected" data-target="#step2" data-toggle="tab"
                                 ng-click="targetClick('MP')">Market Profile</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2 col-sm-4  form-group" id="pak_nation">
+                    <div class="col-md-2 col-sm-4  form-group" id="pak_nation" style="display: none;">
                         <label>Pax Nationality</label>
                         <select data-container="body" data-actions-box="true"
                             class="CustomHeight selectpicker show-menu-arrow form-control form-control-sm ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
@@ -991,12 +994,12 @@
                             <option value="195" ng-repeat="x in countries" class="ng-binding ng-scope">Zimbabwe</option>
                             <!-- end ngRepeat: x in countries -->
                         </select>
-                        
+
                     </div>
-                    <div class="col-md-2 col-sm-4 form-group" id="mar_pro" style="display: none;">
+                    <div class="col-md-2 col-sm-4 form-group" id="mar_pro" style="display: block;">
                         <label>Market Profile</label>
                         <select data-container="body" data-actions-box="true"
-                            class="CustomHeight selectpicker show-menu-arrow form-control form-control-sm ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
+                            class="CustomHeight selectpicker show-menu-arrow form-control form-control-sm ng-pristine ng-untouched ng-valid bs-select-hidden ng-not-empty"
                             ng-model="AddOfferMarketProfileModel" multiple="multiple">
                             <!-- ngRepeat: x in supplierProfile -->
                             <option value="67" ng-repeat="x in supplierProfile" class="ng-binding ng-scope">AFRICAN
@@ -1018,23 +1021,33 @@
                             <option value="74" ng-repeat="x in supplierProfile" class="ng-binding ng-scope">USA MARKET
                             </option><!-- end ngRepeat: x in supplierProfile -->
                         </select>
-                      
+
                     </div>
-                    <div class="col-md-2 col-sm-4 form-group ng-hide" ng-show="ExcludeNationality">
+                    <div class="col-md-2 col-sm-4 form-group" ng-show="ExcludeNationality">
                         <label>Exclude Nationality</label><br>
                         <select id="ExcludeNationalityId" data-actions-box="true" data-container="body"
                             class="selectpicker show-menu-arrow form-control form-control-sm ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
                             ng-model="AddOfferExcludeNationalityModel" data-live-search="true" multiple="">
                             <!-- ngRepeat: (key, value) in NationalityExclude -->
+                            <option value="141" ng-repeat="(key, value) in NationalityExclude"
+                                class="ng-binding ng-scope">Yemen</option>
+                            <!-- end ngRepeat: (key, value) in NationalityExclude -->
+                            <option value="193" ng-repeat="(key, value) in NationalityExclude"
+                                class="ng-binding ng-scope">Western Sahara</option>
+                            <!-- end ngRepeat: (key, value) in NationalityExclude -->
+                            <option value="194" ng-repeat="(key, value) in NationalityExclude"
+                                class="ng-binding ng-scope">Zambian</option>
+                            <!-- end ngRepeat: (key, value) in NationalityExclude -->
                         </select>
-                     
+
                     </div>
                     <div class="col-md-2 col-sm-4  col-xs-5 form-group">
                         <label>Hotels</label>
                         <select
-                            class="CustomHeight required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden ng-pristine ng-untouched ng-valid ng-empty"
+                            class="CustomHeight required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden ng-pristine ng-untouched ng-valid ng-not-empty"
                             ng-change="getHotelData()" data-container="body" data-live-search="true"
                             ng-model="HotelsModel">
+                            <option value="? string:88960 ?"></option>
                             <option value="" data-hidden="true">- Please Hotel -</option>
                             <!-- ngRepeat: x in hotels -->
                             <option value="46361" ng-repeat="x in hotels" class="ng-binding ng-scope">Monkey Mia Dolphin
@@ -1642,12 +1655,12 @@
                             <option value="73183" ng-repeat="x in hotels" class="ng-binding ng-scope">address downtown
                                 test</option><!-- end ngRepeat: x in hotels -->
                         </select>
-                      
+
                     </div>
                     <div class="col-md-2 col-sm-4  col-xs-5 form-group" ng-show="roomBasis.length>0">
                         <label>Room/Meal Basis</label>
                         <select
-                            class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden ng-pristine ng-untouched ng-valid ng-empty"
+                            class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden ng-pristine ng-untouched ng-valid ng-not-empty"
                             data-container="body" data-actions-box="true" data-live-search="true" id="room_basis"
                             multiple="multiple" ng-model="RoomBasisModel">
                             <!-- ngRepeat: x in roomBasis -->
@@ -1676,17 +1689,21 @@
                             <option value="33" ng-repeat="x in roomBasis" class="ng-binding ng-scope">Room Only.
                             </option><!-- end ngRepeat: x in roomBasis -->
                         </select>
-                        
+
                     </div>
-                    <div class="col-md-2 col-sm-4  col-xs-5 form-group ng-hide" ng-show="inventoryRoom.length>0">
+                    <div class="col-md-2 col-sm-4  col-xs-5 form-group" ng-show="inventoryRoom.length>0">
                         <label>Inventory Room Category </label>
                         <select
-                            class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden ng-pristine ng-untouched ng-valid ng-empty"
+                            class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden ng-pristine ng-untouched ng-valid ng-not-empty"
                             data-container="body" data-actions-box="true" data-live-search="true" id="inventory_room"
                             multiple="multiple" ng-model="InventoryRoomModel" ng-change="getRoomClass()">
                             <!-- ngRepeat: x in inventoryRoom -->
+                            <option value="39" ng-repeat="x in inventoryRoom" class="ng-binding ng-scope">Classic Suite
+                            </option><!-- end ngRepeat: x in inventoryRoom -->
+                            <option value="40" ng-repeat="x in inventoryRoom" class="ng-binding ng-scope">Standard ER
+                            </option><!-- end ngRepeat: x in inventoryRoom -->
                         </select>
-                        
+
                     </div>
                     <div class="col-md-2 col-sm-4  col-xs-5 form-group ng-hide" ng-show="roomClass.length>0">
                         <label>Room Category </label>
@@ -1696,7 +1713,7 @@
                             multiple="multiple" ng-model="RoomClassModel">
                             <!-- ngRepeat: x in roomClass -->
                         </select>
-                      
+
                     </div>
                 </div>
                 <div class="row">
@@ -1705,7 +1722,7 @@
                         <select data-container="body" data-actions-box="true" data-live-search="true"
                             class="selectpicker show-menu-arrow form-control form-control-sm agent_autocomplete ng-pristine ng-untouched ng-valid bs-select-hidden ng-empty"
                             ng-model="selAgents" multiple="multiple" title="Select and begin typing"></select>
-                      
+
                     </div>
                     <div class="col-md-2 col-sm-4 form-group" ng-show="!hideAgentsList">
                         <label>Agents</label><br>
@@ -1802,7 +1819,7 @@
                             <option value="90" ng-repeat="x in agentList" class="ng-binding ng-scope">Welcome@123[Allwin
                                 Pillai]</option><!-- end ngRepeat: x in agentList -->
                         </select>
-                      
+
                     </div>
                     <div class="col-md-2 col-sm-4 mar_top15 col-xs-5 form-group">
                         <div class="checkbox checkbox-success checkbox-inline form-group MB">
@@ -1836,62 +1853,60 @@
                     </div>
                 </div>
                 <div class="row">
-                  
-                        <div class="col-md-3 col-sm-4 form-group ">
-                            <label class="valuefor_txt">Booking Date</label>
-                            <div class="input-group booking_from_date">
-                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
-                                    ng-model="BookingFrom" date="dd-MM-yyyy" name="sf_date[1]">
-                                <span class="input-group-addon">to</span>
-                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
-                                    ng-model="BookingTo" date="dd-MM-yyyy" name="st_date[1]">
-                                <span class="input-group-addon" alt="clear" title="clear"
-                                    ng-click="clear('booking_date')">
-                                    <i class="fa fa-trash"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-4 form-group ">
-                            <label class="valuefor_txt">Checkin Date</label>
-                            <div class="input-group checkin_date_from">
-                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
-                                    ng-model="CheckInFrom" date="dd-MM-yyyy" name="bf_date[1]">
-                                <span class="input-group-addon">to</span>
-                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
-                                    ng-model="CheckInTo" date="dd-MM-yyyy" name="bt_date[1]">
-                                <span class="input-group-addon" alt="clear" title="clear"
-                                    ng-click="clear('checkin_date')">
-                                    <i class="fa fa-trash"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-4 form-group" ng-show="LastMintueOffer">
-                            <label class="valuefor_txt">&nbsp;</label>
-                            <div class="input-group col-md-12 col-xs-12">
-                                <div class="btn-group text-center m-b-md">
-                                    <a class="btn btn-sm btn-primary ng-pristine ng-untouched ng-valid ng-empty"
-                                        onclick="lastOrCheckin(this,'CB')" ng-model="LastOrCheckin"
-                                        data-toggle="tab">Checkin Before</a>
-                                    <a class="btn btn-sm  ng-pristine ng-untouched ng-valid ng-empty" id="lastminButton"
-                                        onclick="lastOrCheckin(this,'LM')" ng-model="LastOrCheckin"
-                                        data-toggle="tab">Last Minute</a>
-                                    <input type="hidden" name="lastOrCheckin[1]" value="CB" id="lastOrCheckin1">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-4 form-group ">
-                            <label class="valuefor_txt" id="label1">Checkin Before</label>
-                            <div class="input-group col-md-12 col-xs-12">
-                                <input value="" name="checkin_before_days[1]" id="before_checkin1" maxlength="3"
-                                    size="4" ng-model="CheckInBeforeDays"
-                                    class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
-                                    type="text" numbers-only="">
-                                <span class="input-group-addon">Days</span>
 
+                    <div class="col-md-3 col-sm-4 form-group ">
+                        <label class="valuefor_txt">Booking Date</label>
+                        <div class="input-group booking_from_date">
+                            <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
+                                ng-model="BookingFrom" date="dd-MM-yyyy" name="sf_date[1]">
+                            <span class="input-group-addon">to</span>
+                            <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
+                                ng-model="BookingTo" date="dd-MM-yyyy" name="st_date[1]">
+                            <span class="input-group-addon" alt="clear" title="clear" ng-click="clear('booking_date')">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4 form-group ">
+                        <label class="valuefor_txt">Checkin Date</label>
+                        <div class="input-group checkin_date_from">
+                            <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
+                                ng-model="CheckInFrom" date="dd-MM-yyyy" name="bf_date[1]">
+                            <span class="input-group-addon">to</span>
+                            <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
+                                ng-model="CheckInTo" date="dd-MM-yyyy" name="bt_date[1]">
+                            <span class="input-group-addon" alt="clear" title="clear" ng-click="clear('checkin_date')">
+                                <i class="fa fa-trash"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 form-group" ng-show="LastMintueOffer">
+                        <label class="valuefor_txt">&nbsp;</label>
+                        <div class="input-group col-md-12 col-xs-12">
+                            <div class="btn-group text-center m-b-md">
+                                <a class="btn btn-sm btn-primary ng-pristine ng-untouched ng-valid ng-empty"
+                                    onclick="lastOrCheckin(this,'CB')" ng-model="LastOrCheckin"
+                                    data-toggle="tab">Checkin Before</a>
+                                <a class="btn btn-sm  ng-pristine ng-untouched ng-valid ng-empty" id="lastminButton"
+                                    onclick="lastOrCheckin(this,'LM')" ng-model="LastOrCheckin" data-toggle="tab">Last
+                                    Minute</a>
+                                <input type="hidden" name="lastOrCheckin[1]" value="CB" id="lastOrCheckin1">
                             </div>
                         </div>
-                        <div class="clearfix"></div>
-                    
+                    </div>
+                    <div class="col-md-2 col-sm-4 form-group ">
+                        <label class="valuefor_txt" id="label1">Checkin Before</label>
+                        <div class="input-group col-md-12 col-xs-12">
+                            <input value="" name="checkin_before_days[1]" id="before_checkin1" maxlength="3" size="4"
+                                ng-model="CheckInBeforeDays"
+                                class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength"
+                                type="text" numbers-only="">
+                            <span class="input-group-addon">Days</span>
+
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
                     <div class="col-md-2 form-group pull-right copy_btn2"
                         ng-class="LastMintueOffer?'copy_btn2':'copy_btn'">
                         <span class="copy-text tbl_onRqt " ng-click="Copy()" style="display:none">Copy</span>
@@ -1920,7 +1935,7 @@
                                 <option value="yes" selected="">Yes</option>
                                 <option value="no">No</option>
                             </select>
-                         
+
                         </div>
                         <div class="col-md-3 col-sm-4 form-group" id="sel_apply_on_tag">
                             <label>Offer Apply on</label>
@@ -1931,7 +1946,7 @@
                                 <option value="total_rate" selected="">Total Rate</option>
                                 <option value="room_rate">Room Rate</option>
                             </select>
-                          
+
                         </div>
                         <div class="col-md-3 col-sm-4 form-group" id="sel_apply_on_tag">
                             <label>Offer Apply on Days</label>
@@ -1944,121 +1959,35 @@
                                 <option label="Only for Weekend" value="string:weekend">Only for Weekend</option>
                                 <option label="Only for WeekDay" value="string:weekday">Only for WeekDay</option>
                             </select>
-                          
+
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-sm-12 form-group phps_row_1 padd_5">
                             <label>Early Bird</label><br>
                             <div class="radioline1">
-                            <div class="radio radio-success radio-inline">
-                                <input class="show_accordingly_EBD ng-pristine ng-untouched ng-valid ng-not-empty"
-                                    id="show_accordingly_EBD_Amount" ng-model="EBD_rateType" value="Amount" type="radio"
-                                    name="5415">
-                                <label for="show_accordingly_EBD_Amount">Amount</label>
-                            </div>
-                            <div class="radio radio-success radio-inline">
-                                <input class="show_accordingly_EBD ng-pristine ng-untouched ng-valid ng-not-empty"
-                                    id="app" ng-model="EBD_rateType" value="Discount"
-                                    type="radio" name="5416">
-                                <label for="show_accordingly_EBD_Percent">Percentage</label>
-                            </div>
+                                <div class="radio radio-success radio-inline">
+                                    <input class="show_accordingly_EBD ng-pristine ng-untouched ng-valid ng-not-empty"
+                                        id="show_accordingly_EBD_Amount" ng-model="EBD_rateType" value="Amount"
+                                        type="radio" name="5415">
+                                    <label for="show_accordingly_EBD_Amount">Amount</label>
+                                </div>
+                                <div class="radio radio-success radio-inline">
+                                    <input class="show_accordingly_EBD ng-pristine ng-untouched ng-valid ng-not-empty"
+                                        id="app" ng-model="EBD_rateType" value="Discount" type="radio" name="5416"
+                                        checked>
+                                    <label for="show_accordingly_EBD_Percent">Percentage</label>
+                                </div>
                             </div>
                         </div>
                         <div class="clear-fix"></div>
                         <div class="col-md-3 col-sm-4 form-group" id="sel_apply_on_tag">
                             <label>Discount</label>
-                            <input type="text" class="form-control form-control-sm ng-pristine ng-untouched ng-valid ng-empty"
+                            <input type="text"
+                                class="form-control form-control-sm ng-pristine ng-untouched ng-valid ng-empty"
                                 ng-model="EBD_RatevaluePerNight" decimals-only="">
                         </div>
-                        <div class="col-md-3 col-sm-4  col-xs-5  form-group" ng-show="EBD_rateType=='Amount'">
-                            <label>Currency</label>
-                            <span>
-                                <select
-                                    class="required selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden  ng-pristine ng-untouched ng-valid ng-empty"
-                                    data-container="body" data-live-search="true" ng-model="EBD_currency">
-                                    <option value="">Please Select</option>
-                                    <!-- ngRepeat: x in currency -->
-                                    <option value="AED" ng-repeat="x in currency" class="ng-binding ng-scope">AED
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="AUD" ng-repeat="x in currency" class="ng-binding ng-scope">AUD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="BHD" ng-repeat="x in currency" class="ng-binding ng-scope">BHD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="BRL" ng-repeat="x in currency" class="ng-binding ng-scope">BRL
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="CAD" ng-repeat="x in currency" class="ng-binding ng-scope">CAD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="CHF" ng-repeat="x in currency" class="ng-binding ng-scope">CHF
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="CNY" ng-repeat="x in currency" class="ng-binding ng-scope">CNY
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="CZK" ng-repeat="x in currency" class="ng-binding ng-scope">CZK
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="DKK" ng-repeat="x in currency" class="ng-binding ng-scope">DKK
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="EGP" ng-repeat="x in currency" class="ng-binding ng-scope">EGP
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="EUR" ng-repeat="x in currency" class="ng-binding ng-scope">EUR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="GBP" ng-repeat="x in currency" class="ng-binding ng-scope">GBP
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="HKD" ng-repeat="x in currency" class="ng-binding ng-scope">HKD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="HUF" ng-repeat="x in currency" class="ng-binding ng-scope">HUF
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="IDR" ng-repeat="x in currency" class="ng-binding ng-scope">IDR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="INR" ng-repeat="x in currency" class="ng-binding ng-scope">INR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="ISK" ng-repeat="x in currency" class="ng-binding ng-scope">ISK
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="JOD" ng-repeat="x in currency" class="ng-binding ng-scope">JOD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="JPY" ng-repeat="x in currency" class="ng-binding ng-scope">JPY
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="KRW" ng-repeat="x in currency" class="ng-binding ng-scope">KRW
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="KWD" ng-repeat="x in currency" class="ng-binding ng-scope">KWD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="MUR" ng-repeat="x in currency" class="ng-binding ng-scope">MUR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="MYR" ng-repeat="x in currency" class="ng-binding ng-scope">MYR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="NOK" ng-repeat="x in currency" class="ng-binding ng-scope">NOK
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="NZD" ng-repeat="x in currency" class="ng-binding ng-scope">NZD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="OMR" ng-repeat="x in currency" class="ng-binding ng-scope">OMR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="PHP" ng-repeat="x in currency" class="ng-binding ng-scope">PHP
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="PKR" ng-repeat="x in currency" class="ng-binding ng-scope">PKR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="QAR" ng-repeat="x in currency" class="ng-binding ng-scope">QAR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="RUB" ng-repeat="x in currency" class="ng-binding ng-scope">RUB
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="SAR" ng-repeat="x in currency" class="ng-binding ng-scope">SAR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="SEK" ng-repeat="x in currency" class="ng-binding ng-scope">SEK
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="SGD" ng-repeat="x in currency" class="ng-binding ng-scope">SGD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="THB" ng-repeat="x in currency" class="ng-binding ng-scope">THB
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="TND" ng-repeat="x in currency" class="ng-binding ng-scope">TND
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="TWD" ng-repeat="x in currency" class="ng-binding ng-scope">TWD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="USD" ng-repeat="x in currency" class="ng-binding ng-scope">USD
-                                    </option><!-- end ngRepeat: x in currency -->
-                                    <option value="ZAR" ng-repeat="x in currency" class="ng-binding ng-scope">ZAR
-                                    </option><!-- end ngRepeat: x in currency -->
-                                </select>
-                              
-                            </span>
-                        </div>
+
                         <div class="col-md-3 col-sm-4  col-xs-5  form-group">
                             <label>&nbsp;</label><br>
                             <span>Per Night</span>
@@ -2067,35 +1996,33 @@
                                     tooltip-template="Note : If Currency is not selected, Amount entered in Discount field will apply as Percentage"
                                     tooltip-side="top" class="tooltips _top _steady _ready"><tip-cont><i
                                             class="fa fa-info-circle ng-scope"></i></tip-cont>
-                                    <tip class=""><tip-tip><span id="close-button" style="display: none;">×</span>Note :
-                                            If Currency is not selected, Amount entered in Discount field will apply as
-                                            Percentage</tip-tip><tip-arrow></tip-arrow></tip>
+
                                 </tooltip>
                             </span>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 form-group phps_row_1 padd_5">
                             <label>Offer Note</label>
                             <textarea id="summernote" class="form-control form-control-sm"></textarea>
-                       
-                        
-                           
-                                
-                            </div>
-                       
+
+
+
+
+                        </div>
+
                     </div>
                 </div>
-              
-            
-                <button type="button" class="btn btn-primary btn01" name="disc_button" ng-show="PageName == 'Add'"
+
+
+                <button type="button" class="btn btn-primary btn01" name="disc_button" ng-show="PageName == 'Edit'"
                     ng-click="submit()">
-                    <i class="fa fa-plus"></i>&nbsp;Add Offers
+                    <i class="fa fa-edit"></i>&nbsp;Update Offers
                 </button>
                 <button type="button" class="btn btn-primary btn01 ng-hide" name="disc_button"
                     ng-show="PageName == 'Edit'" ng-click="submit()">
                     <i class="fa fa-edit"></i>&nbsp;Update Offers
                 </button>
                 <a href="hotelInventoryappSearchoffer.html" class="btn btn-primary btn01">
-                <i class="fa fa-share"></i>&nbsp;Go To All Offers/Discounts
+                    <i class="fa fa-share"></i>&nbsp;Go To All Offers/Discounts
                 </a>
             </div>
 
@@ -2181,22 +2108,22 @@
         }
 	// ]]>
     </script>
-       <script>
+    <script>
 
         $('#summernote').summernote({
             height: 150,
-          width:1430,
-          
-        toolbar: [
-     
-          ['font', ['style','bold','italic','underline','clear']],
-        
-          ['para', ['ul', 'ol', 'paragraph']],
+            width: 1430,
 
-      ],
-   
-    }); 
-      </script>
+            toolbar: [
+
+                ['font', ['style', 'bold', 'italic', 'underline', 'clear']],
+
+                ['para', ['ul', 'ol', 'paragraph']],
+
+            ],
+
+        }); 
+    </script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
