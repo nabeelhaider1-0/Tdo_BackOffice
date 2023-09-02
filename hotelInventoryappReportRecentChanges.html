@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body>
+
+    <div class="color-line">
+    </div>
+
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;">
+            <a class="navbar-brand" href="#" style="padding-left: 23px; background-color:#f7f9fa">
+                <img src="logo.png" alt="Logo" height="50" style="
+                width: 100px;
+            ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto" id="sizing">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="hotelInventoryDashboard.html">Dashboard </a>
+                    </li>
+
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rates<span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="hotelInventoryapp.html">Manage Rates</a>
+                            <a class="dropdown-item" href="hotelInventorydeleterates.html">Delete Rates</a>
+                            <a class="dropdown-item" href="hotelInventoryoldroomrates.html">Old Room Rates</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappbookingDetails.html">Bookings</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Masters
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Hotel Setting</a>
+                            <a class="dropdown-item" href="#">Room Category</a>
+                            <a class="dropdown-item" href="#">Map Hotel Rooms</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Policies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappSupplment.html">Supplements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappManageSeason.html">Manage Seasons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappExtrabeds.html">Extra-bed</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Offer
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Search</a>
+                            <a class="dropdown-item" href="#">Create</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Arivals</a>
+                            <a class="dropdown-item" href="#">Expiring Rates</a>
+                            <a class="dropdown-item" href="#">Recent Changes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappContracts.html">Contracts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryapptariffwriter.html">Tariff Writer</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="user.png" alt="Account Logo" height="45" style="    width: 41px;
+                            padding: 8px;
+                            border: 1px solid #eaebec;
+                            border-radius: 50%;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-3">
+                    <h5 style="font-size:18px;font-weight: 400;    margin: 0px;
+                    padding: 0px;
+                  ">Log Details</h5>
+                </div>
+
+
+
+
+
+
+
+        </header>
+
+
+    </section>
+
+
+    <style>
+        #sizing li a {
+            font-size: 12px;
+            color: #34495e;
+        }
+
+
+        a {
+            cursor: pointer;
+            color: #34495e;
+        }
+
+        .ng-hide {
+            display: none;
+        }
+
+        .h-bg-navy-blue {
+            background: #34495e;
+        }
+
+        .adddates {
+            background: #74D348;
+            color: white;
+        }
+
+        .adddates:hover {
+            background: #74D348;
+        }
+
+        .bootstrap-select.show-menu-arrow.open>.dropdown-toggle,
+        .bootstrap-select.show-menu-arrow.show>.dropdown-toggle {
+            z-index: 1;
+        }
+
+        .new_tab_section .btn {}
+
+        th {
+            text-align: left !important;
+            width: 200px;
+            vertical-align: middle !important;
+            text-transform: uppercase;
+            font-size: 12px;
+
+        }
+
+        td {
+            background-color: #FFFFFF !important;
+        }
+
+        #voucherStartdatepicker {
+            background-color: white;
+        }
+
+        #voucherEndDatepicker {
+            background-color: white;
+        }
+
+
+
+
+        .breadcrumb {
+            font-weight: 500 !important;
+            font-size: 12px;
+            text-transform: uppercase;
+            list-style: none;
+            padding-left: 12px;
+
+        }
+
+
+
+
+
+        .breadcrumb li {
+            display: inline-block;
+            margin-bottom: .2em;
+        }
+
+        .breadcrumb li a {
+            background-color: #34495e;
+            box-sizing: border-box;
+            color: #fff;
+            display: block;
+            max-height: 2em;
+            padding: .5em 1em .5em 1.5em;
+            position: relative;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .breadcrumb li.active a {
+            background-color: #62cb31;
+            box-sizing: border-box;
+            color: #fff;
+            display: block;
+            max-height: 2em;
+            padding: .5em 1em .5em 1.5em;
+            position: relative;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .breadcrumb li.active a::after {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #62cb31;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1em;
+            transition: .25s;
+            z-index: 1;
+        }
+
+
+        .breadcrumb li a:before {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #fff;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1.25em;
+            z-index: 1;
+        }
+
+        .breadcrumb li a:after {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #34495e;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1em;
+            transition: .25s;
+            z-index: 1;
+        }
+
+        .breadcrumb li a:hover {
+            background-color: #3f5872;
+        }
+
+        .breadcrumb li.active a:hover {
+            background-color: #74d348;
+        }
+
+        .breadcrumb li.active a:hover:after {
+            border-left-color: #74d348;
+        }
+
+
+        .breadcrumb li a:hover:after {
+            border-left-color: #3f5872;
+        }
+
+
+        .white-box-3 {
+            background: #ffffff;
+            border: #e4e5e7 solid 1px;
+            margin: 25px 0px 0px;
+        }
+
+        .blue-heading-box {
+            background: #34495e;
+            margin: 0px 0px 0px 0px;
+            padding: 13px 0px;
+            width: 100%;
+            float: left;
+        }
+
+        element.style {}
+
+        .blue-heading-box-01 {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px;
+            width: 30%;
+            float: left;
+        }
+
+        .labelTitle1 {
+            padding: 7px 0px 0px 15px;
+            text-transform: uppercase;
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+        .blue-heading-box-02 {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px;
+            width: 70%;
+            float: left;
+        }
+
+        .hotel-main-box {
+            padding: 6px 20px;
+        }
+
+        .propertyPic {
+            height: 279px !important;
+        }
+
+        .map-box {
+            padding: 5px 0px 0px 21px;
+            width: 16%;
+        }
+
+        .marg_hack {
+            margin-bottom: -25px;
+        }
+
+        .blue-box-01 {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 10px 15px 15px;
+            width: 25%;
+            float: left;
+        }
+
+        .blue-box-02 {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 15px 37px 0px;
+            width: 75%;
+            float: left;
+        }
+
+        .btn-default {
+            background-color: #fff;
+            border-color: #e4e5e7;
+            color: #6a6c6f;
+        }
+
+        .star_rating {
+            margin-top: 6px;
+        }
+
+        .star_rating1 {
+            min-width: 15px !important;
+            margin-bottom: 7px;
+        }
+
+        .address_details p {
+            padding: 0px 0px 0px 53px !important;
+            font-family: "Roboto", Helvetica, Arial, sans-serif !important;
+        }
+
+        .tab1Font {
+            font-size: 12px;
+            color: #B0B0B0;
+            margin-top: 10px;
+        }
+
+        .white-box-3 {
+            background: #ffffff;
+            border: #e4e5e7 solid 1px;
+            margin: 25px 0px 0px;
+        }
+
+        .headTitle {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .blue-box * {
+            font-size: 13px;
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+        }
+
+        .labelImg {
+            height: 55px;
+            width: 55px;
+            display: inline-block;
+            padding: 12px;
+            float: right;
+            right: 5px;
+            position: relative;
+        }
+
+        .imgWid img {
+            width: 100%;
+        }
+
+        .hotel-main-box {
+            padding: 6px 20px;
+        }
+
+        .amnt {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        .text-success {
+            color: #62cb31 !important;
+
+        }
+
+        .hotel-main-box .well {
+            background: transparent !important;
+            border: transparent !important;
+            margin-bottom: 0px !important;
+        }
+
+        .well {
+            background: #f7f9fa;
+            box-shadow: none;
+            min-height: 20px;
+        }
+
+        .well-sm {
+            padding: 9px;
+            border-radius: 3px;
+        }
+
+        .boldMe {
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+        .booking-status-box-01 {
+            margin: 0px 55px 0px -30px;
+            padding: 0px 0px;
+            width: 60%;
+            float: left;
+        }
+
+        .booking-status-box-02 {
+            margin: 55px 0px 0px 0px;
+            padding: 0px 0px;
+            width: 30%;
+            float: left;
+        }
+
+        .doughnut-legend {
+            padding: 0px;
+        }
+
+        .chart-legend li {
+            list-style: none;
+        }
+
+        .chart-legend li span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin-right: 5px;
+        }
+
+        body {
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            background-color: #fff;
+            font-size: 13px;
+            color: #6a6c6f;
+        }
+
+        .white-box-3 .panel-footer {
+            padding: 3px 15px;
+            background-color: #FFFFFF;
+            border-top: 1px solid #FFF;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        .cities-green {
+            background: #62cb31;
+            min-height: 55px;
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .arrivals-box-01 {
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px;
+            width: 76%;
+            float: left;
+        }
+
+        .arr_wdt {
+            width: 110px !important;
+        }
+
+        .arrivals-box-02 {
+            margin: 0px 0px 0px 0px;
+            padding: 8px 0px 0px 0px;
+            width: 24%;
+            float: left;
+        }
+
+        .label_wh_grn {
+            font-size: 18px;
+            background: #fff;
+            text-align: center;
+            border-radius: 3px;
+            color: #62cb31;
+            font-weight: 600;
+            line-height: 20px;
+        }
+
+        .arrivals-box-02-11 {
+            margin: 0px 0px 0px 0px;
+            padding: 10px 0px;
+            width: 45px;
+            float: left;
+        }
+
+        .label_grn_wh {
+            color: #fff;
+            font-size: 11px;
+            width: 70px;
+            line-height: 12px;
+        }
+
+        .arrivals-box-02-12 {
+            margin: 0px 0px 0px 0px;
+            padding: 8px 0px 0px 10px;
+            width: 70px;
+            float: left;
+        }
+
+        .arrivals-box-02-13 {
+            margin: 0px 0px 0px 0px;
+            padding: 8px 0px 0px 0px;
+            width: 42px;
+            float: right;
+        }
+
+        .nav-tabs>li.active>a,
+        .nav-tabs>li.active>a:hover,
+        .nav-tabs>li.active>a:focus {
+            color: #FFF !important;
+            cursor: pointer !important;
+            background-color: #34495E !important;
+        }
+
+        .nav-tabs.nav-justified>li>a {
+            border-radius: 2px 2px 0 0;
+        }
+
+        .nav-link.ng-binding {
+            padding: 2px 0px !important;
+        }
+
+        .nav>li>a {
+            display: block;
+            padding: 10px 10px;
+            position: relative;
+        }
+
+        h4,
+        .h4 {
+            font-size: 18px;
+        }
+
+        .tab-content>.active,
+        .pill-content>.active {
+            display: block;
+        }
+
+        .table label,
+        .table {
+            font-family: "MONTSERRAT";
+            font-size: 11px !important;
+        }
+
+        body,
+        h4 {
+            font-family: Roboto;
+            font-weight: 400;
+        }
+
+        .tab-content {
+            border-top: 3px solid #ddcfcf;
+            border-left: 0px;
+            border-bottom: 0px;
+            border-right: 0px;
+        }
+
+        .expiring-box {
+            background: #E64A3B;
+            min-height: 55px;
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .percnt {
+            font-size: 50px;
+            font-weight: 600;
+            margin: -15px 0px;
+            color: #62cb31;
+        }
+
+        .complt {
+            font-weight: 300 !important;
+            border-bottom: rgba(219, 224, 230, 0) solid 0px;
+            font-size: 20px;
+        }
+
+        .radio-inline,
+        .checkbox-inline {
+            display: inline-block;
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .checkbox.checkbox-inline {
+            margin-top: 0;
+        }
+
+        .checkbox {
+            padding-left: 20px;
+        }
+
+        .incorPanel,
+        .corPanel {
+            float: left;
+        }
+
+        .period {
+            font-size: 11px;
+        }
+
+        .corPanel {
+            margin-top: 10px;
+        }
+
+        .label-info {
+            background-color: #5bc0de;
+        }
+
+        .label {
+            display: inline;
+            padding: 0.2em 0.6em 0.3em;
+            font-size: 75%;
+            font-weight: bold;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25em;
+        }
+
+        .fontGreenPn {
+            color: #46C10D !important;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .stats h4,
+        h5,
+        h6 {
+            margin: 5px 0;
+        }
+
+        h5,
+        .h5 {
+            font-size: 14px;
+        }
+
+        .form-group select,
+        .form-group button,
+        .form-group .btn,
+        .form-group input,
+        .form-group ul li,
+        .form-group,
+        .form-group textarea,
+        .datepicker,
+        .datepicker * {
+            font-size: 12px !important;
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        .pull-left {
+            float: left !important;
+        }
+
+        .pull-right {
+            float: right !important;
+        }
+
+        .btn-primary.btn-outline {
+            color: #34495e;
+        }
+
+        .btn-outline {
+            color: inherit;
+            background-color: transparent;
+            transition: all .5s;
+        }
+
+        .btn-primary {
+
+            border-color: #34495e;
+            color: #FFFFFF;
+        }
+
+        .btn {
+            border-radius: 3px;
+        }
+
+        .btn-primary.btn-outline:hover,
+        .btn-success.btn-outline:hover,
+        .btn-info.btn-outline:hover,
+        .btn-warning.btn-outline:hover,
+        .btn-danger.btn-outline:hover {
+            color: #fff;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open .dropdown-toggle.btn-primary {
+            background-color: #3f5872;
+            border-color: #3f5872;
+            color: #FFFFFF;
+            outline: none;
+        }
+
+        element.style {}
+
+        .form-group select,
+        .form-group button,
+        .form-group .btn,
+        .form-group input,
+        .form-group ul li,
+        .form-group,
+        .form-group textarea,
+        .datepicker,
+        .datepicker * {
+            font-size: 12px !important;
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        .btn-info.btn-outline {
+            color: #3498db;
+        }
+
+        .btn-info {
+
+            border-color: #3498db;
+        }
+
+        .btn-info:hover,
+        .btn-info:focus,
+        .btn-info:active,
+        .btn-info.active,
+        .open .dropdown-toggle.btn-info {
+            background-color: #4ea5e0;
+            border-color: #4ea5e0;
+            color: #FFFFFF;
+        }
+
+        thead {
+            text-transform: uppercase;
+            font-family: Roboto;
+            font-weight: 900;
+            font-size: 13px;
+            color: #5d6974;
+            background-color: white;
+            float: left;
+        }
+
+        .heading_tiltle {
+            font-size: 13px !important;
+            font-weight: 600;
+        }
+
+        .table>tbody>tr>td {
+            font-size: 8pt !important;
+            vertical-align: middle;
+            font-family: "Arial";
+            padding: 8px;
+        }
+
+        .panel-body1 tbody>tr>td {
+            border-top: 0px solid #ddd;
+        }
+
+        .btn-sm,
+        .btn-group-sm>.btn {
+            padding: 5px 10px;
+            font-size: 12px;
+            line-height: 1.5;
+            border-radius: 3px;
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+        }
+
+
+        .table-box {
+            width: 100%;
+            padding: 10px 10px 0px 10px;
+            margin: 0px;
+            float: left;
+        }
+
+        .table-striped>tbody>tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        td {
+            text-align: left !important;
+          width: 12%;
+        }
+        td a {
+            text-decoration: none !important;
+          
+        }
+        td a:hover {
+            text-decoration: none !important;
+            color:black !important ;
+        }
+
+        .table_lbl {
+    text-align: center;
+    padding: 3px 0px;
+    font-size: 11px;
+    color: #fff;
+    border-radius: 3px;
+    width: 126px;
+    height: 20px;
+    float: left;
+    font-size: 10px;
+    font-weight: 600;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+.confirmed {
+    background-color: #4CAF50;
+}
+.cancelled {
+    background-color: #f44336;
+}
+
+
+        .cities-green {
+    background: #62cb31;
+    min-height: 55px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+input[type=text] {
+    background: white !important;
+}
+
+
+    </style>
+
+    <!--    Panel Body        -->
+
+    <div class="container-fluid pt-0 p-4" id="content-pad" style="padding-left:30px !important;">
+
+        <form style="border-top: 2px solid #62cb31;    padding-top: 12px;">
+            <div class="row">
+            
+                      <div class="form-group col-md-2">
+                         <label>Hotel Name</label> <input type="text" class="form-control ui-autocomplete-input ng-pristine ng-untouched ng-valid ng-empty" ng-model="hotel_name" id="hotel_name" autocomplete="off">
+                      </div>
+                      <div class="form-group col-md-2">
+                         <label>Log Type</label> 
+                         <input type="text" class="form-control ui-autocomplete-input ng-pristine ng-untouched ng-valid ng-empty" ng-model="logType_search" id="logType" autocomplete="off">
+                      </div>
+                      <div class="form-group col-md-2">
+                         <label>Log Description</label>
+                         <div class=" input-group col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="logDescription" id="logDescription">
+                         </div>
+                      </div>
+                      <div class="form-group col-md-3">
+                         <label>From Date</label>
+                         <div class="input-group date input-daterange" id="datetimepicker7">
+                            <input type="text" class="form-control datepicker log_date ng-pristine ng-untouched ng-valid ng-empty" ng-model="date_from_search" dtype="From" data-date-format="dd-mm-yyyy"> 
+                            <span class="input-group-addon">To</span> 
+                            <input type="text" class="form-control datepicker booking_date ng-pristine ng-untouched ng-valid ng-empty" ng-model="date_to_search" dtype="To" data-date-format="dd-mm-yyyy"> 
+                            <span ng-click="clear('log_date')" title="clear" alt="clear" class="input-group-addon"> 
+                                  <i class="fa fa-trash"></i>
+                            </span>
+                         </div>
+                      </div>
+                      <div class=" col-md-1 col-sm-4">
+                         <label></label><br>
+                            <a class="btn btn-sm btn-dark" href="hotelInventoryappReportExpiringRatesbutton.html" style="margin-top:6px" "=""><b>Search</b></a>
+                      </div>
+                      <div class="clearfix"></div>
+                   </div>
+                   <div class="col-md-12">
+                  
+                                <h5 class="mesID1 alert alert-danger text-center" style="    color: #a94442;    text-transform: uppercase;
+                                font-family: Roboto;
+                                font-weight: 900;background-color: #f2dede !important;
+                   border-color: #ebccd1;
+                                font-size: 13px;">No Results.</h5>
+                       
+                    </div>
+                
+              
+        </form>
+      
+
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+<script>
+ // For service Datepicker
+
+ const serviceStartdatepicker = flatpickr("#serviceStartdatepicker", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+
+
+  const serviceEndDatepicker = flatpickr("#serviceEndDatepicker", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+
+
+  const sTrashBtn = document.getElementById("sTrashBtn");
+  sTrashBtn.addEventListener("click", function () {
+    serviceStartdatepicker.clear();
+    serviceEndDatepicker.clear();
+
+  });
+   // Forbooking Datepicker
+
+ const bookingStartdatepicker = flatpickr("#bookingStartdatepicker", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+
+
+  const bookingEndDatepicker = flatpickr("#bookingEndDatepicker", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+
+
+  const bTrashBtn = document.getElementById("bTrashBtn");
+  bTrashBtn.addEventListener("click", function () {
+    bookingStartdatepicker.clear();
+    bookingEndDatepicker.clear();
+
+  });
+</script>
+
+</html>

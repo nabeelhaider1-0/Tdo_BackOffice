@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body>
+
+    <div class="color-line">
+    </div>
+
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;">
+            <a class="navbar-brand" href="#" style="padding-left: 23px; background-color:#f7f9fa">
+                <img src="logo.png" alt="Logo" height="50" style="
+                width: 100px;
+            ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto" id="sizing">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="hotelInventoryDashboard.html">Dashboard </a>
+                    </li>
+
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rates<span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="hotelInventoryapp.html">Manage Rates</a>
+                            <a class="dropdown-item" href="hotelInventorydeleterates.html">Delete Rates</a>
+                            <a class="dropdown-item" href="hotelInventoryoldroomrates.html">Old Room Rates</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappbookingDetails.html">Bookings</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Masters
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Hotel Setting</a>
+                            <a class="dropdown-item" href="#">Room Category</a>
+                            <a class="dropdown-item" href="#">Map Hotel Rooms</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Policies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappSupplment.html">Supplements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappManageSeason.html">Manage Seasons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappExtrabeds.html">Extra-bed</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Offer
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Search</a>
+                            <a class="dropdown-item" href="#">Create</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Arivals</a>
+                            <a class="dropdown-item" href="#">Expiring Rates</a>
+                            <a class="dropdown-item" href="#">Recent Changes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappContracts.html">Contracts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryapptariffwriter.html">Tariff Writer</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="user.png" alt="Account Logo" height="45" style="    width: 41px;
+                            padding: 8px;
+                            border: 1px solid #eaebec;
+                            border-radius: 50%;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-12">
+                    <h5 style="font-size:30px;font-weight: 700;    margin: 0px;
+                    padding: 0px;
+                    text-transform: uppercase;">HOTEL ROOM MAPPING</h5>
+                </div>
+
+
+
+
+
+
+
+        </header>
+
+
+    </section>
+
+
+    <style>
+        #sizing li a {
+            font-size: 12px;
+            color: #34495e;
+        }
+
+        .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1;
+}
+        .btn-primary {
+            background-color: #34495e;
+            border-color: #34495e;
+            color: #FFFFFF;
+            font-size: 13px;
+        }
+
+        .btn-primary:hover {
+            background-color: #3f5872 !important;
+            border-color: #3f5872 !important;
+            color: #FFFFFF !important;
+            outline: none !important;
+        }
+
+        #date1 {
+            background-color: white;
+        }
+
+        #date2 {
+            background-color: white;
+        }
+
+        .ng-hide {
+            display: none;
+        }
+
+        .h-bg-navy-blue {
+            background: #34495e;
+        }
+
+        .adddates {
+            background: #74D348;
+            color: white;
+        }
+
+        .adddates:hover {
+            background: #74D348;
+        }
+
+        .bootstrap-select.show-menu-arrow.open>.dropdown-toggle,
+        .bootstrap-select.show-menu-arrow.show>.dropdown-toggle {
+            z-index: 1;
+        }
+
+        th {
+            text-align: left !important;
+            width: 200px;
+            vertical-align: middle !important;
+            padding: 7px 8px !important;
+            font-size: 12px;
+        }
+
+        td {
+            background-color: #FFFFFF !important;
+        }
+
+       
+
+        .gapBigMe {
+            padding: 0px 10px;
+        }
+
+        .child-settings-box {
+            width: 100%;
+            margin-top: -450px;
+            padding: 0px;
+            float: left;
+            border: #ededed solid 1px;
+        }
+
+        .child-settings-grey {
+            width: 100%;
+            margin: 0px;
+            padding: 6px 0px;
+            float: left;
+            background: #f9f9f9;
+            border-bottom: #ededed solid 1px;
+            min-height: 45px;
+        }
+
+        .child-settings-box-01 {
+            width: 180px;
+            margin: 0 0 0 0;
+            padding: 0px;
+            float: left;
+        }
+
+        .child-settings-text01 {
+            font-family: 'Roboto';
+            font-weight: 500;
+            color: #3e3e3e;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 10px 0px 0px;
+        }
+
+        .child-settings-box-NEW {
+            width: 80%;
+            float: left;
+        }
+
+        .child-settings-box-02-inner2 {
+            width: 100%;
+            margin: 0px;
+            padding: 6px 0px 0px 0px;
+            float: left;
+        }
+
+        .checkbox.checkbox-inline {
+            margin-top: 0;
+        }
+
+        .uniqhpanel .checkbox-inline {
+            margin-right: 10px;
+        }
+
+        .checkbox {
+            padding-left: 20px;
+        }
+
+        .radio-inline,
+        .checkbox-inline {
+            display: inline-block;
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        element.style {}
+
+        .checkbox label {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            padding-left: 5px;
+        }
+
+        .checkbox label {
+            line-height: 17px;
+        }
+
+        .checkbox label {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            padding-left: 4px;
+            padding-right: 10px;
+        }
+
+        .radio label,
+        .checkbox label {
+            min-height: 20px;
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        label {
+            font-weight: 400;
+        }
+
+        label {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        user agent stylesheet label {
+            cursor: default;
+        }
+
+        .radio-inline,
+        .checkbox-inline {
+            display: inline-block;
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            background-color: #fff;
+            font-size: 13px;
+            color: #6a6c6f;
+        }
+
+        .hotel-release-period-settings-limit,
+        .applicable_tax {
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 50%;
+        }
+
+        .child-settings-box-21 {
+            width: 180px;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+        }
+
+        .child-settings-box-applicable_tax {
+            width: 50%;
+            float: left;
+        }
+
+        .child-settings-box-22 {
+            width: 190px;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+        }
+        .child-settings-limit-box {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+.child-settings-limit-box01 {
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+.child-settings-box-23 {
+    width: 40px;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+.child-settings-text02 {
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: #828f9b;
+    font-size: 12px;
+    text-align: right;
+    padding: 5px 0px 0px 0px;
+}
+.child-settings-white {
+    width: 100%;
+    margin: 0px;
+    padding: 6px 0px;
+    float: left;
+    background: #ffffff;
+    border-bottom: #ededed solid 1px;
+    min-height: 45px;
+}
+.child-settings-footer {
+    width: 100%;
+    margin: 0px;
+    padding: 6px 130px 0px 0px;
+    float: left;
+    background: #e0efd8;
+    border-bottom: #ededed solid 1px;
+    min-height: 45px;
+    text-align: right;
+}
+    </style>
+
+    <!--    Panel Body        -->
+
+    <div class="container-fluid pt-0 p-4" id="content-pad" style="padding-left:30px !important;">
+
+
+        <div class="blue-box1 mt-3">
+            <div class="row">
+                <div class="col-md-2 mt-2">
+                    <div class="labelTitle2">MANAGE MAPPING FOR
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <select class="selectpicker mt-2 form-control form-control-sm show-menu-arrow bs-select-hidden"
+                        id="sel_branch" name="sel_branch" title="-Select-" onchange="getAgentList(this.value)"
+                        data-live-search="true">
+                        <option class="bs-title-option" value=""></option>
+                        <option label="Mumbai Branch" value="1">Mumbai Branch</option>
+                        <option label="UAE Branch" value="2">UAE Branch</option>
+                        <option label="UK Head Office" value="3">UK Head Office</option>
+                        <option label="Head Office" value="4">Head Office</option>
+                        <option label="Dubai GSA" value="5">Dubai GSA</option>
+                        <option label="London Branch" value="6">London Branch</option>
+                        <option label="Saudi Branch" value="7">Saudi Branch</option>
+                        <option label="Dubai V3 Wh" value="8">Dubai V3 Wh</option>
+                        <option label="Pune Branch" value="9">Pune Branch</option>
+                        <option label="India - GSA" value="10">India - GSA</option>
+                        <option label="Test Branch1" value="11">Test Branch1</option>
+                        <option label="Test Branch" value="13">Test Branch</option>
+                        <option label="Testffff" value="14">Testffff</option>
+                        <option label="FRANCHISE BRANCH" value="15">FRANCHISE BRANCH</option>
+                        <option label="Jcholidays" value="16">Jcholidays</option>
+                        <option label="Demo" value="17">Demo</option>
+                        <option label="malaysia" value="19">malaysia</option>
+                        <option label="GSA Iraq" value="20">GSA Iraq</option>
+                        <option label="Chennai" value="21">Chennai</option>
+                        <option label="Bangkok Branch" value="22">Bangkok Branch</option>
+                        <option label="suhas_branch" value="23">suhas_branch</option>
+                        <option label="Istanbul" value="24">Istanbul</option>
+                        <option label="hyderabad" value="25">hyderabad</option>
+                        <option label="hyderabad_suhas" value="26">hyderabad_suhas</option>
+                        <option label="branch_suhas" value="27">branch_suhas</option>
+                        <option label="New Joint Branch" value="28">New Joint Branch</option>
+                        <option label="Bahrain Branch" value="29">Bahrain Branch</option>
+                        <option label="Branch Bahrain" value="30">Branch Bahrain</option>
+                        <option label="testdddd" value="31">testdddd</option>
+                        <option label="Demo" value="32">Demo</option>
+                        <option label="HotelConfirm" value="33">HotelConfirm</option>
+                        <option label="HotelConfirm_Live" value="34">HotelConfirm_Live</option>
+                        <option label="GSA Branch" value="37">GSA Branch</option>
+                        <option label="Testpp" value="38">Testpp</option>
+                        <option label="Bolton Branch" value="41">Bolton Branch</option>
+                        <option label="World Avenue" value="42">World Avenue</option>
+                        <option label="TEST_BRANCH_A" value="43">TEST_BRANCH_A</option>
+                        <option label="TEST_BRANCH_JV_A" value="44">TEST_BRANCH_JV_A</option>
+                        <option label="TEST_BRANCH_JV_C" value="45">TEST_BRANCH_JV_C</option>
+                        <option label="world_avenue_malesia" value="46">world_avenue_malesia</option>
+                        <option label="World Avenues Malaysia" value="47">World Avenues Malaysia</option>
+                        <option label="test_branch_jv" value="48">test_branch_jv</option>
+                        <option label="1 Booking" value="49">1 Booking</option>
+
+                    </select>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 2nd Form -->
+
+        <form  style="border-top: 2px solid #62cb31;      padding-top: 12px;">
+          
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                 <div class="border-green extra_padding">
+                     <div class="panel-body">
+                            <div class="row">
+                                <!-- ngRepeat: x in HotelRoomMapped --><div class="col-md-4 form-group ng-scope" ng-repeat="x in HotelRoomMapped">
+                                 <div class="checkbox checkbox-success">
+                                     <input ng-disabled="CheckIfDisabled(x.id,x.room_mapped_with_rates)" ng-checked="CheckIfMapped(x.id,x.room_mapped)" id="30" type="checkbox" name="map_room_class[]" value="30" ng-click="toggleSelection(x.id)" checked="checked">
+                                     <label for="30"><b class="ng-binding">1 Bedroom suite Triple </b>  <!-- ngIf: x.refundable_type --></label>						
+                                 </div>
+                             </div><!-- end ngRepeat: x in HotelRoomMapped --><div class="col-md-4 form-group ng-scope" ng-repeat="x in HotelRoomMapped">
+                                 <div class="checkbox checkbox-success">
+                                     <input ng-disabled="CheckIfDisabled(x.id,x.room_mapped_with_rates)" ng-checked="CheckIfMapped(x.id,x.room_mapped)" id="94" type="checkbox" name="map_room_class[]" value="94" ng-click="toggleSelection(x.id)">
+                                     <label for="94"><b class="ng-binding">Abc Single, Max Pax - 10 </b>  <!-- ngIf: x.refundable_type --></label>						
+                                 </div>
+                             </div><!-- end ngRepeat: x in HotelRoomMapped --><div class="col-md-4 form-group ng-scope" ng-repeat="x in HotelRoomMapped">
+                                 <div class="checkbox checkbox-success">
+                                     <input ng-disabled="CheckIfDisabled(x.id,x.room_mapped_with_rates)" ng-checked="CheckIfMapped(x.id,x.room_mapped)" id="123" type="checkbox" name="map_room_class[]" value="123" ng-click="toggleSelection(x.id)" checked="checked">
+                                     <label for="123"><b class="ng-binding">Classic Triple </b>  <!-- ngIf: x.refundable_type --></label>						
+                                 </div>
+                             </div><!-- end ngRepeat: x in HotelRoomMapped --><div class="col-md-4 form-group ng-scope" ng-repeat="x in HotelRoomMapped">
+                                 <div class="checkbox checkbox-success">
+                                     <input ng-disabled="CheckIfDisabled(x.id,x.room_mapped_with_rates)" ng-checked="CheckIfMapped(x.id,x.room_mapped)" id="128" type="checkbox" name="map_room_class[]" value="128" ng-click="toggleSelection(x.id)">
+                                     <label for="128"><b class="ng-binding">Delux Single, Max Pax - 5, Extrabed - 3 </b>  <!-- ngIf: x.refundable_type --></label>						
+                                 </div>
+                             </div><!-- end ngRepeat: x in HotelRoomMapped --><div class="col-md-4 form-group ng-scope" ng-repeat="x in HotelRoomMapped">
+                                 <div class="checkbox checkbox-success">
+                                     <input ng-disabled="CheckIfDisabled(x.id,x.room_mapped_with_rates)" ng-checked="CheckIfMapped(x.id,x.room_mapped)" id="155" type="checkbox" name="map_room_class[]" value="155" ng-click="toggleSelection(x.id)">
+                                     <label for="155"><b class="ng-binding">Executive Single, Extrabed - 2 </b>  <!-- ngIf: x.refundable_type --></label>						
+                                 </div>
+                             </div><!-- end ngRepeat: x in HotelRoomMapped --><div class="col-md-4 form-group ng-scope" ng-repeat="x in HotelRoomMapped">
+                                 <div class="checkbox checkbox-success">
+                                     <input ng-disabled="CheckIfDisabled(x.id,x.room_mapped_with_rates)" ng-checked="CheckIfMapped(x.id,x.room_mapped)" id="194" type="checkbox" name="map_room_class[]" value="194" ng-click="toggleSelection(x.id)" disabled="disabled" checked="checked">
+                                     <label for="194"><b class="ng-binding">Classic Single </b>  <!-- ngIf: x.refundable_type --></label>						
+                                 </div>
+                             </div><!-- end ngRepeat: x in HotelRoomMapped -->	
+                         </div>
+                         <div class="row" ng-show="showsave ">
+                             <div class="col-md-2 form-group" style="padding-left: 33px;">
+                                 <button class="btn btn-primary " type="button" ng-click="MapHotel()">
+                                     <i class="fa fa-floppy-o"></i>&nbsp;Save
+                                 </button>
+                             </div>
+                         </div>
+                         <div class="clearfix"></div>
+                     </div>
+                    </div>
+             </div>
+            </div>
+
+
+
+
+        </form>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+<script>
+    // For Datepicker
+
+    const date1 = flatpickr("#date1", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const date2 = flatpickr("#date2", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+</script>
+
+</html>
