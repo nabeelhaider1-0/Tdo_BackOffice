@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body>
+
+    <div class="color-line">
+    </div>
+
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: white !important;">
+            <a class="navbar-brand" href="#" style="padding-left: 23px; background-color:#f7f9fa">
+                <img src="logo.png" alt="Logo" height="50" style="
+                width: 100px;
+            ">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto" id="sizing">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="hotelInventoryDashboard.html">Dashboard </a>
+                    </li>
+
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Rates<span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="hotelInventoryapp.html">Manage Rates</a>
+                            <a class="dropdown-item" href="hotelInventorydeleterates.html">Delete Rates</a>
+                            <a class="dropdown-item" href="hotelInventoryoldroomrates.html">Old Room Rates</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappbookingDetails.html">Bookings</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Masters
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="hotelInventoryappMasterHotelsetting.html">Hotel Setting</a>
+                            
+                                <a class="dropdown-item dropdown-toggle" href="#" id="roomCategoryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Room Category
+                                </a>
+                                <ul class="dropdown-menu dropdown-submenu" id="dru">
+                                    <li><a class="dropdown-item" href="hotelInventoryappMasterAdd.html">Add</a></li>
+                                    <li><a class="dropdown-item" href="hotelInventoryappMasterSearch.html">Search</a></li>
+                                  </ul>
+                          
+                            
+                          
+                            
+                            <a class="dropdown-item" href="hotelInventoryappMasterHotelMappinhg.html">Map Hotel Rooms</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryPolicies.html">Policies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappSupplment.html">Supplements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappManageSeason.html">Manage Seasons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappExtrabeds.html">Extra-bed</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Offer
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="hotelInventoryappSearchoffer.html">Search</a>
+                            <a class="dropdown-item" href="hotelInventoryappcreateoffer.html">Create</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Reports
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="hotelInventoryappReportsArrival.html">Arivals</a>
+                            <a class="dropdown-item" href="hotelInventoryappReportExpiringRates.html">Expiring Rates</a>
+                            <a class="dropdown-item" href="hotelInventoryappReportRecentChanges.html">Recent Changes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryappContracts.html">Contracts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotelInventoryapptariffwriter.html">Tariff Writer</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="user.png" alt="Account Logo" height="45" style="    width: 41px;
+                            padding: 8px;
+                            border: 1px solid #eaebec;
+                            border-radius: 50%;">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-12">
+                    <h5 style="font-size:18px;font-weight: 500;    margin: 0px;
+                    padding: 0px;
+                    ">Search Room Category</h5>
+                </div>
+
+
+
+
+
+
+
+        </header>
+
+
+    </section>
+
+
+    <style>
+        #sizing li a {
+            font-size: 12px;
+            color: #34495e;
+        }
+
+        .form-control[disabled],
+        .form-control[readonly],
+        fieldset[disabled] .form-control {
+            cursor: not-allowed;
+            background-color: #eee;
+            opacity: 1;
+        }
+
+        .btn-primary {
+            background-color: #34495e;
+            border-color: #34495e;
+            color: #FFFFFF;
+            font-size: 13px;
+        }
+
+        .btn-primary:hover {
+            background-color: #3f5872 !important;
+            border-color: #3f5872 !important;
+            color: #FFFFFF !important;
+            outline: none !important;
+        }
+
+        #date1 {
+            background-color: white;
+        }
+
+        #date2 {
+            background-color: white;
+        }
+
+        .ng-hide {
+            display: none;
+        }
+
+        .h-bg-navy-blue {
+            background: #34495e;
+        }
+
+        .adddates {
+            background: #74D348;
+            color: white;
+        }
+
+        .adddates:hover {
+            background: #74D348;
+        }
+
+        .bootstrap-select.show-menu-arrow.open>.dropdown-toggle,
+        .bootstrap-select.show-menu-arrow.show>.dropdown-toggle {
+            z-index: 1;
+        }
+
+        th {
+            text-align: left !important;
+            width: 200px;
+            vertical-align: middle !important;
+            padding: 7px 8px !important;
+            font-size: 12px;
+        }
+
+        td {
+            background-color: #FFFFFF !important;
+            text-align: left !important;
+
+        }
+
+
+
+        .gapBigMe {
+            padding: 0px 10px;
+        }
+
+        .child-settings-box {
+            width: 100%;
+            margin-top: -450px;
+            padding: 0px;
+            float: left;
+            border: #ededed solid 1px;
+        }
+
+        .child-settings-grey {
+            width: 100%;
+            margin: 0px;
+            padding: 6px 0px;
+            float: left;
+            background: #f9f9f9;
+            border-bottom: #ededed solid 1px;
+            min-height: 45px;
+        }
+
+        .child-settings-box-01 {
+            width: 180px;
+            margin: 0 0 0 0;
+            padding: 0px;
+            float: left;
+        }
+
+        .child-settings-text01 {
+            font-family: 'Roboto';
+            font-weight: 500;
+            color: #3e3e3e;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 10px 0px 0px;
+        }
+
+        .child-settings-box-NEW {
+            width: 80%;
+            float: left;
+        }
+
+        .child-settings-box-02-inner2 {
+            width: 100%;
+            margin: 0px;
+            padding: 6px 0px 0px 0px;
+            float: left;
+        }
+
+        .checkbox.checkbox-inline {
+            margin-top: 0;
+        }
+
+        .uniqhpanel .checkbox-inline {
+            margin-right: 10px;
+        }
+
+        .checkbox {
+            padding-left: 20px;
+        }
+
+        .radio-inline,
+        .checkbox-inline {
+            display: inline-block;
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        element.style {}
+
+        .checkbox label {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            padding-left: 5px;
+        }
+
+        .checkbox label {
+            line-height: 17px;
+        }
+
+        .checkbox label {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            padding-left: 4px;
+            padding-right: 10px;
+        }
+
+        .radio label,
+        .checkbox label {
+            min-height: 20px;
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        label {
+            font-weight: 400;
+        }
+
+        label {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        user agent stylesheet label {
+            cursor: default;
+        }
+
+        .radio-inline,
+        .checkbox-inline {
+            display: inline-block;
+            padding-left: 20px;
+            margin-bottom: 0;
+            font-weight: normal;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            background-color: #fff;
+            font-size: 13px;
+            color: #6a6c6f;
+        }
+
+        .hotel-release-period-settings-limit,
+        .applicable_tax {
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 50%;
+        }
+
+        .child-settings-box-21 {
+            width: 180px;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+        }
+
+        .child-settings-box-applicable_tax {
+            width: 50%;
+            float: left;
+        }
+
+        .child-settings-box-22 {
+            width: 190px;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+        }
+
+        .child-settings-limit-box {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+        }
+
+        .child-settings-limit-box01 {
+            width: 50%;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+        }
+
+        .child-settings-box-23 {
+            width: 40px;
+            margin: 0px;
+            padding: 0px;
+            float: left;
+        }
+
+        .child-settings-text02 {
+            font-family: 'Roboto';
+            font-weight: 300;
+            color: #828f9b;
+            font-size: 12px;
+            text-align: right;
+            padding: 5px 0px 0px 0px;
+        }
+
+        .child-settings-white {
+            width: 100%;
+            margin: 0px;
+            padding: 6px 0px;
+            float: left;
+            background: #ffffff;
+            border-bottom: #ededed solid 1px;
+            min-height: 45px;
+        }
+
+        .child-settings-footer {
+            width: 100%;
+            margin: 0px;
+            padding: 6px 130px 0px 0px;
+            float: left;
+            background: #e0efd8;
+            border-bottom: #ededed solid 1px;
+            min-height: 45px;
+            text-align: right;
+        }
+
+        .table-responsive {
+            width: 100% !important;
+        }
+
+        .border-green {
+            border-top: 2px solid #62cb31;
+            background-color: #fff;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .table .checkbox label {
+            padding-left: 20px;
+        }
+
+        .checkbox label {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            padding-left: 5px;
+        }
+
+        .table label,
+        .table {
+            font-family: "MONTSERRAT";
+            font-size: 11px !important;
+        }
+
+        .checkbox label {
+            line-height: 17px;
+        }
+
+        thead {
+            text-transform: uppercase;
+            font-family: Roboto;
+            font-weight: 900;
+            font-size: 13px;
+            color: #5d6974 !important;
+        }
+
+        .table>thead>tr>td {
+            color: #5d6974 !important;
+            text-transform: uppercase;
+            font-family: Roboto;
+            font-weight: 900;
+            font-size: 13px;
+            color: #5d6974 !important;
+            text-align: left !important;
+        }
+    </style>
+
+    <!--    Panel Body        -->
+
+    <div class="container-fluid pt-0 p-4" id="content-pad" style="padding-left:30px !important;">
+
+
+
+
+
+        <!-- 2nd Form -->
+
+        <form class="mt-3" style="border-top: 2px solid #62cb31;    padding-top: 17px; ">
+            <div class="panel-body">
+                <div class="row">
+                <div class="col-md-2 col-sm-6">
+                    <input title="Search Inventory Room" placeholder="Search Inventory Room"
+                        class="form-control form-control-sm form_element required ui-autocomplete-input" type="text"
+                        id="search_inventory_room_input" autocomplete="off">
+                    <input type="hidden" ng-model="search_inventory_room_category_update" ng-value=""
+                        class="ng-pristine ng-untouched ng-valid ng-empty">
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <select data-container="body"
+                        class="selectpicker show-menu-arrow form-control form-control-sm form_element required ng-pristine ng-untouched ng-valid ng-empty bs-select-hidden"
+                        ng-model="bn_selected_hotels" ng-init="bn_hotel_list=''" data-actions-box="true"
+                        ng-change="InitRoomClassScreen()">
+                        <option value="">- Select Hotel-</option>
+                        <!-- ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="67301" class="ng-binding ng-scope">Alaaddin Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="67069" class="ng-binding ng-scope">Alfa Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="67123" class="ng-binding ng-scope">All Seasons
+                            Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="66914" class="ng-binding ng-scope">Ambassador Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38216" class="ng-binding ng-scope">1234 Testing
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38278" class="ng-binding ng-scope">5footway.Inn
+                            Project Bugis</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38274" class="ng-binding ng-scope">5footway.inn
+                            Project Chinatown 1</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38276" class="ng-binding ng-scope">5footway.Inn
+                            Project Chinatown 2</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38407" class="ng-binding ng-scope">5footwayinn
+                            Project Boat Quay</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38270" class="ng-binding ng-scope">ABC Premium
+                            Hostel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38367" class="ng-binding ng-scope">Adler Hostel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38362" class="ng-binding ng-scope">Adonis Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38356" class="ng-binding ng-scope">Aliwal Park
+                            Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68384" class="ng-binding ng-scope">Amara Sanctuary
+                            Resort Sentosa</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64081" class="ng-binding ng-scope">Amara Sanctuary
+                            Resort Sentosa</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38499" class="ng-binding ng-scope">Amara Singapore
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38288" class="ng-binding ng-scope">Amaris Hotel
+                            Bugis</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38302" class="ng-binding ng-scope">Amoy Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38254" class="ng-binding ng-scope">Aqueen Hotel
+                            Balestier</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38252" class="ng-binding ng-scope">Aqueen Hotel
+                            Lavender</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38419" class="ng-binding ng-scope">Aqueen Jalan
+                            Besar</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38214" class="ng-binding ng-scope">Arianna</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38428" class="ng-binding ng-scope">Arton Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38150" class="ng-binding ng-scope">Ascott Raffles
+                            Place Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38373" class="ng-binding ng-scope">Attic Airways
+                            Bed &amp; Breakfast</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38230" class="ng-binding ng-scope">Bay Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38502" class="ng-binding ng-scope">Bayview Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38354" class="ng-binding ng-scope">Beach Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38410" class="ng-binding ng-scope">Beach Villas
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38292" class="ng-binding ng-scope">Big Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38364" class="ng-binding ng-scope">Blanc Inn
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38343" class="ng-binding ng-scope">Bliss Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38331" class="ng-binding ng-scope">Blissful Loft
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38319" class="ng-binding ng-scope">Bunc@Radius
+                            Clarke Quay</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38256" class="ng-binding ng-scope">Bunc@Radius
+                            Hostel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68373" class="ng-binding ng-scope">Capella
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64070" class="ng-binding ng-scope">Capella
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38250" class="ng-binding ng-scope">Capri By Fraser
+                            Changi City</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38267" class="ng-binding ng-scope">Capsules @ The
+                            Little Red Dot</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38454" class="ng-binding ng-scope">Carlton</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38286" class="ng-binding ng-scope">Carlton City
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38351" class="ng-binding ng-scope">Chang Ziang
+                            Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38360" class="ng-binding ng-scope">Changi Cove
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38293" class="ng-binding ng-scope">Checkers
+                            Backpackers Inn</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38508" class="ng-binding ng-scope">Chinatown
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38151" class="ng-binding ng-scope">Citadines MT.
+                            Sophia</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38401" class="ng-binding ng-scope">City Backpackers
+                            @ Hongkong Street</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38435" class="ng-binding ng-scope">Clover 33 Jalan
+                            Sultan</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38438" class="ng-binding ng-scope">Clover The Arts
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38555" class="ng-binding ng-scope">Concorde
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38458" class="ng-binding ng-scope">Conrad
+                            Centennial Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38460" class="ng-binding ng-scope">Copthorne King's
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38764" class="ng-binding ng-scope">Crowne Plaza
+                            Changi Airport</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38145" class="ng-binding ng-scope">Cultural Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38370" class="ng-binding ng-scope">D'Kranji Farm
+                            Resort</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38325" class="ng-binding ng-scope">Darlene Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38259" class="ng-binding ng-scope">Days Hotel
+                            Singapore at Zhongshan Park</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38262" class="ng-binding ng-scope">Dorsett
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38395" class="ng-binding ng-scope">Dragon Court
+                            Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68378" class="ng-binding ng-scope">Equarius
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64075" class="ng-binding ng-scope">Equarius
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38482" class="ng-binding ng-scope">Fairmont
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38219" class="ng-binding ng-scope">Far East Plaza
+                            Apartment</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68376" class="ng-binding ng-scope">Festive</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64073" class="ng-binding ng-scope">Festive</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38721" class="ng-binding ng-scope">Fort Canning
+                            Lodge</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38382" class="ng-binding ng-scope">Four Chain View
+                            Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38511" class="ng-binding ng-scope">Four Seasons
+                            Hotel Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38656" class="ng-binding ng-scope">Fragrance -
+                            Selegie</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38243" class="ng-binding ng-scope">Fragrance
+                            Elegance</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38683" class="ng-binding ng-scope">Fragrance Hotel
+                            - Crystal</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38687" class="ng-binding ng-scope">Fragrance Hotel
+                            - Emerald</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38164" class="ng-binding ng-scope">Fragrance Hotel
+                            - Oasis</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38691" class="ng-binding ng-scope">Fragrance Hotel
+                            - Pearl</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38678" class="ng-binding ng-scope">Fragrance Hotel
+                            - Rose</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38166" class="ng-binding ng-scope">Fragrance Hotel
+                            - Royal</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38695" class="ng-binding ng-scope">Fragrance Hotel
+                            - Ruby</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38699" class="ng-binding ng-scope">Fragrance Hotel
+                            - Sapphire</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38209" class="ng-binding ng-scope">Fragrance Hotel
+                            Bugis</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38155" class="ng-binding ng-scope">Fragrance Hotel
+                            Ocean View</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38227" class="ng-binding ng-scope">Fragrance Hotel
+                            Riverside</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38163" class="ng-binding ng-scope">Fragrance
+                            Hotel-Sunflower</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38762" class="ng-binding ng-scope">Fragrance
+                            Imperial</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38154" class="ng-binding ng-scope">Fragrance
+                            Waterfront</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38515" class="ng-binding ng-scope">Furama City
+                            Centre</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38519" class="ng-binding ng-scope">Furama
+                            Riverfront</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38376" class="ng-binding ng-scope">G4 Station
+                            Backpackers' Hostel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38523" class="ng-binding ng-scope">Gallery Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38531" class="ng-binding ng-scope">Goodwood Park
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38462" class="ng-binding ng-scope">Grand Copthorne
+                            Waterfront</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38464" class="ng-binding ng-scope">Grand Hyatt
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38466" class="ng-binding ng-scope">Grand Mercure
+                            Roxy</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38496" class="ng-binding ng-scope">Grand Pacific
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38535" class="ng-binding ng-scope">Grand Park City
+                            Hall</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38718" class="ng-binding ng-scope">Grand Park
+                            Orchard</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38143" class="ng-binding ng-scope">Harbour Ville
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68375" class="ng-binding ng-scope">Hard Rock Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64072" class="ng-binding ng-scope">Hard Rock Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38670" class="ng-binding ng-scope">Hilton Singapore
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38539" class="ng-binding ng-scope">Holiday Inn
+                            Atrium</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38297" class="ng-binding ng-scope">Holiday Inn
+                            Express Singapore Clarke Quay</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38543" class="ng-binding ng-scope">Holiday Inn
+                            Singapore Orchard City Centre</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38404" class="ng-binding ng-scope">Hotel 101
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38665" class="ng-binding ng-scope">Hotel 1929
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38132" class="ng-binding ng-scope">Hotel 34
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38241" class="ng-binding ng-scope">Hotel 81 -
+                            Balestier</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38742" class="ng-binding ng-scope">Hotel 81 - Bugis
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38739" class="ng-binding ng-scope">Hotel 81 -
+                            Orchid</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38748" class="ng-binding ng-scope">Hotel 81 -
+                            Rochor</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38134" class="ng-binding ng-scope">Hotel 81 -
+                            Selegie</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38745" class="ng-binding ng-scope">Hotel 81 -
+                            Tristar</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38648" class="ng-binding ng-scope">Hotel 81
+                            Bencoolen</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38196" class="ng-binding ng-scope">Hotel 81
+                            Chinatown</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38182" class="ng-binding ng-scope">Hotel 81 Classic
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38210" class="ng-binding ng-scope">Hotel 81 Cosy
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38712" class="ng-binding ng-scope">Hotel 81
+                            Elegance</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38709" class="ng-binding ng-scope">Hotel 81 Geylang
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38184" class="ng-binding ng-scope">Hotel 81 Gold
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38212" class="ng-binding ng-scope">Hotel 81
+                            Heritage</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38211" class="ng-binding ng-scope">Hotel 81
+                            Hollywood</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38190" class="ng-binding ng-scope">Hotel 81 Kovan
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38186" class="ng-binding ng-scope">Hotel 81 Lucky
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38703" class="ng-binding ng-scope">Hotel 81 Opera
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38188" class="ng-binding ng-scope">Hotel 81 Osaka
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38640" class="ng-binding ng-scope">Hotel 81 Palace
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38706" class="ng-binding ng-scope">Hotel 81
+                            Princess</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38180" class="ng-binding ng-scope">Hotel 81 Sakura
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38644" class="ng-binding ng-scope">Hotel 81 Star
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38140" class="ng-binding ng-scope">Hotel 81-Dickson
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38389" class="ng-binding ng-scope">Hotel Bencoolen
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38266" class="ng-binding ng-scope">Hotel Clover
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38305" class="ng-binding ng-scope">Hotel Clover 5
+                            Hongkong Street</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38199" class="ng-binding ng-scope">Hotel Fort
+                            Canning</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38178" class="ng-binding ng-scope">Hotel Grand
+                            Chancellor</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38398" class="ng-binding ng-scope">Ibackpacker
+                            Kallang</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38202" class="ng-binding ng-scope">Ibis Singapore
+                            Novena</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38136" class="ng-binding ng-scope">Ibis Singapore
+                            on Bencoolen</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38204" class="ng-binding ng-scope">Innotel Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38551" class="ng-binding ng-scope">InterContinental
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38444" class="ng-binding ng-scope">Jen
+                            Orchardgateway Singapore </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38245" class="ng-binding ng-scope">Kam Leng
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38280" class="ng-binding ng-scope">Kawan Hostel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38197" class="ng-binding ng-scope">Lanson Place
+                            Winsland Residences</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38322" class="ng-binding ng-scope">Le Grove
+                            Serviced Apartments</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38198" class="ng-binding ng-scope">Le Hotel
+                            Singapore </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38167" class="ng-binding ng-scope">Le Peranakan
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38731" class="ng-binding ng-scope">Link Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38413" class="ng-binding ng-scope">Lofi
+                            Inn@Hamilton</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38559" class="ng-binding ng-scope">M Hotel</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38272" class="ng-binding ng-scope">Madras @
+                            Eminence</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38282" class="ng-binding ng-scope">Madras Hotel @
+                            Tekka</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38472" class="ng-binding ng-scope">Mandarin Orchard
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38488" class="ng-binding ng-scope">Mandarin
+                            Oriental, Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38170" class="ng-binding ng-scope">Marina Bay Sands
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38563" class="ng-binding ng-scope">Marina Mandarin
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38358" class="ng-binding ng-scope">Marrison Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38430" class="ng-binding ng-scope">Marrison Hotel
+                            At Desker</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38225" class="ng-binding ng-scope">Metropolitan
+                            YMCA Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68374" class="ng-binding ng-scope">Michael</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64071" class="ng-binding ng-scope">Michael</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38468" class="ng-binding ng-scope">Miramar
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68377" class="ng-binding ng-scope">Moevenpick
+                            Heritage</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64074" class="ng-binding ng-scope">Moevenpick
+                            Heritage</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38392" class="ng-binding ng-scope">Moni Gallery
+                            Hostel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38207" class="ng-binding ng-scope">Moon @ 23
+                            Dickson</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38727" class="ng-binding ng-scope">Naumi Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38258" class="ng-binding ng-scope">Naumi Liora
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38307" class="ng-binding ng-scope">New Happy Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73117" class="ng-binding ng-scope">new hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38661" class="ng-binding ng-scope">New Majestic
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38168" class="ng-binding ng-scope">Nostalgia Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38474" class="ng-binding ng-scope">Novotel
+                            Singapore Clarke Quay</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38422" class="ng-binding ng-scope">NuVe</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38208" class="ng-binding ng-scope">Oasia Hotel
+                            Singapore by Far East Hospitality</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68380" class="ng-binding ng-scope">One 15 Marina
+                            Club</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64077" class="ng-binding ng-scope">One 15 Marina
+                            Club</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38416" class="ng-binding ng-scope">One Farrer Hotel
+                            &amp; Spa</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38476" class="ng-binding ng-scope">Orchard Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38575" class="ng-binding ng-scope">Orchard Parade
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38755" class="ng-binding ng-scope">Orchard
+                            Parksuites</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38753" class="ng-binding ng-scope">Orchard Scotts
+                            Residences</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38248" class="ng-binding ng-scope">Orchid Country
+                            Club</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38567" class="ng-binding ng-scope">Pan Pacific
+                            Orchard</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38291" class="ng-binding ng-scope">Pan Pacific
+                            Serviced Suites Beach Road</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38201" class="ng-binding ng-scope">Parc Sovereign
+                            Hotel â€“ Albert Street </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38425" class="ng-binding ng-scope">Parc Sovereign
+                            Hotel - Tyrwhitt</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38268" class="ng-binding ng-scope">Park 22</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38347" class="ng-binding ng-scope">Park Avenue
+                            Changi Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38315" class="ng-binding ng-scope">Park Avenue
+                            Rochester Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38449" class="ng-binding ng-scope">Park Hotel
+                            Alexandra</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38147" class="ng-binding ng-scope">Park Hotel
+                            Clarke Quay</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38177" class="ng-binding ng-scope">Park Regis
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38583" class="ng-binding ng-scope">Parkroyal on
+                            Beach Road</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38571" class="ng-binding ng-scope">Parkroyal on
+                            Kitchener Road</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38263" class="ng-binding ng-scope">Parkroyal On
+                            Pickering</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38579" class="ng-binding ng-scope">Peninsula
+                            Excelsior</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38328" class="ng-binding ng-scope">Perak Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38304" class="ng-binding ng-scope">Plush Pods
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38587" class="ng-binding ng-scope">Quality Hotel
+                            Marlow</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38447" class="ng-binding ng-scope">Quarters Hostel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38479" class="ng-binding ng-scope">Raffles Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38260" class="ng-binding ng-scope">Ramada Singapore
+                            at Zhongshan Park</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38757" class="ng-binding ng-scope">Regency House
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38624" class="ng-binding ng-scope">Regent Singapore
+                            - A Four Seasons Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38335" class="ng-binding ng-scope">Relc
+                            International Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38470" class="ng-binding ng-scope">Rendezvous Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68381" class="ng-binding ng-scope">Resorts World
+                            Sentosa - Beach Villa</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64078" class="ng-binding ng-scope">Resorts World
+                            Sentosa - Beach Villa</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38235" class="ng-binding ng-scope">Rider's Lodge
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38674" class="ng-binding ng-scope">Riverview Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38751" class="ng-binding ng-scope">Robertson Quay
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38760" class="ng-binding ng-scope">Royal</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38547" class="ng-binding ng-scope">Royal at Queens
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38441" class="ng-binding ng-scope">Royal Hostel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38591" class="ng-binding ng-scope">Royal Plaza on
+                            Scotts Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38432" class="ng-binding ng-scope">Rucksack Inn @
+                            Temple Street</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38386" class="ng-binding ng-scope">Rucksack
+                            Inn@Hong kong Street</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38301" class="ng-binding ng-scope">Sandpiper Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38169" class="ng-binding ng-scope">Santa Grand
+                            Hotel Bugis</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38176" class="ng-binding ng-scope">Santa Grand
+                            Hotel Chinatown</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38261" class="ng-binding ng-scope">Santa Grand
+                            Hotel East Coast</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38174" class="ng-binding ng-scope">Santa Grand
+                            Hotel West Coast</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38232" class="ng-binding ng-scope">Santa Grand Lai
+                            Chun Yuen</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38153" class="ng-binding ng-scope">Santa Grand
+                            Little India</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38595" class="ng-binding ng-scope">Shangri-la
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68382" class="ng-binding ng-scope">Shangri-La's
+                            Rasa Sentosa Resort &amp; Spa</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64079" class="ng-binding ng-scope">Shangri-La's
+                            Rasa Sentosa Resort &amp; Spa</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38600" class="ng-binding ng-scope">Sheraton Towers
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68385" class="ng-binding ng-scope">Siloso Beach
+                            Resort</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64082" class="ng-binding ng-scope">Siloso Beach
+                            Resort</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38604" class="ng-binding ng-scope">Singapore
+                            Marriott</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38223" class="ng-binding ng-scope">Society
+                            Backpackers' Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38298" class="ng-binding ng-scope">Sofitel So
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38264" class="ng-binding ng-scope">Soluxe Inn
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38162" class="ng-binding ng-scope">Somerset
+                            Bencoolen</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38160" class="ng-binding ng-scope">Somerset Liang
+                            Court</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38158" class="ng-binding ng-scope">Somerset Orchard
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38724" class="ng-binding ng-scope">St. Regis Hotel
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38173" class="ng-binding ng-scope">Studio M Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38715" class="ng-binding ng-scope">Summer View
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="72370" class="ng-binding ng-scope">SUMMER VIEW
+                            HOTEL SINGAPORE</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38213" class="ng-binding ng-scope">Supreme</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38485" class="ng-binding ng-scope">Swissotel The
+                            Stamford Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38295" class="ng-binding ng-scope">The Club Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38505" class="ng-binding ng-scope">The Duxton Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38608" class="ng-binding ng-scope">The Elizabeth
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38339" class="ng-binding ng-scope">The Forest By
+                            Wangz</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38652" class="ng-binding ng-scope">The Fragrance
+                            (Joo Chiat)</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38175" class="ng-binding ng-scope">The Fullerton
+                            Bay Hotel Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38612" class="ng-binding ng-scope">The Fullerton
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38616" class="ng-binding ng-scope">The Inn At
+                            Temple Street</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38620" class="ng-binding ng-scope">The Pan Pacific
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38299" class="ng-binding ng-scope">The Pod -
+                            Boutique Capsule Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38205" class="ng-binding ng-scope">The Porcelain
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38152" class="ng-binding ng-scope">The Quincy
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38313" class="ng-binding ng-scope">The Residence At
+                            Singapore Recreation Club</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38492" class="ng-binding ng-scope">The Ritz Carlton
+                            Millenia Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38628" class="ng-binding ng-scope">The Scarlet
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38265" class="ng-binding ng-scope">The Seacare
+                            Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68383" class="ng-binding ng-scope">The Singapore
+                            Resort &amp; Spa Sentosa by Accor</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64080" class="ng-binding ng-scope">The Singapore
+                            Resort &amp; Spa Sentosa by Accor</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38218" class="ng-binding ng-scope">The Sultan Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38296" class="ng-binding ng-scope">The Westin
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38632" class="ng-binding ng-scope">Traders</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38290" class="ng-binding ng-scope">Tresor Tavern
+                            Hostel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38284" class="ng-binding ng-scope">Tresor Tavern
+                            Hotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38294" class="ng-binding ng-scope">V Hotel
+                            Bencoolen</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38200" class="ng-binding ng-scope">V Hotel Lavender
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38193" class="ng-binding ng-scope">Value Hotel Nice
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38149" class="ng-binding ng-scope">Value
+                            Hotel-Balestier</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38165" class="ng-binding ng-scope">Value
+                            Hotel-Thomson</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38156" class="ng-binding ng-scope">Venue Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38735" class="ng-binding ng-scope">Victoria
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38451" class="ng-binding ng-scope">Village Hotel
+                            Albert Court by Far East Hospitality</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38527" class="ng-binding ng-scope">Village Hotel
+                            Bugis by Far East Hospitality</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38456" class="ng-binding ng-scope">Village Hotel
+                            Changi</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38238" class="ng-binding ng-scope">Village Hotel
+                            Katong </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38217" class="ng-binding ng-scope">Village
+                            Residence Clark Quay</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38221" class="ng-binding ng-scope">Village
+                            Residence Robertson Quay</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38303" class="ng-binding ng-scope">Vintage Inn
+                            Singapore</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38309" class="ng-binding ng-scope">Vip Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="68379" class="ng-binding ng-scope">W Singapore -
+                            Sentosa Cove</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="64076" class="ng-binding ng-scope">W Singapore -
+                            Sentosa Cove</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38203" class="ng-binding ng-scope">Wanderlust
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38171" class="ng-binding ng-scope">Wangz Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38379" class="ng-binding ng-scope">Woke Home
+                            Capsule Hostel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="38636" class="ng-binding ng-scope">York</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73174" class="ng-binding ng-scope">Pune Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73152" class="ng-binding ng-scope">NagpurHotel1
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73156" class="ng-binding ng-scope">NagpurHotel2
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73157" class="ng-binding ng-scope">NagpurHotel3
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73169" class="ng-binding ng-scope">NagpurTest
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73165" class="ng-binding ng-scope">No_of_Night
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73175" class="ng-binding ng-scope">Nagpur_Fit_Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73184" class="ng-binding ng-scope">Burj Arab Dubai
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73185" class="ng-binding ng-scope">Al Burj Khalifa
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73158" class="ng-binding ng-scope">Gokul Hotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73180" class="ng-binding ng-scope">Hotel Test
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73160" class="ng-binding ng-scope">Hotel_AEDTest
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73189" class="ng-binding ng-scope">Hotel_Check
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73168" class="ng-binding ng-scope">Hotel_Client
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73167" class="ng-binding ng-scope">Hotel_Test1
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73190" class="ng-binding ng-scope">Hotel_Test_(Do
+                            Not Use)</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73181" class="ng-binding ng-scope">
+                            Multiple_Supplier</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73145" class="ng-binding ng-scope">NidaHotel1
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73146" class="ng-binding ng-scope">NidaHotel2
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73147" class="ng-binding ng-scope">NidaHotel3
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73149" class="ng-binding ng-scope">SayaliHotel2
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73177" class="ng-binding ng-scope">
+                            SayaliHotelMumbai_New2</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73150" class="ng-binding ng-scope">SayaliHotelNew_1
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73151" class="ng-binding ng-scope">SayaliHotelNew_2
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73164" class="ng-binding ng-scope">SayaliLocalHotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73173" class="ng-binding ng-scope">
+                            SayaliMumbaiHotelTest_New</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73172" class="ng-binding ng-scope">
+                            SayaliMumbaiTestHotel</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73170" class="ng-binding ng-scope">SayaliTESTHotel
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73171" class="ng-binding ng-scope">
+                            SayaliTestHotel_2</option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73127" class="ng-binding ng-scope">Rate_gain_Test
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73185" class="ng-binding ng-scope">Al Burj Khalifa
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73184" class="ng-binding ng-scope">Burj Arab Dubai
+                        </option><!-- end ngRepeat: x in bn_hotelList -->
+                        <option ng-repeat="x in bn_hotelList" value="73201" class="ng-binding ng-scope">Aqua</option>
+                        <!-- end ngRepeat: x in bn_hotelList -->
+                    </select>
+                  
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <select id="search_room_type_select" data-live-search="true" ng-model="search_room_type_content"
+                        class="selectpicker form_element show-menu-arrow form-control form-control-sm required ng-pristine ng-untouched ng-valid ng-empty bs-select-hidden">
+                        <option value="">- Select Room Type-</option>
+                        <!-- ngRepeat: x in RoomTypeList -->
+                        <option value="1" ng-repeat="x in RoomTypeList" class="ng-binding ng-scope">Single</option>
+                        <!-- end ngRepeat: x in RoomTypeList -->
+                        <option value="2" ng-repeat="x in RoomTypeList" class="ng-binding ng-scope">Double</option>
+                        <!-- end ngRepeat: x in RoomTypeList -->
+                        <option value="3" ng-repeat="x in RoomTypeList" class="ng-binding ng-scope">Triple</option>
+                        <!-- end ngRepeat: x in RoomTypeList -->
+                        <option value="4" ng-repeat="x in RoomTypeList" class="ng-binding ng-scope">Quad</option>
+                        <!-- end ngRepeat: x in RoomTypeList -->
+                        <option value="5" ng-repeat="x in RoomTypeList" class="ng-binding ng-scope">One Club</option>
+                        <!-- end ngRepeat: x in RoomTypeList -->
+                        <option value="6" ng-repeat="x in RoomTypeList" class="ng-binding ng-scope">Two Club</option>
+                        <!-- end ngRepeat: x in RoomTypeList -->
+                        <option value="7" ng-repeat="x in RoomTypeList" class="ng-binding ng-scope">Three Club</option>
+                        <!-- end ngRepeat: x in RoomTypeList -->
+                        <option value="8" ng-repeat="x in RoomTypeList" class="ng-binding ng-scope">Four Club</option>
+                        <!-- end ngRepeat: x in RoomTypeList -->
+                        <option value="9" ng-repeat="x in RoomTypeList" class="ng-binding ng-scope">Five Club</option>
+                        <!-- end ngRepeat: x in RoomTypeList -->
+                    </select>
+                  
+                </div>
+                <div class="col-md-2 form-group">
+                   <a href="hotelInventoryappMasterSearchbutton.html"class="btn btn-primary " type="button" ng-click="SearchRoomCategory()">
+                        <i class="fa fa-floppy-o"></i>&nbsp;Search
+                   </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        </form>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+<script>
+    // For Datepicker
+
+    const date1 = flatpickr("#date1", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const date2 = flatpickr("#date2", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+</script>
+
+</html>
