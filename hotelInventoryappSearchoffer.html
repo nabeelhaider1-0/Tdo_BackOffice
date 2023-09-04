@@ -2315,7 +2315,7 @@ tooltip {
                             <input id="bookingto_date" value=""
                                 class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
                                 ng-model="BookingToDate" date="dd-MM-yyyy">
-                            <span class="input-group-addon" alt="clear" title="clear" ng-click="clear1('st_date1')">
+                            <span class="input-group-addon" id="dtrashbtn">
                                 <i class="fa fa-trash"></i>
                             </span>
                         </div>
@@ -2330,7 +2330,7 @@ tooltip {
                             <input id="check_to_date" value=""
                                 class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
                                 ng-model="CheckinToDate" date="dd-MM-yyyy">
-                            <span class="input-group-addon" alt="clear" title="clear" ng-click="clear1('bt_date1')">
+                            <span class="input-group-addon" id="etrashbtn">
                                 <i class="fa fa-trash"></i>
                             </span>
                         </div>
@@ -2888,20 +2888,38 @@ tooltip {
 <script>
     // For Voucher Datepicker
 
-    const from = flatpickr("#from", {
+    const bookingfrom_date = flatpickr("#bookingfrom_date", {
         dateFormat: "Y-m-d",
         minDate: "today"
     });
 
 
-    const to = flatpickr("#to", {
+    const bookingto_date = flatpickr("#bookingto_date", {
         dateFormat: "Y-m-d",
         minDate: "today"
     });
-    const ftrashbtn = document.getElementById("ftrashbtn");
-    ftrashbtn.addEventListener("click", function () {
-        from.clear();
-        to.clear();
+    const dtrashbtn = document.getElementById("dtrashbtn");
+    dtrashbtn.addEventListener("click", function () {
+        bookingfrom_date.clear();
+        bookingto_date.clear();
+
+    });
+      // For Voucher Datepicker
+
+      const check_from_date = flatpickr("#check_from_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const check_to_date = flatpickr("#check_to_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+    const etrashbtn = document.getElementById("etrashbtn");
+    etrashbtn.addEventListener("click", function () {
+        check_from_date.clear();
+        check_to_date.clear();
 
     });
 </script>

@@ -71,24 +71,26 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Masters
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="hotelInventoryappMasterHotelsetting.html">Hotel Setting</a>
-                            
-                                <a class="dropdown-item dropdown-toggle" href="#" id="roomCategoryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Room Category
-                                </a>
-                                <ul class="dropdown-menu dropdown-submenu" id="dru">
-                                    <li><a class="dropdown-item" href="hotelInventoryappMasterAdd.html">Add</a></li>
-                                    <li><a class="dropdown-item" href="hotelInventoryappMasterSearch.html">Search</a></li>
-                                  </ul>
-                          
-                            
-                          
-                            
-                            <a class="dropdown-item" href="hotelInventoryappMasterHotelMappinhg.html">Map Hotel Rooms</a>
+
+                            <a class="dropdown-item dropdown-toggle" href="#" id="roomCategoryDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Room Category
+                            </a>
+                            <ul class="dropdown-menu dropdown-submenu" id="dru">
+                                <li><a class="dropdown-item" href="hotelInventoryappMasterAdd.html">Add</a></li>
+                                <li><a class="dropdown-item" href="hotelInventoryappMasterSearch.html">Search</a></li>
+                            </ul>
+
+
+
+
+                            <a class="dropdown-item" href="hotelInventoryappMasterHotelMappinhg.html">Map Hotel
+                                Rooms</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -394,6 +396,10 @@
             font-size: 13px;
             color: #6a6c6f;
         }
+
+        input[type="text"] {
+            background-color: #fff !important;
+        }
     </style>
 
     <!--    Panel Body        -->
@@ -523,15 +529,15 @@
                                 <div class="can-policy-box-02 form-group MultipleSeasonHideDates">
                                     <label>Validity Period</label>
                                     <div id="datePick" class="input-group date input-daterange">
-                                        <input type="text" value="period_from" id="date1" name="date1"
+                                        <input type="text" value="period_from" id="date11" name="date1"
                                             ng-model="from_date"
                                             class="form-control form_element required ng-pristine ng-untouched ng-valid ng-empty"
                                             date="dd-MM-yyyy" placeholder="From Date"> <span
                                             class="input-group-addon">To</span>
-                                        <input type="text" value="period_to" id="date2" name="date2" ng-model="to_date"
+                                        <input type="text" value="period_to" id="date12" name="date2" ng-model="to_date"
                                             class="form-control ng-pristine ng-untouched ng-valid ng-empty"
                                             date="dd-MM-yyyy" placeholder="To Date">
-                                        <span ng-click="clear()" title="clear" alt="clear" class="input-group-addon">
+                                        <span class="input-group-addon" id="dtrashbtn">
                                             <i class="fa fa-trash"></i>
                                         </span>
                                     </div>
@@ -609,7 +615,7 @@
                                             <span class="input-group-addon">To</span>
                                             <input class="form-control ng-pristine ng-untouched ng-valid ng-not-empty"
                                                 type="text" id="date4" ng-model="to_duration" value="1" numbers-only="">
-                                            <span ng-click="clear()" title="clear" alt="clear"
+                                            <span id="etrashbtn"
                                                 class="input-group-addon">
                                                 <i class="fa fa-trash"></i>
                                             </span>
@@ -774,14 +780,14 @@
                                         <input
                                             class="form-control from-date  ng-pristine ng-untouched ng-valid ng-empty"
                                             type="text" style="border-left:2px solid red!important;" name="from_date"
-                                            id="date1" ng-model="bn_from_date" ng-init="bn_from_date=''"
+                                            id="date13" ng-model="bn_from_date" ng-init="bn_from_date=''"
                                             placeholder="DD-MM-YYYY" date="dd-MM-yyyy">
                                         <span class="input-group-addon">To</span>
                                         <input class="form-control to-date ng-pristine ng-untouched ng-valid ng-empty"
                                             type="text" style="border-left:2px solid red!important;"
-                                            placeholder="DD-MM-YYYY" name="to_date" id="date2" value=""
+                                            placeholder="DD-MM-YYYY" name="to_date" id="date14" value=""
                                             ng-model="bn_to_date" ng-init="bn_to_date=''" date="dd-MM-yyyy">
-                                        <span ng-click="bn_clear()" title="clear" alt="clear" class="input-group-addon">
+                                        <span id="ftrashbtn" class="input-group-addon">
                                             <i class="fa fa-trash"></i>
                                         </span>
                                     </div>
@@ -864,14 +870,14 @@
                                                     <div class="input-group date input-daterange" id="datePick2">
                                                         <input
                                                             class="form-control form_element required ng-pristine ng-untouched ng-valid ng-empty"
-                                                            type="text" name="date1" id="date1" ng-model="ns_from_date"
+                                                            type="text" name="date15" id="date15" ng-model="ns_from_date"
                                                             placeholder="From Date"><span
                                                             class="input-group-addon">To</span>
                                                         <input
                                                             class="form-control ng-pristine ng-untouched ng-valid ng-empty"
-                                                            type="text" name="date2" id="date2" ng-model="ns_to_date"
+                                                            type="text" name="date16" id="date16" ng-model="ns_to_date"
                                                             placeholder="To Date">
-                                                        <span ng-click="ns_clear()" title="clear" alt="clear"
+                                                        <span id="gtrashbtn"
                                                             class="input-group-addon">
                                                             <i class="fa fa-trash"></i>
                                                         </span>
@@ -911,7 +917,7 @@
                                                         <option value="">Select Season</option>
                                                         <!-- ngRepeat: x in ns_seasonlist -->
                                                     </select>
-                                                  
+
                                                 </div>
                                                 <div class="col-md-2 col-sm-4 form-group" id="step20">
                                                     <label>Charges By</label><br>
@@ -973,11 +979,15 @@
                                         <label>Amendment Allowed</label>
                                     </div>
                                     <div class="col-md-1 col-sm-12">
-                                        <input id="amendment_allowed_yes" type="radio" name="amendment_allowed" ng-model="amendment_allowedValue" value="1" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                        <input id="amendment_allowed_yes" type="radio" name="amendment_allowed"
+                                            ng-model="amendment_allowedValue" value="1"
+                                            class="ng-pristine ng-untouched ng-valid ng-not-empty">
                                         <label class="label_middle" for="amendment_allowed_yes">Yes</label>
                                     </div>
                                     <div class="col-md-1 col-sm-12">
-                                        <input id="amendment_allowed_no" type="radio" name="amendment_allowed" ng-model="amendment_allowedValue" value="0" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                                        <input id="amendment_allowed_no" type="radio" name="amendment_allowed"
+                                            ng-model="amendment_allowedValue" value="0"
+                                            class="ng-pristine ng-untouched ng-valid ng-not-empty">
                                         <label class="label_middle" for="amendment_allowed_no">No</label>
                                     </div>
                                 </div>
@@ -986,49 +996,56 @@
                                         <label for="no_days_checkin">No Of Days Before Check In</label>
                                     </div>
                                     <div class="col-md-2 col-sm-12">
-                                        <input onkeypress="return isNumberKey(event)" type="text" id="no_days_checkin" name="no_days_checkin" ng-model="no_days_checkin" class="form-control form_element required ng-pristine ng-untouched ng-valid ng-empty">
+                                        <input onkeypress="return isNumberKey(event)" type="text" id="no_days_checkin"
+                                            name="no_days_checkin" ng-model="no_days_checkin"
+                                            class="form-control form_element required ng-pristine ng-untouched ng-valid ng-empty">
                                     </div>
                                 </div>
                                 <div class="row" ng-show="ToggleAddViewContent()">
                                     <div class="col-md-12 col-sm-12">
                                         <label>Amendment Policy</label>
-                                        <textarea id="summernote1" class="form-control form-control-sm" style="display: none;"></textarea>
+                                        <textarea id="summernote1" class="form-control form-control-sm"
+                                            style="display: none;"></textarea>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 rateUnik form-group">
                                         <label>&nbsp;</label> <br>
                                         <div class="btn-group text-center m-b-md" id="wizardControl3">
-                                            <a class="btn btn-sm btn-success" ng-click="AddUpdateAmendmentPolicy()"><b>Add Amendment Policy</b></a>
+                                            <a class="btn btn-sm btn-success"
+                                                ng-click="AddUpdateAmendmentPolicy()"><b>Add Amendment Policy</b></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                        </div>
+                        <div class="tab-pane fade" id="subtab5" role="tabpanel" aria-labelledby="subtab5-tab">
+
+
+                            <div class="panel-body1" ng-show="earlyCheckoutPolicyList.length == 0">
+                                <div class="row mt-3">
+                                    <div class="col-md-12 col-sm-12" id="step16">
+                                        <label><b>Early Checkout Policy</b></label>
+                                        <textarea id="summernote2" class="form-control form-control-sm"
+                                            style="display: none;"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 rateUnik form-group" id="step17">
+                                        <label>&nbsp;</label> <br>
+                                        <div class="btn-group text-center m-b-md" id="wizardControl3">
+                                            <a class="btn btn-sm btn-success"
+                                                ng-click="AddUpdateEarlyCheckPolicy()"><b>Add Early Checkout
+                                                    Policy</b></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="tab-pane fade" id="subtab5" role="tabpanel" aria-labelledby="subtab5-tab">
-                            
-                            
-                                <div class="panel-body1" ng-show="earlyCheckoutPolicyList.length == 0">
-                                    <div class="row mt-3">
-                                        <div class="col-md-12 col-sm-12" id="step16">
-                                            <label><b>Early Checkout Policy</b></label>
-                                            <textarea id="summernote2" class="form-control form-control-sm" style="display: none;"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 rateUnik form-group" id="step17">
-                                            <label>&nbsp;</label> <br>
-                                            <div class="btn-group text-center m-b-md" id="wizardControl3">
-                                                <a class="btn btn-sm btn-success" ng-click="AddUpdateEarlyCheckPolicy()"><b>Add Early Checkout Policy</b></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                            
-                            
-                                </div>
+
+
+
+                        </div>
 
 
 
@@ -1065,7 +1082,7 @@
 
             ],
 
-        }); 
+        });
         $('#summernote1').summernote({
             height: 150,
             width: 1400,
@@ -1099,17 +1116,77 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 <script>
-    // For Datepicker
+    // For Voucher Datepicker
 
-    const date1 = flatpickr("#date1", {
+    const date11 = flatpickr("#date11", {
         dateFormat: "Y-m-d",
         minDate: "today"
     });
 
 
-    const date2 = flatpickr("#date2", {
+    const date12 = flatpickr("#date12", {
         dateFormat: "Y-m-d",
         minDate: "today"
+    });
+    const dtrashbtn = document.getElementById("dtrashbtn");
+    dtrashbtn.addEventListener("click", function () {
+        date11.clear();
+        date12.clear();
+
+    });
+    // For Voucher Datepicker
+
+    const date3 = flatpickr("#date3", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const date4 = flatpickr("#date4", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+    const etrashbtn = document.getElementById("etrashbtn");
+    etrashbtn.addEventListener("click", function () {
+        date3.clear();
+        date4.clear();
+
+    });
+    // For Voucher Datepicker
+
+    const date13 = flatpickr("#date13", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const date14 = flatpickr("#date14", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+    const ftrashbtn = document.getElementById("ftrashbtn");
+    ftrashbtn.addEventListener("click", function () {
+        date13.clear();
+        date14.clear();
+
+    });
+       // For Voucher Datepicker
+
+       const date15 = flatpickr("#date15", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const date16 = flatpickr("#date16", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+    const gtrashbtn = document.getElementById("gtrashbtn");
+    gtrashbtn.addEventListener("click", function () {
+        date15.clear();
+        date16.clear();
+
     });
 </script>
 

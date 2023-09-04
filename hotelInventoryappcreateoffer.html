@@ -1852,12 +1852,11 @@
                             <label class="valuefor_txt">Booking Date</label>
                             <div class="input-group booking_from_date">
                                 <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
-                                    ng-model="BookingFrom" date="dd-MM-yyyy" name="sf_date[1]">
+                                    ng-model="BookingFrom" date="dd-MM-yyyy" name="sf_date[1]" id="date1">
                                 <span class="input-group-addon">to</span>
                                 <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
-                                    ng-model="BookingTo" date="dd-MM-yyyy" name="st_date[1]">
-                                <span class="input-group-addon" alt="clear" title="clear"
-                                    ng-click="clear('booking_date')">
+                                    ng-model="BookingTo" date="dd-MM-yyyy" name="st_date[1]" id="date2">
+                                <span class="input-group-addon" id="dtrashbtn">
                                     <i class="fa fa-trash"></i>
                                 </span>
                             </div>
@@ -1866,12 +1865,11 @@
                             <label class="valuefor_txt">Checkin Date</label>
                             <div class="input-group checkin_date_from">
                                 <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
-                                    ng-model="CheckInFrom" date="dd-MM-yyyy" name="bf_date[1]">
+                                    ng-model="CheckInFrom" date="dd-MM-yyyy" name="bf_date[1]" id="date3">
                                 <span class="input-group-addon">to</span>
                                 <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" type="text"
-                                    ng-model="CheckInTo" date="dd-MM-yyyy" name="bt_date[1]">
-                                <span class="input-group-addon" alt="clear" title="clear"
-                                    ng-click="clear('checkin_date')">
+                                    ng-model="CheckInTo" date="dd-MM-yyyy" name="bt_date[1]" id="date4">
+                                <span class="input-group-addon" id="etrashbtn">
                                     <i class="fa fa-trash"></i>
                                 </span>
                             </div>
@@ -2216,20 +2214,38 @@
 <script>
     // For Voucher Datepicker
 
-    const from = flatpickr("#from", {
+    const date1 = flatpickr("#date1", {
         dateFormat: "Y-m-d",
         minDate: "today"
     });
 
 
-    const to = flatpickr("#to", {
+    const date2 = flatpickr("#date2", {
         dateFormat: "Y-m-d",
         minDate: "today"
     });
-    const ftrashbtn = document.getElementById("ftrashbtn");
-    ftrashbtn.addEventListener("click", function () {
-        from.clear();
-        to.clear();
+    const dtrashbtn = document.getElementById("dtrashbtn");
+    dtrashbtn.addEventListener("click", function () {
+        date1.clear();
+        date2.clear();
+
+    });
+      // For Voucher Datepicker
+
+      const date3 = flatpickr("#date3", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const date4 = flatpickr("#date4", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+    const etrashbtn = document.getElementById("etrashbtn");
+    etrashbtn.addEventListener("click", function () {
+        date3.clear();
+        date4.clear();
 
     });
 </script>
