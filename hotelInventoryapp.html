@@ -27,7 +27,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <title>Travel Destination Online</title>
-    
+
 </head>
 
 <body>
@@ -69,24 +69,26 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Masters
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="hotelInventoryappMasterHotelsetting.html">Hotel Setting</a>
-                            
-                                <a class="dropdown-item dropdown-toggle" href="#" id="roomCategoryDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Room Category
-                                </a>
-                                <ul class="dropdown-menu dropdown-submenu" id="dru">
-                                    <li><a class="dropdown-item" href="hotelInventoryappMasterAdd.html">Add</a></li>
-                                    <li><a class="dropdown-item" href="hotelInventoryappMasterSearch.html">Search</a></li>
-                                  </ul>
-                          
-                            
-                          
-                            
-                            <a class="dropdown-item" href="hotelInventoryappMasterHotelMappinhg.html">Map Hotel Rooms</a>
+
+                            <a class="dropdown-item dropdown-toggle" href="#" id="roomCategoryDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Room Category
+                            </a>
+                            <ul class="dropdown-menu dropdown-submenu" id="dru">
+                                <li><a class="dropdown-item" href="hotelInventoryappMasterAdd.html">Add</a></li>
+                                <li><a class="dropdown-item" href="hotelInventoryappMasterSearch.html">Search</a></li>
+                            </ul>
+
+
+
+
+                            <a class="dropdown-item" href="hotelInventoryappMasterHotelMappinhg.html">Map Hotel
+                                Rooms</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -153,11 +155,62 @@
         <header>
             <div class="row pt-0  pb-0 p-4">
 
-                <div class="col-md-12">
+                <div class="col-md-4">
                     <h5 style="font-size:30px;font-weight: 700;    margin: 0px;
                     padding: 0px;
                     text-transform: uppercase;">MANAGE RATES</h5>
                 </div>
+                <div class=" form-group col-md-8 mt-2">
+                    <style>
+                        
+
+                    
+                        .radio-inline{
+                            display: inline-block;
+                            padding-left: 20px;
+                            margin-bottom: 0;
+                            font-weight: normal;
+                            vertical-align: middle;
+                            cursor: pointer;
+                        }
+                    </style>
+
+           
+                  
+               
+                   
+                   
+
+
+                    <div class="radio radio-success radio-inline">
+                        <input type="radio" name="rrAdd" id="hotel_supplier" value="all" checked="checked">
+                        <label for="rrAddAll">Hotel Supplier</label>
+                    </div>
+                    <div class="radio radio-success radio-inline">
+                        <input type="radio" name="rrAdd" value="yes" id="activity">
+                        <label for="rrAddYes">Activity Supplier</label>
+                    </div>
+                    <div class="radio radio-success radio-inline">
+                        <input type="radio" name="rrAdd" value="yes" id="transfer">
+                        <label for="rrAddYes">Transfer Supplier</label>
+                    </div>
+                    <div class="radio radio-success radio-inline">
+                        <input type="radio" name="rrAdd" value="yes" id="visa">
+                        <label for="rrAddYes">Visa Supplier</label>
+                    </div>
+                    <div class="radio radio-success radio-inline">
+                        <input type="radio" name="rrAdd" value="yes" id="fit">
+                        <label for="rrAddYes">FIT Package Supplier</label>
+                    </div>
+                    <div class="radio radio-success radio-inline">
+                        <input type="radio" name="rrAdd" value="yes" id="airline">
+                        <label for="rrAddYes">Airline Supplier</label>
+                    </div>
+
+
+                </div>
+             
+            </div>
 
 
 
@@ -172,12 +225,10 @@
 
 
     <style>
-
-
-#sizing li a{
-    font-size: 12px;
-    color: #34495e;
-}
+        #sizing li a {
+            font-size: 12px;
+            color: #34495e;
+        }
 
 
         .btn-primary {
@@ -185,13 +236,14 @@
             border-color: #34495e;
             color: #FFFFFF;
             font-size: 13px;
-            
+
         }
-        .btn-primary:hover{
+
+        .btn-primary:hover {
             background-color: #3f5872 !important;
-    border-color: #3f5872 !important;
-    color: #FFFFFF !important;
-    outline: none !important;
+            border-color: #3f5872 !important;
+            color: #FFFFFF !important;
+            outline: none !important;
         }
 
         .ng-hide {
@@ -201,133 +253,141 @@
         .h-bg-navy-blue {
             background: #34495e;
         }
+
         .adddates {
-    background: #74D348;
-    color: white;
-}
-.adddates:hover {
-    background: #74D348;
-}
-.bootstrap-select.show-menu-arrow.open > .dropdown-toggle, .bootstrap-select.show-menu-arrow.show > .dropdown-toggle {
-    z-index: 1;
-}
-.new_tab_section .btn {
- 
-}
+            background: #74D348;
+            color: white;
+        }
 
-th{
-        text-align: left !important;
-        width: 200px;
-        vertical-align: middle !important;
-        text-transform: uppercase;
-        font-size: 12px;
-     
-       }
-       td{
-        background-color: #FFFFFF !important;
-       }
-       #voucherStartdatepicker{
-        background-color: white;
-       }
-       #voucherEndDatepicker{
-        background-color: white;
-       }
+        .adddates:hover {
+            background: #74D348;
+        }
 
+        .bootstrap-select.show-menu-arrow.open>.dropdown-toggle,
+        .bootstrap-select.show-menu-arrow.show>.dropdown-toggle {
+            z-index: 1;
+        }
 
+        .new_tab_section .btn {}
 
+        th {
+            text-align: left !important;
+            width: 200px;
+            vertical-align: middle !important;
+            text-transform: uppercase;
+            font-size: 12px;
 
-       .breadcrumb {
-        font-weight: 500 !important;
-    font-size: 12px;
-    text-transform: uppercase;
-  list-style: none;
-  padding-left: 12px;
+        }
 
-}
+        td {
+            background-color: #FFFFFF !important;
+        }
+
+        #voucherStartdatepicker {
+            background-color: white;
+        }
+
+        #voucherEndDatepicker {
+            background-color: white;
+        }
 
 
 
 
+        .breadcrumb {
+            font-weight: 500 !important;
+            font-size: 12px;
+            text-transform: uppercase;
+            list-style: none;
+            padding-left: 12px;
 
-.breadcrumb li {
-  display: inline-block;
-  margin-bottom: .2em;
-}
-
-.breadcrumb li a {
-    background-color: #34495e;
-  box-sizing: border-box;
-  color: #fff;
-  display: block;
-  max-height: 2em;
-  padding: .5em 1em .5em 1.5em;
-  position: relative;
-  text-decoration: none;
-  transition: .25s;
-}
-.breadcrumb li.active a {
-    background-color: #62cb31;
-  box-sizing: border-box;
-  color: #fff;
-  display: block;
-  max-height: 2em;
-  padding: .5em 1em .5em 1.5em;
-  position: relative;
-  text-decoration: none;
-  transition: .25s;
-}
-.breadcrumb li.active a::after {
-    border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-left: 1em solid #62cb31;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -1em;
-  transition: .25s;
-  z-index: 1;
-}
+        }
 
 
-.breadcrumb li a:before {
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-left: 1em solid #fff;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -1.25em;
-  z-index: 1;
-}
-
-.breadcrumb li a:after {
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
-  border-left: 1em solid #34495e;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -1em;
-  transition: .25s;
-  z-index: 1;
-}
-
-.breadcrumb li a:hover {
-    background-color: #3f5872;
-}
-.breadcrumb li.active a:hover {
-    background-color: #74d348;
-}
-.breadcrumb li.active a:hover:after {
-  border-left-color: #74d348;
-}
 
 
-.breadcrumb li a:hover:after {
-  border-left-color: #3f5872;
-}
+
+        .breadcrumb li {
+            display: inline-block;
+            margin-bottom: .2em;
+        }
+
+        .breadcrumb li a {
+            background-color: #34495e;
+            box-sizing: border-box;
+            color: #fff;
+            display: block;
+            max-height: 2em;
+            padding: .5em 1em .5em 1.5em;
+            position: relative;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .breadcrumb li.active a {
+            background-color: #62cb31;
+            box-sizing: border-box;
+            color: #fff;
+            display: block;
+            max-height: 2em;
+            padding: .5em 1em .5em 1.5em;
+            position: relative;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .breadcrumb li.active a::after {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #62cb31;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1em;
+            transition: .25s;
+            z-index: 1;
+        }
 
 
+        .breadcrumb li a:before {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #fff;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1.25em;
+            z-index: 1;
+        }
+
+        .breadcrumb li a:after {
+            border-top: 1em solid transparent;
+            border-bottom: 1em solid transparent;
+            border-left: 1em solid #34495e;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -1em;
+            transition: .25s;
+            z-index: 1;
+        }
+
+        .breadcrumb li a:hover {
+            background-color: #3f5872;
+        }
+
+        .breadcrumb li.active a:hover {
+            background-color: #74d348;
+        }
+
+        .breadcrumb li.active a:hover:after {
+            border-left-color: #74d348;
+        }
+
+
+        .breadcrumb li a:hover:after {
+            border-left-color: #3f5872;
+        }
     </style>
 
     <!--    Panel Body        -->
@@ -399,10 +459,10 @@ th{
 
         <div class="row marginbottomnew mt-3 mb-2">
             <ul class="breadcrumb">
-                <li class="active"><a  href="hotelInventoryapp.html">Rates</a></li>
+                <li class="active"><a href="hotelInventoryapp.html">Rates</a></li>
                 <li><a href="hotelInventoryappAllocation.html">Allocation</a></li>
                 <li><a href="hotelInventorySellPolicy.html">Sell Policy</a></li>
-              </ul>
+            </ul>
         </div>
         <!-- First Row-->
         <form style="border-top: 2px solid #62cb31;    margin-top: -19px;      padding-top: 12px;">
@@ -699,7 +759,7 @@ th{
 
             <hr>
 
-      <div class="blue-box">
+            <div class="blue-box">
                 <div class="row">
                     <div class="col-md-2">
                         <div class="labelTitle1">Enter Rate FOR</div>
@@ -715,39 +775,41 @@ th{
                     <div class="col-md-2">
                         <label class="labelTitle1" style="padding-left: 18px;">Date</label>
                         <div class="input-daterange input-group date col-md-12 col-sm-12 col-xs-12 mt-1">
-                          <input type="text" class="form-control form-control-sm" id="voucherStartdatepicker" value=""
-                            name="check_in_from" class="form-control">
-              
-                          <span class="input-group-addon" style="height: 27px;">to</span>
-                          <input type="text" class="form-control form-control-sm" id="voucherEndDatepicker" value=""
-                            name="check_in_to" class="form-control">
-                        
+                            <input type="text" class="form-control form-control-sm" id="voucherStartdatepicker" value=""
+                                name="check_in_from" class="form-control">
+
+                            <span class="input-group-addon" style="height: 27px;">to</span>
+                            <input type="text" class="form-control form-control-sm" id="voucherEndDatepicker" value=""
+                                name="check_in_to" class="form-control">
+
                         </div>
-                      </div>
-                      <div class="col-md-1">
+                    </div>
+                    <div class="col-md-1">
                         <div class="form-group labelTitle1" style="padding-top: 31px;">
                             <div class="btn-group text-center m-b-md inline mobilepadding01" id="wizardControl1">
-                                <a class="btn btn-sm adddates" ng-click="create_clone()"><i id="addmore" class="fa fa-plus"></i></a>
-                                <a ng-show="RemoveClone" class="btn btn-sm btn-default removebtn ng-hide" ng-click="remove_clone()"><i name="removebtn" id="removebtn" class="fa fa-minus"></i></a>
+                                <a class="btn btn-sm adddates" ng-click="create_clone()"><i id="addmore"
+                                        class="fa fa-plus"></i></a>
+                                <a ng-show="RemoveClone" class="btn btn-sm btn-default removebtn ng-hide"
+                                    ng-click="remove_clone()"><i name="removebtn" id="removebtn"
+                                        class="fa fa-minus"></i></a>
                             </div>
                         </div>
-                      </div>
-                      <div class="col-md-1">
-                        <div class="labelTitle1"style="padding-top: 31px;">OR</div>
-                       
                     </div>
-                      <div class="col-md-2">
+                    <div class="col-md-1">
+                        <div class="labelTitle1" style="padding-top: 31px;">OR</div>
+
+                    </div>
+                    <div class="col-md-2">
                         <div class="labelTitle1">Season</div>
                         <select class="selectpicker mt-2 form-control form-control-sm show-menu-arrow bs-select-hidden"
-                        id="sel_branch" name="sel_branch" title="-Select-" onchange="getAgentList(this.value)"
-                       >
-                        <option class="bs-title-option" value=""></option>
-                     
-                   
-                
-                  
-                    </select>
-                       
+                            id="sel_branch" name="sel_branch" title="-Select-" onchange="getAgentList(this.value)">
+                            <option class="bs-title-option" value=""></option>
+
+
+
+
+                        </select>
+
                     </div>
 
 
@@ -766,18 +828,65 @@ th{
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 <script>
-     // For Voucher Datepicker
+    // For Voucher Datepicker
 
-  const voucherStartdatepicker = flatpickr("#voucherStartdatepicker", {
-    dateFormat: "Y-m-d",
-    minDate: "today"
-  });
+    const voucherStartdatepicker = flatpickr("#voucherStartdatepicker", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
 
 
-  const voucherEndDatepicker = flatpickr("#voucherEndDatepicker", {
-    dateFormat: "Y-m-d",
-    minDate: "today"
-  });
+    const voucherEndDatepicker = flatpickr("#voucherEndDatepicker", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
 </script>
+<script>
+    // Get a reference to the checkbox element
+    const redirectHotel = document.getElementById("hotel_supplier");
+
+    // Add an event listener to the checkbox
+    redirectHotel.addEventListener("change", function () {
+        // Check if the checkbox is checked
+        if (redirectHotel.checked) {
+            // Redirect to the desired page
+            window.location.href = "hotelinventoryapp.html";
+        }
+    });
+    // Get a reference to the checkbox element
+    const redirectactivity = document.getElementById("activity");
+
+    // Add an event listener to the checkbox
+    redirectactivity.addEventListener("change", function () {
+        // Check if the checkbox is checked
+        if (redirectactivity.checked) {
+            // Redirect to the desired page
+            window.location.href = "toursaddrates.html";
+        }
+    });
+    // Get a reference to the checkbox element
+    const redirecttranfer = document.getElementById("transfer");
+
+    // Add an event listener to the checkbox
+    redirecttranfer.addEventListener("change", function () {
+        // Check if the checkbox is checked
+        if (redirecttranfer.checked) {
+            // Redirect to the desired page
+            window.location.href = "addtransferrates.html";
+        }
+    });
+       // Get a reference to the checkbox element
+       const redirectvisa = document.getElementById("visa");
+
+// Add an event listener to the checkbox
+redirectvisa.addEventListener("change", function () {
+    // Check if the checkbox is checked
+    if (redirectvisa.checked) {
+        // Redirect to the desired page
+        window.location.href = "VisaVisaRatesAddSupplierVisaRates .html";
+    }
+});
+</script>
+
 
 </html>
