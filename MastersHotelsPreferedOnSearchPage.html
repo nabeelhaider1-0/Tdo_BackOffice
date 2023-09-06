@@ -1143,7 +1143,219 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
-
+<script language="javascript">
+  function check_if_selected_1(type) {
+  if(type == 'right') {
+      from = document.getElementById("sel_right_members_1[]");
+      var haha=0;
+      for (var i=0; i<from.options.length; i++) {
+        var o = from.options[i];
+        if (o.selected) {
+          var haha =1;
+          break;
+        }
+      }
+  } else if(type == 'left') {
+      from = document.getElementById("sel_hotels_1");
+      var haha=0;
+      for (var i=0; i<from.options.length; i++) {
+        var o = from.options[i];
+        if (o.selected) {
+          var haha =1;
+          break;
+        }
+      }
+  }
+  return haha;
+  }
+  function right_to_left_1() {
+    to = document.getElementById("sel_hotels_1");
+    from = document.getElementById("sel_right_members_1[]");
+    if(!check_if_selected_1('right')) {
+      if(checkCountryCity(document.forms['preferred_hotel_form']))
+      {
+        return false;
+      }else{
+      showWarAlert('select atleast one hotel from the right box to be transferred.');
+      from = document.getElementById("sel_right_members_1[]");
+      }
+    } else {
+      /*var r = confirm("Are you sure you want to remove prefered hotel, then click OK, else click Cancel.");
+      if(r==true){
+      if (arguments.length > 3) {
+        var regex = arguments[3];
+        if (regex != "") {
+          unSelectMatchingOptions(from,regex);
+        }
+      }
+      if (!hasOptions(from)) { return; }
+      for (var i=0; i<from.options.length; i++) {
+        var o = from.options[i];
+        if (o.selected) {
+          if (!hasOptions(to)) { var index = 0; } else { var index=to.options.length; }
+          to.options[index] = new Option( o.text, o.value, false, false);
+        }
+      }
+      for (var i=(from.options.length-1); i>=0; i--) {
+        var o = from.options[i];
+        if (o.selected) {
+          from.options[i] = null;
+        }
+      }
+      if ((arguments.length<3) || (arguments[2]==true)) {
+      }
+      from.selectedIndex = -1;
+      to.selectedIndex = -1;
+    }*/
+      swal({
+                  title: "Are you sure you want to remove prefered hotel, then click OK, else click Cancel.",
+                  type: "warning",
+                  showCancelButton: true,
+                  confirmButtonText: "Ok",
+                  confirmButtonColor: "#F0AD4E",
+                  closeOnConfirm: true,
+                    showLoaderOnConfirm:true
+              },
+              function (isConfirm) {
+                  if (isConfirm) {
+                    if (arguments.length > 3) {
+              var regex = arguments[3];
+              if (regex != "") {
+                unSelectMatchingOptions(from,regex);
+              }
+            }
+            if (!hasOptions(from)) { return; }
+            for (var i=0; i<from.options.length; i++) {
+              var o = from.options[i];
+              if (o.selected) {
+                if (!hasOptions(to)) { var index = 0; } else { var index=to.options.length; }
+                to.options[index] = new Option( o.text, o.value, false, false);
+              }
+            }
+            for (var i=(from.options.length-1); i>=0; i--) {
+              var o = from.options[i];
+              if (o.selected) {
+                from.options[i] = null;
+              }
+            }
+            if ((arguments.length<3) || (arguments[2]==true)) {
+            }
+            from.selectedIndex = -1;
+            to.selectedIndex = -1;
+                  }
+             });
+    }
+  }
+  function hasOptions(obj) {
+    if (obj!=null && obj.options!=null) { return true; }
+      return false;
+  }
+  function left_to_right_1() {
+    
+    from = document.getElementById("sel_hotels_1");
+    to = document.getElementById("sel_right_members_1[]");
+    if(!check_if_selected_1('left')) {
+      if(checkCountryCity(document.forms['preferred_hotel_form']))
+      {
+        return false;
+      }else{
+  
+      from = document.getElementById("sel_right_members_1[]");
+      }
+    } else {
+      if (arguments.length > 3) {
+        var regex = arguments[3];
+        if (regex != "") {
+          unSelectMatchingOptions(from,regex);
+        }
+      }
+      if (!hasOptions(from)) {
+        return;
+      }
+      for (var i=0; i<from.options.length; i++) {
+          var o = from.options[i];
+          if (o.selected) {
+            if (!hasOptions(to)) {
+              var index = 0;
+            } else {
+              var index=to.options.length;
+            }
+            to.options[index] = new Option( o.text, o.value, false, false);
+          }
+        }
+      for (var i=(from.options.length-1); i>=0; i--) {
+        var o = from.options[i];
+        if (o.selected) {
+          from.options[i] = null;
+        }
+      }
+      if ((arguments.length<3) || (arguments[2]==true)) {
+      }
+      from.selectedIndex = -1;
+      to.selectedIndex = -1;
+    }
+  }
+  function updateRightBox_1() {
+    from = document.getElementById("sel_right_members_1[]");
+    for (var x=0; x<from.options.length; x++) {
+    from.options[x].selected = true;
+    }
+  }
+  function validateRightBox() {
+    var count=0;
+    from = document.getElementById("sel_right_members_1[]");
+    for (var x=0; x<from.options.length; x++) {
+      var t = from.options[x];
+      if(t.selected){
+        count++;
+        t.selected = true;
+      }
+    }
+    if(count==0){
+      return true;
+    }else{
+      updateRightBox_1();
+      return false;
+    }
+  }
+  
+  function addOfferNote() {
+      var selectBox = document.getElementById("sel_right_members_1[]");
+      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+      var url = "hotels.php?action=preferred_hotel_offer&hotel_id="+selectedValue;
+      newwindow=window.open(url,'name','height=600,width=450');
+    if (window.focus) {newwindow.focus()}
+    return false;
+  }
+  </script>
+  <script language="Javascript">
+    function validate_chk(formObj,action){
+      updateRightBox_1();
+       if(document.getElementById("sel_right_members_1[]").value == "")
+         {
+            showWarAlert("Please select Atleast One hotel !"); // prompt user
+            document.getElementById("sel_right_members_1[]").focus(); //set focus back to control
+            return false;
+         }else{
+           formObj.action.value='search_preferred_hotel';
+           updateRightBox_1();
+          formObj.submit();
+        }
+  
+        
+      
+    }
+  $(function(){
+    $("#mesID").hide();
+        var mesID = $("#mesID").text().trim();
+        if(mesID != ""){
+          /*showWarAlert(mesID);*/
+          toastr.info('<h5>'+mesID+'</h5>');
+        }
+      });
+    
+  
+    </script>
 
 
 </html>
