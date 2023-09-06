@@ -1334,6 +1334,230 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 
+<script language="javascript">
+  <!--
+  function check_if_selected(type) {
+  if(type == 'right') {
+      from = document.getElementById("sel_right_members[]");
+      var haha=0;
+      for (var i=0; i<from.options.length; i++) {
+        var o = from.options[i];
+        if (o.selected) {
+          var haha =1;
+          break;
+        }
+      }
+  } else if(type == 'left') {
+      from = document.getElementById("city");//document.forms[0].city;
+      var haha=0;
+      for (var i=0; i<from.options.length; i++) {
+        var o = from.options[i];
+        if (o.selected) {
+          var haha =1;
+          break;
+        }
+      }
+  }
+  return haha;
+  }
+  
+  function right_to_left() {
+    to = document.getElementById("city");
+    from = document.getElementById("sel_right_members[]");
+    if(!check_if_selected('right')) {
+      if(checkCountry(document.forms['rec_frm']))
+      {
+        return false;
+  
+      }else{
+      showWarAlert('select atleast one city from the right box to be transferred.');
+      from = document.getElementById("sel_right_members[]");
+      //from.options[0].selected = true;
+      }
+    } else {
+      if (arguments.length > 3) {
+        var regex = arguments[3];
+        if (regex != "") {
+          unSelectMatchingOptions(from,regex);
+        }
+      }
+        // Move them over
+      if (!hasOptions(from)) { return; }
+      for (var i=0; i<from.options.length; i++) {
+        var o = from.options[i];
+        if (o.selected) {
+          if (!hasOptions(to)) { var index = 0; } else { var index=to.options.length; }
+          to.options[index] = new Option( o.text, o.value, false, false);
+        }
+      }
+        // Delete them from original
+      for (var i=(from.options.length-1); i>=0; i--) {
+        var o = from.options[i];
+        if (o.selected) {
+          from.options[i] = null;
+        }
+      }
+  
+      if ((arguments.length<3) || (arguments[2]==true)) {
+  //								sortSelect(from);
+  //								sortSelect(to);
+      }
+      from.selectedIndex = -1;
+      to.selectedIndex = -1;
+    }
+  }
+  
+  function hasOptions(obj) {
+    if (obj!=null && obj.options!=null) { return true; }
+      return false;
+  }
+  
+  function left_to_right() {
+    from = document.getElementById("city");
+    to = document.getElementById("sel_right_members[]");
+  
+    if(!check_if_selected('left')) {
+      if(checkCountry(document.forms['rec_frm']))
+      {
+        return false;
+  
+      }else{
+      showWarAlert('select atleast one city from the left box to be transferred.');
+      from = document.getElementById("sel_right_members[]");
+      //from.options[0].selected = true;
+      }
+    } else {
+  
+      if (arguments.length > 3) {
+        var regex = arguments[3];
+        if (regex != "") {
+          unSelectMatchingOptions(from,regex);
+        }
+      }
+        // Move them over
+      if (!hasOptions(from)) {
+        return;
+      }
+  
+      for (var i=0; i<from.options.length; i++) {
+          var o = from.options[i];
+          if (o.selected) {
+            if (!hasOptions(to)) {
+              var index = 0;
+            } else {
+              var index=to.options.length;
+            }
+            to.options[index] = new Option( o.text, o.value, false, false);
+          }
+        }
+        // Delete them from original
+  
+      for (var i=(from.options.length-1); i>=0; i--) {
+        var o = from.options[i];
+        if (o.selected) {
+          from.options[i] = null;
+        }
+      }
+  
+      if ((arguments.length<3) || (arguments[2]==true)) {
+  //								sortSelect(from);
+  //								sortSelect(to);
+      }
+      from.selectedIndex = -1;
+      to.selectedIndex = -1;
+    }
+  }
+  
+  function updateRightBox() {
+    from = document.getElementById("sel_right_members[]");
+    //from = fromObj;
+    for (var x=0; x<from.options.length; x++) {
+    from.options[x].selected = true;
+    }
+  }
+  
+  function validateRightBox() {
+    var count=0;
+    from = document.getElementById("sel_right_members[]");
+    //from = fromObj;
+    for (var x=0; x<from.options.length; x++) {
+      var t = from.options[x];
+      if(t.selected){
+        count++;
+        t.selected = true;
+      }
+    }
+    if(count==0){
+      return true;
+    }else{
+      updateRightBox();
+      return false;
+    }
+  }
+  
+  function submit_form() {
+    var selCountry = $("form[name='rec_frm'] #sel_country").next().find("li.selected").text().trim();
+    if(selCountry!=""&selCountry!="- Please select a country -"){}
+    else {
+      showWarAlert('First Select Country.','sel_country',document.forms["rec_frm"],'selectpicker');
+      return false;
+      }
+    from = document.getElementById("sel_right_members[]");
+    for (var x=0; x<from.options.length; x++) {
+      var t = from.options[x];
+      t.selected = true;
+    }
+    
+    
+    document.getElementById('rec_frm').submit();
+  }
+  function checkCountry(formObj){
+      /*if(formObj.sel_country.options[formObj.sel_country.selectedIndex].value == '0') {
+        showWarAlert('First Select Country.');
+        formObj.sel_country.focus();
+  
+      }*/
+    var selCountry = $("form[name='rec_frm'] #sel_country").next().find("li.selected").text().trim();
+    if(selCountry!=""&selCountry!="- Please select a country -"){}
+    else {
+      showWarAlert('First Select Country.','sel_country',document.forms["rec_frm"],'selectpicker');
+      //$("form[name='add_agent_form'] #country").next().find(".dropdown-toggle").focus();
+      }
+    }
+  // -->
+  </script>
+  <script language="javascript1.1">
+		var ajax = new sack();
+		var ajax_selected = new sack();
+	function getCityList(arg1){
+		var countryCode = arg1;
+		//alert("hgh");
+		//alert(arg1);
+		document.getElementById('city').options.length = 0;	// Empty city select box
+		document.getElementById('sel_right_members[]').options.length = 0;	// Empty city select box
+		if(countryCode.length>0){
+			ajax.requestFile = 'getMultipleCities.php?CountryCode='+countryCode;	// Specifying which file to get
+			ajax.onCompletion = createCities;	// Specify function that will be executed after file has been found
+			ajax.runAJAX();		// Execute AJAX function
 
+			ajax_selected.requestFile = 'getMultipleCitiesSelected.php?CountryCode='+countryCode;	// Specifying which file to get
+			ajax_selected.onCompletion = createCitiesSelected;	// Specify function that will be executed after file has been found
+			ajax_selected.runAJAX();		// Execute AJAX function
+
+		}
+	}
+	function createCities(){
+		//alert(ajax.response);
+		var obj = document.getElementById('city');
+		eval(ajax.response);	// Executing the response from Ajax as Javascript code
+		console.log(ajax.response);
+	}
+	function createCitiesSelected(){
+		//alert(ajax_selected.response);
+		var obj_selected = document.getElementById('sel_right_members[]');
+		eval(ajax_selected.response);	// Executing the response from Ajax as Javascript code
+		console.log("right"+ajax_selected.response);
+	}
+	</script>
 
 </html>
