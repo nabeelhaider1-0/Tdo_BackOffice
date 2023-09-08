@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1016,18 +1017,15 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">LIST PAYMENT GATEWAY</h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">LOYALTY TIER</h5>
                 </div>
                 <div class="col-md-6">
 
                 </div>
                 <div class="col-md-3">
-                    <i class="fa-solid fa-house-chimney"></i><span> / List Payment Gateways / <a
-                            href="MastersPaymentgatewayNew.html"><button class="btn btn-dark btn-sm"
-                                style="font-size:12px;">
-                                Add Gateway Payment</button></a></span>
+                    <i class="fa-solid fa-house-chimney"></i><span> / <a href="MastersLoyalityProgramTiersSearch.html"
+                            style="text-decoration:none;color:grey"> Search Loyalty Tier</a> / Edit Loyalty Tier</span>
                 </div>
-            </div>
 
             </div>
         </header>
@@ -1039,384 +1037,138 @@
     <div class="container-fluid pt-0 p-4"id="content-pad">
 
         <!-- First Row-->
-<form>
-        <div class="panel-body removeMargins">
 
-            <div class="row pd_tp">
+        <form action="loyalty_tier.php" method="post" enctype="multipart/form-data" name="add_loyality_tier_form"
+            id="add_loyality_tier_form">
+            <input type="hidden" name="action" value="insertLoyalityTier">
+            <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-4 col_hide">
-                        &nbsp;
+                    <div class="form-group col-md-3 ">
+                        <label>Tier Name</label>
+                        <input class="required form-control form-control-sm test123" type="text" name="name" size="15" maxlength="280">
                     </div>
-                    <div class="col-md-5 col_hide">
-                        &nbsp;
+                    <div class="form-group col-md-3 ">
+                        <label>Currency</label>
+                        <select name="sel_currency" id="sel_currency"
+                            class="form-control form-control-sm required selectpicker show-menu-arrow bs-select-hidden"
+                            onchange="change_currency();" data-live-search="true">
+                            <option label="GBP" value="GBP">GBP</option>
+                            <option label="EUR" value="EUR">EUR</option>
+                            <option label="USD" value="USD" selected="selected">USD</option>
+                            <option label="BHD" value="BHD">BHD</option>
+                            <option label="AED" value="AED">AED</option>
+                            <option label="SGD" value="SGD">SGD</option>
+                            <option label="MYR" value="MYR">MYR</option>
+                            <option label="CAD" value="CAD">CAD</option>
+                            <option label="SAR" value="SAR">SAR</option>
+
+                        </select>
+                    
                     </div>
-                    <div class="col-md-3">
-
-                        <script>
-                            $(document).ready(function () {
-                                $(".tablesearch").keyup(function () {
-                                    var searchTerm = $(".search_new").val();
-                                    var listItem = $('.table tbody').children('tr');
-                                    var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
-                                    $.extend($.expr[':'], {
-                                        'containsi': function (elem, i, match, array) {
-                                            return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
-                                        }
-                                    });
-                                    $(".table tbody tr").not(":containsi('" + searchSplit + "')").each(function (e) {
-                                        $(this).attr('visible', 'false');
-                                    });
-                                    $(".table tbody tr:containsi('" + searchSplit + "')").each(function (e) {
-                                        $(this).attr('visible', 'true');
-                                    });
-                                    var jobCount = $('.table tbody tr[visible="true"]').length;
-                                    $('.counter').text(jobCount + ' item');
-                                    if (jobCount == '0') {
-                                        $('.no-result').show();
-                                    } else {
-                                        $('.no-result').hide();
-                                    }
-                                });
-                            });
-                        </script>
-
-                        <style>
-                            .table tr[visible='false'],
-                            .no-result {
-                                display: none;
-                                border: 1px solid #ddd;
-                                padding: 10px;
-                                margin-top: -2px;
-                            }
-
-                            .table tr[visible='true'] {
-                                display: table-row;
-                            }
-
-                            .counter {
-                                padding: 8px;
-                                color: #ccc;
-                            }
-
-                            .search_new {
-                                float: right;
-                                height: 35px;
-                                margin-bottom: 0px;
-                                padding-left: 5px;
-                            }
-                        </style>
-
-
-                        <div class="form-group col-md-2 new_search_icon" style="text-align: right;padding-right: 0px;">
-                            <h5><i class="pe-7s-search srchWithinPg" data-toggle="tooltip" data-placement="top"
-                                    data-original-title="Search within this table"></i></h5>
-                        </div>
-                        <div class="form-group col-md-10 bookingsrc">
-                            <input type="text" class="tablesearch form-control form-control-sm search_new"
-                                placeholder="Search">
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12 loyaty_bkngdv ">
+                        <label>To Earn</label>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>For every sale of</label>
+                                <input class="form-control form-control-sm required" type="text" name="txt_amount_earn" maxlength="20"style="width:85%">
+                                <span class="currency_code" style="float: right;margin-top: -23px;    margin-right: 23px;">USD</span>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Convertion points</label>
+                                <input class="form-control form-control-sm required" type="text" name="txt_point_earn" maxlength="20"
+                                    style="width: 85%;">
+                                <span class="currency_code" style="float: right;margin-top: -23px;    margin-right: 23px;">Unit</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12 loyaty_bkngdv ">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>To Redeem</label>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label>For every sale of</label>
+                                <input class="form-control form-control-sm required" type="text" name="txt_amount_redeem" maxlength="20"
+                                    style="width: 85%;">
+                                <span class="currency_code" style="float: right;margin-top: -23px;    margin-right: 23px;"> USD</span>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label>Convertion points</label>
+                                <input class="form-control form-control-sm required" type="text" name="txt_point_redeem" maxlength="20"
+                                    style="width: 85%;">
+                                <span style="float: right;margin-top: -23px;    margin-right: 23px;">Unit</span>
+                            </div>
+                            <div class="col-md-3 form-group">
+                                <label>Minimum Points Required</label>
+                                <input class="form-control form-control-sm required" type="text" name="txt_point_redeem_required"
+                                    maxlength="20" style="width: 85%;">
+                                <span style="float: right;margin-top: -23px;    margin-right: 23px;">Unit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <button type="button" class="btn btn-dark btn-sm" name="loyality_add_tier_add_btn" value="submit"
+                        onclick="validate()">
+                        <i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Save
+                    </button>
                 </div>
             </div>
-            <br>
+        </form>
 
-            <div id="tableres_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                <div class="row">
-                    <div class="col-sm-6"></div>
-                    <div class="col-sm-6"></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="doubleScroll-scroll-wrapper" id="wrapper1"
-                            style="height: 20px; overflow: scroll hidden; width: 1320px;">
-                            <div class="suwala-doubleScroll-scroll" style="height: 20px; width: 1320px;"></div>
-                        </div>
-                        <div id="wrapper2" style="overflow: scroll hidden;">
-                            <table id="search_sup"
-                                class="table table-bordered table-striped table-hover table-responsive dataTable no-footer" role="grid"
-                                aria-describedby="search_sup_info">
-                                <thead>
-                                    <tr role="row">
-                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 478.2px;">
-                                            Name</th>
-                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 554.2px;">URL
-                                        </th>
-                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 113.2px;">
-                                            Code</th>
-                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 107.2px;">
-                                            Mark Up %</th>
-                                        <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 176px;">
-                                            Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-
-
-
-
-
-
-
-
-
-                                    <tr class="phps_row_1 odd" role="row">
-                                        <td><img src="https://beta.tdonlines.com/project_folder/tdonline/images/creditmax.png"
-                                                title="CREDIMAX" alt="CREDIMAX" height="80px"></td>
-                                        <td>https://migs.mastercard.com.au/vpcpay</td>
-                                        <td>CREDIMAX</td>
-                                        <td>3</td>
-                                        <td class="actionlink">
-                                            <div class="actionCont">
-                                                <div class="input-group-addon">
-                                                    <a href="MastersPaymentgatewayEdit.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Edit">
-                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
-                                                        <i class="fa fa-pencil-square-o"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="MastersPaymentgatewayview.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="View">
-                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
-                                                        <i class="fa fa-eye"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=1"
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        alt="Click to Deactivate" title=""
-                                                        data-original-title="Click To Deactivate">
-                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
-                                                        <i class="fa fa-check-circle"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=1&amp;action=delete');"
-                                                        title="" data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Delete">
-                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="phps_row_0 even" role="row">
-                                        <td><img src="https://beta.tdonlines.com/project_folder/tdonline/images/payfort.png"
-                                                title="PAYFORT" alt="PAYFORT" height="80px"></td>
-                                        <td>https://secure.payfort.com/ncol/test/orderdirect.asp</td>
-                                        <td>payfort</td>
-                                        <td>2</td>
-                                        <td class="actionlink">
-                                            <div class="actionCont">
-                                                <div class="input-group-addon">
-                                                  <a href="MastersPaymentgatewayEdit.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Edit">
-                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
-                                                        <i class="fa fa-pencil-square-o"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                  <a href="MastersPaymentgatewayview.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="View">
-                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
-                                                        <i class="fa fa-eye"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=4"
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        alt="Click to Deactivate" title=""
-                                                        data-original-title="Click To Deactivate">
-                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
-                                                        <i class="fa fa-check-circle"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=4&amp;action=delete');"
-                                                        title="" data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Delete">
-                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="phps_row_1 odd" role="row">
-                                        <td>hyperpay</td>
-                                        <td>https://test.ctpe.net/frontend/</td>
-                                        <td>HP</td>
-                                        <td>2</td>
-                                        <td class="actionlink">
-                                            <div class="actionCont">
-                                                <div class="input-group-addon">
-                                                  <a href="MastersPaymentgatewayEdit.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Edit">
-                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
-                                                        <i class="fa fa-pencil-square-o"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                  <a href="MastersPaymentgatewayview.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="View">
-                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
-                                                        <i class="fa fa-eye"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=3"
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        alt="Click to Deactivate" title=""
-                                                        data-original-title="Click To Deactivate">
-                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
-                                                        <i class="fa fa-check-circle"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=3&amp;action=delete');"
-                                                        title="" data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Delete">
-                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="phps_row_0 even" role="row">
-                                        <td>TapPay</td>
-                                        <td>https://api.tap.company/v2</td>
-                                        <td>TAPPAY</td>
-                                        <td>5</td>
-                                        <td class="actionlink">
-                                            <div class="actionCont">
-                                                <div class="input-group-addon">
-                                                  <a href="MastersPaymentgatewayEdit.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Edit">
-                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
-                                                        <i class="fa fa-pencil-square-o"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                  <a href="MastersPaymentgatewayview.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="View">
-                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
-                                                        <i class="fa fa-eye"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=5"
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        alt="Click to Deactivate" title=""
-                                                        data-original-title="Click To Deactivate">
-                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
-                                                        <i class="fa fa-check-circle"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=5&amp;action=delete');"
-                                                        title="" data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Delete">
-                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class="phps_row_1 odd" role="row">
-                                        <td>test_pg</td>
-                                        <td>https://migs.mastercard.com.au/vpcpay</td>
-                                        <td>test1</td>
-                                        <td>0</td>
-                                        <td class="actionlink">
-                                            <div class="actionCont">
-                                                <div class="input-group-addon">
-                                                  <a href="MastersPaymentgatewayEdit.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Edit">
-                                                        <!--<img src="images/edit.gif" border=0 alt="Edit">-->
-                                                        <i class="fa fa-pencil-square-o"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                  <a href="MastersPaymentgatewayview.html" title=""
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="View">
-                                                        <!--<img src="images/view.gif" border=0 alt="View">-->
-                                                        <i class="fa fa-eye"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="edit_payment_gateway.php?action=status&amp;st=H&amp;id=2"
-                                                        data-toggle="tooltip" data-placement="top"
-                                                        alt="Click to Deactivate" title=""
-                                                        data-original-title="Click To Deactivate">
-                                                        <!--<img src="images/activate.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Click to Deactivate" title="Click To Deactivate">-->
-                                                        <i class="fa fa-check-circle"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="input-group-addon">
-                                                    <a href="Javascript: confirm_delete('edit_payment_gateway.php?id=2&amp;action=delete');"
-                                                        title="" data-toggle="tooltip" data-placement="top"
-                                                        data-original-title="Delete">
-                                                        <!--<img src="images/delete.gif" alt="Delete" border=0></a>-->
-                                                        <i class="fa fa-trash"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="dataTables_info" id="tableres_info" role="status" aria-live="polite">
-                        </div>
-                    </div>
-                    <div class="col-sm-6"></div>
-                </div>
-            </div>
-            <div class="form-group mesID1 no-result">
-                <h5 class="text-center">No Pricing Found.</h5>
-            </div>
-            <!-- </div> -->
-        </div>
-
-</form>
         <!-- End -->
 
 
 
     </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 
-<script type="text/javascript">
-    var wrapper1 = document.getElementById('wrapper1');
-    var wrapper2 = document.getElementById('wrapper2');
-    wrapper1.onscroll = function () {
-        wrapper2.scrollLeft = wrapper1.scrollLeft;
-    };
-    wrapper2.onscroll = function () {
-        wrapper1.scrollLeft = wrapper2.scrollLeft;
-    };
-</script>
+
 
 </html>

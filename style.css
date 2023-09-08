@@ -464,7 +464,11 @@ text-decoration: underline !important;
 .fa:hover {
   color: #555 !important;
 }
-
+.panel-body-essen {
+  border: #e3e3e3 solid 1px;
+  padding: 5px 15px 10px 15px;
+  margin-bottom: 15px;
+}
 
 .input-daterange .input-group-addon {
   width: auto;
