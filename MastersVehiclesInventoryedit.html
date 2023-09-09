@@ -2199,89 +2199,1026 @@
 
         </form>
 <style>
-    body .fc {
-    font-size: 12px !important;
-    color: #6a6c6f !important;
+    /*!
+ * FullCalendar v2.2.6 Stylesheet
+ * Docs & License: http://arshaw.com/fullcalendar/
+ * (c) 2013 Adam Shaw
+ */
+
+
+.fc {
+	direction: ltr;
+	text-align: left;
 }
-.hpanel .panel-body {
-    font-family: "MONTSERRAT";
+
+.fc-rtl {
+	text-align: right;
 }
-h2, .h2 {
-    font-size: 30px;
-    font-weight: 300;
+
+body .fc { /* extra precedence to overcome jqui */
+	font-size: 12px;
+}
+
+
+/* Colors
+--------------------------------------------------------------------------------------------------*/
+
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed hr,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover {
+	border-color: #ddd;
+}
+
+.fc-unthemed .fc-popover {
+	background-color: #fff !important;
+}
+
+.fc-unthemed hr,
+.fc-unthemed .fc-popover .fc-header {
+	background: #eee !important;
+}
+
+.fc-unthemed .fc-popover .fc-header .fc-close {
+	color: #666 !important;
+}
+
+.fc-unthemed .fc-today {
+	background: #fcf8e3 !important;
+}
+
+.fc-highlight { /* when user is selecting cells */
+	background: #bce8f1 !important;
+	opacity: .3;
+	filter: alpha(opacity=30); /* for IE */
+}
+
+.fc-bgevent { /* default look for background events */
+	background: rgb(143, 223, 130) !important;
+	opacity: .3;
+	filter: alpha(opacity=30); /* for IE */
+}
+
+.fc-nonbusiness { /* default look for non-business-hours areas */
+	/* will inherit .fc-bgevent's styles */
+	background: #ccc !important;
+}
+
+
+/* Icons (inline elements with styled text that mock arrow icons)
+--------------------------------------------------------------------------------------------------*/
+
+.fc-icon {
+	display: inline-block;
+	font-size: 2em;
+	line-height: .5em;
+	height: .5em; /* will make the total height 1em */
+	font-family: "Courier New", Courier, monospace;
+}
+
+.fc-icon-left-single-arrow:after {
+	content: "\02039";
+	font-weight: bold;
+}
+
+.fc-icon-right-single-arrow:after {
+	content: "\0203A";
+	font-weight: bold;
+}
+
+.fc-icon-left-double-arrow:after {
+	content: "\000AB";
+}
+
+.fc-icon-right-double-arrow:after {
+	content: "\000BB";
+}
+
+.fc-icon-x:after {
+	content: "\000D7";
+}
+
+
+/* Buttons (styled <button> tags, normalized to work cross-browser)
+--------------------------------------------------------------------------------------------------*/
+
+.fc button {
+	/* force height to include the border and padding */
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	/* dimensions */
+	margin: 0;
+	height: 2.1em;
+	padding: 0 .6em;
+
+	/* text & cursor */
+	font-size: 1em; /* normalize */
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+/* Firefox has an annoying inner border */
+.fc button::-moz-focus-inner { margin: 0; padding: 0; }
+	
+.fc-state-default { /* non-theme */
+	border: 1px solid;
+}
+
+.fc-state-default.fc-corner-left { /* non-theme */
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.fc-state-default.fc-corner-right { /* non-theme */
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+/* icons in buttons */
+
+.fc button .fc-icon { /* non-theme */
+	position: relative;
+	top: .05em; /* seems to be a good adjustment across browsers */
+	margin: 0 .1em;
+}
+	
+/*
+  button states
+  borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
+*/
+
+.fc-state-default {
+	background-color: #f5f5f5;
+	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-repeat: repeat-x;
+	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #333;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.fc-state-hover,
+.fc-state-down,
+.fc-state-active,
+.fc-state-disabled {
+	color: #333333;
+	background-color: #e6e6e6;
+}
+
+.fc-state-hover {
+	color: #333333;
+	text-decoration: none;
+	background-position: 0 -15px;
+	-webkit-transition: background-position 0.1s linear;
+	   -moz-transition: background-position 0.1s linear;
+	     -o-transition: background-position 0.1s linear;
+	        transition: background-position 0.1s linear;
+}
+
+.fc-state-down,
+.fc-state-active {
+	background-color: #cccccc;
+	background-image: none;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.fc-state-disabled {
+	cursor: default;
+	background-image: none;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	box-shadow: none;
+}
+
+
+/* Buttons Groups
+--------------------------------------------------------------------------------------------------*/
+
+.fc-button-group {
+	display: inline-block;
+}
+
+/*
+every button that is not first in a button group should scootch over one pixel and cover the
+previous button's border...
+*/
+
+.fc .fc-button-group > * { /* extra precedence b/c buttons have margin set to zero */
+	float: left;
+	margin: 0 0 0 -1px;
+}
+
+.fc .fc-button-group > :first-child { /* same */
+	margin-left: 0;
+}
+
+
+/* Popover
+--------------------------------------------------------------------------------------------------*/
+
+.fc-popover {
+	position: absolute;
+	box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+
+.fc-popover .fc-header {
+	padding: 2px 4px;
+}
+
+.fc-popover .fc-header .fc-title {
+	margin: 0 2px;
+}
+
+.fc-popover .fc-header .fc-close {
+	cursor: pointer;
+}
+
+.fc-ltr .fc-popover .fc-header .fc-title,
+.fc-rtl .fc-popover .fc-header .fc-close {
+	float: left;
+}
+
+.fc-rtl .fc-popover .fc-header .fc-title,
+.fc-ltr .fc-popover .fc-header .fc-close {
+	float: right;
+}
+
+/* unthemed */
+
+.fc-unthemed .fc-popover {
+	border-width: 1px;
+	border-style: solid;
+}
+
+.fc-unthemed .fc-popover .fc-header .fc-close {
+	font-size: 25px;
+	margin-top: 4px;
+}
+
+/* jqui themed */
+
+.fc-popover > .ui-widget-header + .ui-widget-content {
+	border-top: 0; /* where they meet, let the header have the border */
+}
+
+
+/* Misc Reusable Components
+--------------------------------------------------------------------------------------------------*/
+
+.fc hr {
+	height: 0;
+	margin: 0;
+	padding: 0 0 2px; /* height is unreliable across browsers, so use padding */
+	border-style: solid;
+	border-width: 1px 0;
 }
 
 .fc-clear {
-    clear: both;
-}
-.fc {
-    direction: ltr;
-    text-align: left;
-}
-.fc-toolbar {
-    margin-top: 1em;
+	clear: both;
 }
 
-.fc-toolbar {
-    text-align: center;
-    margin-bottom: 1em;
-}
-.fc-toolbar .fc-left {
-    float: left;
-}
-.fc-toolbar .fc-right {
-    float: right;
-}
-.fc-toolbar .fc-center {
-    display: inline-block;
-}
-.fc .fc-toolbar > * > :first-child {
-    margin-left: 0;
-}
-.fc .fc-toolbar > * > * {
-    float: left;
-  
-}
-.fc-button-group {
-    display: inline-block;
-}
-.fc .fc-button-group > :first-child {
-    margin-left: 0;
+.fc-bg,
+.fc-bgevent-skeleton,
+.fc-highlight-skeleton,
+.fc-helper-skeleton {
+	/* these element should always cling to top-left/right corners */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
-.fc .fc-button-group > * {
-    float: left;
-    margin: 0 0 0 -1px;
+.fc-bg {
+	bottom: 0; /* strech bg to bottom edge */
 }
-.fc-toolbar button {
-    position: relative;
+
+.fc-bg table {
+	height: 100%; /* strech bg to bottom edge */
 }
-.fc-state-active {
-    background-color: #34495e !important;
-    border-color: #34495e !important;
-    color: #ffffff !important;
+
+
+/* Tables
+--------------------------------------------------------------------------------------------------*/
+
+.fc table {
+	width: 1458px;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 1em; /* normalize cross-browser */
 }
-.fc-state-default.fc-corner-left {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+
+.fc th {
+	text-align: center;
+    color: #333;
+    background-color: #f4f5f9;
 }
-.fc button {
-    height: 2.5em;
+
+.fc th,
+.fc td {
+	border-style: solid;
+	border-width: 1px;
+	padding: 0;
+	vertical-align: top;
 }
-.fc-toolbar button {
-    position: relative;
+
+.fc td.fc-today {
+	border-style: double; /* overcome neighboring borders */
 }
-.fc button {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    height: 2.1em;
-    padding: 0 0.6em;
-    font-size: 1em;
-    white-space: nowrap;
+
+
+/* Fake Table Rows
+--------------------------------------------------------------------------------------------------*/
+
+.fc .fc-row { /* extra precedence to overcome themes w/ .ui-widget-content forcing a 1px border */
+	/* no visible border by default. but make available if need be (scrollbar width compensation) */
+	border-style: solid;
+	border-width: 0;
+}
+
+.fc-row table {
+	/* don't put left/right border on anything within a fake row.
+	   the outer tbody will worry about this */
+	border-left: 0 hidden transparent;
+	border-right: 0 hidden transparent;
+
+	/* no bottom borders on rows */
+	border-bottom: 0 hidden transparent; 
+}
+
+.fc-row:first-child table {
+	border-top: 0 hidden transparent; /* no top border on first row */
+}
+
+
+/* Day Row (used within the header and the DayGrid)
+--------------------------------------------------------------------------------------------------*/
+
+.fc-row {
+	position: relative;
+}
+
+.fc-row .fc-bg {
+	z-index: 1;
+}
+
+/* highlighting cells & background event skeleton */
+
+.fc-row .fc-bgevent-skeleton,
+.fc-row .fc-highlight-skeleton {
+	bottom: 0; /* stretch skeleton to bottom of row */
+}
+
+.fc-row .fc-bgevent-skeleton table,
+.fc-row .fc-highlight-skeleton table {
+	height: 100%; /* stretch skeleton to bottom of row */
+}
+
+.fc-row .fc-highlight-skeleton td,
+.fc-row .fc-bgevent-skeleton td {
+	border-color: transparent;
+}
+
+.fc-row .fc-bgevent-skeleton {
+	z-index: 2;
+
+}
+
+.fc-row .fc-highlight-skeleton {
+	z-index: 3;
+}
+a:hover, a:focus {
+    color: #34495e !important;
+    text-decoration: none !important;
     cursor: pointer;
 }
+.fc-past a{
+color: #333;
+text-decoration: none;
+}
+.fc-content:hover{
+    color: white !important;
+}
+.fc-event-container:hover{
+    color: white !important;
+}
+
+/*
+row content (which contains day/week numbers and events) as well as "helper" (which contains
+temporary rendered events).
+*/
+
+.fc-row .fc-content-skeleton {
+	position: relative;
+	z-index: 4;
+	padding-bottom: 2px; /* matches the space above the events */
+}
+
+.fc-row .fc-helper-skeleton {
+	z-index: 5;
+}
+
+.fc-row .fc-content-skeleton td,
+.fc-row .fc-helper-skeleton td {
+	/* see-through to the background below */
+	background: none; /* in case <td>s are globally styled */
+	border-color: transparent;
+
+	/* don't put a border between events and/or the day number */
+	border-bottom: 0;
+}
+
+.fc-row .fc-content-skeleton tbody td, /* cells with events inside (so NOT the day number cell) */
+.fc-row .fc-helper-skeleton tbody td {
+	/* don't put a border between event cells */
+	border-top: 0;
+}
+
+
+/* Scrolling Container
+--------------------------------------------------------------------------------------------------*/
+
+.fc-scroller { /* this class goes on elements for guaranteed vertical scrollbars */
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.fc-scroller > * { /* we expect an immediate inner element */
+	position: relative; /* re-scope all positions */
+	width: 100%; /* hack to force re-sizing this inner element when scrollbars appear/disappear */
+	overflow: hidden; /* don't let negative margins or absolute positioning create further scroll */
+}
+
+
+/* Global Event Styles
+--------------------------------------------------------------------------------------------------*/
+
+.fc-event {
+	position: relative; /* for resize handle and other inner positioning */
+	display: block; /* make the <a> tag block */
+	font-size: .85em;
+	line-height: 1.3;
+	border-radius: 3px;
+	border: 1px solid #3a87ad; /* default BORDER color */
+	background-color: #3a87ad; /* default BACKGROUND color */
+	font-weight: normal; /* undo jqui's ui-widget-header bold */
+}
+
+/* overpower some of bootstrap's and jqui's styles on <a> tags */
+.fc-event,
+.fc-event:hover,
+.ui-widget .fc-event {
+	color: #fff; /* default TEXT color */
+	text-decoration: none; /* if <a> has an href */
+}
+
+.fc-event[href],
+.fc-event.fc-draggable {
+	cursor: pointer; /* give events with links and draggable events a hand mouse pointer */
+}
+
+.fc-not-allowed, /* causes a "warning" cursor. applied on body */
+.fc-not-allowed .fc-event { /* to override an event's custom cursor */
+	cursor: not-allowed;
+}
+.fc-past{
+    background-color: white !important;
+  
+}
+
+/* DayGrid events
+----------------------------------------------------------------------------------------------------
+We use the full "fc-day-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+
+.fc-day-grid-event {
+	margin: 1px 2px 0; /* spacing between events and edges */
+	padding: 0 1px;
+}
+
+/* events that are continuing to/from another week. kill rounded corners and butt up against edge */
+
+.fc-ltr .fc-day-grid-event.fc-not-start,
+.fc-rtl .fc-day-grid-event.fc-not-end {
+	margin-left: 0;
+	border-left-width: 0;
+	padding-left: 1px; /* replace the border with padding */
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.fc-ltr .fc-day-grid-event.fc-not-end,
+.fc-rtl .fc-day-grid-event.fc-not-start {
+	margin-right: 0;
+	border-right-width: 0;
+	padding-right: 1px; /* replace the border with padding */
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.fc-day-grid-event > .fc-content { /* force events to be one-line tall */
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.fc-day-grid-event .fc-time {
+	font-weight: bold;
+}
+
+/* resize handle (outside of fc-content, so can go outside of bounds) */
+
+.fc-day-grid-event .fc-resizer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 7px;
+}
+
+.fc-ltr .fc-day-grid-event .fc-resizer {
+	right: -3px;
+	cursor: e-resize;
+}
+
+.fc-rtl .fc-day-grid-event .fc-resizer {
+	left: -3px;
+	cursor: w-resize;
+}
+
+
+/* Event Limiting
+--------------------------------------------------------------------------------------------------*/
+
+/* "more" link that represents hidden events */
+
+a.fc-more {
+	margin: 1px 3px;
+	font-size: .85em;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a.fc-more:hover {
+	text-decoration: underline;
+}
+
+.fc-limited { /* rows and cells that are hidden because of a "more" link */
+	display: none;
+}
+
+/* popover that appears when "more" link is clicked */
+
+.fc-day-grid .fc-row {
+	z-index: 1; /* make the "more" popover one higher than this */
+}
+
+.fc-more-popover {
+	z-index: 2;
+	width: 220px;
+}
+
+.fc-more-popover .fc-event-container {
+	padding: 10px;
+}
+
+/* Toolbar
+--------------------------------------------------------------------------------------------------*/
+
+.fc-toolbar {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.fc-toolbar .fc-left {
+	float: left;
+}
+
+.fc-toolbar .fc-right {
+	float: right;
+}
+
+.fc-toolbar .fc-center {
+	display: inline-block;
+}
+
+/* the things within each left/right/center section */
+.fc .fc-toolbar > * > * { /* extra precedence to override button border margins */
+	float: left;
+	margin-left: .75em;
+}
+
+/* the first thing within each left/center/right section */
+.fc .fc-toolbar > * > :first-child { /* extra precedence to override button border margins */
+	margin-left: 0;
+}
+	
+/* title text */
+
+.fc-toolbar h2 {
+	margin: 0;
+}
+
+/* button layering (for border precedence) */
+
+.fc-toolbar button {
+	position: relative;
+}
+
+.fc-toolbar .fc-state-hover,
+.fc-toolbar .ui-state-hover {
+	z-index: 2;
+}
+	
+.fc-toolbar .fc-state-down {
+	z-index: 3;
+}
+
+.fc-toolbar .fc-state-active,
+.fc-toolbar .ui-state-active {
+	z-index: 4;
+}
+
+.fc-toolbar button:focus {
+	z-index: 5;
+}
+
+
+/* View Structure
+--------------------------------------------------------------------------------------------------*/
+
+/* undo twitter bootstrap's box-sizing rules. normalizes positioning techniques */
+/* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */
+.fc-view-container *,
+.fc-view-container *:before,
+.fc-view-container *:after {
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;
+}
+
+.fc-view, /* scope positioning and z-index's for everything within the view */
+.fc-view > table { /* so dragged elements can be above the view's main element */
+	position: relative;
+	z-index: 1;
+	overflow-x: scroll;
+}
+
+/* BasicView
+--------------------------------------------------------------------------------------------------*/
+
+/* day row structure */
+
+.fc-basicWeek-view .fc-content-skeleton,
+.fc-basicDay-view .fc-content-skeleton {
+	/* we are sure there are no day numbers in these views, so... */
+	padding-top: 1px; /* add a pixel to make sure there are 2px padding above events */
+	padding-bottom: 1em; /* ensure a space at bottom of cell for user selecting/clicking */
+}
+
+.fc-basic-view tbody .fc-row {
+	min-height: 4em; /* ensure that all rows are at least this tall */
+}
+
+/* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
+
+.fc-row.fc-rigid {
+	overflow: hidden;
+}
+
+.fc-row.fc-rigid .fc-content-skeleton {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+/* week and day number styling */
+
+.fc-basic-view .fc-week-number,
+.fc-basic-view .fc-day-number {
+	padding: 0 2px;
+}
+
+.fc-basic-view td.fc-week-number span,
+.fc-basic-view td.fc-day-number {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.fc-basic-view .fc-week-number {
+	text-align: center;
+}
+
+.fc-basic-view .fc-week-number span {
+	/* work around the way we do column resizing and ensure a minimum width */
+	display: inline-block;
+	min-width: 1.25em;
+}
+
+.fc-ltr .fc-basic-view .fc-day-number {
+	text-align: right;
+}
+
+.fc-rtl .fc-basic-view .fc-day-number {
+	text-align: left;
+}
+
+.fc-day-number.fc-other-month {
+	opacity: 0.3;
+	filter: alpha(opacity=30); /* for IE */
+	/* opacity with small font can sometimes look too faded
+	   might want to set the 'color' property instead
+	   making day-numbers bold also fixes the problem */
+}
+
+/* AgendaView all-day area
+--------------------------------------------------------------------------------------------------*/
+
+.fc-agenda-view .fc-day-grid {
+	position: relative;
+	z-index: 2; /* so the "more.." popover will be over the time grid */
+}
+
+.fc-agenda-view .fc-day-grid .fc-row {
+	min-height: 3em; /* all-day section will never get shorter than this */
+}
+
+.fc-agenda-view .fc-day-grid .fc-row .fc-content-skeleton {
+	padding-top: 1px; /* add a pixel to make sure there are 2px padding above events */
+	padding-bottom: 1em; /* give space underneath events for clicking/selecting days */
+}
+
+
+/* TimeGrid axis running down the side (for both the all-day area and the slot area)
+--------------------------------------------------------------------------------------------------*/
+
+.fc .fc-axis { /* .fc to overcome default cell styles */
+	vertical-align: middle;
+	padding: 0 4px;
+	white-space: nowrap;
+}
+
+.fc-ltr .fc-axis {
+	text-align: right;
+}
+
+.fc-rtl .fc-axis {
+	text-align: left;
+}
+
+.ui-widget td.fc-axis {
+	font-weight: normal; /* overcome jqui theme making it bold */
+}
+
+
+/* TimeGrid Structure
+--------------------------------------------------------------------------------------------------*/
+
+.fc-time-grid-container, /* so scroll container's z-index is below all-day */
+.fc-time-grid { /* so slats/bg/content/etc positions get scoped within here */
+	position: relative;
+	z-index: 1;
+}
+
+.fc-time-grid {
+	min-height: 100%; /* so if height setting is 'auto', .fc-bg stretches to fill height */
+}
+
+.fc-time-grid table { /* don't put outer borders on slats/bg/content/etc */
+	border: 0 hidden transparent;
+}
+
+.fc-time-grid > .fc-bg {
+	z-index: 1;
+}
+
+.fc-time-grid .fc-slats,
+.fc-time-grid > hr { /* the <hr> AgendaView injects when grid is shorter than scroller */
+	position: relative;
+	z-index: 2;
+}
+
+.fc-time-grid .fc-bgevent-skeleton,
+.fc-time-grid .fc-content-skeleton {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.fc-time-grid .fc-bgevent-skeleton {
+	z-index: 3;
+}
+
+.fc-time-grid .fc-highlight-skeleton {
+	z-index: 4;
+}
+
+.fc-time-grid .fc-content-skeleton {
+	z-index: 5;
+}
+
+.fc-time-grid .fc-helper-skeleton {
+	z-index: 6;
+}
+
+
+/* TimeGrid Slats (lines that run horizontally)
+--------------------------------------------------------------------------------------------------*/
+
+.fc-slats td {
+	height: 1.5em;
+	border-bottom: 0; /* each cell is responsible for its top border */
+}
+
+.fc-slats .fc-minor td {
+	border-top-style: dotted;
+}
+
+.fc-slats .ui-widget-content { /* for jqui theme */
+	background: none; /* see through to fc-bg */
+}
+
+
+/* TimeGrid Highlighting Slots
+--------------------------------------------------------------------------------------------------*/
+
+.fc-time-grid .fc-highlight-container { /* a div within a cell within the fc-highlight-skeleton */
+	position: relative; /* scopes the left/right of the fc-highlight to be in the column */
+}
+
+.fc-time-grid .fc-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	/* top and bottom will be in by JS */
+}
+
+
+/* TimeGrid Event Containment
+--------------------------------------------------------------------------------------------------*/
+
+.fc-time-grid .fc-event-container, /* a div within a cell within the fc-content-skeleton */
+.fc-time-grid .fc-bgevent-container { /* a div within a cell within the fc-bgevent-skeleton */
+	position: relative;
+}
+
+.fc-ltr .fc-time-grid .fc-event-container { /* space on the sides of events for LTR (default) */
+	margin: 0 2.5% 0 2px;
+}
+
+.fc-rtl .fc-time-grid .fc-event-container { /* space on the sides of events for RTL */
+	margin: 0 2px 0 2.5%;
+}
+
+.fc-time-grid .fc-event,
+.fc-time-grid .fc-bgevent {
+	position: absolute;
+	z-index: 1; /* scope inner z-index's */
+}
+
+.fc-time-grid .fc-bgevent {
+	/* background events always span full width */
+	left: 0;
+	right: 0;
+}
+
+
+/* TimeGrid Event Styling
+----------------------------------------------------------------------------------------------------
+We use the full "fc-time-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+
+.fc-time-grid-event.fc-not-start { /* events that are continuing from another day */
+	/* replace space made by the top border with padding */
+	border-top-width: 0;
+	padding-top: 1px;
+
+	/* remove top rounded corners */
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.fc-time-grid-event.fc-not-end {
+	/* replace space made by the top border with padding */
+	border-bottom-width: 0;
+	padding-bottom: 1px;
+
+	/* remove bottom rounded corners */
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.fc-time-grid-event {
+	overflow: hidden; /* don't let the bg flow over rounded corners */
+}
+
+.fc-time-grid-event > .fc-content { /* contains the time and title, but no bg and resizer */
+	position: relative;
+	z-index: 2; /* above the bg */
+}
+
+.fc-time-grid-event .fc-time,
+.fc-time-grid-event .fc-title {
+	padding: 0 1px;
+}
+
+.fc-time-grid-event .fc-time {
+	font-size: .85em;
+	white-space: nowrap;
+}
+
+.fc-time-grid-event .fc-bg {
+	z-index: 1;
+	background: #fff;
+	opacity: .25;
+	filter: alpha(opacity=25); /* for IE */
+}
+
+/* short mode, where time and title are on the same line */
+
+.fc-time-grid-event.fc-short .fc-content {
+	/* don't wrap to second line (now that contents will be inline) */
+	white-space: nowrap;
+}
+
+.fc-time-grid-event.fc-short .fc-time,
+.fc-time-grid-event.fc-short .fc-title {
+	/* put the time and title on the same line */
+	display: inline-block;
+	vertical-align: top;
+}
+
+.fc-time-grid-event.fc-short .fc-time span {
+	display: none; /* don't display the full time text... */
+}
+
+.fc-time-grid-event.fc-short .fc-time:before {
+	content: attr(data-start); /* ...instead, display only the start time */
+}
+
+.fc-time-grid-event.fc-short .fc-time:after {
+	content: "\000A0-\000A0"; /* seperate with a dash, wrapped in nbsp's */
+}
+
+.fc-time-grid-event.fc-short .fc-title {
+	font-size: .85em; /* make the title text the same size as the time */
+	padding: 0; /* undo padding from above */
+}
+
+/* resizer */
+
+.fc-time-grid-event .fc-resizer {
+	position: absolute;
+	z-index: 3; /* above content */
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 8px;
+	overflow: hidden;
+	line-height: 8px;
+	font-size: 11px;
+	font-family: monospace;
+	text-align: center;
+	cursor: s-resize;
+}
+
+.fc-time-grid-event .fc-resizer:after {
+	content: "=";
+}
+
+
+
+
+
+
+
+/* modify css */
+
+.fc-state-default {
+    background-color: #ffffff;
+    background-image: none;
+    background-repeat: repeat-x;
+    box-shadow: none;
+    color: inherit;
+    text-shadow: none
+}
+
+.fc-state-default {
+    border: 1px solid
+}
+
 .fc-button {
     color: inherit;
     border: 1px solid #e4e5e7;
@@ -2292,123 +3229,82 @@ h2, .h2 {
     overflow: hidden;
     padding: 0 0.6em;
     position: relative;
-    white-space: nowrap;
-}
-.fc-state-default {
-    border: 1px solid;
-}
-.fc-state-default {
-    background-color: #ffffff;
-    background-image: none;
-    background-repeat: repeat-x;
-    box-shadow: none;
-    color: inherit;
-    text-shadow: none;
-}
-.fc-state-default.fc-corner-left {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-.fc-state-default.fc-corner-right {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-.fc-toolbar .fc-state-active, .fc-toolbar .ui-state-active {
-    z-index: 4;
-}
-tr{
-    color: #6a6c6f;;
+    white-space: nowrap
 }
 
-.fc button .fc-icon {
-    position: relative;
-    top: 0.05em;
-    margin: 0 0.1em;
+.fc-state-active {
+    background-color: #34495e;
+    border-color: #34495e;
+    color: #ffffff
 }
 
-.fc-icon {
-    display: inline-block;
-    font-size: 2em;
-    line-height: .5em;
-    height: 0.5em;
-    font-family: "Courier New", Courier, monospace;
-}
-.fc-view, .fc-view > table {
-    width: 100%;
-}
-.fc-view, .fc-view > table {
-    position: relative;
-    z-index: 1;
-    overflow-x: scroll;
-}
-.fc-view-container *, .fc-view-container *:before, .fc-view-container *:after {
-   
-    box-sizing: content-box;
-}
-.fc-view, .fc-view > table {
-    width: 100%;
+.fc-header-title h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: inherit
 }
 
-.fc-view, .fc-view > table {
-    position: relative;
-    z-index: 1;
-    overflow-x: scroll;
-}
-.fc table {
-
-    table-layout: fixed;
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: 1em;
-}
-.fc-view-container *, .fc-view-container *:before, .fc-view-container *:after {
-
-    box-sizing: content-box;
-}
-table {
-    background-color: transparent;
-}
-.fc .fc-row table {
-    width: 100%;
-}
-.fc-row:first-child table {
-    border-top: 0 hidden transparent;
-}
-.fc-row table {
-    border-left: 0 hidden transparent;
-    border-right: 0 hidden transparent;
-    border-bottom: 0 hidden transparent;
+.fc-content .fc-widget-header, .fc-content .fc-widget-content {
+    border-color: #e4e5e7;
+    font-weight: normal
 }
 
-table {
-    display: table;
-   
-    text-indent: initial;
- 
-    border-color: gray;
+.fc-border-separate tbody {
+    background-color: #F8F8F8
 }
-.fc-unthemed th, .fc-unthemed td, .fc-unthemed hr, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
-    border-color: #ddd;
+
+.fc-state-highlight {
+    background: none repeat scroll 0 0 #edf0f5
 }
-.fc-view-container .fc-widget-header {
-    background: #f4f5f9;
+
+.fc button{
+	height: 2.5em;
 }
-.fc th, .fc td {
-    border-style: solid;
-    border-width: 1px;
-    padding: 0;
-    vertical-align: top;
+.fc-toolbar{
+	margin-top: 1em;
 }
-.fc-unthemed th, .fc-unthemed td, .fc-unthemed hr, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-row, .fc-unthemed .fc-popover {
-    border-color: #ddd;
+.fc-widget-header .fc-day-header span{
+	font-size: 13px;
+    text-transform: uppercase;
 }
-.fc-row {
-    position: relative;
+.fc-view, .fc-view > table{
+	width: 100%;
 }
-.fc .fc-row {
-    border-style: solid;
-    border-width: 0;
+.fc-row .fc-bg table{
+	width: 100%;
 }
+.fc-row.fc-rigid .fc-content-skeleton table{
+	width:100%;
+}
+.fc .fc-row table{
+	width:100%;
+}
+.fc-widget-header .fc-day-header {
+    padding: 12px 0
+}
+
+.fc-ltr .fc-basic-view .fc-day-number {
+    text-align: center
+}
+.fc-content-skeleton .fc-day-top{
+	text-align: center;
+	font-size: 13px;
+	text-transform: uppercase;
+	padding: 6px;
+}
+.fc-content-skeleton .fc-event-container .fc-event{
+	background: #3498db;
+	padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    border-color: #3498db;
+    color:#ffffff;
+}
+.fc-day-grid-event{
+	margin: 2px 6px 0;
+}
+
 </style>
 
         <form class="mt-3">
@@ -3378,6 +4274,7 @@ table {
                         </div>
                     </div>
                 </div>
+             
             </div>
 
         </form>
@@ -3392,6 +4289,214 @@ table {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 
+<script type="text/javascript">
 
+    $(document).ready(function() {
+        $('#supplier').prop('disabled', true);
+        
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay,listWeek'
+            },
+            editable: false,
+            eventLimit: true, // allow "more" link when too many events
+            navLinks: true,
+            slotLabelFormat:"HH:mm",
+            defaultDate: ' 2019-09-12 ',
+            displayEventEnd: true,
+            events:  [{"start":"2019-09-12T00:00:00","end":"2019-09-12T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-13T00:00:00","end":"2019-09-13T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-14T00:00:00","end":"2019-09-14T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-15T00:00:00","end":"2019-09-15T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-16T00:00:00","end":"2019-09-16T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-17T00:00:00","end":"2019-09-17T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-18T00:00:00","end":"2019-09-18T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-19T00:00:00","end":"2019-09-19T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-20T00:00:00","end":"2019-09-20T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-21T00:00:00","end":"2019-09-21T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-22T00:00:00","end":"2019-09-22T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-23T00:00:00","end":"2019-09-23T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-24T00:00:00","end":"2019-09-24T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-25T00:00:00","end":"2019-09-25T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-26T00:00:00","end":"2019-09-26T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-27T00:00:00","end":"2019-09-27T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-28T00:00:00","end":"2019-09-28T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-29T00:00:00","end":"2019-09-29T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-30T00:00:00","end":"2019-09-30T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-01T00:00:00","end":"2019-10-01T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-02T00:00:00","end":"2019-10-02T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-03T00:00:00","end":"2019-10-03T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-04T00:00:00","end":"2019-10-04T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-05T00:00:00","end":"2019-10-05T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-06T00:00:00","end":"2019-10-06T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-07T00:00:00","end":"2019-10-07T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-08T00:00:00","end":"2019-10-08T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-09T00:00:00","end":"2019-10-09T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-10T00:00:00","end":"2019-10-10T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-11T00:00:00","end":"2019-10-11T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-12T00:00:00","end":"2019-10-12T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-13T00:00:00","end":"2019-10-13T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-14T00:00:00","end":"2019-10-14T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-15T00:00:00","end":"2019-10-15T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-16T00:00:00","end":"2019-10-16T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-17T00:00:00","end":"2019-10-17T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-18T00:00:00","end":"2019-10-18T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-19T00:00:00","end":"2019-10-19T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-20T00:00:00","end":"2019-10-20T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-21T00:00:00","end":"2019-10-21T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-22T00:00:00","end":"2019-10-22T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-23T00:00:00","end":"2019-10-23T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-24T00:00:00","end":"2019-10-24T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-25T00:00:00","end":"2019-10-25T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-26T00:00:00","end":"2019-10-26T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-27T00:00:00","end":"2019-10-27T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-28T00:00:00","end":"2019-10-28T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-29T00:00:00","end":"2019-10-29T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-30T00:00:00","end":"2019-10-30T24:00:00","title":"Total Inventory- 1"},{"start":"2019-10-31T00:00:00","end":"2019-10-31T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-01T00:00:00","end":"2019-11-01T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-02T00:00:00","end":"2019-11-02T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-03T00:00:00","end":"2019-11-03T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-04T00:00:00","end":"2019-11-04T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-05T00:00:00","end":"2019-11-05T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-06T00:00:00","end":"2019-11-06T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-07T00:00:00","end":"2019-11-07T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-08T00:00:00","end":"2019-11-08T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-09T00:00:00","end":"2019-11-09T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-10T00:00:00","end":"2019-11-10T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-11T00:00:00","end":"2019-11-11T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-12T00:00:00","end":"2019-11-12T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-13T00:00:00","end":"2019-11-13T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-14T00:00:00","end":"2019-11-14T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-15T00:00:00","end":"2019-11-15T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-16T00:00:00","end":"2019-11-16T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-17T00:00:00","end":"2019-11-17T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-18T00:00:00","end":"2019-11-18T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-19T00:00:00","end":"2019-11-19T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-20T00:00:00","end":"2019-11-20T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-21T00:00:00","end":"2019-11-21T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-22T00:00:00","end":"2019-11-22T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-23T00:00:00","end":"2019-11-23T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-24T00:00:00","end":"2019-11-24T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-25T00:00:00","end":"2019-11-25T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-26T00:00:00","end":"2019-11-26T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-27T00:00:00","end":"2019-11-27T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-28T00:00:00","end":"2019-11-28T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-29T00:00:00","end":"2019-11-29T24:00:00","title":"Total Inventory- 1"},{"start":"2019-11-30T00:00:00","end":"2019-11-30T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-01T00:00:00","end":"2019-12-01T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-02T00:00:00","end":"2019-12-02T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-03T00:00:00","end":"2019-12-03T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-04T00:00:00","end":"2019-12-04T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-05T00:00:00","end":"2019-12-05T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-06T00:00:00","end":"2019-12-06T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-07T00:00:00","end":"2019-12-07T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-08T00:00:00","end":"2019-12-08T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-09T00:00:00","end":"2019-12-09T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-10T00:00:00","end":"2019-12-10T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-11T00:00:00","end":"2019-12-11T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-12T00:00:00","end":"2019-12-12T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-13T00:00:00","end":"2019-12-13T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-14T00:00:00","end":"2019-12-14T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-15T00:00:00","end":"2019-12-15T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-16T00:00:00","end":"2019-12-16T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-17T00:00:00","end":"2019-12-17T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-18T00:00:00","end":"2019-12-18T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-19T00:00:00","end":"2019-12-19T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-20T00:00:00","end":"2019-12-20T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-21T00:00:00","end":"2019-12-21T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-22T00:00:00","end":"2019-12-22T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-23T00:00:00","end":"2019-12-23T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-24T00:00:00","end":"2019-12-24T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-25T00:00:00","end":"2019-12-25T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-26T00:00:00","end":"2019-12-26T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-27T00:00:00","end":"2019-12-27T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-28T00:00:00","end":"2019-12-28T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-29T00:00:00","end":"2019-12-29T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-30T00:00:00","end":"2019-12-30T24:00:00","title":"Total Inventory- 1"},{"start":"2019-12-31T00:00:00","end":"2019-12-31T24:00:00","title":"Total Inventory- 1"},{"start":"2019-09-12","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-13","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-14","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-15","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-16","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-17","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-18","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-19","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-20","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-21","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-22","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-23","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-24","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-25","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-26","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-27","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-28","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-29","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-09-30","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-01","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-02","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-03","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-04","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-05","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-06","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-07","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-08","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-09","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-10","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-11","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-12","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-13","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-14","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-15","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-16","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-17","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-18","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-19","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-20","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-21","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-22","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-23","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-24","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-25","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-26","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-27","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-28","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-29","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-30","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-10-31","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-01","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-02","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-03","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-04","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-05","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-06","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-07","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-08","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-09","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-10","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-11","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-12","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-13","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-14","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-15","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-16","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-17","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-18","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-19","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-20","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-21","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-22","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-23","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-24","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-25","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-26","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-27","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-28","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-29","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-11-30","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-01","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-02","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-03","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-04","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-05","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-06","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-07","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-08","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-09","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-10","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-11","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-12","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-13","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-14","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-15","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-16","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-17","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-18","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-19","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-20","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-21","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-22","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-23","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-24","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-25","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-26","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-27","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-28","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-29","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-30","title":"RP WD- 1 Hrs WE-0 Hrs"},{"start":"2019-12-31","title":"RP WD- 1 Hrs WE-0 Hrs"}] 
+        });
+    
+    });
+    
+    var ajax = new sack();
+    function ShowNewVehicleTypeCal(arg1,arg2){	
+        if(arg1.length>0) {
+            $("#overlayprogress").show();
+            ajax.requestFile = 'vehicle_type_inventory.php?id='+arg1+'&action=show_inventory&ajax_calendar=1';	// Specifying which file to get
+            ajax.onCompletion = changeCalender;	// Specify function that will be executed after file has been found
+            ajax.runAJAX();		// Execute AJAX function
+            setTimeout(function(){
+                $("#overlayprogress").hide();
+                if(arg2){
+                    toastr.info(arg2);
+                }
+            },1000);
+        }else{
+            showWarAlert('Add No Of Inventory.', 'txt_no_of_inventory', formObj);
+            formObj.txt_no_of_inventory.focus();
+        }
+    
+    }
+    
+    function changeCalender() {
+        //alert(ajax.response);
+        var response = JSON.parse(ajax.response);
+        var start_date = new Date(response['Search_period_from_selected']);
+        var end_date = new Date(response['Search_period_to_selected']);
+        //alert((start_date.getMonth() + 1) + '/' + start_date.getDate() + '/' +  start_date.getFullYear());
+        var start_date_display = start_date.getDate() + '/' + (start_date.getMonth() + 1)  +  '/' +  start_date.getFullYear();
+        var end_date_display = end_date.getDate() + '/' + (end_date.getMonth() + 1) + '/' +  end_date.getFullYear();
+        document.getElementById("country").innerHTML = response['Search_country_selected'];
+        document.getElementById("city").innerHTML = response['Search_cities_selected'];
+        document.getElementById("start_date_txt").innerHTML = start_date_display;
+        document.getElementById("end_date_txt").innerHTML =  end_date_display;
+        
+        /*Change the update form value*/
+        document.getElementById("time_stamp").value = response['timeStamp'];
+        document.getElementById("fromDate").value = start_date_display;
+        document.getElementById("toDate").value = end_date_display;
+        document.getElementById("sel_vehicle_type").value = response['Search_vehicle_selected'];
+        document.getElementById("country").value = response['Search_country_selected'];
+        document.getElementById("city").value = response['Search_cities_selected'];
+            
+        $('#calendar').fullCalendar('removeEvents');
+        $('#calendar').fullCalendar('addEventSource',response.eventArray );
+        $('#calendar').fullCalendar('rerenderEvents');
+    }
+    
+    var ajax1 = new sack();
+    function update_inventory(formObj){
+        
+        if (formObj.txt_period_from.value == '') {
+            showWarAlert('Select Date From.', 'sel_avail_from', formObj, 'selectpicker');
+            formObj.txt_period_from.focus(); 
+        } else if (formObj.txt_period_to.value == '') {
+            showWarAlert('Select Date To.', 'txt_period_to', formObj, 'selectpicker');
+            formObj.txt_period_to.focus(); 
+        }/* else if (formObj.sel_avail_from.value == '' || formObj.sel_avail_to.value == "" || (formObj.sel_avail_from.value == '0' && formObj.sel_avail_to.value == "0")) {
+            if(formObj.sel_avail_from.value == '' || formObj.sel_avail_from.value == '0' ){
+                showWarAlert('Select Availability From.', 'sel_avail_from', formObj, 'selectpicker');
+                formObj.sel_avail_from.focus();
+            }else if(formObj.sel_avail_to.value == '' || formObj.sel_avail_to.value == '0' ){
+                showWarAlert('Select Availability To.', 'sel_avail_to', formObj, 'selectpicker');
+                formObj.sel_avail_from.focus();
+            }
+            
+        } */else if(document.querySelector('input[name="sale_policy"]:checked').value == "default_sale" && formObj.txt_no_of_inventory.value == '') {
+            
+                showWarAlert('Add No Of Inventory.', 'txt_no_of_inventory', formObj);
+                formObj.txt_no_of_inventory.focus();
+        }else if(formObj.txt_rel_hrs_weekday.value == '') {
+            showWarAlert('Add Release Period..', 'txt_rel_hrs_weekday', formObj);
+            formObj.txt_rel_hrs_weekday.focus();
+        
+        }else {
+            $("#overlayprogress").show();
+            var serializedForm = $("#update_vehicle_inventory_from").serialize();
+            var arg = $("#vehicle").val();
+            ajax1.requestFile = 'vehicle_type_inventory.php?'+serializedForm;	// Specifying which file to get
+            ajax1.onCompletion = ShowNewVehicleTypeCalUpdate;	// Specify function that will be executed after file has been found
+            ajax1.runAJAX();		// Execute AJAX function
+        }
+    }
+    function ShowNewVehicleTypeCalUpdate(){
+        $("#overlayprogress").hide();
+        //console.log(ajax1.response);
+        //debugger
+        var response = JSON.parse(ajax1.response);
+        
+        $('#calendar').fullCalendar('removeEvents');
+        $('#calendar').fullCalendar('addEventSource',response.eventArray );
+        $('#calendar').fullCalendar('rerenderEvents');
+        $("#overlayprogress").hide();
+        
+        toastr.info("Supplier Vehicle Inventory Updated Successfully");  
+        
+    }
+    
+    $(function(){
+        $('#datetimepicker').datepicker({
+            format:"dd-mm-yyyy",
+            startDate: '-0m'
+        });
+    });
+    
+    function clear1(el1) {
+        var srcElement = document.getElementById(el1);
+        srcElement.value='';
+        var el2forsingle = $("#"+el1).parent(".date").attr("id");
+        $("#"+el2forsingle).datepicker("update");
+        var el2 = $("#"+el1).parent(".input-daterange").attr("id");
+        $('.input-daterange#'+el2+' input').each(function() {
+            $("#"+el1).datepicker("update");
+            $(this).datepicker("clearDates");
+        });
+    }
+    
+    function checkCountry(formObj) {
+        if (formObj.sel_countries.options[formObj.sel_countries.selectedIndex].value == '0') {
+            showWarAlert('First Select Country.');
+            formObj.sel_countries.focus();
+        }
+    }
+    
+    var ajax2 = new sack();
+    function getCityList(arg1) {
+        var countryCode = arg1;
+        
+        document.getElementById('city').options.length = 0;
+        
+        ajax2.requestFile = 'getCities.php?CountryCode=' + countryCode;
+        ajax2.onCompletion = createCities;
+        ajax2.runAJAX();
+        
+    }
+    function createCities() {
+        var obj = document.getElementById('city');
+        eval(ajax.response);
+        $("select#city").selectpicker("refresh");
+    }
+    
+    function extractNumber(obj, decimalPlaces, allowNegative){
+        var temp = obj.value;
+        
+        // avoid changing things if already formatted correctly
+        var reg0Str = '[0-9]*';
+        if (decimalPlaces > 0) {
+        reg0Str += '\\.?[0-9]{0,' + decimalPlaces + '}';
+        }
+        else 
+        if (decimalPlaces < 0) {
+            reg0Str += '\\.?[0-9]*';
+        }
+        reg0Str = allowNegative ? '^-?' + reg0Str : '^' + reg0Str;
+        reg0Str = reg0Str + '$';
+        var reg0 = new RegExp(reg0Str);
+        if (reg0.test(temp)) 
+        return true;
+        
+        // first replace all non numbers
+        var reg1Str = '[^0-9' + (decimalPlaces != 0 ? '.' : '') + (allowNegative ? '-' : '') + ']';
+        var reg1 = new RegExp(reg1Str, 'g');
+        temp = temp.replace(reg1, '');
+        
+        if (allowNegative) {
+        // replace extra negative
+        var hasNegative = temp.length > 0 && temp.charAt(0) == '-';
+        var reg2 = /-/g;
+        temp = temp.replace(reg2, '');
+        if (hasNegative) 
+            temp = '-' + temp;
+        }
+        
+        if (decimalPlaces != 0) {
+        var reg3 = /\./g;
+        var reg3Array = reg3.exec(temp);
+        if (reg3Array != null) {
+            // keep only first occurrence of .
+            //  and the number of places specified by decimalPlaces or the entire string if decimalPlaces < 0
+            var reg3Right = temp.substring(reg3Array.index + reg3Array[0].length);
+            reg3Right = reg3Right.replace(reg3, '');
+            reg3Right = decimalPlaces > 0 ? reg3Right.substring(0, decimalPlaces) : reg3Right;
+            temp = temp.substring(0, reg3Array.index) + '.' + reg3Right;
+        }
+        }
+        
+        obj.value = temp;
+    }
+    </script>
 
 </html>
