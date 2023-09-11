@@ -1169,17 +1169,18 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">SUPPLIER DETAILS</h5>
+                    <h5 style="font-size:14pt;font-weight: 500;"> EDIT MAPPING LODGE CARD</h5>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5">
 
                 </div>
-                <div class="col-md-3">
-                    <i class="fa-solid fa-house-chimney"></i><span> / <a
-                            href="MastersSuppliersOfflineSupplierSearch.html" style="text-decoration:none;color:grey">
-                            List Offline Suppliers</a> / Edit Offline
-                        Supplier</span>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-house-chimney"></i><span> / Edit Lodge Card Mapping / <a
+                            href="LodgeCardMappingSearch.html"><button class="btn btn-dark btn-sm"
+                                style="font-size:12px;">
+                                Search Lodge Card Mapping</button></a></span>
                 </div>
+            </div>
 
             </div>
         </header>
@@ -1189,896 +1190,203 @@
 
     <!---Body Paneel Menu items-->
     <div class="container-fluid pt-0 p-4" id="content-pad">
-        <div class="panel-body" style="background-color: #337ab7;padding-bottom: 1px; padding-top: 4px;">
-            <div class="row">
-                <div class="col-md-12">
-                    <h5 style="color: white !important;font-size:15px;
-                                margin-left: 20px;">Supplier Username : Travel_Qtech</h5>
-                </div>
-            </div>
-        </div>
+
         <!-- First Row-->
+<style>
+    .radio-inline, .checkbox-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    vertical-align: middle;
+    cursor: pointer;
+}
+</style>
         <form>
             <div class="panel-body">
                 <div class="row">
-                    <div class="form-group col-md-3">
-                        <label>Country</label>
-                        <select name="sel_countries"
-                            class="selectpicker required form-control form-control-sm show-menu-arrow bs-select-hidden"
-                            id="country" onchange="getCityList(this.value)" data-live-search-style="startsWith"
+                    <div class="col-md-3 form-group" id="branchList">
+                        <label>Branch</label>
+                        <select class="selectpicker required form-control form-control-sm  bs-select-hidden"
+                            id="sel_branch" name="sel_branch" title="-Select-" onchange="getAgentList(this.value)"
                             data-live-search="true">
-                            <option value="0">- Select Country -</option>
-                            <option label="Afghanistan" value="97">Afghanistan</option>
-                            <option label="Albania" value="43">Albania</option>
-                            <option label="Algeria" value="142">Algeria</option>
-                            <option label="Andorra" value="44">Andorra</option>
-                            <option label="Angola" value="143">Angola</option>
-                            <option label="Antigua And Barbuda" value="230">Antigua And Barbuda</option>
-                            <option label="Argentina" value="29">Argentina</option>
-                            <option label="Armenia" value="45">Armenia</option>
-                            <option label="Aruba" value="231">Aruba</option>
-                            <option label="Australia" value="196">Australia</option>
-                            <option label="Austria" value="46">Austria</option>
-                            <option label="Azerbaijan" value="47">Azerbaijan</option>
-                            <option label="Bahamas" value="3">Bahamas</option>
-                            <option label="Bahrain" value="98">Bahrain</option>
-                            <option label="Bangladesh" value="99">Bangladesh</option>
-                            <option label="Barbados" value="4">Barbados</option>
-                            <option label="Belarus" value="48">Belarus</option>
-                            <option label="Belgium" value="49">Belgium</option>
-                            <option label="Belize" value="5">Belize</option>
-                            <option label="Benin" value="144">Benin</option>
-                            <option label="Bermuda" value="6">Bermuda</option>
-                            <option label="Bhutan" value="100">Bhutan</option>
-                            <option label="Bolivia" value="30">Bolivia</option>
-                            <option label="Bonaire, Sint Eustatius and Saba" value="416">Bonaire, Sint Eustatius and
-                                Saba
-                            </option>
-                            <option label="Bosnia and Herzegovina" value="50">Bosnia and Herzegovina</option>
-                            <option label="Botswana" value="145">Botswana</option>
-                            <option label="Brazil" value="31">Brazil</option>
-                            <option label="British Virgin Islands" value="7">British Virgin Islands</option>
-                            <option label="Brunei" value="101">Brunei</option>
-                            <option label="Bulgaria" value="51">Bulgaria</option>
-                            <option label="Burkina Faso" value="146">Burkina Faso</option>
-                            <option label="Burundi" value="147">Burundi</option>
-                            <option label="Cambodia" value="102">Cambodia</option>
-                            <option label="Cameroon" value="148">Cameroon</option>
-                            <option label="Canada" value="2">Canada</option>
-                            <option label="Cape Verde" value="149">Cape Verde</option>
-                            <option label="Cayman Islands" value="8">Cayman Islands</option>
-                            <option label="Central African Republic" value="150">Central African Republic</option>
-                            <option label="Chad" value="151">Chad</option>
-                            <option label="Chile" value="32">Chile</option>
-                            <option label="China" value="103">China</option>
-                            <option label="Colombia" value="33">Colombia</option>
-                            <option label="Comoros" value="402">Comoros</option>
-                            <option label="Cook Islands" value="412">Cook Islands</option>
-                            <option label="Costa Rica" value="9">Costa Rica</option>
-                            <option label="Croatia" value="52">Croatia</option>
-                            <option label="Cuba" value="10">Cuba</option>
-                            <option label="Curacao" value="415">Curacao</option>
-                            <option label="Cyprus" value="53">Cyprus</option>
-                            <option label="Czech Republic" value="54">Czech Republic</option>
-                            <option label="Democratic Republic of the Congo" value="153">Democratic Republic of the
-                                Congo
-                            </option>
-                            <option label="Denmark" value="55">Denmark</option>
-                            <option label="Djibouti" value="154">Djibouti</option>
-                            <option label="Dominica" value="11">Dominica</option>
-                            <option label="Dominican Republic" value="12">Dominican Republic</option>
-                            <option label="East Timor" value="104">East Timor</option>
-                            <option label="Ecuador" value="34">Ecuador</option>
-                            <option label="Egypt" value="155">Egypt</option>
-                            <option label="El Salvador" value="13">El Salvador</option>
-                            <option label="Equatorial Guinea" value="156">Equatorial Guinea</option>
-                            <option label="Eritrea" value="157">Eritrea</option>
-                            <option label="Estonia" value="56">Estonia</option>
-                            <option label="Ethiopia" value="158">Ethiopia</option>
-                            <option label="Falkland Islands" value="35">Falkland Islands</option>
-                            <option label="Fiji Islands" value="198">Fiji Islands</option>
-                            <option label="Finland" value="57">Finland</option>
-                            <option label="France" value="58">France</option>
-                            <option label="French Guiana" value="36">French Guiana</option>
-                            <option label="French Polynesia" value="199">French Polynesia</option>
-                            <option label="Gabon" value="159">Gabon</option>
-                            <option label="Gambia" value="160">Gambia</option>
-                            <option label="Georgia" value="59">Georgia</option>
-                            <option label="Germany" value="60">Germany</option>
-                            <option label="Ghana" value="161">Ghana</option>
-                            <option label="Gibraltar" value="61">Gibraltar</option>
-                            <option label="Greece" value="62">Greece</option>
-                            <option label="Greece Islands" value="404">Greece Islands</option>
-                            <option label="Greenland" value="14">Greenland</option>
-                            <option label="Grenada" value="15">Grenada</option>
-                            <option label="Guadeloupe" value="16">Guadeloupe</option>
-                            <option label="Guam" value="200">Guam</option>
-                            <option label="Guatemala" value="17">Guatemala</option>
-                            <option label="Guernsey" value="63">Guernsey</option>
-                            <option label="Guinea" value="162">Guinea</option>
-                            <option label="Guinea Bissau" value="163">Guinea Bissau</option>
-                            <option label="Guyana" value="37">Guyana</option>
-                            <option label="Haiti" value="18">Haiti</option>
-                            <option label="Honduras" value="19">Honduras</option>
-                            <option label="Hong Kong" value="105">Hong Kong</option>
-                            <option label="Hungary" value="64">Hungary</option>
-                            <option label="Iceland" value="65">Iceland</option>
-                            <option label="India" value="106">India</option>
-                            <option label="Indonesia" value="107">Indonesia</option>
-                            <option label="Iran" value="108">Iran</option>
-                            <option label="Iraq" value="109">Iraq</option>
-                            <option label="Ireland" value="66">Ireland</option>
-                            <option label="Isle of Man" value="67">Isle of Man</option>
-                            <option label="Israel" value="110">Israel</option>
-                            <option label="Italy" value="68">Italy</option>
-                            <option label="Ivory Coast" value="164">Ivory Coast</option>
-                            <option label="Jamaica" value="20">Jamaica</option>
-                            <option label="Japan" value="111">Japan</option>
-                            <option label="Jersey" value="69">Jersey</option>
-                            <option label="Jordan" value="112">Jordan</option>
-                            <option label="Kazakhstan" value="113">Kazakhstan</option>
-                            <option label="Kenya" value="165">Kenya</option>
-                            <option label="Kiribati" value="201">Kiribati</option>
-                            <option label="Kosovo" value="70">Kosovo</option>
-                            <option label="Kuwait" value="114">Kuwait</option>
-                            <option label="Kyrgyzstan" value="115">Kyrgyzstan</option>
-                            <option label="Laos" value="116">Laos</option>
-                            <option label="Latvia" value="71">Latvia</option>
-                            <option label="Lebanon" value="117">Lebanon</option>
-                            <option label="Lesotho" value="166">Lesotho</option>
-                            <option label="Liberia" value="167">Liberia</option>
-                            <option label="Libya" value="168">Libya</option>
-                            <option label="Liechtenstein" value="72">Liechtenstein</option>
-                            <option label="Lithuania" value="73">Lithuania</option>
-                            <option label="Luxembourg" value="74">Luxembourg</option>
-                            <option label="Macau" value="118">Macau</option>
-                            <option label="Macedonia" value="75">Macedonia</option>
-                            <option label="Madagascar" value="169">Madagascar</option>
-                            <option label="Malawi" value="170">Malawi</option>
-                            <option label="Malaysia" value="119">Malaysia</option>
-                            <option label="Maldives" value="120">Maldives</option>
-                            <option label="Mali" value="171">Mali</option>
-                            <option label="Malta" value="76">Malta</option>
-                            <option label="Marshall Islands" value="202">Marshall Islands</option>
-                            <option label="Martinique" value="21">Martinique</option>
-                            <option label="Mauritania" value="172">Mauritania</option>
-                            <option label="Mauritius" value="173">Mauritius</option>
-                            <option label="Mexico" value="22">Mexico</option>
-                            <option label="Micronesia" value="203">Micronesia</option>
-                            <option label="Moldova" value="77">Moldova</option>
-                            <option label="Monaco" value="78">Monaco</option>
-                            <option label="Mongolia" value="121">Mongolia</option>
-                            <option label="Montenegro" value="79">Montenegro</option>
-                            <option label="Montserrat" value="23">Montserrat</option>
-                            <option label="Morocco" value="174">Morocco</option>
-                            <option label="Mozambique" value="175">Mozambique</option>
-                            <option label="Myanmar(Burma)" value="122">Myanmar(Burma)</option>
-                            <option label="Namibia" value="176">Namibia</option>
-                            <option label="Nauru" value="204">Nauru</option>
-                            <option label="Nepal" value="123">Nepal</option>
-                            <option label="Netherlands" value="80">Netherlands</option>
-                            <option label="New Caledonia" value="205">New Caledonia</option>
-                            <option label="New Zealand" value="197">New Zealand</option>
-                            <option label="Nicaragua" value="24">Nicaragua</option>
-                            <option label="Niger" value="177">Niger</option>
-                            <option label="Nigeria" value="178">Nigeria</option>
-                            <option label="North Korea" value="124">North Korea</option>
-                            <option label="Northern Cyprus" value="411">Northern Cyprus</option>
-                            <option label="Northern Mariana Islands" value="414">Northern Mariana Islands</option>
-                            <option label="Norway" value="81">Norway</option>
-                            <option label="Oman" value="125">Oman</option>
-                            <option label="Pakistan" value="126">Pakistan</option>
-                            <option label="Palestine" value="228">Palestine</option>
-                            <option label="Panama" value="25">Panama</option>
-                            <option label="Papua New Guinea" value="206">Papua New Guinea</option>
-                            <option label="Paraguay" value="38">Paraguay</option>
-                            <option label="Peru" value="39">Peru</option>
-                            <option label="Philippines" value="127">Philippines</option>
-                            <option label="Poland" value="82">Poland</option>
-                            <option label="Portugal" value="83">Portugal</option>
-                            <option label="Puerto Rico" value="26">Puerto Rico</option>
-                            <option label="Qatar" value="128">Qatar</option>
-                            <option label="Republic of the Congo" value="152">Republic of the Congo</option>
-                            <option label="Reunion" value="179">Reunion</option>
-                            <option label="Romania" value="84">Romania</option>
-                            <option label="Russia" value="85">Russia</option>
-                            <option label="Rwanda" value="180">Rwanda</option>
-                            <option label="Saint Barthelemy" value="400">Saint Barthelemy</option>
-                            <option label="Saint Kitts and Nevis" value="413">Saint Kitts and Nevis</option>
-                            <option label="Saint Lucia" value="401">Saint Lucia</option>
-                            <option label="Samoa" value="207">Samoa</option>
-                            <option label="San Marino" value="86">San Marino</option>
-                            <option label="Sao Tome and Principe" value="181">Sao Tome and Principe</option>
-                            <option label="Saudi Arabia" value="129">Saudi Arabia</option>
-                            <option label="Senegal" value="182">Senegal</option>
-                            <option label="Serbia" value="87">Serbia</option>
-                            <option label="Seychelles" value="183">Seychelles</option>
-                            <option label="Sierra Leone" value="184">Sierra Leone</option>
-                            <option label="Singapore" value="130">Singapore</option>
-                            <option label="Slovakia" value="88">Slovakia</option>
-                            <option label="Slovenia" value="89">Slovenia</option>
-                            <option label="Solomon Islands" value="208">Solomon Islands</option>
-                            <option label="Somalia" value="185">Somalia</option>
-                            <option label="South Africa" value="186">South Africa</option>
-                            <option label="South Korea" value="131">South Korea</option>
-                            <option label="South Sudan" value="403">South Sudan</option>
-                            <option label="Spain" value="90">Spain</option>
-                            <option label="Sri Lanka" value="132">Sri Lanka</option>
-                            <option label="Sudan" value="187">Sudan</option>
-                            <option label="Suriname" value="40">Suriname</option>
-                            <option label="Swaziland" value="188">Swaziland</option>
-                            <option label="Sweden" value="91">Sweden</option>
-                            <option label="Switzerland" value="92">Switzerland</option>
-                            <option label="Syria" value="133">Syria</option>
-                            <option label="Taiwan" value="134">Taiwan</option>
-                            <option label="Tajikistan" value="135">Tajikistan</option>
-                            <option label="Tanzania" value="189">Tanzania</option>
-                            <option label="Thailand" value="136">Thailand</option>
-                            <option label="Togo" value="190">Togo</option>
-                            <option label="Tonga" value="209">Tonga</option>
-                            <option label="Trinidad and Tobago" value="27">Trinidad and Tobago</option>
-                            <option label="Tunisia" value="191">Tunisia</option>
-                            <option label="Turkey" value="93">Turkey</option>
-                            <option label="Turkmenistan" value="137">Turkmenistan</option>
-                            <option label="Turks and Caicos Islands" value="410">Turks and Caicos Islands</option>
-                            <option label="Tuvalu" value="210">Tuvalu</option>
-                            <option label="Uganda" value="192">Uganda</option>
-                            <option label="Ukraine" value="94">Ukraine</option>
-                            <option label="United Arab Emirates" value="138">United Arab Emirates</option>
-                            <option label="United Kingdom" value="95">United Kingdom</option>
-                            <option label="United States" value="1">United States</option>
-                            <option label="United States Virgin Islands" value="28">United States Virgin Islands
-                            </option>
-                            <option label="Uruguay" value="41">Uruguay</option>
-                            <option label="Uzbekistan" value="139">Uzbekistan</option>
-                            <option label="Vanuatu" value="211">Vanuatu</option>
-                            <option label="Vatican City" value="96">Vatican City</option>
-                            <option label="Venezuela" value="42">Venezuela</option>
-                            <option label="Vietnam" value="140">Vietnam</option>
-                            <option label="Wallis and Futuna" value="212">Wallis and Futuna</option>
-                            <option label="Western Sahara" value="193">Western Sahara</option>
-                            <option label="Yemen" value="141">Yemen</option>
-                            <option label="Zambia" value="194">Zambia</option>
-                            <option label="Zimbabwe" value="195">Zimbabwe</option>
+                            <option class="bs-title-option" value="">-Select-</option>
+                            <option label="Mumbai Branch" value="1">Mumbai Branch</option>
+                            <option label="UAE Branch" value="2">UAE Branch</option>
+                            <option label="UK Head Office" value="3">UK Head Office</option>
+                            <option label="Head Office" value="4">Head Office</option>
+                            <option label="Dubai GSA" value="5">Dubai GSA</option>
+                            <option label="London Branch" value="6">London Branch</option>
+                            <option label="Saudi Branch" value="7">Saudi Branch</option>
+                            <option label="Dubai V3 Wh" value="8">Dubai V3 Wh</option>
+                            <option label="Pune Branch" value="9">Pune Branch</option>
+                            <option label="India - GSA" value="10">India - GSA</option>
+                            <option label="Test Branch1" value="11">Test Branch1</option>
+                            <option label="Test Branch" value="13">Test Branch</option>
+                            <option label="Testffff" value="14">Testffff</option>
+                            <option label="FRANCHISE BRANCH" value="15">FRANCHISE BRANCH</option>
+                            <option label="Jcholidays" value="16">Jcholidays</option>
+                            <option label="Demo" value="17">Demo</option>
+                            <option label="malaysia" value="19">malaysia</option>
+                            <option label="GSA Iraq" value="20">GSA Iraq</option>
+                            <option label="Chennai" value="21">Chennai</option>
+                            <option label="Bangkok Branch" value="22">Bangkok Branch</option>
+                            <option label="suhas_branch" value="23">suhas_branch</option>
+                            <option label="Istanbul" value="24">Istanbul</option>
+                            <option label="hyderabad" value="25">hyderabad</option>
+                            <option label="hyderabad_suhas" value="26">hyderabad_suhas</option>
+                            <option label="branch_suhas" value="27">branch_suhas</option>
+                            <option label="New Joint Branch" value="28">New Joint Branch</option>
+                            <option label="Bahrain Branch" value="29">Bahrain Branch</option>
+                            <option label="Branch Bahrain" value="30">Branch Bahrain</option>
+                            <option label="testdddd" value="31">testdddd</option>
+                            <option label="Demo" value="32">Demo</option>
+                            <option label="HotelConfirm" value="33">HotelConfirm</option>
+                            <option label="HotelConfirm_Live" value="34">HotelConfirm_Live</option>
+                            <option label="GSA Branch" value="37">GSA Branch</option>
+                            <option label="Testpp" value="38">Testpp</option>
+                            <option label="Bolton Branch" value="41">Bolton Branch</option>
+                            <option label="World Avenue" value="42">World Avenue</option>
+                            <option label="TEST_BRANCH_A" value="43">TEST_BRANCH_A</option>
+                            <option label="TEST_BRANCH_JV_A" value="44">TEST_BRANCH_JV_A</option>
+                            <option label="TEST_BRANCH_JV_C" value="45">TEST_BRANCH_JV_C</option>
+                            <option label="world_avenue_malesia" value="46">world_avenue_malesia</option>
+                            <option label="World Avenues Malaysia" value="47">World Avenues Malaysia</option>
+                            <option label="test_branch_jv" value="48">test_branch_jv</option>
+                            <option label="1 Booking" value="49">1 Booking</option>
 
                         </select>
 
                     </div>
-                    <div class="form-group col-md-3">
-                        <label>City</label>
-                        <select name="sel_city" id="city"
-                            class="selectpicker required form-control form-control-sm show-menu-arrow bs-select-hidden"
-                            onfocus="javascript:checkCountry(document.forms['add_local_supplier_form']);"
-                            data-live-search-style="startsWith" data-live-search="true">
-                            <option value="0">- Select City -</option>
-
-                        </select>
-
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>Accounting Id</label>
-                        <input type="text" class="form-control form-control-sm " name="txt_acc_id" size="20"
-                            maxlength="50" value="">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>Supplier Name</label>
-                        <input type="text" name="txt_supplier_name" id="txt_supplier_name"
-                            class="form-control form-control-sm required" size="45" maxlength="100" value="">
-                    </div>
-                </div>
-                <div class="row mt-3">
-
-                    <div class="form-group col-md-12">
-                        <h5 style="font-size: 13px;color;font-weight: 600;">Supplier Type</h5>
-                        <div class="radioline1">
-                            <div class="checkbox checkbox-success checkbox-inline">
-                                <input id="hotel_supplier" type="checkbox" name="hotel_supplier" value="1" checked disabled>
-                                <label for="1">Hotel Supplier</label>
-                            </div>
-                            <div class="checkbox checkbox-success checkbox-inline">
-                                <input id="app" type="checkbox" name="sight_supplier" value="1">
-                                <label for="sight_supplier">Activity Supplier</label>
-                            </div>
-                            <div class="checkbox checkbox-success checkbox-inline">
-                                <input id="app" type="checkbox" name="transfer_supplier" value="1">
-                                <label for="transfer_supplier">Transfer Supplier</label>
-                            </div>
-                            <div class="checkbox checkbox-success checkbox-inline">
-                                <input id="app" type="checkbox" name="visa_supplier" value="1">
-                                <label for="visa_supplier">Visa Supplier</label>
-                            </div>
-                            <div class="checkbox checkbox-success checkbox-inline">
-                                <input id="app" type="checkbox" name="fit_package_supplier" value="1">
-                                <label for="fit_package_supplier">FIT Package Supplier</label>
-                            </div>
-                            <div class="checkbox checkbox-success checkbox-inline">
-                                <input id="app" type="checkbox" name="airline_supplier" value="1">
-                                <label for="airline_supplier">Airline Supplier</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="form-group col-md-12">
-                        <label>Supplier Address</label>
-                        <textarea class="form-control form-control-sm required" name="txtar_address" rows="5"
-                            cols="32"></textarea>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="form-group col-md-3">
-                        <label>Telephone</label>
-                        <input type="text" class="form-control form-control-sm required" name="txt_telephone" size="20"
-                            maxlength="20" value="" onblur="extractNumber(this,0,false);"
-                            onkeyup="extractNumber(this,0,false);">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label> Fax</label>
-                        <input type="text" class="form-control form-control-sm" name="txt_fax" size="45" maxlength="20"
-                            value="" onblur="extractNumber(this,0,false);" onkeyup="extractNumber(this,0,false);">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label> Mobile</label>
-                        <input type="text" class="form-control form-control-sm" name="txt_mobile" size="20" value=""
-                            maxlength="20" onblur="extractNumber(this,0,false);" onkeyup="extractNumber(this,0,false);">
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label>E-mail</label>
-                                <br>
-                                <input type="hidden" name="last_shown" id="last_shown" value="1">
-                                <div class="row">
-
-                                    <div class="col-md-10" id="pd">
-                                        <div class="input-group" id="pd1">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                id="txt_email1" name="txt_email[1]" value="" size="45" maxlength="70">
-
-                                        </div>
-                                    </div>
-                                    <p> For reference purposes only</p>
-                                    <div class="input-group">
-                                        <a class="input-group-addon" id="plus" onclick="plus_func();" style="    margin-left: 88%;
-                                    margin-top: -18.6%;"><i class="fa fa-plus" style="    color: black;
-                                            margin-left: 6px;"> </i></a>
-                                        <a class="input-group-addon" id="minus" onclick="minus_func()"
-                                            style="display: none"><i class="fa fa-minus"></i></a>
-                                    </div>
-
-                                    <div class="col-md-10" id="pd">
-                                        <div class="input-group" id="pd2" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                id="txt_email2" name="txt_email[2]" value="" size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-
-                                    <div class="col-md-10" id="pd">
-                                        <div class="input-group" id="pd3" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                id="txt_email3" name="txt_email[3]" value="" size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-
-                                    <div class="col-md-10" id="pd">
-                                        <div class="input-group" id="pd4" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                id="txt_email4" name="txt_email[4]" value="" size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-
-                                    <div class="col-md-10" id="pd">
-                                        <div class="input-group" id="pd5" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                id="txt_email5" name="txt_email[5]" value="" size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="form-group col-md-3">
-                <label>E-mail  </label>
-                <input type="hidden" name="last_shown" id="last_shown" value="1" />
-                <td id="pd">
-                    <table>
-                                                        <tr id="pd1"  >						
-                            <td>
-                                <input style="margin-bottom: 7px;" type='text' class ="form-control required" id='txt_email[1]'  name='txt_email[1]' value='' size='45' maxlength='100'> 
-                            </td>
-                            <td>
-                                    
-                                 <i class="fa fa-plus-square" aria-hidden="true" onclick="plus_func();"></i>					
-                                 <i class="fa fa-minus-square" aria-hidden="true" id="minus" onclick="minus_func()" style="display: none"></i>		
-                                                                    </td>
-                        </tr>
-                                                        <tr id="pd2" style='display:none' >						
-                            <td>
-                                <input style="margin-bottom: 7px;" type='text' class ="form-control required" id='txt_email[2]'  name='txt_email[2]' value='' size='45' maxlength='100'> 
-                            </td>
-                            <td>
-                                                                    </td>
-                        </tr>
-                                                        <tr id="pd3" style='display:none' >						
-                            <td>
-                                <input style="margin-bottom: 7px;" type='text' class ="form-control required" id='txt_email[3]'  name='txt_email[3]' value='' size='45' maxlength='100'> 
-                            </td>
-                            <td>
-                                                                    </td>
-                        </tr>
-                                                        <tr id="pd4" style='display:none' >						
-                            <td>
-                                <input style="margin-bottom: 7px;" type='text' class ="form-control required" id='txt_email[4]'  name='txt_email[4]' value='' size='45' maxlength='100'> 
-                            </td>
-                            <td>
-                                                                    </td>
-                        </tr>
-                                                        <tr id="pd5" style='display:none' >						
-                            <td>
-                                <input style="margin-bottom: 7px;" type='text' class ="form-control required" id='txt_email[5]'  name='txt_email[5]' value='' size='45' maxlength='100'> 
-                            </td>
-                            <td>
-                                                                    </td>
-                        </tr>
-                                                    </table>
-                </td>	
-            </div> -->
-
-
-                    <div class="col-md-3">
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label>Reservation Email</label>
-                                <br>
-                                <input type="hidden" name="last_shown_reservation" id="last_shown_reservation"
-                                    value="1">
-                                <div class="row">
-
-                                    <div class="col-md-10" id="pd_reservation">
-                                        <div class="input-group" id="pd_reservation1">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_reservation_email[1]" id="email_reservation1" value=""
-                                                size="45" maxlength="70">
-
-                                        </div>
-                                    </div>
-                                    <p> For reference purposes only</p>
-                                    <div class="input-group">
-                                        <a class="input-group-addon" id="plus_reservation"
-                                            onclick="plus_func_reservation();" style="    margin-left: 88%;
-                                        margin-top: -18.6%;"><i class="fa fa-plus" style="    color: black;
-                                            margin-left: 6px;"></i></a>
-                                        <a class="input-group-addon" id="minus_reservation"
-                                            onclick="minus_func_reservation();" style="display: none"><i
-                                                class="fa fa-minus"></i></a>
-                                    </div>
-
-                                    <div class="col-md-10" id="pd_reservation">
-                                        <div class="input-group" id="pd_reservation2" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_reservation_email[2]" id="email_reservation2" value=""
-                                                size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-
-                                    <div class="col-md-10" id="pd_reservation">
-                                        <div class="input-group" id="pd_reservation3" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_reservation_email[3]" id="email_reservation3" value=""
-                                                size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-
-                                    <div class="col-md-10" id="pd_reservation">
-                                        <div class="input-group" id="pd_reservation4" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_reservation_email[4]" id="email_reservation4" value=""
-                                                size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-
-                                    <div class="col-md-10" id="pd_reservation">
-                                        <div class="input-group" id="pd_reservation5" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_reservation_email[5]" id="email_reservation5" value=""
-                                                size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="form-group col-md-3">
-                <label>Reservation Email</label>
-                <input type="hidden" name="last_shown_reservation" class="form-control required" id="last_shown_reservation" value="1" />
-                <td id="pd_reservation">
-                    <table>
-                                                        <tr id="pd_reservation1"	 >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required" name='txt_reservation_email[1]' id='email_reservation1' value="" size='45' maxlength='50'></td>
-                        <td>
-                         
-                                 <i class="fa fa-plus-square" aria-hidden="true" id="plus_reservation" onclick="plus_func_reservation();"></i>					
-                                <i class="fa fa-minus-square" aria-hidden="true" id="minus_reservation" onclick="minus_func_reservation();" style="display: none"></i>
-                                  </td>
-                        </tr>
-                                                        <tr id="pd_reservation2"	style='display:none' >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required" name='txt_reservation_email[2]' id='email_reservation2' value="" size='45' maxlength='50'></td>
-                        <td>
-                         </td>
-                        </tr>
-                                                        <tr id="pd_reservation3"	style='display:none' >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required" name='txt_reservation_email[3]' id='email_reservation3' value="" size='45' maxlength='50'></td>
-                        <td>
-                         </td>
-                        </tr>
-                                                        <tr id="pd_reservation4"	style='display:none' >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required" name='txt_reservation_email[4]' id='email_reservation4' value="" size='45' maxlength='50'></td>
-                        <td>
-                         </td>
-                        </tr>
-                                                        <tr id="pd_reservation5"	style='display:none' >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required" name='txt_reservation_email[5]' id='email_reservation5' value="" size='45' maxlength='50'></td>
-                        <td>
-                         </td>
-                        </tr>
-                                                    </table>
-                </td>
-            </div> -->
-                    <!-- <div class="form-group col-md-3">
-                <label>Cancellation Email</label>
-                <input type="hidden" name="last_shown_cancellation" class="form-control" id="last_shown_cancellation" value="1" />
-                <div id="pd_cancellation" >
-                    <table>
-                                                        <tr id="pd_cancellation1"	 >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required"
-                                name='txt_cancellation_email[1]'
-                                id='email_cancellation1'
-                                value=""
-                                size='45' maxlength='50'> </td>
-                                <td>
-                                                                                <i class="fa fa-plus-square" aria-hidden="true" id="plus_cancellation" onclick="plus_func_cancellation();"></i>		
-                                    <i class="fa fa-minus-square" aria-hidden="true" id="minus_cancellation" onclick="minus_func_cancellation()" style="display: none"></i>
-                                                                            </td>
-                        </tr>
-                                                        <tr id="pd_cancellation2"	style='display:none' >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required"
-                                name='txt_cancellation_email[2]'
-                                id='email_cancellation2'
-                                value=""
-                                size='45' maxlength='50'> </td>
-                                <td>
-                                                                            </td>
-                        </tr>
-                                                        <tr id="pd_cancellation3"	style='display:none' >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required"
-                                name='txt_cancellation_email[3]'
-                                id='email_cancellation3'
-                                value=""
-                                size='45' maxlength='50'> </td>
-                                <td>
-                                                                            </td>
-                        </tr>
-                                                        <tr id="pd_cancellation4"	style='display:none' >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required"
-                                name='txt_cancellation_email[4]'
-                                id='email_cancellation4'
-                                value=""
-                                size='45' maxlength='50'> </td>
-                                <td>
-                                                                            </td>
-                        </tr>
-                                                        <tr id="pd_cancellation5"	style='display:none' >
-                            <td><input style="margin-bottom: 7px;" type='text' class="form-control required"
-                                name='txt_cancellation_email[5]'
-                                id='email_cancellation5'
-                                value=""
-                                size='45' maxlength='50'> </td>
-                                <td>
-                                                                            </td>
-                        </tr>
-                                                    </table>
-                </div>
-            </div> -->
-
-                    <div class="col-md-3">
-                        <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label>Cancellation Email</label>
-                                <br>
-                                <input type="hidden" name="last_shown_cancellation" id="last_shown_cancellation"
-                                    value="1">
-                                <div class="row">
-
-                                    <div class="col-md-10" id="pd_cancellation">
-                                        <div class="input-group" id="pd_cancellation1">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_cancellation_email[1]" id="email_cancellation1" value=""
-                                                size="45" maxlength="70">
-
-                                        </div>
-                                    </div>
-                                    <p> For reference purposes only</p>
-                                    <div class="input-group">
-                                        <a class="input-group-addon" id="plus_cancellation"
-                                            onclick="plus_func_cancellation();" style="    margin-left: 88%;
-                                        margin-top: -18.6%;"><i class="fa fa-plus" style="    color: black;
-                                            margin-left: 6px;"></i></a>
-                                        <a class="input-group-addon" id="minus_cancellation"
-                                            onclick="minus_func_cancellation()" style="display: none"><i
-                                                class="fa fa-minus"></i></a>
-                                    </div>
-
-                                    <div class="col-md-10" id="pd_cancellation">
-                                        <div class="input-group" id="pd_cancellation2" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_cancellation_email[2]" id="email_cancellation2" value=""
-                                                size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-
-                                    <div class="col-md-10" id="pd_cancellation">
-                                        <div class="input-group" id="pd_cancellation3" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_cancellation_email[3]" id="email_cancellation3" value=""
-                                                size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-
-                                    <div class="col-md-10" id="pd_cancellation">
-                                        <div class="input-group" id="pd_cancellation4" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_cancellation_email[4]" id="email_cancellation4" value=""
-                                                size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-
-                                    <div class="col-md-10" id="pd_cancellation">
-                                        <div class="input-group" id="pd_cancellation5" style="display:none">
-                                            <input type="text" class="form-control form-control-sm required"
-                                                name="txt_cancellation_email[5]" id="email_cancellation5" value=""
-                                                size="45" maxlength="70">
-                                            For reference purposes only
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    
-                    
-                    <div class="form-group col-md-3">
-                        <label>Currency</label>
-                        <select name="sel_currency" id="currency"
-                            class="selectpicker required form-control form-control-sm show-menu-arrow bs-select-hidden"
+                    <div class="col-md-3 form-group">
+                        <label>Agent : </label>
+                        <select
+                            class="selectpicker form-control form-control-sm show-menu-arrow input_width_2 setfonts color_set_1 required bs-select-hidden"
+                            title="-Select-" name="sel_agent" id="sel_agent" onchange="getCardList(this.value)"
                             data-live-search="true">
-                            <option value="0">- Select Currency -</option>
-                            <option label="AUSTRALIAN DOLLAR" value="1">AUSTRALIAN DOLLAR</option>
-                            <option label="BAHRAINI DINAR" value="9">BAHRAINI DINAR</option>
-                            <option label="BRAZILIAN REAL" value="618">BRAZILIAN REAL</option>
-                            <option label="BRITISH POUND" value="2">BRITISH POUND</option>
-                            <option label="CANADIAN DOLLAR" value="596">CANADIAN DOLLAR</option>
-                            <option label="CHINESE YEN" value="614">CHINESE YEN</option>
-                            <option label="CZECH KORUNA" value="624">CZECH KORUNA</option>
-                            <option label="DANISH KRONE" value="598">DANISH KRONE</option>
-                            <option label="Egyptian Pound" value="628">Egyptian Pound</option>
-                            <option label="EURO" value="3">EURO</option>
-                            <option label="HK DOLLAR" value="592">HK DOLLAR</option>
-                            <option label="HUNGARIAN FORINT" value="599">HUNGARIAN FORINT</option>
-                            <option label="INDIAN RUPEE" value="4">INDIAN RUPEE</option>
-                            <option label="INDONESIAN RUPIAH" value="619">INDONESIAN RUPIAH</option>
-                            <option label="ISLANDIAN CROWN" value="600">ISLANDIAN CROWN</option>
-                            <option label="JAPANESE YEN" value="601">JAPANESE YEN</option>
-                            <option label="JORDANIAN DINAR" value="627">JORDANIAN DINAR</option>
-                            <option label="KOREAN WON" value="620">KOREAN WON</option>
-                            <option label="KUWAITI DINAR" value="5">KUWAITI DINAR</option>
-                            <option label="MALAYSIAN RINGGIT" value="593">MALAYSIAN RINGGIT</option>
-                            <option label="Mauritian rupee" value="631">Mauritian rupee</option>
-                            <option label="NEW ZEALAND DOLLAR" value="605">NEW ZEALAND DOLLAR</option>
-                            <option label="NORWEGIAN KRONE" value="603">NORWEGIAN KRONE</option>
-                            <option label="OMANI RIAL" value="8">OMANI RIAL</option>
-                            <option label="Pakistani Rupee" value="630">Pakistani Rupee</option>
-                            <option label="PHILIPPINE PESO" value="623">PHILIPPINE PESO</option>
-                            <option label="QATAR RIAL" value="10">QATAR RIAL</option>
-                            <option label="RUSSIAN ROUBLE" value="617">RUSSIAN ROUBLE</option>
-                            <option label="SAUDI RIYAL" value="608">SAUDI RIYAL</option>
-                            <option label="SINGAPORE DOLLAR" value="591">SINGAPORE DOLLAR</option>
-                            <option label="SOUTH AFRICAN RAND" value="621">SOUTH AFRICAN RAND</option>
-                            <option label="SWEDISH KRONA" value="609">SWEDISH KRONA</option>
-                            <option label="SWISS FRANC" value="610">SWISS FRANC</option>
-                            <option label="TAIWAN DOLLARS" value="604">TAIWAN DOLLARS</option>
-                            <option label="THAILAND BHAT" value="7">THAILAND BHAT</option>
-                            <option label="TUNISIA DINAR" value="629">TUNISIA DINAR</option>
-                            <option label="U.S. DOLLAR" value="6">U.S. DOLLAR</option>
-                            <option label="UAE DIRHAM" value="11">UAE DIRHAM</option>
-
-                        </select>
-
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>Time Zone</label>
-                        <select name="sel_timezone" id="sel_timezone"
-                            class="selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
-                            data-live-search="true">
-                            <option label="GMT -12:00 Hours (7:26 PM)" value="-12">GMT -12:00 Hours (7:26 PM)</option>
-                            <option label="GMT -11:00 Hours (8:26 PM)" value="-11">GMT -11:00 Hours (8:26 PM)</option>
-                            <option label="GMT -10:00 Hours (9:26 PM)" value="-10">GMT -10:00 Hours (9:26 PM)</option>
-                            <option label="GMT -9:00 Hours (10:26 PM)" value="-9">GMT -9:00 Hours (10:26 PM)</option>
-                            <option label="GMT -8:00 Hours (11:26 PM)" value="-8">GMT -8:00 Hours (11:26 PM)</option>
-                            <option label="GMT -7:00 Hours (12:26 AM)" value="-7">GMT -7:00 Hours (12:26 AM)</option>
-                            <option label="GMT -6:00 Hours (1:26 AM)" value="-6">GMT -6:00 Hours (1:26 AM)</option>
-                            <option label="GMT -5:00 Hours (2:26 AM)" value="-5">GMT -5:00 Hours (2:26 AM)</option>
-                            <option label="GMT -4:00 Hours (3:26 AM)" value="-4">GMT -4:00 Hours (3:26 AM)</option>
-                            <option label="GMT -3:30 Hours (3:56 AM)" value="-3.5">GMT -3:30 Hours (3:56 AM)</option>
-                            <option label="GMT -3:00 Hours (4:26 AM)" value="-3">GMT -3:00 Hours (4:26 AM)</option>
-                            <option label="GMT -2:00 Hours (5:26 AM)" value="-2">GMT -2:00 Hours (5:26 AM)</option>
-                            <option label="GMT -1:00 Hours (6:26 AM)" value="-1">GMT -1:00 Hours (6:26 AM)</option>
-                            <option label="GMT +0:00 Hours (7:26 AM)" value="0" selected="selected">GMT +0:00 Hours
-                                (7:26
-                                AM)</option>
-                            <option label="GMT +1:00 Hours (8:26 AM)" value="1">GMT +1:00 Hours (8:26 AM)</option>
-                            <option label="GMT +2:00 Hours (9:26 AM)" value="2">GMT +2:00 Hours (9:26 AM)</option>
-                            <option label="GMT +3:00 Hours (10:26 AM)" value="3">GMT +3:00 Hours (10:26 AM)</option>
-                            <option label="GMT +3:30 Hours (10:56 AM)" value="3.5">GMT +3:30 Hours (10:56 AM)</option>
-                            <option label="GMT +4:00 Hours (11:26 AM)" value="4">GMT +4:00 Hours (11:26 AM)</option>
-                            <option label="GMT +4:30 Hours (11:56 AM)" value="4.5">GMT +4:30 Hours (11:56 AM)</option>
-                            <option label="GMT +5:00 Hours (12:26 PM)" value="5">GMT +5:00 Hours (12:26 PM)</option>
-                            <option label="GMT +5:30 Hours (12:56 PM)" value="5.5">GMT +5:30 Hours (12:56 PM)</option>
-                            <option label="GMT +5:45 Hours (1:11 PM)" value="5.75">GMT +5:45 Hours (1:11 PM)</option>
-                            <option label="GMT +6:00 Hours (1:26 PM)" value="6">GMT +6:00 Hours (1:26 PM)</option>
-                            <option label="GMT +7:00 Hours (2:26 PM)" value="7">GMT +7:00 Hours (2:26 PM)</option>
-                            <option label="GMT +8:00 Hours (3:26 PM)" value="8">GMT +8:00 Hours (3:26 PM)</option>
-                            <option label="GMT +9:00 Hours (4:26 PM)" value="9">GMT +9:00 Hours (4:26 PM)</option>
-                            <option label="GMT +9:30 Hours (4:56 PM)" value="9.5">GMT +9:30 Hours (4:56 PM)</option>
-                            <option label="GMT +10:00 Hours (5:26 PM)" value="10">GMT +10:00 Hours (5:26 PM)</option>
-                            <option label="GMT +10:30 Hours (5:56 PM)" value="10.5">GMT +10:30 Hours (5:56 PM)</option>
-                            <option label="GMT +11:00 Hours (6:26 PM)" value="11">GMT +11:00 Hours (6:26 PM)</option>
-                            <option label="GMT +12:00 Hours (7:26 PM)" value="12">GMT +12:00 Hours (7:26 PM)</option>
-
+                            <option class="bs-title-option" value="">-Select-</option>
                         </select>
 
                     </div>
                 </div>
                 <div class="row mt-2">
-                    <div class="form-group col-md-12">
-                        <label> Remarks</label>
-                        <textarea name="txtar_remarks" rows="4" cols="80"
-                            class="form-control form-control-sm"></textarea>
+                    <div class="col-md-9 form-group">
+                        <label>Services : </label><br>
+                        <div class="radio radio-success radio-inline">
+                            <input id="hotel_service" type="radio" name="services" value="hotel">
+                            <label for="hotel_service">Hotel</label>
+                        </div>
+                        <div class="radio radio-success radio-inline">
+                            <input id="sight_service" type="radio" name="services" value="sightseeing">
+                            <label for="sight_service">Activity</label>
+                        </div>
+                        <div class="radio radio-success radio-inline">
+                            <input id="transfer_service" type="radio" name="services" value="transfer">
+                            <label for="transfer_service">Transfer</label>
+                        </div>
+                        <div class="radio radio-success radio-inline">
+                            <input id="airline_service" type="radio" name="services" value="Airline" checked="">
+                            <label for="airline_service">Flight</label>
+                        </div>
+                        <div id="services_note">Note : Lodge Card Applied For Seleted Entire Services.</div>
                     </div>
-                </div>
-                <div class="row mt-2">
-                  
-                    <div class="form-group col-md-3">
-                        <label>Opening Balance</label>
-                        <input type="text" name="txt_open_balance" class="form-control form-control-sm" size="45"
-                            value="" maxlength="50" onblur="extractNumber(this,0,false);"
-                            onkeyup="extractNumber(this,0,false);">
-                    </div>
-                    <input type="hidden" name="txt_commission_type" value="P">
-                </div>
-                <div class="row mt-2">
-                    <div class="form-group col-md-12" style="display: flex;">
-                        <div data-toggle="tooltip" data-placement="top" title="" class="checkbox checkbox-success"
-                            style="display: inline-block;margin-right: 1%;"
-                            data-original-title="if you want to send email to supplier then check it otherwise uncheck it.">
-                            <input data-label-prepend="prefix" type="checkbox" id="send_email" name="send_email"
-                                value="1">
-                            <label for="send_email">Send Email</label>
-                        </div>
-                        <div class="checkbox checkbox-success checkbox-inline">
-                            <input data-label-prepend="prefix" type="checkbox" name="allow_to_edit_hotel" id=""
-                                value="1">
-                            <label for="allow_to_edit_hotel">Allow to Edit Hotel Details</label>
-                        </div>
-                        <div class="checkbox checkbox-success checkbox-inline">
-                            <input data-label-prepend="prefix" type="checkbox" name="allow_to_edit_admin_rates" id="app"
-                                value="1">
-                            <label for="allow_to_edit_admin_rates">Allow to Edit Admin Rates</label>
-                        </div>
-                        <div class="checkbox checkbox-success checkbox-inline">
-                            <input data-label-prepend="prefix" type="checkbox" name="is_joint_venture" id="app"
-                                value="1">
-                            <label for="is_joint_venture">Joint Venture</label>
+                    <div class="row mt-2">
+                        <div class="col-md-3 form-group">
+                            <label>Supplier : </label>
+                            <select
+                                class="selectpicker form-control form-control-sm show-menu-arrow input_width_2 setfonts color_set_1 bs-select-hidden"
+                                id="sel_supplier_option" name="sel_supplier_option[]" multiple=""
+                                data-live-search="true" data-actions-box="true">
+                                <option label="Contracted Flight" value="localflight">Contracted Flight</option>
+                                <option label="Amadeus Flight" value="amadeus">Amadeus Flight</option>
+                                <option label="Sabre Flight" value="sabre" selected="selected">Sabre Flight</option>
+                                <option label="Mystifly" value="mystifly">Mystifly</option>
+                            </select>
+
                         </div>
                     </div>
-                </div>
-                <br>
-                <div class="row mt-2">
-                    <div class="form-group col-md-12">
-                        <button type="button" class="btn btn-dark btn-sm" name="b1" value="SUBMIT"
-                            onclick="Javascript: submit_form(document.forms['add_local_supplier_form']);">
-                            <i class="fa fa-floppy-o"></i>&nbsp;Save
-                        </button>
+                    <div class="row mt-2">
+                        <div class="col-md-3 form-group">
+                            <label>Lodge Cards : </label>
+                            <select
+                                class="selectpicker form-control form-control-sm show-menu-arrow input_width_2 setfonts color_set_1 required bs-select-hidden"
+                                id="sel_card_option" name="sel_card_option[]" multiple="" data-live-search="true"
+                                data-actions-box="true">
+                                <option label="Master Card (XXXX-XXXX-XXXX-0007)" value="1" selected="selected">Master
+                                    Card (XXXX-XXXX-XXXX-0007)</option>
+                                <option label="American Express (XXX-XXXX-XXXX-4564)" value="2" selected="selected">
+                                    American Express (XXX-XXXX-XXXX-4564)</option>
+                                <option label="JCB Card (XXXX-XXXX-XXXX-0007)" value="3" selected="selected">JCB Card
+                                    (XXXX-XXXX-XXXX-0007)</option>
+                                <option label="Discover Card (XXXX-XXXX-XXXX-8686)" value="4">Discover Card
+                                    (XXXX-XXXX-XXXX-8686)</option>
+                                <option label="Diners Card (XX-XXXX-XXXX-0000)" value="5">Diners Card
+                                    (XX-XXXX-XXXX-0000)</option>
+                                <option label="Visa Commercial (XXXX-XXXX-XXXX-0008)" value="12">Visa Commercial
+                                    (XXXX-XXXX-XXXX-0008)</option>
+                                <option label="Master Card Ron (XXXX-XXXX-XXXX-5454)" value="13">Master Card Ron
+                                    (XXXX-XXXX-XXXX-5454)</option>
+                                <option label="Maestro Premium (XXXX-XXXX-XXXX-0002)" value="14">Maestro Premium
+                                    (XXXX-XXXX-XXXX-0002)</option>
+                                <option label="American Express Premium (XXX-XXXX-XXXX-0002)" value="15">American
+                                    Express Premium (XXX-XXXX-XXXX-0002)</option>
+                                <option label="Masterr Cardd (XXXX-XXXX-XXXX-0008)" value="21">Masterr Cardd
+                                    (XXXX-XXXX-XXXX-0008)</option>
+                                <option label="Visa Test1 (XXXX-XXXX-XXXX-9299)" value="22">Visa Test1
+                                    (XXXX-XXXX-XXXX-9299)</option>
+                                <option label="Amex Ron Vartak (XXX-XXXX-XXXX-0005)" value="23">Amex Ron Vartak
+                                    (XXX-XXXX-XXXX-0005)</option>
+                                <option label="Amex Card2 (XXX-XXXX-XXXX-8431)" value="24">Amex Card2
+                                    (XXX-XXXX-XXXX-8431)</option>
+                                <option label="Ron Test1 (XXXX-XXXX-XXXX-5454)" value="25">Ron Test1
+                                    (XXXX-XXXX-XXXX-5454)</option>
+                                <option label="MasterCard Rohan Vartak (XXXX-XXXX-XXXX-0008)" value="26">MasterCard
+                                    Rohan Vartak (XXXX-XXXX-XXXX-0008)</option>
+                                <option label="Rohan VISA NEW (XXXX-XXXX-XXXX-0026)" value="27">Rohan VISA NEW
+                                    (XXXX-XXXX-XXXX-0026)</option>
+                                <option label="TestCardforHotel (XXXX-XXXX-XXXX-0023)" value="36">TestCardforHotel
+                                    (XXXX-XXXX-XXXX-0023)</option>
+                                <option label="DemocardHotel (XXXX-XXXX-XXXX-0023)" value="37">DemocardHotel
+                                    (XXXX-XXXX-XXXX-0023)</option>
+                                <option label="Amex Test NEW (XXX-XXXX-XXXX-4564)" value="42">Amex Test NEW
+                                    (XXX-XXXX-XXXX-4564)</option>
+                                <option label="Amexx (XXX-XXXX-XXXX-0002)" value="43">Amexx (XXX-XXXX-XXXX-0002)
+                                </option>
+                                <option label="Mastercard Debit (XXXX-XXXX-XXXX-0007)" value="44">Mastercard Debit
+                                    (XXXX-XXXX-XXXX-0007)</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-12 form-group card_note"></div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div class="row mt-3">
+                        <div class="form-group col-md-12">
+                            <button type="button" name="b1" value="SUBMIT"
+                                onclick=" submit_mapping_form(document.forms['lodge_card_form_mapping'],'insert_lodge_card_mapping') "
+                                class="btn btn-dark btn-sm">
+
+
+                                Update
+
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
+
+
         </form>
+
 
         <!-- End -->
 
 
 
     </div>
-    <!-- Code injected by live-server -->
-    <script>
-        // <![CDATA[  <-- For SVG support
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
-                    }
-                }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                }
-            })();
-        }
-        else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-        }
-	// ]]>
-    </script>
+ 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
