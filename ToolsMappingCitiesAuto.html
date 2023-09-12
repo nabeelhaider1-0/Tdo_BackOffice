@@ -1363,13 +1363,13 @@
 
                 <div class="row mt-3">
                     <div class="form-group col-md-12">
-                        <button class="btn btn-dark btn-sm" type="button" onclick="mapping_report('show')"
+                    <a href="ToolsMappingCitiesAutoShow.html" class="btn btn-dark btn-sm" type="button" onclick="mapping_report('show')"
                             value="Show Report">
                             <i class="fa fa-eye"></i>&nbsp;Show
-                        </button>&nbsp;&nbsp;
+                    </a>&nbsp;&nbsp;
                         <button class="btn btn-dark btn-sm" type="button" onclick="mapping_report('download')"
                             value="Download Report" id="download_report" style="display: none;">
-                            <h6><i class="fa fa-download"></i>&nbsp;Download Report</h6>
+                            <i class="fa fa-download"></i>&nbsp;Download Report
                         </button>
                     </div>
                 </div>
@@ -1449,5 +1449,47 @@
     })
 
 </script>
+<script type="text/javascript">
+  function mapping_report(type)
+  {
+    if($("#supplier").val()==""){
+       showWarAlert("Select supplier",'supplier',document.forms['supplier_form'],'selectpicker');
+       return false;
+    }
+    var url = "city_supplier_mapping.php";
+    var form = $("#supplier_form");
+    if(type=="download"){
+      $("#result").html();
+         $("#action").val("download_mapping_report");
+         var serializedForm = form.serialize();   		
+      location.href=url+"?"+serializedForm;
+      return false;
+    }else if(type=="show"){
+      $("#result").html();
+      if($("#country_code").val()==""){
+           showWarAlert("Select Country",'country_code',document.forms['supplier_form'],'selectpicker');
+           return false;
+        }
+        document.getElementById('loading').style.display = 'block';	
+         $("#action").val("show_mapping_report");
+         $("#result").html("");	
+         var serializedForm = form.serialize();
+         $("#result").html();
+         $.post(url, serializedForm, function(data)
+      {
+        $("#result").html(data);	
+        document.getElementById('loading').style.display = 'none';		
+      });   		
+    }
+  }
+  function hide_report(value){
+    var country=$('#country_code').val();
+    var supplier=$('#supplier').val();
+    if(country!='' && supplier!=''){
+      $('#download_report').show();
+    }else{
+      $('#download_report').hide();
+    }
+  }</script>
 
 </html>

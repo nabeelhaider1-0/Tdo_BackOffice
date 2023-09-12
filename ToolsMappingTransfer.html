@@ -3072,5 +3072,167 @@
 <script src="dist/js/bootstrap-select.js"></script>
 
 
+<script language="javascript">
 
+    function check_if_selected(type) {
+    if(type == 'right') {
+            from = document.getElementById("sel_right_members[]");
+            var haha=0;
+            for (var i=0; i<from.options.length; i++) {
+                var o = from.options[i];
+                if (o.selected) {
+                    var haha =1;
+                    break;
+                }
+            }
+    } else if(type == 'left') {
+            from = document.getElementById("sel_transfers");//document.forms[0].sel_transfers;
+            var haha=0;
+            for (var i=0; i<from.options.length; i++) {
+                var o = from.options[i];
+                if (o.selected) {
+                    var haha =1;
+                    break;
+                }
+            }
+    }
+    return haha;
+    }
+    
+    function right_to_left() {
+        to = document.getElementById("sel_transfers");
+        from = document.getElementById("sel_right_members[]");
+        if(!check_if_selected('right')) {
+            if(checkCountryCity(document.forms['transfer_supplier_mapping_form']))
+            {
+                return false;
+            
+            }else{
+            showWarAlert('select atleast one transfer from the right box to be transferred.');
+            from = document.getElementById("sel_right_members[]");
+            //from.options[0].selected = true;
+            }
+        } else {				
+            if (arguments.length > 3) {
+                var regex = arguments[3];
+                if (regex != "") {
+                    unSelectMatchingOptions(from,regex);
+                }
+            }
+                // Move them over
+            if (!hasOptions(from)) { return; }
+            for (var i=0; i<from.options.length; i++) {
+                var o = from.options[i];
+                if (o.selected) {
+                    if (!hasOptions(to)) { var index = 0; } else { var index=to.options.length; }
+                    to.options[index] = new Option( o.text, o.value, false, false);
+                }
+            }
+                // Delete them from original
+            for (var i=(from.options.length-1); i>=0; i--) {
+                var o = from.options[i];
+                if (o.selected) {
+                    from.options[i] = null;
+                }
+            }
+    
+            if ((arguments.length<3) || (arguments[2]==true)) {
+    //								sortSelect(from);
+    //								sortSelect(to);
+            }
+            from.selectedIndex = -1;
+            to.selectedIndex = -1;
+        }
+    }
+    
+    function hasOptions(obj) {
+        if (obj!=null && obj.options!=null) { return true; }
+            return false;
+    }
+    
+    function left_to_right() {
+        from = document.getElementById("sel_transfers");
+        to = document.getElementById("sel_right_members[]");
+    
+        if(!check_if_selected('left')) {
+            if(checkCountryCity(document.forms['transfer_supplier_mapping_form']))
+            {
+                return false;
+            
+            }else{
+            showWarAlert('select atleast one transfer from the left box to be transferred.');
+            from = document.getElementById("sel_right_members[]");
+            //from.options[0].selected = true;
+            }
+        } else {
+    
+            if (arguments.length > 3) {
+                var regex = arguments[3];
+                if (regex != "") {
+                    unSelectMatchingOptions(from,regex);
+                }
+            }
+                // Move them over
+            if (!hasOptions(from)) { 
+                return; 
+            }
+    
+            for (var i=0; i<from.options.length; i++) {
+                    var o = from.options[i];
+                    if (o.selected) {
+                        if (!hasOptions(to)) { 
+                            var index = 0;
+                        } else { 
+                            var index=to.options.length; 
+                        }
+                        to.options[index] = new Option( o.text, o.value, false, false);
+                    }
+                }
+                // Delete them from original
+                
+            for (var i=(from.options.length-1); i>=0; i--) {
+                var o = from.options[i];
+                if (o.selected) {
+                    from.options[i] = null;
+                }
+            }
+            
+            if ((arguments.length<3) || (arguments[2]==true)) {
+    //								sortSelect(from);
+    //								sortSelect(to);
+            }
+            from.selectedIndex = -1;
+            to.selectedIndex = -1;
+        }
+    }
+    
+    function updateRightBox() {
+        from = document.getElementById("sel_right_members[]");
+        //from = fromObj;
+        for (var x=0; x<from.options.length; x++) {
+        from.options[x].selected = true;
+        }
+    }
+    
+    function validateRightBox() {
+        var count=0;
+        from = document.getElementById("sel_right_members[]");
+        //from = fromObj;
+        for (var x=0; x<from.options.length; x++) {
+            var t = from.options[x];
+            if(t.selected){
+                count++;
+                t.selected = true;
+            }
+        }
+        if(count==0){
+            return true;
+        }else{
+            updateRightBox();
+            return false;
+        }
+    }
+    
+    // -->
+    </script>
 </html>

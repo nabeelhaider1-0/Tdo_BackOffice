@@ -30,7 +30,6 @@
 </head>
 
 <body>
-
     <div class="color-line">
     </div>
 
@@ -1169,15 +1168,15 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">VIEW LODGE CARD DETAILS</h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">EDIT REWARDS DELIVERY</h5>
                 </div>
                 <div class="col-md-6">
 
                 </div>
                 <div class="col-md-3">
-                    <i class="fa-solid fa-house-chimney"></i><span> / View Lodge Card / <a
-                            href="LodgeCardEdit.html"><button class="btn btn-dark btn-sm" style="font-size:12px;">
-                                Edit Lodge Card </button></a></span>
+                    <i class="fa-solid fa-house-chimney"></i><span> /<a href="ToolsRewardsDelivery.html"
+                            style="font-size:12px;text-decoration: none;color: gray;"> Search Rewards </a> /
+                        Edit Rewards Detail </span>
                 </div>
             </div>
 
@@ -1191,113 +1190,65 @@
     <div class="container-fluid pt-0 p-4" id="content-pad">
 
         <!-- First Row-->
-        <style>
-            .form-control[disabled],
-            .form-control[readonly],
-            fieldset[disabled] .form-control {
-                cursor: not-allowed;
-                background-color: #eee;
-                opacity: 1;
-            }
-        </style>
+
+
+
+
+
         <form>
-            <input type="hidden" name="id" id="id" value="1">
-            <input type="hidden" name="ccMask" id="ccMask" value="1">
+
             <div class="panel-body">
-                <div class="row form-group">
-
-
-                    <div>
-                        <h5>MASTER CARD</h5>
-                    </div>
-
-
-                </div>
                 <div class="row">
-
                     <div class="form-group col-md-3">
-                        <label>Agent</label>
-                        <div>
-                            VARTAK HOLIDAZZLE [CD0195-ROHAN] [ROHAN-VARTAK]
-                        </div>
+                        <label>Order ID</label>
+                        <div>OD0035</div>
                     </div>
-
                     <div class="form-group col-md-3">
-                        <label>Card ID</label>
-                        <div>
-                            <span id="mask_card" style="display: inline;">XXXXXXXXXXXXXe33</span>
-                            <span id="unmask_card" style="display: none;">6375cabf6fe33</span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <button id="unmask" class="submit btn btn-dark btn-sm"
-                                style="padding: 2px 8px !important; display: inline-block;">Show</button>
-                            <button id="mask" style="padding: 2px 8px !important; display: none;"
-                                class="submit btn btn-dark btn-sm">Hide</button>
-                        </div>
+                        <label>Product Name</label>
+                        <div>Plasma TV</div>
                     </div>
                 </div>
-            </div>
-            <br>
-            <div class="row">
-
-                <div class="form-group col-md-3">
-                    <label>Card Number</label>
-                    <div>
-                        XXXX-XXXX-XXXX-0007
+                <div class="row mt-2">
+                    <div class="form-group col-md-12">
+                        <label>Shipping Address</label>
+                        <textarea class="dropdown-toggle btn-default form-control form-control-sm test123"
+                            name="delivery_address" id="delivery_address" maxlength="255" style="font-size:12px;"
+                            cols="30" rows="5" data-toggle="tooltip" data-placement="top"
+                            data-original-title="Max 255 Characters" aria-describedby="tooltip103665">Mumbai</textarea>
+                       
+                   
                     </div>
                 </div>
-                <div class="form-group col-md-3">
-                    <label>Card Type</label>
-                    <div>
-                        MASTERCARD &nbsp;
-                        <img src="mastercard.png" alt="" width="24" height="auto">
+                <div class="row mt-2">
+                    <div class="form-group col-md-3">
+                        <label>Delivery Status</label>
+                        <select name="delivery_status" id="delivery_status"
+                            class="chzn-select form-control form-control-sm selectpicker show-menu-arrow required bs-select-hidden"
+                            data-live-search="true">
+                            <option value="o" selected="">Order Placed</option>
+                            <option value="s">Shipped</option>
+                            <option value="d">Delivered</option>
+                        </select>
+                  
+                    
                     </div>
                 </div>
-            </div>
-
-            <br>
-            <div class="row">
-
-                <div class="form-group col-md-3">
-                    <label>Card Expiry</label>
-                    <div>
-                        05 / 21
-                    </div>
-                </div>
-                <div class="form-group col-md-3">
-                    <label>Card Holder Name</label>
-                    <div>
-                        ROHAN VARTAK
+                <div class="row mt-2">
+                    <div class="form-group col-md-12">
+                        <button type="button" name="loyality_add_tier_add_btn" class="btn btn-dark btn-sm" value="Submit"
+                            onclick="submit_form()">
+                            <i class="fa fa-floppy-o"></i>
+                                &nbsp;Save
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <br>
-            <div class="row">
-
-                <div class="form-group col-md-3">
-                    <label>Status</label>
-                    <div>
-                        <b style="color:#2b8600">Active</b>
-                    </div>
-                </div>
-                <div class="form-group col-md-3">
-                    <label>Token Status</label>
-                    <div>
-                        <b style="color:#2b8600">Valid</b>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-    </div>
+        </form>
 
 
 
-
-    </form>
-
-
-    <!-- End -->
+        <!-- End -->
 
 
 
@@ -1309,20 +1260,33 @@
 <script src="dist/js/bootstrap-select.js"></script>
 
 <script>
-    $(document).ready(function () {
-        $("#mask").click(function () {
-            $("#mask_card").show();
-            $("#unmask_card").hide();
-            $("#mask").hide();
-            $("#unmask").show();
-        });
-        $("#unmask").click(function () {
-            $("#mask_card").hide();
-            $("#unmask_card").show();
-            $("#unmask").hide();
-            $("#mask").show();
-        });
+
+
+    // For Validation  Datepicker
+
+    const from_date = flatpickr("#from_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
     });
+
+
+    const to_date = flatpickr("#to_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const validTrashBtn = document.getElementById("validTrashBtn");
+    validTrashBtn.addEventListener("click", function () {
+        from_date.clear();
+        to_date.clear();
+
+    });
+
+
+
+
+
 </script>
 
 </html>

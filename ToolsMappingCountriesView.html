@@ -30,7 +30,6 @@
 </head>
 
 <body>
-
     <div class="color-line">
     </div>
   
@@ -64,8 +63,8 @@
       </nav>
     </section>
   
-  <!--      2nd Navbar Section For Search Bookkng And other Queries           -->
-  <section>
+   <!--      2nd Navbar Section For Search Bookkng And other Queries           -->
+   <section>
     <nav class="navbar navbar-expand-lg" id="secondNav">
       <div class="w-100">
         <a class="navbar-brand" href="index.html" style="color: white;font-size: 10px;" id="tdotext">Travel Destination
@@ -1016,13 +1015,14 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">AUTO COUNTRY MAPPING</h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">COUNTRY DETAILS</h5>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-7">
 
                 </div>
-                <div class="col-md-3">
-
+                <div class="col-md-2">
+                    <i class="fa-solid fa-house-chimney"></i><span> /<a href="ToolsMappingCountriesManual.html" style="font-size:12px;text-decoration: none;color: gray;"> List Country </a> /
+                    View Country </span>
                 </div>
             </div>
 
@@ -1037,55 +1037,126 @@
 
         <!-- First Row-->
 
-        <form name="search_area_from" method="get" action="area.php">
 
+
+
+
+        <form>
             <div class="panel-body">
-                <div class="form-group row">
-                    <div class="form-group col-md-3">
-                        <label>Supplier</label>
-                        <select class="required selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"
-                            id="supplier" name="supplier" onchange="javascript:hide_report(this.value)"
-                            data-live-search="true">
-                            <option value="">Select Supplier</option>
-
-                            <option label="Agoda" value="agoda">Agoda</option>
-                            <option label="Amadeus Flight" value="amadeus">Amadeus Flight</option>
-                            <option label="Contracted Flight" value="localflight">Contracted Flight</option>
-                            <option label="Dhisco" value="dhisco_rotana">Dhisco</option>
-                            <option label="Dotw" value="dotw">Dotw</option>
-                            <option label="expedia" value="expedia">expedia</option>
-                            <option label="Hotelbeds" value="hotelbeds">Hotelbeds</option>
-                            <option label="Hotelbeds Transfer" value="hotelbedstransfer">Hotelbeds Transfer</option>
-                            <option label="Miki" value="miki">Miki</option>
-                            <option label="Mystifly" value="mystifly">Mystifly</option>
-                            <option label="Redapple Travel" value="redapple">Redapple Travel</option>
-                            <option label="Restel" value="restel">Restel</option>
-                            <option label="Sabre Flight" value="sabre">Sabre Flight</option>
-                            <option label="tboholidays" value="tboholidays">tboholidays</option>
-                            <option label="Travco" value="travco">Travco</option>
-                            <option label="Whitesands" value="whitesands">Whitesands</option>
-
-                        </select>
+                <div class="row">
                     
+                    <div class="form-group col-md-4">
+                        <label>Country Name</label>
+                        <div>Afghanistan</div>
                     </div>
-                </div>
 
-                <div class="row mt-3">
-                    <div class="form-group col-md-12">
-                    <a href="ToolsMappingCountriesAutoShow.html" class="btn btn-dark btn-sm" type="button" onclick="mapping_report('show')"
-                            value="Show Report">
-                            <i class="fa fa-eye"></i>&nbsp;Show
-                    </a>&nbsp;&nbsp;
-
-                        <button class="btn btn-dark btn-sm" type="button" onclick="mapping_report('download')"
-                            value="Download Report" id="download_report" style="display: none;">
-                            <i class="fa fa-download"></i>&nbsp;Download Report
-                        </button>
-
+                    <div class="form-group col-md-4">
+                        <label>Country Code</label>
+                        <div>97</div>
                     </div>
-                </div>
+
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>AGODA Code</label><br>
+                        288	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>AMADEUS FLIGHT Code</label><br>
+                        AF	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>CONTRACTED FLIGHT Code</label><br>
+                                                    <div class="text-danger">NA</div>	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>DHISCO Code</label><br>
+                        AF	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>DOTW Code</label><br>
+                        26	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>EXPEDIA Code</label><br>
+                        blocked	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>GROUPS Code</label><br>
+                                                    <div class="text-danger">NA</div>	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>HOTELBEDS Code</label><br>
+                        blocked	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>HOTELBEDS SIGHTSEEING (TEST) Code</label><br>
+                        blocked	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>HOTELBEDS TRANSFER Code</label><br>
+                        blocked	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>MIKI Code</label><br>
+                        blocked	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>MINAL_QTECH_TEST Code</label><br>
+                                                    <div class="text-danger">NA</div>	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>MYSTIFLY Code</label><br>
+                                                    <div class="text-danger">NA</div>	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>REDAPPLE TRAVEL Code</label><br>
+                        blocked	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>RESTEL Code</label><br>
+                        blocked	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>SABRE FLIGHT Code</label><br>
+                                                    <div class="text-danger">NA</div>	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>SNEHAL TESTING Code</label><br>
+                                                    <div class="text-danger">NA</div>	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>TBOHOLIDAYS Code</label><br>
+                        AF	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>TRAVCO Code</label><br>
+                        blocked	
+                    </div>
+                                                                    
+                    <div class="form-group col-md-4">
+                        <label>WHITESANDS Code</label><br>
+                        blocked	
+                    </div>
+                                        </div>
             </div>
-
         </form>
 
 
@@ -1101,49 +1172,34 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
 
+<script>
 
-<script type="text/javascript">
 
-  function mapping_report(type)
-  {
-      if($("#supplier").val()==""){
-       showWarAlert("Select supplier",'supplier',document.forms['supplier_form'],'selectpicker');
-       return false;
-      }
-      if($("#country_code").val()==""){
-       showWarAlert("Select Country");
-       return false;
-      }
-      var url = "country_supplier_mapping.php";
-      var form = $("#supplier_form");
-      $("#result").html();
-      if(type=="download"){
-             $("#action").val("download_mapping_report");
-             var serializedForm = form.serialize();   		
-          location.href=url+"?"+serializedForm;
-          return false;
-      }else if(type=="show"){
-          document.getElementById('loading').style.display = 'block';	
-             $("#action").val("show_mapping_report");
-             $("#result").html("");	
-             var serializedForm = form.serialize();
-             $("#result").html();
-             $.post(url, serializedForm, function(data)
-          {
-            $("#result").html(data);	
-            document.getElementById('loading').style.display = 'none';		
-          });   		
-      }
-  }
-  function hide_report(value){
-      if(value==''){
-          $('#download_report').hide();
-          }
-      else{
-          $('#download_report').show();
-          }
-  }
-  
-  </script>
+    // For Validation  Datepicker
+
+    const from_date = flatpickr("#from_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const to_date = flatpickr("#to_date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+
+
+    const validTrashBtn = document.getElementById("validTrashBtn");
+    validTrashBtn.addEventListener("click", function () {
+        from_date.clear();
+        to_date.clear();
+
+    });
+
+
+
+
+
+</script>
 
 </html>

@@ -3072,5 +3072,173 @@
 <script src="dist/js/bootstrap-select.js"></script>
 
 
+<script language="javascript">
+	
+    var ModuleType = "Activity";
 
+function check_if_selected(type) {
+    if(type == 'right') {
+        from = document.getElementById("sel_right_members[]");
+        var haha=0;
+        for (var i=0; i<from.options.length; i++) {
+            var o = from.options[i];
+            if (o.selected) {
+                var haha =1;
+                break;
+            }
+        }
+    } else if(type == 'left') {
+        from = document.getElementById("sel_tours");
+        var haha=0;
+        for (var i=0; i<from.options.length; i++) {
+            var o = from.options[i];
+            if (o.selected) {
+                var haha =1;
+                break;
+            }
+        }
+    }
+    return haha;
+}
+
+function right_to_left() {
+    to = document.getElementById("sel_tours");
+    from = document.getElementById("sel_right_members[]");
+    if(!check_if_selected('right')) {
+        if(checkCountryCity(document.forms['tour_supplier_mapping_form'])){
+            return false;
+        }else{
+            showWarAlert("select atleast one "+ModuleType+" from the right box to be transferred.");
+            from = document.getElementById("sel_right_members[]");
+        }
+    }else {
+        showConfirmAlert("You have to delete the added rates of "+ModuleType+" before unmapping it.\nIf you have deleted the rates, then click OK, else click Cancel..");
+    }
+}
+
+function showConfirmAlert(msg){
+        swal({
+            title: msg,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Ok",
+            cancelButtonText: "Cancel",
+            closeOnConfirm: true
+        },
+        function (isConfirm) {
+            if (isConfirm) {
+                if (arguments.length > 3) {
+                    var regex = arguments[3];
+                    if (regex != "") {
+                        unSelectMatchingOptions(from,regex);
+                    }
+                }
+                if (!hasOptions(from)) { return; }
+                for (var i=0; i<from.options.length; i++) {
+                    var o = from.options[i];
+                    if (o.selected) {
+                        if (!hasOptions(to)) { var index = 0; } else { var index=to.options.length; }
+                        to.options[index] = new Option( o.text, o.value, false, false);
+                    }
+                }
+                for (var i=(from.options.length-1); i>=0; i--) {
+                    var o = from.options[i];
+                    if (o.selected) {
+                        from.options[i] = null;
+                    }
+                }
+                from.selectedIndex = -1;
+                to.selectedIndex = -1;
+            }
+        });
+}
+
+function hasOptions(obj) {
+    if (obj!=null && obj.options!=null) { return true; }
+        return false;
+}
+
+function left_to_right() {
+    from = document.getElementById("sel_tours");
+    to = document.getElementById("sel_right_members[]");
+    if(!check_if_selected('left')) {
+        if(checkCountryCity(document.forms['tour_supplier_mapping_form'])){
+            return false;
+        }else{
+            showWarAlert("select atleast one "+ModuleType+" from the left box to be transferred.");
+            from = document.getElementById("sel_right_members[]");
+        }
+    } else {
+        if (arguments.length > 3) {
+            var regex = arguments[3];
+            if (regex != "") {
+                unSelectMatchingOptions(from,regex);
+            }
+        }
+        if (!hasOptions(from)) {
+            return;
+        }
+        for (var i=0; i<from.options.length; i++) {
+                var o = from.options[i];
+                if (o.selected) {
+                    if (!hasOptions(to)) {
+                        var index = 0;
+                    } else {
+                        var index=to.options.length;
+                    }
+                    to.options[index] = new Option( o.text, o.value, false, false);
+                }
+        }
+        for (var i=(from.options.length-1); i>=0; i--) {
+            var o = from.options[i];
+            if (o.selected) {
+                from.options[i] = null;
+            }
+        }
+        from.selectedIndex = -1;
+        to.selectedIndex = -1;
+    }
+}
+
+function updateRightBox() {
+    from = document.getElementById("sel_right_members[]");
+    for (var x=0; x<from.options.length; x++) {
+        from.options[x].selected = true;
+    }
+}
+
+function validateRightBox() {
+    var count=0;
+    from = document.getElementById("sel_right_members[]");
+    for (var x=0; x<from.options.length; x++) {
+        var t = from.options[x];
+        if(t.selected){
+            count++;
+            t.selected = true;
+        }
+    }
+    if(count==0){
+        return true;
+    }else{
+        updateRightBox();
+        return false;
+    }
+}
+
+function check_duplicate(formObj){
+    formObj.action.value='check_duplicate_tour_supplier';
+    var url = "local_system.php";
+    var form = $("#tour_supplier_mapping_form");
+    var serializedForm = form.serialize();
+    $.post(url, serializedForm, function(data){
+         if(data.trim()==""){
+             formObj.action.value='add';
+             formObj.submit();
+         }else{
+             showWarAlert(data);
+         }
+    });
+}
+</script>
 </html>

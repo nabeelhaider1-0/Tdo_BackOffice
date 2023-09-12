@@ -26,6 +26,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <!-- include summernote css/js-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <title>Travel Destination Online</title>
 </head>
 
@@ -33,37 +36,38 @@
 
     <div class="color-line">
     </div>
-  
+
     <!---                                    NAv BAr Secton            -->
     <section>
-      <nav class="navbar navbar-expand-lg bg-light" id="firstNav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="TDO LOGO Without Background.png" class="img-fluid"
-              alt="Responsive image" style="max-height: 50px; margin-left: 10px;"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="index.html">Welcome <b>Beta_Tdo</b></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa-regular fa-clock"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-user fa-2xl"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+        <nav class="navbar navbar-expand-lg bg-light" id="firstNav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="TDO LOGO Without Background.png" class="img-fluid"
+                        alt="Responsive image" style="max-height: 50px; margin-left: 10px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Welcome <b>Beta_Tdo</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-clock"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-user fa-2xl"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </section>
-  
+
   <!--      2nd Navbar Section For Search Bookkng And other Queries           -->
   <section>
     <nav class="navbar navbar-expand-lg" id="secondNav">
@@ -1016,15 +1020,15 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">AUTO COUNTRY MAPPING</h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">PRESET TEXT</h5>
                 </div>
                 <div class="col-md-6">
 
                 </div>
                 <div class="col-md-3">
-
+                    <i class="fa-solid fa-house-chimney"></i><span> / <a href="ToolsPresetText.html"
+                            style="text-decoration:none;color:grey"> Preset Text</a> / Edit Preset Text</span>
                 </div>
-            </div>
 
             </div>
         </header>
@@ -1037,57 +1041,162 @@
 
         <!-- First Row-->
 
-        <form name="search_area_from" method="get" action="area.php">
-
+        <form>
             <div class="panel-body">
-                <div class="form-group row">
-                    <div class="form-group col-md-3">
-                        <label>Supplier</label>
-                        <select class="required selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"
-                            id="supplier" name="supplier" onchange="javascript:hide_report(this.value)"
-                            data-live-search="true">
-                            <option value="">Select Supplier</option>
 
-                            <option label="Agoda" value="agoda">Agoda</option>
-                            <option label="Amadeus Flight" value="amadeus">Amadeus Flight</option>
-                            <option label="Contracted Flight" value="localflight">Contracted Flight</option>
-                            <option label="Dhisco" value="dhisco_rotana">Dhisco</option>
-                            <option label="Dotw" value="dotw">Dotw</option>
-                            <option label="expedia" value="expedia">expedia</option>
-                            <option label="Hotelbeds" value="hotelbeds">Hotelbeds</option>
-                            <option label="Hotelbeds Transfer" value="hotelbedstransfer">Hotelbeds Transfer</option>
-                            <option label="Miki" value="miki">Miki</option>
-                            <option label="Mystifly" value="mystifly">Mystifly</option>
-                            <option label="Redapple Travel" value="redapple">Redapple Travel</option>
-                            <option label="Restel" value="restel">Restel</option>
-                            <option label="Sabre Flight" value="sabre">Sabre Flight</option>
-                            <option label="tboholidays" value="tboholidays">tboholidays</option>
-                            <option label="Travco" value="travco">Travco</option>
-                            <option label="Whitesands" value="whitesands">Whitesands</option>
+                <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label>Label Name</label>
+                        <input type="text" name="preset_name" size="10"
+                            class="form-control form-control-sm required test123">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Page Name</label>
+                        <select name="page_name" id="page_name"
+                            class="selectpicker show-menu-arrow form-control form-control-sm required bs-select-hidden"
+                            data-live-search="true">
+                            <option label="VOUCHER_PAGE" value="voucher_page">VOUCHER_PAGE</option>
 
                         </select>
-                    
+
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Service Name</label>
+                        <select name="service_type[]" id="service_type"
+                            class="selectpicker show-menu-arrow form-control form-control-sm required bs-select-hidden"
+                            multiple="" data-live-search="true" onchange="getSupplierList()" data-actions-box="true">
+                            <option label="HOTEL" value="hotel">HOTEL</option>
+                            <option label="SIGHTSEEING" value="sightseeing">SIGHTSEEING</option>
+                            <option label="TRANSFER" value="transfer">TRANSFER</option>
+                            <option label="AIRLINE" value="airline">AIRLINE</option>
+
+                        </select>
+
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Supplier</label>
+                        <select name="sel_supplier[]" id="sel_supplier"
+                            class="selectpicker show-menu-arrow form-control form-control-sm required bs-select-hidden"
+                            multiple="" data-live-search="true" data-actions-box="true">
+                            <option label="Dotw" value="dotw">Dotw</option>
+                            <option label="Restel" value="restel">Restel</option>
+                            <option label="Hotelbeds" value="hotelbeds">Hotelbeds</option>
+                            <option label="visa" value="visa">visa</option>
+                            <option label="Whitesands" value="whitesands">Whitesands</option>
+                            <option label="Miki" value="miki">Miki</option>
+                            <option label="Travco" value="travco">Travco</option>
+                            <option label="Contracted Transfer" value="localtransfer">Contracted Transfer</option>
+                            <option label="Contracted Sightseeing" value="localsightseeing">Contracted Sightseeing
+                            </option>
+                            <option label="expedia" value="expedia">expedia</option>
+                            <option label="expediapackage" value="expediapackage">expediapackage</option>
+                            <option label="Groups" value="group">Groups</option>
+                            <option label="Misc" value="misc">Misc</option>
+                            <option label="Hotelbeds Sightseeing (TEST)" value="hbsight">Hotelbeds Sightseeing
+                                (TEST)</option>
+                            <option label="Redapple Travel" value="redapple">Redapple Travel</option>
+                            <option label="Dhisco" value="dhisco_rotana">Dhisco</option>
+                            <option label="Agoda" value="agoda">Agoda</option>
+                            <option label="Contracted Flight" value="localflight">Contracted Flight</option>
+                            <option label="Contracted Hotels" value="localsystem">Contracted Hotels</option>
+                            <option label="Minal_Qtech_Test" value="Package Supplier">Minal_Qtech_Test</option>
+                            <option label="Snehal Testing" value="Snehal">Snehal Testing</option>
+                            <option label="Amadeus Flight" value="amadeus">Amadeus Flight</option>
+                            <option label="Sabre Flight" value="sabre">Sabre Flight</option>
+                            <option label="Hotelbeds Transfer" value="hotelbedstransfer">Hotelbeds Transfer</option>
+                            <option label="tboholidays" value="tboholidays">tboholidays</option>
+                            <option label="Mystifly" value="mystifly">Mystifly</option>
+
+                        </select>
+
                     </div>
                 </div>
+                <div class="row mt-2">
+                    <div class="col-md-3 form-group">
+                        <label>Branch</label>
+                        <select name="sel_branch[]" id="sel_branch"
+                            class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"
+                            multiple="" data-live-search="true" onchange="getAgentDetailsList()"
+                            data-actions-box="true">
+                            <option label="Mumbai Branch" value="1">Mumbai Branch</option>
+                            <option label="UAE Branch" value="2">UAE Branch</option>
+                            <option label="UK Head Office" value="3">UK Head Office</option>
+                            <option label="Head Office" value="4">Head Office</option>
+                            <option label="Dubai GSA" value="5">Dubai GSA</option>
+                            <option label="London Branch" value="6">London Branch</option>
+                            <option label="Saudi Branch" value="7">Saudi Branch</option>
+                            <option label="Dubai V3 Wh" value="8">Dubai V3 Wh</option>
+                            <option label="Pune Branch" value="9">Pune Branch</option>
+                            <option label="India - GSA" value="10">India - GSA</option>
+                            <option label="Test Branch1" value="11">Test Branch1</option>
+                            <option label="Test Branch" value="13">Test Branch</option>
+                            <option label="Testffff" value="14">Testffff</option>
+                            <option label="FRANCHISE BRANCH" value="15">FRANCHISE BRANCH</option>
+                            <option label="Jcholidays" value="16">Jcholidays</option>
+                            <option label="Demo" value="17">Demo</option>
+                            <option label="malaysia" value="19">malaysia</option>
+                            <option label="GSA Iraq" value="20">GSA Iraq</option>
+                            <option label="Chennai" value="21">Chennai</option>
+                            <option label="Bangkok Branch" value="22">Bangkok Branch</option>
+                            <option label="suhas_branch" value="23">suhas_branch</option>
+                            <option label="Istanbul" value="24">Istanbul</option>
+                            <option label="hyderabad" value="25">hyderabad</option>
+                            <option label="hyderabad_suhas" value="26">hyderabad_suhas</option>
+                            <option label="branch_suhas" value="27">branch_suhas</option>
+                            <option label="New Joint Branch" value="28">New Joint Branch</option>
+                            <option label="Bahrain Branch" value="29">Bahrain Branch</option>
+                            <option label="Branch Bahrain" value="30">Branch Bahrain</option>
+                            <option label="testdddd" value="31">testdddd</option>
+                            <option label="Demo" value="32">Demo</option>
+                            <option label="HotelConfirm" value="33">HotelConfirm</option>
+                            <option label="HotelConfirm_Live" value="34">HotelConfirm_Live</option>
+                            <option label="GSA Branch" value="37">GSA Branch</option>
+                            <option label="Testpp" value="38">Testpp</option>
+                            <option label="Bolton Branch" value="41">Bolton Branch</option>
+                            <option label="World Avenue" value="42">World Avenue</option>
+                            <option label="TEST_BRANCH_A" value="43">TEST_BRANCH_A</option>
+                            <option label="TEST_BRANCH_JV_A" value="44">TEST_BRANCH_JV_A</option>
+                            <option label="TEST_BRANCH_JV_C" value="45">TEST_BRANCH_JV_C</option>
+                            <option label="world_avenue_malesia" value="46">world_avenue_malesia</option>
+                            <option label="World Avenues Malaysia" value="47">World Avenues Malaysia</option>
+                            <option label="test_branch_jv" value="48">test_branch_jv</option>
+                            <option label="1 Booking" value="49">1 Booking</option>
 
-                <div class="row mt-3">
-                    <div class="form-group col-md-12">
-                    <a href="ToolsMappingCountriesAutoShow.html" class="btn btn-dark btn-sm" type="button" onclick="mapping_report('show')"
-                            value="Show Report">
-                            <i class="fa fa-eye"></i>&nbsp;Show
-                    </a>&nbsp;&nbsp;
+                        </select>
 
-                        <button class="btn btn-dark btn-sm" type="button" onclick="mapping_report('download')"
-                            value="Download Report" id="download_report" style="display: none;">
-                            <i class="fa fa-download"></i>&nbsp;Download Report
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Agent</label>
+                        <select name="sel_agent[]" id="sel_agent"
+                            class="selectpicker show-menu-arrow form-control form-control-sm bs-select-hidden"
+                            multiple="" data-live-search="true" data-actions-box="true">
+                        </select>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 form-group phps_row_0">
+                        <label>Description</label>
+                        <textarea id="summernote" class="form-control form-control-sm"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+
+                    <div class="col-md-2 form-group">
+                        <button type="button" name="add" id="button" value="Add" class="btn btn-dark btn-sm form-group"
+                            onclick="add_preset_text()">
+
+                            <i class="fa fa-pencil"></i>
+                            &nbsp;Submit
+
                         </button>
-
                     </div>
                 </div>
+
             </div>
-
         </form>
-
+    
 
 
         <!-- End -->
@@ -1095,6 +1204,22 @@
 
 
     </div>
+    <script>
+        $('#summernote').summernote({
+            height: 180,
+            width: 1460,
+
+            toolbar: [
+                ['view', ['undo', 'redo']],
+                ['font', ['fontname', 'fontsize', 'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
+                ['color', ['color', 'backcolor']],
+                ['para', ['ul', 'ol', 'paragraph', 'style', 'height']],
+                ['insert', ['link', 'picture', 'video', 'table', '  hr',]],
+                ['view', ['fullscreen', 'codeview', 'help']]
+
+            ],
+        });
+    </script>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -1102,48 +1227,5 @@
 <script src="dist/js/bootstrap-select.js"></script>
 
 
-<script type="text/javascript">
-
-  function mapping_report(type)
-  {
-      if($("#supplier").val()==""){
-       showWarAlert("Select supplier",'supplier',document.forms['supplier_form'],'selectpicker');
-       return false;
-      }
-      if($("#country_code").val()==""){
-       showWarAlert("Select Country");
-       return false;
-      }
-      var url = "country_supplier_mapping.php";
-      var form = $("#supplier_form");
-      $("#result").html();
-      if(type=="download"){
-             $("#action").val("download_mapping_report");
-             var serializedForm = form.serialize();   		
-          location.href=url+"?"+serializedForm;
-          return false;
-      }else if(type=="show"){
-          document.getElementById('loading').style.display = 'block';	
-             $("#action").val("show_mapping_report");
-             $("#result").html("");	
-             var serializedForm = form.serialize();
-             $("#result").html();
-             $.post(url, serializedForm, function(data)
-          {
-            $("#result").html(data);	
-            document.getElementById('loading').style.display = 'none';		
-          });   		
-      }
-  }
-  function hide_report(value){
-      if(value==''){
-          $('#download_report').hide();
-          }
-      else{
-          $('#download_report').show();
-          }
-  }
-  
-  </script>
 
 </html>
