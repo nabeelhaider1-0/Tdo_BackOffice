@@ -304,7 +304,9 @@ text-decoration: underline !important;
 .table.dataTable span.label {
   text-transform: capitalize;
 }
-
+.fnt-colr h5 {
+  display: inline-block;
+}
 .td_label {
   display: inline-block;
   padding: 5px;
