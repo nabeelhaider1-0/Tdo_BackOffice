@@ -300,7 +300,25 @@ text-decoration: underline !important;
   padding: 1px 5px;
   line-height: 11px;
 }
+#magnifier{
 
+position: relative;
+
+right: 30px;
+top: 27px;
+
+
+}
+#magnifiers
+{
+
+  position: relative;
+  
+  right: 62px;
+  top: 27px;
+  
+  
+  }
 .table.dataTable span.label {
   text-transform: capitalize;
 }
