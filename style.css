@@ -2,7 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+:root {
+  --color-primary: #0B4C84;
+  --color-secondary: #598EC2;
+}
 
 header,.form-group label,#firstNav,textarea{
   font-family: "MONTSERRAT";
@@ -60,7 +63,7 @@ body{
  
 }
 form{
-  background: white!important;
+  background: var(--color-secondary)!important;
   padding-left: 13px;
   padding-top: 6px;
   padding-bottom:25px;
@@ -90,13 +93,13 @@ form{
 }
 
 #secondNav {
-  background-color: #337AB7;
+  background-color: var(--color-primary);
   height: 39px;
 }
 
 #drip {
   float: left;
-  background-color: #337AB7;
+  background-color:var(--color-primary);
   border-right: 1px solid #ddd;
 }
 
@@ -338,6 +341,7 @@ top: 27px;
   margin-top: 15px;
 }
 .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+  color: #fff;
   font-size: 12px;
 }
 .label-success {
@@ -506,7 +510,11 @@ top: 27px;
   margin-right: -5px;
   cursor: pointer;
 }
-
+.form-control 
+{
+background-color:var(--color-primary) !important;
+color: #fff !important;
+}
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child) {
@@ -620,7 +628,7 @@ input[type="file"] {
 .form-group label{
 font-size: 11px;
 font-weight: 600;
-color: #4e4b4b;
+color: #fff;
 margin-bottom: 6px;
 }
 textarea[readonly] {
@@ -655,7 +663,7 @@ color:#6a6c6f !important;
   font-size: 12px;
 }
 .form-group h5,h6{
-  color: #6a6c6f !important;
+  color: #fff !important;
   font-weight: 400;
 }
 label h5{
@@ -668,8 +676,8 @@ label h5{
 }
 
 .btn-dark {
-  background-color: #34495e !important;
-  border-color: #34495e !important;
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
   color: #FFFFFF;
   font-size: 12px!important;
 }
@@ -725,9 +733,10 @@ textarea.required{
   padding-bottom: 5px;
 }
 
+
 .form-control:focus {
   color: #212529;
-  background-color: beige!important;
+  background-color:var(--color-secondary)!important;
   outline: 0;
   box-shadow:none!important;
   border-color: #d5d5d5!important;
