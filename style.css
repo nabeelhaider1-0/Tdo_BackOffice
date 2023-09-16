@@ -5,6 +5,8 @@
 :root {
   --color-primary: #0B4C84;
   --color-secondary: #598EC2;
+  --color-alert: #7e99a6;
+  --color-white: #fff;
 }
 
 header,.form-group label,#firstNav,textarea{
@@ -29,6 +31,7 @@ body{
   overflow-x: hidden; /* Hide horizontal scrollbar */
   background-color: rgb(237,240,245)!important;
 }
+
 .color-line {
   background: #f7f9fa;
   height: 6px;
@@ -253,15 +256,38 @@ header {
   background-color: #edf0f5!important;
 }
 
+element.style {
+  padding-right: 30px;
+}
+.form-control-sm {
+  min-height: 0 !important; }
+
 .cancelNot1 {
-  background: #FFA0A0;
+  background: var(--color-alert);
   padding: 10px;
 }
+.active>.page-link, .page-link.active {
+
+background-color: var(--color-primary) !important;
 
 
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff !important;
+}
 
 thead {
-  background-color: #337AB7;
+  background-color:var(--color-primary);
   font-size: 11px;
   color: #f9f9f9;
 }
@@ -578,8 +604,11 @@ input[type="file"] {
   border-left: 0;
 }
 .alert-danger{
-  background-color: #f2dede;
+  background-color: var(--color-alert) !important;
+  border: var(--color-alert)!important;
+  
 }
+
 
 #tickschecks {
   display: contents;
@@ -652,12 +681,12 @@ textarea[readonly] {
 p{
   font-size: 12px;
   font-weight: 500;
-  color: #6a6c6f !important;
+  color: #fff !important;
   }
 .col-md-3{
   font-size: 12px;
   font-weight: 600;
-color:#6a6c6f !important;
+color:var(--color-white) !important;
 }
 .col-md-1,.col-md-2,.col-md-4,.col-md-5 span{
   font-size: 12px;
@@ -667,14 +696,16 @@ color:#6a6c6f !important;
   font-weight: 400;
 }
 label h5{
-  color: #6a6c6f !important;
+  color: #fff !important;
   font-weight: 400;
 }
 #heading{
   color: #6a6c6f !important;
   font-weight: 400;
 }
-
+label{
+  color: #fff;
+}
 .btn-dark {
   background-color: var(--color-primary) !important;
   border-color: var(--color-primary) !important;
@@ -690,6 +721,7 @@ label h5{
   padding-left: 5px;
   vertical-align: 4px;
   position: relative;
+  color: #fff;
  
 }
 .radio label{
@@ -702,22 +734,24 @@ label h5{
 }
 
 .btn-dark:hover {
-  background-color: #3f5872 !important;
-  border-color: #3f5872 !important;
+  background-color: #46719f !important;
+  border-color: #46719f !important;
   color: #FFFFFF;
 }
-
+.table>tbody {
+  background: #fff;
+}
 
 .form-control.required.bootstrap-select > button {
-  border-left: 2px solid red!important;
+  border-left: 2px solid yellow!important;
   border-radius: 0px 4px 4px 0px;
 }
 input.required{
-  border-left: 2px solid red!important;
+  border-left: 2px solid yellow!important;
   border-radius: 0px 4px 4px 0px;
 }
 textarea.required{
-  border-left: 2px solid red!important;
+  border-left: 2px solid yellow!important;
   border-radius: 0px 4px 4px 0px;
 }
 
@@ -988,12 +1022,12 @@ textarea.required{
 }
 
 input[type=radio]{
-  accent-color:#15a215;
+  accent-color:var(--color-primary);
   height: 16px;
   width: 20px;
 }
 input[type=checkbox]{
-  accent-color:#15a215;
+  accent-color:var(--color-primary);
   height: 16px;
   width: 20px;
 }
@@ -1050,7 +1084,7 @@ input[type=checkbox]{
 }
 
 .nav-tabs .nav-link.active {
-background-color:#337ab7 !important;
+background-color:var(--color-primary) !important;
 color: white !important;
 }
 .nav-tabs .nav-link {
@@ -1072,7 +1106,7 @@ font-family: "MONTSERRAT";
 
 }
 label a{
-color:#565759 !important;
+color:var(--color-white) !important;
 text-decoration: none
 }
 
