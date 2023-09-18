@@ -714,12 +714,21 @@ label h5{
 
 background: var(--color-secondary);
 }
-.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-  background: var(--color-secondary);
-}
+
 header span {
   color: var(--color-text);
 }
+header span a{
+  color: var(--color-text) !important;
+}
+label{
+  color: var(--color-text);
+}
+
+.input-group-addon:last-child {
+background-color: var(--color-secondary);
+}
+
 .fa-house-chimney{
 color: var(--color-text);
 }

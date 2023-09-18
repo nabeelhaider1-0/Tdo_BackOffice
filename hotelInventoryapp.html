@@ -163,10 +163,7 @@
                 </div>
                 <div class=" form-group col-md-8 mt-2">
                     <style>
-                        
-
-                    
-                        .radio-inline{
+                        .radio-inline {
                             display: inline-block;
                             padding-left: 20px;
                             margin-bottom: 0;
@@ -176,11 +173,11 @@
                         }
                     </style>
 
-           
-                  
-               
-                   
-                   
+
+
+
+
+
 
 
                     <div class="radio radio-success radio-inline">
@@ -203,11 +200,11 @@
                         <input type="radio" name="rrAdd" value="yes" id="fit">
                         <label for="rrAddYes">FIT Package Supplier</label>
                     </div>
-                  
+
 
 
                 </div>
-             
+
             </div>
 
 
@@ -457,20 +454,61 @@
 
         <div class="row marginbottomnew mt-3 mb-2">
             <div class="col-md-3">
-            <ul class="breadcrumb">
-                <li class="active"><a href="hotelInventoryapp.html">Rates</a></li>
-                <li><a href="hotelInventoryappAllocation.html">Allocation</a></li>
-                <li><a href="hotelInventorySellPolicy.html">Sell Policy</a></li>
-            </ul>
+                <ul class="breadcrumb">
+                    <li class="active"><a href="hotelInventoryapp.html">Rates</a></li>
+                    <li><a href="hotelInventoryappAllocation.html">Allocation</a></li>
+                    <li><a href="hotelInventorySellPolicy.html">Sell Policy</a></li>
+                </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
+                
             </div>
-            <div class="col-md-3"> 
-            Hiiii
+            <div class="col-md-2">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    style="margin-top: -8px;">
+                    Upload Rates
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Upload Rates</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <label>Upload CSV / Excel File:</label>
+                                <input type="file" id="fileInput" multiple style="display: none;">
+                                <button id="uploadButton">Choose File</button>
+                                <ul id="selectedFileList"></ul>
+
+                                                                  
+                          
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-dark">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- <span class="input-group-addon fa fa-upload myInputFile" aria-hidden="true" style="
-"><input type="file" name="file_image[]" size="40" onchange="javascript:ShowImage(this, 'optional_img_2')"></span> -->
+        <style>
+            .fa-upload{
+                margin-left: 23px;
+            }
+            .input-group-addon {
+
+    padding: 8px !important;
+    width: 30px !important;
+            }
+        </style>
+
         <!-- First Row-->
         <form style="border-top: 2px solid #62cb31;    margin-top: -19px;      padding-top: 12px;">
             <div class="panel-body form-group">
@@ -882,30 +920,57 @@
             window.location.href = "addtransferrates.html";
         }
     });
-       // Get a reference to the checkbox element
-       const redirectvisa = document.getElementById("visa");
+    // Get a reference to the checkbox element
+    const redirectvisa = document.getElementById("visa");
 
-// Add an event listener to the checkbox
-redirectvisa.addEventListener("change", function () {
-    // Check if the checkbox is checked
-    if (redirectvisa.checked) {
-        // Redirect to the desired page
-        window.location.href = "VisaVisaRatesAddSupplierVisaRates .html";
-    }
-});
- // Get a reference to the checkbox element
- const redirectfit = document.getElementById("fit");
+    // Add an event listener to the checkbox
+    redirectvisa.addEventListener("change", function () {
+        // Check if the checkbox is checked
+        if (redirectvisa.checked) {
+            // Redirect to the desired page
+            window.location.href = "VisaVisaRatesAddSupplierVisaRates .html";
+        }
+    });
+    // Get a reference to the checkbox element
+    const redirectfit = document.getElementById("fit");
 
-// Add an event listener to the checkbox
-redirectfit.addEventListener("change", function () {
-    // Check if the checkbox is checked
-    if (redirectfit.checked) {
-        // Redirect to the desired page
-        window.location.href = "MastersPackageAdd.html";
-    }
-});
+    // Add an event listener to the checkbox
+    redirectfit.addEventListener("change", function () {
+        // Check if the checkbox is checked
+        if (redirectfit.checked) {
+            // Redirect to the desired page
+            window.location.href = "MastersPackageAdd.html";
+        }
+    });
 </script>
+<script>
+    $(document).ready(function() {
+      $('.custom-file-input').on('change', function() {
+        var fileName = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').html(fileName);
+      });
+    });
+  </script>
+  <script>
+    document.getElementById("uploadButton").addEventListener("click", function() {
+      document.getElementById("fileInput").click();
+    });
 
+    document.getElementById("fileInput").addEventListener("change", function() {
+      const selectedFiles = this.files;
+      const fileCount = selectedFiles.length;
+      const fileNames = [];
 
+      if (fileCount > 0) {
+        for (let i = 0; i < fileCount; i++) {
+          fileNames.push(selectedFiles[i].name);
+        }
+        document.getElementById("selectedFileList").innerHTML = `<li>Selected Files: ${fileNames.join(', ')}</li>`;
+      } else {
+        document.getElementById("selectedFileList").innerHTML = "<li>No files selected</li>";
+      }
+    });
+  </script>
+      
 </html>
 MastersPackageAdd.html
