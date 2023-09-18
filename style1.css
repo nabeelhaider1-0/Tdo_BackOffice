@@ -2,10 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-:root {
-  --color-primary: #0B4C84;
-  --color-secondary: #598EC2;
-}
+
 
 header,.form-group label,#firstNav,textarea{
   font-family: "MONTSERRAT";

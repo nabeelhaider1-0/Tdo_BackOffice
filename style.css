@@ -2,12 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
-  --color-primary: #0B4C84;
-  --color-secondary: #598EC2;
-
+  --color-primary: #4ac8df ;
+  --color-secondary: linear-gradient(to right,#094282,#00b4d8 70%);
+  --color-text: #fff;
+  --color-button: #64CCC5;
 }
-
 header,.form-group label,#firstNav,textarea{
   font-family: "MONTSERRAT";
 }
@@ -28,7 +29,7 @@ body{
   margin: 0px !important;
   padding:0px !important;
   overflow-x: hidden; /* Hide horizontal scrollbar */
-  background-color: rgb(237,240,245)!important;
+  background: var(--color-secondary) !important;
 }
 .color-line {
   background: #f7f9fa;
@@ -64,7 +65,7 @@ body{
  
 }
 form{
-  background: white!important;
+  background-color: var(--color-primary) !important;
   padding-left: 13px;
   padding-top: 6px;
   padding-bottom:25px;
@@ -90,17 +91,19 @@ form{
   margin-right: 70px;
 }
 #firstNav{
-  background-color: rgb(255,255,255)!important;
+  background: var(--color-secondary) !important;
 }
-
+.nav-link {
+  color: var(--color-text) !important;
+}
 #secondNav {
-  background-color: #337AB7;
+  background-color: var(--color-primary);
   height: 39px;
 }
 
 #drip {
   float: left;
-  background-color: #337AB7;
+  background-color: var(--color-primary);
   border-right: 1px solid #ddd;
 }
 
@@ -246,12 +249,13 @@ form{
 
 header {
 
-  color:#6a6c6f;
+  background: var(--color-secondary) !important;
+  color: var(--color-text);
   font-weight: 400;
   padding: 10px 4px 4px;
   transition: all .3s;
   border: 1px solid transparent;
-  background-color: #edf0f5!important;
+
 }
 
 .cancelNot1 {
@@ -484,9 +488,11 @@ top: 27px;
 .input-group-addon a {
   color: #555;
 }
-
+.fa{
+  color: var(--color-text);
+}
 .fa:hover {
-  color: #555 !important;
+  color: var(--color-text);
 }
 .panel-body-essen {
   border: #e3e3e3 solid 1px;
@@ -503,7 +509,8 @@ top: 27px;
   text-align: center;
   text-shadow: 0 1px 0 #fff;
   vertical-align: middle;
-  background-color: #eee;
+  color: var(--color-text);
+  background: var(--color-secondary);
   border: solid #ccc;
   border-width: 1px 0;
   margin-left: -5px;
@@ -624,7 +631,7 @@ input[type="file"] {
 .form-group label{
 font-size: 11px;
 font-weight: 600;
-color: #4e4b4b;
+color: var(--color-text);
 margin-bottom: 6px;
 }
 textarea[readonly] {
@@ -648,7 +655,7 @@ textarea[readonly] {
 p{
   font-size: 12px;
   font-weight: 500;
-  color: #6a6c6f !important;
+  color: var(--color-text) !important;
   }
 .col-md-3{
   font-size: 12px;
@@ -659,22 +666,28 @@ color:#6a6c6f !important;
   font-size: 12px;
 }
 .form-group h5,h6{
-  color: #6a6c6f !important;
+ color: var(--color-text);
   font-weight: 400;
+}
+h5{
+  color: var(--color-text);
 }
 label h5{
-  color: #6a6c6f !important;
+  color: var(--color-text);
   font-weight: 400;
 }
-#heading{
-  color: #6a6c6f !important;
+#heading {
+  color: var(--color-text) !important;
   font-weight: 400;
 }
 
 .btn-dark {
-  background-color: #34495e !important;
+
+    background: var(--color-secondary) !important;
+    border: 1px solid var(--color-text) !important;
+
   border-color: #34495e !important;
-  color: #FFFFFF;
+
   font-size: 12px!important;
 }
 
@@ -695,14 +708,30 @@ label h5{
 }
 .card{
   border-radius: 0!important;
+  background-color: var(--color-primary) !important;
+}
+.input-daterange span.input-group-addon, .input-group span.input-group-addon {
+
+background: var(--color-secondary);
 }
 
 .btn-dark:hover {
-  background-color: #3f5872 !important;
-  border-color: #3f5872 !important;
+  background: var(--color-primary) !important;
+  border: 1px solid var(--color-text) !important;
   color: #FFFFFF;
 }
-
+.table.dataTable .input-group-addon, .modalForm .input-group-addon {
+  background: var(--color-secondary);
+} 
+.input-group-addon a {
+  color: var(--color-text);
+}
+.fa.fa-pencil-square-o {
+  color: var(--color-text) !important;
+  } 
+  .form-control-sm {
+    min-height: calc(0px) !important;
+ }
 
 .form-control.required.bootstrap-select > button {
   border-left: 2px solid red!important;
