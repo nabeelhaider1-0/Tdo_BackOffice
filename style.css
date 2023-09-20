@@ -774,7 +774,9 @@ textarea.required{
 .btn-group{
   padding-bottom: 5px;
 }
-
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+color: var(--color-text);
+}
 .form-control:focus {
   color: #212529;
   background-color: beige!important;
