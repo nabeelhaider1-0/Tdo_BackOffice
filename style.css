@@ -426,7 +426,7 @@ top: 27px;
 }
 
 .input-group-addon {
-  background: #f7f8fa;
+  /* background: #f7f8fa; */
   /* border-color: #e4e5e7 !important; */
 }
 
@@ -884,6 +884,18 @@ color: var(--color-text);
   text-align: center;
   font-weight: bold;
 }
+.dd-item > button:before {
+  content: '+';
+  display: block;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-indent: 0;
+}
+.dd-item > button[data-action="collapse"]:before {
+  content: '-';
+}
+
 .radioline {
   display: contents;
 }

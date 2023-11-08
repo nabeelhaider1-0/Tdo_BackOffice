@@ -4029,5 +4029,33 @@
     }
 
     </script>
+ <script>
 
+
+    // Function to toggle expand and collapse
+    function toggleExpandCollapse(button) {
+        var listItem = button.parentNode;
+        var list = listItem.querySelector(".dd-list");
+
+        if (listItem.classList.contains("dd-collapsed")) {
+            list.style.display = "block";
+            listItem.classList.remove("dd-collapsed");
+            button.setAttribute("data-action", "collapse");
+            button.textContent = "-";
+        } else {
+            list.style.display = "none";
+            listItem.classList.add("dd-collapsed");
+            button.setAttribute("data-action", "expand");
+            button.textContent = "+";
+        }
+    }
+    
+    // Add click event listeners to all buttons
+    var buttons = document.querySelectorAll("button[data-action]");
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            toggleExpandCollapse(this);
+        });
+    });
+</script>
 </html>
