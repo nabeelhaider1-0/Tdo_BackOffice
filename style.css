@@ -4,11 +4,142 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --color-primary: #4ac8df ;
-  --color-secondary: linear-gradient(to right,#094282,#00b4d8 70%);
-  --color-text: #fff;
-  --color-button: #64CCC5;
+  --color-primary: #edf0f5;
+  --color-secondary: #337ab7;
+  --color-text: #6a6c6f;
+  --color-button: #34495e; 
+  --color-buttonHover: #3f5872; 
+  --color-top:#ffffff;
+  --color-white:#ffffff;
 }
+body{
+  margin: 0px !important;
+  padding:0px !important;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  background: var(--color-primary) !important;
+}
+.btn-dark {
+
+  background: var(--color-button) !important;
+  border: 1px solid var(--color-button) !important;
+
+border-color: var(--color-button) !important;
+
+font-size: 12px!important;
+}
+.btn-dark:hover {
+  background-color: var(--color-buttonHover) !important;
+  border-color: var(--color-buttonHover) !important;
+  color: var(--color-white);
+}
+header {
+
+  background: var(--color-primary) !important;
+  color: var(--color-text);
+  font-weight: 400;
+  padding: 10px 4px 4px;
+  transition: all .3s;
+  border: 1px solid transparent;
+
+}
+form{
+  background-color: var(--color-white) !important;
+  padding-left: 13px;
+  padding-top: 6px;
+  padding-bottom:25px;
+  padding-right: 30px;
+}
+#firstNav{
+  background: var(--color-top) !important;
+}
+.nav-link {
+  color: var(--color-text) !important;
+}
+#secondNav {
+  background-color: var(--color-secondary);
+  height: 39px;
+}
+
+#drip {
+  float: left;
+  background-color: var(--color-secondary);
+  border-right: 1px solid #ddd;
+}
+.fa{
+  color: var(--color-white);
+}
+.actionCont i:hover {
+  color: var(--color-button) !important;
+}
+.fa:hover {
+  color: var(--color-white);
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  color: var(--color-white);
+  }
+  .card{
+    border-radius: 0!important;
+    background-color: var(--color-primary) !important;
+  }
+  .input-daterange span.input-group-addon, .input-group span.input-group-addon {
+  
+  background: var(--color-button);
+  }
+
+  .actionCont i{
+    color: var(--color-button);
+  }
+i
+  .srchWithinPg{
+    color: var(--color-button);
+  }
+  .srchWithinPg:hover{
+    color: var(--color-button);
+  }
+ 
+  .actionCont sub{
+    color: var(--color-button);
+  }
+  .actionCont sub:hover{
+    color: var(--color-button) !important;
+  }
+  
+  header span {
+    color: var(--color-text);
+  }
+  header span a{
+    color: var(--color-text) !important;
+  }
+  label{
+    color: var(--color-text);
+  }
+  
+  .input-group-addon:last-child {
+  background-color: var(--color-secondary);
+  }
+  
+  .fa-house-chimney{
+  color: var(--color-text);
+  }
+  
+  .table.dataTable .input-group-addon, .modalForm .input-group-addon {
+    background: var(--color-secondary);
+  } 
+  .input-group-addon span .fa {
+    color: var(--color-button);
+  }
+  .input-group-addon a .fa {
+    color: var(--color-button);
+  }
+ 
+  .fa.fa-pencil-square-o {
+    color: var(--color-button) !important;
+    } 
+    .form-control-sm {
+      min-height: calc(0px) !important;
+   }
+
 header,.form-group label,#firstNav,textarea{
   font-family: "MONTSERRAT";
 }
@@ -25,12 +156,7 @@ p{
 ::placeholder{
   font-size: 12px;
 }
-body{
-  margin: 0px !important;
-  padding:0px !important;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  background: var(--color-secondary) !important;
-}
+
 .color-line {
   background: #f7f9fa;
   height: 6px;
@@ -64,13 +190,7 @@ body{
   padding: 0px 15px 50px 15px!important;
  
 }
-form{
-  background-color: var(--color-primary) !important;
-  padding-left: 13px;
-  padding-top: 6px;
-  padding-bottom:25px;
-  padding-right: 30px;
-}
+
 
 .navbar {
   --bs-navbar-padding-y: -0.5rem !important;
@@ -89,22 +209,6 @@ form{
 
 .navbar-collapse {
   margin-right: 70px;
-}
-#firstNav{
-  background: var(--color-secondary) !important;
-}
-.nav-link {
-  color: var(--color-text) !important;
-}
-#secondNav {
-  background-color: var(--color-primary);
-  height: 39px;
-}
-
-#drip {
-  float: left;
-  background-color: var(--color-primary);
-  border-right: 1px solid #ddd;
 }
 
 
@@ -247,16 +351,7 @@ form{
 }
 
 
-header {
 
-  background: var(--color-secondary) !important;
-  color: var(--color-text);
-  font-weight: 400;
-  padding: 10px 4px 4px;
-  transition: all .3s;
-  border: 1px solid transparent;
-
-}
 
 .cancelNot1 {
   background: #FFA0A0;
@@ -488,12 +583,7 @@ top: 27px;
 .input-group-addon a {
   color: #555;
 }
-.fa{
-  color: var(--color-text);
-}
-.fa:hover {
-  color: var(--color-text);
-}
+
 .panel-body-essen {
   border: #e3e3e3 solid 1px;
   padding: 5px 15px 10px 15px;
@@ -681,15 +771,7 @@ label h5{
   font-weight: 400;
 }
 
-.btn-dark {
 
-    background: var(--color-secondary) !important;
-    border: 1px solid var(--color-text) !important;
-
-  border-color: #34495e !important;
-
-  font-size: 12px!important;
-}
 
 .bootstrap-select.form-control-sm .dropdown-toggle {
   background:transparent;
@@ -706,49 +788,7 @@ label h5{
   vertical-align: 4px;
   position: relative;
 }
-.card{
-  border-radius: 0!important;
-  background-color: var(--color-primary) !important;
-}
-.input-daterange span.input-group-addon, .input-group span.input-group-addon {
 
-background: var(--color-secondary);
-}
-
-header span {
-  color: var(--color-text);
-}
-header span a{
-  color: var(--color-text) !important;
-}
-label{
-  color: var(--color-text);
-}
-
-.input-group-addon:last-child {
-background-color: var(--color-secondary);
-}
-
-.fa-house-chimney{
-color: var(--color-text);
-}
-.btn-dark:hover {
-  background: var(--color-primary) !important;
-  border: 1px solid var(--color-text) !important;
-  color: #FFFFFF;
-}
-.table.dataTable .input-group-addon, .modalForm .input-group-addon {
-  background: var(--color-secondary);
-} 
-.input-group-addon a {
-  color: var(--color-text);
-}
-.fa.fa-pencil-square-o {
-  color: var(--color-text) !important;
-  } 
-  .form-control-sm {
-    min-height: calc(0px) !important;
- }
 
 .form-control.required.bootstrap-select > button {
   border-left: 2px solid red!important;
@@ -774,9 +814,7 @@ textarea.required{
 .btn-group{
   padding-bottom: 5px;
 }
-.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-color: var(--color-text);
-}
+
 .form-control:focus {
   color: #212529;
   background-color: beige!important;
