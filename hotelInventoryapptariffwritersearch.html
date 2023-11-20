@@ -561,19 +561,15 @@
 .btn-group, .btn-group-vertical {
     position: relative;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: middle !important;
 }
 .btn-group > .btn:first-child {
     margin: 0 0px 0 0px;
 }
 
-.btn-group > .btn:first-child {
-    margin-left: 0;
-}
 .btn-group .btn {
     border: 1px solid #e4e5e7;
     padding: 7px 13px 7px 13px;
-    margin-right: 0;
 }
 .btn-group > .btn, .btn-group-vertical > .btn {
     position: relative;
@@ -581,11 +577,48 @@
 }
 .btn-default {
     background-color: #fff;
-    border-color: #e4e5e7;
+    /* border-color: #e4e5e7; */
     color: #6a6c6f;
 }
 .btn {
     border-radius: 3px;
+}
+.stats h4, h5, h6 {
+    margin: 5px 0;
+}
+
+h6, .h6 {
+    font-size: 12px;
+}
+.table label, .table {
+    font-family: "MONTSERRAT";
+    font-size: 11px!important;
+}
+.table-box {
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+    margin: 0px;
+    float: left;
+}
+.table-responsive {
+    width: 100%;
+}
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+.table-bordered {
+    border: 1px solid #ddd;
+}
+.bg-primary {
+    color: #fff;
+    background-color: #3f5872 !important;
+}
+.table > tbody > tr > td {
+    font-size: 9pt!important;
+    vertical-align: middle;
+    font-family: "Arial";
+    padding: 8px;
 }
     </style>
 
