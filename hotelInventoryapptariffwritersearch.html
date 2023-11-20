@@ -457,6 +457,136 @@
             border-radius: 3px;
             border: #4ea5e0 solid 1px;
         }
+        .tab_details {
+    border-top: 2px solid #34495e;
+    padding: 20px 10px 5px 10px;
+    border-left: 2px solid #d1d1d1;
+    border-right: 2px solid #d1d1d1;
+    background-color: #fff;
+    border-bottom: 2px solid #d1d1d1;
+}
+.panel-group {
+    margin-bottom: 20px;
+}
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+.tab_details .panel-group .panel-heading {
+    background-color: rgba(216, 211, 211, 0.59);
+    border: 1px solid #ccc;
+}
+.panel-heading {
+    padding: 14px 15px;
+    /* border-bottom: 1px solid transparent; */
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.panel-collapse .panel-body {
+    border: none;
+}
+
+.hpanel .panel-body {
+    background: #fff;
+    /* border: 1px solid #e9eaeb; */
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+}
+.tab_details .panel-title > a:hover, .tab_details .panel-title > a:active, .tab_details .panel-title > a:focus {
+    text-decoration: none;
+}
+.tab_details .panel-title > a {
+    color: #4D4C4C;
+    font-size: 13px;
+    font-family: "Montserrat";
+    text-decoration: none;
+    cursor: pointer;
+}
+.panel-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    /* font-size: 16px; */
+    color: inherit;
+}
+.tab_details .panel-title > a.collapsed:before {
+    float: left !important;
+    content: "\f0fe";
+}
+.tab_details .panel-title > a:before {
+    float: left !important;
+    font-family: FontAwesome;
+    content: "\f146";
+    padding-right: 8px;
+    color: #337ab7;
+}
+.panel-collapse .panel-body {
+    border: none;
+}
+
+.hpanel .panel-body {
+    background: #fff;
+    /* border: 1px solid #e9eaeb; */
+    border-radius: 2px;
+    padding: 20px;
+    position: relative;
+}
+@media (min-width: 1280px){
+.table-responsive {
+    overflow-x: inherit;
+}
+}
+.table-responsive {
+    width: 100%;
+}
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+.margin15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0px;
+}
+.btn-group, .btn-group-vertical {
+    padding-bottom: 1px;
+}
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn-group > .btn:first-child {
+    margin: 0 0px 0 0px;
+}
+
+.btn-group > .btn:first-child {
+    margin-left: 0;
+}
+.btn-group .btn {
+    border: 1px solid #e4e5e7;
+    padding: 7px 13px 7px 13px;
+    margin-right: 0;
+}
+.btn-group > .btn, .btn-group-vertical > .btn {
+    position: relative;
+    float: left;
+}
+.btn-default {
+    background-color: #fff;
+    border-color: #e4e5e7;
+    color: #6a6c6f;
+}
+.btn {
+    border-radius: 3px;
+}
     </style>
 
     <!--    Panel Body        -->
@@ -1364,7 +1494,7 @@
                 <div class="row">
                     <div class=" col-md-1 col-sm-4">
                         <label></label><br>
-                        <a class="btn btn-sm btn-primary" href="hotelInventoryapptariffwritersearch.html"><b>Search</b></a>
+                        <a class="btn btn-sm btn-primary" ng-click="searchTariff();"><b>Search</b></a>
                     </div>
                 </div>
             </div>
@@ -1373,6 +1503,592 @@
 
 
         </form>
+
+<br>
+<form>
+    <div class="tab_details" ng-show="tariffDetails">
+        <div class="panel-group" id="accordion_rate" role="tablist" aria-multiselectable="true" ng-show="tariffDetails.rate">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="heading_rate">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_rate" data-target="#collapse_rate" aria-expanded="false" aria-controls="collapse_rate">
+                            Rate
+                        </a>
+                    </h4>
+                </div>
+            </div>
+            <div id="collapse_rate" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_rate" aria-expanded="false" style="height: 0px;">
+                <div class="panel-body" ng-show="tariffDetails.rate">
+                    <div class="table-responsive">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="row view-pager">
+                                <div class="col-md-4 margin15">
+                                    <div class="dt-buttons btn-group">
+                                        <button class="btn btn-default" ng-click="downloadSearchData('tariff_rate')">
+                                            <span><h6><i class="fa fa-download"></i> Download Report</h6></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 ng-hide" ng-show="totalItems.tariff_rate > viewPage">
+                                    <ul class="pagination-sm pagination ng-isolate-scope ng-empty ng-valid ng-hide" uib-pagination="" total-items="totalItems.tariff_rate" ng-model="currentPage.tariff_rate" ng-change="fetchPageChangedData('tariff_rate')" max-size="maxSize" items-per-page="itemsPerPage" boundary-links="true" num-pages="numPages" ng-show="totalItems.tariff_rate > viewPage">
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</ul>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-striped table-hover table-bordered table-responsive table-box tableborder" align="center" width="100%" cellspacing="1" cellpadding="2" border="0">
+                            <thead class="text-center tableStructure">
+                                <tr class="bg-primary subHeader text-center">
+                                    <th>Period</th>
+                                    <th>Room Category</th>
+                                    <th ng-show="showCheckinType" class="ng-hide">Rate Type</th>
+                                    <th>Room Basis</th>
+                                    <th>Adult Allowed</th>
+                                    <th>Currency</th>
+                                    <th>Room Rate</th>
+                                    <th ng-show="IsRateApplicableTax" class="ng-hide">Applicable Tax</th>
+                                    <th>Rate Profile</th>
+                                    <th>Exclude Nationality</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <!-- ngRepeat: (id, y) in tariffDetails.rate track by $index --><tr class="phps_row_1 ng-scope" ng-repeat="(id, y) in tariffDetails.rate track by $index">
+                                    <td class="ng-binding">20-11-2023 To 30-11-2023</td>
+                                    <td class="ng-binding">CLASSIC - SINGLE</td>
+                                    <td ng-show="showCheckinType" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">Half Board</td>
+                                    <td class="ng-binding">1 Adult</td>
+                                    <td class="ng-binding">INR</td>
+                                    <td class="ng-binding">100.000</td>
+                                    <td ng-show="IsRateApplicableTax" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">AFRICAN MARKET</td>
+                                    <td class="ng-binding"></td>
+                                </tr><!-- end ngRepeat: (id, y) in tariffDetails.rate track by $index --><tr class="phps_row_1 ng-scope" ng-repeat="(id, y) in tariffDetails.rate track by $index">
+                                    <td class="ng-binding">20-11-2023 To 30-11-2023</td>
+                                    <td class="ng-binding">CLASSIC - SINGLE</td>
+                                    <td ng-show="showCheckinType" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">Half Board</td>
+                                    <td class="ng-binding">1 Adult</td>
+                                    <td class="ng-binding">INR</td>
+                                    <td class="ng-binding">100.000</td>
+                                    <td ng-show="IsRateApplicableTax" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">APAC</td>
+                                    <td class="ng-binding"></td>
+                                </tr><!-- end ngRepeat: (id, y) in tariffDetails.rate track by $index --><tr class="phps_row_1 ng-scope" ng-repeat="(id, y) in tariffDetails.rate track by $index">
+                                    <td class="ng-binding">20-11-2023 To 30-11-2023</td>
+                                    <td class="ng-binding">CLASSIC - SINGLE</td>
+                                    <td ng-show="showCheckinType" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">Half Board</td>
+                                    <td class="ng-binding">1 Adult</td>
+                                    <td class="ng-binding">INR</td>
+                                    <td class="ng-binding">100.000</td>
+                                    <td ng-show="IsRateApplicableTax" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">CIS- RUSSIA MARKET</td>
+                                    <td class="ng-binding"></td>
+                                </tr><!-- end ngRepeat: (id, y) in tariffDetails.rate track by $index --><tr class="phps_row_1 ng-scope" ng-repeat="(id, y) in tariffDetails.rate track by $index">
+                                    <td class="ng-binding">20-11-2023 To 30-11-2023</td>
+                                    <td class="ng-binding">CLASSIC - SINGLE</td>
+                                    <td ng-show="showCheckinType" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">Half Board</td>
+                                    <td class="ng-binding">1 Adult</td>
+                                    <td class="ng-binding">INR</td>
+                                    <td class="ng-binding">100.000</td>
+                                    <td ng-show="IsRateApplicableTax" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">EUROPE MARKET</td>
+                                    <td class="ng-binding"></td>
+                                </tr><!-- end ngRepeat: (id, y) in tariffDetails.rate track by $index --><tr class="phps_row_1 ng-scope" ng-repeat="(id, y) in tariffDetails.rate track by $index">
+                                    <td class="ng-binding">20-11-2023 To 30-11-2023</td>
+                                    <td class="ng-binding">CLASSIC - SINGLE</td>
+                                    <td ng-show="showCheckinType" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">Half Board</td>
+                                    <td class="ng-binding">1 Adult</td>
+                                    <td class="ng-binding">INR</td>
+                                    <td class="ng-binding">100.000</td>
+                                    <td ng-show="IsRateApplicableTax" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">FAR EAST</td>
+                                    <td class="ng-binding"></td>
+                                </tr><!-- end ngRepeat: (id, y) in tariffDetails.rate track by $index --><tr class="phps_row_1 ng-scope" ng-repeat="(id, y) in tariffDetails.rate track by $index">
+                                    <td class="ng-binding">20-11-2023 To 30-11-2023</td>
+                                    <td class="ng-binding">CLASSIC - SINGLE</td>
+                                    <td ng-show="showCheckinType" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">Half Board</td>
+                                    <td class="ng-binding">1 Adult</td>
+                                    <td class="ng-binding">INR</td>
+                                    <td class="ng-binding">100.000</td>
+                                    <td ng-show="IsRateApplicableTax" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">GCC- MARKET</td>
+                                    <td class="ng-binding"></td>
+                                </tr><!-- end ngRepeat: (id, y) in tariffDetails.rate track by $index --><tr class="phps_row_1 ng-scope" ng-repeat="(id, y) in tariffDetails.rate track by $index">
+                                    <td class="ng-binding">20-11-2023 To 30-11-2023</td>
+                                    <td class="ng-binding">CLASSIC - SINGLE</td>
+                                    <td ng-show="showCheckinType" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">Half Board</td>
+                                    <td class="ng-binding">1 Adult</td>
+                                    <td class="ng-binding">INR</td>
+                                    <td class="ng-binding">100.000</td>
+                                    <td ng-show="IsRateApplicableTax" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">GCC-UAE&amp;SA</td>
+                                    <td class="ng-binding"></td>
+                                </tr><!-- end ngRepeat: (id, y) in tariffDetails.rate track by $index --><tr class="phps_row_1 ng-scope" ng-repeat="(id, y) in tariffDetails.rate track by $index">
+                                    <td class="ng-binding">20-11-2023 To 30-11-2023</td>
+                                    <td class="ng-binding">CLASSIC - SINGLE</td>
+                                    <td ng-show="showCheckinType" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">Half Board</td>
+                                    <td class="ng-binding">1 Adult</td>
+                                    <td class="ng-binding">INR</td>
+                                    <td class="ng-binding">100.000</td>
+                                    <td ng-show="IsRateApplicableTax" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">SUB-C MARKET</td>
+                                    <td class="ng-binding"></td>
+                                </tr><!-- end ngRepeat: (id, y) in tariffDetails.rate track by $index --><tr class="phps_row_1 ng-scope" ng-repeat="(id, y) in tariffDetails.rate track by $index">
+                                    <td class="ng-binding">20-11-2023 To 30-11-2023</td>
+                                    <td class="ng-binding">CLASSIC - SINGLE</td>
+                                    <td ng-show="showCheckinType" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">Half Board</td>
+                                    <td class="ng-binding">1 Adult</td>
+                                    <td class="ng-binding">INR</td>
+                                    <td class="ng-binding">100.000</td>
+                                    <td ng-show="IsRateApplicableTax" class="ng-binding ng-hide"></td>
+                                    <td class="ng-binding">USA MARKET</td>
+                                    <td class="ng-binding"></td>
+                                </tr><!-- end ngRepeat: (id, y) in tariffDetails.rate track by $index -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group ng-hide" id="accordion_allocation" role="tablist" aria-multiselectable="true" ng-show="tariffDetails.allocation">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="heading_allocation">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_allocation" data-target="#collapse_allocation" aria-expanded="false" aria-controls="collapse_allocation">
+                            Allocation
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_allocation" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_allocation">
+                    <div class="panel-body ng-hide" ng-show="tariffDetails.allocation">
+                        <div class="table-responsive">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row view-pager">
+                                    <div class="col-md-4 margin15">
+                                        <div class="dt-buttons btn-group">
+                                            <button class="btn btn-default" ng-click="downloadSearchData('allocation')">
+                                                <span><h6><i class="fa fa-download"></i> Download Report</h6></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 ng-hide" ng-show="totalItems.allocation > viewPage">
+                                        <ul class="pagination-sm pagination ng-isolate-scope ng-empty ng-valid ng-hide" uib-pagination="" total-items="totalItems.allocation" ng-model="currentPage.allocation" ng-change="fetchPageChangedData('allocation')" max-size="maxSize" items-per-page="itemsPerPage" boundary-links="true" num-pages="numPages" ng-show="totalItems.allocation > viewPage">
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-striped table-hover table-bordered table-responsive table-box tableborder" align="center" width="100%" cellspacing="1" cellpadding="2" border="0">
+                                <thead class="text-center tableStructure">
+                                    <tr class="bg-primary subHeader text-center">
+                                        <th>Period</th>
+                                        <th>Room Category</th>
+                                        <th>Room Basis</th>
+                                        <th>Allocation</th>
+                                        <th>Rate Profile</th>
+                                        <th>Exclude Nationality</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <!-- ngRepeat: (id, y) in tariffDetails.allocation track by $index -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group ng-hide" id="accordion_release_period" role="tablist" aria-multiselectable="true" ng-show="tariffDetails.release_period">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="heading_release_period">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_release_period" data-target="#collapse_release_period" aria-expanded="false" aria-controls="collapse_release_period">
+                            Release Period
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_release_period" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_release_period">
+                    <div class="panel-body ng-hide" ng-show="tariffDetails.release_period">
+                        <div class="table-responsive">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row view-pager">
+                                    <div class="col-md-4 margin15">
+                                        <div class="dt-buttons btn-group">
+                                            <button class="btn btn-default" ng-click="downloadSearchData('release_period')">
+                                                <span><h6><i class="fa fa-download"></i> Download Report</h6></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 ng-hide" ng-show="totalItems.release_period > viewPage">
+                                        <ul class="pagination-sm pagination ng-isolate-scope ng-empty ng-valid ng-hide" uib-pagination="" total-items="totalItems.release_period" ng-model="currentPage.release_period" ng-change="fetchPageChangedData('release_period')" max-size="maxSize" items-per-page="itemsPerPage" boundary-links="true" num-pages="numPages" ng-show="totalItems.release_period > viewPage">
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-striped table-hover table-bordered table-responsive table-box tableborder" align="center" width="100%" cellspacing="1" cellpadding="2" border="0">
+                                <thead class="text-center tableStructure">
+                                    <tr class="bg-primary subHeader text-center">
+                                        <th>Period</th>
+                                        <th>Room Category</th>
+                                        <th>Room Basis</th>
+                                        <th>Release Period</th>
+                                        <th>Rate Profile</th>
+                                        <th>Exclude Nationality</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <!-- ngRepeat: (id, y) in tariffDetails.release_period track by $index -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group ng-hide" id="accordion_min_stay" role="tablist" aria-multiselectable="true" ng-show="tariffDetails.min_stay">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="heading_min_stay">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_min_stay" data-target="#collapse_min_stay" aria-expanded="false" aria-controls="collapse_min_stay">
+                            Min Stay
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_min_stay" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_min_stay">
+                    <div class="panel-body ng-hide" ng-show="tariffDetails.min_stay">
+                        <div class="table-responsive">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row view-pager">
+                                    <div class="col-md-4 margin15">
+                                        <div class="dt-buttons btn-group">
+                                            <button class="btn btn-default" ng-click="downloadSearchData('min_stay')">
+                                                <span><h6><i class="fa fa-download"></i> Download Report</h6></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 ng-hide" ng-show="totalItems.min_stay > viewPage">
+                                        <ul class="pagination-sm pagination ng-isolate-scope ng-empty ng-valid ng-hide" uib-pagination="" total-items="totalItems.min_stay" ng-model="currentPage.min_stay" ng-change="fetchPageChangedData('min_stay')" max-size="maxSize" items-per-page="itemsPerPage" boundary-links="true" num-pages="numPages" ng-show="totalItems.min_stay > viewPage">
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-striped table-hover table-bordered table-responsive table-box tableborder" align="center" width="100%" cellspacing="1" cellpadding="2" border="0">
+                                <thead class="text-center tableStructure">
+                                    <tr class="bg-primary subHeader text-center">
+                                        <th>Period</th>
+                                        <th>Room Category</th>
+                                        <th>Room Basis</th>
+                                        <th>Min Stay</th>
+                                        <th>Rate Profile</th>
+                                        <th>Exclude Nationality</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <!-- ngRepeat: (id, y) in tariffDetails.min_stay track by $index -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group ng-hide" id="accordion_sale" role="tablist" aria-multiselectable="true" ng-show="tariffDetails.sale">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="heading_sale">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_sale" data-target="#collapse_sale" aria-expanded="false" aria-controls="collapse_sale">
+                            Sell Policy
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_sale" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_sale">
+                    <div class="panel-body ng-hide" ng-show="tariffDetails.sale">
+                        <div class="table-responsive">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row view-pager">
+                                    <div class="col-md-4 margin15">
+                                        <div class="dt-buttons btn-group">
+                                            <button class="btn btn-default" ng-click="downloadSearchData('sale')">
+                                                <span><h6><i class="fa fa-download"></i> Download Report</h6></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 ng-hide" ng-show="totalItems.sale > viewPage">
+                                        <ul class="pagination-sm pagination ng-isolate-scope ng-empty ng-valid ng-hide" uib-pagination="" total-items="totalItems.sale" ng-model="currentPage.sale" ng-change="fetchPageChangedData('sale')" max-size="maxSize" items-per-page="itemsPerPage" boundary-links="true" num-pages="numPages" ng-show="totalItems.sale > viewPage">
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-striped table-hover table-bordered table-responsive table-box tableborder" align="center" width="100%" cellspacing="1" cellpadding="2" border="0">
+                                <thead class="text-center">
+                                    <tr class="bg-primary subHeader text-center">
+                                        <td>Room Category</td>
+                                        <td>Period</td>
+                                        <td>Type Of Sell</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <!-- ngRepeat: x in tariffDetails.sale track by $index -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group ng-hide" id="accordion_childextrabed" role="tablist" aria-multiselectable="true" ng-show="tariffDetails.childextrabed">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="heading_childextrabed">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_childextrabed" data-target="#collapse_childextrabed" aria-expanded="false" aria-controls="collapse_childextrabed">
+                            Child Extrabed
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_childextrabed" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_childextrabed">
+                    <div class="panel-body ng-hide" ng-show="tariffDetails.childextrabed">
+                        <div class="table-responsive">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row view-pager">
+                                    <div class="col-md-4 margin15">
+                                        <div class="dt-buttons btn-group">
+                                            <button class="btn btn-default" ng-click="downloadSearchData('childextrabed')">
+                                                <span><h6><i class="fa fa-download"></i> Download Report</h6></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 ng-hide" ng-show="totalItems.childextrabed > viewPage">
+                                        <ul class="pagination-sm pagination ng-isolate-scope ng-empty ng-valid ng-hide" uib-pagination="" total-items="totalItems.childextrabed" ng-model="currentPage.childextrabed" ng-change="fetchPageChangedData('childextrabed')" max-size="maxSize" items-per-page="itemsPerPage" boundary-links="true" num-pages="numPages" ng-show="totalItems.childextrabed > viewPage">
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table id="ChildExtraBedRateTable" class="table table-striped table-hover table-bordered table-responsive table-box tableborder" align="center" width="100%" cellspacing="1" cellpadding="2" border="0">
+                                <thead class="text-center">
+                                    <tr class="bg-primary subHeader text-center">
+                                        <td>Date</td>
+                                        <td>Room Type</td>
+                                        <td>Room Basis</td>
+                                        <td>Infant Weekday</td>
+                                        <td>Infant Weekend</td>
+                                        <td>Tiny Weekday</td>
+                                        <td>Tiny Weekend</td>
+                                        <td>Child Weekday</td>
+                                        <td>Child Weekend</td>
+                                        <td>Teen Weekday</td>
+                                        <td>Teen Weekend</td>
+                                        <td>Adult Weekday</td>
+                                        <td>Adult Weekend</td>
+                                        <td ng-show="fitPackageRateType" class="ng-hide">With Extrabed</td>
+                                        <td>Note</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <!-- ngRepeat: x in tariffDetails.childextrabed track by $index -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group ng-hide" id="accordion_cancellation_policy" role="tablist" aria-multiselectable="true" ng-show="tariffDetails.cancellation_policy">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="heading_cancellation_policy">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_cancellation_policy" data-target="#collapse_cancellation_policy" aria-expanded="false" aria-controls="collapse_cancellation_policy">
+                            Cancellation Policy
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_cancellation_policy" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_cancellation_policy">
+                    <div class="panel-body ng-hide" ng-show="tariffDetails.cancellation_policy">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="row view-pager">
+                                <div class="col-md-4 margin15">
+                                    <div class="dt-buttons btn-group">
+                                        <button class="btn btn-default" ng-click="downloadSearchData('cancellation_policy')">
+                                            <span><h6><i class="fa fa-download"></i> Download Report</h6></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 ng-hide" ng-show="totalItems.cancellation_policy > viewPage">
+                                    <ul class="pagination-sm pagination ng-isolate-scope ng-empty ng-valid ng-hide" uib-pagination="" total-items="totalItems.cancellation_policy" ng-model="currentPage.cancellation_policy" ng-change="fetchPageChangedData('cancellation_policy')" max-size="maxSize" items-per-page="itemsPerPage" boundary-links="true" num-pages="numPages" ng-show="totalItems.cancellation_policy > viewPage">
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</ul>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-striped table-hover table-bordered table-responsive table-box tableborder" align="center" width="100%" cellspacing="1" cellpadding="2" border="0">
+                            <thead class="text-center">
+                                <tr class="bg-primary subHeader text-center">
+                                    <td>Period</td>
+                                    <td>Policy</td>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <!-- ngRepeat: x in tariffDetails.cancellation_policy track by $index -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group ng-hide" id="accordion_supplement" role="tablist" aria-multiselectable="true" ng-show="tariffDetails.supplement">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="heading_supplement">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_supplement" data-target="#collapse_supplement" aria-expanded="false" aria-controls="collapse_supplement">
+                            Supplement
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_supplement" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_supplement">
+                    <div class="panel-body ng-hide" ng-show="tariffDetails.supplement">
+                        <div class="table-responsive">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row view-pager">
+                                    <div class="col-md-4 margin15">
+                                        <div class="dt-buttons btn-group">
+                                            <button class="btn btn-default" ng-click="downloadSearchData('supplement')">
+                                                <span><h6><i class="fa fa-download"></i> Download Report</h6></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 ng-hide" ng-show="totalItems.supplement > viewPage">
+                                        <ul class="pagination-sm pagination ng-isolate-scope ng-empty ng-valid ng-hide" uib-pagination="" total-items="totalItems.supplement" ng-model="currentPage.supplement" ng-change="fetchPageChangedData('supplement')" max-size="maxSize" items-per-page="itemsPerPage" boundary-links="true" num-pages="numPages" ng-show="totalItems.supplement > viewPage">
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-striped table-hover table-bordered table-responsive table-box tableborder" align="center" width="100%" cellspacing="1" cellpadding="2" border="0">
+                                <thead class="text-center">
+                                    <tr class="bg-primary subHeader text-center">
+                                        <td>Date</td>
+                                        <td>Room Type</td>
+                                        <td>Type</td>
+                                        <td>Supplement Name</td>
+                                        <td>Adult Week Day</td>
+                                        <td>Adult Week End</td>
+                                        <td>Child Week Day</td>
+                                        <td>Child Week End</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <!-- ngRepeat: x in tariffDetails.supplement track by $index -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-group ng-hide" id="accordion_offer" role="tablist" aria-multiselectable="true" ng-show="tariffDetails.offer">
+            <div class="panel">
+                <div class="panel-heading" role="tab" id="heading_offer">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion_offer" data-target="#collapse_offer" aria-expanded="false" aria-controls="collapse_offer">
+                            Offer &amp; Discount
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse_offer" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_offer">
+                    <div class="panel-body ng-hide" ng-show="tariffDetails.offer">
+                        <div class="table-responsive">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row view-pager">
+                                    <div class="col-md-4 margin15">
+                                        <div class="dt-buttons btn-group">
+                                            <button class="btn btn-default" ng-click="downloadSearchData('offer')">
+                                                <span><h6><i class="fa fa-download"></i> Download Report</h6></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 ng-hide" ng-show="totalItems.offer > viewPage">
+                                        <ul class="pagination-sm pagination ng-isolate-scope ng-empty ng-valid ng-hide" uib-pagination="" total-items="totalItems.offer" ng-model="currentPage.offer" ng-change="fetchPageChangedData('offer')" max-size="maxSize" items-per-page="itemsPerPage" boundary-links="true" num-pages="numPages" ng-show="totalItems.offer > viewPage">
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-first ng-scope disabled"><a href="" ng-click="selectPage(1, $event)" class="ng-binding">First</a></li><!-- end ngIf: ::boundaryLinks -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev ng-scope disabled"><a href="" ng-click="selectPage(page - 1, $event)" class="ng-binding">Previous</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngRepeat: page in pages track by $index --><li ng-repeat="page in pages track by $index" ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}" class="pagination-page ng-scope active"><a href="" ng-click="selectPage(page.number, $event)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index -->
+<!-- ngIf: ::directionLinks --><li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next ng-scope disabled"><a href="" ng-click="selectPage(page + 1, $event)" class="ng-binding">Next</a></li><!-- end ngIf: ::directionLinks -->
+<!-- ngIf: ::boundaryLinks --><li ng-if="::boundaryLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-last ng-scope disabled"><a href="" ng-click="selectPage(totalPages, $event)" class="ng-binding">Last</a></li><!-- end ngIf: ::boundaryLinks -->
+</ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-striped table-hover table-bordered table-responsive table-box tableborder" align="center" width="100%" cellspacing="1" cellpadding="2" border="0">
+                                <thead class="text-center">
+                                    <tr class="bg-primary subHeader text-center">
+                                        <th>Offer Type Code</th>
+                                        <th>Booking</th>
+                                        <th>CheckIn</th>
+                                        <th>Value</th>
+                                        <th>Compulsory</th>
+                                        <th>Market Profile</th>
+                                        <th>Nationality</th>
+                                        <th>Exclude Nationality</th>
+                                        <th>Inventory Category</th>
+                                        <th>Room Category</th>
+                                        <th>Room/Meal Basis</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <!-- ngRepeat: (id, x) in tariffDetails.offer track by $index -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-2 hide" id="DownloadExcel"></div>
+    </div>
+</form>
+
 
     </div>
     <!-- Code injected by live-server -->
