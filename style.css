@@ -65,6 +65,9 @@ form{
   background-color: var(--color-secondary);
   border-right: 1px solid #ddd;
 }
+.srchWithinPg{
+  color: var(--color-button) !important;
+}
 .fa{
   color: var(--color-white);
 }
@@ -92,7 +95,7 @@ form{
   }
 i
   .srchWithinPg{
-    color: var(--color-button);
+    color: var(--color-button) !important;
   }
   .srchWithinPg:hover{
     color: var(--color-button);
