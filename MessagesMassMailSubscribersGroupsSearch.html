@@ -1263,7 +1263,7 @@
                                                 <div class="actionCont">
                                                     <div class="input-group-addon">
                                                         <a
-                                                            href="subscriber_list.php?action=edit&amp;id=1&amp;name_search=&amp;from_name_search=&amp;reply_to_search=">
+                                                            href="MessagesMassMailSubscribersGroupEdit.html">
                                                             <!-- <img src="images/edit.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Edit" title="Edit"> -->
                                                             <i class="fa fa-pencil-square-o" data-toggle="tooltip"
                                                                 data-placement="top" title=""
@@ -1272,7 +1272,7 @@
                                                     </div>
                                                     <div class="input-group-addon">
                                                         <a
-                                                            href="subscriber_list.php?action=view&amp;id=1&amp;name_search=&amp;from_name_search=&amp;reply_to_search=">
+                                                            href="MessagesMassMailSubscribersGroupView.html">
                                                             <!-- <img src="images/view.gif" border=0 data-toggle="tooltip" data-placement="top" alt="View" title="View"> -->
                                                             <i class="fa fa-eye" data-toggle="tooltip"
                                                                 data-placement="top" alt="View" title=""
@@ -1280,7 +1280,7 @@
                                                         </a>
                                                     </div>
                                                     <div class="input-group-addon">
-                                                        <a href="subscribers.php?sub_list_search=1">
+                                                        <a href="MessagesMassMailSubscribersSearch.html">
                                                             <!-- <img src="images/managelist.gif" border=0 data-toggle="tooltip" data-placement="top" alt="Manage List" title="Manage List"> -->
                                                             <i class="fa fa-list" data-toggle="tooltip"
                                                                 data-placement="top" alt="Manage List" title=""
@@ -1298,7 +1298,7 @@
                                                         </a>
                                                     </div>
                                                     <div class="input-group-addon">
-                                                        <a href="subscribers.php?action=add&amp;sub_list_search=1">
+                                                        <a href="MessagesAddSubscribesrs.html">
                                                             <i class="fa fa-plus" data-toggle="tooltip"
                                                                 data-placement="top" alt="Add Addresses" title=""
                                                                 data-original-title="Add Addresses"></i>
@@ -1306,7 +1306,7 @@
                                                     </div>
                                                     <div class="input-group-addon">
                                                         <a
-                                                            href="subscriber_list.php?action=import_csv&amp;sub_list_search=1">
+                                                            href="MessagesImportCSV.html">
                                                             <i class="fa fa-file-text" data-toggle="tooltip"
                                                                 data-placement="top" alt="Import to CSV" title=""
                                                                 data-original-title="Import to CSV"></i>
@@ -1355,8 +1355,76 @@
         <!-- End -->
 
 
-
     </div>
+
+
+
+
+<style>
+  .fa.fa-times-circle.closeBtn {
+    font-size: 1.3em!important;
+    position: absolute;
+    float: right;
+    right: 0px;
+    top: 0px;
+    margin-right: -10px;
+    margin-top: -84px;
+    background-color: white;
+    border-radius: 15px;
+    color: #000!important;
+    cursor: pointer;
+}
+</style>
+
+
+
+    <div class="modal fade" id="div_detail_1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+
+
+
+        <div class="modal-content" style="width: 550px; margin-top: 175px;">
+          <div class="color-linegreen">
+          </div>
+          <div class="modal-header">
+            <div class="siteLogo">
+              <img src="https://beta.tdonlines.com//images/logo.png" alt="">
+            </div>
+          </div>
+          <div class="modal-body">
+         
+            <div class="modalForm" style="height: 200px">
+              <div class="panel-heading">Duplicate the List</div>
+              <div id="loading_1" style="position: absolute; display: none; left: 50%; top: 50%;">
+              
+                  <img src="images/indicator.gif" alt="">
+              
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-12">
+                  <div id="datadisplay_1"><label>Name the new List</label>
+<input type="text" name="txt_name_1" id="txt_name_1" class="form-control" value=""><br></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-xs-12">
+                  <div id="dataButton_1" style="display: block;">
+                    <button class="btn btn-dark btn-sm" type="button" name="btn_submit" >
+                
+                        <i class="fa fa-pencil-square-o"></i>&nbsp;Create
+                 
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="fa fa-times-circle fa-4 closeBtn" data-dismiss="modal" onclick="document.getElementById('div_detail_1').style.display = 'none';">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

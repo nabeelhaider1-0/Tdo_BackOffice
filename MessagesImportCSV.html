@@ -1103,7 +1103,7 @@
                                         class="fa-solid fa-caret-right"></i></a>
                                 <ul class="dropdown-menu dropdown-submenu" id="agentsub">
                                     <li><a class="dropdown-item" href="staffnew.html">NEW</a></li>
-                                 <li><a class="dropdown-item" href="staffsearch.html">STAFF LIST</a></li>
+                                    <li><a class="dropdown-item" href="staffsearch.html">STAFF LIST</a></li>
                                     <li><a class="dropdown-item" href="menu-new.html">ACCESS
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
                                                 class="fa-solid fa-caret-right"></i></a>
@@ -1169,13 +1169,14 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">CREDIT NOTES
-                    </h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">IMPORT CSV IN QTECH PROFILE</h5>
                 </div>
+                <div class="col-md-6">
 
-                <div class="col-md-9">
-
-
+                </div>
+                <div class="col-md-3">
+                    <i class="fa-solid fa-house-chimney"></i><span> /<a href="MessagesMassMailSubscribersGroupsSearch.html"
+                            style="text-decoration:none;color:grey"> List Subscriber Group</a> / Import CSV</span>
                 </div>
 
             </div>
@@ -1185,68 +1186,44 @@
     </section>
 
     <!---Body Paneel Menu items-->
-    <div class="container-fluid printu pt-0 p-4" id="content-pad">
+    <div class="container-fluid pt-0 p-4" id="content-pad">
 
         <!-- First Row-->
-        <form>
+
+        <form action="subscriber_list.php" method="post" name="frm_import_csv" enctype="multipart/form-data">
+            <input type="hidden" name="sub_list_id" value="1">
+            <input type="hidden" name="action" value="save_csv">
+
             <div class="panel-body">
-
-                <div class="row mb-3">
-                    <div class="form-group col-md-12 col-xs-12">
-                        <button type="button" class="btn btn-dark btn-sm" value="Print" onclick="print_receipt('');">
-                            <i class="fa fa-print"></i>&nbsp;Print
-                        </button>
-                        &nbsp;&nbsp;
-                        <a href="AccountsAgentsCreditSearch.html" style="text-decoration:none">
-                            <button type="button" class="btn btn-dark btn-sm" value="Back">
-                                <i class="fa fa-reply"></i>&nbsp;Back
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                                                            
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label>Upload CSV File</label>
+                            <span class="uniqFile input-group"><span class="input-group-addon fa fa-upload myInputFile"><input name="csv_file" id="csv_file" type="file" class="test123"></span></span>	
+                        </div>
+                    </div>
+                    <br>
+                          <div class=" col-md-12">
+                            <button class="btn btn-dark btn-sm form-group" type="button" name="add" value="SUBMIT" onclick="return validate_csv(document.forms['frm_import_csv']);">
+                       
+                                    <i class="fa fa-floppy-o"></i>
+                                    &nbsp;Save
+                           
                             </button>
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="form-group col-md-3">
-                        <label>Agent</label>
-                        <div>
-                            Vartak Holidazzle
                         </div>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label>Credit Note No</label>
-                        <div>
-                            2021/12102
+                                                    </div>
+                                                </form>
+                        <div class="panel-footer form-group mt-2">
+                                Please Upload the csv file format similar to sample csv file &nbsp;
+                                <button class="btn btn-dark btn-sm" type="button" onclick="window.open('newsletter/sample_csv.csv')" target="_blank">
+                                    <i class="fa fa-download"></i>
+                                    &nbsp;Sample CSV
+                                </button>
                         </div>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>Date of Credit Note</label>
-                        <div>
-                            Oct 13, 2021
-                        </div>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="exampleInputEmail1">Particulars</label>
-                        <div>
-                            Credit Note for :- TD1728884 Misc Booking Cancelled
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="form-group col-md-3">
-                        <label>Amount Received</label>
-                        <div>
-                            INR&nbsp;114.321
-                        </div>
-                    </div>
-
-                 
-               
-                </div>
-        
-    
-
+                        
+                    
 
 
         <!-- End -->
@@ -1254,299 +1231,12 @@
 
 
     </div>
-</form>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
-<script>
-
-    // For Last Modifiaction Datepicker
-
-    const status_from_date = flatpickr("#status_from_date", {
-        dateFormat: "Y-m-d",
-        minDate: "today"
-    });
 
 
-    const status_to_date = flatpickr("#status_to_date", {
-        dateFormat: "Y-m-d",
-        minDate: "today"
-    });
-
-
-    const sTrashBtn = document.getElementById("sTrashBtn");
-    sTrashBtn.addEventListener("click", function () {
-        status_from_date.clear();
-        status_to_date.clear();
-
-    });
-
-
-
-    const service_from_date = flatpickr("#service_from_date", {
-        dateFormat: "Y-m-d",
-        minDate: "today"
-    });
-
-
-    const service_to_date = flatpickr("#service_to_date", {
-        dateFormat: "Y-m-d",
-        minDate: "today"
-    });
-
-
-    const serTrashBtn = document.getElementById("serTrashBtn");
-    serTrashBtn.addEventListener("click", function () {
-        service_from_date.clear();
-        service_to_date.clear();
-
-    });
-
-
-</script>
-<script type="text/javascript">
-    var wrapper1 = document.getElementById('wrapper1');
-    var wrapper2 = document.getElementById('wrapper2');
-    wrapper1.onscroll = function () {
-        wrapper2.scrollLeft = wrapper1.scrollLeft;
-    };
-    wrapper2.onscroll = function () {
-        wrapper1.scrollLeft = wrapper2.scrollLeft;
-    };
-</script>
-<script>
-    var ajax = new sack();
-
-    function extractNumber(obj, decimalPlaces, allowNegative) {
-        var regexp = /^\d+$|^\d+\.\d{1,3}$/;
-        if (regexp.test($(obj).val())) {
-            temp = $(obj).val();
-            return true;
-        } else {
-            $(obj).val(temp);
-            showWarAlert("please enter a valid amount");
-        }
-    }
-    function checkAmount(pendingAmount, Obj) {
-        if (Obj.value > pendingAmount) {
-            showWarAlert("You can not insert more then pending amount.");
-            Obj.value = '';
-            Obj.focus();
-            return false;
-        }
-    }
-    function validate_chk(formObj, action) {
-        var allocatedAmount = 0;
-        var errMsg = '';
-        var errEle;
-        $(document).find(".chk-invoice").each(function () {
-            var panel = $("#panel-" + $(this).attr('invoice_number'));
-            var chk = $(panel).find(".invoice-table input[type='checkbox']").prop("checked")
-            var amt = parseFloat($(panel).find(".invoice-table input[type='text']").val());
-            if (chk == true && amt > 0 && !isNaN(amt)) {
-                allocatedAmount += amt
-            } else if (chk == true && (amt <= 0 || isNaN(amt))) {
-                errEle = $(panel).find(".invoice-table input[type='text']");
-                errMsg = "Amount Can not be blank or zero. Enter amount for Invoice: " + $(this).attr("invoice_number");
-                return false;
-            } else if (chk != true) {
-                $(panel).find(".panel-body table.table tr").each(function () {
-                    if ($(this).find(".row_chkbox").prop("checked") == true && parseFloat($(this).find(".booking_w_amt").val()) > 0) {
-                        allocatedAmount += parseFloat($(this).find(".booking_w_amt").val())
-                    } else if ($(this).find(".row_chkbox").prop("checked") && (parseFloat($(this).find(".booking_w_amt").val()) <= 0 || isNaN(parseFloat($(this).find(".booking_w_amt").val())))) {
-                        errEle = $(this).find(".booking_w_amt");
-                        errMsg = "Amount Can not be blank or zero. Enter amount for Invoice: " + $(this).find(".row_chkbox").attr("invoice_number") + " Booking: " + $(this).find(".row_chkbox").attr("bcode");
-                    }
-                });
-            }
-        });
-        if (errMsg != '') {
-            showWarAlert(errMsg);
-            return false;
-        }
-        if (allocatedAmount <= 0) {
-            showWarAlert("Please Select Atleast One Booking To Allocate.");
-            return false;
-        }
-        if (allocatedAmount > pendingtoAllocate) {
-            showWarAlert("Receipt amount is less then allocated amount.");
-            return false;
-        }
-        if (action == "edit_data" || action == "edit_data_single_invoice")
-            showDeleteAlert2("Allocate this amount to the selected Receipt(s)?", formObj, action);
-
-
-
-    }
-
-    function showDeleteAlert2(msg, formObj, action) {
-        swal({
-            title: msg,
-            type: "warning",
-            showCancelButton: true,
-            confirmButtonText: "Ok",
-            confirmButtonColor: "#F0AD4E",
-            closeOnConfirm: true
-        },
-            function (isConfirm) {
-                if (isConfirm) {
-                    $('#Allocate').hide();
-                    $('#allocate_loader').show();
-
-                    if (action == "edit_data" || action == "edit_data_single_invoice") {
-                        formObj.action.value = action;
-                    }
-                    //showWarAlert("Under Construction");
-                    formObj.submit();
-                }
-            });
-    }
-    function total_allocation_amount_set(obj) {
-        var rowid = $(obj).attr("rowid");
-        var pnd_amt = parseFloat($("#pnd_amt_" + rowid).val());
-        if ((allocated + pnd_amt) > pendingtoAllocate) {
-            $(".booking_w_amt[rowid='" + rowid + "']").val(pendingtoAllocate - allocated);
-        } else {
-            $(".booking_w_amt[rowid='" + rowid + "']").val(pnd_amt);
-        }
-    }
-    function total_allocation_amount_invoice_set(obj) {
-        var invoice_number = $(obj).attr("invoice_number");
-        if ($(obj).prop("checked")) {
-            var rowid = $(obj).attr("rowid");
-            var pnd_amt = parseFloat($(".inv-pending-amount[invoice_number='" + invoice_number + "']").val());
-            if ((allocated + pnd_amt) > pendingtoAllocate) {
-                $("#amt-" + invoice_number).val(pendingtoAllocate - allocated);
-            } else {
-                $("#amt-" + invoice_number).val(pnd_amt);
-            }
-        } else {
-            $("#amt-" + invoice_number).val("0");
-        }
-    }
-    function total_allocation_amount(obj) {
-        allocated = 0;
-        $(document).find(".chk-invoice").each(function () {
-            var panel = $("#panel-" + $(this).attr("invoice_number"))
-            var chk = $(panel).find(".invoice-table input[type='checkbox']").prop("checked");
-            var amt = parseFloat($(panel).find(".invoice-table input[type='text']").val());
-            if (chk == true && amt > 0) {
-                allocated += amt
-            } else if (chk != true) {
-                $(panel).find(".panel-body table.table tr").each(function () {
-                    if ($(this).find(".row_chkbox").prop("checked") == true && parseFloat($(this).find(".booking_w_amt").val()) > 0) {
-                        allocated += parseFloat($(this).find(".booking_w_amt").val())
-                    }
-                });
-            }
-        });
-        if (pendingtoAllocate < allocated) {
-            showWarAlert("Receipt amount is less then allocated amount.");
-            $(obj).val("");
-            $(".row_chkbox[rowid='" + $(obj).attr("rowid") + "']").prop("checked", false);
-            return false
-        }
-        if (allocated > 0) {
-            $("span.amt").html("Allocated Amount-" + (allocated));
-            $("span.amt").show();
-        } else {
-            $("span.amt").html("Allocated Amount-0.000");
-            $("span.amt").hide();
-        }
-    }
-
-    $(function () {
-        $("#download_excel").click(function (e) {
-            e.preventDefault();
-            var get = { "page": "receipt", "action": "edit", "agent_id": "291", "rec_id": "602", "Rec_amount": "114.321", "currency_code": "SAR", "search_id": "Rcpt00000602", "customer_id": "", "search_agent": "", "search_payment_mode": "", "search_payments": "" };
-            var frmData = "controller.php?" + $.param(get) + "&download_type=excel&download=allocatedBooking";
-            var win = window.open(frmData);
-            return false;
-        });
-        $(".row_chkbox").change(function () {
-            var invoice_number = $(this).attr("invoice_number");
-            $("#chk-" + invoice_number).prop("checked", false);
-            $("#amt-" + invoice_number).val("");
-            var amtEle = $(".booking_w_amt[invoice_number='" + invoice_number + "']");
-            if (!$(this).prop("checked")) {
-                $(amtEle).val(0);
-            }
-            total_allocation_amount(amtEle);
-        });
-        $(".booking_w_amt").keydown(function () {
-            var invoice_number = $(this).attr("invoice_number");
-            $("#chk-" + invoice_number).prop("checked", false);
-            $("#amt-" + invoice_number).val("");
-            total_allocation_amount(this);
-        });
-        $(".chk-invoice").change(function () {
-            var invoice = $(this).attr("invoice_number");
-            if ($(this).prop("checked")) {
-                $(".select-all[invoice_number='" + invoice + "']").prop("checked", false);
-                $(".row_chkbox[invoice_number='" + invoice + "']").prop("checked", false);
-                $(".booking_w_amt[invoice_number='" + invoice + "'").val("");
-            }
-            total_allocation_amount();
-        });
-        $(".invoice-amt").keypress(function () {
-            $("#chk-" + $(this).attr("invoice_number")).prop("checked", "checked")
-        });
-        $(".booking_w_amt").keypress(function () {
-            $(".row_chkbox[rowid='" + $(this).attr("rowid") + "']").prop("checked", "checked");
-        });
-        $("[data-toggle='collapse']").click(function () {
-            $(this).find("i").toggleClass("fa-chevron-down").toggleClass("fa-chevron-up");
-        });
-        $("#expand-all").click(function () {
-            if ($(this).html() == 'Expand all') {
-                $(this).html('Collapse all');
-                $(".panel-collapse").collapse('show');
-            }
-            else {
-                $(this).html('Expand all');
-                $(".panel-collapse").collapse('hide');
-            }
-        });
-    })
-</script>
-<script language="javascript">
-    <!--
-        function	booking_status_info(reservation_id,booking_id) {
-        window.open('booking_status_info.php?reservation_id='+reservation_id+'&booking_id='+booking_id,'info'+booking_id,'width=750,height=600,scrollbars=yes,resizable=yes');
-        }
-    //-->
-    /* code added by Anand on 12 Dec for Print Receipt */
-     /*code modified by himanshu on 8-10-2013 for print*/
-    function print_receipt(){
-        window.print();
-        
-        
-    }
-    /* code added by Anand on 12 Dec for Print Receipt */
-    var ajax = new sack();
-    function send_email_data() {
-        email_obj = document.getElementById('txt_email');
-        receipt_id=602;
-        
-        if(is_empty(email_obj, email_obj.value)) {
-            alert('Enter email id.');
-            email_obj.focus();
-        } else {
-                ajax.requestFile = 'ajax/ajax_send_view_receipt_email.php?email_id='+email_obj.value+'&id='+receipt_id;	// Specifying which file to get		
-                ajax.onCompletion = sendaccountEmail;	// Specify function that will be executed after file has been found
-                ajax.runAJAX();		// Execute AJAX function
-            
-        }
-    }
-    
-    function sendaccountEmail() {
-        email_obj = document.getElementById('txt_email');
-        alert("Email Sent");
-        email_obj.value = '';
-    }
-    
-    </script>
 
 </html>

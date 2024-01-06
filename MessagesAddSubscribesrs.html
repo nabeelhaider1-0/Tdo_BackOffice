@@ -1103,7 +1103,7 @@
                                         class="fa-solid fa-caret-right"></i></a>
                                 <ul class="dropdown-menu dropdown-submenu" id="agentsub">
                                     <li><a class="dropdown-item" href="staffnew.html">NEW</a></li>
-                                 <li><a class="dropdown-item" href="staffsearch.html">STAFF LIST</a></li>
+                                    <li><a class="dropdown-item" href="staffsearch.html">STAFF LIST</a></li>
                                     <li><a class="dropdown-item" href="menu-new.html">ACCESS
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
                                                 class="fa-solid fa-caret-right"></i></a>
@@ -1169,13 +1169,14 @@
             <div class="row pt-0  pb-0 p-4">
 
                 <div class="col-md-3">
-                    <h5 style="font-size:14pt;font-weight: 500;">CREDIT NOTES
-                    </h5>
+                    <h5 style="font-size:14pt;font-weight: 500;">ADD SUBSCRIBER (QTECH PROFILE)</h5>
                 </div>
+                <div class="col-md-6">
 
-                <div class="col-md-9">
-
-
+                </div>
+                <div class="col-md-3">
+                    <i class="fa-solid fa-house-chimney"></i><span> /<a href="MessagesMassMailSubscribersSearch.html"
+                            style="text-decoration:none;color:grey"> List Subscriber</a> / Add Subscriber</span>
                 </div>
 
             </div>
@@ -1185,68 +1186,301 @@
     </section>
 
     <!---Body Paneel Menu items-->
-    <div class="container-fluid printu pt-0 p-4" id="content-pad">
+    <div class="container-fluid pt-0 p-4" id="content-pad">
 
         <!-- First Row-->
+
         <form>
             <div class="panel-body">
-
-                <div class="row mb-3">
-                    <div class="form-group col-md-12 col-xs-12">
-                        <button type="button" class="btn btn-dark btn-sm" value="Print" onclick="print_receipt('');">
-                            <i class="fa fa-print"></i>&nbsp;Print
-                        </button>
-                        &nbsp;&nbsp;
-                        <a href="AccountsAgentsCreditSearch.html" style="text-decoration:none">
-                            <button type="button" class="btn btn-dark btn-sm" value="Back">
-                                <i class="fa fa-reply"></i>&nbsp;Back
-                            </button>
-                        </a>
-                    </div>
-                </div>
-
-
                 <div class="row">
-                    <div class="form-group col-md-3">
-                        <label>Agent</label>
-                        <div>
-                            Vartak Holidazzle
-                        </div>
+                    <div class="col-md-3 form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control required test123" name="txt_email" size="45"
+                            maxlength="255" tabindex="1">
                     </div>
+                    <div class="col-md-3 form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control required" name="txt_name" size="45" maxlength="255"
+                            tabindex="1">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Agency Name</label>
+                        <input type="text" class="form-control" name="txt_agency_name" size="45" maxlength="255"
+                            tabindex="1">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Country</label>
+                        <select name="sel_country" id="country"
+                            class="required selectpicker form-control show-menu-arrow bs-select-hidden"
+                            onchange="JavaScript:getCityList(this);" data-live-search-style="startsWith"
+                            data-live-search="true">
+                            <option value="">--Select--</option>
+                            <option label="Afghanistan" value="97">Afghanistan</option>
+                            <option label="Albania" value="43">Albania</option>
+                            <option label="Algeria" value="142">Algeria</option>
+                            <option label="Andorra" value="44">Andorra</option>
+                            <option label="Angola" value="143">Angola</option>
+                            <option label="Antigua And Barbuda" value="230">Antigua And Barbuda</option>
+                            <option label="Argentina" value="29">Argentina</option>
+                            <option label="Armenia" value="45">Armenia</option>
+                            <option label="Aruba" value="231">Aruba</option>
+                            <option label="Australia" value="196">Australia</option>
+                            <option label="Austria" value="46">Austria</option>
+                            <option label="Azerbaijan" value="47">Azerbaijan</option>
+                            <option label="Bahamas" value="3">Bahamas</option>
+                            <option label="Bahrain" value="98">Bahrain</option>
+                            <option label="Bangladesh" value="99">Bangladesh</option>
+                            <option label="Barbados" value="4">Barbados</option>
+                            <option label="Belarus" value="48">Belarus</option>
+                            <option label="Belgium" value="49">Belgium</option>
+                            <option label="Belize" value="5">Belize</option>
+                            <option label="Benin" value="144">Benin</option>
+                            <option label="Bermuda" value="6">Bermuda</option>
+                            <option label="Bhutan" value="100">Bhutan</option>
+                            <option label="Bolivia" value="30">Bolivia</option>
+                            <option label="Bonaire, Sint Eustatius and Saba" value="416">Bonaire, Sint Eustatius and
+                                Saba</option>
+                            <option label="Bosnia and Herzegovina" value="50">Bosnia and Herzegovina</option>
+                            <option label="Botswana" value="145">Botswana</option>
+                            <option label="Brazil" value="31">Brazil</option>
+                            <option label="British Virgin Islands" value="7">British Virgin Islands</option>
+                            <option label="Brunei" value="101">Brunei</option>
+                            <option label="Bulgaria" value="51">Bulgaria</option>
+                            <option label="Burkina Faso" value="146">Burkina Faso</option>
+                            <option label="Burundi" value="147">Burundi</option>
+                            <option label="Cambodia" value="102">Cambodia</option>
+                            <option label="Cameroon" value="148">Cameroon</option>
+                            <option label="Canada" value="2">Canada</option>
+                            <option label="Cape Verde" value="149">Cape Verde</option>
+                            <option label="Cayman Islands" value="8">Cayman Islands</option>
+                            <option label="Central African Republic" value="150">Central African Republic</option>
+                            <option label="Chad" value="151">Chad</option>
+                            <option label="Chile" value="32">Chile</option>
+                            <option label="China" value="103">China</option>
+                            <option label="Colombia" value="33">Colombia</option>
+                            <option label="Comoros" value="402">Comoros</option>
+                            <option label="Cook Islands" value="412">Cook Islands</option>
+                            <option label="Costa Rica" value="9">Costa Rica</option>
+                            <option label="Croatia" value="52">Croatia</option>
+                            <option label="Cuba" value="10">Cuba</option>
+                            <option label="Curacao" value="415">Curacao</option>
+                            <option label="Cyprus" value="53">Cyprus</option>
+                            <option label="Czech Republic" value="54">Czech Republic</option>
+                            <option label="Democratic Republic of the Congo" value="153">Democratic Republic of the
+                                Congo</option>
+                            <option label="Denmark" value="55">Denmark</option>
+                            <option label="Djibouti" value="154">Djibouti</option>
+                            <option label="Dominica" value="11">Dominica</option>
+                            <option label="Dominican Republic" value="12">Dominican Republic</option>
+                            <option label="East Timor" value="104">East Timor</option>
+                            <option label="Ecuador" value="34">Ecuador</option>
+                            <option label="Egypt" value="155">Egypt</option>
+                            <option label="El Salvador" value="13">El Salvador</option>
+                            <option label="Equatorial Guinea" value="156">Equatorial Guinea</option>
+                            <option label="Eritrea" value="157">Eritrea</option>
+                            <option label="Estonia" value="56">Estonia</option>
+                            <option label="Ethiopia" value="158">Ethiopia</option>
+                            <option label="Falkland Islands" value="35">Falkland Islands</option>
+                            <option label="Fiji Islands" value="198">Fiji Islands</option>
+                            <option label="Finland" value="57">Finland</option>
+                            <option label="France" value="58">France</option>
+                            <option label="French Guiana" value="36">French Guiana</option>
+                            <option label="French Polynesia" value="199">French Polynesia</option>
+                            <option label="Gabon" value="159">Gabon</option>
+                            <option label="Gambia" value="160">Gambia</option>
+                            <option label="Georgia" value="59">Georgia</option>
+                            <option label="Germany" value="60">Germany</option>
+                            <option label="Ghana" value="161">Ghana</option>
+                            <option label="Gibraltar" value="61">Gibraltar</option>
+                            <option label="Greece" value="62">Greece</option>
+                            <option label="Greece Islands" value="404">Greece Islands</option>
+                            <option label="Greenland" value="14">Greenland</option>
+                            <option label="Grenada" value="15">Grenada</option>
+                            <option label="Guadeloupe" value="16">Guadeloupe</option>
+                            <option label="Guam" value="200">Guam</option>
+                            <option label="Guatemala" value="17">Guatemala</option>
+                            <option label="Guernsey" value="63">Guernsey</option>
+                            <option label="Guinea" value="162">Guinea</option>
+                            <option label="Guinea Bissau" value="163">Guinea Bissau</option>
+                            <option label="Guyana" value="37">Guyana</option>
+                            <option label="Haiti" value="18">Haiti</option>
+                            <option label="Honduras" value="19">Honduras</option>
+                            <option label="Hong Kong" value="105">Hong Kong</option>
+                            <option label="Hungary" value="64">Hungary</option>
+                            <option label="Iceland" value="65">Iceland</option>
+                            <option label="India" value="106">India</option>
+                            <option label="Indonesia" value="107">Indonesia</option>
+                            <option label="Iran" value="108">Iran</option>
+                            <option label="Iraq" value="109">Iraq</option>
+                            <option label="Ireland" value="66">Ireland</option>
+                            <option label="Isle of Man" value="67">Isle of Man</option>
+                            <option label="Israel" value="110">Israel</option>
+                            <option label="Italy" value="68">Italy</option>
+                            <option label="Ivory Coast" value="164">Ivory Coast</option>
+                            <option label="Jamaica" value="20">Jamaica</option>
+                            <option label="Japan" value="111">Japan</option>
+                            <option label="Jersey" value="69">Jersey</option>
+                            <option label="Jordan" value="112">Jordan</option>
+                            <option label="Kazakhstan" value="113">Kazakhstan</option>
+                            <option label="Kenya" value="165">Kenya</option>
+                            <option label="Kiribati" value="201">Kiribati</option>
+                            <option label="Kosovo" value="70">Kosovo</option>
+                            <option label="Kuwait" value="114">Kuwait</option>
+                            <option label="Kyrgyzstan" value="115">Kyrgyzstan</option>
+                            <option label="Laos" value="116">Laos</option>
+                            <option label="Latvia" value="71">Latvia</option>
+                            <option label="Lebanon" value="117">Lebanon</option>
+                            <option label="Lesotho" value="166">Lesotho</option>
+                            <option label="Liberia" value="167">Liberia</option>
+                            <option label="Libya" value="168">Libya</option>
+                            <option label="Liechtenstein" value="72">Liechtenstein</option>
+                            <option label="Lithuania" value="73">Lithuania</option>
+                            <option label="Luxembourg" value="74">Luxembourg</option>
+                            <option label="Macau" value="118">Macau</option>
+                            <option label="Macedonia" value="75">Macedonia</option>
+                            <option label="Madagascar" value="169">Madagascar</option>
+                            <option label="Malawi" value="170">Malawi</option>
+                            <option label="Malaysia" value="119">Malaysia</option>
+                            <option label="Maldives" value="120">Maldives</option>
+                            <option label="Mali" value="171">Mali</option>
+                            <option label="Malta" value="76">Malta</option>
+                            <option label="Marshall Islands" value="202">Marshall Islands</option>
+                            <option label="Martinique" value="21">Martinique</option>
+                            <option label="Mauritania" value="172">Mauritania</option>
+                            <option label="Mauritius" value="173">Mauritius</option>
+                            <option label="Mexico" value="22">Mexico</option>
+                            <option label="Micronesia" value="203">Micronesia</option>
+                            <option label="Moldova" value="77">Moldova</option>
+                            <option label="Monaco" value="78">Monaco</option>
+                            <option label="Mongolia" value="121">Mongolia</option>
+                            <option label="Montenegro" value="79">Montenegro</option>
+                            <option label="Montserrat" value="23">Montserrat</option>
+                            <option label="Morocco" value="174">Morocco</option>
+                            <option label="Mozambique" value="175">Mozambique</option>
+                            <option label="Myanmar(Burma)" value="122">Myanmar(Burma)</option>
+                            <option label="Namibia" value="176">Namibia</option>
+                            <option label="Nauru" value="204">Nauru</option>
+                            <option label="Nepal" value="123">Nepal</option>
+                            <option label="Netherlands" value="80">Netherlands</option>
+                            <option label="New Caledonia" value="205">New Caledonia</option>
+                            <option label="New Zealand" value="197">New Zealand</option>
+                            <option label="Nicaragua" value="24">Nicaragua</option>
+                            <option label="Niger" value="177">Niger</option>
+                            <option label="Nigeria" value="178">Nigeria</option>
+                            <option label="North Korea" value="124">North Korea</option>
+                            <option label="Northern Cyprus" value="411">Northern Cyprus</option>
+                            <option label="Northern Mariana Islands" value="414">Northern Mariana Islands</option>
+                            <option label="Norway" value="81">Norway</option>
+                            <option label="Oman" value="125">Oman</option>
+                            <option label="Pakistan" value="126">Pakistan</option>
+                            <option label="Palestine" value="228">Palestine</option>
+                            <option label="Panama" value="25">Panama</option>
+                            <option label="Papua New Guinea" value="206">Papua New Guinea</option>
+                            <option label="Paraguay" value="38">Paraguay</option>
+                            <option label="Peru" value="39">Peru</option>
+                            <option label="Philippines" value="127">Philippines</option>
+                            <option label="Poland" value="82">Poland</option>
+                            <option label="Portugal" value="83">Portugal</option>
+                            <option label="Puerto Rico" value="26">Puerto Rico</option>
+                            <option label="Qatar" value="128">Qatar</option>
+                            <option label="Republic of the Congo" value="152">Republic of the Congo</option>
+                            <option label="Reunion" value="179">Reunion</option>
+                            <option label="Romania" value="84">Romania</option>
+                            <option label="Russia" value="85">Russia</option>
+                            <option label="Rwanda" value="180">Rwanda</option>
+                            <option label="Saint Barthelemy" value="400">Saint Barthelemy</option>
+                            <option label="Saint Kitts and Nevis" value="413">Saint Kitts and Nevis</option>
+                            <option label="Saint Lucia" value="401">Saint Lucia</option>
+                            <option label="Samoa" value="207">Samoa</option>
+                            <option label="San Marino" value="86">San Marino</option>
+                            <option label="Sao Tome and Principe" value="181">Sao Tome and Principe</option>
+                            <option label="Saudi Arabia" value="129">Saudi Arabia</option>
+                            <option label="Senegal" value="182">Senegal</option>
+                            <option label="Serbia" value="87">Serbia</option>
+                            <option label="Seychelles" value="183">Seychelles</option>
+                            <option label="Sierra Leone" value="184">Sierra Leone</option>
+                            <option label="Singapore" value="130">Singapore</option>
+                            <option label="Slovakia" value="88">Slovakia</option>
+                            <option label="Slovenia" value="89">Slovenia</option>
+                            <option label="Solomon Islands" value="208">Solomon Islands</option>
+                            <option label="Somalia" value="185">Somalia</option>
+                            <option label="South Africa" value="186">South Africa</option>
+                            <option label="South Korea" value="131">South Korea</option>
+                            <option label="South Sudan" value="403">South Sudan</option>
+                            <option label="Spain" value="90">Spain</option>
+                            <option label="Sri Lanka" value="132">Sri Lanka</option>
+                            <option label="Sudan" value="187">Sudan</option>
+                            <option label="Suriname" value="40">Suriname</option>
+                            <option label="Swaziland" value="188">Swaziland</option>
+                            <option label="Sweden" value="91">Sweden</option>
+                            <option label="Switzerland" value="92">Switzerland</option>
+                            <option label="Syria" value="133">Syria</option>
+                            <option label="Taiwan" value="134">Taiwan</option>
+                            <option label="Tajikistan" value="135">Tajikistan</option>
+                            <option label="Tanzania" value="189">Tanzania</option>
+                            <option label="Thailand" value="136">Thailand</option>
+                            <option label="Togo" value="190">Togo</option>
+                            <option label="Tonga" value="209">Tonga</option>
+                            <option label="Trinidad and Tobago" value="27">Trinidad and Tobago</option>
+                            <option label="Tunisia" value="191">Tunisia</option>
+                            <option label="Turkey" value="93">Turkey</option>
+                            <option label="Turkmenistan" value="137">Turkmenistan</option>
+                            <option label="Turks and Caicos Islands" value="410">Turks and Caicos Islands</option>
+                            <option label="Tuvalu" value="210">Tuvalu</option>
+                            <option label="Uganda" value="192">Uganda</option>
+                            <option label="Ukraine" value="94">Ukraine</option>
+                            <option label="United Arab Emirates" value="138">United Arab Emirates</option>
+                            <option label="United Kingdom" value="95">United Kingdom</option>
+                            <option label="United States" value="1">United States</option>
+                            <option label="United States Virgin Islands" value="28">United States Virgin Islands
+                            </option>
+                            <option label="Uruguay" value="41">Uruguay</option>
+                            <option label="Uzbekistan" value="139">Uzbekistan</option>
+                            <option label="Vanuatu" value="211">Vanuatu</option>
+                            <option label="Vatican City" value="96">Vatican City</option>
+                            <option label="Venezuela" value="42">Venezuela</option>
+                            <option label="Vietnam" value="140">Vietnam</option>
+                            <option label="Wallis and Futuna" value="212">Wallis and Futuna</option>
+                            <option label="Western Sahara" value="193">Western Sahara</option>
+                            <option label="Yemen" value="141">Yemen</option>
+                            <option label="Zambia" value="194">Zambia</option>
+                            <option label="Zimbabwe" value="195">Zimbabwe</option>
 
-                    <div class="form-group col-md-3">
-                        <label>Credit Note No</label>
-                        <div>
-                            2021/12102
-                        </div>
+                        </select>
+                   
                     </div>
-                    <div class="form-group col-md-3">
-                        <label>Date of Credit Note</label>
-                        <div>
-                            Oct 13, 2021
-                        </div>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="exampleInputEmail1">Particulars</label>
-                        <div>
-                            Credit Note for :- TD1728884 Misc Booking Cancelled
+                    <div class="col-md-3 form-group">
+                        <label>City</label>
+                        <select name="sel_city" id="sel_city"
+                            class="required selectpicker form-control show-menu-arrow bs-select-hidden"
+                            data-live-search="true">
+                            <option value="">--Select--</option>
+
+                        </select>
+                     
+                        <div id="city_loading" style="position:absolute;display:none">
+                            <img src="/cpfv3/images/ajax_pagination_loading.gif" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="row mt-2">
-                    <div class="form-group col-md-3">
-                        <label>Amount Received</label>
-                        <div>
-                            INR&nbsp;114.321
-                        </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button type="button" name="add" class="btn btn-dark btn-sm" value="SUBMIT"
+                            onclick="return check_email(document.forms['frm_add_subscriber'].txt_email.value,1);">
+                  
+                                <i class="fa fa-floppy-o"></i>
+                                &nbsp;Save
+                           
+                        </button>
                     </div>
-
-                 
-               
                 </div>
-        
-    
+            </div>
 
+
+
+
+        </form>
 
 
         <!-- End -->
@@ -1254,299 +1488,12 @@
 
 
     </div>
-</form>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
 <script src="dist/js/bootstrap-select.js"></script>
-<script>
-
-    // For Last Modifiaction Datepicker
-
-    const status_from_date = flatpickr("#status_from_date", {
-        dateFormat: "Y-m-d",
-        minDate: "today"
-    });
 
 
-    const status_to_date = flatpickr("#status_to_date", {
-        dateFormat: "Y-m-d",
-        minDate: "today"
-    });
-
-
-    const sTrashBtn = document.getElementById("sTrashBtn");
-    sTrashBtn.addEventListener("click", function () {
-        status_from_date.clear();
-        status_to_date.clear();
-
-    });
-
-
-
-    const service_from_date = flatpickr("#service_from_date", {
-        dateFormat: "Y-m-d",
-        minDate: "today"
-    });
-
-
-    const service_to_date = flatpickr("#service_to_date", {
-        dateFormat: "Y-m-d",
-        minDate: "today"
-    });
-
-
-    const serTrashBtn = document.getElementById("serTrashBtn");
-    serTrashBtn.addEventListener("click", function () {
-        service_from_date.clear();
-        service_to_date.clear();
-
-    });
-
-
-</script>
-<script type="text/javascript">
-    var wrapper1 = document.getElementById('wrapper1');
-    var wrapper2 = document.getElementById('wrapper2');
-    wrapper1.onscroll = function () {
-        wrapper2.scrollLeft = wrapper1.scrollLeft;
-    };
-    wrapper2.onscroll = function () {
-        wrapper1.scrollLeft = wrapper2.scrollLeft;
-    };
-</script>
-<script>
-    var ajax = new sack();
-
-    function extractNumber(obj, decimalPlaces, allowNegative) {
-        var regexp = /^\d+$|^\d+\.\d{1,3}$/;
-        if (regexp.test($(obj).val())) {
-            temp = $(obj).val();
-            return true;
-        } else {
-            $(obj).val(temp);
-            showWarAlert("please enter a valid amount");
-        }
-    }
-    function checkAmount(pendingAmount, Obj) {
-        if (Obj.value > pendingAmount) {
-            showWarAlert("You can not insert more then pending amount.");
-            Obj.value = '';
-            Obj.focus();
-            return false;
-        }
-    }
-    function validate_chk(formObj, action) {
-        var allocatedAmount = 0;
-        var errMsg = '';
-        var errEle;
-        $(document).find(".chk-invoice").each(function () {
-            var panel = $("#panel-" + $(this).attr('invoice_number'));
-            var chk = $(panel).find(".invoice-table input[type='checkbox']").prop("checked")
-            var amt = parseFloat($(panel).find(".invoice-table input[type='text']").val());
-            if (chk == true && amt > 0 && !isNaN(amt)) {
-                allocatedAmount += amt
-            } else if (chk == true && (amt <= 0 || isNaN(amt))) {
-                errEle = $(panel).find(".invoice-table input[type='text']");
-                errMsg = "Amount Can not be blank or zero. Enter amount for Invoice: " + $(this).attr("invoice_number");
-                return false;
-            } else if (chk != true) {
-                $(panel).find(".panel-body table.table tr").each(function () {
-                    if ($(this).find(".row_chkbox").prop("checked") == true && parseFloat($(this).find(".booking_w_amt").val()) > 0) {
-                        allocatedAmount += parseFloat($(this).find(".booking_w_amt").val())
-                    } else if ($(this).find(".row_chkbox").prop("checked") && (parseFloat($(this).find(".booking_w_amt").val()) <= 0 || isNaN(parseFloat($(this).find(".booking_w_amt").val())))) {
-                        errEle = $(this).find(".booking_w_amt");
-                        errMsg = "Amount Can not be blank or zero. Enter amount for Invoice: " + $(this).find(".row_chkbox").attr("invoice_number") + " Booking: " + $(this).find(".row_chkbox").attr("bcode");
-                    }
-                });
-            }
-        });
-        if (errMsg != '') {
-            showWarAlert(errMsg);
-            return false;
-        }
-        if (allocatedAmount <= 0) {
-            showWarAlert("Please Select Atleast One Booking To Allocate.");
-            return false;
-        }
-        if (allocatedAmount > pendingtoAllocate) {
-            showWarAlert("Receipt amount is less then allocated amount.");
-            return false;
-        }
-        if (action == "edit_data" || action == "edit_data_single_invoice")
-            showDeleteAlert2("Allocate this amount to the selected Receipt(s)?", formObj, action);
-
-
-
-    }
-
-    function showDeleteAlert2(msg, formObj, action) {
-        swal({
-            title: msg,
-            type: "warning",
-            showCancelButton: true,
-            confirmButtonText: "Ok",
-            confirmButtonColor: "#F0AD4E",
-            closeOnConfirm: true
-        },
-            function (isConfirm) {
-                if (isConfirm) {
-                    $('#Allocate').hide();
-                    $('#allocate_loader').show();
-
-                    if (action == "edit_data" || action == "edit_data_single_invoice") {
-                        formObj.action.value = action;
-                    }
-                    //showWarAlert("Under Construction");
-                    formObj.submit();
-                }
-            });
-    }
-    function total_allocation_amount_set(obj) {
-        var rowid = $(obj).attr("rowid");
-        var pnd_amt = parseFloat($("#pnd_amt_" + rowid).val());
-        if ((allocated + pnd_amt) > pendingtoAllocate) {
-            $(".booking_w_amt[rowid='" + rowid + "']").val(pendingtoAllocate - allocated);
-        } else {
-            $(".booking_w_amt[rowid='" + rowid + "']").val(pnd_amt);
-        }
-    }
-    function total_allocation_amount_invoice_set(obj) {
-        var invoice_number = $(obj).attr("invoice_number");
-        if ($(obj).prop("checked")) {
-            var rowid = $(obj).attr("rowid");
-            var pnd_amt = parseFloat($(".inv-pending-amount[invoice_number='" + invoice_number + "']").val());
-            if ((allocated + pnd_amt) > pendingtoAllocate) {
-                $("#amt-" + invoice_number).val(pendingtoAllocate - allocated);
-            } else {
-                $("#amt-" + invoice_number).val(pnd_amt);
-            }
-        } else {
-            $("#amt-" + invoice_number).val("0");
-        }
-    }
-    function total_allocation_amount(obj) {
-        allocated = 0;
-        $(document).find(".chk-invoice").each(function () {
-            var panel = $("#panel-" + $(this).attr("invoice_number"))
-            var chk = $(panel).find(".invoice-table input[type='checkbox']").prop("checked");
-            var amt = parseFloat($(panel).find(".invoice-table input[type='text']").val());
-            if (chk == true && amt > 0) {
-                allocated += amt
-            } else if (chk != true) {
-                $(panel).find(".panel-body table.table tr").each(function () {
-                    if ($(this).find(".row_chkbox").prop("checked") == true && parseFloat($(this).find(".booking_w_amt").val()) > 0) {
-                        allocated += parseFloat($(this).find(".booking_w_amt").val())
-                    }
-                });
-            }
-        });
-        if (pendingtoAllocate < allocated) {
-            showWarAlert("Receipt amount is less then allocated amount.");
-            $(obj).val("");
-            $(".row_chkbox[rowid='" + $(obj).attr("rowid") + "']").prop("checked", false);
-            return false
-        }
-        if (allocated > 0) {
-            $("span.amt").html("Allocated Amount-" + (allocated));
-            $("span.amt").show();
-        } else {
-            $("span.amt").html("Allocated Amount-0.000");
-            $("span.amt").hide();
-        }
-    }
-
-    $(function () {
-        $("#download_excel").click(function (e) {
-            e.preventDefault();
-            var get = { "page": "receipt", "action": "edit", "agent_id": "291", "rec_id": "602", "Rec_amount": "114.321", "currency_code": "SAR", "search_id": "Rcpt00000602", "customer_id": "", "search_agent": "", "search_payment_mode": "", "search_payments": "" };
-            var frmData = "controller.php?" + $.param(get) + "&download_type=excel&download=allocatedBooking";
-            var win = window.open(frmData);
-            return false;
-        });
-        $(".row_chkbox").change(function () {
-            var invoice_number = $(this).attr("invoice_number");
-            $("#chk-" + invoice_number).prop("checked", false);
-            $("#amt-" + invoice_number).val("");
-            var amtEle = $(".booking_w_amt[invoice_number='" + invoice_number + "']");
-            if (!$(this).prop("checked")) {
-                $(amtEle).val(0);
-            }
-            total_allocation_amount(amtEle);
-        });
-        $(".booking_w_amt").keydown(function () {
-            var invoice_number = $(this).attr("invoice_number");
-            $("#chk-" + invoice_number).prop("checked", false);
-            $("#amt-" + invoice_number).val("");
-            total_allocation_amount(this);
-        });
-        $(".chk-invoice").change(function () {
-            var invoice = $(this).attr("invoice_number");
-            if ($(this).prop("checked")) {
-                $(".select-all[invoice_number='" + invoice + "']").prop("checked", false);
-                $(".row_chkbox[invoice_number='" + invoice + "']").prop("checked", false);
-                $(".booking_w_amt[invoice_number='" + invoice + "'").val("");
-            }
-            total_allocation_amount();
-        });
-        $(".invoice-amt").keypress(function () {
-            $("#chk-" + $(this).attr("invoice_number")).prop("checked", "checked")
-        });
-        $(".booking_w_amt").keypress(function () {
-            $(".row_chkbox[rowid='" + $(this).attr("rowid") + "']").prop("checked", "checked");
-        });
-        $("[data-toggle='collapse']").click(function () {
-            $(this).find("i").toggleClass("fa-chevron-down").toggleClass("fa-chevron-up");
-        });
-        $("#expand-all").click(function () {
-            if ($(this).html() == 'Expand all') {
-                $(this).html('Collapse all');
-                $(".panel-collapse").collapse('show');
-            }
-            else {
-                $(this).html('Expand all');
-                $(".panel-collapse").collapse('hide');
-            }
-        });
-    })
-</script>
-<script language="javascript">
-    <!--
-        function	booking_status_info(reservation_id,booking_id) {
-        window.open('booking_status_info.php?reservation_id='+reservation_id+'&booking_id='+booking_id,'info'+booking_id,'width=750,height=600,scrollbars=yes,resizable=yes');
-        }
-    //-->
-    /* code added by Anand on 12 Dec for Print Receipt */
-     /*code modified by himanshu on 8-10-2013 for print*/
-    function print_receipt(){
-        window.print();
-        
-        
-    }
-    /* code added by Anand on 12 Dec for Print Receipt */
-    var ajax = new sack();
-    function send_email_data() {
-        email_obj = document.getElementById('txt_email');
-        receipt_id=602;
-        
-        if(is_empty(email_obj, email_obj.value)) {
-            alert('Enter email id.');
-            email_obj.focus();
-        } else {
-                ajax.requestFile = 'ajax/ajax_send_view_receipt_email.php?email_id='+email_obj.value+'&id='+receipt_id;	// Specifying which file to get		
-                ajax.onCompletion = sendaccountEmail;	// Specify function that will be executed after file has been found
-                ajax.runAJAX();		// Execute AJAX function
-            
-        }
-    }
-    
-    function sendaccountEmail() {
-        email_obj = document.getElementById('txt_email');
-        alert("Email Sent");
-        email_obj.value = '';
-    }
-    
-    </script>
 
 </html>

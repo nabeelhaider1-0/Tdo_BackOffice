@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+
+    <script src="https://kit.fontawesome.com/1213934896.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Travel Destination Online</title>
+</head>
+
+<body>
+
+    <div class="color-line">
+    </div>
+
+    <!---                                    NAv BAr Secton            -->
+    <section>
+        <nav class="navbar navbar-expand-lg bg-light" id="firstNav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="TDO LOGO Without Background.png" class="img-fluid"
+                        alt="Responsive image" style="max-height: 50px; margin-left: 10px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Welcome <b>Beta_Tdo</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-regular fa-clock"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-user fa-2xl"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!--      2nd Navbar Section For Search Bookkng And other Queries           -->
+    <section>
+        <nav class="navbar navbar-expand-lg" id="secondNav">
+          <div class="w-100">
+            <a class="navbar-brand" href="index.html" style="color: white;font-size: 10px;" id="tdotext">Travel Destination
+              Online Mid Office</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+              <!--  Drop down menu for Booking-->
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>BOOKINGS</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item" href="index.html">Search Bookings</a></li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">Reminders&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="BookingRemindersNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="BookingRemindersSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="BookingNewOnlineBooking.html">NEW ONLINE BOOKING</a></li>
+                  <li><a class="dropdown-item" href="menuitem.html">NEW OFFLINE
+                      BOOKING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappingggsub">
+                      <li><a class="dropdown-item" href="BookingNewOnlineBookingHotels.html">HOTELS</a></li>
+                      <li><a class="dropdown-item" href="BookingNewOnlineBookingFlights.html">FLIGHTS</a></li>
+                      <li><a class="dropdown-item" href="BookingNewOnlineBookingTransfer.html">TRANSFER</a></li>
+                      <li><a class="dropdown-item" href="BookingNewOnlineBookingTour.html">TOUR</a></li>
+                      <li><a class="dropdown-item" href="BookingNewOnlineBookingMiscServices.html">MISC SERVICES</a></li>
+                      <li><a class="dropdown-item" href="BookingNewOnlineBookingGroups.html">GROUPS</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">RECONCILIATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="transsub">
+                      <li><a class="dropdown-item" href="BookingReconcilationManualFlights.html">MANUAL FLIGHTS</a></li>
+                      <li><a class="dropdown-item" href="BookingReconcilationManual.html">MANUAL</a></li>
+                      <li><a class="dropdown-item" href="BookingReconcilationAuto.html">AUTO</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="BookingExchange-ReAssignBooking.html">EXCHANGE/REASSIGN<br>BOOKING</a>
+                  </li>
+                </ul>
+              </div>
+    
+              <!--  Drop down menu for Customer-->
+    
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>CUSTOMERS</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">AGENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="customeragentsearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="customeragentnew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="customeragentsearchusers.html">SEARCH USERS</a></li>
+                      <li><a class="dropdown-item" href="menuitem.html">ADVANCED
+                          SETTINGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                          <li><a class="dropdown-item" href="customeragentadvanceonline.html">ONLINE SUPPLIERS</a></li>
+                          <li><a class="dropdown-item" href="customeragentadvanceoffline.html">LOCAL SUPPLIERS</a></li>
+                        </ul>
+    
+                      </li>
+                      <li><a class="dropdown-item" href="customeragentrateprofile.html">AGENT RATE PROFILE</a></li>
+                    </ul>
+                  </li>
+    
+                  </li>
+                  <li><a class="dropdown-item" href="customerB2C.html">B2C CUSTOMER</a></li>
+                </ul>
+              </div>
+    
+              <!--  Drop down menu for Messages-->
+    
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>MESSAGES</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item" href="menuitem.html">AGENT
+                      MESSAGES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="MessagesAgentMessagesNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MessagesAgentMessagesInbox.html">INBOX</a></li>
+                      <li><a class="dropdown-item" href="MessagesAgentMessagesOutbox.html">OUTBOX</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">MASS
+                      MAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">SUBSCRIBERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="MessagesMassMailSubscribersNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MessagesMassMailSubscribersSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">SUBSCRIBERS
+                          GROUPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="subscribersub">
+                          <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MessagesMassMailSubscribersGroupsSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">CAMPAIGNS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                          <li><a class="dropdown-item" href="MessagesMassMailCampaignsNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MessagesMassMailCampaignsSearch.html">SEARCH</a></li>
+                          <li><a href="http://beta.tdonlines.com/tms/download_newsletter.php">DOWNLOAD NEWSLETTER</a></li>
+                          <li><a class="dropdown-item" href="MessagesMassMailCampaignsAnalysis.html">ANALYSIS</a></li>
+                          <li><a class="dropdown-item" href="MessagesMassMailCampaignsSettings.html">SETTINGS</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+    
+    
+              <!--  Drop down menu for Accounts-->
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>ACCOUNTS</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">AGENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">RECEIPTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="AccountsAgentsRecieptsNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="AccountsAgentsRecieptsSearch.html">SEARCH</a></li>
+                          <li><a class="dropdown-item" href="AccountsAgentsRecieptsByBookingId.html">BY BOOKING ID</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">CREDIT
+                          NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="AccountsAgentsCreditNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="AccountsAgentsCreditSearch.html">SEARCH</a></li>
+                          <li><a class="dropdown-item" href="AccountsAgentsCreditByBookingId.html">BY BOOKING ID</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">DEBIT
+                          NOTES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="AccountsAgentsDebitNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="AccountsAgentsDebitSearch.html">SEARCH</a></li>
+                          <li><a class="dropdown-item" href="AccountsAgentsDebitByBookingId.html">BY BOOKING ID</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">TAX
+                      SETUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="menuitem.html">TAX
+                          MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="AccountsTaxsetupTaxMasterNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="AccountsTaxsetupTaxMasterSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">TAX CONFIGURATION&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="AccountsTaxsetupTaxConfigurationNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="AccountsTaxsetupTaxConfigurationSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">PAYMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="AccountsSuppliersPaymentsNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="AccountsSuppliersPaymentsSearch.html">SEARCH</a></li>
+                          <li><a class="dropdown-item" href="AccountsSuppliersPaymentsByBookingId.html">PAYMENT BY BOOKING
+                              ID</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+    
+    
+              <!--  Drop down menu for Reports-->
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b> REPORTS</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">MANAGEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">BUSINESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="ReportManagementBusinessByagent.html">BY AGENT</a></li>
+                          <li><a class="dropdown-item" href="ReportManagementBusinessByHotel.html">BY HOTEL</a></li>
+                          <li><a class="dropdown-item" href="ReportManagementBusinessBycity.html">BY CITY</a></li>
+                          <li><a class="dropdown-item" href="ReportManagementBusinessBycountry.html">BY COUNTRY</a></li>
+                          <li><a class="dropdown-item" href="ReportManagementBusinessByonlinesupplier.html">BY ONLINE SUPPLIER</a></li>
+                          <li><a class="dropdown-item" href="ReportManagementBusinessByofflinesupplier.html">BY OFFLINE SUPPLIER</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">BOOKING BY
+                          SUPPLIER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li><a class="dropdown-item" href="ReportManagementBookingbySupplierByStatus.html">BY STATUS</a></li>
+                          <li><a class="dropdown-item" href="ReportManagementBookingbySupplierByNights.html">BY NIGHTS</a></li>
+                          <li><a class="dropdown-item" href="ReportManagementBookingbySupplierBySupplierProfile.html">BY SUPPLIER PROFILE</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="ReportManagementSalesManager.html">SALES MANAGER</a></li>
+                      <li><a class="dropdown-item" href="ReportManagementSalesComparison.html">SALES COMPARISON</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">OPERTAIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="ReportsOperataionsBookingReprt.html">BOOKING REPORT</a></li>
+                      <li><a class="dropdown-item" href="ReportsOperataionsAgentSearchLogs.html">AGENT SEARCH LOGS</a></li>
+                      <li><a class="dropdown-item" href="ReportsOperataionsVoucher.html">VOUCHER</a></li>
+                      <li><a class="dropdown-item" href="ReportsOperataionsDailyRoe.html">DAILY ROE</a></li>
+                      <li><a class="dropdown-item" href="ReportsOperataionsLoyalityProgram.html">LOYALTY PROGRAM</a></li>
+                      <li><a class="dropdown-item" href="ReportsOperataionsReminderprosubscriptions.html">REMINDERPRO<br>SUBSCRIPTIONS</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">ACCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="ReportsAccountsDailySale.html">DAILY SALES</a></li>
+                      <li><a class="dropdown-item" href="ReportsAccountCustomerStatement.html">CUSTOMER STATEMENT</a></li>
+                      <li><a class="dropdown-item" href="menuitem.html">SUPPLIER
+                          STATEMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                          <li><a class="dropdown-item" href="ReportsAccountsSupplierStatementOnlineSupplier.html">ONLINE SUPPLIER</a></li>
+                          <li><a class="dropdown-item" href="ReportsAccountsSupplierStatementOfflineSupplier.html">OFFLINE SUPPLIER</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">OUTSTANDING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                          <li><a class="dropdown-item" href="ReportsAccountsOutstandingsCustomer.html">CUSTOMER</a></li>
+                          <li><a class="dropdown-item" href="ReportsAccountsOutstandingsSupplier.html">SUPPLIER</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="ReportsAccountsInvoice.html">INVOICES</a></li>
+                      <li><a class="dropdown-item" href="ReportsAccountsAgentReceipts.html">AGENT RECEIPTS</a></li>
+                      <li><a class="dropdown-item" href="ReportsAccountsAgentReceiptSummary.html">AGENT RECEIPT SUMMARY</a></li>
+                      <li><a class="dropdown-item" href="ReportsAccountsSupplierpayments.html">SUPPLIER PAYMENTS</a></li>
+                      <li><a class="dropdown-item" href="ReportsAccountstax.html">TAX</a></li>
+                      <li><a class="dropdown-item" href="ReportsAccountsComissionReport.html">COMMISSION</a></li>
+                      <li><a class="dropdown-item" href="ReportsAccountsPaymentGatewayBooking.html">PAYMENT GATEWAY<br>BOOKINGS</a></li>
+                      <li><a class="dropdown-item" href="ReportsAccountsAgentGlobalStatement.html">AGENT GLOBAL STATEMENT</a></li>
+                      <li><a class="dropdown-item" href="ReportsAccountsGlobalCustomerReport.html">GLOBAL CUSTOMER REPORT</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                      <li><a class="dropdown-item" href="ReportsMappingDestination.html">DESTINATIONS</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+    
+    
+              <!--  Drop down menu for Contracts-->
+    
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>CONTRACTS</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="ContractsHotelsRates.html">RATES</a></li>
+                      <li><a class="dropdown-item" href="ContractsHotelsAllotmentMap.html">ALLOTMENT MAP</a></li>
+                      <li><a class="dropdown-item" href="menuitem.html">DYNAMIC
+                          ALLOTMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                          <li><a class="dropdown-item" href="ContractsHotelsDynamicAllotmentNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="ContractsHotelsDynamicAllotmentSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">OFFERS &
+                          DISCOUNTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                          <li><a class="dropdown-item" href="ContractsHotelsOffersandiscountsNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="ContractsHotelsOffersandiscountsSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="ContractsTranfersRates.html">RATES</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">TOURS & ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item" href="ContractsToursandactivitiesRates.html">RATES</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">FLIGHTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item" href="ContractsFlightsSearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="ContractsFlightsSuppplierMapping.html">FLIGHT SUPPLIER MAPPING</a>
+                      </li>
+                      <li><a class="dropdown-item" href="ContractsFlightsAddrates.html">ADD RATES</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+    
+              <!--  Drop down menu for Masters-->
+    
+    
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>MASTERS</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="MastersHotelsNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersHotelsSearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">AMENITITES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                          <li><a class="dropdown-item" href="MastersHotelsAmenitiesNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersHotelsAmenitiesSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item"
+                          href="#">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                          <li><a class="dropdown-item" href="MastersHotelsLocationsNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersHotelsLocationsSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">ROOM
+                          VIEW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                          <li><a class="dropdown-item" href="MastersHotelsRoomviewNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersHotelsRoomviewSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">ROOM
+                          CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                          <li><a class="dropdown-item" href="MastersHotelsRoomcategoryNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersHotelsRoomcategorySearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">INVENTORY ROOM
+                          CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                          <li><a class="dropdown-item" href="MastersHotelsInventoryRoomCategoryNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersHotelsInventoryRoomCategorySearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">MEAL
+                          BASIS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="mealsub">
+                          <li><a class="dropdown-item" href="MastersHotelsMealBasisMapping.html">MEAL BASIS MAPPING</a></li>
+                          <li><a class="dropdown-item" href="MastersHotelsMealMappingNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersHotelsMealMappingSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">PREFERRED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                          <li><a class="dropdown-item" href="MastersHotelsPreferedNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersHotelsPreferedOnSearchPage.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">SPECIAL
+                          REQUESTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                          <li><a class="dropdown-item" href="MastersHotelsSpecialRequestsNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersHotelsSpecialRequestsSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">TRANSFERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="menuitem.html">TEST</a></li>
+                      <li><a class="dropdown-item" href="MastersTransfersNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersTransfersSearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">LOCATIONS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                          <li><a class="dropdown-item" href="MastersTransfersLocationNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersTransfersLocationSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">VEHICLES</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">TOURS & ACTIVITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item" href="Masters Tours&ActivitiesNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="Masters Tours&ActivitiesSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">SUPPLIMENTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">HOTELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="MastersSupplementsHotelsNew .html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersSupplementsHotelsSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">AIRLINES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                      <li><a class="dropdown-item" href="MastersAirlinesNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersAirlinesSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="MastersPreferedcities.html">PREFERRED CITIES</a></li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="suppsub">
+                      <li><a class="dropdown-item" href="menuitem.html">ONLINE
+                          SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="MastersSuppliersOnlineSuppliersSearchSupplier.html">SEARCH</a>
+                          </li>
+                          <li><a class="dropdown-item"
+                              href="MastersSuppliersOnlineSuppliersSetautocheckConfiguration.html">SEARCH AUTO
+                              CHECK<br>CONFIGURATION</a>
+                          </li>
+                          <li><a class="dropdown-item" href="MastersSuppliersOnlineSuppliersAutocheckSuppliers.html">AUTO
+                              CHECK SUPPLIER</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">OFFLINE
+                          SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li><a class="dropdown-item" href="MastersSuppliersOfflineSupplierNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersSuppliersOfflineSupplierSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="MAstersTravelClass.html">TRAVEL CLASS</a></li>
+                  <li><a class="dropdown-item" href="menuitem.html">MARK-UP PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="marksub">
+                      <li><a class="dropdown-item" href="MastersMarkupProfilesNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersMarkupProfilesSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">MARKET
+                      PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="marketsub">
+                      <li><a class="dropdown-item" href="menuitem2.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="menuitem2.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">PAYMENT GATEWAYS&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="paysub">
+                      <li><a class="dropdown-item" href="MastersPaymentgatewaySearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="MastersAircarft.html">AIRCRAFT</a></li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">BANKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="banksub">
+                      <li><a class="dropdown-item" href="MastersBankNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersBankSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">CURRENCIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="cursub">
+                      <li><a class="dropdown-item" href="MastersCurrenciesNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersCurrenciesSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">TAXES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="taxsub">
+                      <li><a class="dropdown-item" href="MastersTaxesNew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="MastersTaxesSearch.html">SEARCH</a></li>
+                      <li><a class="dropdown-item" href="menuitem.html">TAX
+                          MASTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                          <li><a class="dropdown-item" href="MastersTaxesTaxMasterNew.html">ADD</a></li>
+                          <li><a class="dropdown-item" href="MastersTaxesTaxMasterSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="menuitem.html">TAX
+                          CONFIGURATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                          <li><a class="dropdown-item" href="MastersTaxesTaxConfigurationNew.html">ADD</a></li>
+                          <li><a class="dropdown-item" href="MastersTaxesTaxConfigurationSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">LOYALITY PROGRAM&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="loyaltysub">
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">TIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="MastersLoyalityProgramTiersNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersLoyalityProgramTiersSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">REWARDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="">
+                          <li><a class="dropdown-item" href="MastersLoyalityProgramRewardsNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersLoyalityProgramRewardsSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="Masters Packages.html">PACAKGES</a></li>
+                  <li><a class="dropdown-item" href="MastersOfferCode.html">OFFER CODES</a></li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">VEHICLES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="vehiclesub">
+                      <li><a class="dropdown-item" href="menuitem.html">VEHICLE
+                          TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="MastersVehiclesVehicleTypeNew.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="MastersVehiclesVehicleTypeSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">INVENTORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li><a class="dropdown-item" href="MastersVehiclesInventoryNew.html">ADD</a></li>
+                          <li><a class="dropdown-item" href="MastersVehiclesInventorySearch.html">MANAGE</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+    
+    
+              <!--  Drop down menu for Visa-->
+    
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>VISA</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item"
+                      href="VisaVisaCategorySearch.html">CATEGORY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="VisaVisaCategoryAdd.html">ADD</a></li>
+                      <li><a class="dropdown-item" href="VisaVisaCategorySearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="VisaVisaRequests.html">VISA REQUEST</a></li>
+                  <li><a class="dropdown-item" href="menuitem.html">VISA
+                      RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item" href="VisaVisaRatesAddSupplierVisaRates .html">ADD SUPPLIER VISA
+                          RATES</a></li>
+                      <li><a class="dropdown-item" href="VisaVisaRatesSearchSupplierVisaRates .html">SEARCH SUPPLIER VISA
+                          RATESX</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="NewOfflneVisaBooking.html">NEW OFFLINE VISA BOOKING</a></li>
+                </ul>
+              </div>
+    
+    
+              <!--  Drop down menu for Flights-->
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>FLIGHT</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item" href="menuitem.html">FLIGHT
+                      RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="FlightFlightRulesAddrules.html">ADD RULES</a></li>
+                      <li><a class="dropdown-item" href="FlightFlightRulesSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">FLIGHT
+                      PCC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="FlightFlightPCCAdd.html">ADD </a></li>
+                      <li><a class="dropdown-item" href="FlightFlightPCCSerach.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">FLIGHT QCT
+                      RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                      <li><a class="dropdown-item" href="FlightFlightQCTRuleAdd.html">ADD </a></li>
+                      <li><a class="dropdown-item" href="FlightFlightQCTRuleSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">FLIGHT CANCELLATION
+                      RULES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappinggsub">
+                      <li><a class="dropdown-item" href="FlightFlightCancellationRuleAdd.html">ADD </a></li>
+                      <li><a class="dropdown-item" href="FlightFlightCancellationRuleSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+    
+    
+              <!--  Drop down menu for Suppliers-->
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>SUPPLIERS</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item" href="menuitem2.html">MARKET
+                      PROFILES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="menuitem2.html">NEW </a></li>
+                      <li><a class="dropdown-item" href="menuitem2.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="SuppliersOnlineSuppliersSearch.html">ONLINE
+                      SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="SuppliersOnlineSuppliersNew.html">NEW </a></li>
+                      <li><a class="dropdown-item" href="SuppliersOnlineSuppliersSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">OFFLINE
+                      SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item" href="SuppliersOfflineSuppliersNew.html">NEW </a></li>
+                      <li><a class="dropdown-item" href="SuppliersOfflineSuppliersSerach.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+    
+    
+              <!--  Drop down menu for Lodge Card-->
+    
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="menuitem.html" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <b>LODGE CARD</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">CARD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="LodgeCardAdd.html">ADD </a></li>
+                      <li><a class="dropdown-item" href="LodgeCardSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">CARD
+                      PAYMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="LodgeCardMappingAdd.html">ADD </a></li>
+                      <li><a class="dropdown-item" href="LodgeCardMappingSearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+    
+    
+              <!--  Drop down menu for Tools-->
+    
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>TOOLS</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">MARK-UPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="menuitem.html">ADD
+                          ON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="ToolsMarkupsAddonsNew.html">NEW </a></li>
+                          <li><a class="dropdown-item" href="ToolsMarkupsAddonsSearch.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="ToolsMarkupsByCountryBranch.html">BY COUNTRY/BRANCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="ToolsAddLeapTime.html">ADD LEAD TIME</a></li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">MAPPING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappingsub">
+                      <li><a class="dropdown-item" href="menuitem.html">COUNTRIES
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                          <li><a class="dropdown-item" href="ToolsMappingCountriesManual.html">MANUAL </a></li>
+                          <li><a class="dropdown-item" href="ToolsMappingCountriesAuto.html">AUTO</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">CITIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li><a class="dropdown-item" href="ToolsMappingCitiesManual.html">MANUAL </a></li>
+                          <li><a class="dropdown-item" href="ToolsMappingCitiesAuto.html">AUTO</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="ToolsMappingHotels.html">HOTELS</a></li>
+                      <li><a class="dropdown-item" href="ToolsMappingNationalities.html">NATIONALITIES</a></li>
+                      <li><a class="dropdown-item" href="menuitem.html">OFFLINE
+                          SUPPLIERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                          <li><a class="dropdown-item" href="ToolsMappingOfflineSuppliersHotel.html">HOTEL </a></li>
+                          <li><a class="dropdown-item" href="ToolsMappingTransfer.html">TRANSFER </a></li>
+                          <li><a class="dropdown-item" href="ToolsMappingTours&Activities.html">TOUR & ACTIVITIES</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">EXCHANGE
+                      RATES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="mappingggsub">
+                      <li><a class="dropdown-item" href="ToolsExchangeRatesMatrix.html">MATRIX </a></li>
+                      <li><a class="dropdown-item" href="ToolsExchangeRatesCalculator.html">CALCULATOR</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="menuitem.html">TRANSACTION LIMITS&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="transsub">
+                      <li><a class="dropdown-item" href="ToolsTransactionLimitsPerTrasaction.html">PER TRANSACTION </a></li>
+                      <li><a class="dropdown-item" href="ToolsTransactionLimitsTotal.html">TOTAL</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="ToolsRewardsDelivery.html">REWARDS DELIVERY</a></li>
+                  <li><a class="dropdown-item" href="ToolslanguageManager.html">LANGUAGE MANAGER</a></li>
+                  <li><a class="dropdown-item" href="FAQ.pdf">FAQ</a></li>
+                  <li><a class="dropdown-item" href="ToolsPresetText.html">PRESET TEXT</a></li>
+                </ul>
+              </div>
+    
+    
+              <!--  Drop down menu for Settings-->
+    
+              <div class="dropdown" id="drip">
+                <a class="boxview dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <b>SETTINGS</b>
+                </a>
+    
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="dripmenu">
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">STAFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="agentsub">
+                      <li><a class="dropdown-item" href="staffnew.html">NEW</a></li>
+                   <li><a class="dropdown-item" href="staffsearch.html">STAFF LIST</a></li>
+                      <li><a class="dropdown-item" href="menu-new.html">ACCESS
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu" id="accountsub1">
+                          <li><a class="dropdown-item" href="roles.html">ROLES </a></li>
+                          <li><a class="dropdown-item" href="menustaff.html">MENU </a></li>
+                          <li><a class="dropdown-item" href="reportsstaff.html">REPORTS</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="assignbranches.html">ASSIGN A BRANCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">BRANCHES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li><a class="dropdown-item" href="branchnew.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="branchsearch.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">EMAILS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="accountsub">
+                      <li><a class="dropdown-item" href="emails-newsetting.html">NEW</a></li>
+                      <li><a class="dropdown-item" href="emails-searchsetting.html">SEARCH</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="mid.-office.html">MID-OFFICE ACCESS</a></li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">NAVIGATION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="exchangesub">
+                      <li><a class="dropdown-item" href="sitemap.html">SYSTEM SITEMAP</a></li>
+                      <li><a class="dropdown-item"
+                          href="menuitem.html">MENUITEMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                            class="fa-solid fa-caret-right"></i></a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li><a class="dropdown-item" href="menu-new.html">NEW</a></li>
+                          <li><a class="dropdown-item" href="menu-search.html">SEARCH</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item"
+                      href="menuitem.html">LOGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-right"></i></a>
+                    <ul class="dropdown-menu dropdown-submenu" id="trxsub">
+                      <li><a class="dropdown-item" href="userlogs.html">USERS</a></li>
+                      <li><a class="dropdown-item" href="emaillogs.html">EMAILS</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+    
+      </section>
+    <!--    3rd Header for search booking          -->
+    <section>
+        <header>
+            <div class="row pt-0  pb-0 p-4">
+
+                <div class="col-md-3">
+                    <h5 style="font-size:14pt;font-weight: 500;">SUBSCRIBER DETAILS</h5>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-3">
+                    <i class="fa-solid fa-house-chimney"></i><span> /<a href="MessagesMassMailSubscribersSearch.html"
+                            style="text-decoration:none;color:grey"> List Subscriber</a> / Edit Subscriber</span>
+                </div>
+
+            </div>
+        </header>
+
+
+    </section>
+
+    <!---Body Paneel Menu items-->
+    <div class="container-fluid pt-0 p-4" id="content-pad">
+
+        <!-- First Row-->
+
+        <form>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label>Subscribers</label>
+                        <select class="required select_style selectpicker form-control form-control-sm show-menu-arrow bs-select-hidden"
+                            name="selSubscribers" onchange="JavaScript:getSubscriberDetail(this);"
+                            data-live-search="true">
+                            <option value="0">--Select--</option>
+                            <option value="1">Qtech Profile</option>
+                        </select>
+                       
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Email</label>
+                        <input type="text" class="required form-control form-control-sm " name="txt_email" size="45" maxlength="255" value="nida.ansari@qtechsoftware.com"
+                            tabindex="1">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Name</label>
+                        <input type="text" class="required form-control form-control-sm " name="txt_name" size="45" maxlength="255" value="Nida Ansari"
+                            tabindex="1">
+                    </div>
+
+                    <div class="col-md-3 form-group">
+                        <label>Agency Name</label>
+                        <input type="text" class="form-control form-control-sm " name="txt_agency_name" size="45" maxlength="255" value="Qtech"
+                            tabindex="1">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>Country</label>
+                        <select name="sel_country"
+                            class="required select_style selectpicker form-control form-control-sm  show-menu-arrow bs-select-hidden"
+                            onchange="JavaScript:getCityList(this);" data-live-search="true">
+                            <option value="">--Select--</option>
+                            <option label="Afghanistan" value="97">Afghanistan</option>
+                            <option label="Albania" value="43">Albania</option>
+                            <option label="Algeria" value="142">Algeria</option>
+                            <option label="Andorra" value="44">Andorra</option>
+                            <option label="Angola" value="143">Angola</option>
+                            <option label="Antigua And Barbuda" value="230">Antigua And Barbuda</option>
+                            <option label="Argentina" value="29">Argentina</option>
+                            <option label="Armenia" value="45">Armenia</option>
+                            <option label="Aruba" value="231">Aruba</option>
+                            <option label="Australia" value="196">Australia</option>
+                            <option label="Austria" value="46">Austria</option>
+                            <option label="Azerbaijan" value="47">Azerbaijan</option>
+                            <option label="Bahamas" value="3">Bahamas</option>
+                            <option label="Bahrain" value="98">Bahrain</option>
+                            <option label="Bangladesh" value="99">Bangladesh</option>
+                            <option label="Barbados" value="4">Barbados</option>
+                            <option label="Belarus" value="48">Belarus</option>
+                            <option label="Belgium" value="49">Belgium</option>
+                            <option label="Belize" value="5">Belize</option>
+                            <option label="Benin" value="144">Benin</option>
+                            <option label="Bermuda" value="6">Bermuda</option>
+                            <option label="Bhutan" value="100">Bhutan</option>
+                            <option label="Bolivia" value="30">Bolivia</option>
+                            <option label="Bonaire, Sint Eustatius and Saba" value="416">Bonaire, Sint Eustatius and
+                                Saba</option>
+                            <option label="Bosnia and Herzegovina" value="50">Bosnia and Herzegovina</option>
+                            <option label="Botswana" value="145">Botswana</option>
+                            <option label="Brazil" value="31">Brazil</option>
+                            <option label="British Virgin Islands" value="7">British Virgin Islands</option>
+                            <option label="Brunei" value="101">Brunei</option>
+                            <option label="Bulgaria" value="51">Bulgaria</option>
+                            <option label="Burkina Faso" value="146">Burkina Faso</option>
+                            <option label="Burundi" value="147">Burundi</option>
+                            <option label="Cambodia" value="102">Cambodia</option>
+                            <option label="Cameroon" value="148">Cameroon</option>
+                            <option label="Canada" value="2">Canada</option>
+                            <option label="Cape Verde" value="149">Cape Verde</option>
+                            <option label="Cayman Islands" value="8">Cayman Islands</option>
+                            <option label="Central African Republic" value="150">Central African Republic</option>
+                            <option label="Chad" value="151">Chad</option>
+                            <option label="Chile" value="32">Chile</option>
+                            <option label="China" value="103">China</option>
+                            <option label="Colombia" value="33">Colombia</option>
+                            <option label="Comoros" value="402">Comoros</option>
+                            <option label="Cook Islands" value="412">Cook Islands</option>
+                            <option label="Costa Rica" value="9">Costa Rica</option>
+                            <option label="Croatia" value="52">Croatia</option>
+                            <option label="Cuba" value="10">Cuba</option>
+                            <option label="Curacao" value="415">Curacao</option>
+                            <option label="Cyprus" value="53">Cyprus</option>
+                            <option label="Czech Republic" value="54">Czech Republic</option>
+                            <option label="Democratic Republic of the Congo" value="153">Democratic Republic of the
+                                Congo</option>
+                            <option label="Denmark" value="55">Denmark</option>
+                            <option label="Djibouti" value="154">Djibouti</option>
+                            <option label="Dominica" value="11">Dominica</option>
+                            <option label="Dominican Republic" value="12">Dominican Republic</option>
+                            <option label="East Timor" value="104">East Timor</option>
+                            <option label="Ecuador" value="34">Ecuador</option>
+                            <option label="Egypt" value="155">Egypt</option>
+                            <option label="El Salvador" value="13">El Salvador</option>
+                            <option label="Equatorial Guinea" value="156">Equatorial Guinea</option>
+                            <option label="Eritrea" value="157">Eritrea</option>
+                            <option label="Estonia" value="56">Estonia</option>
+                            <option label="Ethiopia" value="158">Ethiopia</option>
+                            <option label="Falkland Islands" value="35">Falkland Islands</option>
+                            <option label="Fiji Islands" value="198">Fiji Islands</option>
+                            <option label="Finland" value="57">Finland</option>
+                            <option label="France" value="58">France</option>
+                            <option label="French Guiana" value="36">French Guiana</option>
+                            <option label="French Polynesia" value="199">French Polynesia</option>
+                            <option label="Gabon" value="159">Gabon</option>
+                            <option label="Gambia" value="160">Gambia</option>
+                            <option label="Georgia" value="59">Georgia</option>
+                            <option label="Germany" value="60">Germany</option>
+                            <option label="Ghana" value="161">Ghana</option>
+                            <option label="Gibraltar" value="61">Gibraltar</option>
+                            <option label="Greece" value="62">Greece</option>
+                            <option label="Greece Islands" value="404">Greece Islands</option>
+                            <option label="Greenland" value="14">Greenland</option>
+                            <option label="Grenada" value="15">Grenada</option>
+                            <option label="Guadeloupe" value="16">Guadeloupe</option>
+                            <option label="Guam" value="200">Guam</option>
+                            <option label="Guatemala" value="17">Guatemala</option>
+                            <option label="Guernsey" value="63">Guernsey</option>
+                            <option label="Guinea" value="162">Guinea</option>
+                            <option label="Guinea Bissau" value="163">Guinea Bissau</option>
+                            <option label="Guyana" value="37">Guyana</option>
+                            <option label="Haiti" value="18">Haiti</option>
+                            <option label="Honduras" value="19">Honduras</option>
+                            <option label="Hong Kong" value="105">Hong Kong</option>
+                            <option label="Hungary" value="64">Hungary</option>
+                            <option label="Iceland" value="65">Iceland</option>
+                            <option label="India" value="106" selected="selected">India</option>
+                            <option label="Indonesia" value="107">Indonesia</option>
+                            <option label="Iran" value="108">Iran</option>
+                            <option label="Iraq" value="109">Iraq</option>
+                            <option label="Ireland" value="66">Ireland</option>
+                            <option label="Isle of Man" value="67">Isle of Man</option>
+                            <option label="Israel" value="110">Israel</option>
+                            <option label="Italy" value="68">Italy</option>
+                            <option label="Ivory Coast" value="164">Ivory Coast</option>
+                            <option label="Jamaica" value="20">Jamaica</option>
+                            <option label="Japan" value="111">Japan</option>
+                            <option label="Jersey" value="69">Jersey</option>
+                            <option label="Jordan" value="112">Jordan</option>
+                            <option label="Kazakhstan" value="113">Kazakhstan</option>
+                            <option label="Kenya" value="165">Kenya</option>
+                            <option label="Kiribati" value="201">Kiribati</option>
+                            <option label="Kosovo" value="70">Kosovo</option>
+                            <option label="Kuwait" value="114">Kuwait</option>
+                            <option label="Kyrgyzstan" value="115">Kyrgyzstan</option>
+                            <option label="Laos" value="116">Laos</option>
+                            <option label="Latvia" value="71">Latvia</option>
+                            <option label="Lebanon" value="117">Lebanon</option>
+                            <option label="Lesotho" value="166">Lesotho</option>
+                            <option label="Liberia" value="167">Liberia</option>
+                            <option label="Libya" value="168">Libya</option>
+                            <option label="Liechtenstein" value="72">Liechtenstein</option>
+                            <option label="Lithuania" value="73">Lithuania</option>
+                            <option label="Luxembourg" value="74">Luxembourg</option>
+                            <option label="Macau" value="118">Macau</option>
+                            <option label="Macedonia" value="75">Macedonia</option>
+                            <option label="Madagascar" value="169">Madagascar</option>
+                            <option label="Malawi" value="170">Malawi</option>
+                            <option label="Malaysia" value="119">Malaysia</option>
+                            <option label="Maldives" value="120">Maldives</option>
+                            <option label="Mali" value="171">Mali</option>
+                            <option label="Malta" value="76">Malta</option>
+                            <option label="Marshall Islands" value="202">Marshall Islands</option>
+                            <option label="Martinique" value="21">Martinique</option>
+                            <option label="Mauritania" value="172">Mauritania</option>
+                            <option label="Mauritius" value="173">Mauritius</option>
+                            <option label="Mexico" value="22">Mexico</option>
+                            <option label="Micronesia" value="203">Micronesia</option>
+                            <option label="Moldova" value="77">Moldova</option>
+                            <option label="Monaco" value="78">Monaco</option>
+                            <option label="Mongolia" value="121">Mongolia</option>
+                            <option label="Montenegro" value="79">Montenegro</option>
+                            <option label="Montserrat" value="23">Montserrat</option>
+                            <option label="Morocco" value="174">Morocco</option>
+                            <option label="Mozambique" value="175">Mozambique</option>
+                            <option label="Myanmar(Burma)" value="122">Myanmar(Burma)</option>
+                            <option label="Namibia" value="176">Namibia</option>
+                            <option label="Nauru" value="204">Nauru</option>
+                            <option label="Nepal" value="123">Nepal</option>
+                            <option label="Netherlands" value="80">Netherlands</option>
+                            <option label="New Caledonia" value="205">New Caledonia</option>
+                            <option label="New Zealand" value="197">New Zealand</option>
+                            <option label="Nicaragua" value="24">Nicaragua</option>
+                            <option label="Niger" value="177">Niger</option>
+                            <option label="Nigeria" value="178">Nigeria</option>
+                            <option label="North Korea" value="124">North Korea</option>
+                            <option label="Northern Cyprus" value="411">Northern Cyprus</option>
+                            <option label="Northern Mariana Islands" value="414">Northern Mariana Islands</option>
+                            <option label="Norway" value="81">Norway</option>
+                            <option label="Oman" value="125">Oman</option>
+                            <option label="Pakistan" value="126">Pakistan</option>
+                            <option label="Palestine" value="228">Palestine</option>
+                            <option label="Panama" value="25">Panama</option>
+                            <option label="Papua New Guinea" value="206">Papua New Guinea</option>
+                            <option label="Paraguay" value="38">Paraguay</option>
+                            <option label="Peru" value="39">Peru</option>
+                            <option label="Philippines" value="127">Philippines</option>
+                            <option label="Poland" value="82">Poland</option>
+                            <option label="Portugal" value="83">Portugal</option>
+                            <option label="Puerto Rico" value="26">Puerto Rico</option>
+                            <option label="Qatar" value="128">Qatar</option>
+                            <option label="Republic of the Congo" value="152">Republic of the Congo</option>
+                            <option label="Reunion" value="179">Reunion</option>
+                            <option label="Romania" value="84">Romania</option>
+                            <option label="Russia" value="85">Russia</option>
+                            <option label="Rwanda" value="180">Rwanda</option>
+                            <option label="Saint Barthelemy" value="400">Saint Barthelemy</option>
+                            <option label="Saint Kitts and Nevis" value="413">Saint Kitts and Nevis</option>
+                            <option label="Saint Lucia" value="401">Saint Lucia</option>
+                            <option label="Samoa" value="207">Samoa</option>
+                            <option label="San Marino" value="86">San Marino</option>
+                            <option label="Sao Tome and Principe" value="181">Sao Tome and Principe</option>
+                            <option label="Saudi Arabia" value="129">Saudi Arabia</option>
+                            <option label="Senegal" value="182">Senegal</option>
+                            <option label="Serbia" value="87">Serbia</option>
+                            <option label="Seychelles" value="183">Seychelles</option>
+                            <option label="Sierra Leone" value="184">Sierra Leone</option>
+                            <option label="Singapore" value="130">Singapore</option>
+                            <option label="Slovakia" value="88">Slovakia</option>
+                            <option label="Slovenia" value="89">Slovenia</option>
+                            <option label="Solomon Islands" value="208">Solomon Islands</option>
+                            <option label="Somalia" value="185">Somalia</option>
+                            <option label="South Africa" value="186">South Africa</option>
+                            <option label="South Korea" value="131">South Korea</option>
+                            <option label="South Sudan" value="403">South Sudan</option>
+                            <option label="Spain" value="90">Spain</option>
+                            <option label="Sri Lanka" value="132">Sri Lanka</option>
+                            <option label="Sudan" value="187">Sudan</option>
+                            <option label="Suriname" value="40">Suriname</option>
+                            <option label="Swaziland" value="188">Swaziland</option>
+                            <option label="Sweden" value="91">Sweden</option>
+                            <option label="Switzerland" value="92">Switzerland</option>
+                            <option label="Syria" value="133">Syria</option>
+                            <option label="Taiwan" value="134">Taiwan</option>
+                            <option label="Tajikistan" value="135">Tajikistan</option>
+                            <option label="Tanzania" value="189">Tanzania</option>
+                            <option label="Thailand" value="136">Thailand</option>
+                            <option label="Togo" value="190">Togo</option>
+                            <option label="Tonga" value="209">Tonga</option>
+                            <option label="Trinidad and Tobago" value="27">Trinidad and Tobago</option>
+                            <option label="Tunisia" value="191">Tunisia</option>
+                            <option label="Turkey" value="93">Turkey</option>
+                            <option label="Turkmenistan" value="137">Turkmenistan</option>
+                            <option label="Turks and Caicos Islands" value="410">Turks and Caicos Islands</option>
+                            <option label="Tuvalu" value="210">Tuvalu</option>
+                            <option label="Uganda" value="192">Uganda</option>
+                            <option label="Ukraine" value="94">Ukraine</option>
+                            <option label="United Arab Emirates" value="138">United Arab Emirates</option>
+                            <option label="United Kingdom" value="95">United Kingdom</option>
+                            <option label="United States" value="1">United States</option>
+                            <option label="United States Virgin Islands" value="28">United States Virgin Islands
+                            </option>
+                            <option label="Uruguay" value="41">Uruguay</option>
+                            <option label="Uzbekistan" value="139">Uzbekistan</option>
+                            <option label="Vanuatu" value="211">Vanuatu</option>
+                            <option label="Vatican City" value="96">Vatican City</option>
+                            <option label="Venezuela" value="42">Venezuela</option>
+                            <option label="Vietnam" value="140">Vietnam</option>
+                            <option label="Wallis and Futuna" value="212">Wallis and Futuna</option>
+                            <option label="Western Sahara" value="193">Western Sahara</option>
+                            <option label="Yemen" value="141">Yemen</option>
+                            <option label="Zambia" value="194">Zambia</option>
+                            <option label="Zimbabwe" value="195">Zimbabwe</option>
+
+                        </select>
+                       
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label>City</label>
+                        <select name="sel_city" id="sel_city" class="selectpicker form-control form-control-sm show-menu-arrow required bs-select-hidden" data-live-search="true">
+                            <option value="">- Please select a city - </option>
+                             <option label="Abohar" value="106_728338_306718_108808">Abohar</option>
+<option label="Abu road" value="106_abu road_789730_108642">Abu road</option>
+<option label="Achrol" value="106_720964_795496_137474">Achrol</option>
+<option label="Adimali" value="106_72445121_397688_108785">Adimali</option>
+<option label="Agartala" value="64625">Agartala</option>
+<option label="Agra" value="64459">Agra</option>
+<option label="Ahmedabad" value="106_2219_6215">Ahmedabad</option>
+<option label="Ahmednagar" value="64544">Ahmednagar</option>
+<option label="Aizawl" value="64584">Aizawl</option>
+<option label="Ajmer" value="64516">Ajmer</option>
+<option label="Akbarpur" value="106_553248635939585265_210631_108818">Akbarpur</option>
+<option label="Akola" value="106_114598_867770_108807">Akola</option>
+<option label="Alibag" value="66325">Alibag</option>
+<option label="Aligarh" value="106_8606_4709">Aligarh</option>
+<option label="Alipurduar" value="106_513429_4549">Alipurduar</option>
+<option label="Allahabad" value="64473">Allahabad</option>
+<option label="Alleppey(alappuzha)" value="64658">Alleppey(alappuzha)</option>
+<option label="Almora" value="65725">Almora</option>
+<option label="Alsisar" value="106_2724_2187">Alsisar</option>
+<option label="Alwar" value="64580">Alwar</option>
+<option label="Amba Ghat" value="138625">Amba Ghat</option>
+<option label="Ambaji" value="106_713194_208259_108750">Ambaji</option>
+<option label="Ambala" value="64710">Ambala</option>
+<option label="Ambalavayal" value="106_710182_669596_108703">Ambalavayal</option>
+<option label="Ambikapur" value="106_712070_509442_108786">Ambikapur</option>
+<option label="Amboli" value="106_Amboli_Maharashtra_2923">Amboli</option>
+<option label="Amkholi" value="106_83377_9278">Amkholi</option>
+<option label="Amravati" value="106_10651_133747_108672">Amravati</option>
+<option label="Amreli" value="106_724235_121742_140419">Amreli</option>
+<option label="Amritsar" value="64472">Amritsar</option>
+<option label="Anand" value="106_Anand_Gujarat_1009">Anand</option>
+<option label="Anandpur Sahib" value="106_514487_124576_108820">Anandpur Sahib</option>
+<option label="Anantapur(andhra pradesh)" value="106_181351_762935_108660">Anantapur(andhra pradesh)</option>
+<option label="Andaman and nicobar islands" value="106_9216_8467">Andaman and nicobar islands</option>
+<option label="Angul" value="106_710188_614443_108834">Angul</option>
+<option label="Ankleshwar" value="64994">Ankleshwar</option>
+<option label="Aritar" value="106_720452_510345_108810">Aritar</option>
+<option label="Ariyalur" value="106_6261149_105046_138587">Ariyalur</option>
+<option label="Arrah" value="106_720005_165741_108858">Arrah</option>
+<option label="Asansol" value="106_Asansol_WestBengal_4754">Asansol</option>
+<option label="Athirappilly" value="106_Athirappilly_Kerala_7030">Athirappilly</option>
+<option label="Auli" value="106_30345_132279_137958">Auli</option>
+<option label="Aurangabad(Bihar)" value="106_auranga_bihar">Aurangabad(Bihar)</option>
+<option label="Aurangabad(Maharashtra)" value="64478">Aurangabad(Maharashtra)</option>
+<option label="Ayodhya" value="106_718068_5021">Ayodhya</option>
+<option label="Badami" value="65891">Badami</option>
+<option label="Baddi" value="66210">Baddi</option>
+<option label="Badrinath(uttarakhand)" value="106_3454_4530">Badrinath(uttarakhand)</option>
+<option label="Bagalkot" value="106_3000414587_730931_138603">Bagalkot</option>
+<option label="Bagar" value="106_3000004767_480562_138588">Bagar</option>
+<option label="Bahadurgarh" value="106_114506_13072_140299">Bahadurgarh</option>
+<option label="Bahraich" value="106_718066_41017_108830">Bahraich</option>
+<option label="Baihar" value="106_-2089731_858145_140283">Baihar</option>
+<option label="Bakkhali" value="106_3000004759_502461_108773">Bakkhali</option>
+<option label="Balaghat" value="106_6159656_574263_108770">Balaghat</option>
+<option label="Balasore" value="106_180910_679189_108685">Balasore</option>
+<option label="Ballia" value="106_3000473845_3885">Ballia</option>
+<option label="Bandhavgarh national park" value="106_2814_1785">Bandhavgarh national park</option>
+<option label="Bandipur" value="106_MA10021112_1090">Bandipur</option>
+<option label="Bangalore (Bengaluru)" value="64442">Bangalore (Bengaluru)</option>
+<option label="Banjar" value="106_724262_79104_108741">Banjar</option>
+<option label="Bankura" value="106_724263_127796_108798">Bankura</option>
+<option label="Banswara" value="106_3000406909_213287_108876">Banswara</option>
+<option label="Baramati" value="106_724268_694502_108854">Baramati</option>
+<option label="Bareilly" value="64499">Bareilly</option>
+<option label="Barkot(uttarakhand)" value="106_barkot_411113_108670">Barkot(uttarakhand)</option>
+<option label="Barmer" value="106_183088_674995_108748">Barmer</option>
+<option label="Barot" value="106_553248635964830675_379610_108851">Barot</option>
+<option label="Bathinda" value="106_163595_8083">Bathinda</option>
+<option label="Beawar" value="106_3000004741_425748_108776">Beawar</option>
+<option label="Begusarai" value="106_77719_394604_137511">Begusarai</option>
+<option label="Bekal" value="106_Bekal_Kerala_3959">Bekal</option>
+<option label="Belgaum" value="106_Belgaum_Karnataka_2160">Belgaum</option>
+<option label="Bellary" value="106_23885_382865_108760">Bellary</option>
+<option label="Berhampore" value="106_718882_185092_139476">Berhampore</option>
+<option label="Berhampur" value="106_105946_8033">Berhampur</option>
+<option label="Betul(madhya pradesh)" value="106_710258_6561">Betul(madhya pradesh)</option>
+<option label="Bhāgalpur" value="106_3000004732_189640_108774">Bhāgalpur</option>
+<option label="Bhandardara" value="106_6268243_6735">Bhandardara</option>
+<option label="Bharatpur" value="64606">Bharatpur</option>
+<option label="Bharuch" value="106_114482_965212_107544">Bharuch</option>
+<option label="Bhatkal" value="138264">Bhatkal</option>
+<option label="Bhavnagar" value="64512">Bhavnagar</option>
+<option label="Bhilai" value="106_114440_1649">Bhilai</option>
+<option label="Bhilwara" value="106_Bhilwara_Rajasthan_9070">Bhilwara</option>
+<option label="Bhimtal" value="106_3394_7306">Bhimtal</option>
+<option label="Bhiwadi" value="106_64032_4527">Bhiwadi</option>
+<option label="Bhiwani" value="106_114507_912880_108814">Bhiwani</option>
+<option label="Bhopal" value="64456">Bhopal</option>
+<option label="Bhowali" value="106_3000004721_943017_138589">Bhowali</option>
+<option label="Bhubaneswar" value="64497">Bhubaneswar</option>
+<option label="Bhuj" value="64737">Bhuj</option>
+<option label="Bidar" value="106_114548_414761_108806">Bidar</option>
+<option label="Bihar Sharif" value="106_3000406907_965861_108874">Bihar Sharif</option>
+<option label="Bijainagar" value="138218">Bijainagar</option>
+<option label="Bijapur (vijayapura)" value="106_BJP_1548">Bijapur (vijayapura)</option>
+<option label="Bikaner" value="64510">Bikaner</option>
+<option label="Bilaspur" value="106_553248628159879117_2597">Bilaspur</option>
+<option label="Binsar" value="106_30347_956791_108930">Binsar</option>
+<option label="Bir(himachal pradesh)" value="106_182288_991487_108682">Bir(himachal pradesh)</option>
+<option label="Bodh Gaya" value="106_Bodhgaya_Bihar_3235">Bodh Gaya</option>
+<option label="Bodinayakanur" value="138269">Bodinayakanur</option>
+<option label="Bokaro" value="106_3000375496_219379_108768">Bokaro</option>
+<option label="Bolpur" value="106_671626_4298">Bolpur</option>
+<option label="Bongaigaon" value="106_77425_406469_138604">Bongaigaon</option>
+<option label="Brahmapur(Behrampur)" value="106_710287_63560_108800">Brahmapur(Behrampur)</option>
+<option label="Bundi(rajasthan)" value="106_21067_7662">Bundi(rajasthan)</option>
+<option label="Burdwan (Bardhaman)" value="106_114782_869505_108819">Burdwan (Bardhaman)</option>
+<option label="Buxar" value="106_77454_401533_138605">Buxar</option>
+<option label="Calicut(Kozhikode)" value="64528">Calicut(Kozhikode)</option>
+<option label="Chail" value="106_12f71_356679_107623">Chail</option>
+<option label="Chakan" value="106_6347710_278064_108772">Chakan</option>
+<option label="Chamba(himachal pradesh)" value="106_21068_4998">Chamba(himachal pradesh)</option>
+<option label="Chamba(uttarakhand)" value="106_76552_250045_108758">Chamba(uttarakhand)</option>
+<option label="Chandigarh" value="64484">Chandigarh</option>
+<option label="Chandrapur(maharashtra)" value="106_114604_108471_108691">Chandrapur(maharashtra)</option>
+<option label="Chanod" value="106_3000004694_244059_140577">Chanod</option>
+<option label="Chekhla" value="106_30078437_332338_137472">Chekhla</option>
+<option label="Chengalpattu" value="106_c6258888_637323_138073">Chengalpattu</option>
+<option label="Chennai" value="64444">Chennai</option>
+<option label="Cherai" value="106_60737_123878_138606">Cherai</option>
+<option label="Cherrapunji" value="106_3000004687_5533">Cherrapunji</option>
+<option label="Chettinad" value="138059">Chettinad</option>
+<option label="Chhatarpur" value="106_c3000408158_711773_138140">Chhatarpur</option>
+<option label="Chhatrasagar" value="138628">Chhatrasagar</option>
+<option label="Chhindwara" value="106_712029_155471_108816">Chhindwara</option>
+<option label="Chidambaram" value="106_Chidambaram_TamilNadu_6322">Chidambaram</option>
+<option label="Chikkaballapura (Chikballapur)" value="106_724186_403477_108828">Chikkaballapura (Chikballapur)</option>
+<option label="Chikmagalur" value="64775">Chikmagalur</option>
+<option label="Chilika" value="138627">Chilika</option>
+<option label="Chiplun" value="106_114272_211338_108653">Chiplun</option>
+<option label="Chithirapuram" value="106_85916_81981_137949">Chithirapuram</option>
+<option label="Chitradurga" value="106_6258978_231452_108694">Chitradurga</option>
+<option label="Chitrakoot (Madhya Pradesh)" value="106_720949_300731_140409">Chitrakoot (Madhya Pradesh)</option>
+<option label="Chittoor(andhra pradesh)" value="106_181355_234764_108788">Chittoor(andhra pradesh)</option>
+<option label="Chittorgarh" value="106_CFE9_2017">Chittorgarh</option>
+<option label="Chopta" value="106_553248635964996687_774710_138590">Chopta</option>
+<option label="Chotila" value="106_104835_587772_138607">Chotila</option>
+<option label="Churu" value="106_6350219_833831_140396">Churu</option>
+<option label="Coimbatore" value="64482">Coimbatore</option>
+<option label="Cooch Behar" value="106_182728_145187_108817">Cooch Behar</option>
+<option label="Coonoor" value="106_Coonoor_Tamil Nadu_82874_106614">Coonoor</option>
+<option label="Coorg" value="106_Coorg_Karnataka_8961">Coorg</option>
+<option label="Courtallam" value="106_705982_946448_108715">Courtallam</option>
+<option label="Cuddalore" value="106_716176_710899_108744">Cuddalore</option>
+<option label="Cuttack" value="106_33197_3929">Cuttack</option>
+<option label="Dahej" value="106_63686_2567">Dahej</option>
+<option label="Dalhousie" value="106_2604_6592">Dalhousie</option>
+<option label="Daltonganj" value="106_daltonganj_477250_108856">Daltonganj</option>
+<option label="Daman" value="65510">Daman</option>
+<option label="Dandeli" value="106_33227_965860_108661">Dandeli</option>
+<option label="Dapoli" value="106_Dapoli_Maharashtra_2579">Dapoli</option>
+<option label="Darbhanga" value="106_8405_544736_108777">Darbhanga</option>
+<option label="Darjeeling" value="64764">Darjeeling</option>
+<option label="Dausa" value="106_513193_863556_108733">Dausa</option>
+<option label="Davanagere (Davangere)" value="106_181390_924434_108676">Davanagere (Davangere)</option>
+<option label="Dechu" value="106_710361_2373">Dechu</option>
+<option label="Dehradun" value="64514">Dehradun</option>
+<option label="Deoghar" value="106_513338_689295_108803">Deoghar</option>
+<option label="Devala" value="106_724338_979986_138051">Devala</option>
+<option label="Devanahalli" value="106_78831_542668_137475">Devanahalli</option>
+<option label="Devbag" value="107058">Devbag</option>
+<option label="Devigarh" value="138629">Devigarh</option>
+<option label="Dewas" value="106_dewas_54244_108708">Dewas</option>
+<option label="Dhanaulti" value="106_dhanaulti_199882_108637">Dhanaulti</option>
+<option label="Dhanbad" value="106_6817_5542">Dhanbad</option>
+<option label="Dhar" value="106_114586_9795">Dhar</option>
+<option label="Dharampur (Gujarat)" value="106_724343_265663_137834">Dharampur (Gujarat)</option>
+<option label="Dharamsala" value="106_32092_826818_138509">Dharamsala</option>
+<option label="Dharamshala and mcleod ganj" value="106_D4DJ_3083">Dharamshala and mcleod ganj</option>
+<option label="Dharwad" value="138263">Dharwad</option>
+<option label="Dhikuli" value="106_10412_71354_108686">Dhikuli</option>
+<option label="Dholpur(rajasthan)" value="106_182004_1346">Dholpur(rajasthan)</option>
+<option label="Dhule" value="106_181644_660694_108747">Dhule</option>
+<option label="Dibrugarh" value="106_Dibrugarh_Assam_1049">Dibrugarh</option>
+<option label="Digha" value="106_Digha_WestBengal_6630">Digha</option>
+<option label="Dimapur" value="106_513273_780901_108713">Dimapur</option>
+<option label="Dindigul" value="106_114710_588283_107945">Dindigul</option>
+<option label="Diu" value="106_Diu_DamanandDiu_7068">Diu</option>
+<option label="Diveagar" value="106_181284_230561_108640">Diveagar</option>
+<option label="Domkhar" value="138619">Domkhar</option>
+<option label="Dooars" value="106_37242_777368_107645">Dooars</option>
+<option label="Durg(chattisgarh)" value="106_33456_613163_108651">Durg(chattisgarh)</option>
+<option label="Durgapur" value="64515">Durgapur</option>
+<option label="Dwarka" value="106_Dwarka_Gujarat_2480">Dwarka</option>
+<option label="Edappal" value="Edappal">Edappal</option>
+<option label="Erode" value="106_Erode_TamilNadu_6192">Erode</option>
+<option label="Etawah" value="106_513365_813353_139593">Etawah</option>
+<option label="Falna" value="106_734459_585689_140575">Falna</option>
+<option label="Faridabad" value="64467">Faridabad</option>
+<option label="Ferozepur (Firozpur)" value="106_724187_137249_108824">Ferozepur (Firozpur)</option>
+<option label="Gandhidham" value="106_172928_2535">Gandhidham</option>
+<option label="Gandhinagar" value="64636">Gandhinagar</option>
+<option label="Gangtok" value="65790">Gangtok</option>
+<option label="Ganpatipule" value="106_Ganpatipule_Maharashtra_9486">Ganpatipule</option>
+<option label="Gaya" value="106_Gaya_Bihar_9633">Gaya</option>
+<option label="Gharakar" value="106_724377_801263_137593">Gharakar</option>
+<option label="Ghaziabad" value="64468">Ghaziabad</option>
+<option label="Gholvad" value="106_76397_207921_107539">Gholvad</option>
+<option label="Goa" value="106_4015-GOI_1899">Goa</option>
+<option label="Gokarna" value="106_553248628384480323_5414">Gokarna</option>
+<option label="GONDA" value="106_gonda_998688_108867">GONDA</option>
+<option label="Gondia" value="106_709729_394022_139594">Gondia</option>
+<option label="Gopalpur(odisha)" value="106_21085_135927_107074">Gopalpur(odisha)</option>
+<option label="Gorakhpur" value="106_Gorakhpur_UttarPradesh_3742">Gorakhpur</option>
+<option label="Gosaba" value="106_3000004617_720966_108769">Gosaba</option>
+<option label="Gudalur" value="106_710446_271592_108735">Gudalur</option>
+<option label="Guhagar(ratnagiri)" value="106_guhagar_638528_108674">Guhagar(ratnagiri)</option>
+<option label="Gulbarga" value="106_6197689_9450">Gulbarga</option>
+<option label="Gulmarg" value="106_30356_2195">Gulmarg</option>
+<option label="Guntur(andhra pradesh)" value="106_181349_933624_108638">Guntur(andhra pradesh)</option>
+<option label="Gurgaon (Gurugram)" value="64634">Gurgaon (Gurugram)</option>
+<option label="Guruvayoor" value="106_Guruvayoor_Kerala_5345">Guruvayoor</option>
+<option label="Guruyavur" value="106_24243_41881_137944">Guruyavur</option>
+<option label="Guwahati" value="64486">Guwahati</option>
+<option label="Gwalior" value="64487">Gwalior</option>
+<option label="Hajipur" value="106_553248635939580063_148862_108804">Hajipur</option>
+<option label="Haldia(west bengal)" value="106_114786_832076_107072">Haldia(west bengal)</option>
+<option label="Haldwani" value="64720">Haldwani</option>
+<option label="Hamirpur" value="106_712908_393610_108809">Hamirpur</option>
+<option label="Hampi" value="67208">Hampi</option>
+<option label="Hanle" value="138620">Hanle</option>
+<option label="Hansi" value="138610">Hansi</option>
+<option label="Hanumangarh" value="106_712057_479112_108835">Hanumangarh</option>
+<option label="Harda" value="106_724395_288757_139595">Harda</option>
+<option label="Hardoi" value="106_114754_50046_108822">Hardoi</option>
+<option label="Haridwar" value="64643">Haridwar</option>
+<option label="Hassan" value="64750">Hassan</option>
+<option label="Havelock Island" value="106_6126753_343689_140399">Havelock Island</option>
+<option label="HAVERI" value="106_haveri_793331_108866">HAVERI</option>
+<option label="Himatnagar" value="106_710468_145885_108736">Himatnagar</option>
+<option label="Hissar" value="106_Hissar_Haryana_820150_106504">Hissar</option>
+<option label="Hoshiarpur" value="106_114670_202806_108754">Hoshiarpur</option>
+<option label="Hospet" value="64633">Hospet</option>
+<option label="Hosur" value="64832">Hosur</option>
+<option label="Howrah(west bengal)" value="106_64348_946909_107601">Howrah(west bengal)</option>
+<option label="Hubli" value="64491">Hubli</option>
+<option label="Hundar" value="106_710474_168177_137580">Hundar</option>
+<option label="Hunder(leh)" value="106_6230529_406773_108678">Hunder(leh)</option>
+<option label="Hyderabad" value="64446">Hyderabad</option>
+<option label="Idukki" value="67083">Idukki</option>
+<option label="Igatpuri" value="106_Igatpuri_Maharashtra_4926">Igatpuri</option>
+<option label="Imphal" value="106_1592_3837">Imphal</option>
+<option label="Indore" value="64454">Indore</option>
+<option label="Itanagar" value="106_145882_898354_108755">Itanagar</option>
+<option label="Itarsi" value="106_3000406813_597385_107047">Itarsi</option>
+<option label="Jabalpur" value="64476">Jabalpur</option>
+<option label="Jagdalpur" value="106_8085_9318">Jagdalpur</option>
+<option label="Jageshwar" value="138213">Jageshwar</option>
+<option label="Jaigaon" value="106_720823_691256_108831">Jaigaon</option>
+<option label="Jaipur" value="64450">Jaipur</option>
+<option label="Jaisalmer" value="65048">Jaisalmer</option>
+<option label="Jajpur" value="106_672514_333780_108805">Jajpur</option>
+<option label="Jalandhar" value="64492">Jalandhar</option>
+<option label="Jalgaon" value="106_Jalgaon_Maharashtra_9882">Jalgaon</option>
+<option label="Jalna" value="106_114613_708024_108706">Jalna</option>
+<option label="Jalpaiguri,west bengal" value="106_122328_455071_108662">Jalpaiguri,west bengal</option>
+<option label="Jamb" value="106_93564_471366_108756">Jamb</option>
+<option label="Jammu" value="64525">Jammu</option>
+<option label="Jamnagar" value="64521">Jamnagar</option>
+<option label="Jamshedpur" value="64504">Jamshedpur</option>
+<option label="Jamui" value="138262">Jamui</option>
+<option label="Jaunpur" value="106_717282_684992_108812">Jaunpur</option>
+<option label="Jawai Bandh" value="106_553248635851220282_143681_140576">Jawai Bandh</option>
+<option label="Jejuri" value="106_724423_152723_139477">Jejuri</option>
+<option label="Jhansi" value="64539">Jhansi</option>
+<option label="Jharsuguda" value="106_Jharsuguda_Orissa_9869">Jharsuguda</option>
+<option label="Jhunjhunu" value="106_513468_305076_139596">Jhunjhunu</option>
+<option label="Jibhi" value="106_76306_498923_108783">Jibhi</option>
+<option label="Jim corbett national park" value="106_2304_3547">Jim corbett national park</option>
+<option label="Jind" value="106_114513_412402_108832">Jind</option>
+<option label="Jodhpur" value="64483">Jodhpur</option>
+<option label="Jorhat" value="106_Jorhat_Assam_2302">Jorhat</option>
+<option label="Joshimath" value="106_Joshimath_Uttaranchal_2678">Joshimath</option>
+<option label="Junagadh" value="106_Junagadh_Gujarat_2896">Junagadh</option>
+<option label="Jwalamukhi(Jawalamukhi)" value="106_3000386090_614726_108827">Jwalamukhi(Jawalamukhi)</option>
+<option label="Kabini" value="106_513091_942203_107942">Kabini</option>
+<option label="Kadapa" value="106_181358_968962_108702">Kadapa</option>
+<option label="Kaithal" value="106_513652_569266_108815">Kaithal</option>
+<option label="Kakinada" value="64576">Kakinada</option>
+<option label="Kalimpong" value="106_1673661_9574">Kalimpong</option>
+<option label="Kalka" value="106_114526_5737">Kalka</option>
+<option label="Kalpa" value="106_76215_140753_108757">Kalpa</option>
+<option label="Kalpatta" value="106_12ede_491734_107700">Kalpatta</option>
+<option label="Kalpetta" value="106_30015279_267592_107814">Kalpetta</option>
+<option label="Kalyan" value="106_64429_7379">Kalyan</option>
+<option label="Kamshet" value="106_671669_119445_140412">Kamshet</option>
+<option label="Kanatal" value="106_6047892_785215_108693">Kanatal</option>
+<option label="Kanchipuram" value="106_Kanchipuram_TamilNadu_2247">Kanchipuram</option>
+<option label="Kandaghat" value="138612">Kandaghat</option>
+<option label="Kangra" value="106_6138791_815509_108710">Kangra</option>
+<option label="Kanha(Kanha national park)" value="106_17936_8933">Kanha(Kanha national park)</option>
+<option label="Kanhangad" value="106_724444_180728_137626">Kanhangad</option>
+<option label="Kannur" value="Kannur">Kannur</option>
+<option label="Kanoi" value="106_119928_822706_139114">Kanoi</option>
+<option label="Kanpur" value="64449">Kanpur</option>
+<option label="Kanyakumari" value="66335">Kanyakumari</option>
+<option label="Karad" value="106_karad_653460_108645">Karad</option>
+<option label="Karaikal" value="106_185082_479210_108742">Karaikal</option>
+<option label="Karaikudi" value="106_513367_568179_108688">Karaikudi</option>
+<option label="Kargil" value="66878">Kargil</option>
+<option label="Karīmnagar" value="106_3000004554_50709_108872">Karīmnagar</option>
+<option label="Karjat" value="106_KAJ_3926">Karjat</option>
+<option label="Karnal" value="64612">Karnal</option>
+<option label="Karur" value="106_181394_873193_108746">Karur</option>
+<option label="Karwar" value="106_30360_400743_107521">Karwar</option>
+<option label="Kasaragod" value="Kasaragod">Kasaragod</option>
+<option label="Kasauli" value="106_2624_2159">Kasauli</option>
+<option label="Kashid" value="106_37303_172642_108667">Kashid</option>
+<option label="Kashipur" value="106_Kashipur_Uttaranchal_6760">Kashipur</option>
+<option label="Kasol" value="106_6224602_1553">Kasol</option>
+<option label="Katni" value="106_390145_352800_108787">Katni</option>
+<option label="Katra" value="106_Katra_JammuandKashmir_1209">Katra</option>
+<option label="Kausani" value="106_6129774_102580_107545">Kausani</option>
+<option label="Kaza" value="106_114525_621084_108683">Kaza</option>
+<option label="Kaziranga(assam)" value="106_30362_346840_107073">Kaziranga(assam)</option>
+<option label="Kevadia" value="138111">Kevadia</option>
+<option label="Khajuraho" value="66021">Khajuraho</option>
+<option label="Khambhalia" value="106_124527_909449_139182">Khambhalia</option>
+<option label="Khammam" value="106_724190_507187_108793">Khammam</option>
+<option label="Khandala" value="106_Khandala_Maharashtra_5955">Khandala</option>
+<option label="Khanna" value="106_553248628159867030_747009_137467">Khanna</option>
+<option label="Kharagpur" value="106_180925_316684_108811">Kharagpur</option>
+<option label="Kharar" value="106_114673_599574_139478">Kharar</option>
+<option label="Khawasa" value="106_710550_855046_139479">Khawasa</option>
+<option label="Khejarla" value="139645">Khejarla</option>
+<option label="Khimsar" value="106_2314_9501">Khimsar</option>
+<option label="Khopoli" value="106_183622_103341_107849">Khopoli</option>
+<option label="Khuri" value="106_6152095_708416_108771">Khuri</option>
+<option label="Kinnaur" value="106_181786_513587_108795">Kinnaur</option>
+<option label="Kishangarh" value="106_Kishangarh_Rajasthan_5632">Kishangarh</option>
+<option label="Kishtwar" value="106_c553248635939576438_485575_138176">Kishtwar</option>
+<option label="Kochi(cochin) and ernakulam" value="106_1664_3442">Kochi(cochin) and ernakulam</option>
+<option label="Kodaikanal" value="65633">Kodaikanal</option>
+<option label="Koderma" value="106_3000407279_857515_108873">Koderma</option>
+<option label="Kohima" value="106_184882_235307_108765">Kohima</option>
+<option label="Kolad" value="106_710572_17430_140420">Kolad</option>
+<option label="Kolhapur" value="64518">Kolhapur</option>
+<option label="Kolkata" value="106_5410-CCU_4768">Kolkata</option>
+<option label="Kollam" value="106_22666-TRV_3199">Kollam</option>
+<option label="Konark" value="138361">Konark</option>
+<option label="Koottanad(kerala)" value="107621">Koottanad(kerala)</option>
+<option label="Koppal" value="106_3000406785_641124_108870">Koppal</option>
+<option label="Koramangala" value="106_207ae_998703_108759">Koramangala</option>
+<option label="Kota" value="64496">Kota</option>
+<option label="Kotagiri" value="106_kotagiri_920305_108641">Kotagiri</option>
+<option label="Kotdwar" value="106_719824_818148_108739">Kotdwar</option>
+<option label="Kothamangalam" value="138368">Kothamangalam</option>
+<option label="Kottayam" value="Kottayam">Kottayam</option>
+<option label="Kovalam(covelong)" value="106_1904_7183">Kovalam(covelong)</option>
+<option label="Krishnagiri" value="106_553248635975861663_734962_138591">Krishnagiri</option>
+<option label="Kuchesar" value="138216">Kuchesar</option>
+<option label="Kudal" value="106_712909_321112_108790">Kudal</option>
+<option label="Kufri" value="106_Kufri_HimachalPradesh_4326">Kufri</option>
+<option label="Kullu" value="66391">Kullu</option>
+<option label="Kumarakom" value="106_1914_8310">Kumarakom</option>
+<option label="Kumbakonam" value="64722">Kumbakonam</option>
+<option label="Kumbhalgarh" value="106_26968-UDR_8174">Kumbhalgarh</option>
+<option label="Kumta" value="106_12ea2_175268_108762">Kumta</option>
+<option label="Kundapura" value="106_182612_365123_108749">Kundapura</option>
+<option label="Kurnool" value="106_Kurnool_AndhraPradesh_9939">Kurnool</option>
+<option label="Kurukshetra(haryana)" value="106_181803_640720_108659">Kurukshetra(haryana)</option>
+<option label="Kushalnagar(buddhist golden temple)" value="106_39219_319817_108634">Kushalnagar(buddhist golden temple)</option>
+<option label="Kutch" value="106_181409_210035_108767">Kutch</option>
+<option label="Kuttikkanam" value="106_724501_397684_108784">Kuttikkanam</option>
+<option label="Lachen" value="106_553248634774729090_7836">Lachen</option>
+<option label="Lachung" value="106_6314390_1964">Lachung</option>
+<option label="Lakhimpur" value="106_712056_335744_108833">Lakhimpur</option>
+<option label="Lakshadweep" value="106_2544_5412">Lakshadweep</option>
+<option label="Lansdowne" value="106_61192_3977">Lansdowne</option>
+<option label="Lataguri(gorumura national park, chapramari wildlife sanctuary)" value="106_lataguri_449153_108643">Lataguri(gorumura national park, chapramari wildlife sanctuary)</option>
+<option label="Latur" value="106_latur_310955_108647">Latur</option>
+<option label="Lavasa" value="106_68244_3097">Lavasa</option>
+<option label="Leh" value="65568">Leh</option>
+<option label="Lonavala" value="65156">Lonavala</option>
+<option label="Lucknow" value="64451">Lucknow</option>
+<option label="Ludhiana" value="64458">Ludhiana</option>
+<option label="Madanapalle" value="106_724203_476748_108743">Madanapalle</option>
+<option label="Madhavpur (Gujarat)" value="106_107420_464979_137836">Madhavpur (Gujarat)</option>
+<option label="Madikeri" value="106_6126322_582992_107522">Madikeri</option>
+<option label="Madurai" value="64485">Madurai</option>
+<option label="Mahabaleshwar" value="66898">Mahabaleshwar</option>
+<option label="Mahabalipuram(mamallapuram)" value="106_1974_7468">Mahabalipuram(mamallapuram)</option>
+<option label="MAHABUBNAGAR" value="106_mahabubnagar_263800_108861">MAHABUBNAGAR</option>
+<option label="Maheshwar" value="106_34903_868046_108705">Maheshwar</option>
+<option label="Malappuram" value="106_181143_794576_108657">Malappuram</option>
+<option label="Malayattoor" value="106_3000004470_555843_138592">Malayattoor</option>
+<option label="Malda" value="106_43708_3069">Malda</option>
+<option label="Malvan" value="106_145802_364890_108632">Malvan</option>
+<option label="Manali" value="65728">Manali</option>
+<option label="Mananthavady" value="106_712153_309530_108700">Mananthavady</option>
+<option label="Mandarmani" value="106_Mandarmoni_WestBengal_9752">Mandarmani</option>
+<option label="Mandawa" value="106_2764_3504">Mandawa</option>
+<option label="Mandi" value="106_18030_473114_107923">Mandi</option>
+<option label="Mandu" value="106_Mandu_MadhyaPradesh_9965">Mandu</option>
+<option label="Mandvi" value="106_18031_168020_140135">Mandvi</option>
+<option label="Manesar" value="106_Manesar_Haryana_2051">Manesar</option>
+<option label="Mangalore (Mangaluru)" value="64538">Mangalore (Mangaluru)</option>
+<option label="Mangan" value="106_3000375791_111842_138593">Mangan</option>
+<option label="Manipal" value="106_Manipal_Karnataka_6576">Manipal</option>
+<option label="Mantralayam" value="106_724534_331161_140398">Mantralayam</option>
+<option label="Mararikulum" value="106_1994_7606">Mararikulum</option>
+<option label="Marayoor" value="106_Marayoor_Kerala_2034">Marayoor</option>
+<option label="Masinagudi" value="106_masinagudi_825870_108639">Masinagudi</option>
+<option label="Matheran" value="106_3654_9315">Matheran</option>
+<option label="Mathura" value="64555">Mathura</option>
+<option label="Mayapur" value="106_720809_2373">Mayapur</option>
+<option label="Meerut" value="64466">Meerut</option>
+<option label="Mehandipur" value="106_553248635923465982_441027_108868">Mehandipur</option>
+<option label="Mehsana" value="106_702269_697401_108684">Mehsana</option>
+<option label="Meppadi" value="106_104345_13104_108665">Meppadi</option>
+<option label="Mirik" value="138324">Mirik</option>
+<option label="Mirzapur" value="106_669670_698278_108764">Mirzapur</option>
+<option label="Moga" value="106_3000388144_388865_108842">Moga</option>
+<option label="Mohali" value="106_6135779_7954">Mohali</option>
+<option label="Moradabad" value="64500">Moradabad</option>
+<option label="Morbi" value="106_Morbi_Gujarat_1204">Morbi</option>
+<option label="Motihari" value="106_3000406774_703068_108825">Motihari</option>
+<option label="Mount abu" value="106_2344_6504">Mount abu</option>
+<option label="Mughalsarai" value="138261">Mughalsarai</option>
+<option label="Mukteshwar" value="106_513347_533109_107914">Mukteshwar</option>
+<option label="Mukutmanipur" value="106_3000379257_133186_138594">Mukutmanipur</option>
+<option label="Mumbai" value="64440" selected="selected">Mumbai</option>
+<option label="Mundra" value="106_183048_109699_108709">Mundra</option>
+<option label="Munnar" value="65045">Munnar</option>
+<option label="Munsyari" value="106_720801_992303_137975">Munsyari</option>
+<option label="Murud janjira" value="106_murud janjira_513398_108649">Murud janjira</option>
+<option label="Murudeshwar" value="106_Murdeshwar_Karnataka_3721">Murudeshwar</option>
+<option label="Mussoorie" value="66016">Mussoorie</option>
+<option label="Muzaffarnagar" value="106_669614_556019_108860">Muzaffarnagar</option>
+<option label="Muzaffarpur" value="106_182588_441722_108658">Muzaffarpur</option>
+<option label="Mysore" value="64489">Mysore</option>
+<option label="Nadiad" value="106_669615_406255_138085">Nadiad</option>
+<option label="Nagaon" value="106_114627_159229_108821">Nagaon</option>
+<option label="Nagarhole" value="106_2664_4608">Nagarhole</option>
+<option label="Nagaur" value="106_30370_289449_108752">Nagaur</option>
+<option label="Nagercoil" value="Nagar-1">Nagercoil</option>
+<option label="Nagpur" value="64452">Nagpur</option>
+<option label="Nahan" value="106_6222235_638734_108779">Nahan</option>
+<option label="Nainital" value="106_2374_9979">Nainital</option>
+<option label="Naldehra" value="138613">Naldehra</option>
+<option label="Namakkal" value="106_6259116_340659_108778">Namakkal</option>
+<option label="Namchi(namtse)" value="106_184440_617768_108680">Namchi(namtse)</option>
+<option label="Nanded" value="106_24310_6448">Nanded</option>
+<option label="Narkanda" value="106_35404_612846_108681">Narkanda</option>
+<option label="Narnaul" value="106_710738_555785_140125">Narnaul</option>
+<option label="Nashik and trimbak" value="64462">Nashik and trimbak</option>
+<option label="Nasik" value="106_55666_39795_108602">Nasik</option>
+<option label="Nathdwara" value="106_Nathdwara_Rajasthan_6289">Nathdwara</option>
+<option label="Naukuchiyatal" value="106_112579_113654_108737">Naukuchiyatal</option>
+<option label="Navi mumbai" value="106_19750-BOM_3293">Navi mumbai</option>
+<option label="Nawalgarh" value="65158">Nawalgarh</option>
+<option label="Nedumbassery" value="106_30059241_943376_107850">Nedumbassery</option>
+<option label="Neemrana" value="106_23000-DEL_8879">Neemrana</option>
+<option label="Neil island" value="106_6104625_106460_107265">Neil island</option>
+<option label="Nellore" value="106_114414_76910_108636">Nellore</option>
+<option label="New delhi(Delhi)" value="64441">New delhi(Delhi)</option>
+<option label="New Friends Colony" value="106_88395_885053_139112">New Friends Colony</option>
+<option label="New Town" value="106_113938_915835_138631">New Town</option>
+<option label="Nilamel" value="106_724575_812944_139480">Nilamel</option>
+<option label="Nileshwaram" value="106_6258000_110830_138595">Nileshwaram</option>
+<option label="Noida" value="64575">Noida</option>
+<option label="Nubra Valley" value="106_6357961_681099_138596">Nubra Valley</option>
+<option label="Omkareshwar" value="106_21647_349274_140126">Omkareshwar</option>
+<option label="Ooty(udhagamandalam)" value="106_2074_3711">Ooty(udhagamandalam)</option>
+<option label="Orchha" value="67322">Orchha</option>
+<option label="Osmanabad" value="106_711977_870274_139481">Osmanabad</option>
+<option label="Pachmarhi" value="106_7197_4194">Pachmarhi</option>
+<option label="Padampuri" value="138214">Padampuri</option>
+<option label="Padur" value="137474">Padur</option>
+<option label="Pahalgam" value="106_2924_7574">Pahalgam</option>
+<option label="Pakyong" value="106_553248635974901218_156947_140401">Pakyong</option>
+<option label="Palakkad" value="106_3084_5188">Palakkad</option>
+<option label="Palampur" value="106_2404_2788">Palampur</option>
+<option label="Palani(dindigul,tn)" value="106_130749_463735_108650">Palani(dindigul,tn)</option>
+<option label="Palanpur" value="106_553248624407809417_1793">Palanpur</option>
+<option label="Palghar" value="106_palghar_744280_108712">Palghar</option>
+<option label="Pali" value="64621">Pali</option>
+<option label="Palitana" value="65199">Palitana</option>
+<option label="Pallivasal" value="106_106049_580573_138725">Pallivasal</option>
+<option label="Panaji" value="65072">Panaji</option>
+<option label="Panchgani" value="66823">Panchgani</option>
+<option label="Panchkula" value="106_24920-IXC_4559">Panchkula</option>
+<option label="Pandharpur" value="106_724181_831651_140414">Pandharpur</option>
+<option label="Pangong" value="138621">Pangong</option>
+<option label="Pangot" value="138215">Pangot</option>
+<option label="Panhala" value="106_Panhala_Maharashtra_6878">Panhala</option>
+<option label="Panipat" value="64577">Panipat</option>
+<option label="Panna" value="65342">Panna</option>
+<option label="Pantnagar" value="106_43798_8809">Pantnagar</option>
+<option label="Paonta Sahib" value="106_718086_797970_108799">Paonta Sahib</option>
+<option label="Paradeep (Paradip)" value="106_21058_459698_108829">Paradeep (Paradip)</option>
+<option label="Paragpur" value="138614">Paragpur</option>
+<option label="Parbhani" value="106_720850_827310_108732">Parbhani</option>
+<option label="Parwanoo" value="67315">Parwanoo</option>
+<option label="Patel Nagar" value="106_88446_793126_139111">Patel Nagar</option>
+<option label="Pathanamthitta" value="Pathanamth">Pathanamthitta</option>
+<option label="Pathankot" value="64660">Pathankot</option>
+<option label="Patiala" value="106_30060356_100876_107860">Patiala</option>
+<option label="Patna" value="64455">Patna</option>
+<option label="Patnitop" value="106_30375_787356_107944">Patnitop</option>
+<option label="Pauri" value="106_6345528_827709_108780">Pauri</option>
+<option label="Pelling" value="106_3404_4004">Pelling</option>
+<option label="Pench" value="106_17944_510887_107523">Pench</option>
+<option label="Perambalur" value="106_706203_212593_108857">Perambalur</option>
+<option label="Perinthalmanna" value="106_100858_41896_108781">Perinthalmanna</option>
+<option label="Phadamchen" value="106_724610_10293_139482">Phadamchen</option>
+<option label="Phagwara" value="106_35831_194996_108753">Phagwara</option>
+<option label="Phalodi" value="65343">Phalodi</option>
+<option label="Phaltan" value="106_140579">Phaltan</option>
+<option label="Pithoragarh" value="106_114772_217746_108729">Pithoragarh</option>
+<option label="Pollachi(coimbatore)" value="106_146242_127022_108687">Pollachi(coimbatore)</option>
+<option label="Ponda" value="106_12e3c_334625_108761">Ponda</option>
+<option label="Pondicherry(pudducherry)" value="64608">Pondicherry(pudducherry)</option>
+<option label="Poovar" value="106_2094_5090">Poovar</option>
+<option label="Porbandar" value="64723">Porbandar</option>
+<option label="Port blair" value="64807">Port blair</option>
+<option label="Puducherry" value="106_132561_914153_107389">Puducherry</option>
+<option label="Punalur" value="106_724629_22887_139483">Punalur</option>
+<option label="Pune" value="64447">Pune</option>
+<option label="Puri" value="64664">Puri</option>
+<option label="Purnia(Purnea)" value="106_3000429386_283913_108797">Purnia(Purnea)</option>
+<option label="Purulia" value="106_716385_85574_108740">Purulia</option>
+<option label="Pushkar" value="66669">Pushkar</option>
+<option label="Puttaparthi" value="106_Puttaparthi_AndhraPradesh_3008">Puttaparthi</option>
+<option label="Raebareli (raebareily)" value="106_6334_329116_108871">Raebareli (raebareily)</option>
+<option label="Raichur" value="106_1977779">Raichur</option>
+<option label="Raigad" value="106_117725_540447_138510">Raigad</option>
+<option label="Raigarh(chattisgarh)" value="106_671649_956653_107536">Raigarh(chattisgarh)</option>
+<option label="Raipur" value="64502">Raipur</option>
+<option label="Rajahmundry" value="64569">Rajahmundry</option>
+<option label="Rajgarh ( Himachal Pradesh)" value="106_724757_309890_108802">Rajgarh ( Himachal Pradesh)</option>
+<option label="Rajgir" value="106_Rajgir_Bihar_5303">Rajgir</option>
+<option label="Rajkot" value="64470">Rajkot</option>
+<option label="Rajpipla" value="106_3000375475_112883_140395">Rajpipla</option>
+<option label="Rajpura" value="106_3000435570_188866_138597">Rajpura</option>
+<option label="Rajula" value="138609">Rajula</option>
+<option label="Ramanathapuram(ramnad)" value="106_513320_887875_107537">Ramanathapuram(ramnad)</option>
+<option label="Rameshwaram" value="106_Rameswaram_TamilNadu_3474">Rameshwaram</option>
+<option label="Ramgarh" value="106_717444_362679_108734">Ramgarh</option>
+<option label="Ramnagar and dhikuli (jim corbett national park)" value="65270">Ramnagar and dhikuli (jim corbett national park)</option>
+<option label="Rampur" value="106_718796_546617_108855">Rampur</option>
+<option label="Ranakpur" value="106_22681-UDR_8501">Ranakpur</option>
+<option label="Ranchi" value="64490">Ranchi</option>
+<option label="Ranikhet" value="66387">Ranikhet</option>
+<option label="Ranthambore" value="106_2134_1976">Ranthambore</option>
+<option label="Ratlam" value="64604">Ratlam</option>
+<option label="Ratnagiri" value="64987">Ratnagiri</option>
+<option label="Ravangla(south sikkim)" value="106_112564_780020_108689">Ravangla(south sikkim)</option>
+<option label="Rewa(madhya pradesh)" value="106_10586_680321_108695">Rewa(madhya pradesh)</option>
+<option label="Rewari" value="106_114517_299783_107936">Rewari</option>
+<option label="Rishikesh" value="65060">Rishikesh</option>
+<option label="Rishop" value="106_3000004356_302198_108869">Rishop</option>
+<option label="Rohanda" value="138616">Rohanda</option>
+<option label="Rohtak" value="106_688632_867225_107911">Rohtak</option>
+<option label="Roorkee" value="64830">Roorkee</option>
+<option label="Rourkela" value="106_Rourkela_Orissa_4638">Rourkela</option>
+<option label="Rudraprayag" value="106_182708_5415_108664">Rudraprayag</option>
+<option label="Rudrapur" value="106_181983_617983_108633">Rudrapur</option>
+<option label="Sagar" value="106_114594_314831_137594">Sagar</option>
+<option label="Saharanpur" value="106_145706_402466_108697">Saharanpur</option>
+<option label="Sahibabad" value="138631">Sahibabad</option>
+<option label="Sakleshpur(karnataka)" value="106_181391_784822_108656">Sakleshpur(karnataka)</option>
+<option label="Salasar" value="138260">Salasar</option>
+<option label="Salem" value="64494">Salem</option>
+<option label="Sam" value="106_c6052881_341442_138152">Sam</option>
+<option label="Sam sand dunes" value="106_10466_394589_108671">Sam sand dunes</option>
+<option label="Sambalpur" value="106_Sambalpur_Orissa_9305">Sambalpur</option>
+<option label="Sanchi" value="137562">Sanchi</option>
+<option label="Sandur" value="106_3000431285_934917_138598">Sandur</option>
+<option label="Sangla" value="106_513307_614832_108728">Sangla</option>
+<option label="Sangli(maharashtra)" value="106_36289_383257_108677">Sangli(maharashtra)</option>
+<option label="Sangrur" value="106_114680_503432_108766">Sangrur</option>
+<option label="Sankarankovil" value="106_713182_378021_107922">Sankarankovil</option>
+<option label="Saputara" value="106_Saputara_Gujarat_4624">Saputara</option>
+<option label="Sarchu" value="138617">Sarchu</option>
+<option label="Sasan gir" value="106_3034_7579">Sasan gir</option>
+<option label="Satara" value="106_Satara_Maharashtra_6562">Satara</option>
+<option label="Satna,mp" value="106_147780_959289_108668">Satna,mp</option>
+<option label="Satpura National Park" value="138382">Satpura National Park</option>
+<option label="Sawai madhopur" value="64818">Sawai madhopur</option>
+<option label="Sawantwadi" value="106_7255_2834">Sawantwadi</option>
+<option label="Secunderabad" value="106_Secunderabad_AndhraPradesh_9312">Secunderabad</option>
+<option label="Seoni" value="106_724655_253078_108745">Seoni</option>
+<option label="Shahjahanpur" value="106_6141950_232481_108840">Shahjahanpur</option>
+<option label="Shantiniketan(visva bharati)-wb" value="106_137568_628633_108644">Shantiniketan(visva bharati)-wb</option>
+<option label="Shillong" value="106_Shillong_Meghalaya_2421">Shillong</option>
+<option label="Shimla" value="64662">Shimla</option>
+<option label="Shimoga(shivamogga)" value="106_Shimoga_Karnataka_4354">Shimoga(shivamogga)</option>
+<option label="Shirdi" value="65741">Shirdi</option>
+<option label="Shivpuri" value="106_390153_559791_139597">Shivpuri</option>
+<option label="Shriwardhan" value="108712">Shriwardhan</option>
+<option label="Sibsagar" value="106_6197631_958843_108841">Sibsagar</option>
+<option label="Sidhpur" value="106_140348">Sidhpur</option>
+<option label="Sikar" value="64630">Sikar</option>
+<option label="Silchar" value="106_114433_569423_107530">Silchar</option>
+<option label="Siliguri" value="106_3764_6348">Siliguri</option>
+<option label="Silvassa" value="65938">Silvassa</option>
+<option label="Sirohi" value="106_114703_994145_108699">Sirohi</option>
+<option label="Sirsa(haryana)" value="106_114520_39626_108692">Sirsa(haryana)</option>
+<option label="Siwan(bihar)" value="106_3000434790_7724">Siwan(bihar)</option>
+<option label="Solan" value="106_114529_880111_107516">Solan</option>
+<option label="Solapur" value="106_Solapur_Maharashtra_7146">Solapur</option>
+<option label="Somnath" value="106_Somnath_Gujarat_2996">Somnath</option>
+<option label="Sonapur" value="106_734385_217737_139484">Sonapur</option>
+<option label="Sonipat" value="106_513298_242271_107941">Sonipat</option>
+<option label="Sonmarg(jk)" value="106_sonmarg_574525_108652">Sonmarg(jk)</option>
+<option label="Spangmik(ladakh)" value="106_6344212_720555_108679">Spangmik(ladakh)</option>
+<option label="Sri ganganagar" value="106_184520_360171_108646">Sri ganganagar</option>
+<option label="Srikakulam" value="106_724677_233228_108823">Srikakulam</option>
+<option label="Srikalahasti(andhra pradesh)" value="106_181368_830813_108675">Srikalahasti(andhra pradesh)</option>
+<option label="Srinagar" value="64481">Srinagar</option>
+<option label="Sriperumbudur" value="106_37862_423852_108673">Sriperumbudur</option>
+<option label="Sultanpur" value="106_3000437899_834365_108838">Sultanpur</option>
+<option label="Sundarbans National Park" value="106_42577_881138_108794">Sundarbans National Park</option>
+<option label="Surajgarh" value="138611">Surajgarh</option>
+<option label="Surat" value="64448">Surat</option>
+<option label="Suratgarh" value="106_3000004301_781499_108836">Suratgarh</option>
+<option label="SURENDRANAGAR" value="106_surendranagar_65103_108865">SURENDRANAGAR</option>
+<option label="Tadoba" value="106_77091_445295_137837">Tadoba</option>
+<option label="Taki" value="106_3000405716_234834_108826">Taki</option>
+<option label="Tala(maharashtra)" value="106_10603_701997_107599">Tala(maharashtra)</option>
+<option label="Tanakpur" value="106_717283_284120_108801">Tanakpur</option>
+<option label="Tarapith" value="106_Tarapith_WestBengal_7981">Tarapith</option>
+<option label="Tarkarli, malvan" value="106_tarkarli_359650_107600">Tarkarli, malvan</option>
+<option label="Tattapani" value="138217">Tattapani</option>
+<option label="Tauru" value="106_tauru_516112_140402">Tauru</option>
+<option label="Tawang" value="106_182554_391770_108696">Tawang</option>
+<option label="Tehri(uttarakhand)" value="106_181745_901035_108669">Tehri(uttarakhand)</option>
+<option label="Tenali" value="139621">Tenali</option>
+<option label="Tezpur(assam)" value="106_36760_941973_108654">Tezpur(assam)</option>
+<option label="Thalassery" value="106_182204_812262_107619">Thalassery</option>
+<option label="Thane and bhiwandi" value="64465">Thane and bhiwandi</option>
+<option label="Thanesar" value="106_720956_34059_139485">Thanesar</option>
+<option label="Thanjavur(tanjore)" value="106_Tanjore_TamilNadu_6577">Thanjavur(tanjore)</option>
+<option label="Thekkady and kumily" value="106_49115-IDTKK_748962_107376">Thekkady and kumily</option>
+<option label="Theni" value="106_669485_924994_108863">Theni</option>
+<option label="THIRUCHENDUR" value="106_thiruchendur_272303_108864">THIRUCHENDUR</option>
+<option label="Thiruvalla" value="Tiruvalla">Thiruvalla</option>
+<option label="Thiruvarur" value="106_114738_412996_138041">Thiruvarur</option>
+<option label="Thodupuzha" value="106_39634_354988_108690">Thodupuzha</option>
+<option label="Thrissur(trichur)" value="Trichur-1">Thrissur(trichur)</option>
+<option label="Tijara" value="106_3000475742_168890_138599">Tijara</option>
+<option label="Tindivanam" value="106_c6259247_577357_138144">Tindivanam</option>
+<option label="Tingmosgang" value="138622">Tingmosgang</option>
+<option label="Tinsukia" value="106_671576_449303_108707">Tinsukia</option>
+<option label="Tiruchendur" value="106_182548_816190_108738">Tiruchendur</option>
+<option label="Tiruchirappalli" value="Tiruchi">Tiruchirappalli</option>
+<option label="Tirumakudal narsipur" value="106_553248635939585225_982765_108775">Tirumakudal narsipur</option>
+<option label="Tirunelveli(nellai)" value="106_140310_518696_108648">Tirunelveli(nellai)</option>
+<option label="Tirupati" value="64594">Tirupati</option>
+<option label="Tiruppur" value="106_114741_482263_107934">Tiruppur</option>
+<option label="Tirupur" value="106_Tirupur_TamilNadu_8250">Tirupur</option>
+<option label="Tiruttani" value="138630">Tiruttani</option>
+<option label="Tiruvallur" value="106_6260995_114042_107514">Tiruvallur</option>
+<option label="Tiruvannamalai" value="106_Tiruvannamalai_TamilNadu_3764">Tiruvannamalai</option>
+<option label="Tranquebar" value="106_3000406633_686739_138600">Tranquebar</option>
+<option label="Trichy" value="106_Trichy_TamilNadu_1482">Trichy</option>
+<option label="Trivandrum(thiruvananthapuram)" value="64493">Trivandrum(thiruvananthapuram)</option>
+<option label="Tso Kar" value="138623">Tso Kar</option>
+<option label="Tso Moriri" value="138624">Tso Moriri</option>
+<option label="Tuljapur" value="106_671685_11014_140416">Tuljapur</option>
+<option label="Tura" value="106_3000004271_999578_138601">Tura</option>
+<option label="Tuticorin" value="64457">Tuticorin</option>
+<option label="Udaipur" value="64535">Udaipur</option>
+<option label="Udhampur" value="106_711006_56677_108813">Udhampur</option>
+<option label="Udumbanchola" value="106_c553248635939579019_283710_138111">Udumbanchola</option>
+<option label="Udupi" value="64749">Udupi</option>
+<option label="Ujjain" value="64526">Ujjain</option>
+<option label="Ullay" value="138626">Ullay</option>
+<option label="Umaria" value="106_25040_36261_139113">Umaria</option>
+<option label="Umaria, mp" value="106_711011_547867_107532">Umaria, mp</option>
+<option label="Una" value="106_711012_945821_108714">Una</option>
+<option label="Unnao" value="106_734301_4741_139486">Unnao</option>
+<option label="Uttarkashi" value="66588">Uttarkashi</option>
+<option label="Vadodara" value="64460">Vadodara</option>
+<option label="Vagamon" value="106_7232_4632">Vagamon</option>
+<option label="Valparai" value="106_146002_744724_108666">Valparai</option>
+<option label="Vapi" value="65019">Vapi</option>
+<option label="Varanasi" value="106_721-VNS_6383">Varanasi</option>
+<option label="Varkala" value="106_2254_3760">Varkala</option>
+<option label="Vasai" value="106_27133_2296">Vasai</option>
+<option label="Vayalar" value="106_6199962_390503_138602">Vayalar</option>
+<option label="Velankanni" value="106_Velankanni_TamilNadu_4249">Velankanni</option>
+<option label="Vellore" value="64656">Vellore</option>
+<option label="Vengurla" value="106_718063_272778_108751">Vengurla</option>
+<option label="Veraval" value="106_Veraval_Gujarat_4355">Veraval</option>
+<option label="Vijayanagar" value="106_93823_360302_137838">Vijayanagar</option>
+<option label="Vijayawada" value="64488">Vijayawada</option>
+<option label="Viluppuram" value="106_119794_434696_138826">Viluppuram</option>
+<option label="Virajpet" value="106_virajpet_608183_108716">Virajpet</option>
+<option label="Vishakhapatnam(Vizag)" value="64474">Vishakhapatnam(Vizag)</option>
+<option label="Vrindavan" value="106_Vrindavan_UttarPradesh_5111">Vrindavan</option>
+<option label="Vythiri(kerala)" value="106_vythiri_748282_108635">Vythiri(kerala)</option>
+<option label="Wai" value="106_724192_806006_108701">Wai</option>
+<option label="Warangal" value="106_37183_245727_108663">Warangal</option>
+<option label="Warora" value="106_732241_824315_139487">Warora</option>
+<option label="Wayanad and sultan bathery" value="106_2854_4135">Wayanad and sultan bathery</option>
+<option label="Yamuna nagar (haryana)" value="106_Yamunanagar_108">Yamuna nagar (haryana)</option>
+<option label="Yamunotri" value="106_27191_985534_108782">Yamunotri</option>
+<option label="Yelagiri(tamilnadu)" value="106_512705_362468_107068">Yelagiri(tamilnadu)</option>
+<option label="Yelahanka" value="106_12db5_707964_108763">Yelahanka</option>
+<option label="Yercaud" value="106_3184_8073">Yercaud</option>
+<option label="Zaheerabad" value="106_zaheerabad_550413_108862">Zaheerabad</option>
+<option label="Zirakpur" value="106_103586_2064">Zirakpur</option>
+
+                        </select>
+                       
+                        <div id="city_loading" style="position:absolute;display:none">
+                            <img src="/cpfv3/images/ajax_pagination_loading.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+
+                        <button type="button" class="btn btn-dark btn-sm" name="add" value="SUBMIT"
+                            onclick="return check_email()">
+
+                            <i class="fa fa-floppy-o"></i>
+                            &nbsp;Save
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </form>
+
+
+        <!-- End -->
+
+
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="dist/js/bootstrap-select.js"></script>
+
+
+
+</html>
